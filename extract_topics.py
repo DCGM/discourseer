@@ -3,35 +3,56 @@ import argparse
 import logging
 import os
 import json
+from extraction_prompts import extraction_prompts
+from typing import List, Tuple
+
+
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Extract topics from text files in a directory using OpenAI GPT-3 and save the results to a file."'
-                                                 ' You must have an OpenAI API key to use this script. Specify environment variable OPENAI_API_KEY.')
-    parser.add_argument('--input-dir', type=str, required=True, help='The directory containing the text files to process.')
-    parser.add_argument('--output-file', default="result.csv", help='The file to save the results to.')
+    parser = argparse.ArgumentParser(
+        description='Extract topics from text files in a directory using OpenAI GPT-3 and save the results to a file."'
+                    ' You must have an OpenAI API key to use this script. Specify environment variable OPENAI_API_KEY.')
+    parser.add_argument('--input-dir', type=str, required=True,
+                        help='The directory containing the text files to process.')
+    parser.add_argument('--output-file', default="result.csv",
+                        help='The file to save the results to.')
+    parser.add_argument('--extract', nargs='+', choices=extraction_prompts.keys(),
+                        default=list(["topics", "named_people", "roles"]),
+                        help='The types of extractions to perform. The accuracy may suffer if you select too many types.')
     parser.add_argument('--log', default="INFO", help='The logging level to use.')
 
     return parser.parse_args()
 
 
 class TopicExtractor:
-    def __init__(self):
+    def __init__(self, to_extract: List[str]):
         self.client = OpenAI()
+        self.to_extract = to_extract
+        self.system_prompt = self.construct_system_prompt()
+        logging.info(f"System prompt: {self.system_prompt}")
+
+    def construct_system_prompt(self):
+        prompt = "You are a media content analyst. You are analyzing the following text to extract "
+        prompt += ", ".join([extraction_prompts[topic].name for topic in self.to_extract]) + ". "
+        prompt += " ".join(extraction_prompts[topic].description for topic in self.to_extract) + " "
+        prompt += "You will provide lists of the identified " + ", ".join([extraction_prompts[topic].name for topic in self.to_extract])
+        prompt += " as a JSON object with keys: " + ", ".join(self.to_extract) + "."
+        prompt += f" Text will be in Czech language."
+        return prompt
 
     def extract_topics(self, text):
+
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo-0125",
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a media content analyst. You are analyzing the following text to extract topics, events, places, people, and oter named entities."
-                               " You will provide list of topics, places, people, and other named entities as a JSON object with keys: topics, places, people, and other_entities. "
-                               " Text will be in Czech language."
+                    "content": self.system_prompt
                 },
                 {
                     "role": "user",
-                    "content": text
+                    "content": "The text to analyse is: " + text
                 }
             ],
             temperature=0.5,
@@ -48,7 +69,7 @@ def main():
     logging.basicConfig(level=args.log)
     files = os.listdir(args.input_dir)
 
-    topic_extractor = TopicExtractor()
+    topic_extractor = TopicExtractor(args.extract)
     output_file = open(args.output_file, 'w', encoding='utf-8')
 
     for file in files:
