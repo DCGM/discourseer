@@ -1,0 +1,13 @@
+Chci_spravedlnost_pro_dceru.txt,5-range,5
+Chci_spravedlnost_pro_dceru.txt,6-genre,1-report
+Chci_spravedlnost_pro_dceru.txt,8-message-trigger,2-security-forces
+Chci_spravedlnost_pro_dceru.txt,9-place,1-czech-republic
+Tvrdík_skončil_jako_viceprezident.txt,5-range,4
+Tvrdík_skončil_jako_viceprezident.txt,6-genre,1-report
+Tvrdík_skončil_jako_viceprezident.txt,8-message-trigger,1-politician
+Tvrdík_skončil_jako_viceprezident.txt,9-place,1-czech-republic
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,5-range,3
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,6-genre,1-report
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,8-message-trigger,2-security-forces
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,9-place,5-russia
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,10-place-pseudo,5-russia
