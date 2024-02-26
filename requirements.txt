@@ -1,5 +1,5 @@
 openai
 argparse
 pydantic
-pyirr
+irrcac
 backoff

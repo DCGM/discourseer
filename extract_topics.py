@@ -12,7 +12,7 @@ import backoff
 
 from extraction_prompts import extraction_prompts
 from rater import Rater
-from inter_rater_reliability import calc_fleiss_kappa
+from inter_rater_reliability import get_inter_rater_reliability
 
 
 def parse_args():
@@ -122,11 +122,7 @@ def main():
     raters = Rater.from_dirs(args.ratings_dir)
 
     if raters:
-        irr_without_model = calc_fleiss_kappa(raters)
-        irr_with_model = calc_fleiss_kappa(raters + [model_rater])
-
-        logging.info(f"Fleiss' Kappa for human raters: {irr_without_model:.3f}")
-        logging.info(f"Fleiss' Kappa for human raters and the model: {irr_with_model:.3f}")
+        get_inter_rater_reliability(raters, model_rater)
 
 
 if __name__ == "__main__":
