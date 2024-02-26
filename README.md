@@ -26,3 +26,4 @@ Add inter-rater reliability analysis demo
   - propagate extraction prompts to have all options 
 - add options-aware response parsing
   - add testing suite for that... response json -> rater.ratings
+- move testing code to new folder `test` and copy test data there

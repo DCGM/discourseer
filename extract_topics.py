@@ -12,7 +12,7 @@ import backoff
 
 from extraction_prompts import extraction_prompts
 from rater import Rater
-from inter_rater_reliability import get_inter_rater_reliability
+from inter_rater_reliability import IRR
 
 
 def parse_args():
@@ -121,8 +121,11 @@ def main():
     model_rater.save_ratings(output_file.name)
     raters = Rater.from_dirs(args.ratings_dir)
 
-    if raters:
-        get_inter_rater_reliability(raters, model_rater)
+    if not raters:
+        logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
+    else:
+        irr_results = IRR(raters, model_rater)()
+        logging.info(f"Inter-rater reliability results:\n{json.dumps(irr_results, indent=2)}")
 
 
 if __name__ == "__main__":
