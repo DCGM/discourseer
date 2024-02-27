@@ -20,10 +20,14 @@ python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-v
 - `--output-file` - Soubor, kam se uloží výsledky analýzy.
 - `--log` - Úroveň logování do terminálu.
 
+## Automatické testování
+```bash
+python -m unittest
+```
+
 ## TODOs:
 Add inter-rater reliability analysis demo
 - add support for M from N options
   - propagate extraction prompts to have all options 
 - add options-aware response parsing
   - add testing suite for that... response json -> rater.ratings
-- move testing code to new folder `test` and copy test data there

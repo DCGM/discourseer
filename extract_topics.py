@@ -4,15 +4,15 @@ import logging
 import os
 import json
 import time
-from typing import List, Tuple
+from typing import List
 
 import openai
 from openai import OpenAI
 import backoff
 
-from extraction_prompts import extraction_prompts
-from rater import Rater
-from inter_rater_reliability import IRR
+from discourseer.extraction_prompts import extraction_prompts
+from discourseer.rater import Rater
+from discourseer.inter_rater_reliability import IRR
 
 
 def parse_args():

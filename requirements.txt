@@ -3,3 +3,6 @@ argparse
 pydantic
 irrcac
 backoff
+numpy
+pandas
+pytest
