@@ -14,6 +14,9 @@ class IRR:
         self.model_rater = model_rater
         self.results = self.get_inter_rater_reliability()
 
+    def __call__(self) -> dict:
+        return self.results
+
     def get_inter_rater_reliability(self) -> dict:
         results = {}
 
@@ -25,23 +28,24 @@ class IRR:
 
         df = IRR.clean_data(df)
 
+        if df.empty:
+            logging.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
+            return results
+
+        logging.debug(f'Calculating inter-rater reliability for:\n{df}')
         cac_without_model = CAC(df.loc[:, df.columns != 'model'])
         cac_with_model = CAC(df) if self.model_rater else None
-        logging.debug(f'Calculating inter-rater reliability for:\n{df}')
 
         without_model, with_model = IRR.calc_fleiss_kappa(cac_without_model, cac_with_model)
-        results['fleiss'] = {'without_model': without_model, 'with_model': with_model}
+        results["fleiss' kappa"] = {'without_model': without_model, 'with_model': with_model}
 
         without_model, with_model = IRR.calc_kripp_alpha(cac_without_model, cac_with_model)
-        results['kripp'] = {'without_model': without_model, 'with_model': with_model}
+        results["Krippendorf's alpha"] = {'without_model': without_model, 'with_model': with_model}
 
         without_model, with_model = IRR.calc_gwet_ac1(cac_without_model, cac_with_model)
-        results['gwet'] = {'without_model': without_model, 'with_model': with_model}
+        results["Gwet's AC1"] = {'without_model': without_model, 'with_model': with_model}
 
         return results
-
-    def __call__(self) -> dict:
-        return self.results
 
     @staticmethod
     def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None) -> tuple[float, float]:
