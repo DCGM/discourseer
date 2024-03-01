@@ -6,19 +6,17 @@ import json
 import time
 from typing import List
 
-import openai
-from openai import OpenAI
-import backoff
-
 from discourseer.extraction_prompts import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
+from discourseer.chat_client import ChatClient
 
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Extract topics from text files in a directory using OpenAI GPT-3 and save the results to a file."'
-                    ' You must have an OpenAI API key to use this script. Specify environment variable OPENAI_API_KEY.')
+        description='Extract topics from text files in a directory using OpenAI GPT-3 and save the results to a file. '
+                    'You must have an OpenAI API key to use this script. Specify environment variable OPENAI_API_KEY '
+                    'or add it as and argument `--openai-api-key`.')
     parser.add_argument('--texts-dir', type=str, required=True,
                         help='The directory containing the text files to process.')
     parser.add_argument('--ratings-dir', nargs='*', type=str,
@@ -30,6 +28,7 @@ def parse_args():
                         default=list([]),
                         help='The subset to take from file in `topic-definitions`. '
                              'The accuracy may suffer if there is too many topics.')
+    parser.add_argument('--openai-api-key', type=str)
     # parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json")
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
@@ -48,6 +47,7 @@ def main():
         output_file=args.output_file,
         topic_definitions=args.topic_definitions,
         topic_subset=args.topic_subset,
+        openai_api_key=args.openai_api_key,
         # prompt_definition=args.prompt_definition
     )
     topic_extractor()
@@ -56,16 +56,16 @@ def main():
 class TopicExtractor:
     def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_file: str = 'result.csv',
                  topic_subset: List[str] = None, topic_definitions: str = "data/default/topic_definitions.json",
+                 openai_api_key: str = None,
                  prompt_definition: str = "data/default/prompt_definition.json"):
         self.input_files = self.get_input_files(texts_dir)
-        # self.ratings_dir = ratings_dir if ratings_dir else []
         self.output_file = self.prepare_output_file(output_file)
         self.raters = Rater.from_dirs(ratings_dirs)
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
         self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
 
-        self.client = OpenAI()
+        self.client = ChatClient(openai_api_key)
         self.model_rater = Rater(name="model")
         self.system_prompt = self.construct_system_prompt()
         # self.system_prompts = [self.construct_system_prompt(topic) for topic in self.to_extract]
@@ -97,7 +97,7 @@ class TopicExtractor:
         logging.debug('\n\n')
         logging.debug(f'Extracting topics from text: {text[:min(50, len(text))]}')
 
-        response = self.completions_with_backoff(
+        response = self.client.invoke(
             model="gpt-3.5-turbo-0125",
             messages=[
                 {
@@ -117,10 +117,6 @@ class TopicExtractor:
         response = json.loads(response.choices[0].message.content)
         logging.debug(f"Response: {response}")
         return response
-
-    @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def completions_with_backoff(self, **kwargs):
-        return self.client.chat.completions.create(**kwargs)
 
     @staticmethod
     def prepare_output_file(output_file: str):

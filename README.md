@@ -1,24 +1,26 @@
 # discourseer
 
-
 ## Instalace
 Pro spuštění je potřeba mít nainstalovaný Python 3.8 a vyšší.
 ```bash
 pip install -r requirements.txt
 ```
-Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY' s klíčem pro OpenAI API.
+Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY' s klíčem pro OpenAI API nebo ho předat jako parametr při spuštění `--openai-api-key`
 
 ## Příklad spuštění
 ```bash
-python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --output-file data/outputs/out_test.txt --topic-subset 9-place 8-message-trigger 6-genre 5-range
+python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --output-file data/outputs/out_test.txt --topic-subset 9-place 8-message-trigger 6-genre 5-range --openai-api-key sk-ZmfV3vvo19y...
 ```
 
 ## Popis parametrů
-- `--extract` - Názvy extrakčních promptů, které chceme použít.
-- `--texts-dir` - Adresář s texty, které chceme analyzovat.
-- `--ratings-dir` - Adresář s hodnoceními textů.
-- `--output-file` - Soubor, kam se uloží výsledky analýzy.
-- `--log` - Úroveň logování do terminálu.
+- `-h`, `--help` - Zobrazí nápovědu.
+- `--texts-dir` (složka) - Adresář s texty, které chcete analyzovat.
+- `--ratings-dir` (složka jedna nebo víc) - Adresáře s hodnoceními textů.
+- `--topic-definitions` (soubor) - Soubor s definicemi témat, které chcete z textů extrahovat.
+- `--topic-subset` - Názvy témat, které chceme vybrat ze souboru `--topic-definitions`.
+- `--openai-api-key` - Klíč pro OpenAI API.
+- `--output-file` (soubor) - Soubor, kam se uloží výsledky analýzy.
+- `--log` - Úroveň logování do terminálu. (DEBUG, INFO, WARNING, ERROR)
 
 ## Automatické testování
 ```bash
