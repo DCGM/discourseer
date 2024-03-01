@@ -1,4 +1,7 @@
+from __future__ import annotations
 import logging
+import pydantic
+from typing import Optional
 
 import pandas as pd
 from irrCAC.raw import CAC
@@ -8,8 +11,22 @@ from discourseer.rater import Rater
 logger = logging.getLogger(__name__)
 
 
+class IRRResults(pydantic.BaseModel):
+    fleiss_kappa: IRRResult
+    krippendorff_alpha: IRRResult
+    gwet_ac1: IRRResult
+    majority_agreement: Optional[float] = None
+
+
+class IRRResult(pydantic.BaseModel):
+    without_model: Optional[float] = None
+    with_model: Optional[float] = None
+    worst_case: Optional[float] = None
+
+
 class IRR:
     TOTAL_AGREEMENT = 1.0
+    WORST_CASE_VALUE = '--WORST-CASE--'  # A value that should not be present in the ratings
 
     def __init__(self, raters: list[Rater], model_rater: Rater = None):
         self.raters = raters
@@ -17,14 +34,12 @@ class IRR:
         if model_rater:
             self.model_rater.name = "model"
 
-        self.results = self.get_inter_rater_reliability()
+        self.results: IRRResults = self.get_inter_rater_reliability()
 
     def __call__(self) -> dict:
-        return self.results
+        return self.results.model_dump()
 
-    def get_inter_rater_reliability(self) -> dict:
-        results = {}
-
+    def get_inter_rater_reliability(self) -> IRRResults:
         if self.model_rater is not None:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
@@ -34,24 +49,33 @@ class IRR:
 
         if df.empty:
             logging.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
-            return results
+            return IRRResults(
+                fleiss_kappa=IRRResult(),
+                krippendorff_alpha=IRRResult(),
+                gwet_ac1=IRRResult(),
+                majority_agreement=None
+            )
 
-        results['majority agreement'] = IRR.calc_majority_agreement(df)
+        maj_agreement = IRR.calc_majority_agreement(df)
 
         logging.debug(f'Calculating inter-rater reliability for:\n{df}')
+
         cac_without_model = CAC(df.loc[:, df.columns != 'model'])
         cac_with_model = CAC(df) if self.model_rater else None
+        df_worst_case = df.copy()
+        df_worst_case['model'] = IRR.WORST_CASE_VALUE
+        cac_worst_case = CAC(df_worst_case)
 
-        without_model, with_model = IRR.calc_fleiss_kappa(cac_without_model, cac_with_model)
-        results["fleiss' kappa"] = {'without_model': without_model, 'with_model': with_model}
+        fleiss_kappa = IRR.calc_fleiss_kappa(cac_without_model, cac_with_model, cac_worst_case)
+        kripp_alpha = IRR.calc_kripp_alpha(cac_without_model, cac_with_model, cac_worst_case)
+        gwet_ac1 = IRR.calc_gwet_ac1(cac_without_model, cac_with_model, cac_worst_case)
 
-        without_model, with_model = IRR.calc_kripp_alpha(cac_without_model, cac_with_model)
-        results["Krippendorf's alpha"] = {'without_model': without_model, 'with_model': with_model}
-
-        without_model, with_model = IRR.calc_gwet_ac1(cac_without_model, cac_with_model)
-        results["Gwet's AC1"] = {'without_model': without_model, 'with_model': with_model}
-
-        return results
+        return IRRResults(
+            fleiss_kappa=fleiss_kappa,
+            krippendorff_alpha=kripp_alpha,
+            gwet_ac1=gwet_ac1,
+            majority_agreement=maj_agreement
+        )
 
     @staticmethod
     def calc_majority_agreement(df: pd.DataFrame) -> float | None:
@@ -70,76 +94,63 @@ class IRR:
         return majority_agreement
 
     @staticmethod
-    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None) -> tuple[float, float | None]:
+    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None) -> IRRResult:
         """
         Calculate Fleiss' Kappa for a list of raters.
         """
-        if IRR.all_rows_equal(cac_without_model.ratings):
-            result_without_model = IRR.TOTAL_AGREEMENT
-        else:
-            result_without_model = cac_without_model.fleiss()['est']['coefficient_value']
+        result = IRRResult(
+            without_model=IRR.get_cac_metric(cac_without_model, 'fleiss'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'fleiss'),
+            worst_case=IRR.get_cac_metric(cac_worst_cast, 'fleiss')
+        )
 
-        if cac_with_model is None:
-            result_with_model = None
-            logging.debug(f"Fleiss' Kappa for human raters: {result_without_model:.3f}, "
-                          f"with model: {None}")
-        else:
-            if IRR.all_rows_equal(cac_with_model.ratings):
-                result_with_model = IRR.TOTAL_AGREEMENT
-            else:
-                result_with_model = cac_with_model.fleiss()['est']['coefficient_value']
-            logging.debug(f"Fleiss' Kappa for human raters: {result_without_model:.3f}, "
-                          f"with model: {result_with_model:.3f}")
-
-        return result_without_model, result_with_model
+        logging.debug(f"Fleiss' Kappa results: {result}")
+        return result
 
     @staticmethod
-    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float | None]:
+    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None) -> IRRResult:
         """
         Calculate Krippendorff's Alpha for a list of raters.
         """
-        if IRR.all_rows_equal(cac_without_model.ratings):
-            result_without_model = IRR.TOTAL_AGREEMENT
-        else:
-            result_without_model = cac_without_model.krippendorff()['est']['coefficient_value']
+        result = IRRResult(
+            without_model=IRR.get_cac_metric(cac_without_model, 'krippendorff'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'krippendorff'),
+            worst_case=IRR.get_cac_metric(cac_worst_cast, 'krippendorff')
+        )
 
-        if cac_with_model is None:
-            result_with_model = None
-            logging.debug(f"Krippendorff's Alpha for human raters: {result_without_model:.3f}, "
-                          f"with model: {None}")
-        else:
-            if IRR.all_rows_equal(cac_with_model.ratings):
-                result_with_model = IRR.TOTAL_AGREEMENT
-            else:
-                result_with_model = cac_with_model.krippendorff()['est']['coefficient_value']
-            logging.debug(f"Krippendorff's Alpha for human raters: {result_without_model:.3f}, "
-                          f"with model: {result_with_model:.3f}")
+        logging.debug(f"Krippendorff's Alpha results: {result}")
 
-        return result_without_model, result_with_model
+        return result
 
     @staticmethod
-    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float | None]:
+    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None) -> IRRResult:
         """
         Calculate Gwet's AC1 for a list of raters.
         """
-        if IRR.all_rows_equal(cac_without_model.ratings):
-            result_without_model = IRR.TOTAL_AGREEMENT
-        else:
-            result_without_model = cac_without_model.gwet()['est']['coefficient_value']
+        result = IRRResult(
+            without_model=IRR.get_cac_metric(cac_without_model, 'gwet'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'gwet'),
+            worst_case=IRR.get_cac_metric(cac_worst_cast, 'gwet')
+        )
 
-        if cac_with_model is None:
-            result_with_model = None
-            logging.debug(f"Gwet's AC1 for human raters: {result_without_model:.3f}, "
-                          f"with model: {None}")
-        else:
-            if IRR.all_rows_equal(cac_with_model.ratings):
-                result_with_model = IRR.TOTAL_AGREEMENT
-            else:
-                result_with_model = cac_with_model.gwet()['est']['coefficient_value']
-            logging.debug(f"Gwet's AC1 for human raters: {result_without_model:.3f}, "
-                          f"with model: {result_with_model:.3f}")
+        logging.debug(f"Gwet's AC1 results: {result}")
 
-        return result_without_model, result_with_model
+        return result
+
+    @staticmethod
+    def get_cac_metric(cac: CAC = None, metric: str = None) -> float | None:
+        if cac is None:
+            logging.debug("No CAC object provided. Empty data.")
+            return None
+
+        if metric is None:
+            logging.debug("No metric provided.")
+            return None
+
+        if IRR.all_rows_equal(cac.ratings):
+            return IRR.TOTAL_AGREEMENT
+        else:
+            return getattr(cac, metric)()['est']['coefficient_value']
 
     @staticmethod
     def all_rows_equal(df: pd.DataFrame) -> bool:
