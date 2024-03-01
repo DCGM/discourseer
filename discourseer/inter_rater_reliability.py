@@ -9,9 +9,14 @@ logger = logging.getLogger(__name__)
 
 
 class IRR:
+    TOTAL_AGREEMENT = 1.0
+
     def __init__(self, raters: list[Rater], model_rater: Rater = None):
         self.raters = raters
         self.model_rater = model_rater
+        if model_rater:
+            self.model_rater.name = "model"
+
         self.results = self.get_inter_rater_reliability()
 
     def __call__(self) -> dict:
@@ -20,7 +25,6 @@ class IRR:
     def get_inter_rater_reliability(self) -> dict:
         results = {}
 
-        # df = pd.DataFrame()
         if self.model_rater is not None:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
@@ -31,6 +35,8 @@ class IRR:
         if df.empty:
             logging.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             return results
+
+        results['majority agreement'] = IRR.calc_majority_agreement(df)
 
         logging.debug(f'Calculating inter-rater reliability for:\n{df}')
         cac_without_model = CAC(df.loc[:, df.columns != 'model'])
@@ -48,58 +54,99 @@ class IRR:
         return results
 
     @staticmethod
-    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None) -> tuple[float, float]:
+    def calc_majority_agreement(df: pd.DataFrame) -> float | None:
+        """
+        Calculate majority agreement of a model to raters.
+        """
+        if 'model' not in df.columns:
+            return None
+
+        df['majority'] = df.loc[:, df.columns != 'model'].mode(axis=1).iloc[:, 0]
+        df['agreement'] = df['majority'] == df['model']
+        majority_agreement = df['agreement'].sum() / df.shape[0]
+        logger.debug(f"Majority agreement of human raters with model: {majority_agreement:.3f}")
+        del df['majority'], df['agreement']
+
+        return majority_agreement
+
+    @staticmethod
+    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None) -> tuple[float, float | None]:
         """
         Calculate Fleiss' Kappa for a list of raters.
         """
-        result_without_model = cac_without_model.fleiss()['est']['coefficient_value']
+        if IRR.all_rows_equal(cac_without_model.ratings):
+            result_without_model = IRR.TOTAL_AGREEMENT
+        else:
+            result_without_model = cac_without_model.fleiss()['est']['coefficient_value']
 
         if cac_with_model is None:
             result_with_model = None
             logging.debug(f"Fleiss' Kappa for human raters: {result_without_model:.3f}, "
                           f"with model: {None}")
         else:
-            result_with_model = cac_with_model.fleiss()['est']['coefficient_value']
+            if IRR.all_rows_equal(cac_with_model.ratings):
+                result_with_model = IRR.TOTAL_AGREEMENT
+            else:
+                result_with_model = cac_with_model.fleiss()['est']['coefficient_value']
             logging.debug(f"Fleiss' Kappa for human raters: {result_without_model:.3f}, "
                           f"with model: {result_with_model:.3f}")
 
         return result_without_model, result_with_model
 
     @staticmethod
-    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float]:
+    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float | None]:
         """
         Calculate Krippendorff's Alpha for a list of raters.
         """
-        result_without_model = cac_without_model.krippendorff()['est']['coefficient_value']
+        if IRR.all_rows_equal(cac_without_model.ratings):
+            result_without_model = IRR.TOTAL_AGREEMENT
+        else:
+            result_without_model = cac_without_model.krippendorff()['est']['coefficient_value']
 
         if cac_with_model is None:
             result_with_model = None
             logging.debug(f"Krippendorff's Alpha for human raters: {result_without_model:.3f}, "
                           f"with model: {None}")
         else:
-            result_with_model = cac_with_model.krippendorff()['est']['coefficient_value']
+            if IRR.all_rows_equal(cac_with_model.ratings):
+                result_with_model = IRR.TOTAL_AGREEMENT
+            else:
+                result_with_model = cac_with_model.krippendorff()['est']['coefficient_value']
             logging.debug(f"Krippendorff's Alpha for human raters: {result_without_model:.3f}, "
                           f"with model: {result_with_model:.3f}")
 
         return result_without_model, result_with_model
 
     @staticmethod
-    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float]:
+    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC) -> tuple[float, float | None]:
         """
         Calculate Gwet's AC1 for a list of raters.
         """
-        result_without_model = cac_without_model.gwet()['est']['coefficient_value']
+        if IRR.all_rows_equal(cac_without_model.ratings):
+            result_without_model = IRR.TOTAL_AGREEMENT
+        else:
+            result_without_model = cac_without_model.gwet()['est']['coefficient_value']
 
         if cac_with_model is None:
             result_with_model = None
             logging.debug(f"Gwet's AC1 for human raters: {result_without_model:.3f}, "
                           f"with model: {None}")
         else:
-            result_with_model = cac_with_model.gwet()['est']['coefficient_value']
+            if IRR.all_rows_equal(cac_with_model.ratings):
+                result_with_model = IRR.TOTAL_AGREEMENT
+            else:
+                result_with_model = cac_with_model.gwet()['est']['coefficient_value']
             logging.debug(f"Gwet's AC1 for human raters: {result_without_model:.3f}, "
                           f"with model: {result_with_model:.3f}")
 
         return result_without_model, result_with_model
+
+    @staticmethod
+    def all_rows_equal(df: pd.DataFrame) -> bool:
+        """
+        Check if all rows in a DataFrame are equal.
+        """
+        return df.apply(lambda x: x.nunique(), axis=1).eq(1).all()
 
     @staticmethod
     def clean_data(df: pd.DataFrame) -> pd.DataFrame:
