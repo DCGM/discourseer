@@ -10,7 +10,7 @@ import openai
 from openai import OpenAI
 import backoff
 
-from discourseer.extraction_prompts import extraction_prompts
+from discourseer.extraction_prompts import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 
@@ -25,10 +25,12 @@ def parse_args():
                         help='The directory containing the csv files with answer ratings.')
     parser.add_argument('--output-file', default="result.csv",
                         help='The file to save the results to.')
-    parser.add_argument('--extract', nargs='*', choices=extraction_prompts.keys(),
-                        default=list(["5-range", "6-genre", "8-message-trigger", "9-place"]),
-                        help='The types of extractions to perform. '
-                             'The accuracy may suffer if you select too many types.')
+    parser.add_argument('--topic-definitions', default="data/default/topic_definitions.json")
+    parser.add_argument('--topic-subset', nargs='*',
+                        default=list([]),
+                        help='The subset to take from file in `topic-definitions`. '
+                             'The accuracy may suffer if there is too many topics.')
+    # parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json")
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
 
@@ -42,23 +44,26 @@ def main():
 
     topic_extractor = TopicExtractor(
         texts_dir=args.texts_dir,
-        ratings_dir=args.ratings_dir,
+        ratings_dirs=args.ratings_dir,
         output_file=args.output_file,
-        extract=args.extract
+        topic_definitions=args.topic_definitions,
+        topic_subset=args.topic_subset,
+        # prompt_definition=args.prompt_definition
     )
     topic_extractor()
 
 
 class TopicExtractor:
-    def __init__(self, texts_dir: str, ratings_dir: List[str] = None, output_file: str = 'result.csv',
-                 extract: List[str] = None):
+    def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_file: str = 'result.csv',
+                 topic_subset: List[str] = None, topic_definitions: str = "data/default/topic_definitions.json",
+                 prompt_definition: str = "data/default/prompt_definition.json"):
         self.input_files = self.get_input_files(texts_dir)
         # self.ratings_dir = ratings_dir if ratings_dir else []
         self.output_file = self.prepare_output_file(output_file)
-        self.extract = extract if extract else list(extraction_prompts.keys())
-        self.raters = Rater.from_dirs(ratings_dir)
+        self.raters = Rater.from_dirs(ratings_dirs)
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
+        self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
 
         self.client = OpenAI()
         self.model_rater = Rater(name="model")
@@ -81,11 +86,10 @@ class TopicExtractor:
 
     def construct_system_prompt(self):
         prompt = "You are a media content analyst. You are analyzing the following text to extract "
-        prompt += ", ".join([extraction_prompts[topic].name for topic in self.extract]) + ". "
-        prompt += " ".join(extraction_prompts[topic].get_description() for topic in self.extract) + " "
-        prompt += "You will provide lists of the identified " + ", ".join([extraction_prompts[topic].name
-                                                                           for topic in self.extract])
-        prompt += " as a JSON object with keys: " + ", ".join(self.extract) + "."
+        prompt += self.topics.topic_names() + ". "
+        prompt += self.topics.topic_descriptions() + " "
+        prompt += "You will provide lists of the identified " + self.topics.topic_descriptions()
+        prompt += " as a JSON object with keys: " + self.topics.topic_names() + "."
         prompt += f" Text will be in Czech language."
         return prompt
 
@@ -139,6 +143,14 @@ class TopicExtractor:
             if os.path.isfile(os.path.join(texts_dir, file)):
                 files.append(os.path.join(texts_dir, file))
         return files
+
+    @staticmethod
+    def load_topics(topics_file: str):
+        logging.debug(f'Loading topics from file:{topics_file}')
+        with open(topics_file, 'r', encoding='utf-8') as f:
+            topics = json.load(f)
+
+        return ExtractionTopics.model_validate(topics)
 
 
 if __name__ == "__main__":

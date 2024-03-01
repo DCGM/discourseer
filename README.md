@@ -10,7 +10,7 @@ Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY' s klí
 
 ## Příklad spuštění
 ```bash
-python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --output-file data/outputs/out_test.txt  --log DEBUG --extract 9-place 8-message-trigger 6-genre 5-range
+python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --output-file data/outputs/out_test.txt --topic-subset 9-place 8-message-trigger 6-genre 5-range
 ```
 
 ## Popis parametrů
@@ -31,3 +31,6 @@ Add inter-rater reliability analysis demo
   - propagate extraction prompts to have all options 
 - add options-aware response parsing
   - add testing suite for that... response json -> rater.ratings
+- add possible response options to CAC init (for better calculation of IRR I guess...)
+  - It would need to have sets of options for different questions though? (see documentation https://github.com/afergadis/irrCAC/blob/f737d4c018707df582e593943d855ecbfd5a88fd/irrCAC/raw.py#L123)
+
