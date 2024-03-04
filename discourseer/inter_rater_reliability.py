@@ -208,13 +208,10 @@ class IRR:
     @staticmethod
     def create_worst_case_df(df: pd.DataFrame) -> pd.DataFrame:
         df_worst_case = df.copy()
-        # print(f'worst case before:\n {df_worst_case}')
         df_worst_case['model'] = IRR.WORST_CASE_VALUE
 
         df_worst_case.reset_index(inplace=True)
         df_worst_case.loc[df_worst_case['rating'] != 'single_choice', 'model'] = 'False'
         df_worst_case.set_index(['file', 'topic_key', 'rating'], inplace=True)
-
-        # print(f'worst case after:\n {df_worst_case}')
 
         return df_worst_case

@@ -1,0 +1,70 @@
+{
+  "$defs": {
+    "ChatMessage": {
+      "properties": {
+        "role": {
+          "enum": [
+            "system",
+            "user",
+            "assistant"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "content": {
+          "title": "Content",
+          "type": "string"
+        }
+      },
+      "required": [
+        "role",
+        "content"
+      ],
+      "title": "ChatMessage",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "model": {
+      "default": "gpt-3.5-turbo-0125",
+      "title": "Model",
+      "type": "string"
+    },
+    "max_tokens": {
+      "default": 1024,
+      "title": "Max Tokens",
+      "type": "integer"
+    },
+    "temperature": {
+      "default": 0.0,
+      "title": "Temperature",
+      "type": "number"
+    },
+    "top_p": {
+      "default": 0,
+      "title": "Top P",
+      "type": "number"
+    },
+    "response_format": {
+      "default": "json",
+      "enum": [
+        "json",
+        "normal"
+      ],
+      "title": "Response Format",
+      "type": "string"
+    },
+    "messages": {
+      "items": {
+        "$ref": "#/$defs/ChatMessage"
+      },
+      "title": "Messages",
+      "type": "array"
+    }
+  },
+  "required": [
+    "messages"
+  ],
+  "title": "Conversation",
+  "type": "object"
+}

@@ -18,8 +18,9 @@ python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-v
 - `--ratings-dir` (složka jedna nebo víc) - Adresáře s hodnoceními textů.
 - `--topic-definitions` (soubor) - Soubor s definicemi témat, které chcete z textů extrahovat.
 - `--topic-subset` - Názvy témat, které chceme vybrat ze souboru `--topic-definitions`.
-- `--openai-api-key` - Klíč pro OpenAI API.
 - `--output-file` (soubor) - Soubor, kam se uloží výsledky analýzy.
+- `--prompt-definition` (soubor) - Soubor s textem hlavního promptu + formátovacími řetězci pro témata.
+- `--openai-api-key` - Klíč pro OpenAI API.
 - `--log` - Úroveň logování do terminálu. (DEBUG, INFO, WARNING, ERROR)
 
 ## Automatické testování
@@ -35,4 +36,4 @@ Add inter-rater reliability analysis demo
   - add testing suite for that... response json -> rater.ratings
 - add possible response options to CAC init (for better calculation of IRR I guess...)
   - It would need to have sets of options for different questions though? (see documentation https://github.com/afergadis/irrCAC/blob/f737d4c018707df582e593943d855ecbfd5a88fd/irrCAC/raw.py#L123)
-
+- create JSON schema for model response using dynamic pydantic models (see https://stackoverflow.com/questions/66168517/generate-dynamic-model-using-pydantic)

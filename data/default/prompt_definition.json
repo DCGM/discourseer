@@ -1,0 +1,17 @@
+{
+  "model": "gpt-3.5-turbo-0125",
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.0,
+  "response_format": "json",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract {topic_names}. {topic_descriptions}. You will provide lists of the identified topic as a JSON object with keys: {topic_names}. Text will be in Czech language."
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    }
+  ]
+}

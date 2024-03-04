@@ -37,6 +37,17 @@ class ExtractionTopics(pydantic.BaseModel):
     def multiple_choice_topics(self) -> str:
         return ", ".join([topic.name for topic in self.topics.values() if topic.multiple_choice])
 
+    def get_format_strings(self) -> Dict[str, str]:
+        return {
+            "topic_keys": self.topic_keys(),
+            "topic_names": self.topic_names(),
+            "topic_descriptions": self.topic_descriptions(),
+            "topic_names_and_descriptions_colon": self.topic_names_and_descriptions_colon(),
+            "topic_names_and_descriptions_parentheses": self.topic_names_and_descriptions_parentheses(),
+            "multiple_choice_topics": self.multiple_choice_topics(),
+            "text": "{text}",
+        }
+
 
 class ExtractionTopic(pydantic.BaseModel):
     name: str

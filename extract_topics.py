@@ -9,7 +9,7 @@ from typing import List
 from discourseer.extraction_topics import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
-from discourseer.chat_client import ChatClient
+from discourseer.chat_client import ChatClient, Conversation, ChatMessage
 
 
 def parse_args():
@@ -28,8 +28,9 @@ def parse_args():
                         default=list([]),
                         help='The subset to take from file in `topic-definitions`. '
                              'The accuracy may suffer if there is too many topics.')
+    parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json",
+                        help='The file containing the main prompt text + format strings for topics.')
     parser.add_argument('--openai-api-key', type=str)
-    # parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json")
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
 
@@ -48,7 +49,7 @@ def main():
         topic_definitions=args.topic_definitions,
         topic_subset=args.topic_subset,
         openai_api_key=args.openai_api_key,
-        # prompt_definition=args.prompt_definition
+        prompt_definition=args.prompt_definition
     )
     topic_extractor()
 
@@ -62,14 +63,19 @@ class TopicExtractor:
         self.output_file = self.prepare_output_file(output_file)
         self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
         self.raters = Rater.from_dirs(ratings_dirs, self.topics)
+        self.prompt_definition = self.load_prompt_definition(prompt_definition)
+
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
-        self.client = ChatClient(openai_api_key)
+        self.conversation_log = self.prompt_definition.model_copy(deep=True)
+        self.conversation_log.messages = []
+
+        self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_topics=self.topics)
-        self.system_prompt = self.construct_system_prompt()
+        # self.system_prompt = self.construct_system_prompt()
         # self.system_prompts = [self.construct_system_prompt(topic) for topic in self.to_extract]
-        logging.info(f"System prompt: {self.system_prompt}")
+        logging.info(f"First prompt: {self.prompt_definition.messages[0].content}")
 
     def __call__(self):
         for file in self.input_files:
@@ -78,45 +84,45 @@ class TopicExtractor:
                 response = self.extract_topics(text)
                 self.model_rater.add_model_response(os.path.basename(file), response)
 
+        with open('data/outputs/conversation_log.json', 'w') as f:
+            json.dump(self.conversation_log.dict(), f, ensure_ascii=False, indent=2)
+
         self.model_rater.save_ratings(self.output_file)
 
         if self.raters:
             irr_results = IRR(self.raters, self.model_rater, self.topics)()
             logging.info(f"Inter-rater reliability results:\n{json.dumps(irr_results, indent=2)}")
 
-    def construct_system_prompt(self):
-        prompt = "You are a media content analyst. You are analyzing the following text to extract "
-        prompt += self.topics.topic_names() + ". "
-        prompt += self.topics.topic_descriptions() + " "
-        prompt += "You will provide lists of the identified " + self.topics.topic_descriptions()
-        prompt += " as a JSON object with keys: " + self.topics.topic_names() + "."
-        prompt += f" Text will be in Czech language."
-        return prompt
-
     def extract_topics(self, text):
         logging.debug('\n\n')
         logging.debug(f'Extracting topics from text: {text[:min(50, len(text))]}...')
 
-        response = self.client.invoke(
-            model="gpt-3.5-turbo-0125",
-            messages=[
-                {
-                    "role": "system",
-                    "content": self.system_prompt
-                },
-                {
-                    "role": "user",
-                    "content": "The text to analyze is: " + text
-                }
-            ],
-            max_tokens=1024,
-            temperature=0.0,
-            top_p=0,
-            response_format={"type": "json_object"}
-        )
+        conversation = self.prompt_definition.model_copy(deep=True)
+        for message in conversation.messages:
+            message.content = message.content.format(text=text)
+
+        response = self.client.invoke(**conversation.dict())
+
         response = json.loads(response.choices[0].message.content)
         logging.debug(f"Response: {response}")
+        self.conversation_log.messages += conversation.messages
+        self.conversation_log.messages.append(
+            ChatMessage(role="assistant",
+                        content=json.dumps(response, indent=2, ensure_ascii=False)))
+
         return response
+
+    def load_prompt_definition(self, prompt_definition: str):
+        logging.debug(f'Loading prompt definition from file:{prompt_definition}')
+        with open(prompt_definition, 'r', encoding='utf-8') as f:
+            prompt_definition = json.load(f)
+
+        prompt_definition = Conversation.model_validate(prompt_definition)
+
+        for message in prompt_definition.messages:
+            message.content = message.content.format(**self.topics.get_format_strings())
+
+        return prompt_definition
 
     @staticmethod
     def prepare_output_file(output_file: str):
