@@ -3,66 +3,79 @@
     "keywords": {
       "name": "keywords",
       "description": "Keywords are words or phrases that capture the main ideas, themes, concepts, or subjects of the text.",
+      "multiple_choice": false,
       "options": []
     },
     "topics": {
       "name": "topics",
       "description": "Topics are the main ideas, themes, concepts, or subjects. Topics are often generalizations of the text and often do not appear as words in the document.",
+      "multiple_choice": false,
       "options": []
     },
     "named_events": {
       "name": "named events",
       "description": "Named events are specific occurrences or happenings at a particular time and place with associated unique name.",
+      "multiple_choice": false,
       "options": []
     },
     "general_events": {
       "name": "general events",
       "description": "General events are unnamed occurrences or happenings at a particular time and place (e.g. car crash, football match, border clash, awakening).",
+      "multiple_choice": false,
       "options": []
     },
     "named_places": {
       "name": "places",
       "description": "Named places are for example buildings, locations, areas, or regions with a distinct identity and name.",
+      "multiple_choice": false,
       "options": []
     },
     "general_places": {
       "name": "general places",
       "description": "General places are location types without a name (e.g. river, wilderness, city, underground, mountains).",
+      "multiple_choice": false,
       "options": []
     },
     "named_people": {
       "name": "named people",
       "description": "Named people are individuals who are mentioned by name in the text. Named people should be represented in the output by their full name if possible.",
+      "multiple_choice": false,
       "options": []
     },
     "roles": {
       "name": "roles",
       "description": "Roles are the functions, positions, jobs, responsibilities or life roles of individuals or groups of people.",
+      "multiple_choice": false,
       "options": []
     },
     "organizations": {
       "name": "organizations",
       "description": "Organizations include states, companies, institutions, associations, and other groups of people with a common purpose or identity.",
+      "multiple_choice": false,
       "options": []
     },
     "perpetrators": {
       "name": "perpetrators",
       "description": "Perpetrators should include the exact words or phrases that identify the person or group of people who committed a crime, act of violence, or other harmful act.",
+      "multiple_choice": false,
       "options": []
     },
     "victims": {
       "name": "victims",
       "description": "Victims should include the exact words or phrases that identify the person or group of people who were harmed by a crime, act of violence, or other harmful act.",
+      "multiple_choice": false,
       "options": []
     },
     "5-range": {
       "name": "5-range",
       "description": "Number of paragraphs in the text.",
+      "multiple_choice": false,
       "options": []
     },
     "6-genre": {
       "name": "6-genre",
-      "description": "The genre of the text with these options:",
+      "description": "The genre of the text.",
+      "multiple_choice": false,
       "options": [
         {
           "name": "1-report",
@@ -84,7 +97,8 @@
     },
     "8-message-trigger": {
       "name": "8-message-trigger",
-      "description": "The message trigger is the event or situation that causes the message to be sent. It has these options:",
+      "description": "The message trigger is the event or situation that causes the message to be sent.",
+      "multiple_choice": false,
       "options": [
         {
           "name": "1-politician",
@@ -105,8 +119,9 @@
       ]
     },
     "9-place": {
-      "name": "Country",
-      "description": "The country where the event or situation occurs. Options:",
+      "name": "9-place",
+      "description": "The country where the event or situation occurs.",
+      "multiple_choice": true,
       "options": [
         {
           "name": "1-czech-republic",

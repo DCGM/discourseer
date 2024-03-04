@@ -6,7 +6,7 @@ import json
 import time
 from typing import List
 
-from discourseer.extraction_prompts import ExtractionTopics
+from discourseer.extraction_topics import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient
@@ -60,13 +60,13 @@ class TopicExtractor:
                  prompt_definition: str = "data/default/prompt_definition.json"):
         self.input_files = self.get_input_files(texts_dir)
         self.output_file = self.prepare_output_file(output_file)
-        self.raters = Rater.from_dirs(ratings_dirs)
+        self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
+        self.raters = Rater.from_dirs(ratings_dirs, self.topics)
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
-        self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
 
         self.client = ChatClient(openai_api_key)
-        self.model_rater = Rater(name="model")
+        self.model_rater = Rater(name="model", extraction_topics=self.topics)
         self.system_prompt = self.construct_system_prompt()
         # self.system_prompts = [self.construct_system_prompt(topic) for topic in self.to_extract]
         logging.info(f"System prompt: {self.system_prompt}")
@@ -81,7 +81,7 @@ class TopicExtractor:
         self.model_rater.save_ratings(self.output_file)
 
         if self.raters:
-            irr_results = IRR(self.raters, self.model_rater)()
+            irr_results = IRR(self.raters, self.model_rater, self.topics)()
             logging.info(f"Inter-rater reliability results:\n{json.dumps(irr_results, indent=2)}")
 
     def construct_system_prompt(self):
@@ -95,7 +95,7 @@ class TopicExtractor:
 
     def extract_topics(self, text):
         logging.debug('\n\n')
-        logging.debug(f'Extracting topics from text: {text[:min(50, len(text))]}')
+        logging.debug(f'Extracting topics from text: {text[:min(50, len(text))]}...')
 
         response = self.client.invoke(
             model="gpt-3.5-turbo-0125",

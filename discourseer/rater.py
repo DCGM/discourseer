@@ -1,40 +1,36 @@
 from __future__ import annotations
 import os
 import logging
+import pydantic
 
 import pandas as pd
 
-logger = logging.getLogger(__name__)
+from discourseer.extraction_topics import ExtractionTopics
+
+logger = logging.getLogger()
+
+
+class Rating(pydantic.BaseModel):
+    file: str
+    topic_key: str
+    rating_results: list[str]
+
+    model_config = pydantic.ConfigDict(coerce_numbers_to_str=True)
 
 
 class Rater:
-    def __init__(self, ratings: dict = None, name: str = None):
-        """Rating is a dictionary with keys (filename, response_key) and values (rating).
-
-        Example:
-        {
-            "file1.txt": {
-                "place": "czech-republic",
-                "topics": ["immigration", "politics"],
-            },
-            "file2.txt": {
-                "place": "ukraine",
-                "topics": ["war", "politics"],
-            }
-        }
-        """
-        self.ratings = ratings if ratings else {}
+    def __init__(self, ratings: list = None, name: str = None, extraction_topics: ExtractionTopics = None):
+        """Rater consists of list of ratings. (see Rating class)"""
+        self.ratings = ratings if ratings else []
         self.name = name
+        self.extraction_topics = extraction_topics if extraction_topics else ExtractionTopics()
 
-    def add_rating(self, file: str, question: str, rating: str | list):
-        logging.debug(f"Adding rating: {file}, {question}, {rating}")
+    def add_rating(self, file: str, topic_key: str, rating: str | list):
+        logging.debug(f"Adding rating: {file}, {topic_key}, {rating}")
         rating = rating if isinstance(rating, list) else [rating]
 
-        if file in self.ratings:
-            self.ratings[file][question] = rating
-        else:
-            self.ratings[file] = {question: rating}
-        logger.debug(f"saved rating: {self.ratings[file][question]}")
+        self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating))
+        logger.debug(f"saved rating: {self.ratings[-1]}")
 
     def add_model_response(self, file, response):
         for key, value in response.items():
@@ -49,45 +45,51 @@ class Rater:
         out_file = out_file if out_file.endswith('.csv') else out_file + '.csv'
 
         with open(out_file, 'w', encoding='utf-8') as f:
-            for file, ratings in self.ratings.items():
-                for question, rating in ratings.items():
-                    if isinstance(rating, list):
-                        rating = ','.join([str(r) for r in rating])
-                    else:
-                        rating = str(rating)
-                    # rating = ','.join(rating) if isinstance(rating, list) else str(rating)
-                    f.write(f"{file},{question},{rating}\n")
+            for rating in self.ratings:
+                rating_results = ','.join(rating.rating_results)
+                f.write(f"{rating.file},{rating.topic_key},{rating_results}\n")
+
+        logger.info(f"Results saved to {out_file}")
 
     def to_series(self) -> pd.Series:
         ratings_dict = {}
-        for file, ratings in self.ratings.items():
-            for question, rating in ratings.items():
-                if isinstance(rating, str):
-                    ratings_dict[(file, question)] = rating
-                elif isinstance(rating, list):
-                    # TODO: implement MofN options
-                    ratings_dict[(file, question)] = rating[0]
-                else:
-                    raise ValueError(f"Unknown rating type: {type(rating)}")
+        for rating in self.ratings:
+            # print(f'rating: {dict(rating)}')
 
-        series = pd.Series(ratings_dict)
+            extraction_topic = self.extraction_topics[rating.topic_key]
+            # print(f'extraction_topic: {extraction_topic}')
+
+            if extraction_topic is not None and extraction_topic.multiple_choice:
+                # extraction_topic = extraction_topics[rating.topic_key]
+                for option in extraction_topic.options:
+                    ratings_dict[(rating.file, rating.topic_key, option.name)] = option.name in rating.rating_results
+            else:
+                ratings_dict[(rating.file, rating.topic_key, 'single_choice')] = rating.rating_results[0]
+                # print('added just first rating')
+        # print(f'ratings_dict: {ratings_dict}')
+        # convert ratings_dict to series with named index 'file', 'topic_key', 'rating'
+        series = pd.Series(ratings_dict,
+                           index=pd.MultiIndex.from_tuples(
+                               ratings_dict.keys(),
+                               names=['file', 'topic_key', 'rating']))
+        # print(f'series:\n{series}')
+        # print('')
         return series
 
     @classmethod
-    def from_csv(cls, rater_file: str):
-        ratings = {}
+    def from_csv(cls, rater_file: str, extraction_topics: ExtractionTopics = None):
+        ratings = []
+        # print('Loading rater file:', rater_file)
         with open(rater_file, 'r', encoding='utf-8') as f:
             for line in f:
-                article, question, answers = line.strip().split(sep=',', maxsplit=2)
-                answers = answers.strip().split(',')
-                if article in ratings:
-                    ratings[article][question] = answers
-                else:
-                    ratings[article] = {question: answers}
-        return cls(ratings=ratings, name=os.path.basename(rater_file))
+                file, topic_key, *rating_results = line.strip().split(sep=',')
+                # print(f'file: {file}, topic_key: {topic_key}, rating_results: {rating_results}')
+                ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating_results))
+                # print(f'ratings[-1]: {ratings[-1].model_dump_json(indent=2)}')
+        return cls(ratings=ratings, name=os.path.basename(rater_file), extraction_topics=extraction_topics)
 
     @classmethod
-    def from_dir(cls, ratings_dir: str = None) -> list[Rater]:
+    def from_dir(cls, ratings_dir: str = None, extraction_topics: ExtractionTopics = None) -> list[Rater]:
         if not ratings_dir or not os.path.isdir(ratings_dir):
             return []
 
@@ -96,16 +98,16 @@ class Rater:
 
         for file in files:
             if os.path.isfile(os.path.join(ratings_dir, file)) and file.endswith('.csv'):
-                raters.append(cls.from_csv(os.path.join(ratings_dir, file)))
+                raters.append(cls.from_csv(os.path.join(ratings_dir, file), extraction_topics=extraction_topics))
 
         return raters
 
     @classmethod
-    def from_dirs(cls, ratings_dirs: list[str] = None) -> list[Rater]:
+    def from_dirs(cls, ratings_dirs: list[str] = None, extraction_topics: ExtractionTopics = None) -> list[Rater]:
         if not ratings_dirs:
             return []
 
         raters = []
         for ratings_dir in ratings_dirs:
-            raters += cls.from_dir(ratings_dir)
+            raters += cls.from_dir(ratings_dir, extraction_topics=extraction_topics)
         return raters

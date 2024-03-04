@@ -4,7 +4,15 @@ from typing import List, Dict
 
 
 class ExtractionTopics(pydantic.BaseModel):
-    topics: Dict[str, ExtractionTopic]
+    topics: Dict[str, ExtractionTopic] = {}
+
+    def __getitem__(self, item):
+        return self.topics.get(item, None)
+
+    def is_multiple_choice(self, topic: str) -> bool:
+        if topic not in self.topics:
+            return False
+        return self.topics[topic].multiple_choice
 
     def select_subset(self, subset: List[str] = None) -> ExtractionTopics:
         if not subset:
@@ -26,10 +34,14 @@ class ExtractionTopics(pydantic.BaseModel):
     def topic_names_and_descriptions_parentheses(self) -> str:
         return ", ".join([f'{topic.name} ({topic.description})' for topic in self.topics.values()])
 
+    def multiple_choice_topics(self) -> str:
+        return ", ".join([topic.name for topic in self.topics.values() if topic.multiple_choice])
+
 
 class ExtractionTopic(pydantic.BaseModel):
     name: str
     description: str
+    multiple_choice: bool = False
     options: List[ResultOption] = []
 
     def get_description(self) -> str:
@@ -64,17 +76,18 @@ class ResultOption(pydantic.BaseModel):
 #     "victims": ExtractionTopic(name="victims", description="Victims should include the exact words or phrases that identify the person or group of people who were harmed by a crime, act of violence, or other harmful act."),
 #
 #     "5-range": ExtractionTopic(name="5-range", description="Number of paragraphs in the text."),
-#     "6-genre": ExtractionTopic(name="6-genre", description="The genre of the text with these options:",
+#     "6-genre": ExtractionTopic(name="6-genre", description="The genre of the text.",
 #                                options=[ResultOption(name="1-report", description="Report is information about a current event answering questions: who, what, where."),
 #                                         ResultOption(name="2-extended_report", description="Report is information about a current event answering questions: who, what, where, when, how and why."),
 #                                         ResultOption(name="3-interview", description="Interview is a conversation between two or more people."),
 #                                         ResultOption(name="9-other", description="Other genre.")]),
-#     "8-message-trigger": ExtractionTopic(name="8-message-trigger", description="The message trigger is the event or situation that causes the message to be sent. It has these options:",
+#     "8-message-trigger": ExtractionTopic(name="8-message-trigger", description="The message trigger is the event or situation that causes the message to be sent.",
 #                                          options=[ResultOption(name="1-politician", description="The message reacts on actions of a politician"),
 #                                                   ResultOption(name="2-security-forces", description="The message reacts on action of security forces."),
 #                                                   ResultOption(name="4-public", description="The message reacts on action of public."),
 #                                                   ResultOption(name="9-other", description="Other message trigger.")]),
-#     "9-place": ExtractionTopic(name="Country", description="The country where the event or situation occurs. Options:",
+#     "9-place": ExtractionTopic(name="9-place", description="The country where the event or situation occurs.",
+#                                multiple_choice=True,
 #                                options=[ResultOption(name="1-czech-republic", description="The event or situation occurs in the Czech Republic."),
 #                                         ResultOption(name="2-slovakia", description="The event or situation occurs in Slovakia."),
 #                                         ResultOption(name="3-poland", description="The event or situation occurs in Poland."),
@@ -103,4 +116,4 @@ def print_extract_topics():
 
 if __name__ == "__main__":
     print_schema()
-    # print_extract_prompts()
+    # print_extract_topics()

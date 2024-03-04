@@ -7,8 +7,9 @@ import pandas as pd
 from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
+from discourseer.extraction_topics import ExtractionTopics
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger()
 
 
 class IRRResults(pydantic.BaseModel):
@@ -28,11 +29,12 @@ class IRR:
     TOTAL_AGREEMENT = 1.0
     WORST_CASE_VALUE = '--WORST-CASE--'  # A value that should not be present in the ratings
 
-    def __init__(self, raters: list[Rater], model_rater: Rater = None):
+    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_topics: ExtractionTopics = None):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = "model"
+        self.extraction_topics = extraction_topics if extraction_topics else ExtractionTopics()
 
         self.results: IRRResults = self.get_inter_rater_reliability()
 
@@ -62,8 +64,7 @@ class IRR:
 
         cac_without_model = CAC(df.loc[:, df.columns != 'model'])
         cac_with_model = CAC(df) if self.model_rater else None
-        df_worst_case = df.copy()
-        df_worst_case['model'] = IRR.WORST_CASE_VALUE
+        df_worst_case = self.create_worst_case_df(df)
         cac_worst_case = CAC(df_worst_case)
 
         fleiss_kappa = IRR.calc_fleiss_kappa(cac_without_model, cac_with_model, cac_worst_case)
@@ -91,7 +92,7 @@ class IRR:
         logger.debug(f"Majority agreement of human raters with model: {majority_agreement:.3f}")
         del df['majority'], df['agreement']
 
-        return majority_agreement
+        return round(majority_agreement, 5)
 
     @staticmethod
     def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None) -> IRRResult:
@@ -203,3 +204,17 @@ class IRR:
             name = f"{name}_{offset}"
             offset += 1
         return name
+
+    @staticmethod
+    def create_worst_case_df(df: pd.DataFrame) -> pd.DataFrame:
+        df_worst_case = df.copy()
+        # print(f'worst case before:\n {df_worst_case}')
+        df_worst_case['model'] = IRR.WORST_CASE_VALUE
+
+        df_worst_case.reset_index(inplace=True)
+        df_worst_case.loc[df_worst_case['rating'] != 'single_choice', 'model'] = 'False'
+        df_worst_case.set_index(['file', 'topic_key', 'rating'], inplace=True)
+
+        # print(f'worst case after:\n {df_worst_case}')
+
+        return df_worst_case
