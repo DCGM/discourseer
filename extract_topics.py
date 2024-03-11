@@ -69,7 +69,8 @@ class TopicExtractor:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
         self.conversation_log = self.prompt_definition.model_copy(deep=True)
-        self.conversation_log.messages = []
+        end_of_prompt_definition_message = ChatMessage(role='assistant', content="Hello!")
+        self.conversation_log.messages.append(end_of_prompt_definition_message)
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_topics=self.topics)
