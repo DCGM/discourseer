@@ -10,6 +10,7 @@ from discourseer.extraction_topics import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage
+from discourseer.utils import pydantic_to_json_file
 
 
 def parse_args():
@@ -21,8 +22,8 @@ def parse_args():
                         help='The directory containing the text files to process.')
     parser.add_argument('--ratings-dir', nargs='*', type=str,
                         help='The directory containing the csv files with answer ratings.')
-    parser.add_argument('--output-file', default="result.csv",
-                        help='The file to save the results to.')
+    parser.add_argument('--output-dir', default="data/outputs/test",
+                        help='Directory to save the results to.')
     parser.add_argument('--topic-definitions', default="data/default/topic_definitions.json")
     parser.add_argument('--topic-subset', nargs='*',
                         default=list([]),
@@ -45,7 +46,7 @@ def main():
     topic_extractor = TopicExtractor(
         texts_dir=args.texts_dir,
         ratings_dirs=args.ratings_dir,
-        output_file=args.output_file,
+        output_dir=args.output_dir,
         topic_definitions=args.topic_definitions,
         topic_subset=args.topic_subset,
         openai_api_key=args.openai_api_key,
@@ -55,12 +56,11 @@ def main():
 
 
 class TopicExtractor:
-    def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_file: str = 'result.csv',
+    def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_dir: str = 'data/outputs/test',
                  topic_subset: List[str] = None, topic_definitions: str = "data/default/topic_definitions.json",
-                 openai_api_key: str = None,
-                 prompt_definition: str = "data/default/prompt_definition.json"):
+                 openai_api_key: str = None, prompt_definition: str = "data/default/prompt_definition.json"):
         self.input_files = self.get_input_files(texts_dir)
-        self.output_file = self.prepare_output_file(output_file)
+        self.output_dir, self.output_dir_base = self.prepare_output_dir(output_dir)
         self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
         self.raters = Rater.from_dirs(ratings_dirs, self.topics)
         self.prompt_definition = self.load_prompt_definition(prompt_definition)
@@ -85,14 +85,13 @@ class TopicExtractor:
                 response = self.extract_topics(text)
                 self.model_rater.add_model_response(os.path.basename(file), response)
 
-        with open('data/outputs/conversation_log.json', 'w') as f:
-            json.dump(self.conversation_log.dict(), f, ensure_ascii=False, indent=2)
-
-        self.model_rater.save_ratings(self.output_file)
+        self.model_rater.save_ratings(self.get_output_file('model_ratings.csv'))
+        pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'))
 
         if self.raters:
             irr_results = IRR(self.raters, self.model_rater, self.topics)()
-            logging.info(f"Inter-rater reliability results:\n{json.dumps(irr_results, indent=2)}")
+            logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
+            pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
 
     def extract_topics(self, text):
         logging.debug('\n\n')
@@ -100,7 +99,6 @@ class TopicExtractor:
 
         conversation = self.prompt_definition.model_copy(deep=True)
         for message in conversation.messages:
-            print(f'Before: {message.content}')
             message.content = message.content.format(**self.topics.get_format_strings(), text=text)
 
         response = self.client.invoke(**conversation.dict())
@@ -114,6 +112,11 @@ class TopicExtractor:
 
         return response
 
+    def get_output_file(self, file_name: str):
+        file, ext = os.path.splitext(file_name)
+        return os.path.join(self.output_dir, f'{file}{ext}')
+        # return os.path.join(self.output_dir, f'{file}_{self.output_dir_base}{ext}')
+
     @staticmethod
     def load_prompt_definition(prompt_definition: str):
         logging.debug(f'Loading prompt definition from file:{prompt_definition}')
@@ -125,18 +128,16 @@ class TopicExtractor:
         return prompt_definition
 
     @staticmethod
-    def prepare_output_file(output_file: str):
-        path_location = os.path.dirname(output_file)
-        if not os.path.exists(path_location):
-            os.makedirs(path_location)
+    def prepare_output_dir(output_dir: str) -> tuple[str, str]:
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            return output_dir, os.path.basename(os.path.normpath(output_dir))
 
-        file_name = os.path.splitext(os.path.basename(output_file))[0]
-        if os.path.exists(output_file):
-            file_name += time.strftime("_%Y%m%d-%H%M%S")
-            logging.debug(f"File {output_file} already exists. Saving the result to {file_name}.csv")
-        output_file = os.path.join(path_location, file_name + ".csv")
+        output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
+        os.makedirs(output_dir_new)
+        logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
 
-        return output_file
+        return output_dir_new, os.path.basename(output_dir_new)
 
     @staticmethod
     def get_input_files(texts_dir: str):

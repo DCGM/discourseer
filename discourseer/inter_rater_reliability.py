@@ -38,8 +38,8 @@ class IRR:
 
         self.results: IRRResults = self.get_inter_rater_reliability()
 
-    def __call__(self) -> dict:
-        return self.results.model_dump()
+    def __call__(self) -> IRRResults:
+        return self.results
 
     def get_inter_rater_reliability(self) -> IRRResults:
         if self.model_rater is not None:

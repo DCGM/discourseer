@@ -10,7 +10,7 @@ class TestIRRWithoutModel(unittest.TestCase):
     def test_irr_equal(self):
         rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
         rater_2 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
-        irr_results = IRR([rater_1, rater_2])()
+        irr_results = IRR([rater_1, rater_2])().model_dump()
 
         self.assertEqual(irr_results["fleiss_kappa"]['without_model'], 1.0)
         self.assertEqual(irr_results["fleiss_kappa"]['with_model'], None)
@@ -22,7 +22,7 @@ class TestIRRWithoutModel(unittest.TestCase):
     def test_irr_diff(self):
         rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
         rater_2 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_2.csv")
-        irr_results = IRR([rater_1, rater_2])()
+        irr_results = IRR([rater_1, rater_2])().model_dump()
 
         assert irr_results["fleiss_kappa"]['without_model'] == pytest.approx(0.8, 0.05)
         assert irr_results["fleiss_kappa"]['with_model'] is None
@@ -35,7 +35,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
         rater_4 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_4.csv")
 
-        irr_results = IRR([rater_1, rater_4])()
+        irr_results = IRR([rater_1, rater_4])().model_dump()
 
         assert irr_results["fleiss_kappa"]['without_model'] == pytest.approx(0.7, 0.05)
         assert irr_results["fleiss_kappa"]['with_model'] is None
@@ -53,7 +53,7 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'))
 
-        irr_results = IRR([rater_1, rater_2], model_rater)()
+        irr_results = IRR([rater_1, rater_2], model_rater)().model_dump()
 
         assert irr_results["majority_agreement"] == 1.0
 
@@ -62,6 +62,6 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_75_diff.csv'))
 
-        irr_results = IRR([rater_1, rater_2], model_rater)()
+        irr_results = IRR([rater_1, rater_2], model_rater)().model_dump()
 
         assert irr_results["majority_agreement"] == 0.25

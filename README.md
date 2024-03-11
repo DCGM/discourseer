@@ -18,7 +18,7 @@ python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-v
 - `--ratings-dir` (složka jedna nebo víc) - Adresáře s hodnoceními textů.
 - `--topic-definitions` (soubor) - Soubor s definicemi témat, které chcete z textů extrahovat.
 - `--topic-subset` - Názvy témat, které chceme vybrat ze souboru `--topic-definitions`.
-- `--output-file` (soubor) - Soubor, kam se uloží výsledky analýzy.
+- `--output-dir` (složka) - Složka, kam se uloží výsledky analýzy.
 - `--prompt-definition` (soubor) - Soubor s textem hlavního promptu + formátovacími řetězci pro témata.
 - `--openai-api-key` - Klíč pro OpenAI API.
 - `--log` - Úroveň logování do terminálu. (DEBUG, INFO, WARNING, ERROR)
