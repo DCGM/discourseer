@@ -7,7 +7,7 @@
   "messages": [
     {
       "role": "system",
-      "content": "You are a media content analyst. You are analyzing the following text to extract {topic_names}. {topic_names_and_descriptions_colon}. For every topic pick only options from these lists.\n{topic_options}\nYou will pick one option for these topics: {single_choice_topics}. You will pick one or more options for these topics: {multiple_choice_topics}.\nYou will provide lists of the identified options as a JSON object with keys: {topic_keys} mapped to original names like this: {topic_key_name_mapping}.\nText will be in Czech language. JSON anwers will be in same language as the options are."
+      "content": "You are a media content analyst. You are analyzing the following text to extract {topic_names}. {topic_names_and_descriptions_colon}. For every topic pick only options from these lists.\n{topic_options}\nYou will pick one option for these topics: {single_choice_topics}. You will pick one or more options for these topics: {multiple_choice_topics}.\nYou will provide lists of the identified options as a JSON object with keys: {topic_keys} mapped to original names like this: {topic_key_name_mapping}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:\n{response_json_schema_with_options}"
     },
     {
       "role": "user",

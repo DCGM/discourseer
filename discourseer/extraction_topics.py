@@ -1,7 +1,9 @@
 from __future__ import annotations
+from typing_extensions import Unpack
+
 import json
 import pydantic
-from typing import List, Dict
+from typing import List, Dict, Literal
 
 
 class ExtractionTopics(pydantic.BaseModel):
@@ -57,6 +59,30 @@ class ExtractionTopics(pydantic.BaseModel):
     def topics_json(self) -> str:
         return self.model_dump_json(indent=2)
 
+    def response_json_schema(self) -> str:
+        response_format = {}
+        for topic_key, topic in self.topics.items():
+            if topic.multiple_choice:
+                value = List[str]
+            else:
+                value = str
+            response_format[topic_key] = (value, ...)
+        response_format = pydantic.create_model('ResponseFormat', **response_format)
+        return response_format.schema_json(indent=2)
+
+    def response_json_schema_with_options(self) -> str:
+        response_format = {}
+        for topic_key, topic in self.topics.items():
+            option_names = [option.name for option in topic.options]
+
+            if topic.multiple_choice:
+                value = List[Literal[tuple(option_names)]] if len(option_names) > 0 else List[str]
+            else:
+                value = Literal[tuple(option_names)] if len(option_names) > 0 else str
+            response_format[topic_key] = (value, ...)
+        response_format = pydantic.create_model('ResponseFormat', **response_format)
+        return response_format.schema_json(indent=2)
+
     def get_format_strings(self) -> Dict[str, str]:
         return {
             "topic_keys": self.topic_keys(),
@@ -70,6 +96,8 @@ class ExtractionTopics(pydantic.BaseModel):
             "topic_options": self.topic_options(),
             "whole_topic_info": self.whole_topic_info(),
             "topics_json": self.topics_json(),
+            "response_json_schema": self.response_json_schema(),
+            "response_json_schema_with_options": self.response_json_schema_with_options(),
             # "text": "{text}",
         }
 
@@ -113,16 +141,33 @@ def print_extract_topics():
     ...
 
 
-def test_dynamic_pydantic():
-    # load json from data/default/topic_definitions.json to extraction_topics
-    with open('data/default/topic_definitions.json', 'r') as f:
+def load_topic_definitions(file: str = 'data/default/topic_definitions.json'):
+    with open(file, 'r') as f:
         topic_definitions = json.load(f)
         extraction_topics = ExtractionTopics.parse_obj(topic_definitions)
-        print(extraction_topics)
+    return extraction_topics
+
+
+def test_dynamic_pydantic():
+    extraction_topics = load_topic_definitions()
+    extraction_topics = extraction_topics.select_subset(['8-message-trigger', '9-place'])
+    print(extraction_topics.model_dump())
+
+    response_format = {}
+    for topic_key, topic in extraction_topics.topics.items():
+        option_names = [option.name for option in topic.options]
+        if topic.multiple_choice:
+            value = List[Literal[tuple(option_names)]]
+        else:
+            value = Literal[tuple(option_names)]
+
+        response_format[topic_key] = (value, ...)
+
+    response_format = pydantic.create_model('ResponseFormat', **response_format)
+    print(response_format.schema_json(indent=2))
 
 
 if __name__ == "__main__":
     # print_schema()
     # print_extract_topics()
     test_dynamic_pydantic()
-
