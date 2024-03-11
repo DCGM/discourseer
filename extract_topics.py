@@ -38,10 +38,26 @@ def parse_args():
     return parser.parse_args()
 
 
+def setup_logging(log_level: str, log_file: str):
+    logging.getLogger().setLevel(log_level)
+    formatter = logging.Formatter('%(levelname)s:%(name)s:%(filename)s:%(funcName)s: %(message)s')
+
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(log_level)
+    stream_handler.setFormatter(formatter)
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(formatter)
+
+    logging.getLogger().addHandler(file_handler)
+    logging.getLogger().addHandler(stream_handler)
+
+
 def main():
     args = parse_args()
-    logger = logging.getLogger()
-    logger.setLevel(args.log)
+    log_file = 'data/outputs/logfile.log'
+    os.makedirs('data/outputs', exist_ok=True)
+    setup_logging(args.log, log_file)
 
     topic_extractor = TopicExtractor(
         texts_dir=args.texts_dir,
@@ -53,6 +69,9 @@ def main():
         prompt_definition=args.prompt_definition
     )
     topic_extractor()
+
+    logging.getLogger().handlers.clear()  # Remove the handlers to avoid logging http connection close
+    os.rename(log_file, topic_extractor.get_output_file(os.path.basename(log_file)))
 
 
 class TopicExtractor:
