@@ -99,7 +99,8 @@ class TopicExtractor:
 
         conversation = self.prompt_definition.model_copy(deep=True)
         for message in conversation.messages:
-            message.content = message.content.format(text=text)
+            print(f'Before: {message.content}')
+            message.content = message.content.format(**self.topics.get_format_strings(), text=text)
 
         response = self.client.invoke(**conversation.dict())
 
@@ -112,15 +113,13 @@ class TopicExtractor:
 
         return response
 
-    def load_prompt_definition(self, prompt_definition: str):
+    @staticmethod
+    def load_prompt_definition(prompt_definition: str):
         logging.debug(f'Loading prompt definition from file:{prompt_definition}')
         with open(prompt_definition, 'r', encoding='utf-8') as f:
             prompt_definition = json.load(f)
 
         prompt_definition = Conversation.model_validate(prompt_definition)
-
-        for message in prompt_definition.messages:
-            message.content = message.content.format(**self.topics.get_format_strings())
 
         return prompt_definition
 

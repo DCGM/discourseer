@@ -1,4 +1,5 @@
 from __future__ import annotations
+import json
 import pydantic
 from typing import List, Dict
 
@@ -25,6 +26,9 @@ class ExtractionTopics(pydantic.BaseModel):
     def topic_names(self) -> str:
         return ", ".join([topic.name for topic in self.topics.values()])
 
+    def topic_key_name_mapping(self) -> str:
+        return ", ".join([f'{topic_key}: {topic.name}' for topic_key, topic in self.topics.items()])
+
     def topic_descriptions(self) -> str:
         return " ".join([topic.description for topic in self.topics.values()])
 
@@ -34,18 +38,39 @@ class ExtractionTopics(pydantic.BaseModel):
     def topic_names_and_descriptions_parentheses(self) -> str:
         return ", ".join([f'{topic.name} ({topic.description})' for topic in self.topics.values()])
 
+    def single_choice_topics(self) -> str:
+        return ", ".join([topic.name for topic in self.topics.values() if not topic.multiple_choice])
+
     def multiple_choice_topics(self) -> str:
         return ", ".join([topic.name for topic in self.topics.values() if topic.multiple_choice])
+
+    def topic_options(self) -> str:
+        return "\n".join([f'{topic.name}: {topic.list_options_details()}' for topic in self.topics.values()
+                          if len(topic.options) > 0])
+
+    def whole_topic_info(self) -> str:
+        """Whole topic info in one string. Individual topics are separated by a newline."""
+        return "\n".join([f"{topic.name} {'multiple_choice' if topic.multiple_choice else 'single_choice'} "
+                          f"({topic.description}) {topic.list_options_details()}"
+                          for topic in self.topics.values()])
+
+    def topics_json(self) -> str:
+        return self.model_dump_json(indent=2)
 
     def get_format_strings(self) -> Dict[str, str]:
         return {
             "topic_keys": self.topic_keys(),
             "topic_names": self.topic_names(),
+            "topic_key_name_mapping": self.topic_key_name_mapping(),
             "topic_descriptions": self.topic_descriptions(),
             "topic_names_and_descriptions_colon": self.topic_names_and_descriptions_colon(),
             "topic_names_and_descriptions_parentheses": self.topic_names_and_descriptions_parentheses(),
+            "single_choice_topics": self.single_choice_topics(),
             "multiple_choice_topics": self.multiple_choice_topics(),
-            "text": "{text}",
+            "topic_options": self.topic_options(),
+            "whole_topic_info": self.whole_topic_info(),
+            "topics_json": self.topics_json(),
+            # "text": "{text}",
         }
 
 
@@ -73,43 +98,6 @@ class ResultOption(pydantic.BaseModel):
         return self.name + " (" + self.description + ")"
 
 
-# extraction_topics = ExtractionTopics(topics={
-#     "keywords": ExtractionTopic(name="keywords", description="Keywords are words or phrases that capture the main ideas, themes, concepts, or subjects of the text."),
-#     "topics": ExtractionTopic(name="topics", description="Topics are the main ideas, themes, concepts, or subjects. Topics are often generalizations of the text and often do not appear as words in the document."),
-#     "named_events": ExtractionTopic(name="named events", description="Named events are specific occurrences or happenings at a particular time and place with associated unique name."),
-#     "general_events": ExtractionTopic(name="general events", description="General events are unnamed occurrences or happenings at a particular time and place (e.g. car crash, football match, border clash, awakening)."),
-#     "named_places": ExtractionTopic(name="places", description="Named places are for example buildings, locations, areas, or regions with a distinct identity and name."),
-#     "general_places": ExtractionTopic(name="general places", description="General places are location types without a name (e.g. river, wilderness, city, underground, mountains)."),
-#     "named_people": ExtractionTopic(name="named people", description="Named people are individuals who are mentioned by name in the text. Named people should be represented in the output by their full name if possible."),
-#     "roles": ExtractionTopic(name="roles", description="Roles are the functions, positions, jobs, responsibilities or life roles of individuals or groups of people."),
-#     "organizations": ExtractionTopic(name="organizations", description="Organizations include states, companies, institutions, associations, and other groups of people with a common purpose or identity."),
-#     "perpetrators": ExtractionTopic(name="perpetrators", description="Perpetrators should include the exact words or phrases that identify the person or group of people who committed a crime, act of violence, or other harmful act."),
-#     "victims": ExtractionTopic(name="victims", description="Victims should include the exact words or phrases that identify the person or group of people who were harmed by a crime, act of violence, or other harmful act."),
-#
-#     "5-range": ExtractionTopic(name="5-range", description="Number of paragraphs in the text."),
-#     "6-genre": ExtractionTopic(name="6-genre", description="The genre of the text.",
-#                                options=[ResultOption(name="1-report", description="Report is information about a current event answering questions: who, what, where."),
-#                                         ResultOption(name="2-extended_report", description="Report is information about a current event answering questions: who, what, where, when, how and why."),
-#                                         ResultOption(name="3-interview", description="Interview is a conversation between two or more people."),
-#                                         ResultOption(name="9-other", description="Other genre.")]),
-#     "8-message-trigger": ExtractionTopic(name="8-message-trigger", description="The message trigger is the event or situation that causes the message to be sent.",
-#                                          options=[ResultOption(name="1-politician", description="The message reacts on actions of a politician"),
-#                                                   ResultOption(name="2-security-forces", description="The message reacts on action of security forces."),
-#                                                   ResultOption(name="4-public", description="The message reacts on action of public."),
-#                                                   ResultOption(name="9-other", description="Other message trigger.")]),
-#     "9-place": ExtractionTopic(name="9-place", description="The country where the event or situation occurs.",
-#                                multiple_choice=True,
-#                                options=[ResultOption(name="1-czech-republic", description="The event or situation occurs in the Czech Republic."),
-#                                         ResultOption(name="2-slovakia", description="The event or situation occurs in Slovakia."),
-#                                         ResultOption(name="3-poland", description="The event or situation occurs in Poland."),
-#                                         ResultOption(name="4-germany", description="The event or situation occurs in Germany."),
-#                                         ResultOption(name="5-russia", description="The event or situation occurs in Russia."),
-#                                         ResultOption(name="6-ukraine", description="The event or situation occurs in Ukraine."),
-#                                         ResultOption(name="9-other", description="The event or situation occurs in other country."),
-#                                         ResultOption(name="0-unknown", description="The event or situation occurs in unknown country.")]),
-# })
-
-
 def print_schema():
     print(ExtractionTopics.schema_json(indent=2))
 
@@ -125,6 +113,16 @@ def print_extract_topics():
     ...
 
 
+def test_dynamic_pydantic():
+    # load json from data/default/topic_definitions.json to extraction_topics
+    with open('data/default/topic_definitions.json', 'r') as f:
+        topic_definitions = json.load(f)
+        extraction_topics = ExtractionTopics.parse_obj(topic_definitions)
+        print(extraction_topics)
+
+
 if __name__ == "__main__":
-    print_schema()
+    # print_schema()
     # print_extract_topics()
+    test_dynamic_pydantic()
+

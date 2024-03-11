@@ -47,6 +47,8 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
+        # logging.debug(f'Data before cleaning:\n{df}')
+
         df = IRR.clean_data(df)
 
         if df.empty:
