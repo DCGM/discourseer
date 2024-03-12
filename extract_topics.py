@@ -122,12 +122,12 @@ class TopicExtractor:
 
         response = self.client.invoke(**conversation.dict())
 
-        response = json.loads(response.choices[0].message.content)
+        response = response.choices[0].message.content
         logging.debug(f"Response: {response}")
         self.conversation_log.messages += conversation.messages
         self.conversation_log.messages.append(
             ChatMessage(role="assistant",
-                        content=json.dumps(response, indent=2, ensure_ascii=False)))
+                        content=response))
 
         return response
 

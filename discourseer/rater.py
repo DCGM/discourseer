@@ -6,6 +6,7 @@ import pydantic
 import pandas as pd
 
 from discourseer.extraction_topics import ExtractionTopics
+from discourseer.utils import JSONParser
 
 logger = logging.getLogger()
 
@@ -33,7 +34,9 @@ class Rater:
         self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating))
         logger.debug(f"saved rating: {self.ratings[-1]}")
 
-    def add_model_response(self, file, response):
+    def add_model_response(self, file, response: str | dict):
+        response = JSONParser.response_to_dict(response)
+
         for key, value in response.items():
             topic_key = self.map_name_to_topic_key(key)
             self.add_rating(file, topic_key, value)
@@ -67,10 +70,8 @@ class Rater:
     def to_series(self) -> pd.Series:
         ratings_dict = {}
         for rating in self.ratings:
-            # print(f'rating: {dict(rating)}')
 
             extraction_topic = self.extraction_topics[rating.topic_key]
-            # print(f'extraction_topic: {extraction_topic}')
 
             if extraction_topic is not None and extraction_topic.multiple_choice:
                 # extraction_topic = extraction_topics[rating.topic_key]
@@ -78,27 +79,19 @@ class Rater:
                     ratings_dict[(rating.file, rating.topic_key, option.name)] = option.name in rating.rating_results
             else:
                 ratings_dict[(rating.file, rating.topic_key, 'single_choice')] = rating.rating_results[0]
-                # print('added just first rating')
-        # print(f'ratings_dict: {ratings_dict}')
-        # convert ratings_dict to series with named index 'file', 'topic_key', 'rating'
         series = pd.Series(ratings_dict,
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),
                                names=['file', 'topic_key', 'rating']))
-        # print(f'series:\n{series}')
-        # print('')
         return series
 
     @classmethod
     def from_csv(cls, rater_file: str, extraction_topics: ExtractionTopics = None):
         ratings = []
-        # print('Loading rater file:', rater_file)
         with open(rater_file, 'r', encoding='utf-8') as f:
             for line in f:
                 file, topic_key, *rating_results = line.strip().split(sep=',')
-                # print(f'file: {file}, topic_key: {topic_key}, rating_results: {rating_results}')
                 ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating_results))
-                # print(f'ratings[-1]: {ratings[-1].model_dump_json(indent=2)}')
         return cls(ratings=ratings, name=os.path.basename(rater_file), extraction_topics=extraction_topics)
 
     @classmethod
