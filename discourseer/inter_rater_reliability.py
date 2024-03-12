@@ -47,8 +47,9 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
+        # logging.debug(f'Data before reorganizing:\n{df}')
+        df = IRR.reorganize_raters(df)
         # logging.debug(f'Data before cleaning:\n{df}')
-
         df = IRR.clean_data(df)
 
         if df.empty:
@@ -161,6 +162,48 @@ class IRR:
         Check if all rows in a DataFrame are equal.
         """
         return df.apply(lambda x: x.nunique(), axis=1).eq(1).all()
+
+    @staticmethod
+    def reorganize_raters(df: pd.DataFrame) -> pd.DataFrame:
+        """Get dataFrame with sparse values (possibly lots of NaNs), shift all human rater nonNaN values to the left
+        in their rows.
+        """
+        df = df.copy()
+        # reset index
+        df.reset_index(inplace=True)
+        index_columns = ['file', 'topic_key', 'rating']
+        df_indexes = df[index_columns]
+
+        # separate model and human ratings
+        df_model = None
+        if 'model' in df.columns:
+            df_model = df['model']
+        df_raters = df[df.columns.difference(['model'] + index_columns)].copy()
+
+        # Add padding row to avoid columns being dropped
+        df_raters.loc[len(df_raters.index)] = ['<padding>'] * len(df_raters.columns)
+
+        # reorganize human ratings and delete NaN columns
+        df_raters_new = pd.DataFrame(
+            df_raters.iloc[:, ::].apply(
+                lambda x: x.dropna().tolist(), axis=1).tolist(),
+            columns=df_raters.columns[::]
+        ).iloc[:, ::]
+
+        # drop unused padding row and columns
+        df_raters_new.drop(df_raters_new.tail(1).index, inplace=True)  # drop padding row
+        df_raters_new.dropna(axis=1, how='all', inplace=True)  # drop NaN columns
+
+        for column in df_raters_new.columns:
+            df_raters_new[column] = df_raters_new[column].astype('string')
+
+        # join model and human ratings
+        df_all = pd.concat([df_indexes, df_raters_new, df_model], axis=1)
+
+        # reset index to multiindex
+        df_all.set_index(index_columns, inplace=True)
+
+        return df_all
 
     @staticmethod
     def clean_data(df: pd.DataFrame) -> pd.DataFrame:
