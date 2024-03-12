@@ -1,6 +1,7 @@
 .idea/
 
 data/outputs/*
+test/test_topic_extractor/outputs/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
