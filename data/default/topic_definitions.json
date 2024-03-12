@@ -70,7 +70,48 @@
       "name": "range",
       "description": "Number of paragraphs in the text.",
       "multiple_choice": false,
-      "options": []
+      "options": [
+        {
+          "name": "1",
+          "description": "1 paragraph."
+        },
+        {
+          "name": "2",
+          "description": "2 paragraphs."
+        },
+        {
+          "name": "3",
+          "description": "3 paragraphs."
+        },
+        {
+          "name": "4",
+          "description": "4 paragraphs."
+        },
+        {
+          "name": "5",
+          "description": "5 paragraphs."
+        },
+        {
+          "name": "6",
+          "description": "6 paragraphs."
+        },
+        {
+          "name": "7",
+          "description": "7 paragraphs."
+        },
+        {
+          "name": "8",
+          "description": "8 paragraphs."
+        },
+        {
+          "name": "9",
+          "description": "9 paragraphs."
+        },
+        {
+          "name": "10",
+          "description": "10 paragraphs."
+        }
+      ]
     },
     "6-genre": {
       "name": "genre",

@@ -16,10 +16,14 @@ class Rating(pydantic.BaseModel):
     topic_key: str
     rating_results: list[str]
 
-    model_config = pydantic.ConfigDict(coerce_numbers_to_str=True)
+    model_config = pydantic.ConfigDict(coerce_numbers_to_str=True)  # allow numbers to be stored as strings
 
 
 class Rater:
+    UNKNOWN_TOPIC = "<unknown_topic>"
+    UNKNOWN_OPTION = "<unknown_option>"
+    MOST_LIKELY_OPTION = "<most_likely_option>"
+
     def __init__(self, ratings: list = None, name: str = None, extraction_topics: ExtractionTopics = None):
         """Rater consists of list of ratings. (see Rating class)"""
         self.ratings = ratings if ratings else []
@@ -31,7 +35,9 @@ class Rater:
         logging.debug(f"Adding rating: {file}, {topic_key}, {rating}")
         rating = rating if isinstance(rating, list) else [rating]
 
-        self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating))
+        valid_ratings = self.validate_ratings(topic_key, rating)
+
+        self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=valid_ratings))
         logger.debug(f"saved rating: {self.ratings[-1]}")
 
     def add_model_response(self, file, response: str | dict):
@@ -49,10 +55,19 @@ class Rater:
 
         if not key:
             logger.warning(f"Topic name {name} not found in extraction topics. Using name as key.")
-            return name
+            return f'{Rater.UNKNOWN_TOPIC}{name}'
         return key
 
-    def save_ratings(self, out_file: str):
+    def validate_ratings(self, topic_key: str, ratings: list[str]) -> list[str]:
+        extraction_topic = self.extraction_topics[topic_key]
+        if extraction_topic is None:
+            return [f'{Rater.UNKNOWN_TOPIC}{r}'for r in ratings]
+
+        valid_ratings = [Rater.validate_rating_against_topic_options(extraction_topic, r) for r in ratings]
+        valid_ratings = list(set(valid_ratings))  # return unique ratings only
+        return valid_ratings
+
+    def save_to_csv(self, out_file: str):
         out_path = os.path.dirname(out_file)
 
         if not os.path.exists(out_path):
@@ -70,11 +85,8 @@ class Rater:
     def to_series(self) -> pd.Series:
         ratings_dict = {}
         for rating in self.ratings:
-
             extraction_topic = self.extraction_topics[rating.topic_key]
-
             if extraction_topic is not None and extraction_topic.multiple_choice:
-                # extraction_topic = extraction_topics[rating.topic_key]
                 for option in extraction_topic.options:
                     ratings_dict[(rating.file, rating.topic_key, option.name)] = option.name in rating.rating_results
             else:
@@ -84,6 +96,18 @@ class Rater:
                                ratings_dict.keys(),
                                names=['file', 'topic_key', 'rating']))
         return series
+
+    @staticmethod
+    def validate_rating_against_topic_options(extraction_topic, rating) -> str:
+        if extraction_topic.has_option(rating):
+            return rating
+
+        in_ratings = [o for o in extraction_topic.options
+                      if rating in o.name]
+        if len(in_ratings) == 1:
+            return f'{Rater.MOST_LIKELY_OPTION}{rating}'
+
+        return f'{Rater.UNKNOWN_OPTION}{rating}'
 
     @classmethod
     def from_csv(cls, rater_file: str, extraction_topics: ExtractionTopics = None):

@@ -109,6 +109,9 @@ class ExtractionTopic(pydantic.BaseModel):
     multiple_choice: bool = False
     options: List[ResultOption] = []
 
+    def has_option(self, option: str) -> bool:
+        return option in [option.name for option in self.options]
+
     def get_description(self) -> str:
         return self.description + " " + " ".join(str(option) for option in self.options)
 

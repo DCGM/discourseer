@@ -93,8 +93,6 @@ class TopicExtractor:
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_topics=self.topics)
-        # self.system_prompt = self.construct_system_prompt()
-        # self.system_prompts = [self.construct_system_prompt(topic) for topic in self.to_extract]
         logging.info(f"First prompt: {self.prompt_definition.messages[0].content}")
 
     def __call__(self):
@@ -104,7 +102,7 @@ class TopicExtractor:
                 response = self.extract_topics(text)
                 self.model_rater.add_model_response(os.path.basename(file), response)
 
-        self.model_rater.save_ratings(self.get_output_file('model_ratings.csv'))
+        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
         pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'))
 
         if self.raters:

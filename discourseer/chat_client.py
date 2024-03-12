@@ -25,7 +25,6 @@ class Conversation(pydantic.BaseModel):
 
     @pydantic.field_serializer('response_format')
     def serialize_response_format(self, response_format: ResponseFormat, _info):
-        print(f"Serializing response_format {response_format} to {response_format.value}")
         return response_format.value
 
 
