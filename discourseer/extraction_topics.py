@@ -12,6 +12,9 @@ class ExtractionTopics(pydantic.BaseModel):
     def __getitem__(self, item):
         return self.topics.get(item, None)
 
+    def __contains__(self, item):
+        return item in self.topics
+
     def is_multiple_choice(self, topic: str) -> bool:
         if topic not in self.topics:
             return False
@@ -35,10 +38,10 @@ class ExtractionTopics(pydantic.BaseModel):
         return " ".join([topic.description for topic in self.topics.values()])
 
     def topic_names_and_descriptions_colon(self) -> str:
-        return ", ".join([f'{topic.name}: {topic.description}' for topic in self.topics.values()])
+        return " ".join([f'{topic.name}: {topic.description}' for topic in self.topics.values()])
 
     def topic_names_and_descriptions_parentheses(self) -> str:
-        return ", ".join([f'{topic.name} ({topic.description})' for topic in self.topics.values()])
+        return " ".join([f'{topic.name} ({topic.description})' for topic in self.topics.values()])
 
     def single_choice_topics(self) -> str:
         return ", ".join([topic.name for topic in self.topics.values() if not topic.multiple_choice])
@@ -72,14 +75,14 @@ class ExtractionTopics(pydantic.BaseModel):
 
     def response_json_schema_with_options(self) -> str:
         response_format = {}
-        for topic_key, topic in self.topics.items():
+        for _, topic in self.topics.items():
             option_names = [option.name for option in topic.options]
 
             if topic.multiple_choice:
                 value = List[Literal[tuple(option_names)]] if len(option_names) > 0 else List[str]
             else:
                 value = Literal[tuple(option_names)] if len(option_names) > 0 else str
-            response_format[topic_key] = (value, ...)
+            response_format[topic.name] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
         return response_format.schema_json(indent=2)
 

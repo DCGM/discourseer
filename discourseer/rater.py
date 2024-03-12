@@ -24,6 +24,7 @@ class Rater:
         self.ratings = ratings if ratings else []
         self.name = name
         self.extraction_topics = extraction_topics if extraction_topics else ExtractionTopics()
+        self.name_to_key = {topic.name: key for key, topic in self.extraction_topics.topics.items()}
 
     def add_rating(self, file: str, topic_key: str, rating: str | list):
         logging.debug(f"Adding rating: {file}, {topic_key}, {rating}")
@@ -34,7 +35,19 @@ class Rater:
 
     def add_model_response(self, file, response):
         for key, value in response.items():
-            self.add_rating(file, key, value)
+            topic_key = self.map_name_to_topic_key(key)
+            self.add_rating(file, topic_key, value)
+
+    def map_name_to_topic_key(self, name: str) -> str:
+        if name in self.extraction_topics:
+            return name
+
+        key = self.name_to_key.get(name, None)
+
+        if not key:
+            logger.warning(f"Topic name {name} not found in extraction topics. Using name as key.")
+            return name
+        return key
 
     def save_ratings(self, out_file: str):
         out_path = os.path.dirname(out_file)

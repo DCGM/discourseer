@@ -9,7 +9,7 @@ Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY' s klí
 
 ## Příklad spuštění
 ```bash
-python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --output-file data/outputs/out_test.txt --topic-subset 9-place 8-message-trigger 6-genre 5-range --openai-api-key sk-ZmfV3vvo19y...
+python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --topic-subset 9-place 8-message-trigger 6-genre 5-range --openai-api-key sk-ZmfV3vvo19y...
 ```
 
 ## Popis parametrů
