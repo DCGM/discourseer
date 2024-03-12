@@ -4,6 +4,7 @@ import os
 import pydantic
 from typing import Literal
 from enum import Enum
+import json
 
 import openai
 from openai import OpenAI
@@ -75,7 +76,7 @@ class ChatClient:
 
 
 def print_conversation_schema():
-    print(Conversation.schema_json(indent=2))
+    print(json.dumps(Conversation.model_json_schema(), indent=2))
 
 
 if __name__ == '__main__':

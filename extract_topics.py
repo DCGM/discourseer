@@ -118,7 +118,7 @@ class TopicExtractor:
         for message in conversation.messages:
             message.content = message.content.format(**self.topics.get_format_strings(), text=text)
 
-        response = self.client.invoke(**conversation.dict())
+        response = self.client.invoke(**conversation.model_dump())
 
         response = response.choices[0].message.content
         logging.debug(f"Response: {response}")
@@ -132,7 +132,6 @@ class TopicExtractor:
     def get_output_file(self, file_name: str):
         file, ext = os.path.splitext(file_name)
         return os.path.join(self.output_dir, f'{file}{ext}')
-        # return os.path.join(self.output_dir, f'{file}_{self.output_dir_base}{ext}')
 
     @staticmethod
     def load_prompt_definition(prompt_definition: str):

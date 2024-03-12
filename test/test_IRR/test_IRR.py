@@ -9,9 +9,11 @@ from discourseer.rater import Rater
 
 
 class TestIRRWithoutModel(unittest.TestCase):
+    dir = os.path.join(os.path.dirname(__file__), 'IRR_texts')
+
     def test_irr_equal(self):
-        rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
-        rater_2 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
         irr_results = IRR([rater_1, rater_2])().model_dump()
 
         self.assertEqual(irr_results["fleiss_kappa"]['without_model'], 1.0)
@@ -22,8 +24,8 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertEqual(irr_results["gwet_ac1"]['with_model'], None)
 
     def test_irr_diff(self):
-        rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
-        rater_2 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_2.csv")
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'))
         irr_results = IRR([rater_1, rater_2])().model_dump()
 
         assert irr_results["fleiss_kappa"]['without_model'] == pytest.approx(0.8, 0.05)
@@ -34,8 +36,8 @@ class TestIRRWithoutModel(unittest.TestCase):
         assert irr_results["gwet_ac1"]['with_model'] is None
 
     def test_irr_ignore_nan(self):
-        rater_1 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_1.csv")
-        rater_4 = Rater.from_csv("data/texts-vlach-ratings-1ofN/rater_4.csv")
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
+        rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'))
 
         irr_results = IRR([rater_1, rater_4])().model_dump()
 

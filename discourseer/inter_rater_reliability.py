@@ -28,6 +28,12 @@ class IRRResult(pydantic.BaseModel):
 class IRR:
     TOTAL_AGREEMENT = 1.0
     WORST_CASE_VALUE = '--WORST-CASE--'  # A value that should not be present in the ratings
+    EMPTY_IRR_RESULTS = IRRResults(
+        fleiss_kappa=IRRResult(),
+        krippendorff_alpha=IRRResult(),
+        gwet_ac1=IRRResult(),
+        majority_agreement=None
+    )
 
     def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_topics: ExtractionTopics = None):
         self.raters = raters
@@ -54,12 +60,7 @@ class IRR:
 
         if df.empty:
             logging.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
-            return IRRResults(
-                fleiss_kappa=IRRResult(),
-                krippendorff_alpha=IRRResult(),
-                gwet_ac1=IRRResult(),
-                majority_agreement=None
-            )
+            return IRR.EMPTY_IRR_RESULTS
 
         maj_agreement = IRR.calc_majority_agreement(df)
 

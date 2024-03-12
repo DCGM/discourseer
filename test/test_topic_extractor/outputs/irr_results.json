@@ -1,0 +1,18 @@
+{
+  "fleiss_kappa": {
+    "without_model": 0.83582,
+    "with_model": 0.78305,
+    "worst_case": 0.5671
+  },
+  "krippendorff_alpha": {
+    "without_model": 0.83748,
+    "with_model": 0.78469,
+    "worst_case": 0.57038
+  },
+  "gwet_ac1": {
+    "without_model": 0.89158,
+    "with_model": 0.85922,
+    "worst_case": 0.73183
+  },
+  "majority_agreement": 0.84848
+}

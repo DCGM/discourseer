@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import pydantic
 from typing import List, Dict, Literal
 
@@ -69,7 +70,7 @@ class ExtractionTopics(pydantic.BaseModel):
                 value = str
             response_format[topic_key] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
-        return response_format.schema_json(indent=2)
+        return json.dumps(response_format.model_json_schema(), indent=2)
 
     def response_json_schema_with_options(self) -> str:
         response_format = {}
@@ -82,7 +83,7 @@ class ExtractionTopics(pydantic.BaseModel):
                 value = Literal[tuple(option_names)] if len(option_names) > 0 else str
             response_format[topic.name] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
-        return response_format.schema_json(indent=2)
+        return json.dumps(response_format.model_json_schema(), indent=2)
 
     def get_format_strings(self) -> Dict[str, str]:
         return {
