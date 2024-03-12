@@ -1,13 +1,18 @@
 from __future__ import annotations
 
-import json
 import os
 import pydantic
 from typing import Literal
+from enum import Enum
 
 import openai
 from openai import OpenAI
 import backoff
+
+
+class ResponseFormat(Enum):
+    json = "json"
+    normal = "normal"
 
 
 class Conversation(pydantic.BaseModel):
@@ -15,8 +20,13 @@ class Conversation(pydantic.BaseModel):
     max_tokens: int = 1024
     temperature: float = 0.0
     top_p: float = 0
-    response_format: Literal["json", "normal"] = "json"
+    response_format: ResponseFormat = ResponseFormat.json
     messages: list[ChatMessage]
+
+    @pydantic.field_serializer('response_format')
+    def serialize_response_format(self, response_format: ResponseFormat, _info):
+        print(f"Serializing response_format {response_format} to {response_format.value}")
+        return response_format.value
 
 
 class ChatMessage(pydantic.BaseModel):
@@ -36,9 +46,14 @@ class ChatClient:
         self.client = OpenAI(api_key=openai_api_key)
         self.test_client()
 
-    def invoke(self, response_format: str | None = None, **kwargs):
-        if response_format == "json":
-            return self.completions_with_backoff(response_format={"type": "json_object"}, **kwargs)
+    def invoke(self, response_format: ResponseFormat = ResponseFormat.normal, **kwargs):
+        if response_format == ResponseFormat.json:
+            try:
+                return self.completions_with_backoff(response_format={"type": "json_object"}, **kwargs)
+            except openai.BadRequestError as e:
+                if "'json_object' is not supported with this model" in str(e.message):
+                    return self.completions_with_backoff(**kwargs)
+                raise e
         else:
             return self.completions_with_backoff(**kwargs)
 

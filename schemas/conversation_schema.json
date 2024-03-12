@@ -22,6 +22,14 @@
       ],
       "title": "ChatMessage",
       "type": "object"
+    },
+    "ResponseFormat": {
+      "enum": [
+        "json",
+        "normal"
+      ],
+      "title": "ResponseFormat",
+      "type": "string"
     }
   },
   "properties": {
@@ -46,13 +54,12 @@
       "type": "number"
     },
     "response_format": {
-      "default": "json",
-      "enum": [
-        "json",
-        "normal"
+      "allOf": [
+        {
+          "$ref": "#/$defs/ResponseFormat"
+        }
       ],
-      "title": "Response Format",
-      "type": "string"
+      "default": "normal"
     },
     "messages": {
       "items": {
