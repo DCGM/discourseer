@@ -5,11 +5,11 @@ Pro spuštění je potřeba mít nainstalovaný Python 3.8 a vyšší.
 ```bash
 pip install -r requirements.txt
 ```
-Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY' s klíčem pro OpenAI API nebo ho předat jako parametr při spuštění `--openai-api-key`
+Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY` s klíčem pro OpenAI API nebo ho předat jako parametr při spuštění `--openai-api-key`
 
 ## Příklad spuštění
 ```bash
-python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings-1ofN/ --topic-subset 9-place 8-message-trigger 6-genre 5-range --openai-api-key sk-ZmfV3vvo19y...
+python extract_topics.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings/ --openai-api-key sk-ZmfV3vvo19y...
 ```
 
 ## Popis parametrů
