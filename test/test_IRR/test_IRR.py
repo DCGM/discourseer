@@ -84,15 +84,12 @@ class TestReorganizingRaters(unittest.TestCase):
         new_df = IRR.reorganize_raters(df)
 
         # print('--------------------')
-        #
         # print(f'original df:\n{df}')
         # print(f'new_df:\n{new_df}')
-        #
+
         # print('--------------------')
-        #
         # print('new_df.dtypes')
         # print(new_df.dtypes)
-        #
         # print('df.dtypes')
         # print(df.dtypes)
 

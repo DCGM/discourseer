@@ -2,6 +2,7 @@ from __future__ import annotations
 import os
 import logging
 import pydantic
+from typing import List
 
 import pandas as pd
 
@@ -13,9 +14,24 @@ logger = logging.getLogger()
 class Rating(pydantic.BaseModel):
     file: str
     topic_key: str
+    topic_name: str
     rating_results: list[str]
 
     model_config = pydantic.ConfigDict(coerce_numbers_to_str=True)  # allow numbers to be stored as strings
+
+    @classmethod
+    def from_csv_line(cls, line: str):
+        values_from_csv = line.strip().split(sep=',')
+        values_from_csv = [v.strip() for v in values_from_csv]
+
+        if len(values_from_csv) > 3:
+            file, topic_key, topic_name, *rating_results = values_from_csv
+            return cls(file=file, topic_key=topic_key, topic_name=topic_name, rating_results=rating_results)
+        elif len(values_from_csv) == 3:
+            file, topic_key, *rating_results = values_from_csv
+            return cls(file=file, topic_key=topic_key, topic_name=topic_key, rating_results=rating_results)
+        else:
+            return None
 
 
 class Rater:
@@ -23,26 +39,24 @@ class Rater:
     UNKNOWN_OPTION = "<unknown_option>"
     MOST_LIKELY_OPTION = "<most_likely_option>"
 
-    def __init__(self, ratings: list = None, name: str = None, extraction_topics: ExtractionTopics = None):
+    def __init__(self, ratings: List[Rating] = None, name: str = None, extraction_topics: ExtractionTopics = None):
         """Rater consists of list of ratings. (see Rating class)"""
         self.ratings = ratings if ratings else []
         self.name = name
         self.extraction_topics = extraction_topics if extraction_topics else ExtractionTopics()
         self.name_to_key = {topic.name: key for key, topic in self.extraction_topics.topics.items()}
 
-    def add_rating(self, file: str, topic_key: str, rating: str | list):
-        logging.debug(f"Adding rating: {file}, {topic_key}, {rating}")
-        rating = rating if isinstance(rating, list) else [rating]
-
-        valid_ratings = self.validate_ratings(topic_key, rating)
-
-        self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=valid_ratings))
-        logger.debug(f"saved rating: {self.ratings[-1]}")
-
     def add_model_response(self, file, response: dict):
-        for key, value in response.items():
-            topic_key = self.map_name_to_topic_key(key)
-            self.add_rating(file, topic_key, value)
+        for topic_name, value in response.items():
+            logging.debug(f"Adding rating: {topic_name}, {value}")
+
+            topic_key = self.map_name_to_topic_key(topic_name)
+            if isinstance(value, str):
+                value = [value]
+
+            rating = Rating(file=file, topic_key=topic_key, topic_name=topic_name, rating_results=value)
+            self.ratings.append(rating)
+            logger.debug(f"saved rating: {self.ratings[-1]}")
 
     def map_name_to_topic_key(self, name: str) -> str:
         if name in self.extraction_topics:
@@ -75,9 +89,9 @@ class Rater:
         with open(out_file, 'w', encoding='utf-8') as f:
             for rating in self.ratings:
                 rating_results = ','.join(rating.rating_results)
-                f.write(f"{rating.file},{rating.topic_key},{rating_results}\n")
+                f.write(f"{rating.file},{rating.topic_key},{rating.topic_name},{rating_results}\n")
 
-        logger.info(f"Results saved to {out_file}")
+        logger.info(f"Rater {self.name} saved to {out_file}")
 
     def to_series(self) -> pd.Series:
         ratings_dict = {}
@@ -108,12 +122,20 @@ class Rater:
 
     @classmethod
     def from_csv(cls, rater_file: str, extraction_topics: ExtractionTopics = None):
-        ratings = []
+        rater = cls(ratings=[], extraction_topics=extraction_topics, name=os.path.basename(rater_file))
+
         with open(rater_file, 'r', encoding='utf-8') as f:
             for line in f:
-                file, topic_key, *rating_results = line.strip().split(sep=',')
-                ratings.append(Rating(file=file, topic_key=topic_key, rating_results=rating_results))
-        return cls(ratings=ratings, name=os.path.basename(rater_file), extraction_topics=extraction_topics)
+                line = line.strip()
+                rating = Rating.from_csv_line(line)
+
+                if rating is None:
+                    logger.warning(f'Can not parse rating from line "{line}" in file {rater_file}. '
+                                   f'Skipping.')
+                    continue
+
+                rater.ratings.append(rating)
+        return rater
 
     @classmethod
     def from_dir(cls, ratings_dir: str = None, extraction_topics: ExtractionTopics = None) -> list[Rater]:

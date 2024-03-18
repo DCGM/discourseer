@@ -31,6 +31,8 @@ def parse_args():
                              'The accuracy may suffer if there is too many topics.')
     parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json",
                         help='The file containing the main prompt text + format strings for topics.')
+    parser.add_argument('--copy-input-ratings', action='store_true',
+                        help='Copy input ratings to output folder.')
     parser.add_argument('--openai-api-key', type=str)
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
@@ -66,7 +68,8 @@ def main():
         topic_definitions=args.topic_definitions,
         topic_subset=args.topic_subset,
         openai_api_key=args.openai_api_key,
-        prompt_definition=args.prompt_definition
+        prompt_definition=args.prompt_definition,
+        copy_input_ratings=args.copy_input_ratings
     )
     topic_extractor()
 
@@ -75,14 +78,18 @@ def main():
 
 
 class TopicExtractor:
+    input_ratings_dir = 'input_ratings'
+
     def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_dir: str = 'data/outputs/test',
                  topic_subset: List[str] = None, topic_definitions: str = "data/default/topic_definitions.json",
-                 openai_api_key: str = None, prompt_definition: str = "data/default/prompt_definition.json"):
+                 openai_api_key: str = None, prompt_definition: str = "data/default/prompt_definition.json",
+                 copy_input_ratings: bool = False):
         self.input_files = self.get_input_files(texts_dir)
         self.output_dir, self.output_dir_base = self.prepare_output_dir(output_dir)
         self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
         self.raters = Rater.from_dirs(ratings_dirs, self.topics)
         self.prompt_definition = self.load_prompt_definition(prompt_definition)
+        self.copy_input_ratings = copy_input_ratings
 
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
@@ -106,13 +113,21 @@ class TopicExtractor:
         self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
         pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'))
 
-        if self.raters:
-            irr_results = IRR(self.raters, self.model_rater, self.topics)()
-            logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
-            pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
+        if not self.raters:
+            logging.info("No rater files found. Inter-rater reliability will not be calculated.")
+            return
+
+        irr_results = IRR(self.raters, self.model_rater, self.topics)()
+        logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
+
+        pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
+        if self.copy_input_ratings:
+            os.makedirs(os.path.join(self.output_dir, self.input_ratings_dir), exist_ok=True)
+            for rater in self.raters:
+                rater.save_to_csv(self.get_output_file(f'{rater.name}', input_ratings=True))
 
     def extract_topics(self, text):
-        logging.debug('\n\n')
+        logging.debug('New document:\n\n')
         logging.debug(f'Extracting topics from text: {text[:min(50, len(text))]}...')
 
         conversation = self.prompt_definition.model_copy(deep=True)
@@ -132,9 +147,10 @@ class TopicExtractor:
 
         return response
 
-    def get_output_file(self, file_name: str):
-        file, ext = os.path.splitext(file_name)
-        return os.path.join(self.output_dir, f'{file}{ext}')
+    def get_output_file(self, file_name: str, input_ratings: bool = False):
+        if input_ratings:
+            return os.path.join(self.output_dir, self.input_ratings_dir, file_name)
+        return os.path.join(self.output_dir, file_name)
 
     @staticmethod
     def load_prompt_definition(prompt_definition: str) -> Conversation:
