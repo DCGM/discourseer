@@ -10,7 +10,7 @@ from discourseer.extraction_topics import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage
-from discourseer.utils import pydantic_to_json_file
+from discourseer.utils import pydantic_to_json_file, JSONParser
 
 
 def parse_args():
@@ -88,7 +88,8 @@ class TopicExtractor:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
         self.conversation_log = self.prompt_definition.model_copy(deep=True)
-        end_of_prompt_definition_message = ChatMessage(role='assistant', content="Hello!")
+        end_of_prompt_definition_message = ChatMessage(
+            role='assistant', content="This is the end of task definition. The conversation follows.")
         self.conversation_log.messages.append(end_of_prompt_definition_message)
 
         self.client = ChatClient(openai_api_key=openai_api_key)
@@ -121,8 +122,10 @@ class TopicExtractor:
         response = self.client.invoke(**conversation.model_dump())
 
         response = response.choices[0].message.content
+        response = JSONParser.response_to_dict(response)
+
         logging.debug(f"Response: {response}")
-        self.conversation_log.messages += conversation.messages
+        self.conversation_log.add_messages(conversation.messages, try_parse_json=True)
         self.conversation_log.messages.append(
             ChatMessage(role="assistant",
                         content=response))
@@ -134,7 +137,7 @@ class TopicExtractor:
         return os.path.join(self.output_dir, f'{file}{ext}')
 
     @staticmethod
-    def load_prompt_definition(prompt_definition: str):
+    def load_prompt_definition(prompt_definition: str) -> Conversation:
         logging.debug(f'Loading prompt definition from file:{prompt_definition}')
         with open(prompt_definition, 'r', encoding='utf-8') as f:
             prompt_definition = json.load(f)

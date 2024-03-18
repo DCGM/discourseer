@@ -2,13 +2,15 @@ from __future__ import annotations
 
 import os
 import pydantic
-from typing import Literal
+from typing import Literal, List
 from enum import Enum
 import json
 
 import openai
 from openai import OpenAI
 import backoff
+
+from discourseer.utils import JSONParser
 
 
 class ResponseFormat(Enum):
@@ -28,10 +30,18 @@ class Conversation(pydantic.BaseModel):
     def serialize_response_format(self, response_format: ResponseFormat, _info):
         return response_format.value
 
+    def add_messages(self, messages: List[ChatMessage], try_parse_json: bool = False):
+        for message in messages:
+            if try_parse_json and isinstance(message.content, str):
+                content_json = JSONParser.try_parse_json(message.content)
+                if content_json and isinstance(content_json, dict):
+                    message.content = content_json
+            self.messages.append(message)
+
 
 class ChatMessage(pydantic.BaseModel):
     role: Literal["system", "user", "assistant"]
-    content: str
+    content: str | dict
 
 
 class ChatClient:

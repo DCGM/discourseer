@@ -6,7 +6,6 @@ import pydantic
 import pandas as pd
 
 from discourseer.extraction_topics import ExtractionTopics
-from discourseer.utils import JSONParser
 
 logger = logging.getLogger()
 
@@ -40,9 +39,7 @@ class Rater:
         self.ratings.append(Rating(file=file, topic_key=topic_key, rating_results=valid_ratings))
         logger.debug(f"saved rating: {self.ratings[-1]}")
 
-    def add_model_response(self, file, response: str | dict):
-        response = JSONParser.response_to_dict(response)
-
+    def add_model_response(self, file, response: dict):
         for key, value in response.items():
             topic_key = self.map_name_to_topic_key(key)
             self.add_rating(file, topic_key, value)

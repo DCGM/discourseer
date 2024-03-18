@@ -13,7 +13,7 @@ def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):
 
 class JSONParser:
     @staticmethod
-    def try_parse_json(json_str) -> dict | None:
+    def try_parse_json(json_str: str) -> dict | None:
         try:
             return json.loads(json_str)
         except json.JSONDecodeError:
