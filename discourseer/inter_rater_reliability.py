@@ -3,6 +3,7 @@ import logging
 import pydantic
 from typing import Optional, Dict
 
+import numpy as np
 import pandas as pd
 from irrCAC.raw import CAC
 
@@ -16,6 +17,38 @@ class IRRResults(pydantic.BaseModel):
     overall: IRRResult
     mean_through_topics: Optional[IRRResult] = None
     topics: Optional[Dict[str, IRRResult]] = {}
+
+    def get_mean_through_topics(self) -> IRRResult:
+        if not self.topics:
+            return IRRResult()
+        return IRRResult(
+            fleiss_kappa=self.get_mean('fleiss_kappa'),
+            krippendorff_alpha=self.get_mean('krippendorff_alpha'),
+            gwet_ac1=self.get_mean('gwet_ac1'),
+            majority_agreement=self.get_mean_majority_agreement()
+        )
+
+    def get_mean(self, metric: str) -> IRRVariants:
+        if not self.topics:
+            return IRRVariants()
+        return IRRVariants(
+            best_case=self.get_mean_value(metric, 'best_case'),
+            with_model=self.get_mean_value(metric, 'with_model'),
+            worst_case=self.get_mean_value(metric, 'worst_case'),
+            without_model=self.get_mean_value(metric, 'without_model')
+        )
+
+    def get_mean_value(self, metric: str, variant: str) -> float:
+        sum_values = sum([result.model_dump()[metric][variant] for result in self.topics.values()
+                          if result.model_dump()[metric][variant] is not None])
+        return round(sum_values / len(self.topics), 5)
+
+    def get_mean_majority_agreement(self) -> float | None:
+        if not self.topics:
+            return None
+        sum_values = sum([result.majority_agreement for result in self.topics.values()
+                          if result.majority_agreement is not None])
+        return round(sum_values / len(self.topics), 5)
 
 
 class IRRResult(pydantic.BaseModel):
@@ -71,13 +104,13 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
-        # logging.debug(f'Data before reorganizing:\n{df}')
+        # logger.debug(f'Data before reorganizing:\n{df}')
         df = self.reorganize_raters(df)
-        # logging.debug(f'Data before cleaning:\n{df}')
+        # logger.debug(f'Data before cleaning:\n{df}')
         df = self.clean_data(df)
 
         if df.empty:
-            logging.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
+            logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             return IRR.EMPTY_IRR_RESULTS
 
         self.input_columns = df.columns.difference([self.col_model]).to_list()
@@ -87,8 +120,25 @@ class IRR:
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
 
-        logging.debug(f'Calculating inter-rater reliability for:\n{df}')
+        logger.debug(f'Calculating inter-rater reliability for:\n{df}')
 
+        overall_results = self.get_irr_result(df)
+
+        topic_irr_results = {}
+        for topic in topics:
+            df_topic = df.xs(topic, level='topic_key')
+            print(f'topic ({topic}):\n{df_topic}')
+            topic_irr_results[topic] = self.get_irr_result(df_topic)
+
+        irr_results = IRRResults(
+            overall=overall_results,
+            topics=topic_irr_results
+        )
+
+        irr_results.mean_through_topics = irr_results.get_mean_through_topics()
+        return irr_results
+
+    def get_irr_result(self, df: pd.DataFrame) -> IRRResult:
         if self.model_rater:
             cac_with_model = CAC(df.loc[:, self.input_columns + self.model_columns])
         else:
@@ -103,13 +153,11 @@ class IRR:
         kripp_alpha = IRR.calc_kripp_alpha(cac_without_model, cac_with_model, cac_worst_case, cac_best_case)
         gwet_ac1 = IRR.calc_gwet_ac1(cac_without_model, cac_with_model, cac_worst_case, cac_best_case)
 
-        return IRRResults(
-            overall=IRRResult(
-                fleiss_kappa=fleiss_kappa,
-                krippendorff_alpha=kripp_alpha,
-                gwet_ac1=gwet_ac1,
-                majority_agreement=maj_agreement
-            )
+        return IRRResult(
+            fleiss_kappa=fleiss_kappa,
+            krippendorff_alpha=kripp_alpha,
+            gwet_ac1=gwet_ac1,
+            majority_agreement=maj_agreement
         )
 
     def prepare_majority_agreement(self, df: pd.DataFrame):
@@ -119,8 +167,8 @@ class IRR:
             df[self.col_maj_agree_with_model] = df[self.col_majority] == df[self.model_columns[0]]
         elif len(self.model_columns) > 1:
             df[self.col_maj_agree_with_model] = None
-            logging.warning(f"Cannot calculate majority agreement. "
-                            f"More than one model columns found: {self.model_columns}")
+            logger.warning(f"Cannot calculate majority agreement. "
+                           f"More than one model columns found: {self.model_columns}")
         return df
 
     def calc_majority_agreement(self, df: pd.DataFrame) -> float | None:
@@ -131,8 +179,8 @@ class IRR:
             df = self.prepare_majority_agreement(df)
 
         if self.col_maj_agree_with_model not in df.columns:
-            logging.info(f"Cannot calculate majority agreement. "
-                         f"Column '{self.col_maj_agree_with_model}' not found in DataFrame.")
+            logger.info(f"Cannot calculate majority agreement. "
+                        f"Column '{self.col_maj_agree_with_model}' not found in DataFrame.")
             return None
 
         majority_agreement = df[self.col_maj_agree_with_model].sum() / df.shape[0]
@@ -153,7 +201,7 @@ class IRR:
             best_case=IRR.get_cac_metric(cac_best_case, 'fleiss')
         )
 
-        logging.debug(f"Fleiss' Kappa results: {result}")
+        logger.debug(f"Fleiss' Kappa results: {result}")
         return result
 
     @staticmethod
@@ -169,8 +217,7 @@ class IRR:
             best_case=IRR.get_cac_metric(cac_best_case, 'krippendorff')
         )
 
-        logging.debug(f"Krippendorff's Alpha results: {result}")
-
+        logger.debug(f"Krippendorff's Alpha results: {result}")
         return result
 
     @staticmethod
@@ -186,24 +233,25 @@ class IRR:
             best_case=IRR.get_cac_metric(cac_best_case, 'gwet')
         )
 
-        logging.debug(f"Gwet's AC1 results: {result}")
-
+        logger.debug(f"Gwet's AC1 results: {result}")
         return result
 
     @staticmethod
     def get_cac_metric(cac: CAC = None, metric: str = None) -> float | None:
         if cac is None:
-            logging.debug("No CAC object provided. Empty data.")
+            logger.debug("No CAC object provided. Empty data.")
             return None
 
         if metric is None:
-            logging.debug("No metric provided.")
+            logger.debug("No metric provided.")
             return None
 
         if IRR.all_rows_equal(cac.ratings):
             return IRR.TOTAL_AGREEMENT
         else:
-            return getattr(cac, metric)()['est']['coefficient_value']
+            with np.errstate(divide='ignore', invalid='ignore'):
+                result = getattr(cac, metric)()['est']['coefficient_value']
+            return result
 
     @staticmethod
     def all_rows_equal(df: pd.DataFrame) -> bool:
