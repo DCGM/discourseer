@@ -8,7 +8,7 @@ import pandas as pd
 from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
-from discourseer.extraction_topics import ExtractionTopics
+from discourseer.extraction_topics import ExtractionTopics, single_choice_tag
 
 logger = logging.getLogger()
 
@@ -104,9 +104,7 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
-        # logger.debug(f'Data before reorganizing:\n{df}')
         df = self.reorganize_raters(df)
-        # logger.debug(f'Data before cleaning:\n{df}')
         df = self.clean_data(df)
 
         if df.empty:
@@ -127,7 +125,6 @@ class IRR:
         topic_irr_results = {}
         for topic in topics:
             df_topic = df.xs(topic, level='topic_key')
-            print(f'topic ({topic}):\n{df_topic}')
             topic_irr_results[topic] = self.get_irr_result(df_topic)
 
         irr_results = IRRResults(
@@ -184,88 +181,13 @@ class IRR:
             return None
 
         majority_agreement = df[self.col_maj_agree_with_model].sum() / df.shape[0]
-        logger.debug(f"Majority agreement of human raters with model: {majority_agreement:.3f}")
-
         return round(majority_agreement, 3)
-
-    @staticmethod
-    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_case: CAC = None,
-                          cac_best_case: CAC = None) -> IRRVariants:
-        """
-        Calculate Fleiss' Kappa for a list of raters.
-        """
-        result = IRRVariants(
-            without_model=IRR.get_cac_metric(cac_without_model, 'fleiss'),
-            with_model=IRR.get_cac_metric(cac_with_model, 'fleiss'),
-            worst_case=IRR.get_cac_metric(cac_worst_case, 'fleiss'),
-            best_case=IRR.get_cac_metric(cac_best_case, 'fleiss')
-        )
-
-        logger.debug(f"Fleiss' Kappa results: {result}")
-        return result
-
-    @staticmethod
-    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None,
-                         cac_best_case: CAC = None) -> IRRVariants:
-        """
-        Calculate Krippendorff's Alpha for a list of raters.
-        """
-        result = IRRVariants(
-            without_model=IRR.get_cac_metric(cac_without_model, 'krippendorff'),
-            with_model=IRR.get_cac_metric(cac_with_model, 'krippendorff'),
-            worst_case=IRR.get_cac_metric(cac_worst_cast, 'krippendorff'),
-            best_case=IRR.get_cac_metric(cac_best_case, 'krippendorff')
-        )
-
-        logger.debug(f"Krippendorff's Alpha results: {result}")
-        return result
-
-    @staticmethod
-    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None,
-                      cac_best_case: CAC = None) -> IRRVariants:
-        """
-        Calculate Gwet's AC1 for a list of raters.
-        """
-        result = IRRVariants(
-            without_model=IRR.get_cac_metric(cac_without_model, 'gwet'),
-            with_model=IRR.get_cac_metric(cac_with_model, 'gwet'),
-            worst_case=IRR.get_cac_metric(cac_worst_cast, 'gwet'),
-            best_case=IRR.get_cac_metric(cac_best_case, 'gwet')
-        )
-
-        logger.debug(f"Gwet's AC1 results: {result}")
-        return result
-
-    @staticmethod
-    def get_cac_metric(cac: CAC = None, metric: str = None) -> float | None:
-        if cac is None:
-            logger.debug("No CAC object provided. Empty data.")
-            return None
-
-        if metric is None:
-            logger.debug("No metric provided.")
-            return None
-
-        if IRR.all_rows_equal(cac.ratings):
-            return IRR.TOTAL_AGREEMENT
-        else:
-            with np.errstate(divide='ignore', invalid='ignore'):
-                result = getattr(cac, metric)()['est']['coefficient_value']
-            return result
-
-    @staticmethod
-    def all_rows_equal(df: pd.DataFrame) -> bool:
-        """
-        Check if all rows in a DataFrame are equal.
-        """
-        return df.apply(lambda x: x.nunique(), axis=1).eq(1).all()
 
     def reorganize_raters(self, df: pd.DataFrame) -> pd.DataFrame:
         """Get dataFrame with sparse values (possibly lots of NaNs), shift all human rater nonNaN values to the left
         in their rows.
         """
-        df = df.copy()
-        # reset index
+        # df = df.copy()
         df.reset_index(inplace=True)
         df_indexes = df[self.index_cols]
 
@@ -293,9 +215,7 @@ class IRR:
         # join model and human ratings
         df_all = pd.concat([df_indexes, df_raters_new, df_model], axis=1)
 
-        # reset index to multiindex
         df_all.set_index(self.index_cols, inplace=True)
-
         return df_all
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -308,6 +228,81 @@ class IRR:
         logger.debug(f"Removed {removed_rows}/{rows_before} rows with NaN values.")
 
         return df
+
+    def add_worst_case(self, df: pd.DataFrame) -> pd.DataFrame:
+        df[self.col_worst_case] = IRR.WORST_CASE_VALUE
+
+        df.reset_index(inplace=True)
+        df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = 'False'
+        df.set_index(['file', 'topic_key', 'rating'], inplace=True)
+
+        return df
+
+    @staticmethod
+    def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_case: CAC = None,
+                          cac_best_case: CAC = None) -> IRRVariants:
+        """
+        Calculate Fleiss' Kappa for a list of raters.
+        """
+        result = IRRVariants(
+            without_model=IRR.get_cac_metric(cac_without_model, 'fleiss'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'fleiss'),
+            worst_case=IRR.get_cac_metric(cac_worst_case, 'fleiss'),
+            best_case=IRR.get_cac_metric(cac_best_case, 'fleiss')
+        )
+        return result
+
+    @staticmethod
+    def calc_kripp_alpha(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None,
+                         cac_best_case: CAC = None) -> IRRVariants:
+        """
+        Calculate Krippendorff's Alpha for a list of raters.
+        """
+        result = IRRVariants(
+            without_model=IRR.get_cac_metric(cac_without_model, 'krippendorff'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'krippendorff'),
+            worst_case=IRR.get_cac_metric(cac_worst_cast, 'krippendorff'),
+            best_case=IRR.get_cac_metric(cac_best_case, 'krippendorff')
+        )
+        return result
+
+    @staticmethod
+    def calc_gwet_ac1(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_cast: CAC = None,
+                      cac_best_case: CAC = None) -> IRRVariants:
+        """
+        Calculate Gwet's AC1 for a list of raters.
+        """
+        result = IRRVariants(
+            without_model=IRR.get_cac_metric(cac_without_model, 'gwet'),
+            with_model=IRR.get_cac_metric(cac_with_model, 'gwet'),
+            worst_case=IRR.get_cac_metric(cac_worst_cast, 'gwet'),
+            best_case=IRR.get_cac_metric(cac_best_case, 'gwet')
+        )
+        return result
+
+    @staticmethod
+    def get_cac_metric(cac: CAC = None, metric: str = None) -> float | None:
+        if cac is None:
+            logger.debug("No CAC object provided. Empty data.")
+            return None
+
+        if metric is None:
+            logger.debug("No metric provided.")
+            return None
+
+        if IRR.all_rows_equal(cac.ratings):
+            return IRR.TOTAL_AGREEMENT
+        else:
+            with np.errstate(divide='ignore', invalid='ignore'):
+                result = getattr(cac, metric)()['est']['coefficient_value']
+            return result
+
+    @staticmethod
+    def all_rows_equal(df: pd.DataFrame) -> bool:
+        """
+        Check if all rows in a DataFrame are equal.
+        """
+        return df.apply(lambda x: x.nunique(), axis=1).eq(1).all()
 
     @staticmethod
     def raters_to_dataframe(raters: list[Rater]) -> pd.DataFrame:
@@ -340,17 +335,3 @@ class IRR:
             name = f"{name}_{offset}"
             offset += 1
         return name
-
-    def add_worst_case(self, df: pd.DataFrame) -> pd.DataFrame:
-        df[self.col_worst_case] = IRR.WORST_CASE_VALUE
-
-        # TODO potřebuju tady vubec reset a set index????
-        #  index columns se dají nějak adresovat před df.index nebo tak něco...
-
-        # TODO nahradit 'single_choice' + 'multiple_choice' za konstanty
-
-        df.reset_index(inplace=True)
-        df.loc[df['rating'] != 'single_choice', self.col_worst_case] = 'False'
-        df.set_index(['file', 'topic_key', 'rating'], inplace=True)
-
-        return df

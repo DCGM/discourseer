@@ -6,7 +6,7 @@ from typing import List
 
 import pandas as pd
 
-from discourseer.extraction_topics import ExtractionTopics
+from discourseer.extraction_topics import ExtractionTopics, single_choice_tag
 
 logger = logging.getLogger()
 
@@ -101,7 +101,7 @@ class Rater:
                 for option in extraction_topic.options:
                     ratings_dict[(rating.file, rating.topic_key, option.name)] = option.name in rating.rating_results
             else:
-                ratings_dict[(rating.file, rating.topic_key, 'single_choice')] = rating.rating_results[0]
+                ratings_dict[(rating.file, rating.topic_key, single_choice_tag)] = rating.rating_results[0]
         series = pd.Series(ratings_dict,
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),

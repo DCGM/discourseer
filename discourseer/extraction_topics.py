@@ -4,6 +4,9 @@ import json
 import pydantic
 from typing import List, Dict, Literal
 
+single_choice_tag = "single_choice"
+multiple_choice_tag = "multiple_choice"
+
 
 class ExtractionTopics(pydantic.BaseModel):
     topics: Dict[str, ExtractionTopic] = {}
@@ -54,7 +57,7 @@ class ExtractionTopics(pydantic.BaseModel):
 
     def whole_topic_info(self) -> str:
         """Whole topic info in one string. Individual topics are separated by a newline."""
-        return "\n".join([f"{topic.name} {'multiple_choice' if topic.multiple_choice else 'single_choice'} "
+        return "\n".join([f"{topic.name} {multiple_choice_tag if topic.multiple_choice else single_choice_tag} "
                           f"({topic.description}) {topic.list_options_details()}"
                           for topic in self.topics.values()])
 
