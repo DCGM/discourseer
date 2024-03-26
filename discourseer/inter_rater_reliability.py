@@ -93,6 +93,7 @@ class IRR:
         self.input_columns = []
         self.model_columns = []
 
+        self.df = pd.DataFrame()
         self.results: IRRResults = self.get_inter_rater_reliability()
 
     def __call__(self) -> IRRResults:
@@ -133,6 +134,8 @@ class IRR:
         )
 
         irr_results.mean_through_topics = irr_results.get_mean_through_topics()
+        self.df = df
+
         return irr_results
 
     def get_irr_result(self, df: pd.DataFrame) -> IRRResult:
@@ -158,7 +161,8 @@ class IRR:
         )
 
     def prepare_majority_agreement(self, df: pd.DataFrame):
-        df[self.col_majority] = df.loc[:, self.input_columns].mode(axis=1).iloc[:, 0]
+        if self.col_majority not in df.columns:
+            df[self.col_majority] = df.loc[:, self.input_columns].mode(axis=1).iloc[:, 0]
 
         if len(self.model_columns) == 1:
             df[self.col_maj_agree_with_model] = df[self.col_majority] == df[self.model_columns[0]]
@@ -237,6 +241,9 @@ class IRR:
         df.set_index(['file', 'topic_key', 'rating'], inplace=True)
 
         return df
+
+    def get_reorganized_raters(self) -> pd.DataFrame:
+        return self.df.loc[:, self.input_columns]
 
     @staticmethod
     def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_case: CAC = None,

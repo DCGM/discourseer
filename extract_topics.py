@@ -10,7 +10,7 @@ from discourseer.extraction_topics import ExtractionTopics
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage
-from discourseer.utils import pydantic_to_json_file, JSONParser
+from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
 
 
 def parse_args():
@@ -31,8 +31,8 @@ def parse_args():
                              'The accuracy may suffer if there is too many topics.')
     parser.add_argument('--prompt-definition', default="data/default/prompt_definition.json",
                         help='The file containing the main prompt text + format strings for topics.')
-    parser.add_argument('--copy-input-ratings', action='store_true',
-                        help='Copy input ratings to output folder.')
+    parser.add_argument('--copy-input-ratings', choices=[i.name for i in RatingsCopyMode],
+                        default=RatingsCopyMode.none, help='Copy input ratings to output folder.')
     parser.add_argument('--openai-api-key', type=str)
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
@@ -83,7 +83,7 @@ class TopicExtractor:
     def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_dir: str = 'data/outputs/test',
                  topic_subset: List[str] = None, topic_definitions: str = "data/default/topic_definitions.json",
                  openai_api_key: str = None, prompt_definition: str = "data/default/prompt_definition.json",
-                 copy_input_ratings: bool = False):
+                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none):
         self.input_files = self.get_input_files(texts_dir)
         self.output_dir, self.output_dir_base = self.prepare_output_dir(output_dir)
         self.topics = self.load_topics(topic_definitions).select_subset(topic_subset)
@@ -117,14 +117,12 @@ class TopicExtractor:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_results = IRR(self.raters, self.model_rater, self.topics)()
+        irr_calculator = IRR(self.raters, self.model_rater, self.topics)
+        irr_results = irr_calculator()
         logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
 
         pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
-        if self.copy_input_ratings:
-            os.makedirs(os.path.join(self.output_dir, self.input_ratings_dir), exist_ok=True)
-            for rater in self.raters:
-                rater.save_to_csv(self.get_output_file(f'{rater.name}', input_ratings=True))
+        self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_topics(self, text):
         logging.debug('New document:\n\n')
@@ -151,6 +149,25 @@ class TopicExtractor:
         if input_ratings:
             return os.path.join(self.output_dir, self.input_ratings_dir, file_name)
         return os.path.join(self.output_dir, file_name)
+
+    def copy_input_ratings_to_output(self, irr_calculator: IRR):
+        if self.copy_input_ratings == RatingsCopyMode.none or not self.raters:
+            return
+
+        os.makedirs(os.path.join(self.output_dir, self.input_ratings_dir), exist_ok=True)
+
+        if self.copy_input_ratings == RatingsCopyMode.original.name:
+            raters = self.raters
+        elif self.copy_input_ratings == RatingsCopyMode.reorganized.name:
+            raters_df = irr_calculator.get_reorganized_raters()
+            raters = Rater.from_dataframe(raters_df)
+        else:
+            logging.info(f'Selected copy_input_ratings mode {self.copy_input_ratings} not implemented. Options: '
+                         f'{[i.name for i in RatingsCopyMode]}')
+            return
+
+        for rater in raters:
+            rater.save_to_csv(self.get_output_file(rater.name, input_ratings=True))
 
     @staticmethod
     def load_prompt_definition(prompt_definition: str) -> Conversation:

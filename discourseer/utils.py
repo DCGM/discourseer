@@ -2,8 +2,15 @@ import json
 import pydantic
 import re
 import logging
+from enum import Enum
 
 logger = logging.getLogger()
+
+
+class RatingsCopyMode(Enum):
+    none = "none"
+    original = "original"
+    reorganized = "reorganized"
 
 
 def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):

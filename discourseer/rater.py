@@ -160,3 +160,31 @@ class Rater:
         for ratings_dir in ratings_dirs:
             raters += cls.from_dir(ratings_dir, extraction_topics=extraction_topics)
         return raters
+
+    @classmethod
+    def from_dataframe(cls, df: pd.DataFrame) -> List[Rater]:
+        df.to_csv('test.csv')
+        raters = []
+        for column in df.columns:
+            raters.append(cls.from_series(df[column], name=column))
+        return raters
+
+    @classmethod
+    def from_series(cls, series: pd.Series, name: str = None) -> Rater:
+        ratings = []
+        for (file, topic_key, rating), value in series.items():
+            if rating == 'single_choice':
+                ratings.append(Rating(file=file, topic_key=topic_key, topic_name=topic_key, rating_results=[value]))
+            elif Rater.str_to_bool(value):
+                if ratings[-1].topic_key == topic_key:
+                    ratings[-1].rating_results.append(rating)
+                else:
+                    ratings.append(
+                        Rating(file=file, topic_key=topic_key, topic_name=topic_key, rating_results=[rating]))
+        return cls(ratings=ratings, name=name if name else str(series.name))
+
+    @staticmethod
+    def str_to_bool(s: str | bool) -> bool:
+        if isinstance(s, bool):
+            return s
+        return s.lower() in ['true', '1']
