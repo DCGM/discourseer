@@ -7,7 +7,11 @@
   "messages": [
     {
       "role": "system",
-      "content": "You are a media content analyst. You are analyzing the following text to extract {topic_names}. {topic_names_and_descriptions_colon}. For every topic pick only options from these lists.\n{topic_options}\nYou will pick one option for these topics: {single_choice_topics}. You will pick one or more options for these topics: {multiple_choice_topics}.\nYou will provide lists of the identified options as a JSON object with keys: {topic_keys} mapped to original names like this: {topic_key_name_mapping}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:\n{response_json_schema_with_options}"
+      "content": "You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {prompt_names_and_descriptions_colon}. For every question pick only options from these lists.\n{prompt_options}\n\nYou will pick one option for these questions: {single_choice_prompts}. You will pick one or more options for these prompts: {multiple_choice_prompts}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": "{response_json_schema_with_options}"
     },
     {
       "role": "user",
@@ -15,11 +19,79 @@
     },
     {
       "role": "assistant",
-      "content": "Hello!"
+      "content": "This is the end of task definition. The conversation follows."
     },
     {
       "role": "system",
-      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text., genre: The genre of the text., message-trigger: The message trigger is the event or situation that causes the message to be sent., place: The country where the event or situation occurs.. For every topic pick only options from these lists.\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\nYou will pick one option for these topics: range, genre, message-trigger. You will pick one or more options for these topics: place.\nYou will provide lists of the identified options as a JSON object with keys: 5-range, 6-genre, 8-message-trigger, 9-place mapped to original names like this: 5-range: range, 6-genre: genre, 8-message-trigger: message-trigger, 9-place: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:\n{\n  \"properties\": {\n    \"5-range\": {\n      \"title\": \"5-Range\",\n      \"type\": \"string\"\n    },\n    \"6-genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"6-Genre\",\n      \"type\": \"string\"\n    },\n    \"8-message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"8-Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"9-place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"9-Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"5-range\",\n    \"6-genre\",\n    \"8-message-trigger\",\n    \"9-place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text. genre: The genre of the text. message-trigger: The message trigger is the event or situation that causes the message to be sent. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these prompts: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "range": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "title": "Range",
+            "type": "string"
+          },
+          "genre": {
+            "enum": [
+              "report",
+              "extended_report",
+              "interview",
+              "other"
+            ],
+            "title": "Genre",
+            "type": "string"
+          },
+          "message-trigger": {
+            "enum": [
+              "politician",
+              "security-forces",
+              "public",
+              "other"
+            ],
+            "title": "Message-Trigger",
+            "type": "string"
+          },
+          "place": {
+            "items": {
+              "enum": [
+                "czech-republic",
+                "slovakia",
+                "poland",
+                "germany",
+                "russia",
+                "ukraine",
+                "other",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "title": "Place",
+            "type": "array"
+          }
+        },
+        "required": [
+          "range",
+          "genre",
+          "message-trigger",
+          "place"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
     },
     {
       "role": "user",
@@ -27,11 +99,86 @@
     },
     {
       "role": "assistant",
-      "content": "{\n  \"5-range\": \"3\",\n  \"6-genre\": \"extended_report\",\n  \"8-message-trigger\": \"public\",\n  \"9-place\": [\n    \"czech-republic\"\n  ]\n}"
+      "content": {
+        "range": "3",
+        "genre": "report",
+        "message-trigger": "other",
+        "place": [
+          "czech-republic"
+        ]
+      }
     },
     {
       "role": "system",
-      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text., genre: The genre of the text., message-trigger: The message trigger is the event or situation that causes the message to be sent., place: The country where the event or situation occurs.. For every topic pick only options from these lists.\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\nYou will pick one option for these topics: range, genre, message-trigger. You will pick one or more options for these topics: place.\nYou will provide lists of the identified options as a JSON object with keys: 5-range, 6-genre, 8-message-trigger, 9-place mapped to original names like this: 5-range: range, 6-genre: genre, 8-message-trigger: message-trigger, 9-place: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:\n{\n  \"properties\": {\n    \"5-range\": {\n      \"title\": \"5-Range\",\n      \"type\": \"string\"\n    },\n    \"6-genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"6-Genre\",\n      \"type\": \"string\"\n    },\n    \"8-message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"8-Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"9-place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"9-Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"5-range\",\n    \"6-genre\",\n    \"8-message-trigger\",\n    \"9-place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text. genre: The genre of the text. message-trigger: The message trigger is the event or situation that causes the message to be sent. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these prompts: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "range": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "title": "Range",
+            "type": "string"
+          },
+          "genre": {
+            "enum": [
+              "report",
+              "extended_report",
+              "interview",
+              "other"
+            ],
+            "title": "Genre",
+            "type": "string"
+          },
+          "message-trigger": {
+            "enum": [
+              "politician",
+              "security-forces",
+              "public",
+              "other"
+            ],
+            "title": "Message-Trigger",
+            "type": "string"
+          },
+          "place": {
+            "items": {
+              "enum": [
+                "czech-republic",
+                "slovakia",
+                "poland",
+                "germany",
+                "russia",
+                "ukraine",
+                "other",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "title": "Place",
+            "type": "array"
+          }
+        },
+        "required": [
+          "range",
+          "genre",
+          "message-trigger",
+          "place"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
     },
     {
       "role": "user",
@@ -39,11 +186,86 @@
     },
     {
       "role": "assistant",
-      "content": "{\n  \"5-range\": \"8\",\n  \"6-genre\": \"report\",\n  \"8-message-trigger\": \"public\",\n  \"9-place\": [\n    \"czech-republic\"\n  ]\n}"
+      "content": {
+        "range": "3",
+        "genre": "report",
+        "message-trigger": "public",
+        "place": [
+          "czech-republic"
+        ]
+      }
     },
     {
       "role": "system",
-      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text., genre: The genre of the text., message-trigger: The message trigger is the event or situation that causes the message to be sent., place: The country where the event or situation occurs.. For every topic pick only options from these lists.\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\nYou will pick one option for these topics: range, genre, message-trigger. You will pick one or more options for these topics: place.\nYou will provide lists of the identified options as a JSON object with keys: 5-range, 6-genre, 8-message-trigger, 9-place mapped to original names like this: 5-range: range, 6-genre: genre, 8-message-trigger: message-trigger, 9-place: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:\n{\n  \"properties\": {\n    \"5-range\": {\n      \"title\": \"5-Range\",\n      \"type\": \"string\"\n    },\n    \"6-genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"6-Genre\",\n      \"type\": \"string\"\n    },\n    \"8-message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"8-Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"9-place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"9-Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"5-range\",\n    \"6-genre\",\n    \"8-message-trigger\",\n    \"9-place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+      "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text. genre: The genre of the text. message-trigger: The message trigger is the event or situation that causes the message to be sent. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these prompts: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "range": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10"
+            ],
+            "title": "Range",
+            "type": "string"
+          },
+          "genre": {
+            "enum": [
+              "report",
+              "extended_report",
+              "interview",
+              "other"
+            ],
+            "title": "Genre",
+            "type": "string"
+          },
+          "message-trigger": {
+            "enum": [
+              "politician",
+              "security-forces",
+              "public",
+              "other"
+            ],
+            "title": "Message-Trigger",
+            "type": "string"
+          },
+          "place": {
+            "items": {
+              "enum": [
+                "czech-republic",
+                "slovakia",
+                "poland",
+                "germany",
+                "russia",
+                "ukraine",
+                "other",
+                "unknown"
+              ],
+              "type": "string"
+            },
+            "title": "Place",
+            "type": "array"
+          }
+        },
+        "required": [
+          "range",
+          "genre",
+          "message-trigger",
+          "place"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
     },
     {
       "role": "user",
@@ -51,7 +273,15 @@
     },
     {
       "role": "assistant",
-      "content": "{\n  \"5-range\": \"6\",\n  \"6-genre\": \"report\",\n  \"8-message-trigger\": \"politician\",\n  \"9-place\": [\n    \"russia\",\n    \"ukraine\"\n  ]\n}"
+      "content": {
+        "range": "3",
+        "genre": "report",
+        "message-trigger": "politician",
+        "place": [
+          "russia",
+          "ukraine"
+        ]
+      }
     }
   ]
 }

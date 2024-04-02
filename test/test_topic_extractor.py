@@ -2,7 +2,7 @@ import unittest
 import os
 import shutil
 
-from extract_topics import TopicExtractor
+from run_discourseer import Discourseer
 
 
 class TestTopicExtractor(unittest.TestCase):
@@ -13,7 +13,7 @@ class TestTopicExtractor(unittest.TestCase):
         if os.path.exists(output_dir):
             shutil.rmtree(output_dir)
 
-        TopicExtractor(
+        Discourseer(
             texts_dir=os.path.join(self.dir, 'texts-vlach'),
             ratings_dirs=[os.path.join(self.dir, 'texts-vlach-ratings-MofN')],
             output_dir=output_dir,

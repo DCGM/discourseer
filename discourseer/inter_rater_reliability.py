@@ -8,18 +8,18 @@ import pandas as pd
 from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
-from discourseer.extraction_topics import ExtractionTopics, single_choice_tag
+from discourseer.extraction_prompts import ExtractionPrompts, single_choice_tag
 
 logger = logging.getLogger()
 
 
 class IRRResults(pydantic.BaseModel):
     overall: IRRResult
-    mean_through_topics: Optional[IRRResult] = None
-    topics: Optional[Dict[str, IRRResult]] = {}
+    mean_through_prompts: Optional[IRRResult] = None
+    prompts: Optional[Dict[str, IRRResult]] = {}
 
-    def get_mean_through_topics(self) -> IRRResult:
-        if not self.topics:
+    def get_mean_through_prompts(self) -> IRRResult:
+        if not self.prompts:
             return IRRResult()
         return IRRResult(
             fleiss_kappa=self.get_mean('fleiss_kappa'),
@@ -29,7 +29,7 @@ class IRRResults(pydantic.BaseModel):
         )
 
     def get_mean(self, metric: str) -> IRRVariants:
-        if not self.topics:
+        if not self.prompts:
             return IRRVariants()
         return IRRVariants(
             best_case=self.get_mean_value(metric, 'best_case'),
@@ -39,16 +39,16 @@ class IRRResults(pydantic.BaseModel):
         )
 
     def get_mean_value(self, metric: str, variant: str) -> float:
-        sum_values = sum([result.model_dump()[metric][variant] for result in self.topics.values()
+        sum_values = sum([result.model_dump()[metric][variant] for result in self.prompts.values()
                           if result.model_dump()[metric][variant] is not None])
-        return round(sum_values / len(self.topics), 5)
+        return round(sum_values / len(self.prompts), 5)
 
     def get_mean_majority_agreement(self) -> float | None:
-        if not self.topics:
+        if not self.prompts:
             return None
-        sum_values = sum([result.majority_agreement for result in self.topics.values()
+        sum_values = sum([result.majority_agreement for result in self.prompts.values()
                           if result.majority_agreement is not None])
-        return round(sum_values / len(self.topics), 5)
+        return round(sum_values / len(self.prompts), 5)
 
 
 class IRRResult(pydantic.BaseModel):
@@ -81,14 +81,14 @@ class IRR:
     col_model = 'model'
     col_worst_case = 'worst_case'
     col_best_case = col_majority
-    index_cols = ['file', 'topic_key', 'rating']
+    index_cols = ['file', 'prompt_key', 'rating']
 
-    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_topics: ExtractionTopics = None):
+    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
-        self.extraction_topics = extraction_topics if extraction_topics else ExtractionTopics()
+        self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
 
         self.input_columns = []
         self.model_columns = []
@@ -105,6 +105,8 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
+        logging.debug(f"Data before cleaning:\n{df}")
+
         df = self.reorganize_raters(df)
         df = self.clean_data(df)
 
@@ -114,7 +116,7 @@ class IRR:
 
         self.input_columns = df.columns.difference([self.col_model]).to_list()
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
-        topics = df.index.get_level_values('topic_key').unique().to_list()
+        prompt_keys = df.index.get_level_values('prompt_key').unique().to_list()
 
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
@@ -123,17 +125,17 @@ class IRR:
 
         overall_results = self.get_irr_result(df)
 
-        topic_irr_results = {}
-        for topic in topics:
-            df_topic = df.xs(topic, level='topic_key')
-            topic_irr_results[topic] = self.get_irr_result(df_topic)
+        prompt_irr_results = {}
+        for key in prompt_keys:
+            df_prompt = df.xs(key, level='prompt_key')
+            prompt_irr_results[key] = self.get_irr_result(df_prompt)
 
         irr_results = IRRResults(
             overall=overall_results,
-            topics=topic_irr_results
+            prompts=prompt_irr_results
         )
 
-        irr_results.mean_through_topics = irr_results.get_mean_through_topics()
+        irr_results.mean_through_prompts = irr_results.get_mean_through_prompts()
         self.df = df
 
         return irr_results
@@ -238,7 +240,7 @@ class IRR:
 
         df.reset_index(inplace=True)
         df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = 'False'
-        df.set_index(['file', 'topic_key', 'rating'], inplace=True)
+        df.set_index(['file', 'prompt_key', 'rating'], inplace=True)
 
         return df
 
