@@ -8,7 +8,7 @@ pip install -r requirements.txt
 Dále je potřeba mít nastavenou proměnnou prostředí `OPENAI_API_KEY` s klíčem pro OpenAI API nebo ho předat jako parametr při spuštění `--openai-api-key`
 
 ## Příklad spuštění
-```bash 
+```bash
 python run_discourseer.py --texts-dir data/texts-vlach --ratings-dir data/texts-vlach-ratings/ --openai-api-key sk-ZmfV3vvo19y...
 ```
 
