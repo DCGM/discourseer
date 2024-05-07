@@ -1,7 +1,7 @@
 # discourseer
 
 ## Instalace
-Pro spuštění je potřeba mít nainstalovaný Python 3.8 a vyšší.
+Pro spuštění je potřeba mít nainstalovaný Python 3.8, 3.9, nebo 3.10.
 ```bash
 pip install -r requirements.txt
 ```
