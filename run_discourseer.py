@@ -2,6 +2,7 @@ from __future__ import annotations
 import argparse
 import logging
 import os
+import sys
 import json
 import time
 from typing import List
@@ -60,6 +61,7 @@ def main():
     log_file = 'data/outputs/logfile.log'
     os.makedirs('data/outputs', exist_ok=True)
     setup_logging(args.log, log_file)
+    logging.debug(f"Arguments: {args}")
 
     discourseer = Discourseer(
         texts_dir=args.texts_dir,
@@ -73,7 +75,8 @@ def main():
     )
     discourseer()
 
-    logging.getLogger().handlers.clear()  # Remove the handlers to avoid logging http connection close
+    # Remove the handlers to avoid logging http connection close into old log file location
+    logging.getLogger().handlers.clear()
     os.rename(log_file, discourseer.get_output_file(os.path.basename(log_file)))
 
 
