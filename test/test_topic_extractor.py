@@ -17,8 +17,8 @@ class TestTopicExtractor(unittest.TestCase):
             texts_dir=os.path.join(self.dir, 'texts-vlach'),
             ratings_dirs=[os.path.join(self.dir, 'texts-vlach-ratings-MofN')],
             output_dir=output_dir,
-            topic_definitions=os.path.join(self.dir, 'topic_definitions.json'),
-            prompt_definition=os.path.join(self.dir, 'prompt_definition.json')
+            prompt_definitions=os.path.join(self.dir, 'prompt_definitions.json'),
+            prompt_schema_definition=os.path.join(self.dir, 'prompt_schema_definition.json'),
         )()
 
         # test existing output dir and files

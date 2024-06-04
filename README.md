@@ -47,3 +47,7 @@ Jsou definovány v souboru `discourseer/extraction_prompts.py` a mohou být pou�
 ```bash
 python -m unittest
 ```
+Případně jednotlivé testy pomocí:
+```bash
+python -m unittest test.test_IRR.test_IRR.TestIRRWithoutModel.test_irr_equal
+```

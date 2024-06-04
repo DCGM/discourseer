@@ -6,14 +6,19 @@ from pandas.testing import assert_frame_equal
 
 from discourseer.inter_rater_reliability import IRR
 from discourseer.rater import Rater
+from run_discourseer import Discourseer
 
 
 class TestIRRWithoutModel(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'IRR_texts')
+    prompts = Discourseer.load_prompts(os.path.join(os.path.dirname(__file__),
+                                                    'prompt_definitions.json'))
 
     def test_irr_equal(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
+                                 extraction_prompts=self.prompts)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
+                                 extraction_prompts=self.prompts)
         irr_results = IRR([rater_1, rater_2])()
 
         self.assertEqual(irr_results.overall.fleiss_kappa.without_model, 1.0)
@@ -24,37 +29,39 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
     def test_irr_diff(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'))
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.prompts)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.prompts)
         irr_results = IRR([rater_1, rater_2])()
 
-        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.8, 1)
+        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.89, 1)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.8, 1)
+        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.89, 1)
         self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.8, 1)
+        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.93, 1)
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
     def test_irr_ignore_nan(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'))
-        rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'))
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.prompts)
+        rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'), self.prompts)
 
         irr_results = IRR([rater_1, rater_4])()
 
-        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.7, 1)
+        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.78, 1)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.7, 1)
+        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.79, 1)
         self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.7, 1)
+        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.86, 1)
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
 
 class TestMajAgreement(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'maj_agreement')
+    prompts = Discourseer.load_prompts(os.path.join(os.path.dirname(__file__),
+                                                    'prompt_definitions.json'))
 
     def test_equal(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'))
 
         irr_results = IRR([rater_1, rater_2], model_rater)()
@@ -62,13 +69,13 @@ class TestMajAgreement(unittest.TestCase):
         self.assertEqual(irr_results.overall.majority_agreement, 1.0)
 
     def test_diff(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'))
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_75_diff.csv'))
 
         irr_results = IRR([rater_1, rater_2], model_rater)()
 
-        self.assertEqual(irr_results.overall.majority_agreement, 0.25)
+        self.assertEqual(irr_results.overall.majority_agreement, 0.222)
 
 
 # class TestReorganizingRaters(unittest.TestCase):
