@@ -2,83 +2,83 @@
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.79385,
+      "with_model": 0.76645,
       "worst_case": 0.5671,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.79541,
+      "with_model": 0.76821,
       "worst_case": 0.57038,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.86452,
+      "with_model": 0.84839,
       "worst_case": 0.73183,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.879
+    "majority_agreement": 0.848
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.32117,
+      "with_model": 0.30721,
       "worst_case": 0.13005,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.37643,
+      "with_model": 0.36221,
       "worst_case": 0.19444,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.5859,
+      "with_model": 0.57632,
       "worst_case": 0.34108,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.6665
+    "majority_agreement": 0.656
   },
   "prompts": {
     "misto": {
       "fleiss_kappa": {
         "best_case": 0.92852,
-        "with_model": 0.92852,
+        "with_model": 0.85,
         "worst_case": 0.55514,
         "without_model": 0.90613
       },
       "krippendorff_alpha": {
         "best_case": 0.92926,
-        "with_model": 0.92926,
+        "with_model": 0.85156,
         "worst_case": 0.55978,
         "without_model": 0.90743
       },
       "gwet_ac1": {
         "best_case": 0.9706,
-        "with_model": 0.9706,
+        "with_model": 0.94231,
         "worst_case": 0.86398,
         "without_model": 0.96055
       },
-      "majority_agreement": 1.0
+      "majority_agreement": 0.958
     },
     "rozsah": {
       "fleiss_kappa": {
         "best_case": 1.0,
-        "with_model": 0.46667,
+        "with_model": 0.48936,
         "worst_case": 0.33333,
         "without_model": 1.0
       },
       "krippendorff_alpha": {
         "best_case": 1.0,
-        "with_model": 0.51111,
+        "with_model": 0.53191,
         "worst_case": 0.38889,
         "without_model": 1.0
       },
       "gwet_ac1": {
         "best_case": 1.0,
-        "with_model": 0.51515,
+        "with_model": 0.50515,
         "worst_case": 0.33333,
         "without_model": 1.0
       },
