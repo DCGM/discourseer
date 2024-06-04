@@ -66,10 +66,11 @@ def setup_logging(log_level: str, log_file: str):
 
 def main():
     args = parse_args()
-    log_file = 'data/outputs/logfile.log'
-    os.makedirs('data/outputs', exist_ok=True)
+    log_file = 'experiments/tmp/logfile.log'
+    os.makedirs('experiments/tmp', exist_ok=True)
     setup_logging(args.log, log_file)
     logging.debug(f"Python file location: {os.path.abspath(__file__)}")
+    logging.debug(f"Arguments: {args}")
 
     discourseer = Discourseer(
         experiment_dir=args.experiment_dir,

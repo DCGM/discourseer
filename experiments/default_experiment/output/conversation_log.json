@@ -187,7 +187,7 @@
     {
       "role": "assistant",
       "content": {
-        "range": "4",
+        "range": "3",
         "genre": "report",
         "message-trigger": "public",
         "place": [
@@ -276,7 +276,7 @@
       "content": {
         "range": "3",
         "genre": "report",
-        "message-trigger": "politician",
+        "message-trigger": "other",
         "place": [
           "ukraine"
         ]
