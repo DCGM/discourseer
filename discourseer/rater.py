@@ -26,7 +26,7 @@ class Rating(pydantic.BaseModel):
 
         if len(values_from_csv) >= 3:
             file, question_id, *rating_results = values_from_csv
-            prompt_key = question_id_to_key.get(question_id, None)
+            prompt_key = question_id_to_key.get(question_id, question_id)
             return cls(file=file, prompt_key=prompt_key, question_id=question_id, rating_results=rating_results)
         else:
             return None
@@ -52,7 +52,7 @@ class Rater:
     def add_model_response(self, file, response: dict):
         """Add model response to rater. Response_id should be prompt names."""
         for response_id, value in response.items():
-            logging.debug(f"Adding rating: {response_id}, {value}")
+            logger.debug(f"Adding rating: {response_id}, {value}")
             prompt_key = self.map_response_id_to_prompt_key(response_id)
             if not prompt_key:
                 continue
@@ -121,7 +121,8 @@ class Rater:
         if prompt_key is not None:
             return self.extraction_prompts[prompt_key]
 
-        logger.warning(f"Rating {rating} has no prompt key or question id. Can not find prompt to create options.")
+        logger.info(f"Rating {rating} has no prompt key or question id. Question will be seen as single choice "
+                    "with an answer as the first of the list.")
         return None
 
     # @staticmethod
