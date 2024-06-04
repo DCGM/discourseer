@@ -11,8 +11,8 @@ from run_discourseer import Discourseer
 
 class TestIRRWithoutModel(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'IRR_texts')
-    prompts = Discourseer.load_prompts(os.path.join(os.path.dirname(__file__),
-                                                    'prompt_definitions.json'))
+    prompts = Discourseer.load_prompts('', os.path.join(os.path.dirname(__file__),
+                                                        'prompt_definitions.json'))
 
     def test_irr_equal(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
@@ -56,8 +56,8 @@ class TestIRRWithoutModel(unittest.TestCase):
 
 class TestMajAgreement(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'maj_agreement')
-    prompts = Discourseer.load_prompts(os.path.join(os.path.dirname(__file__),
-                                                    'prompt_definitions.json'))
+    prompts = Discourseer.load_prompts('', os.path.join(os.path.dirname(__file__),
+                                                        'prompt_definitions.json'))
 
     def test_equal(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)

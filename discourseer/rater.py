@@ -122,7 +122,7 @@ class Rater:
             return self.extraction_prompts[prompt_key]
 
         logger.info(f"Rating {rating} has no prompt key or question id. Question will be seen as single choice "
-                       "with answer as the first of the list.")
+                    "with an answer as the first of the list.")
         return None
 
     # @staticmethod
