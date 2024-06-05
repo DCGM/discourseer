@@ -8,7 +8,7 @@ from matplotlib.patches import Rectangle
 from discourseer.inter_rater_reliability import IRRResult, IRRResults, IRRVariants
 
 
-def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_error, x_ticks: List[str]):
+def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str]):
     # Loop over data points; create box from errors at each point
     errorboxes = [Rectangle((x - xe[0], y - ye[0]), xe.sum(), ye.sum())
                   for x, y, xe, ye in zip(xdata, ydata, xerror.T, yerror.T)]
@@ -18,8 +18,9 @@ def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_error, x_ti
 
     ax.errorbar(xdata, ydata + yerror[1], xerr=xerror, fmt='none', label='best case', ecolor='g')
     ax.errorbar(xdata, ydata - yerror[0], xerr=xerror, fmt='none', label='worst case', ecolor='r')
-    ax.errorbar(xdata, ydata + without_model_error, xerr=xerror, fmt='none', label='without model', ecolor='b')
+    ax.errorbar(xdata, without_model_results, xerr=xerror, fmt='none', label='without model', ecolor='darkorange')
     ax.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
+    ax.errorbar(xdata, majority_agreements, xerr=xerror, fmt='none', label='majority agreement', ecolor='b')
 
     max_y = max(ydata + yerror[1])
     min_y = min(ydata - yerror[0])
@@ -42,40 +43,41 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
 
     y = np.zeros(n)
     yerr = np.zeros((2, n))
-    without_model_error = np.zeros(n)
+    without_model_results = np.zeros(n)
     labels = []
 
     for i, (question, irr_variants) in enumerate(irr_results.items()):
         y[i] = irr_variants.with_model
         yerr[0, i] = irr_variants.with_model - irr_variants.worst_case
         yerr[1, i] = irr_variants.best_case - irr_variants.with_model
-        without_model_error[i] = abs(irr_variants.without_model - irr_variants.with_model)
+        without_model_results[i] = irr_variants.without_model
         labels.append(question)
 
-    return x, y, xerr, yerr, without_model_error, labels
+    return x, y, xerr, yerr, without_model_results, labels
 
 
 def visualize_results(results: IRRResults, location: str = None, metric: str = 'gwet_ac1'):
     results = results.to_dict_of_results()
+    majority_agreements = [k.majority_agreement for k in results.values()]
     results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only gwet_ac1
-    # results = {k: v.krippendorff_alpha for k, v in results.items()}
 
-    x, y, xerr, yerr, without_model_error, labels = irr_variants_to_data(results)
+    x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 
     fig, ax = plt.subplots(1)
-    make_error_boxes(ax, x, y, xerr, yerr, without_model_error, labels)
+    make_error_boxes(ax, x, y, xerr, yerr, without_model_results, majority_agreements, labels)
     ax.set_title(f'Inter-rater reliability {metric} for different questions.')
 
     if location:
         plt.savefig(location)
-    # else:
-    plt.show()
+    else:
+        plt.show()
 
 
 def test_dummy():
     x, y, xerr, yerr, without_model_error, labels = prepare_dummy_data()
+    majority_agreements = [0.5, 0.6, 0.7, 0.8, 0.9]
     fig, ax = plt.subplots(1)
-    make_error_boxes(ax, x, y, xerr, yerr, without_model_error, labels)
+    make_error_boxes(ax, x, y, xerr, yerr, without_model_error, majority_agreements, labels)
     plt.show()
 
 
