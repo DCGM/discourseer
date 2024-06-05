@@ -55,20 +55,21 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
     return x, y, xerr, yerr, without_model_error, labels
 
 
-def visualize_results(results: IRRResults, location: str = None):
+def visualize_results(results: IRRResults, location: str = None, metric: str = 'gwet_ac1'):
     results = results.to_dict_of_results()
-    results = {k: v.gwet_ac1 for k, v in results.items()}  # visualize only gwet_ac1
+    results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only gwet_ac1
     # results = {k: v.krippendorff_alpha for k, v in results.items()}
 
     x, y, xerr, yerr, without_model_error, labels = irr_variants_to_data(results)
 
     fig, ax = plt.subplots(1)
     make_error_boxes(ax, x, y, xerr, yerr, without_model_error, labels)
+    ax.set_title(f'Inter-rater reliability {metric} for different questions.')
 
     if location:
         plt.savefig(location)
-    else:
-        plt.show()
+    # else:
+    plt.show()
 
 
 def test_dummy():
