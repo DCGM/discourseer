@@ -11,6 +11,7 @@ from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
+from discourseer.visualize_IRR import visualize_results
 
 
 def parse_args():
@@ -134,9 +135,10 @@ class Discourseer:
 
         irr_calculator = IRR(self.raters, self.model_rater, self.prompts)
         irr_results = irr_calculator()
-        logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
         pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
+        visualize_results(irr_results, self.get_output_file('irr_results.png'))
         self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_answers(self, text):
