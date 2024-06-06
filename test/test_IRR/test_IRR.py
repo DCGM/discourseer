@@ -1,8 +1,5 @@
 import os
 import unittest
-import pytest
-
-from pandas.testing import assert_frame_equal
 
 from discourseer.inter_rater_reliability import IRR
 from discourseer.rater import Rater

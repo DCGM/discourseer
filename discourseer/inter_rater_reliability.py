@@ -9,6 +9,7 @@ from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
 from discourseer.extraction_prompts import ExtractionPrompts, single_choice_tag
+from discourseer.utils import json_file_to_pydantic
 
 logger = logging.getLogger()
 
@@ -49,6 +50,23 @@ class IRRResults(pydantic.BaseModel):
         sum_values = sum([result.majority_agreement for result in self.prompts.values()
                           if result.majority_agreement is not None])
         return round(sum_values / len(self.prompts), 5)
+
+    def to_dict_of_results(self) -> Dict[str, IRRResult]:
+        results: Dict[str, IRRResult] = {'overall': self.overall,
+                                         'mean_through_prompts': self.mean_through_prompts}
+        for key, result in self.prompts.items():
+            results[key] = result
+
+        return results
+
+    def get_summary(self) -> Dict:
+        results = {'overall': self.overall.model_dump(),
+                   'mean_through_prompts': self.mean_through_prompts.model_dump()}
+        return results
+
+    @classmethod
+    def from_json_file(cls, file: str) -> IRRResults:
+        return json_file_to_pydantic(file, cls)
 
 
 class IRRResult(pydantic.BaseModel):
