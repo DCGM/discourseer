@@ -52,16 +52,20 @@ class IRRResults(pydantic.BaseModel):
         return round(sum_values / len(self.prompts), 5)
 
     def to_dict_of_results(self) -> Dict[str, IRRResult]:
-        results: Dict[str, IRRResult] = {'overall': self.overall,
-                                         'mean_through_prompts': self.mean_through_prompts}
+        results: Dict[str, IRRResult] = {'overall': self.overall}
+        if self.mean_through_prompts is not None:
+            results['mean_through_prompts'] = self.mean_through_prompts
+
         for key, result in self.prompts.items():
-            results[key] = result
+            if result is not None:
+                results[key] = result
 
         return results
 
     def get_summary(self) -> Dict:
-        results = {'overall': self.overall.model_dump(),
-                   'mean_through_prompts': self.mean_through_prompts.model_dump()}
+        results = {'overall': self.overall.model_dump()}
+        if self.mean_through_prompts is not None:
+            results['mean_through_prompts'] = self.mean_through_prompts.model_dump()
         return results
 
     @classmethod
@@ -123,13 +127,14 @@ class IRR:
         else:
             df = self.raters_to_dataframe(self.raters)
 
-        logging.debug(f"Data before cleaning:\n{df}")
+        df_before_cleaning = df.copy()
 
         df = self.reorganize_raters(df)
         df = self.clean_data(df)
 
-        if df.empty:
+        if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
+            logging.debug(f"Data before cleaning:\n{df_before_cleaning}")
             return IRR.EMPTY_IRR_RESULTS
 
         self.input_columns = df.columns.difference([self.col_model]).to_list()
