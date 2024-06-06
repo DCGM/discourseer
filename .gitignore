@@ -2,7 +2,7 @@
 
 data/outputs/*
 test/test_topic_extractor/outputs/*
-experiments/default_experiment/output_*/*
+experiments/*/output_*/*
 experiments/tmp/*
 test/test_out*.png
 
