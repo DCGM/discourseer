@@ -1,11 +1,14 @@
-# discourseer
+# Discourseer
 
-*Použití velkých jazykových modelů pro obsahovou analýzu dokumentů a jak na to...*
+<p align="center">
+  <img src="images/Discourseer_logo.jpeg" alt="Discourseer logo" width="300"/>
+</p>
 
-![Discourseer logo](images/Discourseer_logo.jpeg)
+<p align="center">
+  *Obsahová analýza pomocí jazykových modelů a jak na to...*
+</p>
 
-## Popis
-Obsahová analýza dokumentů je jeden z úkolů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
+Obsahová analýza dokumentů je jeden z procesů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
 kteří po přečtení textu odpovídají na otázky pomocí výběru z možností: téma článku, vystupjící mluvčí, atd. 
 Mezi odpověďmi několika respondentů se následně provádí analýza podobnosti, protože ne vždy je odpověď přesně daná.
 Projekt Discourseer má za cíl otestovat, zda se velké jazykové modely do tohoto procesu mohou zapojit či ho zcela nahradit.
@@ -26,12 +29,9 @@ Výstupy:
 
 ## Struktura projektu
 - `run_discourseer.py` - hlavní skript pro spuštění nástroje
-- `discourseer` - hlavní balíček projektu
-  - `extraction_prompts.py` - definice formátovacích řetězců pro otázky
-  - `openai_api.py` - komunikace s OpenAI API
-  - `text_analysis.py` - analýza textů
-  - `utils.py` - pomocné funkce
+- `discourseer` - zdrojové kódy
 - `experiments` - výsledky experimentů
+  - `experiments/default_experiment` - výchozí experiment pro ukázku
 - `test` - automatické testy jednotlivých modulů spustitelné pomocí `python -m unittest`
 
 ## Instalace
