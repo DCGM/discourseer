@@ -2,66 +2,66 @@
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.79385,
+      "with_model": 0.77462,
       "worst_case": 0.5671,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.79541,
+      "with_model": 0.77632,
       "worst_case": 0.57038,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.86452,
+      "with_model": 0.85381,
       "worst_case": 0.73183,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.879
+    "majority_agreement": 0.848
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.32117,
+      "with_model": 0.31644,
       "worst_case": 0.13005,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.37643,
+      "with_model": 0.37067,
       "worst_case": 0.19444,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.5859,
+      "with_model": 0.59832,
       "worst_case": 0.34108,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.6665
+    "majority_agreement": 0.656
   },
   "prompts": {
     "misto": {
       "fleiss_kappa": {
         "best_case": 0.92852,
-        "with_model": 0.92852,
+        "with_model": 0.85,
         "worst_case": 0.55514,
         "without_model": 0.90613
       },
       "krippendorff_alpha": {
         "best_case": 0.92926,
-        "with_model": 0.92926,
+        "with_model": 0.85156,
         "worst_case": 0.55978,
         "without_model": 0.90743
       },
       "gwet_ac1": {
         "best_case": 0.9706,
-        "with_model": 0.9706,
+        "with_model": 0.94231,
         "worst_case": 0.86398,
         "without_model": 0.96055
       },
-      "majority_agreement": 1.0
+      "majority_agreement": 0.958
     },
     "rozsah": {
       "fleiss_kappa": {
@@ -87,19 +87,19 @@
     "spoustec-zpravy": {
       "fleiss_kappa": {
         "best_case": 0.2,
-        "with_model": -0.01961,
+        "with_model": 0.04,
         "worst_case": -0.11111,
         "without_model": 0.0
       },
       "krippendorff_alpha": {
         "best_case": 0.26667,
-        "with_model": 0.06536,
+        "with_model": 0.12,
         "worst_case": -0.01852,
         "without_model": 0.11111
       },
       "gwet_ac1": {
         "best_case": 0.36842,
-        "with_model": 0.05455,
+        "with_model": 0.13253,
         "worst_case": -0.02564,
         "without_model": 0.14286
       },

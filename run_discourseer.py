@@ -4,13 +4,14 @@ import logging
 import os
 import json
 import time
-from typing import List
+from typing import List, Union
 
 from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
+from discourseer.visualize_IRR import visualize_results
 
 
 def parse_args():
@@ -18,19 +19,28 @@ def parse_args():
         description='Extract answers from text files in a directory using OpenAI GPT-3 and save the results to a file. '
                     'You must have an OpenAI API key to use this script. Specify environment variable OPENAI_API_KEY '
                     'or add it as and argument `--openai-api-key`.')
-    parser.add_argument('--texts-dir', type=str, required=True,
+
+    parser.add_argument('--experiment-dir', type=str,
+                        default='experiments/default_experiment',
+                        help='Default location of everything necessary for given experiment. Specify different paths '
+                             'by using individual arguments. (texts-dir, ratings-dir, output-dir, '
+                             'prompt-definitions, prompt-schema-definition).')
+    parser.add_argument('--texts-dir', type=str, default=None,
                         help='The directory containing the text files to process.')
-    parser.add_argument('--ratings-dir', nargs='*', type=str,
+    parser.add_argument('--ratings-dir', nargs='*', type=str, default=None,
                         help='The directory containing the csv files with answer ratings.')
-    parser.add_argument('--output-dir', default="data/outputs/test",
-                        help='Directory to save the results to.')
-    parser.add_argument('--prompt-definitions', default="data/default/prompt_definitions.json")
+    parser.add_argument('--output-dir', default=None,
+                        help='Directory to save the results to. Saved to experiment-dir/output if not specified.')
+    parser.add_argument('--prompt-schema-definition', default=None,
+                        help='JSON file containing GPT connection settings, '
+                             'the main prompt text + format strings for prompts.')
+    parser.add_argument('--prompt-definitions', default=None,
+                        help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
+
     parser.add_argument('--prompt-subset', nargs='*',
                         default=list([]),
                         help='The subset to take from file in `prompt-definitions`. '
                              'The accuracy may suffer if there is too many prompts.')
-    parser.add_argument('--prompt-schema-definition', default="data/default/prompt_schema_definition.json",
-                        help='The file containing the main prompt text + format strings for prompts.')
     parser.add_argument('--copy-input-ratings', choices=[i.name for i in RatingsCopyMode],
                         default=RatingsCopyMode.none, help='Copy input ratings to output folder.')
     parser.add_argument('--openai-api-key', type=str)
@@ -57,19 +67,22 @@ def setup_logging(log_level: str, log_file: str):
 
 def main():
     args = parse_args()
-    log_file = 'data/outputs/logfile.log'
-    os.makedirs('data/outputs', exist_ok=True)
+    log_file = 'experiments/tmp/logfile.log'
+    os.makedirs('experiments/tmp', exist_ok=True)
     setup_logging(args.log, log_file)
+    logging.debug(f"Python file location: {os.path.abspath(__file__)}")
+    logging.debug(f"Arguments: {args}")
 
     discourseer = Discourseer(
+        experiment_dir=args.experiment_dir,
         texts_dir=args.texts_dir,
         ratings_dirs=args.ratings_dir,
         output_dir=args.output_dir,
+        prompt_schema_definition=args.prompt_schema_definition,
         prompt_definitions=args.prompt_definitions,
         prompt_subset=args.prompt_subset,
-        openai_api_key=args.openai_api_key,
-        prompt_schema_definition=args.prompt_schema_definition,
-        copy_input_ratings=args.copy_input_ratings
+        copy_input_ratings=args.copy_input_ratings,
+        openai_api_key=args.openai_api_key
     )
     discourseer()
 
@@ -80,16 +93,16 @@ def main():
 class Discourseer:
     input_ratings_dir = 'input_ratings'
 
-    def __init__(self, texts_dir: str, ratings_dirs: List[str] = None, output_dir: str = 'data/outputs/test',
-                 prompt_subset: List[str] = None, prompt_definitions: str = "data/default/prompt_definitions.json",
-                 openai_api_key: str = None, prompt_schema_definition: str = "data/default/prompt_schema_definition.json",
+    def __init__(self, experiment_dir: str = 'experiments/default_experiment', texts_dir: str = None,
+                 ratings_dirs: List[str] = None, output_dir: str = None, prompt_subset: List[str] = None,
+                 prompt_definitions: str = None, openai_api_key: str = None, prompt_schema_definition: str = None,
                  copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none):
-        self.input_files = self.get_input_files(texts_dir)
-        self.output_dir, self.output_dir_base = self.prepare_output_dir(output_dir)
-        self.prompts = self.load_prompts(prompt_definitions, prompt_subset)
+        self.input_files = self.get_input_files(experiment_dir, texts_dir)
+        self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
+        self.prompts = self.load_prompts(experiment_dir, prompt_definitions, prompt_subset)
         logging.debug(f"Prompts: {self.prompts}\n\n")
-        self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
-        self.prompt_schema_definition = self.load_prompt_schema_definition(prompt_schema_definition)
+        self.raters = self.load_raters(experiment_dir, ratings_dirs, self.prompts)
+        self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
 
         if not self.raters:
@@ -102,7 +115,9 @@ class Discourseer:
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_prompts=self.prompts)
-        logging.info(f"First prompt: {self.prompt_schema_definition.messages[0].content}")
+
+        first_prompt = self.prompt_schema_definition.messages[0].content
+        logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
         for file in self.input_files:
@@ -120,9 +135,10 @@ class Discourseer:
 
         irr_calculator = IRR(self.raters, self.model_rater, self.prompts)
         irr_results = irr_calculator()
-        logging.info(f"Inter-rater reliability results:\n{irr_results.model_dump_json(indent=2)}")
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
         pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
+        visualize_results(irr_results, self.get_output_file('irr_results.png'))
         self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_answers(self, text):
@@ -175,7 +191,10 @@ class Discourseer:
             rater.save_to_csv(self.get_output_file(rater.name, input_ratings=True))
 
     @staticmethod
-    def load_prompt_schema_definition(prompt_definition: str) -> Conversation:
+    def load_prompt_schema_definition(experiment_dir: str, prompt_definition: str = None) -> Conversation:
+        if not prompt_definition:
+            prompt_definition = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_schema_definition')
+
         logging.debug(f'Loading prompt definition from file:{prompt_definition}')
         with open(prompt_definition, 'r', encoding='utf-8') as f:
             prompt_definition = json.load(f)
@@ -185,19 +204,25 @@ class Discourseer:
         return prompt_definition
 
     @staticmethod
-    def prepare_output_dir(output_dir: str) -> tuple[str, str]:
+    def prepare_output_dir(experiment_dir: str, output_dir: str = None) -> str:
+        if not output_dir:
+            output_dir = os.path.join(experiment_dir, 'output')
+
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
-            return output_dir, os.path.basename(os.path.normpath(output_dir))
+            return output_dir
 
         output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
         os.makedirs(output_dir_new)
         logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
 
-        return output_dir_new, os.path.basename(output_dir_new)
+        return output_dir_new
 
     @staticmethod
-    def get_input_files(texts_dir: str):
+    def get_input_files(experiment_dir: str, texts_dir: str = None) -> List[str]:
+        if not texts_dir:
+            texts_dir = Discourseer.find_dir_in_experiment_dir(experiment_dir, 'text')
+
         files = []
         for file in os.listdir(texts_dir):
             if os.path.isfile(os.path.join(texts_dir, file)):
@@ -205,13 +230,54 @@ class Discourseer:
         return files
 
     @staticmethod
-    def load_prompts(prompts_file: str, prompt_subset: List[str] = None) -> ExtractionPrompts:
-        logging.debug(f'Loading prompts from file:{prompts_file}')
+    def load_prompts(experiment_dir: str, prompts_file: str = None, prompt_subset: List[str] = None
+                     ) -> ExtractionPrompts:
+        if not prompts_file:
+            prompts_file = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_definitions')
+
+        logging.debug(f'Loading prompts from file: {prompts_file}')
         with open(prompts_file, 'r', encoding='utf-8') as f:
             prompts = json.load(f)
         prompts = ExtractionPrompts.model_validate(prompts)
 
         return prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+
+    @staticmethod
+    def load_raters(experiment_dir: str, ratings_dirs: List[str] = None, prompts: ExtractionPrompts = None) -> List[Rater]:
+        if not ratings_dirs:
+            ratings_dirs = [Discourseer.find_dir_in_experiment_dir(experiment_dir, 'ratings')]
+
+        return Rater.from_dirs(ratings_dirs, prompts)
+
+    @staticmethod
+    def find_dir_in_experiment_dir(experiment_dir: str, dir_name: str) -> Union[str, None]:
+        if not os.path.exists(experiment_dir):
+            raise FileNotFoundError(f"Experiment directory {experiment_dir} does not exist. "
+                                    "Provide it in args or specify all paths individually. "
+                                    "(see run_discourseer.py --help)")
+
+        dirs = [path for path in os.listdir(experiment_dir)
+                if os.path.isdir(os.path.join(experiment_dir, path)) and dir_name in path]
+        dirs.sort()
+        if dirs:
+            return os.path.join(experiment_dir, dirs[0])
+
+        return None
+
+    @staticmethod
+    def find_file_in_experiment_dir(experiment_dir: str, file_name: str) -> Union[str, None]:
+        if not os.path.exists(experiment_dir):
+            raise FileNotFoundError(f"Experiment directory {experiment_dir} does not exist. "
+                                    "Provide it in args or specify all paths individually. "
+                                    "(see run_discourseer.py --help)")
+
+        files = [path for path in os.listdir(experiment_dir)
+                 if os.path.isfile(os.path.join(experiment_dir, path)) and file_name in path]
+        files.sort()
+        if files:
+            return os.path.join(experiment_dir, files[0])
+
+        return None
 
 
 if __name__ == "__main__":

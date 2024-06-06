@@ -69,9 +69,9 @@ class ExtractionPrompts(pydantic.BaseModel):
                           if len(prompt.options) > 0])
 
     def whole_prompt_info(self) -> str:
-        """Whole prompt info in one string. Individual prompts are separated by a newline."""
+        """Whole prompt info in one string. Individual prompts are separated by newline."""
         return "\n".join([f"{prompt.name} {multiple_choice_tag if prompt.multiple_choice else single_choice_tag} "
-                          f"({prompt.description}) {prompt.list_options_details()}"
+                          f"(description: {prompt.description}) options: {prompt.list_options_details()}"
                           for prompt in self.prompts.values()])
 
     def prompts_json(self) -> str:
@@ -114,7 +114,13 @@ class ExtractionPrompts(pydantic.BaseModel):
             "prompt_json": self.prompts_json(),
             "response_json_schema": self.response_json_schema(),
             "response_json_schema_with_options": self.response_json_schema_with_options(),
+            "custom_format_string": self.custom_format_string(),
+            # add your own format strings here with a reference to the corresponding function
         }
+
+    def custom_format_string(self) -> str:
+        # define your custom format string here with the same name
+        return ", ".join([prompt.name for prompt in self.prompts.values() if prompt.multiple_choice])
 
 
 class ExtractionPrompt(pydantic.BaseModel):

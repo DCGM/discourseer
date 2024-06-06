@@ -1,6 +1,7 @@
 import json
 import pydantic
 import re
+import os
 import logging
 from enum import Enum
 
@@ -16,6 +17,17 @@ class RatingsCopyMode(Enum):
 def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(model.model_dump(), f, ensure_ascii=False, indent=2)
+
+
+def json_file_to_pydantic(file_path: str, cls):
+    if not issubclass(cls, pydantic.BaseModel):
+        raise ValueError(f"Class {cls} is not a subclass of pydantic.BaseModel")
+    if not os.path.exists(file_path) and not os.path.isfile(file_path):
+        raise FileNotFoundError(f"File {file_path} not found.")
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        return cls.parse_obj(data)
 
 
 class JSONParser:

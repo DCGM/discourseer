@@ -1,0 +1,140 @@
+{
+  "prompts": {
+    "range-v1": {
+      "name": "range",
+      "question_id": "rozsah",
+      "description": "Number of paragraphs in the text.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "name": "1",
+          "description": "1 paragraph."
+        },
+        {
+          "name": "2",
+          "description": "2 paragraphs."
+        },
+        {
+          "name": "3",
+          "description": "3 paragraphs."
+        },
+        {
+          "name": "4",
+          "description": "4 paragraphs."
+        },
+        {
+          "name": "5",
+          "description": "5 paragraphs."
+        },
+        {
+          "name": "6",
+          "description": "6 paragraphs."
+        },
+        {
+          "name": "7",
+          "description": "7 paragraphs."
+        },
+        {
+          "name": "8",
+          "description": "8 paragraphs."
+        },
+        {
+          "name": "9",
+          "description": "9 paragraphs."
+        },
+        {
+          "name": "10",
+          "description": "10 paragraphs."
+        }
+      ]
+    },
+    "genre-v1": {
+      "name": "genre",
+      "question_id": "zanr",
+      "description": "The genre of the text.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "name": "report",
+          "description": "Report is information about a current event answering questions: who, what, where."
+        },
+        {
+          "name": "extended_report",
+          "description": "Report is information about a current event answering questions: who, what, where, when, how and why."
+        },
+        {
+          "name": "interview",
+          "description": "Interview is a conversation between two or more people."
+        },
+        {
+          "name": "other",
+          "description": "Other genre."
+        }
+      ]
+    },
+    "message-trigger-v1": {
+      "name": "message-trigger",
+      "question_id": "spoustec-zpravy",
+      "description": "The message trigger is the event or situation that causes the message to be sent.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "name": "politician",
+          "description": "The message reacts on actions of a politician"
+        },
+        {
+          "name": "security-forces",
+          "description": "The message reacts on action of security forces."
+        },
+        {
+          "name": "public",
+          "description": "The message reacts on action of public."
+        },
+        {
+          "name": "other",
+          "description": "Other message trigger."
+        }
+      ]
+    },
+    "place-v1": {
+      "name": "place",
+      "question_id": "misto",
+      "description": "The country where the event or situation occurs.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "czech-republic",
+          "description": "The event or situation occurs in the Czech Republic."
+        },
+        {
+          "name": "slovakia",
+          "description": "The event or situation occurs in Slovakia."
+        },
+        {
+          "name": "poland",
+          "description": "The event or situation occurs in Poland."
+        },
+        {
+          "name": "germany",
+          "description": "The event or situation occurs in Germany."
+        },
+        {
+          "name": "russia",
+          "description": "The event or situation occurs in Russia."
+        },
+        {
+          "name": "ukraine",
+          "description": "The event or situation occurs in Ukraine."
+        },
+        {
+          "name": "other",
+          "description": "The event or situation occurs in other country."
+        },
+        {
+          "name": "unknown",
+          "description": "The event or situation occurs in unknown country."
+        }
+      ]
+    }
+  }
+}
