@@ -6,9 +6,6 @@ import pydantic
 import re
 import argparse
 
-# sys.path.append(os.path.join(os.path.dirname("__file__"), '..'))
-# # add the parent directory to the path in order to import discourseer modules
-
 from discourseer.rater import Rater, Rating
 
 
@@ -30,6 +27,7 @@ def parse_dir(input_path: str, output_path: str):
         if not file.endswith('.csv'):
             continue
         file_path = os.path.join(input_path, file)
+
         # load csv file
         with open(file_path, 'r') as f:
             reader = csv.reader(f)
@@ -79,13 +77,9 @@ def parse_single_choice_options(data: str) -> List[str]:
 
     print(f'data: {data}')
 
-    # pattern = r"(\d+[\)\.\s])\s+(.*?)(?=\d+\)|$)"
     pattern = r"(\d+[\)\.\s]?)\s+"
-    # matches = re.findall(pattern, data)
-    # matches = {strip_stuff(match[0]): strip_stuff(match[1]) for match in matches}
-
     matches = [(m.start(0), m.end(1)) for m in re.finditer(pattern, data)]
-    # matches = [data[start:end] for start, end in matches]
+
     options_dict: Dict[int, str] = {}
     for i, match in enumerate(matches[:-1]):
         index = data[match[0]:match[1]]
@@ -96,14 +90,6 @@ def parse_single_choice_options(data: str) -> List[str]:
         options_dict[int(strip_stuff(index))] = strip_stuff(option)
     print(f'options_dict: {options_dict}')
 
-    # print(f'matches: {matches}')
-
-    # data = re.split('\d[\)\.\s]\s*', data)  # split by number followed by dot, space, or bracket
-    # data = [d.strip().strip(';,.').strip() for d in data]
-    # data = [d for d in data if d != '']
-    # print(f'data: {data}')
-    # exit()
-
     return options_dict
 
 def parse_ratings(data, questions: List[Question]) -> List[Rating]:
@@ -112,7 +98,7 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
 
     for row in answer_lines:
         print(f'row: {row}')
-        # every row should have name of file, then answers to questions (single or multiple according to question type)
+        # every row should have: name of file, answers to individual questions (single or multiple columns according to question type)
         file = row[0].strip()
         if file == '':
             continue
@@ -126,7 +112,6 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
                 print(f'row[{row_index}]: {row[row_index]}')
                 answer = get_single_choice_answer(row[row_index], question)
                 print(f'answer: {answer}')
-                # rating = Rating(file=file, question_id=question.name, rating_results=[question.options[int(answer)-1]])
                 rating = Rating(file=file, question_id=question.name, rating_results=answer)
             else:
                 print(f'row[{row_index}:]: {row[row_index:]}')
@@ -137,7 +122,6 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
             row_index += len(question.options) if not question.single_choice else 1
             print(f'Adding {len(question.options)} to row_index ({question.model_dump()})')
             ratings.append(rating)
-        # exit()
 
     return ratings
 
@@ -179,7 +163,7 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     parse_dir(args.input_path, args.output_path)
-    # parse_dir('experiments/gaza/coder_results_original/', 'experiments/gaza/coder_results_ratings/')
+    # example: parse_dir('experiments/gaza/coder_results_original/', 'experiments/gaza/coder_results_ratings/')
     print('Done')
 
 """Example input document:
