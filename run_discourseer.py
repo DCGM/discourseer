@@ -245,7 +245,7 @@ class Discourseer:
     @staticmethod
     def load_raters(experiment_dir: str, ratings_dirs: List[str] = None, prompts: ExtractionPrompts = None) -> List[Rater]:
         if not ratings_dirs:
-            ratings_dirs = [Discourseer.find_dir_in_experiment_dir(experiment_dir, 'ratings')]
+            ratings_dirs = [Discourseer.find_dir_in_experiment_dir(experiment_dir, 'rating')]
 
         return Rater.from_dirs(ratings_dirs, prompts)
 

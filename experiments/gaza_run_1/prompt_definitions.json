@@ -115,11 +115,11 @@
       "multiple_choice": true,
       "options": [
         {
-          "name": "poloticti-predstavitele-izraele",
+          "name": "politicti-predstavitele-izraele",
           "description": "Vládní a opoziční politici, diplomaté Izraele a v Izraeli, kteří jsou přímo zapojeni do rozhodování a jednání souvisejících s konfliktem nebo je komentují."
         },
         {
-          "name": "poloticti-predstavitele-palestiny",
+          "name": "politicti-predstavitele-palestiny",
           "description": "Političtí představitelé Palestinské samosprávy nebo jiných palestinských vládních orgánů, včetně zvolených úředníků a vůdců."
         },
         {
