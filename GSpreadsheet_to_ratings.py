@@ -88,8 +88,11 @@ def parse_single_choice_options(data: str) -> List[str]:
         end = matches[i+1][0]
         option = data[start:end]
         options_dict[int(strip_stuff(index))] = strip_stuff(option)
-    print(f'options_dict: {options_dict}')
 
+    # add last option
+    options_dict[int(strip_stuff(data[matches[-1][0]:matches[-1][1]]))] = strip_stuff(data[matches[-1][1]:])
+
+    print(f'options_dict: {options_dict}')
     return options_dict
 
 def parse_ratings(data, questions: List[Question]) -> List[Rating]:
