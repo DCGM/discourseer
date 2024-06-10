@@ -1,17 +1,24 @@
-# Discourseer
+# Discourseer - Obsahová analýza pomocí jazykových modelů
 
 <p align="center">
   <img src="images/Discourseer_logo.jpeg" alt="Discourseer logo" width="300"/>
 </p>
 
 <p align="center">
-  *Obsahová analýza pomocí jazykových modelů a jak na to...*
+  <a href="https://github.com/DCGM/discourseer">Discourseer na Githubu</a>
+</p>
+
+<p align="center">
+  Vojtěch Vlach, xvlach22@vutbr.cz
 </p>
 
 Obsahová analýza dokumentů je jeden z procesů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
 kteří po přečtení textu odpovídají na otázky pomocí výběru z možností: téma článku, vystupjící mluvčí, atd. 
 Mezi odpověďmi několika respondentů se následně provádí analýza podobnosti, protože ne vždy je odpověď přesně daná.
 Projekt Discourseer má za cíl otestovat, zda se velké jazykové modely do tohoto procesu mohou zapojit či ho zcela nahradit.
+
+## Současný stav
+Momentálně je software připraven na experimenty. Data pro experimenty se připravují v rámci projektu semANT na FIT VUT a budou na téma: Obsahová analýza článků souvisejících s aktuálně probíhajícím konfliktem na blízkém východě. Připravená data a první experimenty jsou očekávány během června. Tento software se bude dále vyvíjet podle potřeb uživatelů.
 
 ## Funkcionalita
 Nástroj Discourseer umožňuje využít velké jazykové modely pomocí openAI API pro analýzu textů a odpovídání na otázky s předdefinovanými možnostmi odpovědí.
