@@ -133,7 +133,7 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(self.raters, self.model_rater, self.prompts)
+        irr_calculator = IRR(self.raters, self.model_rater, self.prompts, self.get_output_file('dataframe.csv'))
         irr_results = irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 

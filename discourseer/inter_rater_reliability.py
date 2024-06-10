@@ -105,12 +105,13 @@ class IRR:
     col_best_case = col_majority
     index_cols = ['file', 'prompt_key', 'rating']
 
-    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None):
+    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None, out_file: str = None):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
         self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
+        self.out_file = out_file
 
         self.input_columns = []
         self.model_columns = []
@@ -134,7 +135,8 @@ class IRR:
 
         if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
-            logging.debug(f"Data before cleaning:\n{df_before_cleaning}")
+            logging.debug(f"Data before cleaning (see whole dataframe in {self.out_file}):\n{df_before_cleaning}")
+            df_before_cleaning.to_csv(self.out_file)
             return IRR.EMPTY_IRR_RESULTS
 
         self.input_columns = df.columns.difference([self.col_model]).to_list()
@@ -144,7 +146,8 @@ class IRR:
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
 
-        logger.debug(f'Calculating inter-rater reliability for:\n{df}')
+        logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_file}):\n{df}')
+        df.to_csv(self.out_file)
 
         overall_results = self.get_irr_result(df)
 
