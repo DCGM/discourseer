@@ -1,0 +1,1 @@
+python run_discourseer.py --experiment-dir experiments/gaza_mini/ --prompt-schema-definition experiments/gaza/prompt_schema_definition.json --prompt-definitions experiments/gaza/prompt_definitions.json  --log DEBUG
