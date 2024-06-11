@@ -89,7 +89,7 @@ class IRRVariants(pydantic.BaseModel):
 
 class IRR:
     TOTAL_AGREEMENT = 1.0
-    WORST_CASE_VALUE = '--WORST-CASE--'  # A value that should not be present in the ratings
+    WORST_CASE_VALUE = '--WORST-CASE'  # A value that should not be present in the ratings
     EMPTY_IRR_RESULTS = IRRResults(
         overall=IRRResult(
             fleiss_kappa=IRRVariants(),

@@ -17,7 +17,6 @@ fi
 # ---------------------------  RUNNING EXPERIMENT  ---------------------------
 python run_discourseer.py \
     --experiment-dir $EXPERIMENT_DIR \
-    --prompt-schema-definition $EXPERIMENT_DIR/prompt_schema_definition.json \
     --log DEBUG \
     $TEXT_COUNT \
     $OUTPUT
