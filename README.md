@@ -1,15 +1,13 @@
 # Discourseer - Obsahová analýza pomocí jazykových modelů
 
 <p align="center">
-  <img src="images/Discourseer_logo.jpeg" alt="Discourseer logo" width="300"/>
+  <img src="assets/Discourseer_logo.jpeg" alt="Discourseer logo" width="300"/>
 </p>
 
 <p align="center">
+  Vojtěch Vlach, xvlach22@vutbr.cz</br>
+  <a href="assets/presentation.pdf">Prezentace na závěr fáze příprav kódu.</a></br>
   <a href="https://github.com/DCGM/discourseer">Discourseer na Githubu</a>
-</p>
-
-<p align="center">
-  Vojtěch Vlach, xvlach22@vutbr.cz
 </p>
 
 Obsahová analýza dokumentů je jeden z procesů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
