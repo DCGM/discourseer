@@ -1,8 +1,9 @@
 .idea/
 
-data/outputs/*
 test/test_topic_extractor/outputs/*
 experiments/*/output_*/*
+experiments/*/*/output_*/*
+experiments/*/*/*/output_*/*
 experiments/tmp/*
 test/test_out*.png
 .vscode/*

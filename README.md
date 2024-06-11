@@ -56,6 +56,7 @@ python run_discourseer.py --openai-api-key sk-ZmfV3vvo19y...
 - `--prompt-subset` - Názvy otázek, které se mají vybrat ze souboru `--prompt-definitions`. Ostatní nejsou brány v potaz. Pokud tento argument není zadán, berou se všechny otázky.
 - `--prompt-schema-definition` (soubor .json) - Soubor s textem hlavního promptu + formátovacími řetězci pro témata. (viz `experiments/default_experiment/prompt_schema_definitions.json`)
 - `--output-dir` (složka) - Složka, kam se uloží výsledky analýzy.
+- `--text-count` (číslo) - Možnost omezit počet dokumentů, nad kterýmu se provede analýza
 - `--copy-input-ratings` - Možnosti kopírovat hodnocení ze vstupní složky do výstupní složky.
   - `none` - Nezkopírovat.
   - `original` - Zkopírovat všechny soubory v původním formátu.
