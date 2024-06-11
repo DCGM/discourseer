@@ -41,6 +41,8 @@ def parse_args():
                         default=list([]),
                         help='The subset to take from file in `prompt-definitions`. '
                              'The accuracy may suffer if there is too many prompts.')
+    parser.add_argument('--text-count', type=int, default=None,
+                        help='Number of texts to process (for testing, you can use only few texts).')
     parser.add_argument('--copy-input-ratings', choices=[i.name for i in RatingsCopyMode],
                         default=RatingsCopyMode.none, help='Copy input ratings to output folder.')
     parser.add_argument('--openai-api-key', type=str)
@@ -81,6 +83,7 @@ def main():
         prompt_schema_definition=args.prompt_schema_definition,
         prompt_definitions=args.prompt_definitions,
         prompt_subset=args.prompt_subset,
+        text_count=args.text_count,
         copy_input_ratings=args.copy_input_ratings,
         openai_api_key=args.openai_api_key
     )
@@ -96,8 +99,8 @@ class Discourseer:
     def __init__(self, experiment_dir: str = 'experiments/default_experiment', texts_dir: str = None,
                  ratings_dirs: List[str] = None, output_dir: str = None, prompt_subset: List[str] = None,
                  prompt_definitions: str = None, openai_api_key: str = None, prompt_schema_definition: str = None,
-                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none):
-        self.input_files = self.get_input_files(experiment_dir, texts_dir)
+                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None):
+        self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.prompts = self.load_prompts(experiment_dir, prompt_definitions, prompt_subset)
         logging.debug(f"Prompts: {self.prompts}\n\n")
@@ -133,7 +136,7 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(self.raters, self.model_rater, self.prompts)
+        irr_calculator = IRR(self.raters, self.model_rater, self.prompts, self.get_output_file('dataframe.csv'))
         irr_results = irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
@@ -219,7 +222,7 @@ class Discourseer:
         return output_dir_new
 
     @staticmethod
-    def get_input_files(experiment_dir: str, texts_dir: str = None) -> List[str]:
+    def get_input_files(experiment_dir: str, texts_dir: str = None, text_count: int = None) -> List[str]:
         if not texts_dir:
             texts_dir = Discourseer.find_dir_in_experiment_dir(experiment_dir, 'text')
 
@@ -227,6 +230,10 @@ class Discourseer:
         for file in os.listdir(texts_dir):
             if os.path.isfile(os.path.join(texts_dir, file)):
                 files.append(os.path.join(texts_dir, file))
+
+        if text_count:
+            files = files[:min(text_count, len(files))]
+
         return files
 
     @staticmethod
@@ -245,7 +252,7 @@ class Discourseer:
     @staticmethod
     def load_raters(experiment_dir: str, ratings_dirs: List[str] = None, prompts: ExtractionPrompts = None) -> List[Rater]:
         if not ratings_dirs:
-            ratings_dirs = [Discourseer.find_dir_in_experiment_dir(experiment_dir, 'ratings')]
+            ratings_dirs = [Discourseer.find_dir_in_experiment_dir(experiment_dir, 'rating')]
 
         return Rater.from_dirs(ratings_dirs, prompts)
 
