@@ -1,0 +1,17 @@
+{
+  "model": "gpt-3.5-turbo-0125",
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.0,
+  "response_format": "json",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {prompt_names_and_descriptions_colon}. For every question pick only options from these lists.\n{prompt_options}\n\nYou will pick one option for these questions: {single_choice_prompts}. You will pick one or more options for these prompts: {multiple_choice_prompts}.\nText will be in Czech language. JSON anwers will be in same language as the options are. Whole info about everything is here:\n{whole_prompt_info}.\n Return answers as a JSON object"
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    }
+  ]
+}
