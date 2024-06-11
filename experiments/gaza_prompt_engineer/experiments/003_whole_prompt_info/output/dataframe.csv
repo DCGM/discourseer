@@ -1,0 +1,501 @@
+file,prompt_key,rating,codebook - Katka.csv,codebook - Martina.csv,codebook - Michal.csv,codebook - Vojta.csv,model,majority,maj_agreement_with_model,worst_case
+2023-10-07T00-00-00_2023WN280011.txt,Hlavní téma článku,single_choice,Dílčí konflikty a střety,Vnitřní politické dění,Teroristické operace,Dopad na civilisty a humanitární krize,Teroristické operace,Dopad na civilisty a humanitární krize,False,--WORST-CASE
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Geopolitický rámec,False,False,False,True,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Historicko-kulturní rámec,False,True,True,True,False,True,False,False
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Humanitární rámec,False,True,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Lokální rámec,True,True,True,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce,Rámec konfliktu,True,True,True,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Jiní,False,True,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Očití svědci a civilisté,False,True,False,False,True,False,False,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,True,False,False,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Političtí představitelé Izraele,True,True,True,False,False,True,False,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Vojenští představitelé Izraele,False,True,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty,Dopad impact,True,False,False,True,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,True,False,False,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,True,True,False,True,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Hlavní téma článku,single_choice,Vnitřní politické dění,Vnitřní politické dění,Vnitřní politické dění,Vnitřní politické dění,Vojenské operace Izraele,Vnitřní politické dění,False,--WORST-CASE
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Geopolitický rámec,False,True,True,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Historicko-kulturní rámec,False,True,True,True,True,True,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Lokální rámec,True,True,True,True,False,True,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mediální rámce,Rámec konfliktu,True,True,True,False,True,True,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Experti a analytici,True,False,True,False,True,False,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Jiní,True,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Politici ze západních zemí,False,True,True,True,False,True,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Političtí představitelé Izraele,False,True,False,True,True,False,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Zástupci občanské společnosti,False,True,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,False,False,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,True,True,True,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,True,True,True,False,True,False,False
+2023-10-08T21-44-00_2023WN281071.txt,Zpravodajské hodnoty,Negativita negativity,True,False,True,True,True,True,True,False
+2023-10-08T21-44-00_2023WN281071.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,True,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Hlavní téma článku,single_choice,Jiné,Jiné,Jiné,Jiné,Ekonomické důsledky,Jiné,False,--WORST-CASE
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Geopolitický rámec,True,True,True,False,True,True,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Lokální rámec,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mediální rámce,Rámec konfliktu,True,False,False,False,True,False,False,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Experti a analytici,True,True,True,True,True,True,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Jiní,True,True,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Mezinárodní organizace,False,False,False,True,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Zpravodajské hodnoty,Blízkost proximity,True,False,True,True,False,True,False,False
+2023-10-10T09-37-00_2023WN283037.txt,Zpravodajské hodnoty,Dopad impact,False,True,True,True,False,True,False,False
+2023-10-10T09-37-00_2023WN283037.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Zpravodajské hodnoty,Negativita negativity,False,False,False,False,False,False,True,False
+2023-10-10T09-37-00_2023WN283037.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Hlavní téma článku,single_choice,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Globální reakce veřejnosti,Vojenské operace Izraele,Mezinárodní politické reakce,False,--WORST-CASE
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Geopolitický rámec,True,True,True,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Historicko-kulturní rámec,False,False,True,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Humanitární rámec,True,False,True,True,False,True,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Lokální rámec,False,False,True,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mediální rámce,Rámec konfliktu,True,False,True,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Politici z blízkovýchodních zemí,True,True,True,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,True,False,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Političtí představitelé Palestiny,False,True,False,False,True,False,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Představitelé teroristických skupin,False,False,True,True,True,False,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,True,False,True,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,True,True,True,False,True,False,False
+2023-10-10T21-42-00_2023WN283184.txt,Zpravodajské hodnoty,Negativita negativity,True,False,True,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Hlavní téma článku,single_choice,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Humanitární pomoc,Mezinárodní politické reakce,Mezinárodní politické reakce,True,--WORST-CASE
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Geopolitický rámec,True,True,True,True,True,True,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Humanitární rámec,False,True,False,True,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Lokální rámec,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Rámec budování míru,False,False,False,True,True,False,False,False
+2023-10-12T11-53-00_2023WN285073.txt,Mediální rámce,Rámec konfliktu,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Politici ze západních zemí,True,True,True,True,True,True,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,True,False,False,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Zpravodajské hodnoty,Blízkost proximity,False,True,True,False,True,False,False,False
+2023-10-12T11-53-00_2023WN285073.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,False,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,True,True,True,True,True,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Zpravodajské hodnoty,Negativita negativity,False,False,False,True,False,False,True,False
+2023-10-12T11-53-00_2023WN285073.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Hlavní téma článku,single_choice,Teroristické operace,Teroristické operace,Teroristické operace,Dopad na civilisty a humanitární krize,Dopad na civilisty a humanitární krize,Teroristické operace,False,--WORST-CASE
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Geopolitický rámec,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Humanitární rámec,False,False,False,False,True,False,False,False
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Lokální rámec,True,True,True,True,True,True,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mediální rámce,Rámec konfliktu,True,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Experti a analytici,True,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Očití svědci a civilisté,True,True,True,True,True,True,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,True,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-10-13T14-43-00_2023WN286117.txt,Zpravodajské hodnoty,Dopad impact,True,False,False,True,True,False,False,False
+2023-10-13T14-43-00_2023WN286117.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-10-13T14-43-00_2023WN286117.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,True,True,False,True,False,False
+2023-10-16T11-16-00_2023WN289167.txt,Hlavní téma článku,single_choice,Jiné,Vnitřní politické dění,Humanitární pomoc,Dílčí konflikty a střety,Dopad na civilisty a humanitární krize,Dílčí konflikty a střety,False,--WORST-CASE
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Geopolitický rámec,False,True,True,True,False,True,False,False
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Humanitární rámec,True,True,True,True,True,True,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Lokální rámec,True,True,True,True,True,True,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mediální rámce,Rámec konfliktu,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Mezinárodní organizace,True,True,True,True,True,True,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Média a novináři,False,False,False,False,True,False,False,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Politici ze západních zemí,False,False,True,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Zpravodajské hodnoty,Blízkost proximity,True,False,True,False,True,False,False,False
+2023-10-16T11-16-00_2023WN289167.txt,Zpravodajské hodnoty,Dopad impact,True,False,True,True,True,True,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Zpravodajské hodnoty,Negativita negativity,True,False,True,True,True,True,True,False
+2023-10-16T11-16-00_2023WN289167.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Hlavní téma článku,single_choice,Dopad na civilisty a humanitární krize,Teroristické operace,Dopad na civilisty a humanitární krize,Teroristické operace,Dopad na civilisty a humanitární krize,Dopad na civilisty a humanitární krize,True,--WORST-CASE
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Geopolitický rámec,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Humanitární rámec,True,False,True,False,True,False,False,False
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Lokální rámec,True,True,True,True,False,True,False,False
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mediální rámce,Rámec konfliktu,True,True,True,False,True,True,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Experti a analytici,False,False,False,True,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Mezinárodní organizace,True,False,True,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Očití svědci a civilisté,False,True,False,True,True,False,False,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Politici z blízkovýchodních zemí,False,True,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Političtí představitelé Palestiny,True,False,True,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Vojenští představitelé Izraele,False,False,True,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-10-18T12-16-00_2023WN291055.txt,Zpravodajské hodnoty,Dopad impact,True,False,True,True,True,True,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,False,False,False,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-10-18T12-16-00_2023WN291055.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,True,True,False,True,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Hlavní téma článku,single_choice,Dopad na civilisty a humanitární krize,Teroristické operace,Jiné,Dopad na civilisty a humanitární krize,Vojenské operace Izraele,Dopad na civilisty a humanitární krize,False,--WORST-CASE
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Geopolitický rámec,True,False,True,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Humanitární rámec,True,False,False,False,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Lokální rámec,False,False,False,True,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mediální rámce,Rámec konfliktu,True,False,False,True,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Jiní,True,True,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Očití svědci a civilisté,False,False,False,True,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Politici ze západních zemí,False,False,True,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,True,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Političtí představitelé Palestiny,False,False,True,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Představitelé teroristických skupin,True,False,False,True,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,True,False,True,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,False,False,False,True,False
+2023-10-20T07-25-00_2023WN293150.txt,Zpravodajské hodnoty,Negativita negativity,False,True,False,True,True,False,False,False
+2023-10-20T07-25-00_2023WN293150.txt,Zpravodajské hodnoty,Personalizace personalization,True,False,True,True,False,True,False,False
+2023-10-23T11-32-00_2023WN296073.txt,Hlavní téma článku,single_choice,Dopad na civilisty a humanitární krize,Jiné,Jiné,Dopad na civilisty a humanitární krize,Dopad na civilisty a humanitární krize,Dopad na civilisty a humanitární krize,True,--WORST-CASE
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Geopolitický rámec,False,False,False,True,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Humanitární rámec,False,False,False,False,True,False,False,False
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Lokální rámec,True,False,False,False,True,False,False,False
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mediální rámce,Rámec konfliktu,True,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Jiní,True,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Politici ze západních zemí,False,True,True,True,True,True,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,True,True,False,False,False
+2023-10-23T11-32-00_2023WN296073.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,True,True,True,True,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Zpravodajské hodnoty,Dopad impact,False,True,True,True,True,True,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Zpravodajské hodnoty,Negativita negativity,False,False,False,False,False,False,True,False
+2023-10-23T11-32-00_2023WN296073.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Hlavní téma článku,single_choice,Globální reakce veřejnosti,Globální reakce veřejnosti,Globální reakce veřejnosti,Jiné,Globální reakce veřejnosti,Globální reakce veřejnosti,True,--WORST-CASE
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Geopolitický rámec,True,True,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,True,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Humanitární rámec,False,True,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Lokální rámec,False,False,False,False,True,False,False,False
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mediální rámce,Rámec konfliktu,True,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Zástupci občanské společnosti,False,True,False,False,True,False,False,False
+2023-10-25T00-00-00_2023WN298164.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,True,True,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,True,True,True,True,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-10-25T00-00-00_2023WN298164.txt,Zpravodajské hodnoty,Negativita negativity,False,False,False,False,True,False,False,False
+2023-10-25T00-00-00_2023WN298164.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Hlavní téma článku,single_choice,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Vojenské operace Izraele,Mezinárodní politické reakce,False,--WORST-CASE
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Geopolitický rámec,True,True,True,True,False,True,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Historicko-kulturní rámec,False,True,True,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Humanitární rámec,False,False,False,True,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Lokální rámec,False,True,True,True,False,True,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mediální rámce,Rámec konfliktu,True,True,True,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Experti a analytici,False,False,True,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Média a novináři,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Politici ze západních zemí,True,True,True,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Političtí představitelé Izraele,False,False,True,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,True,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,True,False,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,False,False,False,False,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Zpravodajské hodnoty,Dopad impact,True,True,True,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,True,True,True,False,True,False,False
+2023-10-27T00-00-00_2023WN300106.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300106.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Hlavní téma článku,single_choice,Jiné,Jiné,,Jiné,Vnitřní politické dění,Jiné,False,--WORST-CASE
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Geopolitický rámec,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Lokální rámec,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mediální rámce,Rámec konfliktu,True,False,False,True,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Média a novináři,False,False,False,False,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-10-30T00-00-00_2023WN303133.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,False,True,False,True,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,False,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,False,False,True,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Zpravodajské hodnoty,Negativita negativity,True,False,False,True,True,False,False,False
+2023-10-30T00-00-00_2023WN303133.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Hlavní téma článku,single_choice,Teroristické operace,Teroristické operace,Teroristické operace,Teroristické operace,Teroristické operace,Teroristické operace,True,--WORST-CASE
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Geopolitický rámec,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Humanitární rámec,False,True,False,False,True,False,False,False
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Lokální rámec,True,True,False,True,False,True,False,False
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mediální rámce,Rámec konfliktu,True,False,True,True,True,True,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Jiní,True,False,False,True,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Očití svědci a civilisté,False,False,True,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Představitelé teroristických skupin,True,True,False,True,True,True,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,True,True,False,False,False
+2023-11-01T10-32-00_2023WN305220.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-11-01T10-32-00_2023WN305220.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,True,True,False,True,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Hlavní téma článku,single_choice,Globální reakce veřejnosti,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Vojenské operace Izraele,Mezinárodní politické reakce,False,--WORST-CASE
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Geopolitický rámec,True,True,True,True,False,True,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Historicko-kulturní rámec,False,True,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Lokální rámec,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mediální rámce,Rámec konfliktu,True,False,False,True,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Politici z blízkovýchodních zemí,True,True,True,True,True,True,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Zpravodajské hodnoty,Dopad impact,False,True,False,False,True,False,False,False
+2023-11-02T16-19-00_2023WN306162.txt,Zpravodajské hodnoty,Elitní osoby prominence,True,True,False,True,True,True,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Zpravodajské hodnoty,Negativita negativity,True,False,True,True,True,True,True,False
+2023-11-02T16-19-00_2023WN306162.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,True,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Hlavní téma článku,single_choice,Vnitřní politické dění,Vnitřní politické dění,Jiné,Vojenské operace Izraele,Vojenské operace Izraele,Vnitřní politické dění,False,--WORST-CASE
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Geopolitický rámec,False,False,False,True,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Historicko-kulturní rámec,True,True,True,True,True,True,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Lokální rámec,True,True,True,False,False,True,False,False
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce,Rámec konfliktu,True,True,True,False,False,True,False,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Experti a analytici,False,False,False,False,True,False,False,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Politici ze západních zemí,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,True,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,True,False,True,False,False
+2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,False,False,False,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Hlavní téma článku,single_choice,Globální reakce veřejnosti,Globální reakce veřejnosti,Globální reakce veřejnosti,Dílčí konflikty a střety,Dopad na civilisty a humanitární krize,Globální reakce veřejnosti,False,--WORST-CASE
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Geopolitický rámec,True,True,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Historicko-kulturní rámec,True,True,True,True,False,True,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Humanitární rámec,False,False,False,False,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Lokální rámec,False,False,False,True,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mediální rámce,Rámec konfliktu,True,False,False,True,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Experti a analytici,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Mezinárodní organizace,False,False,False,True,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Politici ze západních zemí,True,True,True,False,False,True,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Zpravodajské hodnoty,Blízkost proximity,True,False,False,False,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,False,True,False,False,False
+2023-11-07T09-27-00_2023WN311206.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,False,False,False,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Zpravodajské hodnoty,Negativita negativity,True,True,False,True,True,True,True,False
+2023-11-07T09-27-00_2023WN311206.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,False,True,False,True,False,False
+2023-11-09T14-32-00_2023WN313134.txt,Hlavní téma článku,single_choice,Jiné,Dopad na civilisty a humanitární krize,Jiné,Dílčí konflikty a střety,Dopad na civilisty a humanitární krize,Jiné,False,--WORST-CASE
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Geopolitický rámec,True,True,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Historicko-kulturní rámec,True,True,True,True,True,True,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Humanitární rámec,False,True,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Lokální rámec,False,False,False,False,True,False,False,False
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mediální rámce,Rámec konfliktu,True,True,False,True,True,True,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Experti a analytici,True,False,True,True,False,True,False,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Jiní,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,True,False,False,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Politici ze západních zemí,False,False,False,True,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,True,False,False,False
+2023-11-09T14-32-00_2023WN313134.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,True,True,True,True,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,True,True,True,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,False,False,True,False,False,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Zpravodajské hodnoty,Negativita negativity,True,False,True,True,True,True,True,False
+2023-11-09T14-32-00_2023WN313134.txt,Zpravodajské hodnoty,Personalizace personalization,True,True,False,True,False,True,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Hlavní téma článku,single_choice,Globální reakce veřejnosti,Globální reakce veřejnosti,Globální reakce veřejnosti,Dopad na civilisty a humanitární krize,Vojenské operace Izraele,Globální reakce veřejnosti,False,--WORST-CASE
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Geopolitický rámec,True,True,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Historicko-kulturní rámec,False,True,False,True,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Lokální rámec,False,False,False,True,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Rámec budování míru,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mediální rámce,Rámec konfliktu,True,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Experti a analytici,True,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Jiní,False,True,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Politici ze západních zemí,False,False,True,True,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,True,False,False,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,True,False,False,False,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Zpravodajské hodnoty,Blízkost proximity,True,True,True,False,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Zpravodajské hodnoty,Dopad impact,False,False,False,True,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,True,False,False,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Zpravodajské hodnoty,Negativita negativity,True,True,True,True,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,True,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Hlavní téma článku,single_choice,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Globální reakce veřejnosti,Mezinárodní politické reakce,Mezinárodní politické reakce,True,--WORST-CASE
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Geopolitický rámec,True,True,True,True,False,True,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Historicko-kulturní rámec,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Humanitární rámec,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Lokální rámec,False,True,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Rámec budování míru,False,False,True,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mediální rámce,Rámec konfliktu,True,False,True,True,True,True,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Experti a analytici,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Jiní,True,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Mezinárodní organizace,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Média a novináři,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Očití svědci a civilisté,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Politici z blízkovýchodních zemí,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Politici ze západních zemí,True,True,True,True,True,True,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Političtí představitelé Izraele,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Političtí představitelé Palestiny,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Představitelé teroristických skupin,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Vojenští představitelé Izraele,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Zástupci občanské společnosti,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Mluvčí,Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti,False,False,False,False,False,False,True,False
+2023-11-14T16-19-00_2023WN318180.txt,Zpravodajské hodnoty,Blízkost proximity,False,False,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Zpravodajské hodnoty,Dopad impact,True,True,False,False,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Zpravodajské hodnoty,Elitní osoby prominence,False,True,False,True,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Zpravodajské hodnoty,Negativita negativity,True,False,False,True,True,False,False,False
+2023-11-14T16-19-00_2023WN318180.txt,Zpravodajské hodnoty,Personalizace personalization,False,False,False,False,False,False,True,False

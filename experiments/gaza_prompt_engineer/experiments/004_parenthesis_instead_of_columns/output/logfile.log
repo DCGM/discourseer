@@ -1,0 +1,98 @@
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:run_discourseer.py:__init__: First prompt: You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {pr...
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 2.576000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.624000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 0.792000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 0.935000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.136000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.739000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.989000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.019000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 0.650000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.733000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.392000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 0.617000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.434000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 2.033000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:_base_client.py:_retry_request: Retrying request to /chat/completions in 1.743000 seconds
+INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_prompt_engineer/experiments/004_parenthesis_instead_of_columns/output/model_ratings.csv
+INFO:root:run_discourseer.py:__call__: Inter-rater reliability results summary:
+{
+  "overall": {
+    "fleiss_kappa": {
+      "best_case": 0.61244,
+      "with_model": 0.45618,
+      "worst_case": 0.39496,
+      "without_model": 0.54758
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.61197,
+      "with_model": 0.45606,
+      "worst_case": 0.39466,
+      "without_model": 0.54693
+    },
+    "gwet_ac1": {
+      "best_case": 0.83941,
+      "with_model": 0.76513,
+      "worst_case": 0.77547,
+      "without_model": 0.80711
+    },
+    "majority_agreement": 0.738
+  },
+  "mean_through_prompts": {
+    "fleiss_kappa": {
+      "best_case": 0.52239,
+      "with_model": 0.34598,
+      "worst_case": 0.26418,
+      "without_model": 0.44537
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.52302,
+      "with_model": 0.34822,
+      "worst_case": 0.26659,
+      "without_model": 0.44633
+    },
+    "gwet_ac1": {
+      "best_case": 0.65954,
+      "with_model": 0.50853,
+      "worst_case": 0.5026,
+      "without_model": 0.58989
+    },
+    "majority_agreement": 0.61625
+  }
+}
