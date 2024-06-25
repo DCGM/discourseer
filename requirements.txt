@@ -1,7 +1,7 @@
 openai
-argparse
 pydantic
 irrcac
 backoff
 numpy
+matplotlib
 pandas
