@@ -1,3 +1,4 @@
+.~lock.*
 .idea/
 
 test/test_topic_extractor/outputs/*

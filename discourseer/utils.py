@@ -19,6 +19,11 @@ def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):
         json.dump(model.model_dump(), f, ensure_ascii=False, indent=2)
 
 
+def dict_to_json_file(data: dict, file_path: str):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def json_file_to_pydantic(file_path: str, cls):
     if not issubclass(cls, pydantic.BaseModel):
         raise ValueError(f"Class {cls} is not a subclass of pydantic.BaseModel")
