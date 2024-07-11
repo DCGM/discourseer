@@ -68,6 +68,20 @@ class IRRResults(pydantic.BaseModel):
             results['mean_through_prompts'] = self.mean_through_prompts.model_dump()
         return results
 
+    def get_one_metric(self, metric: str) -> Dict:
+        if not hasattr(self.overall, metric):
+            return self.get_summary()
+
+        results = {'overall': self.overall.get_metric(metric)}
+        if self.mean_through_prompts is not None:
+            results['mean_through_prompts'] = self.mean_through_prompts.get_metric(metric)
+
+        results['prompts'] = {}
+        for key, result in self.prompts.items():
+            if result is not None:
+                results['prompts'][key] = result.get_metric(metric)
+        return results
+
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
         return json_file_to_pydantic(file, cls)
@@ -78,6 +92,15 @@ class IRRResult(pydantic.BaseModel):
     krippendorff_alpha: IRRVariants
     gwet_ac1: IRRVariants
     majority_agreement: Optional[float] = None
+
+    def get_metric(self, metric: str):
+        attr = getattr(self, metric, None)
+        if attr is None:
+            return None
+
+        if attr.with_model is None or attr.with_model == 0.0:
+            return attr.without_model
+        return attr.model_dump()
 
 
 class IRRVariants(pydantic.BaseModel):
@@ -153,6 +176,7 @@ class IRR:
 
         prompt_irr_results = {}
         for key in prompt_keys:
+            print(f"Calculating IRR for prompt {key}")
             df_prompt = df.xs(key, level='prompt_key')
             prompt_irr_results[key] = self.get_irr_result(df_prompt)
 
