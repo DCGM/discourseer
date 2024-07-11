@@ -3,6 +3,7 @@
 
 test/test_topic_extractor/outputs/*
 experiments/*/output_*/*
+!experiments/*/output_IRR/*
 experiments/*/*/output_*/*
 experiments/*/*/*/output_*/*
 experiments/tmp/*
