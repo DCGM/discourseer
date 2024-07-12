@@ -55,7 +55,7 @@
           "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích."
         },
         {
-          "name": "Dopad na izraelské civislity",
+          "name": "Dopad na izraelské civilisty",
           "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem."
         },
         {
@@ -107,7 +107,7 @@
           "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích."
         },
         {
-          "name": "Dopad na izraelské civislity",
+          "name": "Dopad na izraelské civilisty",
           "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem."
         },
         {
@@ -183,40 +183,36 @@
           "description": "Politici z jiných arabských nebo blízkovýchodních zemí, kteří mají zájem nebo účast v konfliktu, jako jsou ti z okolních arabských států nebo regionálních mocností."
         },
         {
-          "name": "Politici ze západních zemí",
-          "description": "Politici ze západních zemí, včetně Spojených států, členských států Evropské unie a dalších západních zemí, kteří se mohou zapojovat do diplomatických úsilí nebo mít zájmy v konfliktu."
+          "name": "Politici ze ostatních světových zemí",
+          "description": "Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina..."
         },
         {
-          "name": "Mezinárodní organizace",
-          "description": "Zástupci mezinárodních organizací zapojených do mírových operací, humanitární pomoci nebo diplomacie související s konfliktem, jako jsou Spojené národy, Evropská unie nebo Arabská liga."
+          "name": "Představitelé mezinárodních a neziskových organizací",
+          "description": "Například UN, UNRWA, Lékaři bez hranic, atp."
         },
         {
           "name": "Vojenští představitelé Izraele",
           "description": "Vojenští vůdci, velitelé nebo mluvčí z Izraelských obranných sil (IDF) nebo jiných izraelských bezpečnostních agentur zapojených do vojenských operací."
         },
         {
-          "name": "Představitelé teroristických skupin",
-          "description": "Zástupci nebo vůdci militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámská džihád nebo Hizballáh."
+          "name": "Členové teroristických skupin",
+          "description": "Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie."
         },
         {
-          "name": "Experti a analytici",
-          "description": "Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu."
+          "name": "Nezávislí experti a analytici",
+          "description": "Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země."
         },
         {
           "name": "Média a novináři",
           "description": "V textu jsou citovány informace převzaté z jiných médií (např. \"\"podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu média, informace poskytnuté anonymně atd.)"
         },
         {
-          "name": "Zástupci občanské společnosti",
-          "description": "Zástupci občanských sdružení, nevládních organizací, lidskoprávních skupin, náboženských institucí nebo skupin prosazujících mír, humanitární úsilí nebo aktivismus související s konfliktem."
+          "name": "Očití svědci a civilisté z Izraele",
+          "description": "Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi."
         },
         {
-          "name": "Očití svědci a civilisté",
-          "description": "Očití svědkové, přeživší, civilisté nebo obyvatelé přímo postižení konfliktem, poskytující svědectví, rozhovory nebo pohledy na události na místě."
-        },
-        {
-          "name": "Členové izraelské nebo palestinské diaspory v zahraničí a sympatizanti",
-          "description": "Členové izraelské nebo palestinské diaspory žijící v zahraničí, stejně jako sympatizanti nebo aktivisté mimo region, kteří podporují nebo odsuzují určité postoje v souvislosti s konfliktem."
+          "name": "Očití svědci a civilisté z Palestiny",
+          "description": "Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci"
         },
         {
           "name": "Jiní",
