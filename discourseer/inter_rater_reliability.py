@@ -1,5 +1,7 @@
 from __future__ import annotations
 import logging
+import os
+
 import pydantic
 from typing import Optional, Dict
 
@@ -9,7 +11,7 @@ from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
 from discourseer.extraction_prompts import ExtractionPrompts, single_choice_tag
-from discourseer.utils import json_file_to_pydantic
+from discourseer import utils
 
 logger = logging.getLogger()
 
@@ -84,7 +86,7 @@ class IRRResults(pydantic.BaseModel):
 
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
-        return json_file_to_pydantic(file, cls)
+        return utils.json_file_to_pydantic(file, cls)
 
 
 class IRRResult(pydantic.BaseModel):
@@ -128,16 +130,26 @@ class IRR:
     col_best_case = col_majority
     index_cols = ['file', 'prompt_key', 'rating']
 
-    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None, out_file: str = None):
+    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None,
+                 out_file: str = None, calculate_irr_for_options: bool = False):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
         self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
+        self.calculate_irr_for_options = calculate_irr_for_options
         self.out_file = out_file
+        self.out_dir = os.path.dirname(out_file)
+        os.makedirs(self.out_dir, exist_ok=True)
+
+        if self.calculate_irr_for_options:
+            self.out_prompts_and_options_dir = os.path.join(self.out_dir, 'prompt_and_option_results')
+            os.makedirs(self.out_prompts_and_options_dir, exist_ok=True)
 
         self.input_columns = []
         self.model_columns = []
+
+        self.option_results = {}
 
         self.df = pd.DataFrame()
         self.results: IRRResults = self.get_inter_rater_reliability()
@@ -175,10 +187,23 @@ class IRR:
         overall_results = self.get_irr_result(df)
 
         prompt_irr_results = {}
-        for key in prompt_keys:
-            print(f"Calculating IRR for prompt {key}")
-            df_prompt = df.xs(key, level='prompt_key')
-            prompt_irr_results[key] = self.get_irr_result(df_prompt)
+        for prompt_key in prompt_keys:
+            print(f"Calculating IRR for prompt {prompt_key}")
+            df_prompt = df.xs(prompt_key, level='prompt_key')
+            # save df_prompt to csv
+            df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
+                                                 f"dataframe__{prompt_key.replace(' ', '_')}")
+            if self.calculate_irr_for_options:
+                df_prompt.to_csv(df_prompt_output_file + '.csv')
+            prompt_irr_results[prompt_key] = self.get_irr_result(df_prompt)
+
+            if self.calculate_irr_for_options:
+                self.calculate_irr_for_each_option(df_prompt, prompt_key, df_prompt_output_file)
+
+        if self.calculate_irr_for_options:
+            utils.dict_to_json_file(
+                self.option_results,
+                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.json"))
 
         irr_results = IRRResults(
             overall=overall_results,
@@ -296,6 +321,34 @@ class IRR:
 
     def get_reorganized_raters(self) -> pd.DataFrame:
         return self.df.loc[:, self.input_columns]
+
+    def calculate_irr_for_each_option(self, df: pd.DataFrame, prompt_key: str, out_file: str):
+        df.reset_index(inplace=True)
+        unique_options = df['rating'].unique().tolist()
+
+        if len(unique_options) < 2:
+            return
+
+        # get index_cols without 'prompt_key'
+        index_cols_without_prompt = self.index_cols.copy()
+        index_cols_without_prompt.remove('prompt_key')
+
+        df.set_index(index_cols_without_prompt, inplace=True)
+        self.option_results[prompt_key] = {}
+
+        # calculate IRR for each option
+        for option in unique_options:
+            df_option = df.xs(option, level='rating')
+            if df_option.shape[0] == 0:
+                logger.debug(f"No ratings for option {option} in prompt {prompt_key}. Skipping IRR calculation.")
+                continue
+
+            out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
+            df_option.to_csv(out_file_option)
+            option_irr_kripp = self.get_irr_result(df_option).krippendorff_alpha.without_model
+            self.option_results[prompt_key][option] = option_irr_kripp
+
+        return
 
     @staticmethod
     def calc_fleiss_kappa(cac_without_model: CAC, cac_with_model: CAC = None, cac_worst_case: CAC = None,
