@@ -4,6 +4,11 @@
 EXPERIMENT_DIR_BASE=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 rm -f $EXPERIMENT_DIR_BASE/out.csv
 
+# if $DISCOURSEER variable is not set, default to current directory
+if [ -z $DISCOURSEER ]; then
+    DISCOURSEER="./"
+fi
+
 # DIRS=`ls -d $EXPERIMENT_DIR/*/`
 for EXPERIMENT_DIR in `ls -d $EXPERIMENT_DIR_BASE/experiments/*/`; do  # 001/  002_delete_JSON_answer_template/  003_whole_prompt_info/  004_parenthesis_instead_of_columns/  005/ ; do
     echo ""
@@ -24,7 +29,7 @@ for EXPERIMENT_DIR in `ls -d $EXPERIMENT_DIR_BASE/experiments/*/`; do  # 001/  0
     rm -rf $OUTPUT_DIR
 
     # ---------------------------  RUNNING EXPERIMENT  ---------------------------
-    python run_discourseer.py \
+    python $DISCOURSEER/run_discourseer.py \
         --experiment-dir $EXPERIMENT_DIR \
         --prompt-schema-definition $EXPERIMENT_DIR/prompt_schema_definition.json \
         --prompt-definitions $EXPERIMENT_DIR/prompt_definitions.json \
