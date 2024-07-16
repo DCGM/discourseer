@@ -131,15 +131,15 @@ class IRR:
     index_cols = ['file', 'prompt_key', 'rating']
 
     def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None,
-                 out_file: str = None, calculate_irr_for_options: bool = False):
+                 out_dir: str = 'IRR_output', calculate_irr_for_options: bool = False):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
         self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
-        self.out_file = out_file
-        self.out_dir = os.path.dirname(out_file)
+        self.out_dir = out_dir
+        self.out_dataframe = os.path.join(self.out_dir, 'dataframe.csv')
         os.makedirs(self.out_dir, exist_ok=True)
 
         if self.calculate_irr_for_options:
@@ -170,8 +170,8 @@ class IRR:
 
         if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
-            logging.debug(f"Data before cleaning (see whole dataframe in {self.out_file}):\n{df_before_cleaning}")
-            df_before_cleaning.to_csv(self.out_file)
+            logging.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
+            df_before_cleaning.to_csv(self.out_dataframe)
             return IRR.EMPTY_IRR_RESULTS
 
         self.input_columns = df.columns.difference([self.col_model]).to_list()
@@ -181,8 +181,8 @@ class IRR:
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
 
-        logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_file}):\n{df}')
-        df.to_csv(self.out_file)
+        logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
+        df.to_csv(self.out_dataframe)
 
         overall_results = self.get_irr_result(df)
 
@@ -190,14 +190,13 @@ class IRR:
         for prompt_key in prompt_keys:
             print(f"Calculating IRR for prompt {prompt_key}")
             df_prompt = df.xs(prompt_key, level='prompt_key')
-            # save df_prompt to csv
-            df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
-                                                 f"dataframe__{prompt_key.replace(' ', '_')}")
-            if self.calculate_irr_for_options:
-                df_prompt.to_csv(df_prompt_output_file + '.csv')
             prompt_irr_results[prompt_key] = self.get_irr_result(df_prompt)
 
+            # save df_prompt to csv
             if self.calculate_irr_for_options:
+                df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
+                                                     f"dataframe__{prompt_key.replace(' ', '_')}")
+                df_prompt.to_csv(df_prompt_output_file + '.csv')
                 self.calculate_irr_for_each_option(df_prompt, prompt_key, df_prompt_output_file)
 
         if self.calculate_irr_for_options:
