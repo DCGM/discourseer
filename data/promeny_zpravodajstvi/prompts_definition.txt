@@ -1,0 +1,181 @@
+kriterium: Kritéria pro zařazení článku do analýzy - 1-3
+0. vyhovující = Článek nesplňuje ani jedno z ostatních kritérié a může se použít.
+1. nezpravodajský = nejedná se o zpravodajský článek (názorové články, zpravodajský rozhovor/anketa)
+2. krátký = Článek není delší než jeden odstavec (jednosloupek/jedňák)
+3. zahraniční = Článek nebyl publikován v rubrice s domácím zpravodajství (ovšem s vyjmou tematicky zaměřených rubrik - např. Ekonomika/trh, Kultura apod.) nebo na titulní straně a v takovém případě se nesmí týkat vnitrostátního politického dění NEBO událostí a situací, které se neodehrávají nebo neexistují v rámci jedné konkrétní země - ČR.
+
+odstavce: Počet odstavců - počet
+Uveď rozsah článku vyjádřený počtem odstavců. Započítáváme i „úvodní“ odstavec, pokud je grafický odlišen od ostatních A nejedná se o shrnutí celého článku („abstrakt“).
+
+hard_news - binary
+Je tématem článku mimořádná nebo aktuální událost velkého významu NEBO závažné problémy NEBO významná narušení každodenního života, jako jsou např. zemětřesení nebo letecká katastrofa NEBO událost zahrnující vrcholové politické představitele NEBO zpráva obsahuje komponentu veřejné politiky? A která se odehrála v posledních 24 hod. * Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. 
+0 = Ne 
+1 = Ano
+
+politicka_zprava - binary
+Je hlavním tématem článku jednání, působení alespoň jednoho politického aktéra nebo politické instituce (na regionální, národní nebo mezinárodní úrovni) NEBO nebo následky jednání (např. dopad legislativy).
+TAKÉ témata týkající se soukromého života těchto aktérů.
+Političtí aktéři jsou pouze následující entity: politické strany a jejich členové, politici, politické instituce a jejich činitelé. Politické instituce na národní úrovni jsou: stát, prezident ČR, senát, poslanecká sněmovna, vláda, zastupitelstva, starostové, hejtmani. 
+Pokud se zpráva týká politického působení v minulosti aktuálně soukromé osoby (např. podezření z korupce v době výkonu politické funkce), týká se politického aktéra. 
+0 = Ne 
+1 = Ano 
+
+soukromy_ramec - binary
+Je tématem článku soukromý život politického aktéra, např. rozvod, rodina, dopravní nehoda, kterou způsobil apod. ?
+0 = Ne 
+1 = Ano 
+
+strategicke: Strategické zarámování - binary
+Klade článek důraz na něco z následujícího: a) optika zisků a ztrát (v kontextu soutěže politických stran a jejích členů); b) výkonnost a styl vystupování politických aktérů; c) politické strategie a taktizování (např. za účelem získání podpory elektorátu, politického pozice, převahy ve sněmovně, nebo aby prošel nějaký zákon); d) jak si vedou politické strany v průzkumech; e) v jazykové rovině: metaforika války a zápasů? Kladením důrazu se zde myslí, že daný aspekt není zastoupen pouze marginálně.
+0 = Ne 
+1 = Ano 
+
+vecne: Věcné informování o veřejných politikách - binary
+Jsou hlavním tématem článku záležitosti veřejných politik (angl. policy, personální záležitosti nejsou policies) A ZÁROVEŇ PLATÍ, NĚCO Z NÁSLEDUJÍCÍHO: a) článek obsahuje popis podstaty/náplni legislativy a legislativních návrhů nebo jiných vládních programů; b) článek uvádí postoje nebo prohlášení politiků týkající se veřejných politik; c) článek tematizuje implikace nebo dopady legislativy nebo legislativních návrhů pro veřejnost? *Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti.
+0 = Ne 
+1 = Ano
+
+funkce: Hlavní žurnalistická funkce článku - 1-4
+Identifikuj hlavní žurnalistickou funkci zprávy. Funkce, které jsou uvedené níže, jsou seřazené dle míry přítomnosti „hlasu novináře“. Pro celý článek zvol nejvyšší zastoupenou kategorii, například pokud článek informoval o aktuálních faktech a zároveň vysvětloval jejich význam pro občany, kóduj 3. Postupuj následovně: Než určíš hlavní funkci celé zprávy, identifikuj postupně žurnalistickou funkci každého ODSTAVCE a zamysli se, zda článek naplňuje danou funkci VE VZTAHU K TÉMATU/UDÁLOSTI/PROBLÉMU, O KTERÉM POJEDNÁVÁ. 
+1 (aktuální fakta a události) = Informuje o aktuálních faktech a událostech. Obsahuje pouze empirická a skutková tvrzení, případně reprodukuje či shrnuje výpovědi/stanoviska politických aktérů. Novináři nepoužívají přídavná jména či přívlastky ani příslovce vyjadřující subjektivní hodnocení nebo normativní soudy.
+2 (kontextuální informace) = Poskytuje kontextuální informace o pozadí události. Kontextuální informaci lze identifikovat na základě časového rozdílu vůči události, která je tématem článku. Může být také odkaz na existující zákony, zvyklosti, pravidla, které rámují situaci. Mělo by jít min. o celý odstavec. 
+3 (interpretace) = Analyzuje nebo obsahuje interpretaci. Analýzou a interpretací se zde rozumí druh empirických tvrzení, jehož obsahem není popis aktuálních fakt, okolností nebo historického kontextu, nýbrž jejich vysvětlení, úvaha o jejich významu/významnosti, následcích, příčinách nebo motivacích aktérů. Analýza/interpretace by měla pocházet od autora zprávy nebo od experta. Její předmětem musí být hlavní téma/událost/problém popisovaný ve zprávě. Také investigace, odhalování a konfrontování (angl. questioning). 
+4 (názory) = Vyjádření názorů. Zde se názorem myslí subjektivní hodnotící soud, ve smyslu hodnocení na škálách - negativní - pozitivní a žádoucí - nežádoucí. Musí být vysloven autorem zprávy (tedy NE citované a parafrázované výpovědi zdroje). Někdy bývá přítomný pouze v titulku, který nabízí interpretační rámec pro informace a tvrzení či implikace obsažené  v článku. Také zpochybňování zásadnosti, kritika. Předmětem hodnocení musí být hlavní téma/událost/problém popisovaný ve zprávě.
+
+vyvazenost: Rozmanitost zdrojů a úhlů pohledu: 1-3
+Vycházíme z předpokladu, že zdroje s přístupem do zprávy přináší pohledy/stanoviska k danému problému/tématu. Představuje zpráva různé zdroje a různé pohledy/stanoviska zdrojů na konkrétní problém?
+1 (absence zdrojů a úhlů pohledu) = Absence zdrojů a úhlů pohledu. Téma zprávy nezahrnuje zdroje.
+2 (jednostrannost) = Jednostranné pokrytí. Zpráva obsahuje pouze jeden zdroj nebo pouze zdroje a pohledy z jedné strany.
+3 (různé úhly pohledu)= Přítomnost různých (ne nutně protikladných) úhlů pohledu v příběhu. Zpráva obsahuje různé zdroje a úhly pohledu.
+
+protichudna_hlediska: Prezentace protichůdných hledisek - binary
+0 = Ne
+1 = Ano  
+
+odborny_zdroj: Použití odborných zdrojů - binary
+Odborný zdroj je nestranná  osoba s patřičnou expertizou, typicky expert, může být i studie. Politici a zájmové skupiny ne, i když půjde o osoby s patřičnou expertizou či vzděláním. Odkaz na výzkum není postačující - viz rozdíl mezi článkem na základě výzkumné zprávy a článkem, kde se navíc použije výpovědi výzkumníků.
+0 = Ne
+1 = Ano  
+
+citace_a_prafráze: Použití citací a parafrází  - binary
+0 = Ne
+1 = Ano  
+
+pyramida: Obracená pyramida - binary
+Obracená pyramida - nejdříve tvrdá fakta  - nejdříve nejdůležitější informace - odpovědi na novinářské otázky kdo, co, kdy, kde pak rozšiřující informace a výpovědi aktérů, pak kontextuální informace a další souvislosti. 
+0 = Ne
+1 = Ano  
+
+fakta_a_nazory: Oddělení fakt od názorů. - binary
+Oddělení fakt od názorů. Fakta jsou skutková tvrzení a reprodukce výpovědi zdrojů s přístupem do zpráv. Také, pokud novinář interpretuje/analyzuje např. ve smyslu pojmenování kauzálního vztahu (příčin, následků) nebo např. významnost události A vychází z faktů nebo objektivních indikátorů uvedených v článku. - např. označí demonstraci za „velkou“ na základě uvedených údajů o počtu demonstrujících - nekódujeme ANO. Pokud usuzuje na základě nepodložených údajů a fakt, kódujeme NE. NÁZOR je subjektivní, nemůže být ověřen. Obvykle ve smyslu hodnocení na škálách negativní - pozitivní a žádoucí - nežádoucí. 
+0 = Ne
+1 = Ano  
+
+negativni_vyzneni Negativita - binary
+Negativní vyznění je CELKOVÉ vyznění zprávy (bez ohledu na povahu události) pesimistické? Celkové vyznění obvykle vzniká souhrnným vyzněním výroků zdrojů s přístupem do zpráv, případně také tvůrců zprávy (např. způsob formulace titulku), nikoli na základě ojedinělého výroku. Negativní vyznění je indikované ZARÁMOVÁNÍM události jedním z následujících způsobů: politické selhání, fiasko, katastrofa, krize, frustrace, kolaps, propadák, odmítnutí, zanedbání, selhání, zhoršení, rezignovanost, skepse, defétismus nebo zklamání, existence hrozby. Negativní vyznění se liší od ostatních kategorií negativity (konflikt, nekompetence, skandál) tím, že KVALITA NEGATIVITY není spojovaná s konkrétním aktérem (např. politická strana) - tedy např. nejedná se o politické selhání konkrétního politika - ale pokud článek pojednává o neúspěšném politickém summitu, kde se politici na ničím nedohodli, tak ANO. Také představa negativního vývoje politické situace (bez ohledu na to, zda realistická, možná, pravděpodobná) - PŘEVLÁDAJÍ negativní výhledy a scénáře, skeptické názory, negativní očekávání nebo potenciální hrozby. 
+0 = Ne
+1 = Ano 
+
+konflikt - binary
+Článek SE ZAMĚŘUJE NA/VYZDVIHUJE konfliktní povahu události - konflikt není tedy výhradně charakteristikou události, ale také rysem konkrétního způsobu vyprávění o události. Buď POLITICKÝ konflikt, spor, neshoda, střet stanovisek a názorů, vzájemných útoků, anebo konflikt mezi politickými aktéry, případně politickými aktéry a jinými aktéry. Musí být zřejmé přinejmenším dvě strany konfliktu. Z hlediska vývoje konfliktu se může se jednat o pokus o, zahájení, průběh nebo ukončení konfliktu.
+0 = Ne
+1 = Ano 
+
+nekompetence: Politická nekompetence - binary
+Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE selhání/neschopnost/nekompetenci politických aktérů. Přináší především (nejedná se o marginální zmínku) informace o kritice, útocích, obviněních z nesprávného jednání, moralizujících obvinění, obvinění z protizákonného jednání, obvinění z neschopnosti nebo nekompetence. Na rozdíl od negativního vyznění ukazuje na konkrétního aktéra coby zdroj selhání apod. Na rozdíl od konfliktu je kritika jednosměrná/jednostranná. 
+0 = Ne
+1 = Ano 
+
+skandal: Politický skandál - binary
+Politický skandál. Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná.
+0 = Ne
+1 = Ano 
+
+dopad: Dopad na každodenní život - binary
+Dopad na každodenní život. Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd.	
+0 = Ne
+1 = Ano 
+
+rady: Tipy a rady k obtěžujícím okolnostem - binary
+Tipy a rady (k obtěžujícím okolnostem). Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí?
+Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.
+0 = Ne
+1 = Ano 
+
+problemy: Tipy a rady pro problémy jedince - binary
+Poskytuje článek tipy, varování nebo praktické rady k řešení problémů, se kterými by se čtenáři mohli potenciálně potýkat v každodenním životě? Například, jak cvičit, jak dobře jíst a čeho se vyvarovat abyste zůstali zdraví, jak chytře nakupovat a ušetřit peníze, jak investovat a zajistit si úspory a bezpečný důchod atd.? Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.
+0 = Ne
+1 = Ano 
+
+informace: Informace/rady pro spotřebitele - binary
+Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný.
+0 = Ne
+1 = Ano 
+
+personalizace: Personalizace - binary
+Poskytuje článek konkrétní informace týkající se jedné nebo vícera osob a jejich různých intelektuálních, fyzických, mentálních, sociálních charakteristik (tj. dovednosti, vzhled, schopnosti) nebo osobního zázemí (kde pracovali, studovali, jejich jméno, rodinný stav, atd.)? Pouhé uvedení jména a/nebo pozice osoby, případně fotografie zobrazující osobu k zařazení do této kategorie nestačí. Zpráva, která obsahuje více fotografií stejné osoby, ANO.
+0 = Ne
+1 = Ano
+
+soukromy_zivot: Soukromý život - binary
+Pojednává zpráva o soukromém životu jednoho nebo více jednotlivců? Soukromý život zahrnuje ty aspekty života člověka, které neodpovídají oblastem veřejného zájmu a/nebo nepatří do kontextu veřejné sféry a které lidé obvykle preferují udržovat ve své osobní sféře. Mezi příklady patří článek o tom, jakým je otcem prezident země, nebo o mládí a minulosti slavného podnikatele. Další příklady by se mohly týkat mimo jiné koníčků, záležitostí milostného života, minulosti nebo dovolené. Pokud se zpráva obecně zmiňuje o rodině osoby ve veřejném kontextu (například „muž obviněný z vraždy se zúčastnil soudu se svou manželkou“ nebo „prezident složil přísahu 15. května v doprovodu svých dětí “), nemělo by to být považováno za soukromý život. Pokud se ale zpráva zmiňuje o rodině osoby v soukromém kontextu (například snímek pořízený paparazzi, na kterém je sportovní postava na dovolené o samotě nebo s manželkou, manželem, dětmi, milencem atd., nebo zprávy týkající se osobního života rodiny někoho, by měly být považovány za soukromý život). 
+0 = Ne
+1 = Ano 
+
+senzacnost: Senzačnost - binary
+Zahrnuje zpráva použití stylových prvků nebo způsobů popisu, které zdůrazňují/vyzdvihují neobvyklý, mimořádný nebo velkolepý charakter události? Prostředky konstrukce senzačnosti mohou být  metafory, nadsázka, použití dramatizujících superlativních přídavných jmen nebo narativní postupy zvyšující napětí. Grafické prostředky: použití zkreslených nebo falešných obrazů nebo například použití přehnaných obrazů. Rozdíl oproti obyčejnému popisu je ilustrován následujícími příklady: „barbarský zločin“ by měl být kódován jako senzacechtivý, zatímco „barevný ceremoniál“ nebo „distingovaný prezident“ nikoli.
+0 = Ne
+1 = Ano 
+
+emoce: Emoce - binary
+Obsahuje zpráva explicitní zmínky o pocitech nebo emocích? Prvky obvykle zahrnuté v této kategorii jsou obecné popisy různých emocí a autorova vlastního emočního stavu, jako je mimo jiné úzkost, vztek, smutek, sebejistota, rozpaky, radost, znechucení, strach a euforie. Zmiňuje zpráva explicitně nebo zahrnuje pocity nebo emoce prostřednictvím textových, nebo obrazových prvků? Odborná literatura definuje šest základních emocí: hněv, znechucení, strach, štěstí, smutek a překvapení. Ve zprávách mohou být emoce přítomné tak, že novinář popisuje emoční stav lidí a/nebo předkládá obrazy, které zobrazují lidi v takových emočních stavech. Obrazy mohou často zobrazovat emoce, které prožívají jednotlivci, o nichž zpráva pojednává. Mezi typické obrazy v této kategorii patří lidé, kteří pláčou, křičí, vyjadřují hněv nebo zoufalství, řvou smíchy atd. Na fotografiích přítomnost emocí indikuje teprve střední až vysoká úroveň exprese, takže například prostý úsměv nižší intenzity by se jako emoce nepočítal.
+0 = Ne
+1 = Ano 
+
+morbidnost: Morbidnost - binary
+Usiluje zpráva získat pozornost publika prostřednictvím textových nebo obrazových prvků, které popisují nebo zobrazují násilné činy, zločin, extrémní chudobu nebo sexuální scény/skandál, s uvedením konkrétních podrobností? Tyto prvky se musí nacházet v titulku, leadu na fotografii nebo jiných exponovaných místech v článku (získávání pozornosti), určitě se nejedná o marginální přítomnost. Pojem morbidita může být v různých kulturách vnímán a interpretován různě. Měli byste to používat tak, jak by se to považovalo ve vaší kultuře.
+0 = Ne
+1 = Ano 
+
+reakce: Reakce občanů - binary
+Zahrnuje zpráva postoje/reakce běžných občanů nebo organizovaných skupin občanů (včetně profesních) na téma nebo událost, tím že ukazuje, jak vnímají veřejné záležitosti a politická rozhodnutí nebo jak se snaží tato rozhodnutí ovlivňovat? Mohou být zahrnuty citované výpovědi občanů nebo odkazy na ně. 			
+0= Ne
+1= Ano
+
+pozadavky: Požadavky  občanů - binary
+Obsahuje zprava požadavky běžných občanů nebo občanů organizovaných do skupin, nebo jimi formulované návrhy týkající se různých veřejných záležitostí a politických rozhodnutí? Požadavky občanů mohou být zahrnuté prostřednictvím přímých nebo nepřímých citací nebo odkazů na ně, může se také jednat o uvedení důvodů pro demonstraci.
+0 = Ne
+1 = Ano
+
+validace: Validace občanských požadavků -  binary
+Validace občanských požadavků. Obsahuje zpráva informace jako jsou vlastní prohlášení novináře, názor jiného zdroje nebo odkaz k důkazům, které validují to, co občané tvrdí nebo co požadují? Validace se může také projevit tím, že ve zprávě nebudou uvedené názory nebo fakta, které problematizují nebo zpochybňují požadavky občanů.
+0 = Ne 
+1 = Ano
+
+lokalni_dopad: Lokální dopad - binary
+Lokální dopad zmiňuje zpráva nebo zobrazuje dopad určitých politických rozhodnutí na poměry v daném prostředí. Geograficky definované společnosti mohou mimo jiné zahrnovat města, oblasti, obce apod. 
+0 = Ne 
+1 = Ano
+
+vzdelavani: Vzdělávání o povinnostech a právech - binary
+Vzdělávání o povinnostech a právech. Informuje zpráva lidi o jejich občanských povinnostech a právech (ekonomických, sociálních a/nebo politických)? Například, když vláda poskytuje dotaci a zpráva informuje, kam jít, nebo jak vysvětlit neúčast voličů. 
+0 = Ne 
+1 = Ano
+
+kontext: Informace o kontextu a pozadí. - binary
+Informace o kontextu a pozadí. Poskytuje zprava informace o politickém, ekonomickém nebo společenským kontextu, které umožňují občanům informované ROZHODOVÁNÍ A PARTICIPACI (účastnit se voleb a volit, sdružovat se v rámci politických stran a podporovat je, účastnit se demonstrací; podpořit politický protest, stávku; pochopit, jak mohou být jejich komunity ovlivněny politickým rozhodnutími atd. - přidat formování politických postojů?)? Informace o kontextu a pozadí události lze odlišit od informací o aktuálních událostech. Zahrnuje více specifičnosti, pokud jde o poskytované informace, a tak poskytuje podstatný politický, ekonomický nebo společenské souvislosti k událostem, o kterých zpráva pojednává. Zahrnuje zdroje, které vysvětlují stanoviska nebo rozhodnutí politických aktérů (např. jak se dříve chovali), důvodů demonstrací nebo cílů skupin občanů atd.
+0 = Ne 
+1 = Ano
+
+dotazy: Dotazy od občanů - binary
+Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně. 
+0 = Ne 
+1 = Ano
+
+podpora: Podpora občanských hnutí - binary
+Obsahuje zpráva informace, jako jsou vlastní prohlášení novináře, názor zdrojů nebo odkaz na důkazy, které podporují cíle občanského sdružení nebo hnutí, a/nebo staví organizaci jako pozitivní příklad k následování?
+0 = Ne
+1 = Ano
+
+
+
