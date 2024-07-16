@@ -87,18 +87,17 @@ Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE selhání/neschopnost/nekompetenci politick�
 1 = Ano 
 
 skandal: Politický skandál - binary
-Politický skandál. Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná.
+Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná.
 0 = Ne
 1 = Ano 
 
 dopad: Dopad na každodenní život - binary
-Dopad na každodenní život. Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd.	
+Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd.	
 0 = Ne
 1 = Ano 
 
 rady: Tipy a rady k obtěžujícím okolnostem - binary
-Tipy a rady (k obtěžujícím okolnostem). Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí?
-Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.
+Tipy a rady (k obtěžujícím okolnostem). Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.
 0 = Ne
 1 = Ano 
 
@@ -176,6 +175,3 @@ podpora: Podpora občanských hnutí - binary
 Obsahuje zpráva informace, jako jsou vlastní prohlášení novináře, názor zdrojů nebo odkaz na důkazy, které podporují cíle občanského sdružení nebo hnutí, a/nebo staví organizaci jako pozitivní příklad k následování?
 0 = Ne
 1 = Ano
-
-
-

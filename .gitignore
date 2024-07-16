@@ -1,5 +1,10 @@
+# Ignore local files
+local/*
+
+# LibreOffice lock files
 .~lock.*
 
+# PyCharm files
 .idea/
 
 test/test_topic_extractor/outputs/*
