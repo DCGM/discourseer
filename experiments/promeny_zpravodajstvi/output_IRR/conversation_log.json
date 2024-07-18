@@ -1,0 +1,1261 @@
+{
+  "model": "gpt-3.5-turbo-0125",
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.0,
+  "response_format": "json",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {prompt_names_and_descriptions_colon}. For every question pick only options from these lists.\n{prompt_options}\n\nYou will pick one option for these questions: {single_choice_prompts}. You will pick one or more options for these prompts: {multiple_choice_prompts}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": "{response_json_schema_with_options}"
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    },
+    {
+      "role": "assistant",
+      "content": "This is the end of task definition. The conversation follows."
+    },
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. kritérium: Kritéria pro zařazení článku do analýzy Počet odstavců: Uveď rozsah článku vyjádřený počtem odstavců. Započítáváme i „úvodní“ odstavec, pokud je grafický odlišen od ostatních A nejedná se o shrnutí celého článku („abstrakt“). Mimořádná nebo aktuální událost velkého významu: Je tématem článku mimořádná nebo aktuální událost velkého významu NEBO závažné problémy NEBO významná narušení každodenního života, jako jsou např. zemětřesení nebo letecká katastrofa NEBO událost zahrnující vrcholové politické představitele NEBO zpráva obsahuje komponentu veřejné politiky? A která se odehrála v posledních 24 hod. * Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Politická zpráva: Je hlavním tématem článku jednání, působení alespoň jednoho politického aktéra nebo politické instituce (na regionální, národní nebo mezinárodní úrovni) NEBO nebo následky jednání (např. dopad legislativy). TAKÉ témata týkající se soukromého života těchto aktérů. Političtí aktéři jsou pouze následující entity: politické strany a jejich členové, politici, politické instituce a jejich činitelé. Politické instituce na národní úrovni jsou: stát, prezident ČR, senát, poslanecká sněmovna, vláda, zastupitelstva, starostové, hejtmani. Soukromý rámec: Je tématem článku soukromý život politického aktéra, např. rozvod, rodina, dopravní nehoda, kterou způsobil apod. ? Strategické zarámování: Klade článek důraz na něco z následujícího: a) optika zisků a ztrát (v kontextu soutěže politických stran a jejích členů); b) výkonnost a styl vystupování politických aktérů; c) politické strategie a taktizování (např. za účelem získání podpory elektorátu, politického pozice, převahy ve sněmovně, nebo aby prošel nějaký zákon); d) jak si vedou politické strany v průzkumech; e) v jazykové rovině: metaforika války a zápasů? Kladením důrazu se zde myslí, že daný aspekt není zastoupen pouze marginálně. Věcné informování o veřejných politikách: Jsou hlavním tématem článku záležitosti veřejných politik (angl. policy, personální záležitosti nejsou policies) A ZÁROVEŇ PLATÍ, NĚCO Z NÁSLEDUJÍCÍHO: a) článek obsahuje popis podstaty/náplni legislativy a legislativních návrhů nebo jiných vládních programů; b) článek uvádí postoje nebo prohlášení politiků týkající se veřejných politik; c) článek tematizuje implikace nebo dopady legislativy nebo legislativních návrhů pro veřejnost? *Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Hlavní žurnalistická funkce článku: Identifikuj hlavní žurnalistickou funkci zprávy. Funkce, které jsou uvedené níže, jsou seřazené dle míry přítomnosti „hlasu novináře“. Pro celý článek zvol nejvyšší zastoupenou kategorii, například pokud článek informoval o aktuálních faktech a zároveň vysvětloval jejich význam pro občany, kóduj 3. Postupuj následovně: Než určíš hlavní funkci celé zprávy, identifikuj postupně žurnalistickou funkci každého ODSTAVCE a zamysli se, zda článek naplňuje danou funkci VE VZTAHU K TÉMATU/UDÁLOSTI/PROBLÉMU, O KTERÉM POJEDNÁVÁ. Rozmanitost zdrojů a úhlů pohledu: Vycházíme z předpokladu, že zdroje s přístupem do zprávy přináší pohledy/stanoviska k danému problému/tématu. Představuje zpráva různé zdroje a různé pohledy/stanoviska zdrojů na konkrétní problém? Prezentace protichůdných hledisek: Prezentace protichůdných hledisek Použití odborných zdrojů: Odborný zdroj je nestranná  osoba s patřičnou expertizou, typicky expert, může být i studie. Politici a zájmové skupiny ne, i když půjde o osoby s patřičnou expertizou či vzděláním. Odkaz na výzkum není postačující - viz rozdíl mezi článkem na základě výzkumné zprávy a článkem, kde se navíc použije výpovědi výzkumníků. Použití citací a parafrází: Použití citací a parafrází Obracená pyramida: Obracená pyramida - nejdříve tvrdá fakta  - nejdříve nejdůležitější informace - odpovědi na novinářské otázky kdo, co, kdy, kde pak rozšiřující informace a výpovědi aktérů, pak kontextuální informace a další souvislosti. Oddělení fakt od názorů: Oddělení fakt od názorů. Fakta jsou skutková tvrzení a reprodukce výpovědi zdrojů s přístupem do zpráv. Také, pokud novinář interpretuje/analyzuje např. ve smyslu pojmenování kauzálního vztahu (příčin, následků) nebo např. významnost události A vychází z faktů nebo objektivních indikátorů uvedených v článku. - např. označí demonstraci za „velkou“ na základě uvedených údajů o počtu demonstrujících - nekódujeme ANO. Pokud usuzuje na základě nepodložených údajů a fakt, kódujeme NE. NÁZOR je subjektivní, nemůže být ověřen. Obvykle ve smyslu hodnocení na škálách negativní - pozitivní a žádoucí - nežádoucí. Negativita: Negativní vyznění je CELKOVÉ vyznění zprávy (bez ohledu na povahu události) pesimistické? Celkové vyznění obvykle vzniká souhrnným vyzněním výroků zdrojů s přístupem do zpráv, případně také tvůrců zprávy (např. způsob formulace titulku), nikoli na základě ojedinělého výroku. Negativní vyznění je indikované ZARÁMOVÁNÍM události jedním z následujících způsobů: politické selhání, fiasko, katastrofa, krize, frustrace, kolaps, propadák, odmítnutí, zanedbání, selhání, zhoršení, rezignovanost, skepse, defétismus nebo zklamání, existence hrozby. Negativní vyznění se liší od ostatních kategorií negativity (konflikt, nekompetence, skandál) tím, že KVALITA NEGATIVITY není spojovaná s konkrétním aktérem (např. politická strana) - tedy např. nejedná se o politické selhání konkrétního politika - ale pokud článek pojednává o neúspěšném politickém summitu, kde se politici na ničím nedohodli, tak ANO. Také představa negativního vývoje politické situace (bez ohledu na to, zda realistická, možná, pravděpodobná) - PŘEVLÁDAJÍ negativní výhledy a scénáře, skeptické názory, negativní očekávání nebo potenciální hrozby. Konflikt: Článek SE ZAMĚŘUJE NA/VYZDVIHUJE konfliktní povahu události - konflikt není tedy výhradně charakteristikou události, ale také rysem konkrétního způsobu vyprávění o události. Buď POLITICKÝ konflikt, spor, neshoda, střet stanovisek a názorů, vzájemných útoků, anebo konflikt mezi politickými aktéry, případně politickými aktéry a jinými aktéry. Musí být zřejmé přinejmenším dvě strany konfliktu. Z hlediska vývoje konfliktu se může se jednat o pokus o, zahájení, průběh nebo ukončení konfliktu. Politická nekompetence: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE selhání/neschopnost/nekompetenci politických aktérů. Přináší především (nejedná se o marginální zmínku) informace o kritice, útocích, obviněních z nesprávného jednání, moralizujících obvinění, obvinění z protizákonného jednání, obvinění z neschopnosti nebo nekompetence. Na rozdíl od negativního vyznění ukazuje na konkrétního aktéra coby zdroj selhání apod. Na rozdíl od konfliktu je kritika jednosměrná/jednostranná. Politický skandál: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná. Dopad na každodenní život: Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd. Tipy a rady k obtěžujícím okolnostem: Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Tipy a rady pro problémy jedince: Poskytuje článek tipy, varování nebo praktické rady k řešení problémů, se kterými by se čtenáři mohli potenciálně potýkat v každodenním životě? Například, jak cvičit, jak dobře jíst a čeho se vyvarovat abyste zůstali zdraví, jak chytře nakupovat a ušetřit peníze, jak investovat a zajistit si úspory a bezpečný důchod atd.? Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Informace/rady pro spotřebitele: Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný. Personalizace: Poskytuje článek konkrétní informace týkající se jedné nebo vícera osob a jejich různých intelektuálních, fyzických, mentálních, sociálních charakteristik (tj. dovednosti, vzhled, schopnosti) nebo osobního zázemí (kde pracovali, studovali, jejich jméno, rodinný stav, atd.)? Pouhé uvedení jména a/nebo pozice osoby, případně fotografie zobrazující osobu k zařazení do této kategorie nestačí. Zpráva, která obsahuje více fotografií stejné osoby, ANO. Soukromý život: Pojednává zpráva o soukromém životu jednoho nebo více jednotlivců? Soukromý život zahrnuje ty aspekty života člověka, které neodpovídají oblastem veřejného zájmu a/nebo nepatří do kontextu veřejné sféry a které lidé obvykle preferují udržovat ve své osobní sféře. Mezi příklady patří článek o tom, jakým je otcem prezident země, nebo o mládí a minulosti slavného podnikatele. Další příklady by se mohly týkat mimo jiné koníčků, záležitostí milostného života, minulosti nebo dovolené. Pokud se zpráva obecně zmiňuje o rodině osoby ve veřejném kontextu (například „muž obviněný z vraždy se zúčastnil soudu se svou manželkou“ nebo „prezident složil přísahu 15. května v doprovodu svých dětí “), nemělo by to být považováno za soukromý život. Pokud se ale zpráva zmiňuje o rodině osoby v soukromém kontextu (například snímek pořízený paparazzi, na kterém je sportovní postava na dovolené o samotě nebo s manželkou, manželem, dětmi, milencem atd., nebo zprávy týkající se osobního života rodiny někoho, by měly být považovány za soukromý život).  Senzačnost: Zahrnuje zpráva použití stylových prvků nebo způsobů popisu, které zdůrazňují/vyzdvihují neobvyklý, mimořádný nebo velkolepý charakter události? Prostředky konstrukce senzačnosti mohou být  metafory, nadsázka, použití dramatizujících superlativních přídavných jmen nebo narativní postupy zvyšující napětí. Grafické prostředky: použití zkreslených nebo falešných obrazů nebo například použití přehnaných obrazů. Rozdíl oproti obyčejnému popisu je ilustrován následujícími příklady: „barbarský zločin“ by měl být kódován jako senzacechtivý, zatímco „barevný ceremoniál“ nebo „distingovaný prezident“ nikoli. Emoce: Obsahuje zpráva explicitní zmínky o pocitech nebo emocích? Prvky obvykle zahrnuté v této kategorii jsou obecné popisy různých emocí a autorova vlastního emočního stavu, jako je mimo jiné úzkost, vztek, smutek, sebejistota, rozpaky, radost, znechucení, strach a euforie. Zmiňuje zpráva explicitně nebo zahrnuje pocity nebo emoce prostřednictvím textových, nebo obrazových prvků? Odborná literatura definuje šest základních emocí: hněv, znechucení, strach, štěstí, smutek a překvapení. Ve zprávách mohou být emoce přítomné tak, že novinář popisuje emoční stav lidí a/nebo předkládá obrazy, které zobrazují lidi v takových emočních stavech. Obrazy mohou často zobrazovat emoce, které prožívají jednotlivci, o nichž zpráva pojednává. Mezi typické obrazy v této kategorii patří lidé, kteří pláčou, křičí, vyjadřují hněv nebo zoufalství, řvou smíchy atd. Na fotografiích přítomnost emocí indikuje teprve střední až vysoká úroveň exprese, takže například prostý úsměv nižší intenzity by se jako emoce nepočítal. Morbidnost: Usiluje zpráva získat pozornost publika prostřednictvím textových nebo obrazových prvků, které popisují nebo zobrazují násilné činy, zločin, extrémní chudobu nebo sexuální scény/skandál, s uvedením konkrétních podrobností? Tyto prvky se musí nacházet v titulku, leadu na fotografii nebo jiných exponovaných místech v článku (získávání pozornosti), určitě se nejedná o marginální přítomnost. Pojem morbidita může být v různých kulturách vnímán a interpretován různě. Měli byste to používat tak, jak by se to považovalo ve vaší kultuře. Reakce občanů: Zahrnuje zpráva postoje/reakce běžných občanů nebo organizovaných skupin občanů (včetně profesních) na téma nebo událost, tím že ukazuje, jak vnímají veřejné záležitosti a politická rozhodnutí nebo jak se snaží tato rozhodnutí ovlivňovat? Mohou být zahrnuty citované výpovědi občanů nebo odkazy na ně. Požadavky  občanů: Obsahuje zprava požadavky běžných občanů nebo občanů organizovaných do skupin, nebo jimi formulované návrhy týkající se různých veřejných záležitostí a politických rozhodnutí? Požadavky občanů mohou být zahrnuté prostřednictvím přímých nebo nepřímých citací nebo odkazů na ně, může se také jednat o uvedení důvodů pro demonstraci. Validace občanských požadavků: Validace občanských požadavků. Obsahuje zpráva informace jako jsou vlastní prohlášení novináře, názor jiného zdroje nebo odkaz k důkazům, které validují to, co občané tvrdí nebo co požadují? Validace se může také projevit tím, že ve zprávě nebudou uvedené názory nebo fakta, které problematizují nebo zpochybňují požadavky občanů. Lokální dopad: Lokální dopad zmiňuje zpráva nebo zobrazuje dopad určitých politických rozhodnutí na poměry v daném prostředí. Geograficky definované společnosti mohou mimo jiné zahrnovat města, oblasti, obce apod. Vzdělávání o povinnostech a právech: Vzdělávání o povinnostech a právech. Informuje zpráva lidi o jejich občanských povinnostech a právech (ekonomických, sociálních a/nebo politických)? Například, když vláda poskytuje dotaci a zpráva informuje, kam jít, nebo jak vysvětlit neúčast voličů. Informace o kontextu a pozadí: Informace o kontextu a pozadí. Poskytuje zprava informace o politickém, ekonomickém nebo společenským kontextu, které umožňují občanům informované ROZHODOVÁNÍ A PARTICIPACI (účastnit se voleb a volit, sdružovat se v rámci politických stran a podporovat je, účastnit se demonstrací; podpořit politický protest, stávku; pochopit, jak mohou být jejich komunity ovlivněny politickým rozhodnutími atd. - přidat formování politických postojů?)? Informace o kontextu a pozadí události lze odlišit od informací o aktuálních událostech. Zahrnuje více specifičnosti, pokud jde o poskytované informace, a tak poskytuje podstatný politický, ekonomický nebo společenské souvislosti k událostem, o kterých zpráva pojednává. Zahrnuje zdroje, které vysvětlují stanoviska nebo rozhodnutí politických aktérů (např. jak se dříve chovali), důvodů demonstrací nebo cílů skupin občanů atd. Dotazy od občanů: Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně. Informace o participaci a angažovanosti občanů: Poskytuje novinář ve zprávě informace o aktivitách občanů, jako jsou kampaně, kolektivní akce, petice, vzpomínkové akce, demonstrace a protesty? Obvykle tento typ článků obsahuje informace o tom, kde a kdy k těmto činnostem došlo, a může také vysvětlovat význam těchto činů pro společnosti. Podpora občanských hnutí: Podpora občanských hnutí - binary Obsahuje zpráva informace, jako jsou vlastní prohlášení novináře, názor zdrojů nebo odkaz na důkazy, které podporují cíle občanského sdružení nebo hnutí, a/nebo staví organizaci jako pozitivní příklad k následování?. For every question pick only options from these lists.\nkritérium: vyhovující (Článek nesplňuje ani jedno z ostatních kritérié a může se použít.), nezpravodajský (nejedná se o zpravodajský článek (názorové články, zpravodajský rozhovor/anketa)), krátký (Článek není delší než jeden odstavec (jednosloupek/jedňák)), zahraniční (Článek nebyl publikován v rubrice s domácím zpravodajství (ovšem s vyjmou tematicky zaměřených rubrik - např. Ekonomika/trh, Kultura apod.) nebo na titulní straně a v takovém případě se nesmí týkat vnitrostátního politického dění NEBO událostí a situací, které se neodehrávají nebo neexistují v rámci jedné konkrétní země - ČR.)\nPočet odstavců: 1 (Článek má rozsah 1 odstavec.), 2 (Článek má rozsah 2 odstavce.), 3 (Článek má rozsah 3 odstavce.), 4 (Článek má rozsah 4 odstavce.), 5 (Článek má rozsah 5 odstavců.), 6 (Článek má rozsah 6 odstavců.), 7 (Článek má rozsah 7 odstavců.), 8 (Článek má rozsah 8 odstavců.), 9 (Článek má rozsah 9 odstavců.), 10 (Článek má rozsah 10 odstavců.), 11 (Článek má rozsah 11 odstavců.), 12 (Článek má rozsah 12 odstavců.), 13 (Článek má rozsah 13 odstavců.), 14 (Článek má rozsah 14 odstavců.), 15 (Článek má rozsah 15 odstavců.), 16 (Článek má rozsah 16 odstavců.), 17 (Článek má rozsah 17 odstavců.), 18 (Článek má rozsah 18 odstavců.), 19 (Článek má rozsah 19 odstavců.), 20 (Článek má rozsah 20 odstavců.), 21 (Článek má rozsah 21 odstavců.), 22 (Článek má rozsah 22 odstavců.), 23 (Článek má rozsah 23 odstavců.), 24 (Článek má rozsah 24 odstavců.), 25 (Článek má rozsah 25 odstavců.)\nMimořádná nebo aktuální událost velkého významu: Ne (Ne), Ano (Ano)\nPolitická zpráva: Ne (Ne), Ano (Ano)\nSoukromý rámec: Ne (Ne), Ano (Ano)\nStrategické zarámování: Ne (Ne), Ano (Ano)\nVěcné informování o veřejných politikách: Ne (Ne), Ano (Ano)\nHlavní žurnalistická funkce článku: aktuálních fakta a události (Informuje o aktuálních faktech a událostech. Obsahuje pouze empirická a skutková tvrzení, případně reprodukuje či shrnuje výpovědi/stanoviska politických aktérů. Novináři nepoužívají přídavná jména či přívlastky ani příslovce vyjadřující subjektivní hodnocení nebo normativní soudy.), kontextuální informace (Poskytuje kontextuální informace o pozadí události. Kontextuální informaci lze identifikovat na základě časového rozdílu vůči události, která je tématem článku. Může být také odkaz na existující zákony, zvyklosti, pravidla, které rámují situaci. Mělo by jít min. o celý odstavec.), interpretace (Analyzuje nebo obsahuje interpretaci. Analýzou a interpretací se zde rozumí druh empirických tvrzení, jehož obsahem není popis aktuálních fakt, okolností nebo historického kontextu, nýbrž jejich vysvětlení, úvaha o jejich významu/významnosti, následcích, příčinách nebo motivacích aktérů. Analýza/interpretace by měla pocházet od autora zprávy nebo od experta. Její předmětem musí být hlavní téma/událost/problém popisovaný ve zprávě. Také investigace, odhalování a konfrontování (angl. questioning).), názory (Vyjádření názorů. Zde se názorem myslí subjektivní hodnotící soud, ve smyslu hodnocení na škálách - negativní - pozitivní a žádoucí - nežádoucí. Musí být vysloven autorem zprávy (tedy NE citované a parafrázované výpovědi zdroje). Někdy bývá přítomný pouze v titulku, který nabízí interpretační rámec pro informace a tvrzení či implikace obsažené  v článku. Také zpochybňování zásadnosti, kritika. Předmětem hodnocení musí být hlavní téma/událost/problém popisovaný ve zprávě.)\nRozmanitost zdrojů a úhlů pohledu: absence zdrojů a úhlů pohledu (Absence zdrojů a úhlů pohledu. Téma zprávy nezahrnuje zdroje.), jednostrannost (Jednostranné pokrytí. Zpráva obsahuje pouze jeden zdroj nebo pouze zdroje a pohledy z jedné strany.), různé úhly pohledu (Přítomnost různých (ne nutně protikladných) úhlů pohledu v příběhu. Zpráva obsahuje různé zdroje a úhly pohledu.)\nPrezentace protichůdných hledisek: Ne (Ne), Ano (Ano)\nPoužití odborných zdrojů: Ne (Ne), Ano (Ano)\nPoužití citací a parafrází: Ne (Ne), Ano (Ano)\nObracená pyramida: Ne (Ne), Ano (Ano)\nOddělení fakt od názorů: Ne (Ne), Ano (Ano)\nNegativita: Ne (Ne), Ano (Ano)\nKonflikt: Ne (Ne), Ano (Ano)\nPolitická nekompetence: Ne (Ne), Ano (Ano)\nPolitický skandál: Ne (Ne), Ano (Ano)\nDopad na každodenní život: Ne (Ne), Ano (Ano)\nTipy a rady k obtěžujícím okolnostem: Ne (Ne), Ano (Ano)\nTipy a rady pro problémy jedince: Ne (Ne), Ano (Ano)\nInformace/rady pro spotřebitele: Ne (Ne), Ano (Ano)\nPersonalizace: Ne (Ne), Ano (Ano)\nSoukromý život: Ne (Ne), Ano (Ano)\nSenzačnost: Ne (Ne), Ano (Ano)\nEmoce: Ne (Ne), Ano (Ano)\nMorbidnost: Ne (Ne), Ano (Ano)\nReakce občanů: Ne (Ne), Ano (Ano)\nPožadavky  občanů: Ne (Ne), Ano (Ano)\nValidace občanských požadavků: Ne (Ne), Ano (Ano)\nLokální dopad: Ne (Ne), Ano (Ano)\nVzdělávání o povinnostech a právech: Ne (Ne), Ano (Ano)\nInformace o kontextu a pozadí: Ne (Ne), Ano (Ano)\nDotazy od občanů: Ne (Ne), Ano (Ano)\nInformace o participaci a angažovanosti občanů: Ne (Ne), Ano (Ano)\nPodpora občanských hnutí: Ne (Ne), Ano (Ano)\n\nYou will pick one option for these questions: kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. You will pick one or more options for these prompts: .\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "kritérium": {
+            "enum": [
+              "vyhovující",
+              "nezpravodajský",
+              "krátký",
+              "zahraniční"
+            ],
+            "title": "Kritérium",
+            "type": "string"
+          },
+          "Počet odstavců": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25"
+            ],
+            "title": "Počet Odstavců",
+            "type": "string"
+          },
+          "Mimořádná nebo aktuální událost velkého významu": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Mimořádná Nebo Aktuální Událost Velkého Významu",
+            "type": "string"
+          },
+          "Politická zpráva": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Zpráva",
+            "type": "string"
+          },
+          "Soukromý rámec": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Rámec",
+            "type": "string"
+          },
+          "Strategické zarámování": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Strategické Zarámování",
+            "type": "string"
+          },
+          "Věcné informování o veřejných politikách": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Věcné Informování O Veřejných Politikách",
+            "type": "string"
+          },
+          "Hlavní žurnalistická funkce článku": {
+            "enum": [
+              "aktuálních fakta a události",
+              "kontextuální informace",
+              "interpretace",
+              "názory"
+            ],
+            "title": "Hlavní Žurnalistická Funkce Článku",
+            "type": "string"
+          },
+          "Rozmanitost zdrojů a úhlů pohledu": {
+            "enum": [
+              "absence zdrojů a úhlů pohledu",
+              "jednostrannost",
+              "různé úhly pohledu"
+            ],
+            "title": "Rozmanitost Zdrojů A Úhlů Pohledu",
+            "type": "string"
+          },
+          "Prezentace protichůdných hledisek": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Prezentace Protichůdných Hledisek",
+            "type": "string"
+          },
+          "Použití odborných zdrojů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Odborných Zdrojů",
+            "type": "string"
+          },
+          "Použití citací a parafrází": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Citací A Parafrází",
+            "type": "string"
+          },
+          "Obracená pyramida": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Obracená Pyramida",
+            "type": "string"
+          },
+          "Oddělení fakt od názorů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Oddělení Fakt Od Názorů",
+            "type": "string"
+          },
+          "Negativita": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Negativita",
+            "type": "string"
+          },
+          "Konflikt": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Konflikt",
+            "type": "string"
+          },
+          "Politická nekompetence": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Nekompetence",
+            "type": "string"
+          },
+          "Politický skandál": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politický Skandál",
+            "type": "string"
+          },
+          "Dopad na každodenní život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dopad Na Každodenní Život",
+            "type": "string"
+          },
+          "Tipy a rady k obtěžujícím okolnostem": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady K Obtěžujícím Okolnostem",
+            "type": "string"
+          },
+          "Tipy a rady pro problémy jedince": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady Pro Problémy Jedince",
+            "type": "string"
+          },
+          "Informace/rady pro spotřebitele": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace/Rady Pro Spotřebitele",
+            "type": "string"
+          },
+          "Personalizace": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Personalizace",
+            "type": "string"
+          },
+          "Soukromý život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Život",
+            "type": "string"
+          },
+          "Senzačnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Senzačnost",
+            "type": "string"
+          },
+          "Emoce": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Emoce",
+            "type": "string"
+          },
+          "Morbidnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Morbidnost",
+            "type": "string"
+          },
+          "Reakce občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Reakce Občanů",
+            "type": "string"
+          },
+          "Požadavky  občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Požadavky  Občanů",
+            "type": "string"
+          },
+          "Validace občanských požadavků": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Validace Občanských Požadavků",
+            "type": "string"
+          },
+          "Lokální dopad": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Lokální Dopad",
+            "type": "string"
+          },
+          "Vzdělávání o povinnostech a právech": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Vzdělávání O Povinnostech A Právech",
+            "type": "string"
+          },
+          "Informace o kontextu a pozadí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Kontextu A Pozadí",
+            "type": "string"
+          },
+          "Dotazy od občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dotazy Od Občanů",
+            "type": "string"
+          },
+          "Informace o participaci a angažovanosti občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Participaci A Angažovanosti Občanů",
+            "type": "string"
+          },
+          "Podpora občanských hnutí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Podpora Občanských Hnutí",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kritérium",
+          "Počet odstavců",
+          "Mimořádná nebo aktuální událost velkého významu",
+          "Politická zpráva",
+          "Soukromý rámec",
+          "Strategické zarámování",
+          "Věcné informování o veřejných politikách",
+          "Hlavní žurnalistická funkce článku",
+          "Rozmanitost zdrojů a úhlů pohledu",
+          "Prezentace protichůdných hledisek",
+          "Použití odborných zdrojů",
+          "Použití citací a parafrází",
+          "Obracená pyramida",
+          "Oddělení fakt od názorů",
+          "Negativita",
+          "Konflikt",
+          "Politická nekompetence",
+          "Politický skandál",
+          "Dopad na každodenní život",
+          "Tipy a rady k obtěžujícím okolnostem",
+          "Tipy a rady pro problémy jedince",
+          "Informace/rady pro spotřebitele",
+          "Personalizace",
+          "Soukromý život",
+          "Senzačnost",
+          "Emoce",
+          "Morbidnost",
+          "Reakce občanů",
+          "Požadavky  občanů",
+          "Validace občanských požadavků",
+          "Lokální dopad",
+          "Vzdělávání o povinnostech a právech",
+          "Informace o kontextu a pozadí",
+          "Dotazy od občanů",
+          "Informace o participaci a angažovanosti občanů",
+          "Podpora občanských hnutí"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: 1.38. Kurzy ČNB od 30. 3. 2007\nTISK , Datum: 02.04.2007 , Zdroj: Právo , Strana: 5 , Vytištěno: 211 017 , Prodáno: 153 477 , Infotype: Nepojmenováno , Datum importu: 01.01.0001\n00:00 , Čtenost: 274 441 , Rubrika: Zpravodajství , Země: Česko , GRP: 3,05\nZemě Množství Kód Kurz\n\nAustrálie 1 AUD 16,984\nDánsko 1 DKK 3,758\nEMU 1 EUR 28,000\nChorvatsko 1 HRK 3,782\nJaponsko 100 JPY 17,799\nKanada 1 CAD 18,221\nMaďarsko 100 HUF 11,299\nPolsko 1 PLN 7,241\nRusko 100 RUB 80,815\nSlovensko 100 SKK 83,983\nŠvýcarsko 1 CHF 17,233\nUSA 1 USD 21,023\nV. Británie 1 GBP 41,196"
+    },
+    {
+      "role": "assistant",
+      "content": {
+        "kritérium": "vyhovující",
+        "Počet odstavců": "1",
+        "Mimořádná nebo aktuální událost velkého významu": "Ne",
+        "Politická zpráva": "Ne",
+        "Soukromý rámec": "Ne",
+        "Strategické zarámování": "Ne",
+        "Věcné informování o veřejných politikách": "Ne",
+        "Hlavní žurnalistická funkce článku": "aktuálních fakta a události",
+        "Rozmanitost zdrojů a úhlů pohledu": "absence zdrojů a úhlů pohledu",
+        "Prezentace protichůdných hledisek": "Ne",
+        "Použití odborných zdrojů": "Ne",
+        "Použití citací a parafrází": "Ne",
+        "Obracená pyramida": "Ne",
+        "Oddělení fakt od názorů": "Ne",
+        "Negativita": "Ne",
+        "Konflikt": "Ne",
+        "Politická nekompetence": "Ne",
+        "Politický skandál": "Ne",
+        "Dopad na každodenní život": "Ne",
+        "Tipy a rady k obtěžujícím okolnostem": "Ne",
+        "Tipy a rady pro problémy jedince": "Ne",
+        "Informace/rady pro spotřebitele": "Ne",
+        "Personalizace": "Ne",
+        "Soukromý život": "Ne",
+        "Senzačnost": "Ne",
+        "Emoce": "Ne",
+        "Morbidnost": "Ne",
+        "Reakce občanů": "Ne",
+        "Požadavky  občanů": "Ne",
+        "Validace občanských požadavků": "Ne",
+        "Lokální dopad": "Ne",
+        "Vzdělávání o povinnostech a právech": "Ne",
+        "Informace o kontextu a pozadí": "Ne",
+        "Dotazy od občanů": "Ne",
+        "Informace o participaci a angažovanosti občanů": "Ne",
+        "Podpora občanských hnutí": "Ne"
+      }
+    },
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. kritérium: Kritéria pro zařazení článku do analýzy Počet odstavců: Uveď rozsah článku vyjádřený počtem odstavců. Započítáváme i „úvodní“ odstavec, pokud je grafický odlišen od ostatních A nejedná se o shrnutí celého článku („abstrakt“). Mimořádná nebo aktuální událost velkého významu: Je tématem článku mimořádná nebo aktuální událost velkého významu NEBO závažné problémy NEBO významná narušení každodenního života, jako jsou např. zemětřesení nebo letecká katastrofa NEBO událost zahrnující vrcholové politické představitele NEBO zpráva obsahuje komponentu veřejné politiky? A která se odehrála v posledních 24 hod. * Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Politická zpráva: Je hlavním tématem článku jednání, působení alespoň jednoho politického aktéra nebo politické instituce (na regionální, národní nebo mezinárodní úrovni) NEBO nebo následky jednání (např. dopad legislativy). TAKÉ témata týkající se soukromého života těchto aktérů. Političtí aktéři jsou pouze následující entity: politické strany a jejich členové, politici, politické instituce a jejich činitelé. Politické instituce na národní úrovni jsou: stát, prezident ČR, senát, poslanecká sněmovna, vláda, zastupitelstva, starostové, hejtmani. Soukromý rámec: Je tématem článku soukromý život politického aktéra, např. rozvod, rodina, dopravní nehoda, kterou způsobil apod. ? Strategické zarámování: Klade článek důraz na něco z následujícího: a) optika zisků a ztrát (v kontextu soutěže politických stran a jejích členů); b) výkonnost a styl vystupování politických aktérů; c) politické strategie a taktizování (např. za účelem získání podpory elektorátu, politického pozice, převahy ve sněmovně, nebo aby prošel nějaký zákon); d) jak si vedou politické strany v průzkumech; e) v jazykové rovině: metaforika války a zápasů? Kladením důrazu se zde myslí, že daný aspekt není zastoupen pouze marginálně. Věcné informování o veřejných politikách: Jsou hlavním tématem článku záležitosti veřejných politik (angl. policy, personální záležitosti nejsou policies) A ZÁROVEŇ PLATÍ, NĚCO Z NÁSLEDUJÍCÍHO: a) článek obsahuje popis podstaty/náplni legislativy a legislativních návrhů nebo jiných vládních programů; b) článek uvádí postoje nebo prohlášení politiků týkající se veřejných politik; c) článek tematizuje implikace nebo dopady legislativy nebo legislativních návrhů pro veřejnost? *Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Hlavní žurnalistická funkce článku: Identifikuj hlavní žurnalistickou funkci zprávy. Funkce, které jsou uvedené níže, jsou seřazené dle míry přítomnosti „hlasu novináře“. Pro celý článek zvol nejvyšší zastoupenou kategorii, například pokud článek informoval o aktuálních faktech a zároveň vysvětloval jejich význam pro občany, kóduj 3. Postupuj následovně: Než určíš hlavní funkci celé zprávy, identifikuj postupně žurnalistickou funkci každého ODSTAVCE a zamysli se, zda článek naplňuje danou funkci VE VZTAHU K TÉMATU/UDÁLOSTI/PROBLÉMU, O KTERÉM POJEDNÁVÁ. Rozmanitost zdrojů a úhlů pohledu: Vycházíme z předpokladu, že zdroje s přístupem do zprávy přináší pohledy/stanoviska k danému problému/tématu. Představuje zpráva různé zdroje a různé pohledy/stanoviska zdrojů na konkrétní problém? Prezentace protichůdných hledisek: Prezentace protichůdných hledisek Použití odborných zdrojů: Odborný zdroj je nestranná  osoba s patřičnou expertizou, typicky expert, může být i studie. Politici a zájmové skupiny ne, i když půjde o osoby s patřičnou expertizou či vzděláním. Odkaz na výzkum není postačující - viz rozdíl mezi článkem na základě výzkumné zprávy a článkem, kde se navíc použije výpovědi výzkumníků. Použití citací a parafrází: Použití citací a parafrází Obracená pyramida: Obracená pyramida - nejdříve tvrdá fakta  - nejdříve nejdůležitější informace - odpovědi na novinářské otázky kdo, co, kdy, kde pak rozšiřující informace a výpovědi aktérů, pak kontextuální informace a další souvislosti. Oddělení fakt od názorů: Oddělení fakt od názorů. Fakta jsou skutková tvrzení a reprodukce výpovědi zdrojů s přístupem do zpráv. Také, pokud novinář interpretuje/analyzuje např. ve smyslu pojmenování kauzálního vztahu (příčin, následků) nebo např. významnost události A vychází z faktů nebo objektivních indikátorů uvedených v článku. - např. označí demonstraci za „velkou“ na základě uvedených údajů o počtu demonstrujících - nekódujeme ANO. Pokud usuzuje na základě nepodložených údajů a fakt, kódujeme NE. NÁZOR je subjektivní, nemůže být ověřen. Obvykle ve smyslu hodnocení na škálách negativní - pozitivní a žádoucí - nežádoucí. Negativita: Negativní vyznění je CELKOVÉ vyznění zprávy (bez ohledu na povahu události) pesimistické? Celkové vyznění obvykle vzniká souhrnným vyzněním výroků zdrojů s přístupem do zpráv, případně také tvůrců zprávy (např. způsob formulace titulku), nikoli na základě ojedinělého výroku. Negativní vyznění je indikované ZARÁMOVÁNÍM události jedním z následujících způsobů: politické selhání, fiasko, katastrofa, krize, frustrace, kolaps, propadák, odmítnutí, zanedbání, selhání, zhoršení, rezignovanost, skepse, defétismus nebo zklamání, existence hrozby. Negativní vyznění se liší od ostatních kategorií negativity (konflikt, nekompetence, skandál) tím, že KVALITA NEGATIVITY není spojovaná s konkrétním aktérem (např. politická strana) - tedy např. nejedná se o politické selhání konkrétního politika - ale pokud článek pojednává o neúspěšném politickém summitu, kde se politici na ničím nedohodli, tak ANO. Také představa negativního vývoje politické situace (bez ohledu na to, zda realistická, možná, pravděpodobná) - PŘEVLÁDAJÍ negativní výhledy a scénáře, skeptické názory, negativní očekávání nebo potenciální hrozby. Konflikt: Článek SE ZAMĚŘUJE NA/VYZDVIHUJE konfliktní povahu události - konflikt není tedy výhradně charakteristikou události, ale také rysem konkrétního způsobu vyprávění o události. Buď POLITICKÝ konflikt, spor, neshoda, střet stanovisek a názorů, vzájemných útoků, anebo konflikt mezi politickými aktéry, případně politickými aktéry a jinými aktéry. Musí být zřejmé přinejmenším dvě strany konfliktu. Z hlediska vývoje konfliktu se může se jednat o pokus o, zahájení, průběh nebo ukončení konfliktu. Politická nekompetence: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE selhání/neschopnost/nekompetenci politických aktérů. Přináší především (nejedná se o marginální zmínku) informace o kritice, útocích, obviněních z nesprávného jednání, moralizujících obvinění, obvinění z protizákonného jednání, obvinění z neschopnosti nebo nekompetence. Na rozdíl od negativního vyznění ukazuje na konkrétního aktéra coby zdroj selhání apod. Na rozdíl od konfliktu je kritika jednosměrná/jednostranná. Politický skandál: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná. Dopad na každodenní život: Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd. Tipy a rady k obtěžujícím okolnostem: Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Tipy a rady pro problémy jedince: Poskytuje článek tipy, varování nebo praktické rady k řešení problémů, se kterými by se čtenáři mohli potenciálně potýkat v každodenním životě? Například, jak cvičit, jak dobře jíst a čeho se vyvarovat abyste zůstali zdraví, jak chytře nakupovat a ušetřit peníze, jak investovat a zajistit si úspory a bezpečný důchod atd.? Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Informace/rady pro spotřebitele: Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný. Personalizace: Poskytuje článek konkrétní informace týkající se jedné nebo vícera osob a jejich různých intelektuálních, fyzických, mentálních, sociálních charakteristik (tj. dovednosti, vzhled, schopnosti) nebo osobního zázemí (kde pracovali, studovali, jejich jméno, rodinný stav, atd.)? Pouhé uvedení jména a/nebo pozice osoby, případně fotografie zobrazující osobu k zařazení do této kategorie nestačí. Zpráva, která obsahuje více fotografií stejné osoby, ANO. Soukromý život: Pojednává zpráva o soukromém životu jednoho nebo více jednotlivců? Soukromý život zahrnuje ty aspekty života člověka, které neodpovídají oblastem veřejného zájmu a/nebo nepatří do kontextu veřejné sféry a které lidé obvykle preferují udržovat ve své osobní sféře. Mezi příklady patří článek o tom, jakým je otcem prezident země, nebo o mládí a minulosti slavného podnikatele. Další příklady by se mohly týkat mimo jiné koníčků, záležitostí milostného života, minulosti nebo dovolené. Pokud se zpráva obecně zmiňuje o rodině osoby ve veřejném kontextu (například „muž obviněný z vraždy se zúčastnil soudu se svou manželkou“ nebo „prezident složil přísahu 15. května v doprovodu svých dětí “), nemělo by to být považováno za soukromý život. Pokud se ale zpráva zmiňuje o rodině osoby v soukromém kontextu (například snímek pořízený paparazzi, na kterém je sportovní postava na dovolené o samotě nebo s manželkou, manželem, dětmi, milencem atd., nebo zprávy týkající se osobního života rodiny někoho, by měly být považovány za soukromý život).  Senzačnost: Zahrnuje zpráva použití stylových prvků nebo způsobů popisu, které zdůrazňují/vyzdvihují neobvyklý, mimořádný nebo velkolepý charakter události? Prostředky konstrukce senzačnosti mohou být  metafory, nadsázka, použití dramatizujících superlativních přídavných jmen nebo narativní postupy zvyšující napětí. Grafické prostředky: použití zkreslených nebo falešných obrazů nebo například použití přehnaných obrazů. Rozdíl oproti obyčejnému popisu je ilustrován následujícími příklady: „barbarský zločin“ by měl být kódován jako senzacechtivý, zatímco „barevný ceremoniál“ nebo „distingovaný prezident“ nikoli. Emoce: Obsahuje zpráva explicitní zmínky o pocitech nebo emocích? Prvky obvykle zahrnuté v této kategorii jsou obecné popisy různých emocí a autorova vlastního emočního stavu, jako je mimo jiné úzkost, vztek, smutek, sebejistota, rozpaky, radost, znechucení, strach a euforie. Zmiňuje zpráva explicitně nebo zahrnuje pocity nebo emoce prostřednictvím textových, nebo obrazových prvků? Odborná literatura definuje šest základních emocí: hněv, znechucení, strach, štěstí, smutek a překvapení. Ve zprávách mohou být emoce přítomné tak, že novinář popisuje emoční stav lidí a/nebo předkládá obrazy, které zobrazují lidi v takových emočních stavech. Obrazy mohou často zobrazovat emoce, které prožívají jednotlivci, o nichž zpráva pojednává. Mezi typické obrazy v této kategorii patří lidé, kteří pláčou, křičí, vyjadřují hněv nebo zoufalství, řvou smíchy atd. Na fotografiích přítomnost emocí indikuje teprve střední až vysoká úroveň exprese, takže například prostý úsměv nižší intenzity by se jako emoce nepočítal. Morbidnost: Usiluje zpráva získat pozornost publika prostřednictvím textových nebo obrazových prvků, které popisují nebo zobrazují násilné činy, zločin, extrémní chudobu nebo sexuální scény/skandál, s uvedením konkrétních podrobností? Tyto prvky se musí nacházet v titulku, leadu na fotografii nebo jiných exponovaných místech v článku (získávání pozornosti), určitě se nejedná o marginální přítomnost. Pojem morbidita může být v různých kulturách vnímán a interpretován různě. Měli byste to používat tak, jak by se to považovalo ve vaší kultuře. Reakce občanů: Zahrnuje zpráva postoje/reakce běžných občanů nebo organizovaných skupin občanů (včetně profesních) na téma nebo událost, tím že ukazuje, jak vnímají veřejné záležitosti a politická rozhodnutí nebo jak se snaží tato rozhodnutí ovlivňovat? Mohou být zahrnuty citované výpovědi občanů nebo odkazy na ně. Požadavky  občanů: Obsahuje zprava požadavky běžných občanů nebo občanů organizovaných do skupin, nebo jimi formulované návrhy týkající se různých veřejných záležitostí a politických rozhodnutí? Požadavky občanů mohou být zahrnuté prostřednictvím přímých nebo nepřímých citací nebo odkazů na ně, může se také jednat o uvedení důvodů pro demonstraci. Validace občanských požadavků: Validace občanských požadavků. Obsahuje zpráva informace jako jsou vlastní prohlášení novináře, názor jiného zdroje nebo odkaz k důkazům, které validují to, co občané tvrdí nebo co požadují? Validace se může také projevit tím, že ve zprávě nebudou uvedené názory nebo fakta, které problematizují nebo zpochybňují požadavky občanů. Lokální dopad: Lokální dopad zmiňuje zpráva nebo zobrazuje dopad určitých politických rozhodnutí na poměry v daném prostředí. Geograficky definované společnosti mohou mimo jiné zahrnovat města, oblasti, obce apod. Vzdělávání o povinnostech a právech: Vzdělávání o povinnostech a právech. Informuje zpráva lidi o jejich občanských povinnostech a právech (ekonomických, sociálních a/nebo politických)? Například, když vláda poskytuje dotaci a zpráva informuje, kam jít, nebo jak vysvětlit neúčast voličů. Informace o kontextu a pozadí: Informace o kontextu a pozadí. Poskytuje zprava informace o politickém, ekonomickém nebo společenským kontextu, které umožňují občanům informované ROZHODOVÁNÍ A PARTICIPACI (účastnit se voleb a volit, sdružovat se v rámci politických stran a podporovat je, účastnit se demonstrací; podpořit politický protest, stávku; pochopit, jak mohou být jejich komunity ovlivněny politickým rozhodnutími atd. - přidat formování politických postojů?)? Informace o kontextu a pozadí události lze odlišit od informací o aktuálních událostech. Zahrnuje více specifičnosti, pokud jde o poskytované informace, a tak poskytuje podstatný politický, ekonomický nebo společenské souvislosti k událostem, o kterých zpráva pojednává. Zahrnuje zdroje, které vysvětlují stanoviska nebo rozhodnutí politických aktérů (např. jak se dříve chovali), důvodů demonstrací nebo cílů skupin občanů atd. Dotazy od občanů: Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně. Informace o participaci a angažovanosti občanů: Poskytuje novinář ve zprávě informace o aktivitách občanů, jako jsou kampaně, kolektivní akce, petice, vzpomínkové akce, demonstrace a protesty? Obvykle tento typ článků obsahuje informace o tom, kde a kdy k těmto činnostem došlo, a může také vysvětlovat význam těchto činů pro společnosti. Podpora občanských hnutí: Podpora občanských hnutí - binary Obsahuje zpráva informace, jako jsou vlastní prohlášení novináře, názor zdrojů nebo odkaz na důkazy, které podporují cíle občanského sdružení nebo hnutí, a/nebo staví organizaci jako pozitivní příklad k následování?. For every question pick only options from these lists.\nkritérium: vyhovující (Článek nesplňuje ani jedno z ostatních kritérié a může se použít.), nezpravodajský (nejedná se o zpravodajský článek (názorové články, zpravodajský rozhovor/anketa)), krátký (Článek není delší než jeden odstavec (jednosloupek/jedňák)), zahraniční (Článek nebyl publikován v rubrice s domácím zpravodajství (ovšem s vyjmou tematicky zaměřených rubrik - např. Ekonomika/trh, Kultura apod.) nebo na titulní straně a v takovém případě se nesmí týkat vnitrostátního politického dění NEBO událostí a situací, které se neodehrávají nebo neexistují v rámci jedné konkrétní země - ČR.)\nPočet odstavců: 1 (Článek má rozsah 1 odstavec.), 2 (Článek má rozsah 2 odstavce.), 3 (Článek má rozsah 3 odstavce.), 4 (Článek má rozsah 4 odstavce.), 5 (Článek má rozsah 5 odstavců.), 6 (Článek má rozsah 6 odstavců.), 7 (Článek má rozsah 7 odstavců.), 8 (Článek má rozsah 8 odstavců.), 9 (Článek má rozsah 9 odstavců.), 10 (Článek má rozsah 10 odstavců.), 11 (Článek má rozsah 11 odstavců.), 12 (Článek má rozsah 12 odstavců.), 13 (Článek má rozsah 13 odstavců.), 14 (Článek má rozsah 14 odstavců.), 15 (Článek má rozsah 15 odstavců.), 16 (Článek má rozsah 16 odstavců.), 17 (Článek má rozsah 17 odstavců.), 18 (Článek má rozsah 18 odstavců.), 19 (Článek má rozsah 19 odstavců.), 20 (Článek má rozsah 20 odstavců.), 21 (Článek má rozsah 21 odstavců.), 22 (Článek má rozsah 22 odstavců.), 23 (Článek má rozsah 23 odstavců.), 24 (Článek má rozsah 24 odstavců.), 25 (Článek má rozsah 25 odstavců.)\nMimořádná nebo aktuální událost velkého významu: Ne (Ne), Ano (Ano)\nPolitická zpráva: Ne (Ne), Ano (Ano)\nSoukromý rámec: Ne (Ne), Ano (Ano)\nStrategické zarámování: Ne (Ne), Ano (Ano)\nVěcné informování o veřejných politikách: Ne (Ne), Ano (Ano)\nHlavní žurnalistická funkce článku: aktuálních fakta a události (Informuje o aktuálních faktech a událostech. Obsahuje pouze empirická a skutková tvrzení, případně reprodukuje či shrnuje výpovědi/stanoviska politických aktérů. Novináři nepoužívají přídavná jména či přívlastky ani příslovce vyjadřující subjektivní hodnocení nebo normativní soudy.), kontextuální informace (Poskytuje kontextuální informace o pozadí události. Kontextuální informaci lze identifikovat na základě časového rozdílu vůči události, která je tématem článku. Může být také odkaz na existující zákony, zvyklosti, pravidla, které rámují situaci. Mělo by jít min. o celý odstavec.), interpretace (Analyzuje nebo obsahuje interpretaci. Analýzou a interpretací se zde rozumí druh empirických tvrzení, jehož obsahem není popis aktuálních fakt, okolností nebo historického kontextu, nýbrž jejich vysvětlení, úvaha o jejich významu/významnosti, následcích, příčinách nebo motivacích aktérů. Analýza/interpretace by měla pocházet od autora zprávy nebo od experta. Její předmětem musí být hlavní téma/událost/problém popisovaný ve zprávě. Také investigace, odhalování a konfrontování (angl. questioning).), názory (Vyjádření názorů. Zde se názorem myslí subjektivní hodnotící soud, ve smyslu hodnocení na škálách - negativní - pozitivní a žádoucí - nežádoucí. Musí být vysloven autorem zprávy (tedy NE citované a parafrázované výpovědi zdroje). Někdy bývá přítomný pouze v titulku, který nabízí interpretační rámec pro informace a tvrzení či implikace obsažené  v článku. Také zpochybňování zásadnosti, kritika. Předmětem hodnocení musí být hlavní téma/událost/problém popisovaný ve zprávě.)\nRozmanitost zdrojů a úhlů pohledu: absence zdrojů a úhlů pohledu (Absence zdrojů a úhlů pohledu. Téma zprávy nezahrnuje zdroje.), jednostrannost (Jednostranné pokrytí. Zpráva obsahuje pouze jeden zdroj nebo pouze zdroje a pohledy z jedné strany.), různé úhly pohledu (Přítomnost různých (ne nutně protikladných) úhlů pohledu v příběhu. Zpráva obsahuje různé zdroje a úhly pohledu.)\nPrezentace protichůdných hledisek: Ne (Ne), Ano (Ano)\nPoužití odborných zdrojů: Ne (Ne), Ano (Ano)\nPoužití citací a parafrází: Ne (Ne), Ano (Ano)\nObracená pyramida: Ne (Ne), Ano (Ano)\nOddělení fakt od názorů: Ne (Ne), Ano (Ano)\nNegativita: Ne (Ne), Ano (Ano)\nKonflikt: Ne (Ne), Ano (Ano)\nPolitická nekompetence: Ne (Ne), Ano (Ano)\nPolitický skandál: Ne (Ne), Ano (Ano)\nDopad na každodenní život: Ne (Ne), Ano (Ano)\nTipy a rady k obtěžujícím okolnostem: Ne (Ne), Ano (Ano)\nTipy a rady pro problémy jedince: Ne (Ne), Ano (Ano)\nInformace/rady pro spotřebitele: Ne (Ne), Ano (Ano)\nPersonalizace: Ne (Ne), Ano (Ano)\nSoukromý život: Ne (Ne), Ano (Ano)\nSenzačnost: Ne (Ne), Ano (Ano)\nEmoce: Ne (Ne), Ano (Ano)\nMorbidnost: Ne (Ne), Ano (Ano)\nReakce občanů: Ne (Ne), Ano (Ano)\nPožadavky  občanů: Ne (Ne), Ano (Ano)\nValidace občanských požadavků: Ne (Ne), Ano (Ano)\nLokální dopad: Ne (Ne), Ano (Ano)\nVzdělávání o povinnostech a právech: Ne (Ne), Ano (Ano)\nInformace o kontextu a pozadí: Ne (Ne), Ano (Ano)\nDotazy od občanů: Ne (Ne), Ano (Ano)\nInformace o participaci a angažovanosti občanů: Ne (Ne), Ano (Ano)\nPodpora občanských hnutí: Ne (Ne), Ano (Ano)\n\nYou will pick one option for these questions: kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. You will pick one or more options for these prompts: .\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "kritérium": {
+            "enum": [
+              "vyhovující",
+              "nezpravodajský",
+              "krátký",
+              "zahraniční"
+            ],
+            "title": "Kritérium",
+            "type": "string"
+          },
+          "Počet odstavců": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25"
+            ],
+            "title": "Počet Odstavců",
+            "type": "string"
+          },
+          "Mimořádná nebo aktuální událost velkého významu": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Mimořádná Nebo Aktuální Událost Velkého Významu",
+            "type": "string"
+          },
+          "Politická zpráva": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Zpráva",
+            "type": "string"
+          },
+          "Soukromý rámec": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Rámec",
+            "type": "string"
+          },
+          "Strategické zarámování": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Strategické Zarámování",
+            "type": "string"
+          },
+          "Věcné informování o veřejných politikách": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Věcné Informování O Veřejných Politikách",
+            "type": "string"
+          },
+          "Hlavní žurnalistická funkce článku": {
+            "enum": [
+              "aktuálních fakta a události",
+              "kontextuální informace",
+              "interpretace",
+              "názory"
+            ],
+            "title": "Hlavní Žurnalistická Funkce Článku",
+            "type": "string"
+          },
+          "Rozmanitost zdrojů a úhlů pohledu": {
+            "enum": [
+              "absence zdrojů a úhlů pohledu",
+              "jednostrannost",
+              "různé úhly pohledu"
+            ],
+            "title": "Rozmanitost Zdrojů A Úhlů Pohledu",
+            "type": "string"
+          },
+          "Prezentace protichůdných hledisek": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Prezentace Protichůdných Hledisek",
+            "type": "string"
+          },
+          "Použití odborných zdrojů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Odborných Zdrojů",
+            "type": "string"
+          },
+          "Použití citací a parafrází": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Citací A Parafrází",
+            "type": "string"
+          },
+          "Obracená pyramida": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Obracená Pyramida",
+            "type": "string"
+          },
+          "Oddělení fakt od názorů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Oddělení Fakt Od Názorů",
+            "type": "string"
+          },
+          "Negativita": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Negativita",
+            "type": "string"
+          },
+          "Konflikt": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Konflikt",
+            "type": "string"
+          },
+          "Politická nekompetence": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Nekompetence",
+            "type": "string"
+          },
+          "Politický skandál": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politický Skandál",
+            "type": "string"
+          },
+          "Dopad na každodenní život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dopad Na Každodenní Život",
+            "type": "string"
+          },
+          "Tipy a rady k obtěžujícím okolnostem": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady K Obtěžujícím Okolnostem",
+            "type": "string"
+          },
+          "Tipy a rady pro problémy jedince": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady Pro Problémy Jedince",
+            "type": "string"
+          },
+          "Informace/rady pro spotřebitele": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace/Rady Pro Spotřebitele",
+            "type": "string"
+          },
+          "Personalizace": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Personalizace",
+            "type": "string"
+          },
+          "Soukromý život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Život",
+            "type": "string"
+          },
+          "Senzačnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Senzačnost",
+            "type": "string"
+          },
+          "Emoce": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Emoce",
+            "type": "string"
+          },
+          "Morbidnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Morbidnost",
+            "type": "string"
+          },
+          "Reakce občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Reakce Občanů",
+            "type": "string"
+          },
+          "Požadavky  občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Požadavky  Občanů",
+            "type": "string"
+          },
+          "Validace občanských požadavků": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Validace Občanských Požadavků",
+            "type": "string"
+          },
+          "Lokální dopad": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Lokální Dopad",
+            "type": "string"
+          },
+          "Vzdělávání o povinnostech a právech": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Vzdělávání O Povinnostech A Právech",
+            "type": "string"
+          },
+          "Informace o kontextu a pozadí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Kontextu A Pozadí",
+            "type": "string"
+          },
+          "Dotazy od občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dotazy Od Občanů",
+            "type": "string"
+          },
+          "Informace o participaci a angažovanosti občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Participaci A Angažovanosti Občanů",
+            "type": "string"
+          },
+          "Podpora občanských hnutí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Podpora Občanských Hnutí",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kritérium",
+          "Počet odstavců",
+          "Mimořádná nebo aktuální událost velkého významu",
+          "Politická zpráva",
+          "Soukromý rámec",
+          "Strategické zarámování",
+          "Věcné informování o veřejných politikách",
+          "Hlavní žurnalistická funkce článku",
+          "Rozmanitost zdrojů a úhlů pohledu",
+          "Prezentace protichůdných hledisek",
+          "Použití odborných zdrojů",
+          "Použití citací a parafrází",
+          "Obracená pyramida",
+          "Oddělení fakt od názorů",
+          "Negativita",
+          "Konflikt",
+          "Politická nekompetence",
+          "Politický skandál",
+          "Dopad na každodenní život",
+          "Tipy a rady k obtěžujícím okolnostem",
+          "Tipy a rady pro problémy jedince",
+          "Informace/rady pro spotřebitele",
+          "Personalizace",
+          "Soukromý život",
+          "Senzačnost",
+          "Emoce",
+          "Morbidnost",
+          "Reakce občanů",
+          "Požadavky  občanů",
+          "Validace občanských požadavků",
+          "Lokální dopad",
+          "Vzdělávání o povinnostech a právech",
+          "Informace o kontextu a pozadí",
+          "Dotazy od občanů",
+          "Informace o participaci a angažovanosti občanů",
+          "Podpora občanských hnutí"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: 1.5. Vedení ODS: Zvolte Klause opět prezidentem\nTISK , Datum: 02.04.2007 , Zdroj: Mladá fronta DNES , Strana: 2 , Autor: (čer) , Vytištěno: 171 085 , Prodáno: 144 292 , Infotype: Nepojmenováno , Datum\nimportu: 01.01.0001 00:00 , Čtenost: 612 533 , Rubrika: Z  domova , Země: Česko , GRP: 6,81\nChomutov - Prezident Václav Klaus získal v sobotu od vedení ODS podporu své další kandidatury. Výkonná rada občanských\ndemokratů na jednání v Chomutově vyzvala své zákonodárce, aby začali pracovat na znovuzvolení čestného předsedy ODS\nprezidentem.\n„Výkonná rada vyzývá poslanecký a senátorský klub ODS, aby projednaly a navrhly kandidaturu Václava Klause na funkci\nprezidenta České republiky,“ předčítal novinářům premiér Mirek Topolánek.\n„My ho nenavrhujeme. To jako výkonná rada ani nemůžeme. Ale vyzýváme k tomu naše poslance a senátory,“ řekl ještě při\ntiskové konferenci.\n\nZa spolupráci s KSČM konec\n\nVedení ODS při svém chomutovském jednání také potrestalo dvě své organizace za spolupráci s komunisty v komunální\npolitice. Licenci odebralo a tím fakticky zrušilo dvě místní sdružení občanských demokratů na Olomoucku – v Zábřehu a\nDubicku. Celkem takto občanští demokraté spolupracují v šedesáti pěti městech a obcích. Rušení místních buněk tak zřejmě\nbude pokračovat.\nVýkonná rada neměla podle Topolánka nejmenší pochybnost při odebrání licence. „V tomto smyslu diskuse nebyla. Diskuse\nbyla spíše o tom, jak v tom procesu pokračovat,“ uvedl Topolánek.\nCelkem takto občanští demokraté spolupracují v šedesáti pěti městech a obcích.\nStarosta Dubicka Josef Sobotík však tvrdí, že spolupráce s komunistou v radě byla nutná. „Naším koaličním partnerem je KDU-\nČSL. Její zástupce požadoval barevnou radu. Proto je v pětičlenné radě kromě tří členů ODS i jeden komunista,“ uvedl. Verdikt\npřekvapil i starostu Zábřehu Zdeňka Koláře."
+    },
+    {
+      "role": "assistant",
+      "content": {
+        "kritérium": "vyhovující",
+        "Počet odstavců": "2",
+        "Mimořádná nebo aktuální událost velkého významu": "Ano",
+        "Politická zpráva": "Ano",
+        "Soukromý rámec": "Ne",
+        "Strategické zarámování": "Ano",
+        "Věcné informování o veřejných politikách": "Ano",
+        "Hlavní žurnalistická funkce článku": "aktuálních fakta a události",
+        "Rozmanitost zdrojů a úhlů pohledu": "různé úhly pohledu",
+        "Prezentace protichůdných hledisek": "Ano",
+        "Použití odborných zdrojů": "Ne",
+        "Použití citací a parafrází": "Ano",
+        "Obracená pyramida": "Ne",
+        "Oddělení fakt od názorů": "Ano",
+        "Negativita": "Ne",
+        "Konflikt": "Ano",
+        "Politická nekompetence": "Ne",
+        "Politický skandál": "Ne",
+        "Dopad na každodenní život": "Ne",
+        "Tipy a rady k obtěžujícím okolnostem": "Ne",
+        "Tipy a rady pro problémy jedince": "Ne",
+        "Informace/rady pro spotřebitele": "Ne",
+        "Personalizace": "Ne",
+        "Soukromý život": "Ne",
+        "Senzačnost": "Ne",
+        "Emoce": "Ne",
+        "Morbidnost": "Ne",
+        "Reakce občanů": "Ne",
+        "Požadavky  občanů": "Ne",
+        "Validace občanských požadavků": "Ne",
+        "Lokální dopad": "Ne",
+        "Vzdělávání o povinnostech a právech": "Ne",
+        "Informace o kontextu a pozadí": "Ano",
+        "Dotazy od občanů": "Ne",
+        "Informace o participaci a angažovanosti občanů": "Ne",
+        "Podpora občanských hnutí": "Ne"
+      }
+    },
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. kritérium: Kritéria pro zařazení článku do analýzy Počet odstavců: Uveď rozsah článku vyjádřený počtem odstavců. Započítáváme i „úvodní“ odstavec, pokud je grafický odlišen od ostatních A nejedná se o shrnutí celého článku („abstrakt“). Mimořádná nebo aktuální událost velkého významu: Je tématem článku mimořádná nebo aktuální událost velkého významu NEBO závažné problémy NEBO významná narušení každodenního života, jako jsou např. zemětřesení nebo letecká katastrofa NEBO událost zahrnující vrcholové politické představitele NEBO zpráva obsahuje komponentu veřejné politiky? A která se odehrála v posledních 24 hod. * Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Politická zpráva: Je hlavním tématem článku jednání, působení alespoň jednoho politického aktéra nebo politické instituce (na regionální, národní nebo mezinárodní úrovni) NEBO nebo následky jednání (např. dopad legislativy). TAKÉ témata týkající se soukromého života těchto aktérů. Političtí aktéři jsou pouze následující entity: politické strany a jejich členové, politici, politické instituce a jejich činitelé. Politické instituce na národní úrovni jsou: stát, prezident ČR, senát, poslanecká sněmovna, vláda, zastupitelstva, starostové, hejtmani. Soukromý rámec: Je tématem článku soukromý život politického aktéra, např. rozvod, rodina, dopravní nehoda, kterou způsobil apod. ? Strategické zarámování: Klade článek důraz na něco z následujícího: a) optika zisků a ztrát (v kontextu soutěže politických stran a jejích členů); b) výkonnost a styl vystupování politických aktérů; c) politické strategie a taktizování (např. za účelem získání podpory elektorátu, politického pozice, převahy ve sněmovně, nebo aby prošel nějaký zákon); d) jak si vedou politické strany v průzkumech; e) v jazykové rovině: metaforika války a zápasů? Kladením důrazu se zde myslí, že daný aspekt není zastoupen pouze marginálně. Věcné informování o veřejných politikách: Jsou hlavním tématem článku záležitosti veřejných politik (angl. policy, personální záležitosti nejsou policies) A ZÁROVEŇ PLATÍ, NĚCO Z NÁSLEDUJÍCÍHO: a) článek obsahuje popis podstaty/náplni legislativy a legislativních návrhů nebo jiných vládních programů; b) článek uvádí postoje nebo prohlášení politiků týkající se veřejných politik; c) článek tematizuje implikace nebo dopady legislativy nebo legislativních návrhů pro veřejnost? *Veřejná politika - aktivity a rozhodnutí vlády či jiných aktérů, která ovlivňují život společnosti. Hlavní žurnalistická funkce článku: Identifikuj hlavní žurnalistickou funkci zprávy. Funkce, které jsou uvedené níže, jsou seřazené dle míry přítomnosti „hlasu novináře“. Pro celý článek zvol nejvyšší zastoupenou kategorii, například pokud článek informoval o aktuálních faktech a zároveň vysvětloval jejich význam pro občany, kóduj 3. Postupuj následovně: Než určíš hlavní funkci celé zprávy, identifikuj postupně žurnalistickou funkci každého ODSTAVCE a zamysli se, zda článek naplňuje danou funkci VE VZTAHU K TÉMATU/UDÁLOSTI/PROBLÉMU, O KTERÉM POJEDNÁVÁ. Rozmanitost zdrojů a úhlů pohledu: Vycházíme z předpokladu, že zdroje s přístupem do zprávy přináší pohledy/stanoviska k danému problému/tématu. Představuje zpráva různé zdroje a různé pohledy/stanoviska zdrojů na konkrétní problém? Prezentace protichůdných hledisek: Prezentace protichůdných hledisek Použití odborných zdrojů: Odborný zdroj je nestranná  osoba s patřičnou expertizou, typicky expert, může být i studie. Politici a zájmové skupiny ne, i když půjde o osoby s patřičnou expertizou či vzděláním. Odkaz na výzkum není postačující - viz rozdíl mezi článkem na základě výzkumné zprávy a článkem, kde se navíc použije výpovědi výzkumníků. Použití citací a parafrází: Použití citací a parafrází Obracená pyramida: Obracená pyramida - nejdříve tvrdá fakta  - nejdříve nejdůležitější informace - odpovědi na novinářské otázky kdo, co, kdy, kde pak rozšiřující informace a výpovědi aktérů, pak kontextuální informace a další souvislosti. Oddělení fakt od názorů: Oddělení fakt od názorů. Fakta jsou skutková tvrzení a reprodukce výpovědi zdrojů s přístupem do zpráv. Také, pokud novinář interpretuje/analyzuje např. ve smyslu pojmenování kauzálního vztahu (příčin, následků) nebo např. významnost události A vychází z faktů nebo objektivních indikátorů uvedených v článku. - např. označí demonstraci za „velkou“ na základě uvedených údajů o počtu demonstrujících - nekódujeme ANO. Pokud usuzuje na základě nepodložených údajů a fakt, kódujeme NE. NÁZOR je subjektivní, nemůže být ověřen. Obvykle ve smyslu hodnocení na škálách negativní - pozitivní a žádoucí - nežádoucí. Negativita: Negativní vyznění je CELKOVÉ vyznění zprávy (bez ohledu na povahu události) pesimistické? Celkové vyznění obvykle vzniká souhrnným vyzněním výroků zdrojů s přístupem do zpráv, případně také tvůrců zprávy (např. způsob formulace titulku), nikoli na základě ojedinělého výroku. Negativní vyznění je indikované ZARÁMOVÁNÍM události jedním z následujících způsobů: politické selhání, fiasko, katastrofa, krize, frustrace, kolaps, propadák, odmítnutí, zanedbání, selhání, zhoršení, rezignovanost, skepse, defétismus nebo zklamání, existence hrozby. Negativní vyznění se liší od ostatních kategorií negativity (konflikt, nekompetence, skandál) tím, že KVALITA NEGATIVITY není spojovaná s konkrétním aktérem (např. politická strana) - tedy např. nejedná se o politické selhání konkrétního politika - ale pokud článek pojednává o neúspěšném politickém summitu, kde se politici na ničím nedohodli, tak ANO. Také představa negativního vývoje politické situace (bez ohledu na to, zda realistická, možná, pravděpodobná) - PŘEVLÁDAJÍ negativní výhledy a scénáře, skeptické názory, negativní očekávání nebo potenciální hrozby. Konflikt: Článek SE ZAMĚŘUJE NA/VYZDVIHUJE konfliktní povahu události - konflikt není tedy výhradně charakteristikou události, ale také rysem konkrétního způsobu vyprávění o události. Buď POLITICKÝ konflikt, spor, neshoda, střet stanovisek a názorů, vzájemných útoků, anebo konflikt mezi politickými aktéry, případně politickými aktéry a jinými aktéry. Musí být zřejmé přinejmenším dvě strany konfliktu. Z hlediska vývoje konfliktu se může se jednat o pokus o, zahájení, průběh nebo ukončení konfliktu. Politická nekompetence: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE selhání/neschopnost/nekompetenci politických aktérů. Přináší především (nejedná se o marginální zmínku) informace o kritice, útocích, obviněních z nesprávného jednání, moralizujících obvinění, obvinění z protizákonného jednání, obvinění z neschopnosti nebo nekompetence. Na rozdíl od negativního vyznění ukazuje na konkrétního aktéra coby zdroj selhání apod. Na rozdíl od konfliktu je kritika jednosměrná/jednostranná. Politický skandál: Zpráva SE ZAMĚŘUJE NA/VYZDVIHUJE údajné skandály politiků nebo politických institucí. Senzacechtivým a emotivním (pobouření) způsobem popisuje odhalené porušení standardů jednání nebo nemorální chování. Na rozdíl od politické nekompetence se jedná o intenzitou kritiky - tedy jde o rámování POLITICKÉ NEKOMPETENCE coby kauzy nebo skandálu - nejde o povahu události, ale o to, jak byla podaná. Dopad na každodenní život: Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo události PRO každodenní život lidí nebo nějaké skupiny lidí? Například zpráva o změně klimatu, ve které novinář zdůrazňuje, že společnost bude muset změnit způsob, jímž vyrábí energii (celospolečenský význam), by do této kategorie nespadala. Zpráva na stejné téma, která uvádí, že lidé budou muset každý měsíc platit více za elektřinu, už ANO. Podobně, pokud existuje zpráva, která říká pouze to, že cena plynu zítra poroste, nekvalifikuje se jako ANO. Jako ANO by se kvalifikovalo, kdyby novinář například uvedl, že kvůli tomuto nárůstu budou mít lidé méně peněz na utrácení za jiné věci, nebo že se tím zvýší i ceny veřejné dopravy, zdraží lidem cestování po městě nebo dovolené atd. Tipy a rady k obtěžujícím okolnostem: Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Tipy a rady pro problémy jedince: Poskytuje článek tipy, varování nebo praktické rady k řešení problémů, se kterými by se čtenáři mohli potenciálně potýkat v každodenním životě? Například, jak cvičit, jak dobře jíst a čeho se vyvarovat abyste zůstali zdraví, jak chytře nakupovat a ušetřit peníze, jak investovat a zajistit si úspory a bezpečný důchod atd.? Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka. Informace/rady pro spotřebitele: Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný. Personalizace: Poskytuje článek konkrétní informace týkající se jedné nebo vícera osob a jejich různých intelektuálních, fyzických, mentálních, sociálních charakteristik (tj. dovednosti, vzhled, schopnosti) nebo osobního zázemí (kde pracovali, studovali, jejich jméno, rodinný stav, atd.)? Pouhé uvedení jména a/nebo pozice osoby, případně fotografie zobrazující osobu k zařazení do této kategorie nestačí. Zpráva, která obsahuje více fotografií stejné osoby, ANO. Soukromý život: Pojednává zpráva o soukromém životu jednoho nebo více jednotlivců? Soukromý život zahrnuje ty aspekty života člověka, které neodpovídají oblastem veřejného zájmu a/nebo nepatří do kontextu veřejné sféry a které lidé obvykle preferují udržovat ve své osobní sféře. Mezi příklady patří článek o tom, jakým je otcem prezident země, nebo o mládí a minulosti slavného podnikatele. Další příklady by se mohly týkat mimo jiné koníčků, záležitostí milostného života, minulosti nebo dovolené. Pokud se zpráva obecně zmiňuje o rodině osoby ve veřejném kontextu (například „muž obviněný z vraždy se zúčastnil soudu se svou manželkou“ nebo „prezident složil přísahu 15. května v doprovodu svých dětí “), nemělo by to být považováno za soukromý život. Pokud se ale zpráva zmiňuje o rodině osoby v soukromém kontextu (například snímek pořízený paparazzi, na kterém je sportovní postava na dovolené o samotě nebo s manželkou, manželem, dětmi, milencem atd., nebo zprávy týkající se osobního života rodiny někoho, by měly být považovány za soukromý život).  Senzačnost: Zahrnuje zpráva použití stylových prvků nebo způsobů popisu, které zdůrazňují/vyzdvihují neobvyklý, mimořádný nebo velkolepý charakter události? Prostředky konstrukce senzačnosti mohou být  metafory, nadsázka, použití dramatizujících superlativních přídavných jmen nebo narativní postupy zvyšující napětí. Grafické prostředky: použití zkreslených nebo falešných obrazů nebo například použití přehnaných obrazů. Rozdíl oproti obyčejnému popisu je ilustrován následujícími příklady: „barbarský zločin“ by měl být kódován jako senzacechtivý, zatímco „barevný ceremoniál“ nebo „distingovaný prezident“ nikoli. Emoce: Obsahuje zpráva explicitní zmínky o pocitech nebo emocích? Prvky obvykle zahrnuté v této kategorii jsou obecné popisy různých emocí a autorova vlastního emočního stavu, jako je mimo jiné úzkost, vztek, smutek, sebejistota, rozpaky, radost, znechucení, strach a euforie. Zmiňuje zpráva explicitně nebo zahrnuje pocity nebo emoce prostřednictvím textových, nebo obrazových prvků? Odborná literatura definuje šest základních emocí: hněv, znechucení, strach, štěstí, smutek a překvapení. Ve zprávách mohou být emoce přítomné tak, že novinář popisuje emoční stav lidí a/nebo předkládá obrazy, které zobrazují lidi v takových emočních stavech. Obrazy mohou často zobrazovat emoce, které prožívají jednotlivci, o nichž zpráva pojednává. Mezi typické obrazy v této kategorii patří lidé, kteří pláčou, křičí, vyjadřují hněv nebo zoufalství, řvou smíchy atd. Na fotografiích přítomnost emocí indikuje teprve střední až vysoká úroveň exprese, takže například prostý úsměv nižší intenzity by se jako emoce nepočítal. Morbidnost: Usiluje zpráva získat pozornost publika prostřednictvím textových nebo obrazových prvků, které popisují nebo zobrazují násilné činy, zločin, extrémní chudobu nebo sexuální scény/skandál, s uvedením konkrétních podrobností? Tyto prvky se musí nacházet v titulku, leadu na fotografii nebo jiných exponovaných místech v článku (získávání pozornosti), určitě se nejedná o marginální přítomnost. Pojem morbidita může být v různých kulturách vnímán a interpretován různě. Měli byste to používat tak, jak by se to považovalo ve vaší kultuře. Reakce občanů: Zahrnuje zpráva postoje/reakce běžných občanů nebo organizovaných skupin občanů (včetně profesních) na téma nebo událost, tím že ukazuje, jak vnímají veřejné záležitosti a politická rozhodnutí nebo jak se snaží tato rozhodnutí ovlivňovat? Mohou být zahrnuty citované výpovědi občanů nebo odkazy na ně. Požadavky  občanů: Obsahuje zprava požadavky běžných občanů nebo občanů organizovaných do skupin, nebo jimi formulované návrhy týkající se různých veřejných záležitostí a politických rozhodnutí? Požadavky občanů mohou být zahrnuté prostřednictvím přímých nebo nepřímých citací nebo odkazů na ně, může se také jednat o uvedení důvodů pro demonstraci. Validace občanských požadavků: Validace občanských požadavků. Obsahuje zpráva informace jako jsou vlastní prohlášení novináře, názor jiného zdroje nebo odkaz k důkazům, které validují to, co občané tvrdí nebo co požadují? Validace se může také projevit tím, že ve zprávě nebudou uvedené názory nebo fakta, které problematizují nebo zpochybňují požadavky občanů. Lokální dopad: Lokální dopad zmiňuje zpráva nebo zobrazuje dopad určitých politických rozhodnutí na poměry v daném prostředí. Geograficky definované společnosti mohou mimo jiné zahrnovat města, oblasti, obce apod. Vzdělávání o povinnostech a právech: Vzdělávání o povinnostech a právech. Informuje zpráva lidi o jejich občanských povinnostech a právech (ekonomických, sociálních a/nebo politických)? Například, když vláda poskytuje dotaci a zpráva informuje, kam jít, nebo jak vysvětlit neúčast voličů. Informace o kontextu a pozadí: Informace o kontextu a pozadí. Poskytuje zprava informace o politickém, ekonomickém nebo společenským kontextu, které umožňují občanům informované ROZHODOVÁNÍ A PARTICIPACI (účastnit se voleb a volit, sdružovat se v rámci politických stran a podporovat je, účastnit se demonstrací; podpořit politický protest, stávku; pochopit, jak mohou být jejich komunity ovlivněny politickým rozhodnutími atd. - přidat formování politických postojů?)? Informace o kontextu a pozadí události lze odlišit od informací o aktuálních událostech. Zahrnuje více specifičnosti, pokud jde o poskytované informace, a tak poskytuje podstatný politický, ekonomický nebo společenské souvislosti k událostem, o kterých zpráva pojednává. Zahrnuje zdroje, které vysvětlují stanoviska nebo rozhodnutí politických aktérů (např. jak se dříve chovali), důvodů demonstrací nebo cílů skupin občanů atd. Dotazy od občanů: Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně. Informace o participaci a angažovanosti občanů: Poskytuje novinář ve zprávě informace o aktivitách občanů, jako jsou kampaně, kolektivní akce, petice, vzpomínkové akce, demonstrace a protesty? Obvykle tento typ článků obsahuje informace o tom, kde a kdy k těmto činnostem došlo, a může také vysvětlovat význam těchto činů pro společnosti. Podpora občanských hnutí: Podpora občanských hnutí - binary Obsahuje zpráva informace, jako jsou vlastní prohlášení novináře, názor zdrojů nebo odkaz na důkazy, které podporují cíle občanského sdružení nebo hnutí, a/nebo staví organizaci jako pozitivní příklad k následování?. For every question pick only options from these lists.\nkritérium: vyhovující (Článek nesplňuje ani jedno z ostatních kritérié a může se použít.), nezpravodajský (nejedná se o zpravodajský článek (názorové články, zpravodajský rozhovor/anketa)), krátký (Článek není delší než jeden odstavec (jednosloupek/jedňák)), zahraniční (Článek nebyl publikován v rubrice s domácím zpravodajství (ovšem s vyjmou tematicky zaměřených rubrik - např. Ekonomika/trh, Kultura apod.) nebo na titulní straně a v takovém případě se nesmí týkat vnitrostátního politického dění NEBO událostí a situací, které se neodehrávají nebo neexistují v rámci jedné konkrétní země - ČR.)\nPočet odstavců: 1 (Článek má rozsah 1 odstavec.), 2 (Článek má rozsah 2 odstavce.), 3 (Článek má rozsah 3 odstavce.), 4 (Článek má rozsah 4 odstavce.), 5 (Článek má rozsah 5 odstavců.), 6 (Článek má rozsah 6 odstavců.), 7 (Článek má rozsah 7 odstavců.), 8 (Článek má rozsah 8 odstavců.), 9 (Článek má rozsah 9 odstavců.), 10 (Článek má rozsah 10 odstavců.), 11 (Článek má rozsah 11 odstavců.), 12 (Článek má rozsah 12 odstavců.), 13 (Článek má rozsah 13 odstavců.), 14 (Článek má rozsah 14 odstavců.), 15 (Článek má rozsah 15 odstavců.), 16 (Článek má rozsah 16 odstavců.), 17 (Článek má rozsah 17 odstavců.), 18 (Článek má rozsah 18 odstavců.), 19 (Článek má rozsah 19 odstavců.), 20 (Článek má rozsah 20 odstavců.), 21 (Článek má rozsah 21 odstavců.), 22 (Článek má rozsah 22 odstavců.), 23 (Článek má rozsah 23 odstavců.), 24 (Článek má rozsah 24 odstavců.), 25 (Článek má rozsah 25 odstavců.)\nMimořádná nebo aktuální událost velkého významu: Ne (Ne), Ano (Ano)\nPolitická zpráva: Ne (Ne), Ano (Ano)\nSoukromý rámec: Ne (Ne), Ano (Ano)\nStrategické zarámování: Ne (Ne), Ano (Ano)\nVěcné informování o veřejných politikách: Ne (Ne), Ano (Ano)\nHlavní žurnalistická funkce článku: aktuálních fakta a události (Informuje o aktuálních faktech a událostech. Obsahuje pouze empirická a skutková tvrzení, případně reprodukuje či shrnuje výpovědi/stanoviska politických aktérů. Novináři nepoužívají přídavná jména či přívlastky ani příslovce vyjadřující subjektivní hodnocení nebo normativní soudy.), kontextuální informace (Poskytuje kontextuální informace o pozadí události. Kontextuální informaci lze identifikovat na základě časového rozdílu vůči události, která je tématem článku. Může být také odkaz na existující zákony, zvyklosti, pravidla, které rámují situaci. Mělo by jít min. o celý odstavec.), interpretace (Analyzuje nebo obsahuje interpretaci. Analýzou a interpretací se zde rozumí druh empirických tvrzení, jehož obsahem není popis aktuálních fakt, okolností nebo historického kontextu, nýbrž jejich vysvětlení, úvaha o jejich významu/významnosti, následcích, příčinách nebo motivacích aktérů. Analýza/interpretace by měla pocházet od autora zprávy nebo od experta. Její předmětem musí být hlavní téma/událost/problém popisovaný ve zprávě. Také investigace, odhalování a konfrontování (angl. questioning).), názory (Vyjádření názorů. Zde se názorem myslí subjektivní hodnotící soud, ve smyslu hodnocení na škálách - negativní - pozitivní a žádoucí - nežádoucí. Musí být vysloven autorem zprávy (tedy NE citované a parafrázované výpovědi zdroje). Někdy bývá přítomný pouze v titulku, který nabízí interpretační rámec pro informace a tvrzení či implikace obsažené  v článku. Také zpochybňování zásadnosti, kritika. Předmětem hodnocení musí být hlavní téma/událost/problém popisovaný ve zprávě.)\nRozmanitost zdrojů a úhlů pohledu: absence zdrojů a úhlů pohledu (Absence zdrojů a úhlů pohledu. Téma zprávy nezahrnuje zdroje.), jednostrannost (Jednostranné pokrytí. Zpráva obsahuje pouze jeden zdroj nebo pouze zdroje a pohledy z jedné strany.), různé úhly pohledu (Přítomnost různých (ne nutně protikladných) úhlů pohledu v příběhu. Zpráva obsahuje různé zdroje a úhly pohledu.)\nPrezentace protichůdných hledisek: Ne (Ne), Ano (Ano)\nPoužití odborných zdrojů: Ne (Ne), Ano (Ano)\nPoužití citací a parafrází: Ne (Ne), Ano (Ano)\nObracená pyramida: Ne (Ne), Ano (Ano)\nOddělení fakt od názorů: Ne (Ne), Ano (Ano)\nNegativita: Ne (Ne), Ano (Ano)\nKonflikt: Ne (Ne), Ano (Ano)\nPolitická nekompetence: Ne (Ne), Ano (Ano)\nPolitický skandál: Ne (Ne), Ano (Ano)\nDopad na každodenní život: Ne (Ne), Ano (Ano)\nTipy a rady k obtěžujícím okolnostem: Ne (Ne), Ano (Ano)\nTipy a rady pro problémy jedince: Ne (Ne), Ano (Ano)\nInformace/rady pro spotřebitele: Ne (Ne), Ano (Ano)\nPersonalizace: Ne (Ne), Ano (Ano)\nSoukromý život: Ne (Ne), Ano (Ano)\nSenzačnost: Ne (Ne), Ano (Ano)\nEmoce: Ne (Ne), Ano (Ano)\nMorbidnost: Ne (Ne), Ano (Ano)\nReakce občanů: Ne (Ne), Ano (Ano)\nPožadavky  občanů: Ne (Ne), Ano (Ano)\nValidace občanských požadavků: Ne (Ne), Ano (Ano)\nLokální dopad: Ne (Ne), Ano (Ano)\nVzdělávání o povinnostech a právech: Ne (Ne), Ano (Ano)\nInformace o kontextu a pozadí: Ne (Ne), Ano (Ano)\nDotazy od občanů: Ne (Ne), Ano (Ano)\nInformace o participaci a angažovanosti občanů: Ne (Ne), Ano (Ano)\nPodpora občanských hnutí: Ne (Ne), Ano (Ano)\n\nYou will pick one option for these questions: kritérium, Počet odstavců, Mimořádná nebo aktuální událost velkého významu, Politická zpráva, Soukromý rámec, Strategické zarámování, Věcné informování o veřejných politikách, Hlavní žurnalistická funkce článku, Rozmanitost zdrojů a úhlů pohledu, Prezentace protichůdných hledisek, Použití odborných zdrojů, Použití citací a parafrází, Obracená pyramida, Oddělení fakt od názorů, Negativita, Konflikt, Politická nekompetence, Politický skandál, Dopad na každodenní život, Tipy a rady k obtěžujícím okolnostem, Tipy a rady pro problémy jedince, Informace/rady pro spotřebitele, Personalizace, Soukromý život, Senzačnost, Emoce, Morbidnost, Reakce občanů, Požadavky  občanů, Validace občanských požadavků, Lokální dopad, Vzdělávání o povinnostech a právech, Informace o kontextu a pozadí, Dotazy od občanů, Informace o participaci a angažovanosti občanů, Podpora občanských hnutí. You will pick one or more options for these prompts: .\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": {
+        "properties": {
+          "kritérium": {
+            "enum": [
+              "vyhovující",
+              "nezpravodajský",
+              "krátký",
+              "zahraniční"
+            ],
+            "title": "Kritérium",
+            "type": "string"
+          },
+          "Počet odstavců": {
+            "enum": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25"
+            ],
+            "title": "Počet Odstavců",
+            "type": "string"
+          },
+          "Mimořádná nebo aktuální událost velkého významu": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Mimořádná Nebo Aktuální Událost Velkého Významu",
+            "type": "string"
+          },
+          "Politická zpráva": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Zpráva",
+            "type": "string"
+          },
+          "Soukromý rámec": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Rámec",
+            "type": "string"
+          },
+          "Strategické zarámování": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Strategické Zarámování",
+            "type": "string"
+          },
+          "Věcné informování o veřejných politikách": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Věcné Informování O Veřejných Politikách",
+            "type": "string"
+          },
+          "Hlavní žurnalistická funkce článku": {
+            "enum": [
+              "aktuálních fakta a události",
+              "kontextuální informace",
+              "interpretace",
+              "názory"
+            ],
+            "title": "Hlavní Žurnalistická Funkce Článku",
+            "type": "string"
+          },
+          "Rozmanitost zdrojů a úhlů pohledu": {
+            "enum": [
+              "absence zdrojů a úhlů pohledu",
+              "jednostrannost",
+              "různé úhly pohledu"
+            ],
+            "title": "Rozmanitost Zdrojů A Úhlů Pohledu",
+            "type": "string"
+          },
+          "Prezentace protichůdných hledisek": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Prezentace Protichůdných Hledisek",
+            "type": "string"
+          },
+          "Použití odborných zdrojů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Odborných Zdrojů",
+            "type": "string"
+          },
+          "Použití citací a parafrází": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Použití Citací A Parafrází",
+            "type": "string"
+          },
+          "Obracená pyramida": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Obracená Pyramida",
+            "type": "string"
+          },
+          "Oddělení fakt od názorů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Oddělení Fakt Od Názorů",
+            "type": "string"
+          },
+          "Negativita": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Negativita",
+            "type": "string"
+          },
+          "Konflikt": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Konflikt",
+            "type": "string"
+          },
+          "Politická nekompetence": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politická Nekompetence",
+            "type": "string"
+          },
+          "Politický skandál": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Politický Skandál",
+            "type": "string"
+          },
+          "Dopad na každodenní život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dopad Na Každodenní Život",
+            "type": "string"
+          },
+          "Tipy a rady k obtěžujícím okolnostem": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady K Obtěžujícím Okolnostem",
+            "type": "string"
+          },
+          "Tipy a rady pro problémy jedince": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Tipy A Rady Pro Problémy Jedince",
+            "type": "string"
+          },
+          "Informace/rady pro spotřebitele": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace/Rady Pro Spotřebitele",
+            "type": "string"
+          },
+          "Personalizace": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Personalizace",
+            "type": "string"
+          },
+          "Soukromý život": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Soukromý Život",
+            "type": "string"
+          },
+          "Senzačnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Senzačnost",
+            "type": "string"
+          },
+          "Emoce": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Emoce",
+            "type": "string"
+          },
+          "Morbidnost": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Morbidnost",
+            "type": "string"
+          },
+          "Reakce občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Reakce Občanů",
+            "type": "string"
+          },
+          "Požadavky  občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Požadavky  Občanů",
+            "type": "string"
+          },
+          "Validace občanských požadavků": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Validace Občanských Požadavků",
+            "type": "string"
+          },
+          "Lokální dopad": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Lokální Dopad",
+            "type": "string"
+          },
+          "Vzdělávání o povinnostech a právech": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Vzdělávání O Povinnostech A Právech",
+            "type": "string"
+          },
+          "Informace o kontextu a pozadí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Kontextu A Pozadí",
+            "type": "string"
+          },
+          "Dotazy od občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Dotazy Od Občanů",
+            "type": "string"
+          },
+          "Informace o participaci a angažovanosti občanů": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Informace O Participaci A Angažovanosti Občanů",
+            "type": "string"
+          },
+          "Podpora občanských hnutí": {
+            "enum": [
+              "Ne",
+              "Ano"
+            ],
+            "title": "Podpora Občanských Hnutí",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kritérium",
+          "Počet odstavců",
+          "Mimořádná nebo aktuální událost velkého významu",
+          "Politická zpráva",
+          "Soukromý rámec",
+          "Strategické zarámování",
+          "Věcné informování o veřejných politikách",
+          "Hlavní žurnalistická funkce článku",
+          "Rozmanitost zdrojů a úhlů pohledu",
+          "Prezentace protichůdných hledisek",
+          "Použití odborných zdrojů",
+          "Použití citací a parafrází",
+          "Obracená pyramida",
+          "Oddělení fakt od názorů",
+          "Negativita",
+          "Konflikt",
+          "Politická nekompetence",
+          "Politický skandál",
+          "Dopad na každodenní život",
+          "Tipy a rady k obtěžujícím okolnostem",
+          "Tipy a rady pro problémy jedince",
+          "Informace/rady pro spotřebitele",
+          "Personalizace",
+          "Soukromý život",
+          "Senzačnost",
+          "Emoce",
+          "Morbidnost",
+          "Reakce občanů",
+          "Požadavky  občanů",
+          "Validace občanských požadavků",
+          "Lokální dopad",
+          "Vzdělávání o povinnostech a právech",
+          "Informace o kontextu a pozadí",
+          "Dotazy od občanů",
+          "Informace o participaci a angažovanosti občanů",
+          "Podpora občanských hnutí"
+        ],
+        "title": "ResponseFormat",
+        "type": "object"
+      }
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: 1.26. Zeman byl u zrodu nové strany Jany Volfové\nTISK , Datum: 02.04.2007 , Zdroj: Právo , Strana: 1 , Autor: Jiří Jíra , Vytištěno: 211 017 , Prodáno: 153 477 , Infotype: Nepojmenováno , Datum importu:\n01.01.0001 00:00 , Čtenost: 274 441 , Rubrika: Titulní  strana , Země: Česko , GRP: 3,05\nExpremiér Miloš Zeman a bývalá poslankyně soc. dem. Jana Volfová se v sobotu podle očekávání stali „rodiči“ nové politické\nstrany.\nNarodila se v Jihlavě, nese název Strana důstojného života (SDŽ) a její předsedkyní se stala Volfová, zatímco Zeman, který\nnedávno opustil ČSSD a bydlí třicet kilometrů od Jihlavy, vymyslel název a bude Volfové radit.\n„Dění na politické scéně tady dnes opravdu komentovat nebudu,“ poznamenal Zeman po svém příjezdu. „Slíbil jsem, že přijedu,\nkdyž se Jana Volfová stane předsedkyní, proto jsem tady,“ řekl host sjezdu, jehož vítaly fanfáry.\nV předsednictvu sjezdu seděl jako host bývalý ministr školství a exposlanec soc. dem. Eduard Zeman.\nVolba Volfové předsedkyní nebyla překvapivá. Jediná kandidátka získala 136 hlasů od 149 hlasujících ze 158 delegátů, třináct\nhlasovacích lístků bylo neplatných.\n\nO názvu se hlasovalo\n\nNázev strany vybírali delegáti z pěti návrhů. Jasně nejvíc hlasů, 115, získal ten, který poradil právě Zeman. Ten členství v nové\nstraně už dříve odmítl a na tom trvá, radit Volfové bude ale nejspíš i do budoucna.\n„Milošovi Zemanovi budu vděčná za každou radu,“ ujišťovala Volfová.\nDo její nové strany zatím nechce ani poslanec Miloš Melčák, který byl vyloučen z ČSSD kvůli toleranci pravicové vlády Mirka\nTopolánka. Během sjezdu poslal přesto dvě pozdravné textové zprávy. Neúčast mezi pozvanými hosty omluvil rodinnou\noslavou. Na sjezdu se neobjevil žádný poslanec ČSSD.\nMístopředseda soc. dem. Zdeněk Škromach vylučuje, že by mohl někdo z poslanců přeběhnout k Volfové. „Určitě chtějí být\nznovu zvoleni do parlamentu a určitě se budou držet strany, která jim tu možnost dává,” řekl Právu.\nPředsedu ČSSD Jiřího Paroubka překvapilo, že se Volfová, která je obviněna policií z porušování povinností při správě cizího\nmajetku, pouští do nového projektu. „Myslel jsem si, že presumpce viny je respektovaná alespoň levicovými politiky, což zřejmě\nJana Volfová není,“ řekl."
+    },
+    {
+      "role": "assistant",
+      "content": {
+        "kritérium": "vyhovující",
+        "Počet odstavců": "2",
+        "Mimořádná nebo aktuální událost velkého významu": "Ano",
+        "Politická zpráva": "Ano",
+        "Soukromý rámec": "Ne",
+        "Strategické zarámování": "Ne",
+        "Věcné informování o veřejných politikách": "Ano",
+        "Hlavní žurnalistická funkce článku": "aktuálních fakta a události",
+        "Rozmanitost zdrojů a úhlů pohledu": "různé úhly pohledu",
+        "Prezentace protichůdných hledisek": "Ano",
+        "Použití odborných zdrojů": "Ne",
+        "Použití citací a parafrází": "Ano",
+        "Obracená pyramida": "Ne",
+        "Oddělení fakt od názorů": "Ano",
+        "Negativita": "Ano",
+        "Konflikt": "Ano",
+        "Politická nekompetence": "Ne",
+        "Politický skandál": "Ne",
+        "Dopad na každodenní život": "Ne",
+        "Tipy a rady k obtěžujícím okolnostem": "Ne",
+        "Tipy a rady pro problémy jedince": "Ne",
+        "Informace/rady pro spotřebitele": "Ne",
+        "Personalizace": "Ne",
+        "Soukromý život": "Ne",
+        "Senzačnost": "Ne",
+        "Emoce": "Ne",
+        "Morbidnost": "Ne",
+        "Reakce občanů": "Ne",
+        "Požadavky  občanů": "Ne",
+        "Validace občanských požadavků": "Ne",
+        "Lokální dopad": "Ne",
+        "Vzdělávání o povinnostech a právech": "Ne",
+        "Informace o kontextu a pozadí": "Ano",
+        "Dotazy od občanů": "Ne",
+        "Informace o participaci a angažovanosti občanů": "Ne",
+        "Podpora občanských hnutí": "Ne"
+      }
+    }
+  ]
+}
