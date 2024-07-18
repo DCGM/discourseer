@@ -1,4 +1,5 @@
 from typing import List, Dict
+import logging
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,6 +8,7 @@ from matplotlib.patches import Rectangle
 
 from discourseer.inter_rater_reliability import IRRResult, IRRResults, IRRVariants
 
+logger = logging.getLogger()
 
 def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str]):
     # Loop over data points; create box from errors at each point
@@ -57,6 +59,9 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
 
 
 def visualize_results(results: IRRResults, location: str = None, metric: str = 'gwet_ac1'):
+    if results.is_empty():
+        logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
+        return
     results = results.to_dict_of_results()
     majority_agreements = [k.majority_agreement for k in results.values()]
     results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only gwet_ac1

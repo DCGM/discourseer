@@ -84,6 +84,9 @@ class IRRResults(pydantic.BaseModel):
                 results['prompts'][key] = result.get_metric(metric)
         return results
 
+    def is_empty(self) -> bool:
+        return self.overall.fleiss_kappa.without_model is None
+
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
         return utils.json_file_to_pydantic(file, cls)
