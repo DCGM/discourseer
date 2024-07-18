@@ -277,9 +277,9 @@
         }
       ]
     },
-    "citace_a_prafráze": {
+    "citace_a_parafraze": {
       "name": "Použití citací a parafrází",
-      "question_id": "citace_a_prafráze",
+      "question_id": "citace_a_parafraze",
       "description": "Použití citací a parafrází",
       "options": [
         {
