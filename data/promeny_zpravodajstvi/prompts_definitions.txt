@@ -96,7 +96,7 @@ Pojednává článek o DOPADECH nebo VÝZNAMU, který mají určitá fakta nebo 
 0 = Ne
 1 = Ano 
 
-rady: Tipy a rady k obtěžujícím okolnostem - binary
+obtezujici_okolnosti: Tipy a rady k obtěžujícím okolnostem - binary
 Tipy a rady (k obtěžujícím okolnostem). Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.
 0 = Ne
 1 = Ano 
@@ -106,7 +106,7 @@ Poskytuje článek tipy, varování nebo praktické rady k řešení problémů,
 0 = Ne
 1 = Ano 
 
-informace: Informace/rady pro spotřebitele - binary
+rady: Informace/rady pro spotřebitele - binary
 Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný.
 0 = Ne
 1 = Ano 
@@ -168,6 +168,11 @@ Informace o kontextu a pozadí. Poskytuje zprava informace o politickém, ekonom
 
 dotazy: Dotazy od občanů - binary
 Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně. 
+0 = Ne 
+1 = Ano
+
+informace: Informace o participaci a angažovanosti občanů - binary
+Poskytuje novinář ve zprávě informace o aktivitách občanů, jako jsou kampaně, kolektivní akce, petice, vzpomínkové akce, demonstrace a protesty? Obvykle tento typ článků obsahuje informace o tom, kde a kdy k těmto činnostem došlo, a může také vysvětlovat význam těchto činů pro společnosti. 
 0 = Ne 
 1 = Ano
 

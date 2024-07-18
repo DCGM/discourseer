@@ -46,27 +46,87 @@
         },
         {
           "name": "5",
-          "description": "Článek má rozsah 5 odstavce."
+          "description": "Článek má rozsah 5 odstavců."
         },
         {
           "name": "6",
-          "description": "Článek má rozsah 6 odstavce."
+          "description": "Článek má rozsah 6 odstavců."
         },
         {
           "name": "7",
-          "description": "Článek má rozsah 7 odstavce."
+          "description": "Článek má rozsah 7 odstavců."
         },
         {
           "name": "8",
-          "description": "Článek má rozsah 8 odstavce."
+          "description": "Článek má rozsah 8 odstavců."
         },
         {
           "name": "9",
-          "description": "Článek má rozsah 9 odstavce."
+          "description": "Článek má rozsah 9 odstavců."
         },
         {
           "name": "10",
-          "description": "Článek má rozsah 10 odstavce."
+          "description": "Článek má rozsah 10 odstavců."
+        },
+        {
+          "name": "11",
+          "description": "Článek má rozsah 11 odstavců."
+        },
+        {
+          "name": "12",
+          "description": "Článek má rozsah 12 odstavců."
+        },
+        {
+          "name": "13",
+          "description": "Článek má rozsah 13 odstavců."
+        },
+        {
+          "name": "14",
+          "description": "Článek má rozsah 14 odstavců."
+        },
+        {
+          "name": "15",
+          "description": "Článek má rozsah 15 odstavců."
+        },
+        {
+          "name": "16",
+          "description": "Článek má rozsah 16 odstavců."
+        },
+        {
+          "name": "17",
+          "description": "Článek má rozsah 17 odstavců."
+        },
+        {
+          "name": "18",
+          "description": "Článek má rozsah 18 odstavců."
+        },
+        {
+          "name": "19",
+          "description": "Článek má rozsah 19 odstavců."
+        },
+        {
+          "name": "20",
+          "description": "Článek má rozsah 20 odstavců."
+        },
+        {
+          "name": "21",
+          "description": "Článek má rozsah 21 odstavců."
+        },
+        {
+          "name": "22",
+          "description": "Článek má rozsah 22 odstavců."
+        },
+        {
+          "name": "23",
+          "description": "Článek má rozsah 23 odstavců."
+        },
+        {
+          "name": "24",
+          "description": "Článek má rozsah 24 odstavců."
+        },
+        {
+          "name": "25",
+          "description": "Článek má rozsah 25 odstavců."
         }
       ]
     },
@@ -337,9 +397,9 @@
         }
       ]
     },
-    "rady": {
+    "obtezujici_okolnosti": {
       "name": "Tipy a rady k obtěžujícím okolnostem",
-      "question_id": "rady",
+      "question_id": "obtezujici_okolnosti",
       "description": "Poskytuje zpráva tipy nebo praktické rady pro řešení každodenních problémů čtenářů, kterých zdrojem mohou být ostatní lidé nebo prostředí? Například, jak čelit hlučným sousedům, jak zacházet s neoprávněnými obviněními atd. Ačkoli to není nezbytnou podmínkou, zprávy, které mají tyto vlastnosti, často zahrnují odborný zdroj - odborníka, který se snaží pomoci vyřešit problém. Grafické prvky ve zprávě mohou ilustrovat tipy a rady novináře nebo odborníka.",
       "options": [
         {
@@ -367,9 +427,9 @@
         }
       ]
     },
-    "informace": {
+    "rady": {
       "name": "Informace/rady pro spotřebitele",
-      "question_id": "informace",
+      "question_id": "rady",
       "description": "Informuje zpráva čtenáře o nejnovějších trendech v produktech a službách dostupných na trhu nebo mu pomáhá rozlišovat mezi produkty různých kvalit na základě hodnocení třetí stranou, studie nebo recenze? Zdrojem hodnocení může být i novinář samotný.",
       "options": [
         {
@@ -551,6 +611,21 @@
       "name": "Dotazy od občanů",
       "question_id": "dotazy",
       "description": "Zahrnuje zpráva dotazy od obyčejných lidí pro politiky nebo příslušníky elit, kteří se podílejí na výkonu moci? Dotazy od občanů mohou být zahrnutý  prostřednictvím citací nebo odkazů na ně.",
+      "options": [
+        {
+          "name": "Ne",
+          "description": "Ne"
+        },
+        {
+          "name": "Ano",
+          "description": "Ano"
+        }
+      ]
+    },
+    "informace": {
+      "name": "Informace o participaci a angažovanosti občanů",
+      "question_id": "informace",
+      "description": "Poskytuje novinář ve zprávě informace o aktivitách občanů, jako jsou kampaně, kolektivní akce, petice, vzpomínkové akce, demonstrace a protesty? Obvykle tento typ článků obsahuje informace o tom, kde a kdy k těmto činnostem došlo, a může také vysvětlovat význam těchto činů pro společnosti.",
       "options": [
         {
           "name": "Ne",
