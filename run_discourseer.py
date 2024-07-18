@@ -69,8 +69,8 @@ def setup_logging(log_level: str, log_file: str):
 
 def main():
     args = parse_args()
-    log_file = 'experiments/tmp/logfile.log'
-    os.makedirs('experiments/tmp', exist_ok=True)
+    log_file = 'tmp/logfile.log'
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
     setup_logging(args.log, log_file)
     logging.debug(f"Python file location: {os.path.abspath(__file__)}")
     logging.debug(f"Arguments: {args}")
@@ -103,7 +103,6 @@ class Discourseer:
         self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.prompts = self.load_prompts(experiment_dir, prompt_definitions, prompt_subset)
-        logging.debug(f"Prompts: {self.prompts}\n\n")
         self.raters = self.load_raters(experiment_dir, ratings_dirs, self.prompts)
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings

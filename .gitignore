@@ -10,9 +10,13 @@ local/*
 test/test_topic_extractor/outputs/*
 experiments/*/output_*/*
 !experiments/*/output_IRR/*
+!experiments/*/*/output_IRR/*
 experiments/*/*/output_*/*
 experiments/*/*/*/output_*/*
-experiments/tmp/*
+tmp/*
+*/tmp/*
+*/*/tmp/*
+*/*/*/tmp/*
 test/test_out*.png
 .vscode/*
 
