@@ -6,6 +6,10 @@ import json
 import time
 from typing import List, Union
 
+import matplotlib.pyplot as plt
+import pandas as pd
+from irrCAC.raw import CAC
+
 from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
@@ -83,16 +87,74 @@ class Calculator:
             exit(0)
 
     def __call__(self):
-        irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
-        irr_results = irr_calculator()
+        self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
+        irr_results = self.irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
         utils.dict_to_json_file(irr_results.get_one_metric('krippendorff_alpha'),
                                 self.get_output_file('irr_results_krippendorff_alpha.json'))
 
+        self.export_prompt_option_results()
+
     def get_output_file(self, file_name: str):
         return os.path.join(self.output_dir, file_name)
+    
+    def export_prompt_option_results(self):
+        input_dir = self.irr_calculator.out_prompts_and_options_dir
+
+        if not os.path.isdir(input_dir):
+            raise ValueError(f'Input {input_dir} for export_prompt_option_results does not exist or is not a folder.')
+
+        out_dirname = input_dir + '_exported'
+        os.makedirs(out_dirname, exist_ok=True)
+
+        results_file = 'results.json'
+        results = {'kripp': [], 'gwet': []}
+
+        for file in os.listdir(input_dir):
+            if not file.endswith('.csv') or not os.path.isfile(os.path.join(input_dir, file)):
+                continue
+
+            file_path = os.path.join(input_dir, file)
+            out_file_name = os.path.join(out_dirname, file)
+
+            # print(f'\nLoading dataframe from {file_path}')
+            df = pd.read_csv(file_path)
+            if 'rating' in df.columns:
+                df.set_index(['file', 'rating'], inplace=True)
+            else:
+                df.set_index('file', inplace=True)
+
+            df = df.drop(columns=['majority', 'worst_case'])
+            df.replace({True: '1', False: '0'}, inplace=True)
+            df.fillna('', inplace=True)
+            df = df.astype(str)
+
+            cac = CAC(df)
+            results['kripp'].append(IRR.get_cac_metric(cac, 'krippendorff'))
+            # print(f'Krippendorff\'s alpha for this dataframe is: {results["kripp"][-1]}')
+
+            results['gwet'].append(IRR.get_cac_metric(cac, 'gwet'))
+            # print(f'Gwet\'s AC1 for this dataframe is: {results["gwet"][-1]}')
+
+            # save_to_export(df, input_file=input_dir)
+            df.to_csv(out_file_name, header=False, index=False)
+
+        print(f'\nResults[kripp]: {results["kripp"]}')
+        # json.dump(results, open(results_file, 'w'), indent=2)
+
+        # promitni krippendorff z rozsahu -1 až 1 na 0 až 1
+        # results['kripp'] = [(k + 1) / 2 for k in results['kripp']]
+
+        plt.scatter(results['kripp'], results['gwet'], alpha=0.5)
+        plt.xlabel('Krippendorff alpha (-1 až 1)')
+        plt.ylabel('Gwet AC1 (0 až 1)')
+        plt.xlim(0, 1)
+        plt.ylim(0, 1)
+        plt.tight_layout()
+        plt.savefig(os.path.join(out_dirname, 'results_scatter.png'))
+        plt.clf()
 
     @staticmethod
     def prepare_output_dir(output_dir: str = None) -> str:
