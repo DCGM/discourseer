@@ -24,6 +24,7 @@ def main():
     df = pd.read_csv(args.input).set_index('file')
 
     print(f'Recalculating IRR for dataframe:\n{df}')
+    df = df.astype(str)
     print(f'df.dtypes: {df.dtypes}')
     cac = CAC(df)
     kripp = IRR.get_cac_metric(cac, 'krippendorff')

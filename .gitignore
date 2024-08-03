@@ -1,5 +1,5 @@
 # Ignore local files
-local/*
+**/local/*
 
 .~lock.*
 .idea/
