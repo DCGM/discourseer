@@ -2,66 +2,66 @@
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.77462,
+      "with_model": 0.8021,
       "worst_case": 0.5671,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.77632,
+      "with_model": 0.8036,
       "worst_case": 0.57038,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.85381,
+      "with_model": 0.86994,
       "worst_case": 0.73183,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.848
+    "majority_agreement": 0.879
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.31644,
+      "with_model": 0.33607,
       "worst_case": 0.13005,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.37067,
+      "with_model": 0.39009,
       "worst_case": 0.19444,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.59832,
+      "with_model": 0.60539,
       "worst_case": 0.34108,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.656
+    "majority_agreement": 0.6665
   },
   "prompts": {
     "misto": {
       "fleiss_kappa": {
         "best_case": 0.92852,
-        "with_model": 0.85,
+        "with_model": 0.92852,
         "worst_case": 0.55514,
         "without_model": 0.90613
       },
       "krippendorff_alpha": {
         "best_case": 0.92926,
-        "with_model": 0.85156,
+        "with_model": 0.92926,
         "worst_case": 0.55978,
         "without_model": 0.90743
       },
       "gwet_ac1": {
         "best_case": 0.9706,
-        "with_model": 0.94231,
+        "with_model": 0.9706,
         "worst_case": 0.86398,
         "without_model": 0.96055
       },
-      "majority_agreement": 0.958
+      "majority_agreement": 1.0
     },
     "rozsah": {
       "fleiss_kappa": {
