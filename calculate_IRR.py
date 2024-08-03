@@ -99,7 +99,7 @@ class Calculator:
             exit(0)
 
     def __call__(self):
-        irr_calculator = IRR(self.raters, out_file=os.path.join(self.output_dir, 'dataframe.csv'))
+        irr_calculator = IRR(self.raters, out_dir=self.output_dir)
         irr_results = irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
