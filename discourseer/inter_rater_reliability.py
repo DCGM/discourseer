@@ -148,6 +148,7 @@ class IRR:
 
         self.input_columns = []
         self.model_columns = []
+        self.rater_columns = []
 
         self.option_results = {}
 
@@ -162,6 +163,7 @@ class IRR:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
             df = self.raters_to_dataframe(self.raters)
+        self.rater_columns = df.columns.difference([self.col_model]).to_list()
 
         df_before_cleaning = df.copy()
 
@@ -299,11 +301,16 @@ class IRR:
         return df_all
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        if self.col_model in df.columns:
-            df = df.dropna(subset=[self.col_model])
-
         rows_before = df.shape[0]
-        df = df[df.notna().all(axis=1)]
+
+        # if model column is present, remove rows with NaN in model column
+        if self.col_model in df.columns:
+            df = df[df[self.col_model].notna()]
+
+        # remove rows where all of self.rater_columns are NaN
+        print(f'droping na values from columns: {self.rater_columns}')
+        df = df.dropna(subset=self.rater_columns, how='all')
+
         removed_rows = rows_before - df.shape[0]
         logger.debug(f"Removed {removed_rows}/{rows_before} rows with NaN values.")
 
@@ -313,10 +320,23 @@ class IRR:
         df[self.col_worst_case] = IRR.WORST_CASE_VALUE
 
         df.reset_index(inplace=True)
-        df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = 'False'
+        # set worst case as opposite of majority agreement
+        df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = df[self.col_majority].apply(self.get_opposite_rating)
         df.set_index(['file', 'prompt_key', 'rating'], inplace=True)
 
+        df[self.col_worst_case] = df[self.col_worst_case].astype('string')
         return df
+    
+    @staticmethod
+    def get_opposite_rating(rating: str) -> str:
+        # check for NA first
+        if pd.isna(rating):
+            return rating
+        elif rating == 'True':
+            return 'False'
+        elif rating == 'False':
+            return 'True'
+        return rating
 
     def get_reorganized_raters(self) -> pd.DataFrame:
         return self.df.loc[:, self.input_columns]

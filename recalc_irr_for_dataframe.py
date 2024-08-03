@@ -22,9 +22,9 @@ def main():
 
     print(f'Loading dataframe from {args.input}')
     df = pd.read_csv(args.input).set_index('file')
-    # df = df.loc[['2023-11-19T17-52-00_2023WN323078.txt', '2023-11-23T11-32-00_2023WN327069.txt'], :]
-    # df = df.T
+
     print(f'Recalculating IRR for dataframe:\n{df}')
+    df = df.astype(str)
     print(f'df.dtypes: {df.dtypes}')
     cac = CAC(df)
     kripp = IRR.get_cac_metric(cac, 'krippendorff')

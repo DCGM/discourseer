@@ -1,6 +1,6 @@
 # Readme
 
-Files in this folder are made for future checking WITH EXTERNAL CALCULATORS.
+Files in this folder are made for future checking WITH EXTERNAL CALCULATORS. Created by `local/recalc_irr_for_dataframe_local.py` python script available outside of git.
 
 All files for specific option of multichoice question should have these headers and files (but different 0 or 1 values):
 
