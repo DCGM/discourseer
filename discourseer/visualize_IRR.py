@@ -56,7 +56,7 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
     return x, y, xerr, yerr, without_model_results, labels
 
 
-def visualize_results(results: IRRResults, location: str = None, metric: str = 'krippendorff'):
+def visualize_results(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
     results = results.to_dict_of_results()
     majority_agreements = [k.majority_agreement for k in results.values()]
     results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only given metric
