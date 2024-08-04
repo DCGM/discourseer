@@ -3,6 +3,7 @@
 import argparse
 import os
 
+import numpy as np
 import pandas as pd
 from typing import List
 from irrCAC.raw import CAC
@@ -23,20 +24,11 @@ def main():
     print(f'Loading dataframe from {args.input}')
     df = pd.read_csv(args.input).set_index('file')
 
+    df = df.replace({'nan': np.nan, 0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
+                     4.0: '4', 5.0: '5'})
+    df = df.astype('string')
+
     print(f'Recalculating IRR for dataframe:\n{df}')
-    df = df.astype(str)
-    print(f'df.dtypes: {df.dtypes}')
-    cac = CAC(df)
-    kripp = IRR.get_cac_metric(cac, 'krippendorff')
-    print(f'Krippendorff\'s alpha for this dataframe is: {kripp}')
-
-    gwet = IRR.get_cac_metric(cac, 'gwet')
-    print(f'Gwet\'s AC1 for this dataframe is: {gwet}')
-
-    # replace all True values to 1 and False values to 0
-    df = df.replace({True: 1, False: 0})
-    print(f'Recalculating IRR for dataframe after replacing True to 1 and False to 0:\n{df}')
-    print(f'df.dtypes: {df.dtypes}')
     cac = CAC(df)
     kripp = IRR.get_cac_metric(cac, 'krippendorff')
     print(f'Krippendorff\'s alpha for this dataframe is: {kripp}')
