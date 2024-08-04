@@ -185,6 +185,7 @@ class IRR:
 
         logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
         df.to_csv(self.out_dataframe)
+        # print(f'Calculating inter-rater reliability for df: \n{df}')
 
         overall_results = self.get_irr_result(df)
 
@@ -302,13 +303,15 @@ class IRR:
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
         rows_before = df.shape[0]
+        df = df.replace('nan', np.nan)
+        # replace 'nan' strings with NaN for calculating IRR
+        # ('nan' would be treated as a separate category, np.nan is treated as missing value)
 
         # if model column is present, remove rows with NaN in model column
         if self.col_model in df.columns:
             df = df[df[self.col_model].notna()]
 
-        # remove rows where all of self.rater_columns are NaN
-        print(f'droping na values from columns: {self.rater_columns}')
+        # remove rows where all self.rater_columns are NaN
         df = df.dropna(subset=self.rater_columns, how='all')
 
         removed_rows = rows_before - df.shape[0]
@@ -423,6 +426,8 @@ class IRR:
 
         if IRR.all_rows_equal(cac.ratings):
             return IRR.TOTAL_AGREEMENT
+        elif IRR.is_total_disagreement(cac):
+            return IRR.get_total_disagreement_value(metric)
         else:
             with np.errstate(divide='ignore', invalid='ignore'):
                 result = getattr(cac, metric)()['est']['coefficient_value']
@@ -434,6 +439,24 @@ class IRR:
         Check if all rows in a DataFrame are equal.
         """
         return df.apply(lambda x: x.nunique(), axis=1).eq(1).all()
+
+    @staticmethod
+    def is_total_disagreement(cac: CAC) -> bool:
+        """
+        Check if there is less or equal unique values than categories in the DataFrame.
+        """
+        return cac.ratings.nunique().sum() <= len(cac.categories)
+
+    @staticmethod
+    def get_total_disagreement_value(metric: str) -> float:
+        """
+        Get the value for total disagreement.
+        """
+        if metric in ['fleiss', 'krippendorff']:
+            return -1.0
+        elif metric == 'gwet':
+            return 0.0
+        return -42.0
 
     @staticmethod
     def raters_to_dataframe(raters: list[Rater]) -> pd.DataFrame:
