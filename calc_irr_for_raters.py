@@ -4,7 +4,7 @@ import logging
 import os
 import json
 import time
-from typing import List, Union
+from typing import List, Union, Dict
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -27,6 +27,10 @@ def parse_args():
                         help='Directory to save the results to.')
     parser.add_argument('--prompt-definitions', default=None,
                         help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
+    parser.add_argument('--threshold', type=float, default=0.6,
+                        help='The threshold for IRR of a question to be considered acceptable.')
+    parser.add_argument('--metric', default='krippendorff_alpha', choices=['krippendorff_alpha', 'gwet_ac1', 'fleiss_kappa'],
+                        help='The main metric to take into account for acceptable questions and visualization.')
 
     # parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
     #                     help='The logging level to use.')
@@ -60,7 +64,9 @@ def main():
     calculator = Calculator(
         ratings_dirs=args.ratings_dir,
         output_dir=args.output_dir,
-        prompt_definitions=args.prompt_definitions
+        prompt_definitions=args.prompt_definitions,
+        threshold=args.threshold,
+        metric=args.metric
     )
     calculator()
 
@@ -70,7 +76,7 @@ def main():
 
 class Calculator:
 
-    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions
+    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, threshold: float = 0.6, metric: str = 'krippendorff_alpha',
                  # prompt_subset: List[str] = None,
                  # openai_api_key: str = None, prompt_schema_definition: str = None,
                  # copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None
@@ -78,6 +84,8 @@ class Calculator:
         self.output_dir = self.prepare_output_dir(output_dir)
         self.prompts = self.load_prompts(prompt_definitions)
         self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
+        self.threshold = threshold
+        self.metric = metric
         # self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         # logging.debug(f"Prompts: {self.prompts}\n\n")
         # self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
@@ -93,16 +101,18 @@ class Calculator:
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
-        utils.dict_to_json_file(irr_results.get_one_metric('krippendorff_alpha'),
-                                self.get_output_file('irr_results_krippendorff_alpha.json'))
-        
-        visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file('irr_results_krippendorff_alpha.png'), metric='krippendorff_alpha')
+        utils.dict_to_json_file(irr_results.get_one_metric_and_variant(self.metric, 'without_model'),
+                                self.get_output_file(f'irr_results_{self.metric}.json'))
+
+        visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file(f'irr_results_{self.metric}.png'), metric=self.metric)
+
+        self.analyze_acceptable_questions(irr_results, metric=self.metric)
 
         self.export_prompt_option_results()
 
     def get_output_file(self, file_name: str):
         return os.path.join(self.output_dir, file_name)
-    
+
     def export_prompt_option_results(self):
         input_dir = self.irr_calculator.out_prompts_and_options_dir
 
@@ -158,6 +168,13 @@ class Calculator:
         plt.tight_layout()
         plt.savefig(os.path.join(out_dirname, 'results_scatter.png'))
         plt.clf()
+
+    def analyze_acceptable_questions(self, results: IRR, metric: str = 'krippendorff_alpha') -> Dict[str, float]:
+        all_questions = results.to_dict_of_results_of_metric_and_variant(metric, 'without_model')
+        acceptable_questions = {k: v for k, v in all_questions.items() if v >= self.threshold}
+
+        print(f"Acceptable questions ({len(acceptable_questions)} out of {len(all_questions)} >= {self.threshold}):\n")
+        print(f"{json.dumps(acceptable_questions, indent=2)}")
 
     @staticmethod
     def prepare_output_dir(output_dir: str = None) -> str:

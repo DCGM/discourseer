@@ -72,7 +72,8 @@ def setup_logging(log_level: str, log_file: str):
 
 def main():
     args = parse_args()
-    log_file = 'tmp/logfile.log'
+    tmp_dir = 'tmp'
+    log_file = os.path.join(tmp_dir, 'logfile.log')
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     setup_logging(args.log, log_file)
     logging.debug(f"Python file location: {os.path.abspath(__file__)}")
@@ -94,6 +95,7 @@ def main():
 
     logging.getLogger().handlers.clear()  # Remove the handlers to avoid logging http connection close
     os.rename(log_file, discourseer.get_output_file(os.path.basename(log_file)))
+    os.rmdir(tmp_dir)
 
 
 class Discourseer:
