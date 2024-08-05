@@ -159,6 +159,7 @@ class Discourseer:
                 raise KeyError(f"Non-existing format string {e} in message: "
                                f"({message.content[:min(80, len(message.content))]}...")
 
+        conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
         response = response.choices[0].message.content
