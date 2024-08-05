@@ -102,7 +102,7 @@
       "content": {
         "range": "3",
         "genre": "report",
-        "message-trigger": "other",
+        "message-trigger": "politician",
         "place": [
           "czech-republic"
         ]
@@ -276,7 +276,7 @@
       "content": {
         "range": "3",
         "genre": "report",
-        "message-trigger": "other",
+        "message-trigger": "security-forces",
         "place": [
           "ukraine"
         ]

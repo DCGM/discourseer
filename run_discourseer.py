@@ -63,6 +63,9 @@ def setup_logging(log_level: str, log_file: str):
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
 
+    mpl_logger = logging.getLogger('matplotlib')
+    mpl_logger.setLevel(logging.WARNING)
+
     logging.getLogger().addHandler(file_handler)
     logging.getLogger().addHandler(stream_handler)
 

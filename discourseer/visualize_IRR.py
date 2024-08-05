@@ -57,14 +57,13 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
 
     return x, y, xerr, yerr, without_model_results, labels
 
-
-def visualize_results(results: IRRResults, location: str = None, metric: str = 'gwet_ac1'):
+def visualize_results(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
     if results.is_empty():
         logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
         return
     results = results.to_dict_of_results()
     majority_agreements = [k.majority_agreement for k in results.values()]
-    results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only gwet_ac1
+    results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only given metric
 
     x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 

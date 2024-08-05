@@ -1,24 +1,19 @@
 # Ignore local files
-local/*
+**/local/*
 
 # LibreOffice lock files
 .~lock.*
 
 # PyCharm files
 .idea/
-
-test/test_topic_extractor/outputs/*
-experiments/*/output_*/*
-!experiments/*/output_IRR/*
-!experiments/*/*/output_IRR/*
-experiments/*/*/output_*/*
-experiments/*/*/*/output_*/*
-tmp/*
-*/tmp/*
-*/*/tmp/*
-*/*/*/tmp/*
-test/test_out*.png
 .vscode/*
+
+**/tmp/*
+experiments/**/output_*/*
+!experiments/**/output_IRR/*
+
+test/test_out*.png
+test/test_topic_extractor/outputs/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
