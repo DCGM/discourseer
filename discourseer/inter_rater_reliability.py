@@ -447,7 +447,7 @@ class IRR:
             logger.debug("No metric provided.")
             return None
 
-        if IRR.all_rows_equal(cac.ratings):
+        if IRR.single_row(cac.ratings) or IRR.all_rows_equal(cac.ratings):
             return IRR.TOTAL_AGREEMENT
         elif IRR.is_total_disagreement(cac):
             return IRR.get_total_disagreement_value(metric)
@@ -455,6 +455,18 @@ class IRR:
             with np.errstate(divide='ignore', invalid='ignore'):
                 result = getattr(cac, metric)()['est']['coefficient_value']
             return result
+
+    @staticmethod
+    def single_row(df: pd.DataFrame) -> bool:
+        """
+        Check if there is only one row and all values are the same.
+        """
+        print(f'\n Checking if single row same values: \n')
+        print(df)
+        result = df.shape[0] < 2
+        print(f'\n Result: {result} \n')
+        print(CAC(df))
+        return result
 
     @staticmethod
     def all_rows_equal(df: pd.DataFrame) -> bool:
