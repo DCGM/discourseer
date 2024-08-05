@@ -13,6 +13,7 @@ from irrCAC.raw import CAC
 from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
+from discourseer.visualize_IRR import visualize_irr_results_only_human_raters
 from discourseer import utils
 
 
@@ -94,6 +95,8 @@ class Calculator:
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
         utils.dict_to_json_file(irr_results.get_one_metric('krippendorff_alpha'),
                                 self.get_output_file('irr_results_krippendorff_alpha.json'))
+        
+        visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file('irr_results_krippendorff_alpha.png'), metric='krippendorff_alpha')
 
         self.export_prompt_option_results()
 
@@ -109,7 +112,7 @@ class Calculator:
         out_dirname = input_dir + '_exported'
         os.makedirs(out_dirname, exist_ok=True)
 
-        results_file = 'results.json'
+        # results_file = 'results.json'
         results = {'kripp': [], 'gwet': []}
 
         for file in os.listdir(input_dir):
