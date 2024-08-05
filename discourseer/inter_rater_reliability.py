@@ -133,13 +133,6 @@ class IRRResult(pydantic.BaseModel):
 
     def get_metric(self, metric: str):
         return self.model_dump()[metric]
-        attr = getattr(self, metric, None)
-        if attr is None:
-            return None
-
-        # if attr.with_model is None or attr.with_model == 0.0:
-        #     return attr.without_model
-        return attr.model_dump()
 
 
 class IRR:

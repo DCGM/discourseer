@@ -37,8 +37,7 @@ def parse_args():
     parser.add_argument('--prompt-definitions', default=None,
                         help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
 
-    parser.add_argument('--prompt-subset', nargs='*',
-                        default=list([]),
+    parser.add_argument('--prompt-subset', nargs='*', default=list([]),
                         help='The subset to take from file in `prompt-definitions`. '
                              'The accuracy may suffer if there is too many prompts.')
     parser.add_argument('--text-count', type=int, default=None,

@@ -154,7 +154,7 @@ class Calculator:
             # save_to_export(df, input_file=input_dir)
             df.to_csv(out_file_name, header=False, index=False)
 
-        print(f'\nResults[kripp]: {results["kripp"]}')
+        # print(f'\nResults[kripp]: {results["kripp"]}')
         # json.dump(results, open(results_file, 'w'), indent=2)
 
         # promitni krippendorff z rozsahu -1 až 1 na 0 až 1
@@ -173,8 +173,18 @@ class Calculator:
         all_questions = results.to_dict_of_results_of_metric_and_variant(metric, 'without_model')
         acceptable_questions = {k: v for k, v in all_questions.items() if v >= self.threshold}
 
-        print(f"Acceptable questions ({len(acceptable_questions)} out of {len(all_questions)} >= {self.threshold}):\n")
+        acceptable_questions_names = [q for q in acceptable_questions.keys() 
+                                      if q not in ['overall', 'mean_through_prompts']]
+        acceptable_questions_names = ' '.join(acceptable_questions_names)
+
+        print(f"Acceptable questions ({len(acceptable_questions)} out of {len(all_questions)} >= {self.threshold}):")
+        print(f"{acceptable_questions_names}")
         print(f"{json.dumps(acceptable_questions, indent=2)}")
+
+        utils.dict_to_json_file(acceptable_questions, self.get_output_file(f'acceptable_questions_{metric}.json'))
+        # save list(acceptable_questions.keys()) to a txt file
+        with open(self.get_output_file(f'acceptable_questions_{metric}.txt'), 'w') as f:
+            f.write(acceptable_questions_names + '\n')
 
     @staticmethod
     def prepare_output_dir(output_dir: str = None) -> str:
