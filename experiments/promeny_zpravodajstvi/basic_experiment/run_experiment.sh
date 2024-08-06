@@ -20,9 +20,9 @@ fi
 
 # ---------------------------  RUNNING EXPERIMENT  ---------------------------
 python $DISCOURSEER/run_discourseer.py \
-    --experiment-dir $DISCOURSEER/data/promeny_zpravodajstvi/ \
-    --ratings-dir $DISCOURSEER/data/promeny_zpravodajstvi/ratings_raters \
-    --output-dir $EXPERIMENT_DIR/output \
+    --experiment-dir $EXPERIMENT_DIR \
+    --ratings-dir $EXPERIMENT_DIR/../inputs/ratings/ \
+    --texts-dir $EXPERIMENT_DIR/../inputs/texts/ \
     --log DEBUG \
     $TEXT_COUNT \
     $OUTPUT
