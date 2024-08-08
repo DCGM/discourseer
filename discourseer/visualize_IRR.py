@@ -3,6 +3,7 @@ import logging
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Rectangle
 
@@ -11,7 +12,14 @@ from discourseer.inter_rater_reliability import IRRResult, IRRResults, IRRVarian
 logger = logging.getLogger()
 
 
-def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str]):
+def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str], metric: str):
+    # fig, (ax2, ax) = plt.subplots(figsize=(12, 8), nrows=2, sharex=True)
+    fig = plt.figure(figsize=(12, 8))
+    gs = gridspec.GridSpec(2, 1, height_ratios=[1, 2])
+
+    ax2 = plt.subplot(gs[0])
+    ax = plt.subplot(gs[1], sharex=ax2)
+
     # Loop over data points; create box from errors at each point
     errorboxes = [Rectangle((x - xe[0], y - ye[0]), xe.sum(), ye.sum())
                   for x, y, xe, ye in zip(xdata, ydata, xerror.T, yerror.T)]
@@ -23,18 +31,32 @@ def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_results, ma
     ax.errorbar(xdata, ydata - yerror[0], xerr=xerror, fmt='none', label='worst case', ecolor='r')
     ax.errorbar(xdata, without_model_results, xerr=xerror, fmt='none', label='without model', ecolor='darkorange')
     ax.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
-    ax.errorbar(xdata, majority_agreements, xerr=xerror, fmt='none', label='majority agreement', ecolor='b')
+    # ax.errorbar(xdata, majority_agreements, xerr=xerror, fmt='none', label='majority agreement', ecolor='b')
 
     max_y = max(ydata + yerror[1])
     min_y = min(ydata - yerror[0])
     ax.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y * 1.2)
 
-    ax.set_ylabel('Inter-rater reliability')
-    ax.set_title('Inter-rater reliability for different questions.')
+    ax.set_title(f'Inter-rater reliability: {metric}.')
+    ax.set_ylabel(metric)
 
     ax.legend(bbox_to_anchor=(1.2, 1.0))
-    ax.set_xticks(xdata)
-    ax.set_xticklabels(x_ticks)
+    # ax.set_xticks(xdata)
+    # ax.set_xticklabels(x_ticks)
+
+    plt.setp(ax2.get_xticklabels(), visible=False)
+
+    # print(f'xerr: {xerr}')
+    # print(f'majority_agreements: {majority_agreements}')
+    bar_x = np.arange(len(majority_agreements))
+    ax2.bar(bar_x, majority_agreements, label='majority agreement')
+    ax2.set_ylim(0, 1)
+    ax2.set_ylabel('Majority agreement')
+    ax2.set_title('Majority agreement')
+    ax2.legend(bbox_to_anchor=(1.2, 1.0))
+    ax2.set_xticks(xdata)
+    ax2.set_xticklabels(x_ticks, rotation=45, ha='right')
+
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
 
@@ -69,9 +91,16 @@ def visualize_results(results: IRRResults, location: str = None, metric: str = '
 
     x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 
-    fig, ax = plt.subplots(1, figsize=(12, 4))
-    make_error_boxes(ax, x, y, xerr, yerr, without_model_results, majority_agreements, labels)
-    ax.set_title(f'Inter-rater reliability {metric} for different questions.')
+    # fig, (ax1, ax2) = plt.subplots(1, figsize=(12, 4), nrows=2, sharex=True)
+    # # fig, (ax1, ax2) = plt.subplots(nrows=2, sharex=True)
+    # make_error_boxes(ax1, ax2, x, y, xerr, yerr, without_model_results, majority_agreements, labels)
+    # make_error_boxes(ax1, ax2, x, y, xerr, yerr, without_model_error, majority_agreements, labels)
+
+    # fig, (ax1, ax2) = plt.subplots(figsize=(12, 8), nrows=2, sharex=True)
+    make_error_boxes(x, y, xerr, yerr, without_model_results, majority_agreements, labels, metric)
+
+    # fig.suptitle('Results for different questions.')
+    # plt.tight_layout()
 
     if location:
         plt.savefig(location)
@@ -93,7 +122,6 @@ def visualize_irr_results_only_something(results: IRRResults, location: str = No
     results = results.to_dict_of_results()
     results = {k: getattr(v, metric)    for k, v in results.items()}  # visualize only given metric
     results = {k: getattr(v, something) for k, v in results.items()}  # visualize only something from given metric
-
 
     bar_plot(list(results.keys()), list(results.values()), f'Inter-rater reliability {metric} for different questions.', location)
 
@@ -120,8 +148,8 @@ def bar_plot(names: List[str], values: List[float], title: str, location: str = 
 def test_dummy():
     x, y, xerr, yerr, without_model_error, labels = prepare_dummy_data()
     majority_agreements = [0.5, 0.6, 0.7, 0.8, 0.9]
-    fig, ax = plt.subplots(1)
-    make_error_boxes(ax, x, y, xerr, yerr, without_model_error, majority_agreements, labels)
+
+    make_error_boxes(x, y, xerr, yerr, without_model_error, majority_agreements, labels, "test_metric")
     plt.show()
 
 
@@ -140,7 +168,7 @@ def prepare_dummy_data():
                      [0.1, 0.4, 0.5, 0.2, 0.3]]) * 2
 
     without_model_error = np.array([0.1, 0.2, 0.3, 0.5, 0.5])
-    labels = ['A', 'B', 'C', 'D', 'E']
+    labels = ['Aaaaaaaaa_aaaaaaaa', 'Bbbbbebebebe_beb_bebeb', 'Casdfasdf_asdfas', 'DDDDddd_dd', 'Ee']
 
     return x, y, xerr, yerr, without_model_error, labels
 
