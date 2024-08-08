@@ -16,6 +16,18 @@ from discourseer import utils
 logger = logging.getLogger()
 
 
+class IRRVariants(pydantic.BaseModel):
+    best_case: Optional[float] = None
+    with_model: Optional[float] = None
+    worst_case: Optional[float] = None
+    without_model: Optional[float] = None
+
+
+# define types for exporting IRR results
+IRRResultsFlattened = Dict[str, IRRVariants]
+IRRResultsFlattenedOneVariant = Dict[str, float]
+
+
 class IRRResults(pydantic.BaseModel):
     overall: IRRResult
     mean_through_prompts: Optional[IRRResult] = None
@@ -64,6 +76,14 @@ class IRRResults(pydantic.BaseModel):
 
         return results
 
+    def to_dict_of_results_of_metric(self, metric: str) -> IRRResultsFlattened:
+        results = self.to_dict_of_results()
+        return {k: getattr(v, metric) for k, v in results.items() if hasattr(v, metric)}
+    
+    def to_dict_of_results_of_metric_and_variant(self, metric: str, variant: str) -> IRRResultsFlattenedOneVariant:
+        results = self.to_dict_of_results_of_metric(metric)
+        return {k: getattr(v, variant) for k, v in results.items() if hasattr(v, variant)}
+
     def get_summary(self) -> Dict:
         results = {'overall': self.overall.model_dump()}
         if self.mean_through_prompts is not None:
@@ -83,6 +103,22 @@ class IRRResults(pydantic.BaseModel):
             if result is not None:
                 results['prompts'][key] = result.get_metric(metric)
         return results
+    
+    def get_one_metric_and_variant(self, metric: str, variant: str) -> Dict:
+        results = self.get_one_metric(metric)
+
+        results['overall'] = results['overall'][variant]
+        if self.mean_through_prompts is not None:
+            results['mean_through_prompts'] = results['mean_through_prompts'][variant]
+
+        for key, result in results['prompts'].items():
+            if result is not None:
+                results['prompts'][key] = result[variant]
+        
+        return results
+
+    def is_empty(self) -> bool:
+        return self.overall.fleiss_kappa.without_model is None
 
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
@@ -96,20 +132,7 @@ class IRRResult(pydantic.BaseModel):
     majority_agreement: Optional[float] = None
 
     def get_metric(self, metric: str):
-        attr = getattr(self, metric, None)
-        if attr is None:
-            return None
-
-        if attr.with_model is None or attr.with_model == 0.0:
-            return attr.without_model
-        return attr.model_dump()
-
-
-class IRRVariants(pydantic.BaseModel):
-    best_case: Optional[float] = None
-    with_model: Optional[float] = None
-    worst_case: Optional[float] = None
-    without_model: Optional[float] = None
+        return self.model_dump()[metric]
 
 
 class IRR:
@@ -424,7 +447,7 @@ class IRR:
             logger.debug("No metric provided.")
             return None
 
-        if IRR.all_rows_equal(cac.ratings):
+        if IRR.single_row(cac.ratings) or IRR.all_rows_equal(cac.ratings):
             return IRR.TOTAL_AGREEMENT
         elif IRR.is_total_disagreement(cac):
             return IRR.get_total_disagreement_value(metric)
@@ -432,6 +455,18 @@ class IRR:
             with np.errstate(divide='ignore', invalid='ignore'):
                 result = getattr(cac, metric)()['est']['coefficient_value']
             return result
+
+    @staticmethod
+    def single_row(df: pd.DataFrame) -> bool:
+        """
+        Check if there is only one row and all values are the same.
+        """
+        print(f'\n Checking if single row same values: \n')
+        print(df)
+        result = df.shape[0] < 2
+        print(f'\n Result: {result} \n')
+        print(CAC(df))
+        return result
 
     @staticmethod
     def all_rows_equal(df: pd.DataFrame) -> bool:

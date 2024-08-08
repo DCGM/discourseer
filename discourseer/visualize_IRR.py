@@ -1,4 +1,5 @@
 from typing import List, Dict
+import logging
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,6 +7,8 @@ from matplotlib.collections import PatchCollection
 from matplotlib.patches import Rectangle
 
 from discourseer.inter_rater_reliability import IRRResult, IRRResults, IRRVariants
+
+logger = logging.getLogger()
 
 
 def make_error_boxes(ax, xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str]):
@@ -57,13 +60,16 @@ def irr_variants_to_data(irr_results: Dict[str, IRRVariants]):
 
 
 def visualize_results(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
+    if results.is_empty():
+        logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
+        return
     results = results.to_dict_of_results()
     majority_agreements = [k.majority_agreement for k in results.values()]
     results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only given metric
 
     x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 
-    fig, ax = plt.subplots(1)
+    fig, ax = plt.subplots(1, figsize=(12, 4))
     make_error_boxes(ax, x, y, xerr, yerr, without_model_results, majority_agreements, labels)
     ax.set_title(f'Inter-rater reliability {metric} for different questions.')
 
@@ -72,6 +78,44 @@ def visualize_results(results: IRRResults, location: str = None, metric: str = '
     else:
         plt.show()
 
+def visualize_irr_results_only_with_model(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
+    visualize_irr_results_only_something(results, location, metric, 'with_model')
+
+
+def visualize_irr_results_only_human_raters(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
+    visualize_irr_results_only_something(results, location, metric, 'without_model')
+
+
+def visualize_irr_results_only_something(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha', something: str = 'without_model'):
+    if results.is_empty():
+        logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
+        return
+    results = results.to_dict_of_results()
+    results = {k: getattr(v, metric)    for k, v in results.items()}  # visualize only given metric
+    results = {k: getattr(v, something) for k, v in results.items()}  # visualize only something from given metric
+
+
+    bar_plot(list(results.keys()), list(results.values()), f'Inter-rater reliability {metric} for different questions.', location)
+
+
+def bar_plot(names: List[str], values: List[float], title: str, location: str = None, x_label: str = 'Questions', y_label: str = 'Inter-rater reliability'):
+    fig, ax = plt.subplots(figsize=(12, 4))
+    ax.bar(names, values)
+    ax.set_title(title)
+    ax.set_xlabel(x_label)
+    ax.set_ylabel(y_label)
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+
+    if location:
+        plt.savefig(location)
+    else:
+        plt.show()
+    
+    plt.close()
+
+
+#------------ Test the visualize_results function --------------
 
 def test_dummy():
     x, y, xerr, yerr, without_model_error, labels = prepare_dummy_data()

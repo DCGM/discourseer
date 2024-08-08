@@ -1,0 +1,18 @@
+1.38. Kurzy ČNB od 30. 3. 2007
+TISK , Datum: 02.04.2007 , Zdroj: Právo , Strana: 5 , Vytištěno: 211 017 , Prodáno: 153 477 , Infotype: Nepojmenováno , Datum importu: 01.01.0001
+00:00 , Čtenost: 274 441 , Rubrika: Zpravodajství , Země: Česko , GRP: 3,05
+Země Množství Kód Kurz
+
+Austrálie 1 AUD 16,984
+Dánsko 1 DKK 3,758
+EMU 1 EUR 28,000
+Chorvatsko 1 HRK 3,782
+Japonsko 100 JPY 17,799
+Kanada 1 CAD 18,221
+Maďarsko 100 HUF 11,299
+Polsko 1 PLN 7,241
+Rusko 100 RUB 80,815
+Slovensko 100 SKK 83,983
+Švýcarsko 1 CHF 17,233
+USA 1 USD 21,023
+V. Británie 1 GBP 41,196
