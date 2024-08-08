@@ -214,7 +214,7 @@ class IRR:
 
         prompt_irr_results = {}
         for prompt_key in prompt_keys:
-            print(f"Calculating IRR for prompt {prompt_key}")
+            logger.info(f"Calculating IRR for prompt {prompt_key}")
             df_prompt = df.xs(prompt_key, level='prompt_key')
             prompt_irr_results[prompt_key] = self.get_irr_result(df_prompt)
 
@@ -461,12 +461,7 @@ class IRR:
         """
         Check if there is only one row and all values are the same.
         """
-        print(f'\n Checking if single row same values: \n')
-        print(df)
-        result = df.shape[0] < 2
-        print(f'\n Result: {result} \n')
-        print(CAC(df))
-        return result
+        return df.shape[0] < 2
 
     @staticmethod
     def all_rows_equal(df: pd.DataFrame) -> bool:
