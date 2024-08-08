@@ -7,55 +7,51 @@ import matplotlib.gridspec as gridspec
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Rectangle
 
-from discourseer.inter_rater_reliability import IRRResult, IRRResults, IRRVariants
+from discourseer.inter_rater_reliability import IRRResults, IRRVariants
 
 logger = logging.getLogger()
 
 
 def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str], metric: str):
-    # fig, (ax2, ax) = plt.subplots(figsize=(12, 8), nrows=2, sharex=True)
     fig = plt.figure(figsize=(12, 8))
     gs = gridspec.GridSpec(2, 1, height_ratios=[1, 2])
 
-    ax2 = plt.subplot(gs[0])
-    ax = plt.subplot(gs[1], sharex=ax2)
+    ax_maj = plt.subplot(gs[0])
+    ax_irr = plt.subplot(gs[1], sharex=ax_maj)
 
     # Loop over data points; create box from errors at each point
     errorboxes = [Rectangle((x - xe[0], y - ye[0]), xe.sum(), ye.sum())
                   for x, y, xe, ye in zip(xdata, ydata, xerror.T, yerror.T)]
 
     # Create patch collection with specified colour/alpha
-    ax.add_collection(PatchCollection(errorboxes, facecolor='gray', alpha=0.5, edgecolor='none'))
+    ax_irr.add_collection(PatchCollection(errorboxes, facecolor='gray', alpha=0.5, edgecolor='none'))
 
-    ax.errorbar(xdata, ydata + yerror[1], xerr=xerror, fmt='none', label='best case', ecolor='g')
-    ax.errorbar(xdata, ydata - yerror[0], xerr=xerror, fmt='none', label='worst case', ecolor='r')
-    ax.errorbar(xdata, without_model_results, xerr=xerror, fmt='none', label='without model', ecolor='darkorange')
-    ax.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
-    # ax.errorbar(xdata, majority_agreements, xerr=xerror, fmt='none', label='majority agreement', ecolor='b')
+    ax_irr.errorbar(xdata, ydata + yerror[1], xerr=xerror, fmt='none', label='best case', ecolor='g')
+    ax_irr.errorbar(xdata, ydata - yerror[0], xerr=xerror, fmt='none', label='worst case', ecolor='r')
+    ax_irr.errorbar(xdata, without_model_results, xerr=xerror, fmt='none', label='without model', ecolor='darkorange')
+    ax_irr.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
 
     max_y = max(ydata + yerror[1])
     min_y = min(ydata - yerror[0])
-    ax.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y * 1.2)
+    ax_irr.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y * 1.2)
 
-    ax.set_title(f'Inter-rater reliability: {metric}.')
-    ax.set_ylabel(metric)
+    ax_irr.set_title(f'Inter-rater reliability: {metric}.')
+    ax_irr.set_ylabel(metric)
+    ax_irr.legend(bbox_to_anchor=(1.2, 1.0))
 
-    ax.legend(bbox_to_anchor=(1.2, 1.0))
-    # ax.set_xticks(xdata)
-    # ax.set_xticklabels(x_ticks)
+    # Hide x-ticks on the upper subplot since they are shared with ax2
+    plt.setp(ax_maj.get_xticklabels(), visible=False)
 
-    plt.setp(ax2.get_xticklabels(), visible=False)
-
-    # print(f'xerr: {xerr}')
-    # print(f'majority_agreements: {majority_agreements}')
     bar_x = np.arange(len(majority_agreements))
-    ax2.bar(bar_x, majority_agreements, label='majority agreement')
-    ax2.set_ylim(0, 1)
-    ax2.set_ylabel('Majority agreement')
-    ax2.set_title('Majority agreement')
-    ax2.legend(bbox_to_anchor=(1.2, 1.0))
-    ax2.set_xticks(xdata)
-    ax2.set_xticklabels(x_ticks, rotation=45, ha='right')
+    ax_maj.bar(bar_x, majority_agreements, label='majority agreement')
+    ax_maj.set_ylim(0, 1)
+    ax_maj.set_ylabel('Majority agreement')
+    ax_maj.set_title('Majority agreement')
+    ax_maj.legend(bbox_to_anchor=(1.2, 1.0))
+
+    # Set x-ticks and labels on the lower subplot
+    ax_maj.set_xticks(xdata)
+    ax_maj.set_xticklabels(x_ticks, rotation=45, ha='right')
 
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
@@ -91,16 +87,7 @@ def visualize_results(results: IRRResults, location: str = None, metric: str = '
 
     x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 
-    # fig, (ax1, ax2) = plt.subplots(1, figsize=(12, 4), nrows=2, sharex=True)
-    # # fig, (ax1, ax2) = plt.subplots(nrows=2, sharex=True)
-    # make_error_boxes(ax1, ax2, x, y, xerr, yerr, without_model_results, majority_agreements, labels)
-    # make_error_boxes(ax1, ax2, x, y, xerr, yerr, without_model_error, majority_agreements, labels)
-
-    # fig, (ax1, ax2) = plt.subplots(figsize=(12, 8), nrows=2, sharex=True)
     make_error_boxes(x, y, xerr, yerr, without_model_results, majority_agreements, labels, metric)
-
-    # fig.suptitle('Results for different questions.')
-    # plt.tight_layout()
 
     if location:
         plt.savefig(location)
