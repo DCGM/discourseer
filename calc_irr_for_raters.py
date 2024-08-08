@@ -32,33 +32,11 @@ def parse_args():
     parser.add_argument('--metric', default='krippendorff_alpha', choices=['krippendorff_alpha', 'gwet_ac1', 'fleiss_kappa'],
                         help='The main metric to take into account for acceptable questions and visualization.')
 
-    # parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
-    #                     help='The logging level to use.')
-
     return parser.parse_args()
-
-
-# def setup_logging(log_level: str, log_file: str):
-#     logging.getLogger().setLevel(log_level)
-#     formatter = logging.Formatter('%(levelname)s:%(name)s:%(filename)s:%(funcName)s: %(message)s')
-#
-#     stream_handler = logging.StreamHandler()
-#     stream_handler.setLevel(log_level)
-#     stream_handler.setFormatter(formatter)
-#     file_handler = logging.FileHandler(log_file)
-#     file_handler.setLevel(logging.DEBUG)
-#     file_handler.setFormatter(formatter)
-#
-#     logging.getLogger().addHandler(file_handler)
-#     logging.getLogger().addHandler(stream_handler)
 
 
 def main():
     args = parse_args()
-    # log_file = 'experiments/tmp/logfile.log'
-    # os.makedirs('experiments/tmp', exist_ok=True)
-    # setup_logging(args.log, log_file)
-    # logging.debug(f"Python file location: {os.path.abspath(__file__)}")
     print(f"Arguments: {args}")
 
     calculator = Calculator(
@@ -70,26 +48,15 @@ def main():
     )
     calculator()
 
-    # logging.getLogger().handlers.clear()  # Remove the handlers to avoid logging http connection close
-    # os.rename(log_file, discourseer.get_output_file(os.path.basename(log_file)))
-
 
 class Calculator:
 
-    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, threshold: float = 0.6, metric: str = 'krippendorff_alpha',
-                 # prompt_subset: List[str] = None,
-                 # openai_api_key: str = None, prompt_schema_definition: str = None,
-                 # copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None
-                 ):
+    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, threshold: float = 0.6, metric: str = 'krippendorff_alpha'):
         self.output_dir = self.prepare_output_dir(output_dir)
         self.prompts = self.load_prompts(prompt_definitions)
         self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
         self.threshold = threshold
         self.metric = metric
-        # self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
-        # logging.debug(f"Prompts: {self.prompts}\n\n")
-        # self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
-        # self.copy_input_ratings = copy_input_ratings
 
         if not self.raters:
             logging.error("No rater files found. Inter-rater reliability will not be calculated.")
@@ -153,12 +120,6 @@ class Calculator:
 
             # save_to_export(df, input_file=input_dir)
             df.to_csv(out_file_name, header=False, index=False)
-
-        # print(f'\nResults[kripp]: {results["kripp"]}')
-        # json.dump(results, open(results_file, 'w'), indent=2)
-
-        # promitni krippendorff z rozsahu -1 až 1 na 0 až 1
-        # results['kripp'] = [(k + 1) / 2 for k in results['kripp']]
 
         plt.scatter(results['kripp'], results['gwet'], alpha=0.5)
         plt.xlabel('Krippendorff alpha (-1 až 1)')
