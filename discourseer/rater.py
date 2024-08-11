@@ -53,6 +53,10 @@ class Rater:
         """Add model response to rater. Response_id should be prompt names."""
         for response_id, value in response.items():
             logger.debug(f"Adding rating: {response_id}, {value}")
+            if not value:
+                logger.warning(f"None orempty value for response ID {response_id}. Skipping.")
+                continue
+
             prompt_key = self.map_response_id_to_prompt_key(response_id)
             if not prompt_key:
                 continue

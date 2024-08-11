@@ -32,10 +32,8 @@ def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majori
     ax_irr.errorbar(xdata, without_model_results, xerr=xerror, fmt='none', label='without model', ecolor='darkorange')
     ax_irr.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
 
-    max_y = max(ydata + yerror[1])
-    max_y = min(max_y * 1.2, 1.05)
     min_y = min(ydata - yerror[0])
-    ax_irr.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y)
+    ax_irr.set_ylim(min_y * 1.2 if min_y <= 0 else 0, 1.05)
 
     for threshold in thresholds_irr:
         ax_irr.axhline(y=threshold, color='g', linestyle='--', label='threshold ' + str(threshold), linewidth=1, alpha=0.5)
