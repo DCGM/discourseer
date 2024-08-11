@@ -27,8 +27,8 @@ def parse_args():
                         help='Directory to save the results to.')
     parser.add_argument('--prompt-definitions', default=None,
                         help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
-    parser.add_argument('--threshold', type=float, default=0.6,
-                        help='The threshold for IRR of a question to be considered acceptable.')
+    parser.add_argument('--thresholds', type=float, nargs='*', default=[0.8, 0.6],
+                        help='The thresholds for IRR of a question to be considered acceptable.')
     parser.add_argument('--metric', default='krippendorff_alpha', choices=['krippendorff_alpha', 'gwet_ac1', 'fleiss_kappa'],
                         help='The main metric to take into account for acceptable questions and visualization.')
 
@@ -43,7 +43,7 @@ def main():
         ratings_dirs=args.ratings_dir,
         output_dir=args.output_dir,
         prompt_definitions=args.prompt_definitions,
-        threshold=args.threshold,
+        thresholds=args.thresholds,
         metric=args.metric
     )
     calculator()
@@ -51,11 +51,12 @@ def main():
 
 class Calculator:
 
-    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, threshold: float = 0.6, metric: str = 'krippendorff_alpha'):
+    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, metric: str = 'krippendorff_alpha',
+                 thresholds: List[float] = [0.8, 0.6]):
         self.output_dir = self.prepare_output_dir(output_dir)
         self.prompts = self.load_prompts(prompt_definitions)
         self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
-        self.threshold = threshold
+        self.thresholds = thresholds
         self.metric = metric
 
         if not self.raters:
@@ -71,9 +72,12 @@ class Calculator:
         utils.dict_to_json_file(irr_results.get_one_metric_and_variant(self.metric, 'without_model'),
                                 self.get_output_file(f'irr_results_{self.metric}.json'))
 
-        visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file(f'irr_results_{self.metric}.png'), metric=self.metric)
+        visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file(f'irr_results_{self.metric}.png'), metric=self.metric, thresholds=self.thresholds)
 
-        self.analyze_acceptable_questions(irr_results, metric=self.metric)
+        print('')
+        for threshold in self.thresholds:
+            self.analyze_acceptable_questions(irr_results, metric=self.metric, threshold=threshold)
+            print('')
 
         self.export_prompt_option_results()
 
@@ -130,21 +134,24 @@ class Calculator:
         plt.savefig(os.path.join(out_dirname, 'results_scatter.png'))
         plt.clf()
 
-    def analyze_acceptable_questions(self, results: IRR, metric: str = 'krippendorff_alpha') -> Dict[str, float]:
+    def analyze_acceptable_questions(self, results: IRR, metric: str = 'krippendorff_alpha', threshold: float = 0.8):
         all_questions = results.to_dict_of_results_of_metric_and_variant(metric, 'without_model')
-        acceptable_questions = {k: v for k, v in all_questions.items() if v >= self.threshold}
+        acceptable_questions = {k: v for k, v in all_questions.items() if v >= threshold}
 
         acceptable_questions_names = [q for q in acceptable_questions.keys() 
                                       if q not in ['overall', 'mean_through_prompts']]
         acceptable_questions_names = ' '.join(acceptable_questions_names)
 
-        print(f"Acceptable questions ({len(acceptable_questions)} out of {len(all_questions)} >= {self.threshold}):")
-        print(f"{acceptable_questions_names}")
-        print(f"{json.dumps(acceptable_questions, indent=2)}")
+        print(f"For threshold {threshold} there are ({len(acceptable_questions)} out of {len(all_questions)}) acceptable questions:")
+        if acceptable_questions:
+            print(f"{acceptable_questions_names}")
+            print(f"{json.dumps(acceptable_questions, indent=2)}")
+        else:
+            print(f"No acceptable questions found")
 
-        utils.dict_to_json_file(acceptable_questions, self.get_output_file(f'acceptable_questions_{metric}.json'))
-        # save list(acceptable_questions.keys()) to a txt file
-        with open(self.get_output_file(f'acceptable_questions_{metric}.txt'), 'w') as f:
+        utils.dict_to_json_file(acceptable_questions, self.get_output_file(f'acceptable_questions_{metric}_{threshold}.json'))
+
+        with open(self.get_output_file(f'acceptable_questions_{metric}_{threshold}.txt'), 'w') as f:
             f.write(acceptable_questions_names + '\n')
 
     @staticmethod

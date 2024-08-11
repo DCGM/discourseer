@@ -12,7 +12,8 @@ from discourseer.inter_rater_reliability import IRRResults, IRRVariants
 logger = logging.getLogger()
 
 
-def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str], metric: str):
+def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majority_agreements, x_ticks: List[str], metric: str,
+                     thresholds_maj: List[float] = None, thresholds_irr: List[float] = None):
     fig = plt.figure(figsize=(12, 8))
     gs = gridspec.GridSpec(2, 1, height_ratios=[1, 2])
 
@@ -32,8 +33,12 @@ def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majori
     ax_irr.errorbar(xdata, ydata, xerr=xerror, fmt='none', label='with model', ecolor='k')
 
     max_y = max(ydata + yerror[1])
+    max_y = min(max_y * 1.2, 1.05)
     min_y = min(ydata - yerror[0])
-    ax_irr.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y * 1.2)
+    ax_irr.set_ylim(min_y * 1.2 if min_y <= 0 else 0, max_y)
+
+    for threshold in thresholds_irr:
+        ax_irr.axhline(y=threshold, color='g', linestyle='--', label='threshold ' + str(threshold), linewidth=1, alpha=0.5)
 
     ax_irr.set_title(f'Inter-rater reliability: {metric}.')
     ax_irr.set_ylabel(metric)
@@ -44,6 +49,9 @@ def make_error_boxes(xdata, ydata, xerror, yerror, without_model_results, majori
 
     bar_x = np.arange(len(majority_agreements))
     ax_maj.bar(bar_x, majority_agreements, label='majority agreement')
+    for threshold in thresholds_maj:
+        ax_maj.axhline(y=threshold, color='g', linestyle='--', label='threshold ' + str(threshold), linewidth=1, alpha=0.5)
+
     ax_maj.set_ylim(0, 1)
     ax_maj.set_ylabel('Majority agreement')
     ax_maj.set_title('Majority agreement')
@@ -87,22 +95,23 @@ def visualize_results(results: IRRResults, location: str = None, metric: str = '
 
     x, y, xerr, yerr, without_model_results, labels = irr_variants_to_data(results)
 
-    make_error_boxes(x, y, xerr, yerr, without_model_results, majority_agreements, labels, metric)
+    make_error_boxes(x, y, xerr, yerr, without_model_results, majority_agreements, labels, metric, thresholds_maj=[0.6], thresholds_irr=[0.8, 0.6])
 
     if location:
         plt.savefig(location)
     else:
         plt.show()
 
-def visualize_irr_results_only_with_model(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
-    visualize_irr_results_only_something(results, location, metric, 'with_model')
+def visualize_irr_results_only_with_model(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha', thresholds: List[float] = None):
+    visualize_irr_results_only_something(results, location, metric, 'with_model', thresholds)
 
 
-def visualize_irr_results_only_human_raters(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha'):
-    visualize_irr_results_only_something(results, location, metric, 'without_model')
+def visualize_irr_results_only_human_raters(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha', thresholds: List[float] = None):
+    visualize_irr_results_only_something(results, location, metric, 'without_model', thresholds)
 
 
-def visualize_irr_results_only_something(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha', something: str = 'without_model'):
+def visualize_irr_results_only_something(results: IRRResults, location: str = None, metric: str = 'krippendorff_alpha',
+                                         something: str = 'without_model', thresholds: List[float] = None):
     if results.is_empty():
         logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
         return
@@ -110,15 +119,23 @@ def visualize_irr_results_only_something(results: IRRResults, location: str = No
     results = {k: getattr(v, metric)    for k, v in results.items()}  # visualize only given metric
     results = {k: getattr(v, something) for k, v in results.items()}  # visualize only something from given metric
 
-    bar_plot(list(results.keys()), list(results.values()), f'Inter-rater reliability {metric} for different questions.', location)
+    bar_plot(list(results.keys()), list(results.values()), thresholds, f'Inter-rater reliability {metric} for different questions.', location, y_label=metric)
 
 
-def bar_plot(names: List[str], values: List[float], title: str, location: str = None, x_label: str = 'Questions', y_label: str = 'Inter-rater reliability'):
+def bar_plot(names: List[str], values: List[float], thresholds: List[float] = None, title: str = '', location: str = None, x_label: str = '', y_label: str = '') -> None:
     fig, ax = plt.subplots(figsize=(12, 4))
     ax.bar(names, values)
     ax.set_title(title)
     ax.set_xlabel(x_label)
     ax.set_ylabel(y_label)
+
+    min_value = min(values)
+    ax.set_ylim(min_value * 1.2 if min_value <= 0 else 0, 1)
+
+    for threshold in thresholds:
+        ax.axhline(y=threshold, color='g', linestyle='--', label='threshold ' + str(threshold))
+    ax.legend(bbox_to_anchor=(1.2, 1.0))
+
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
 
