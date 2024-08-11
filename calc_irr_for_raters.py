@@ -97,7 +97,7 @@ class Calculator:
         results = {'kripp': [], 'gwet': []}
 
         for file in os.listdir(input_dir):
-            if not file.endswith('.csv') or not os.path.isfile(os.path.join(input_dir, file)):
+            if not file.startswith('dataframe__') or not file.endswith('.csv') or not os.path.isfile(os.path.join(input_dir, file)):
                 continue
 
             file_path = os.path.join(input_dir, file)

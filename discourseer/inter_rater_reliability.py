@@ -229,6 +229,9 @@ class IRR:
             utils.dict_to_json_file(
                 self.option_results,
                 os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.json"))
+            utils.individual_option_irr_to_csv(
+                self.option_results,
+                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.csv"))
 
         irr_results = IRRResults(
             overall=overall_results,
