@@ -408,8 +408,7 @@
         "Message": "Dopad na izraelské civilisty",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Humanitární rámec",
-          "Lokální rámec"
+          "Humanitární rámec"
         ],
         "Mluvčí": [
           "Média a novináři",
@@ -539,15 +538,11 @@
         ],
         "Messages": [
           "Teroristické operace",
-          "Globální reakce veřejnosti",
-          "Dopad na izraelské civilisty",
-          "Dopad na palestinské civilisty",
-          "Historie/kontextualizace"
+          "Globální reakce veřejnosti"
         ],
         "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Rámec budování míru",
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
@@ -816,7 +811,7 @@
           "Mezinárodní politické reakce",
           "Ekonomické důsledky"
         ],
-        "Message": "Ekonomické důsledky",
+        "Message": "Mezinárodní politické reakce",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
@@ -1220,7 +1215,8 @@
         "Zpravodajské hodnoty": [
           "Negativita negativity",
           "Blízkost proximity",
-          "Personalizace personalization"
+          "Personalizace personalization",
+          "Dopad impact"
         ],
         "Messages": [
           "Dopad na izraelské civilisty"
@@ -1490,17 +1486,22 @@
         ],
         "Messages": [
           "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty",
           "Globální reakce veřejnosti"
         ],
         "Message": "Dopad na izraelské civilisty",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
+          "Rámec budování míru",
           "Humanitární rámec",
-          "Lokální rámec"
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec"
         ],
         "Mluvčí": [
           "Politici z blízkovýchodních zemí",
-          "Očití svědci a civilisté z Izraele"
+          "Nezávislí experti a analytici",
+          "Očití svědci a civilisté z Izraele",
+          "Očití svědci a civilisté z Palestiny"
         ]
       }
     },
@@ -2041,7 +2042,7 @@
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
-          "Političtí představitelé Palestiny"
+          "Očití svědci a civilisté z Palestiny"
         ]
       }
     },
@@ -2176,10 +2177,11 @@
         "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Historicko-kulturní rámec"
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec"
         ],
         "Mluvčí": [
-          "Politici ze ostatních světových zemí"
+          "Nezávislí experti a analytici"
         ]
       }
     },
@@ -2314,7 +2316,7 @@
         ],
         "Mluvčí": [
           "Členové teroristických skupin",
-          "Politici ze ostatních světových zemí"
+          "Očití svědci a civilisté z Izraele"
         ]
       }
     },
@@ -3385,7 +3387,6 @@
         "Mluvčí": [
           "Političtí představitelé Izraele",
           "Očití svědci a civilisté z Izraele",
-          "Očití svědci a civilisté z Palestiny",
           "Nezávislí experti a analytici"
         ]
       }
@@ -3520,10 +3521,8 @@
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Političtí představitelé Izraele",
           "Političtí představitelé Palestiny",
-          "Politici z blízkovýchodních zemí",
-          "Představitelé mezinárodních a neziskových organizací"
+          "Politici ze ostatních světových zemí"
         ]
       }
     },
@@ -3643,15 +3642,25 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Elitní osoby prominence",
+          "Personalizace personalization"
         ],
         "Messages": [
-          "Vnitřní politické dění"
+          "Vnitřní politické dění",
+          "Mezinárodní politické reakce",
+          "Teroristické operace",
+          "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty",
+          "Globální reakce veřejnosti",
+          "Ekonomické důsledky"
         ],
-        "Message": "Vnitřní politické dění",
+        "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Historicko-kulturní rámec"
+          "Rámec budování míru",
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec"
         ],
         "Mluvčí": [
           "Nezávislí experti a analytici"
@@ -3792,7 +3801,7 @@
           "Političtí představitelé Palestiny",
           "Vojenští představitelé Izraele",
           "Členové teroristických skupin",
-          "Nezávislí experti a analytici"
+          "Politici z blízkovýchodních zemí"
         ]
       }
     },
@@ -3925,7 +3934,7 @@
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
-          "Představitelé mezinárodních a neziskových organizací"
+          "Velvyslanci"
         ]
       }
     },
@@ -4045,10 +4054,13 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Elitní osoby prominence",
+          "Dopad impact"
         ],
         "Messages": [
-          "Mezinárodní politické reakce"
+          "Mezinárodní politické reakce",
+          "Humanitární pomoc"
         ],
         "Message": "Mezinárodní politické reakce",
         "Mediální rámce (multiple)": [
@@ -4058,7 +4070,8 @@
         ],
         "Mluvčí": [
           "Představitelé mezinárodních a neziskových organizací",
-          "Politici ze ostatních světových zemí"
+          "Politici ze ostatních světových zemí",
+          "Média a novináři"
         ]
       }
     },
@@ -4184,8 +4197,6 @@
         "Messages": [
           "Vnitřní politické dění",
           "Mezinárodní politické reakce",
-          "Dopad na izraelské civilisty",
-          "Dopad na palestinské civilisty",
           "Historie/kontextualizace"
         ],
         "Message": "Vnitřní politické dění",
@@ -4197,7 +4208,7 @@
         ],
         "Mluvčí": [
           "Média a novináři",
-          "Nezávislí experti a analytici"
+          "Očití svědci a civilisté z Izraele"
         ]
       }
     },
@@ -4317,13 +4328,12 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity",
-          "Elitní osoby prominence"
+          "Blízkost proximity"
         ],
         "Messages": [
-          "Vnitřní politické dění"
+          "Mezinárodní politické reakce"
         ],
-        "Message": "Vnitřní politické dění",
+        "Message": "Mezinárodní politické reakce",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
@@ -4469,10 +4479,8 @@
           "Geopolitický rámec"
         ],
         "Mluvčí": [
-          "Média a novináři",
-          "Členové teroristických skupin",
-          "Političtí představitelé Izraele",
-          "Političtí představitelé Palestiny"
+          "Politici z blízkovýchodních zemí",
+          "Členové teroristických skupin"
         ]
       }
     },
@@ -4598,7 +4606,6 @@
         "Messages": [
           "Vojenské operace Izraele",
           "Teroristické operace",
-          "Dopad na izraelské civilisty",
           "Dopad na palestinské civilisty",
           "Humanitární pomoc"
         ],
@@ -4608,9 +4615,7 @@
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Vojenští představitelé Izraele",
-          "Členové teroristických skupin",
-          "Nezávislí experti a analytici"
+          "Vojenští představitelé Izraele"
         ]
       }
     },
@@ -4866,7 +4871,7 @@
           "Dopad na izraelské civilisty",
           "Vojenské operace Izraele",
           "Dopad na palestinské civilisty",
-          "Mezinárodní politické reakce"
+          "Historie/kontextualizace"
         ],
         "Message": "Dopad na izraelské civilisty",
         "Mediální rámce (multiple)": [
@@ -5021,7 +5026,6 @@
         ],
         "Mluvčí": [
           "Nezávislí experti a analytici",
-          "Média a novináři",
           "Očití svědci a civilisté z Izraele"
         ]
       }
@@ -5142,7 +5146,9 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Elitní osoby prominence",
+          "Dopad impact"
         ],
         "Messages": [
           "Dopad na izraelské civilisty",
@@ -5412,18 +5418,19 @@
           "Dopad impact"
         ],
         "Messages": [
-          "Vojenské operace Izraele",
           "Teroristické operace",
           "Dopad na izraelské civilisty",
           "Dopad na palestinské civilisty"
         ],
-        "Message": "Vojenské operace Izraele",
+        "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Humanitární rámec"
         ],
         "Mluvčí": [
           "Političtí představitelé Izraele",
+          "Političtí představitelé Palestiny",
+          "Vojenští představitelé Izraele",
           "Členové teroristických skupin"
         ]
       }
@@ -5558,7 +5565,8 @@
         "Mluvčí": [
           "Političtí představitelé Izraele",
           "Političtí představitelé Palestiny",
-          "Politici ze ostatních světových zemí"
+          "Politici ze ostatních světových zemí",
+          "Nezávislí experti a analytici"
         ]
       }
     },
@@ -5687,10 +5695,10 @@
         "Message": "Dopad na izraelské civilisty",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Humanitární rámec"
+          "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
-          "Médiá a novináři"
+          "Média a novináři"
         ]
       }
     },
@@ -5824,7 +5832,9 @@
         ],
         "Mluvčí": [
           "Vojenští představitelé Izraele",
-          "Nezávislí experti a analytici"
+          "Nezávislí experti a analytici",
+          "Média a novináři",
+          "Očití svědci a civilisté z Izraele"
         ]
       }
     },
@@ -6079,17 +6089,23 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Elitní osoby prominence",
+          "Dopad impact"
         ],
         "Messages": [
-          "Teroristické operace",
           "Dopad na izraelské civilisty",
+          "Teroristické operace",
+          "Globální reakce veřejnosti",
           "Mezinárodní politické reakce"
         ],
         "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Humanitární rámec"
+          "Rámec budování míru",
+          "Humanitární rámec",
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec"
         ],
         "Mluvčí": [
           "Vojenští představitelé Izraele"
@@ -6217,13 +6233,14 @@
         ],
         "Messages": [
           "Vojenské operace Izraele",
+          "Dopad na izraelské civilisty",
           "Dopad na palestinské civilisty"
         ],
         "Message": "Vojenské operace Izraele",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Humanitární rámec",
-          "Lokální rámec"
+          "Geopolitický rámec"
         ],
         "Mluvčí": [
           "Vojenští představitelé Izraele",
@@ -6349,25 +6366,19 @@
         "Zpravodajské hodnoty": [
           "Negativita negativity",
           "Blízkost proximity",
-          "Elitní osoby prominence",
           "Dopad impact"
         ],
         "Messages": [
-          "Vnitřní politické dění",
-          "Mezinárodní politické reakce",
           "Vojenské operace Izraele",
-          "Teroristické operace",
           "Dopad na izraelské civilisty",
           "Dopad na palestinské civilisty",
-          "Humanitární pomoc",
-          "Ekonomické důsledky",
-          "Historie/kontextualizace"
+          "Globální reakce veřejnosti",
+          "Ekonomické důsledky"
         ],
         "Message": "Vojenské operace Izraele",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
-          "Humanitární rámec",
           "Historicko-kulturní rámec",
           "Geopolitický rámec",
           "Lokální rámec"
@@ -6497,9 +6508,7 @@
         "Message": "Ekonomické důsledky",
         "Mediální rámce (multiple)": [],
         "Mluvčí": [
-          "Mluvčí Smartwings",
-          "Političtí představitelé Číny",
-          "Političtí představitelé Česka"
+          "Mluvčí"
         ]
       }
     },
@@ -6914,7 +6923,8 @@
           "Političtí představitelé Palestiny",
           "Politici z blízkovýchodních zemí",
           "Politici ze ostatních světových zemí",
-          "Představitelé mezinárodních a neziskových organizací"
+          "Představitelé mezinárodních a neziskových organizací",
+          "Nezávislí experti a analytici"
         ]
       }
     },
@@ -7033,12 +7043,14 @@
       "role": "assistant",
       "content": {
         "Zpravodajské hodnoty": [
-          "Blízkost proximity",
           "Negativita negativity",
+          "Blízkost proximity",
+          "Personalizace personalization",
           "Dopad impact"
         ],
         "Messages": [
-          "Dopad na izraelské civilisty"
+          "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty"
         ],
         "Message": "Dopad na izraelské civilisty",
         "Mediální rámce (multiple)": [
@@ -7166,7 +7178,8 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Dopad impact"
         ],
         "Messages": [
           "Vojenské operace Izraele",
@@ -7303,19 +7316,18 @@
           "Dopad impact"
         ],
         "Messages": [
-          "Vojenské operace Izraele",
+          "Mezinárodní politické reakce",
           "Dopad na palestinské civilisty",
           "Humanitární pomoc"
         ],
-        "Message": "Vojenské operace Izraele",
+        "Message": "Mezinárodní politické reakce",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Politici z blízkovýchodních zemí",
-          "Představitelé mezinárodních a neziskových organizací",
-          "Média a novináři"
+          "Politici ze ostatních světových zemí",
+          "Představitelé mezinárodních a neziskových organizací"
         ]
       }
     },
@@ -7451,8 +7463,7 @@
           "Lokální rámec"
         ],
         "Mluvčí": [
-          "Vojenští představitelé Izraele",
-          "Mluvčí"
+          "Vojenští představitelé Izraele"
         ]
       }
     },
@@ -7572,11 +7583,14 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
+          "Blízkost proximity",
           "Elitní osoby prominence",
+          "Personalizace personalization",
           "Dopad impact"
         ],
         "Messages": [
           "Vnitřní politické dění",
+          "Mezinárodní politické reakce",
           "Dopad na izraelské civilisty",
           "Ekonomické důsledky"
         ],
@@ -7722,7 +7736,9 @@
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Mluvčí katarského ministerstva zahraničí Mádžid Ansárí"
+          "Mluvčí katarského ministerstva zahraničí Mádžid Ansárí",
+          "Hamás",
+          "Palestinský Islámský džihád (PIJ)"
         ]
       }
     },
@@ -7843,8 +7859,7 @@
         "Zpravodajské hodnoty": [
           "Negativita negativity",
           "Blízkost proximity",
-          "Elitní osoby prominence",
-          "Dopad impact"
+          "Elitní osoby prominence"
         ],
         "Messages": [
           "Teroristické operace",
@@ -7989,7 +8004,6 @@
         "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Historicko-kulturní rámec",
           "Geopolitický rámec"
         ],
         "Mluvčí": [
@@ -8532,7 +8546,8 @@
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Členové teroristických skupin"
+          "Členové teroristických skupin",
+          "Médiá a novináři"
         ]
       }
     },
@@ -8662,12 +8677,13 @@
         "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
+          "Rámec budování míru",
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
           "Političtí představitelé Izraele",
           "Političtí představitelé Palestiny",
-          "Nezávislí experti a analytici"
+          "Politici z blízkovýchodních zemí"
         ]
       }
     },
@@ -9058,7 +9074,8 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Negativita negativity",
-          "Blízkost proximity"
+          "Blízkost proximity",
+          "Dopad impact"
         ],
         "Messages": [
           "Teroristické operace",
@@ -9072,7 +9089,7 @@
         "Mluvčí": [
           "Média a novináři",
           "Očití svědci a civilisté z Izraele",
-          "Členové teroristických skupin"
+          "Očití svědci a civilisté z Palestiny"
         ]
       }
     },
@@ -9476,7 +9493,8 @@
         ],
         "Messages": [
           "Vojenské operace Izraele",
-          "Dopad na izraelské civilisty"
+          "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty"
         ],
         "Message": "Vojenské operace Izraele",
         "Mediální rámce (multiple)": [
@@ -10150,7 +10168,7 @@
           "Rámec konfliktu"
         ],
         "Mluvčí": [
-          "Jiní"
+          "Očití svědci a civilisté z Izraele"
         ]
       }
     },
@@ -10269,9 +10287,7 @@
       "role": "assistant",
       "content": {
         "Zpravodajské hodnoty": [
-          "Negativita negativity",
           "Blízkost proximity",
-          "Elitní osoby prominence",
           "Dopad impact"
         ],
         "Messages": [
@@ -10291,8 +10307,8 @@
           "Političtí představitelé Izraele",
           "Političtí představitelé Palestiny",
           "Politici ze ostatních světových zemí",
-          "Představitelé mezinárodních a neziskových organizací",
-          "Médiá a novináři"
+          "Vojenští představitelé Izraele",
+          "Nezávislí experti a analytici"
         ]
       }
     },
@@ -10421,7 +10437,6 @@
         "Message": "Historie/kontextualizace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Rámec budování míru",
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": []
@@ -10685,7 +10700,9 @@
         ],
         "Messages": [
           "Vnitřní politické dění",
-          "Dopad na izraelské civilisty"
+          "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty",
+          "Globální reakce veřejnosti"
         ],
         "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
@@ -10821,9 +10838,9 @@
         "Messages": [
           "Teroristické operace",
           "Dopad na izraelské civilisty",
-          "Mezinárodní politické reakce"
+          "Globální reakce veřejnosti"
         ],
-        "Message": "Mezinárodní politické reakce",
+        "Message": "Teroristické operace",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Geopolitický rámec"
@@ -10953,9 +10970,9 @@
           "Dopad impact"
         ],
         "Messages": [
-          "Ekonomické důsledky"
+          "Vnitřní politické dění"
         ],
-        "Message": "Ekonomické důsledky",
+        "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
@@ -10964,8 +10981,6 @@
         "Mluvčí": [
           "Političtí představitelé Izraele",
           "Političtí představitelé Palestiny",
-          "Politici z blízkovýchodních zemí",
-          "Politici ze ostatních světových zemí",
           "Nezávislí experti a analytici"
         ]
       }
@@ -11087,8 +11102,7 @@
         "Zpravodajské hodnoty": [
           "Negativita negativity",
           "Blízkost proximity",
-          "Elitní osoby prominence",
-          "Dopad impact"
+          "Elitní osoby prominence"
         ],
         "Messages": [
           "Vnitřní politické dění",
@@ -11233,8 +11247,9 @@
           "Humanitární rámec"
         ],
         "Mluvčí": [
-          "Izraelský představitelé",
-          "Očití svědci a civilisté z Izraele",
+          "Izraelská armáda",
+          "Agentura AFP",
+          "Web Times of Israel (ToI)",
           "Úřad OSN pro koordinaci humanitárních záležitostí (OCHA)"
         ]
       }
@@ -11505,7 +11520,7 @@
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
-          "Médiá a novináři",
+          "Média a novináři",
           "Očití svědci a civilisté z Izraele"
         ]
       }
@@ -11756,16 +11771,17 @@
       "role": "assistant",
       "content": {
         "Zpravodajské hodnoty": [
+          "Negativita negativity",
           "Blízkost proximity",
+          "Elitní osoby prominence",
           "Dopad impact"
         ],
         "Messages": [
           "Vnitřní politické dění",
           "Mezinárodní politické reakce",
-          "Vojenské operace Izraele",
           "Ekonomické důsledky"
         ],
-        "Message": "Vojenské operace Izraele",
+        "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
@@ -12034,7 +12050,8 @@
         "Message": "Vojenské operace Izraele",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Humanitární rámec"
+          "Humanitární rámec",
+          "Lokální rámec"
         ],
         "Mluvčí": [
           "Vojenští představitelé Izraele",
@@ -12176,8 +12193,7 @@
           "Geopolitický rámec"
         ],
         "Mluvčí": [
-          "Nezávislí experti a analytici",
-          "Média a novináři"
+          "Nezávislí experti a analytici"
         ]
       }
     },
@@ -12447,7 +12463,7 @@
         ],
         "Mluvčí": [
           "Političtí představitelé Izraele",
-          "Médiá a novináři"
+          "Média a novináři"
         ]
       }
     },
@@ -12577,7 +12593,7 @@
         "Message": "Vojenské operace Izraele",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
-          "Historicko-kulturní rámec"
+          "Humanitární rámec"
         ],
         "Mluvčí": [
           "Vojenští představitelé Izraele"
@@ -12703,19 +12719,18 @@
           "Dopad impact"
         ],
         "Messages": [
-          "Mezinárodní politické reakce",
-          "Humanitární pomoc"
+          "Mezinárodní politické reakce"
         ],
         "Message": "Mezinárodní politické reakce",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
-          "Humanitární rámec",
-          "Geopolitický rámec"
+          "Humanitární rámec"
         ],
         "Mluvčí": [
           "Političtí představitelé Izraele",
-          "Političtí představitelé Palestiny"
+          "Političtí představitelé Palestiny",
+          "Představitelé mezinárodních a neziskových organizací"
         ]
       }
     },
@@ -12835,7 +12850,7 @@
       "content": {
         "Zpravodajské hodnoty": [
           "Blízkost proximity",
-          "Elitní osoby prominence",
+          "Personalizace personalization",
           "Dopad impact"
         ],
         "Messages": [
@@ -12981,15 +12996,10 @@
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
-          "Historicko-kulturní rámec"
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec"
         ],
-        "Mluvčí": [
-          "Političtí představitelé Izraele",
-          "Političtí představitelé Palestiny",
-          "Politici z blízkovýchodních zemí",
-          "Politici ze ostatních světových zemí",
-          "Nezávislí experti a analytici"
-        ]
+        "Mluvčí": []
       }
     },
     {
@@ -13114,24 +13124,18 @@
         ],
         "Messages": [
           "Vnitřní politické dění",
-          "Vojenské operace Izraele",
           "Dopad na izraelské civilisty",
-          "Dopad na palestinské civilisty",
           "Ekonomické důsledky"
         ],
-        "Message": "Vojenské operace Izraele",
+        "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
           "Rámec budování míru",
-          "Historicko-kulturní rámec",
-          "Geopolitický rámec",
-          "Lokální rámec"
+          "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
           "Političtí představitelé Izraele",
-          "Členové teroristických skupin",
-          "Nezávislí experti a analytici",
-          "Očití svědci a civilisté z Izraele"
+          "Média a novináři"
         ]
       }
     },
@@ -13402,7 +13406,9 @@
         "Mediální rámce (multiple)": [
           "Historicko-kulturní rámec"
         ],
-        "Mluvčí": []
+        "Mluvčí": [
+          "Nezávislí experti a analytici"
+        ]
       }
     },
     {
@@ -13534,13 +13540,13 @@
         "Message": "Vnitřní politické dění",
         "Mediální rámce (multiple)": [
           "Rámec konfliktu",
+          "Rámec budování míru",
           "Historicko-kulturní rámec"
         ],
         "Mluvčí": [
           "Média a novináři",
           "Političtí představitelé Izraele",
-          "Političtí představitelé Palestiny",
-          "Politici ze ostatních světových zemí"
+          "Političtí představitelé Palestiny"
         ]
       }
     }
