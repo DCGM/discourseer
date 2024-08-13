@@ -1,21 +1,21 @@
 DEBUG:root:run_discourseer.py:main: Python file location: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/run_discourseer.py
-DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment', texts_dir=None, ratings_dir=None, output_dir=None, prompt_schema_definition=None, prompt_definitions=None, prompt_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
-DEBUG:root:run_discourseer.py:prepare_output_dir: Directory /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output already exists. Saving the result to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_20240808-175111
-DEBUG:root:run_discourseer.py:load_prompts: Loading prompts from file: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/prompt_definitions.json
-DEBUG:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt definition from file:/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/prompt_schema_definition.json
+DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/projects/discourseer/experiments/default_experiment', texts_dir=None, ratings_dir=None, output_dir=None, prompt_schema_definition=None, prompt_definitions=None, prompt_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
+DEBUG:root:run_discourseer.py:prepare_output_dir: Directory /home/xvlach22/projects/discourseer/experiments/default_experiment/output already exists. Saving the result to /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240813-164919
+DEBUG:root:run_discourseer.py:load_prompts: Loading prompts from file: /home/xvlach22/projects/discourseer/experiments/default_experiment/prompt_definitions.json
+DEBUG:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt definition from file:/home/xvlach22/projects/discourseer/experiments/default_experiment/prompt_schema_definition.json
 DEBUG:httpx:_config.py:load_ssl_context: load_ssl_context verify=True cert=None trust_env=True http2=False
 DEBUG:httpx:_config.py:load_ssl_context_verify: load_verify_locations cafile='/etc/ssl/certs/ca-certificates.crt'
 DEBUG:openai._base_client:_base_client.py:_build_request: Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a friendly chat bot.'}, {'role': 'user', 'content': 'Say Hi!'}], 'model': 'gpt-3.5-turbo'}}
 DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
-DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7daaf0d375e0>
-DEBUG:httpcore.connection:_trace.py:trace: start_tls.started ssl_context=<ssl.SSLContext object at 0x7daaf0ee9ac0> server_hostname='api.openai.com' timeout=5.0
-DEBUG:httpcore.connection:_trace.py:trace: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7daaf0d375b0>
+DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ad4615a0370>
+DEBUG:httpcore.connection:_trace.py:trace: start_tls.started ssl_context=<ssl.SSLContext object at 0x7ad4616e7340> server_hostname='api.openai.com' timeout=5.0
+DEBUG:httpcore.connection:_trace.py:trace: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7ad4615a0340>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 08 Aug 2024 15:51:12 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'240'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199972'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'8ms'), (b'x-request-id', b'req_1ee7aa35ae9f39c6b0d80001dfd429e8'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=vqIqkG4j2ews1ov6U4tNHaPRrIP5qvn5Q7sUqCO6XaU-1723132272-1.0.1.1-0XKpmZgCVleGGh8Bu9BgOeaDSGioM.jvDW2JM6Nvkqe2BfYggojQi0HrMyzN1jyF6mbHs2uMgFzGnd5h3JhJpw; path=/; expires=Thu, 08-Aug-24 16:21:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=jQNN6sIZ62yQXEpEcWpOQJtaIY3AlGSApoP1tJCsWz8-1723132272408-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b00aa9a3fa22794-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 Aug 2024 14:49:20 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'243'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199972'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'8ms'), (b'x-request-id', b'req_b6b3b3626289832b1944fd99f32551eb'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=.S5qRid8kQp_vgQYDQsrhIWbDrqGmFygWeGqLxovVVU-1723560560-1.0.1.1-jsHHD19LEnFqbBxUVZNRyouz7qxXYn8Q9ymC7L4yfyNmTGMWH9L2kq3gg.Y1.IsAunLefeRfoOsH8G9ndeV5Sw; path=/; expires=Tue, 13-Aug-24 15:19:20 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=RsteYx9B7zO3Spk4tFBIF1zi8k99BLH89qocwRg79iA-1723560560363-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b2982da7991b34b-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
@@ -35,18 +35,18 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 08 Aug 2024 15:51:13 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'958'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'197678'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'696ms'), (b'x-request-id', b'req_02445f63dd8b391a5e01925b23d07219'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b00aa9ebf5a2794-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 Aug 2024 14:49:21 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'806'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'197678'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'696ms'), (b'x-request-id', b'req_e82560b9c66dd6ae359052d3ff22d6ce'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b2982de6861b34b-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.started
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.complete
 DEBUG:openai._base_client:_base_client.py:_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "200 OK"
-DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['czech-republic']}
+DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'extended_report', 'message-trigger': 'politician', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' prompt_key='range-v1' question_id='rozsah' rating_results=['3']
-DEBUG:root:rater.py:add_model_response: Adding rating: genre, report
-DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' prompt_key='genre-v1' question_id='zanr' rating_results=['report']
+DEBUG:root:rater.py:add_model_response: Adding rating: genre, extended_report
+DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' prompt_key='genre-v1' question_id='zanr' rating_results=['extended_report']
 DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politician
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' prompt_key='message-trigger-v1' question_id='spoustec-zpravy' rating_results=['politician']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['czech-republic']
@@ -63,7 +63,7 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 08 Aug 2024 15:51:14 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'565'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'197866'), (b'x-ratelimit-reset-requests', b'15.994s'), (b'x-ratelimit-reset-tokens', b'639ms'), (b'x-request-id', b'req_c4919ce145cebf41d8fbdd5b81380825'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b00aaa6dc5e2794-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 Aug 2024 14:49:22 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'742'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'197866'), (b'x-ratelimit-reset-requests', b'16.115s'), (b'x-ratelimit-reset-tokens', b'639ms'), (b'x-request-id', b'req_d9a93ff67943488edcf23f8b318ad542'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b2982e5adfcb34b-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
@@ -91,25 +91,25 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 08 Aug 2024 15:51:15 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'584'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9997'), (b'x-ratelimit-remaining-tokens', b'197953'), (b'x-ratelimit-reset-requests', b'23.689s'), (b'x-ratelimit-reset-tokens', b'613ms'), (b'x-request-id', b'req_def93317dc9adaf4ebd628057b4a6be5'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b00aaac9e8e2794-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 13 Aug 2024 14:49:23 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'689'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=15552000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9997'), (b'x-ratelimit-remaining-tokens', b'197953'), (b'x-ratelimit-reset-requests', b'23.643s'), (b'x-ratelimit-reset-tokens', b'613ms'), (b'x-request-id', b'req_87f021d5cfb44ba32c74c94ecda08cd1'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8b2982ec9978b34b-PRG'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.started
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.complete
 DEBUG:openai._base_client:_base_client.py:_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "200 OK"
-DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'security-forces', 'place': ['ukraine']}
+DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['ukraine']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='range-v1' question_id='rozsah' rating_results=['3']
 DEBUG:root:rater.py:add_model_response: Adding rating: genre, report
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='genre-v1' question_id='zanr' rating_results=['report']
-DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, security-forces
-DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='message-trigger-v1' question_id='spoustec-zpravy' rating_results=['security-forces']
+DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politician
+DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='message-trigger-v1' question_id='spoustec-zpravy' rating_results=['politician']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['ukraine']
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='place-v1' question_id='misto' rating_results=['ukraine']
-INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_20240808-175111/model_ratings.csv
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240813-164919/model_ratings.csv
 DEBUG:root:inter_rater_reliability.py:clean_data: Removed 0/33 rows with NaN values.
-DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_20240808-175111/dataframe.csv):
+DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240813-164919/dataframe.csv):
                                                                                   rater_1.csv rater_2.csv      rater_3.csv            model         majority  maj_agreement_with_model    worst_case
 file                                          prompt_key      rating                                                                                                                                
 Chci_spravedlnost_pro_dceru.txt               misto           czech-republic             True        True             True             True             True                      True         False
@@ -132,7 +132,7 @@ Rusko_použilo_hypersonickou_střelu_Zirkon.txt misto           czech-republic  
                                                               ukraine                    True        True             True             True             True                      True         False
                                                               unknown                   False       False            False            False            False                      True          True
                                               rozsah          single_choice                 3           3                3                3                3                      True  --WORST-CASE
-                                              spoustec-zpravy single_choice   security-forces       other  security-forces  security-forces  security-forces                      True  --WORST-CASE
+                                              spoustec-zpravy single_choice   security-forces       other  security-forces       politician  security-forces                     False  --WORST-CASE
                                               zanr            single_choice            report      report           report           report           report                      True  --WORST-CASE
 Tvrdík_skončil_jako_viceprezident.txt         misto           czech-republic             True        True             True             True             True                      True         False
                                                               germany                   False       False            False            False            False                      True          True
@@ -144,7 +144,7 @@ Tvrdík_skončil_jako_viceprezident.txt         misto           czech-republic  
                                                               unknown                   False       False            False            False            False                      True          True
                                               rozsah          single_choice                 4           4                4                3                4                     False  --WORST-CASE
                                               spoustec-zpravy single_choice            public      public       politician       politician           public                     False  --WORST-CASE
-                                              zanr            single_choice            report      report           report           report           report                      True  --WORST-CASE
+                                              zanr            single_choice            report      report           report  extended_report           report                     False  --WORST-CASE
 INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt misto
 INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt rozsah
 INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt spoustec-zpravy
@@ -154,43 +154,43 @@ INFO:root:run_discourseer.py:__call__: Inter-rater reliability results summary:
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.79135,
+      "with_model": 0.75014,
       "worst_case": 0.21868,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.79293,
+      "with_model": 0.75203,
       "worst_case": 0.2246,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.86464,
+      "with_model": 0.8387,
       "worst_case": 0.41361,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.879
+    "majority_agreement": 0.818
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.35236,
+      "with_model": 0.30345,
       "worst_case": -0.03963,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.40359,
+      "with_model": 0.35876,
       "worst_case": 0.02652,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.63555,
+      "with_model": 0.54994,
       "worst_case": 0.14416,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.7395
+    "majority_agreement": 0.57275
   }
 }
