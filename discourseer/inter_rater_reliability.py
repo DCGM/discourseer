@@ -136,6 +136,7 @@ class IRRResult(pydantic.BaseModel):
 
 
 class IRR:
+    DATAFRAME_NAME = 'dataframe.csv'
     TOTAL_AGREEMENT = 1.0
     WORST_CASE_VALUE = '--WORST-CASE'  # A value that should not be present in the ratings
     EMPTY_IRR_RESULTS = IRRResults(
@@ -152,9 +153,12 @@ class IRR:
     col_worst_case = 'worst_case'
     col_best_case = col_majority
     index_cols = ['file', 'prompt_key', 'rating']
+    col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
+    col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
 
-    def __init__(self, raters: list[Rater], model_rater: Rater = None, extraction_prompts: ExtractionPrompts = None,
-                 out_dir: str = 'IRR_output', calculate_irr_for_options: bool = False):
+    def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
+                 extraction_prompts: ExtractionPrompts = None, out_dir: str = 'IRR_output',
+                 calculate_irr_for_options: bool = False):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
@@ -162,7 +166,7 @@ class IRR:
         self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
         self.out_dir = out_dir
-        self.out_dataframe = os.path.join(self.out_dir, 'dataframe.csv')
+        self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
         os.makedirs(self.out_dir, exist_ok=True)
 
         if self.calculate_irr_for_options:
@@ -175,18 +179,21 @@ class IRR:
 
         self.option_results = {}
 
-        self.df = pd.DataFrame()
-        self.results: IRRResults = self.get_inter_rater_reliability()
+        if df is not None:
+            self.df = df
+        else:
+            self.df = self.prepare_dataframe_from_raters()
+        self.results = self.get_inter_rater_reliability(self.df)
 
     def __call__(self) -> IRRResults:
         return self.results
 
-    def get_inter_rater_reliability(self) -> IRRResults:
+    def prepare_dataframe_from_raters(self) -> pd.DataFrame:
         if self.model_rater is not None:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
             df = self.raters_to_dataframe(self.raters)
-        self.rater_columns = df.columns.difference([self.col_model]).to_list()
+        self.rater_columns = df.columns.difference(self.col_non_rater_columns).to_list()
 
         df_before_cleaning = df.copy()
 
@@ -199,7 +206,10 @@ class IRR:
             df_before_cleaning.to_csv(self.out_dataframe)
             return IRR.EMPTY_IRR_RESULTS
 
-        self.input_columns = df.columns.difference([self.col_model]).to_list()
+        return df
+
+    def get_inter_rater_reliability(self, df: pd.DataFrame) -> IRRResults:
+        self.input_columns = df.columns.difference(self.col_non_input_columns).to_list()
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
         prompt_keys = df.index.get_level_values('prompt_key').unique().to_list()
 
@@ -207,8 +217,8 @@ class IRR:
         df = self.add_worst_case(df)
 
         logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
+        # print(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
         df.to_csv(self.out_dataframe)
-        # print(f'Calculating inter-rater reliability for df: \n{df}')
 
         overall_results = self.get_irr_result(df)
 
@@ -244,7 +254,7 @@ class IRR:
         return irr_results
 
     def get_irr_result(self, df: pd.DataFrame) -> IRRResult:
-        if self.model_rater:
+        if self.model_rater or self.col_model in df.columns:
             cac_with_model = CAC(df.loc[:, self.input_columns + self.model_columns])
         else:
             cac_with_model = None
@@ -266,6 +276,9 @@ class IRR:
         )
 
     def prepare_majority_agreement(self, df: pd.DataFrame):
+        if self.col_majority in df.columns and self.col_maj_agree_with_model in df.columns:
+            return df
+
         if self.col_majority not in df.columns:
             df[self.col_majority] = df.loc[:, self.input_columns].mode(axis=1).iloc[:, 0]
 
@@ -346,6 +359,9 @@ class IRR:
         return df
 
     def add_worst_case(self, df: pd.DataFrame) -> pd.DataFrame:
+        if self.col_worst_case in df.columns:
+            return df
+
         df[self.col_worst_case] = IRR.WORST_CASE_VALUE
 
         df.reset_index(inplace=True)

@@ -56,7 +56,7 @@ class ChatMessage(pydantic.BaseModel):
 
 
 class ConversationLog(Conversation):
-    schema: List[ChatMessage]
+    schema_definition: List[ChatMessage]
     texts: Dict[str, List[ChatMessage]] = {}
 
 

@@ -5,6 +5,9 @@ import os
 import logging
 from enum import Enum
 from typing import Dict
+import time
+
+from discourseer.extraction_prompts import ExtractionPrompts
 
 logger = logging.getLogger()
 
@@ -34,7 +37,7 @@ def json_file_to_pydantic(file_path: str, cls):
 
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-        return cls.parse_obj(data)
+        return cls.model_validate(data)
 
 
 def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path: str):
@@ -43,6 +46,28 @@ def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path
         for question, options in results.items():
             for option, irr in options.items():
                 f.write(f'{question},{option},{irr}\n')
+
+
+def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
+    if not os.path.exists(output_dir):
+        if create_new:
+            os.makedirs(output_dir)
+        return output_dir
+
+    output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
+    if create_new:
+        os.makedirs(output_dir_new)
+    logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
+    return output_dir_new
+
+
+def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
+    logging.debug(f'Loading prompts from file: {prompts_file}')
+    with open(prompts_file, 'r', encoding='utf-8') as f:
+        prompts = json.load(f)
+    prompts = ExtractionPrompts.model_validate(prompts)
+
+    return prompts.select_unique_names_and_question_ids()
 
 
 class JSONParser:

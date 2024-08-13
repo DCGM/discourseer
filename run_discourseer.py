@@ -114,7 +114,7 @@ class Discourseer:
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
-        self.conversation_log = ConversationLog(schema=self.prompt_schema_definition.messages, messages=[])
+        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[])
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_prompts=self.prompts)
@@ -130,19 +130,17 @@ class Discourseer:
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
 
-        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
-
         if not self.raters:
+            self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(self.raters, self.model_rater, self.prompts, out_dir=self.output_dir)
+        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, extraction_prompts=self.prompts, out_dir=self.output_dir)
         irr_results = irr_calculator()
-        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
-        pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
-        visualize_results(irr_results, self.get_output_file('irr_results.png'))
+        self.save_output(self.output_dir, irr_results)
         self.copy_input_ratings_to_output(irr_calculator)
+        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
 
     def extract_answers(self, text: str, text_id: str):
         logging.debug('New document:\n\n')
@@ -191,6 +189,12 @@ class Discourseer:
 
         for rater in raters:
             rater.save_to_csv(self.get_output_file(rater.name, input_ratings=True))
+
+    @staticmethod
+    def save_output(output_dir: str, irr_results: IRR):
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
+        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'))
+        visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
 
     @staticmethod
     def load_prompt_schema_definition(experiment_dir: str, prompt_definition: str = None) -> Conversation:
