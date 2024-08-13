@@ -1,0 +1,35 @@
+question,option,irr
+Zpravodajské hodnoty (multiple),Negativita negativity,0.38467
+Zpravodajské hodnoty (multiple),Blízkost proximity,0.71359
+Zpravodajské hodnoty (multiple),Elitní osoby prominence,0.33898
+Zpravodajské hodnoty (multiple),Personalizace personalization,0.49247
+Zpravodajské hodnoty (multiple),Dopad impact,0.03306
+Témata článku,Vnitřní politické dění,0.34196
+Témata článku,Mezinárodní politické reakce,0.56744
+Témata článku,Vojenské operace Izraele,0.69357
+Témata článku,Teroristické operace,0.45668
+Témata článku,Dílčí konflikty a střety,0.08818
+Témata článku,Dopad na izraelské civilisty,0.44427
+Témata článku,Dopad na palestinské civilisty,0.42657
+Témata článku,Humanitární pomoc,0.58081
+Témata článku,Globální reakce veřejnosti,0.67046
+Témata článku,Ekonomické důsledky,0.56834
+Témata článku,Historie/kontextualizace,0.39764
+Mediální rámce (multiple),Rámec konfliktu,0.21056
+Mediální rámce (multiple),Rámec budování míru,0.45089
+Mediální rámce (multiple),Humanitární rámec,0.4161
+Mediální rámce (multiple),Historicko-kulturní rámec,0.32325
+Mediální rámce (multiple),Geopolitický rámec,0.51955
+Mediální rámce (multiple),Lokální rámec,0.26786
+Mluvčí,Političtí představitelé Izraele,0.5566
+Mluvčí,Političtí představitelé Palestiny,0.56874
+Mluvčí,Politici z blízkovýchodních zemí,0.69419
+Mluvčí,Politici ze ostatních světových zemí,0.66539
+Mluvčí,Představitelé mezinárodních a neziskových organizací,0.47311
+Mluvčí,Vojenští představitelé Izraele,0.62775
+Mluvčí,Členové teroristických skupin,0.52209
+Mluvčí,Nezávislí experti a analytici,0.46473
+Mluvčí,Média a novináři,0.54468
+Mluvčí,Očití svědci a civilisté z Izraele,0.75316
+Mluvčí,Očití svědci a civilisté z Palestiny,0.06468
+Mluvčí,Jiní,1.0
