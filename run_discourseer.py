@@ -9,7 +9,7 @@ from typing import List, Union
 from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
-from discourseer.chat_client import ChatClient, Conversation, ChatMessage
+from discourseer.chat_client import ChatClient, Conversation, ChatMessage, ConversationLog
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
 from discourseer.visualize_IRR import visualize_results
 
@@ -114,10 +114,7 @@ class Discourseer:
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
-        self.conversation_log = self.prompt_schema_definition.model_copy(deep=True)
-        end_of_prompt_definition_message = ChatMessage(
-            role='assistant', content="This is the end of task definition. The conversation follows.")
-        self.conversation_log.messages.append(end_of_prompt_definition_message)
+        self.conversation_log = ConversationLog(schema=self.prompt_schema_definition.messages, messages=[])
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", extraction_prompts=self.prompts)
@@ -129,11 +126,11 @@ class Discourseer:
         for file in self.input_files:
             with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
-                response = self.extract_answers(text)
+                response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
+            pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
 
         self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
-        pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'))
 
         if not self.raters:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
@@ -147,7 +144,7 @@ class Discourseer:
         visualize_results(irr_results, self.get_output_file('irr_results.png'))
         self.copy_input_ratings_to_output(irr_calculator)
 
-    def extract_answers(self, text):
+    def extract_answers(self, text: str, text_id: str):
         logging.debug('New document:\n\n')
         logging.debug(f'Extracting answers from text: {text[:min(50, len(text))]}...')
 
@@ -166,10 +163,8 @@ class Discourseer:
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")
-        self.conversation_log.add_messages(conversation.messages, try_parse_json=True)
-        self.conversation_log.messages.append(
-            ChatMessage(role="assistant",
-                        content=response))
+        self.conversation_log.texts[text_id] = conversation.messages
+        self.conversation_log.texts[text_id].append(ChatMessage(role="assistant", content=response))
 
         return response
 

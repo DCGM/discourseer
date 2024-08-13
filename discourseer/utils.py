@@ -15,9 +15,10 @@ class RatingsCopyMode(Enum):
     reorganized = "reorganized"
 
 
-def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):
+def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None):
+    model_dump = model.model_dump(exclude=exclude)
     with open(file_path, 'w', encoding='utf-8') as f:
-        json.dump(model.model_dump(), f, ensure_ascii=False, indent=2)
+        json.dump(model_dump, f, ensure_ascii=False, indent=2)
 
 
 def dict_to_json_file(data: dict, file_path: str):
