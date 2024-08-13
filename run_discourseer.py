@@ -37,8 +37,7 @@ def parse_args():
     parser.add_argument('--prompt-definitions', default=None,
                         help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
 
-    parser.add_argument('--prompt-subset', nargs='*',
-                        default=list([]),
+    parser.add_argument('--prompt-subset', nargs='*', default=list([]),
                         help='The subset to take from file in `prompt-definitions`. '
                              'The accuracy may suffer if there is too many prompts.')
     parser.add_argument('--text-count', type=int, default=None,
@@ -63,14 +62,18 @@ def setup_logging(log_level: str, log_file: str):
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
 
+    mpl_logger = logging.getLogger('matplotlib')
+    mpl_logger.setLevel(logging.WARNING)
+
     logging.getLogger().addHandler(file_handler)
     logging.getLogger().addHandler(stream_handler)
 
 
 def main():
     args = parse_args()
-    log_file = 'experiments/tmp/logfile.log'
-    os.makedirs('experiments/tmp', exist_ok=True)
+    tmp_dir = 'tmp'
+    log_file = os.path.join(tmp_dir, 'logfile.log')
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
     setup_logging(args.log, log_file)
     logging.debug(f"Python file location: {os.path.abspath(__file__)}")
     logging.debug(f"Arguments: {args}")
@@ -91,6 +94,7 @@ def main():
 
     logging.getLogger().handlers.clear()  # Remove the handlers to avoid logging http connection close
     os.rename(log_file, discourseer.get_output_file(os.path.basename(log_file)))
+    os.rmdir(tmp_dir)
 
 
 class Discourseer:
@@ -103,7 +107,6 @@ class Discourseer:
         self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.prompts = self.load_prompts(experiment_dir, prompt_definitions, prompt_subset)
-        logging.debug(f"Prompts: {self.prompts}\n\n")
         self.raters = self.load_raters(experiment_dir, ratings_dirs, self.prompts)
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
@@ -136,7 +139,7 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(self.raters, self.model_rater, self.prompts, self.get_output_file('dataframe.csv'))
+        irr_calculator = IRR(self.raters, self.model_rater, self.prompts, out_dir=self.output_dir)
         irr_results = irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
 
@@ -156,6 +159,7 @@ class Discourseer:
                 raise KeyError(f"Non-existing format string {e} in message: "
                                f"({message.content[:min(80, len(message.content))]}...")
 
+        conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
         response = response.choices[0].message.content

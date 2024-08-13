@@ -1,0 +1,11 @@
+{
+  "overall": 0.59048,
+  "mean_through_prompts": 0.54011,
+  "prompts": {
+    "Hlavní téma článku": 0.4895,
+    "Mediální rámce (multiple)": 0.52257,
+    "Mluvčí": 0.67869,
+    "Témata článku": 0.4438,
+    "Zpravodajské hodnoty (multiple)": 0.566
+  }
+}

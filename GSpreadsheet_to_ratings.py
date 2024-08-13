@@ -27,12 +27,13 @@ def parse_dir(input_path: str, output_path: str):
         if not file.endswith('.csv'):
             continue
         file_path = os.path.join(input_path, file)
+        print(f'\nParsing {file}')
 
         # load csv file
         with open(file_path, 'r') as f:
             reader = csv.reader(f)
             data = list(reader)
-        print(f'Loaded {len(data)} rows from {file_path}')
+        print(f'Loaded {len(data)} rows')
         rater = parse_spreadsheet(data)
         rater.name = file
 
@@ -75,7 +76,7 @@ def parse_single_choice_options(data: str) -> List[str]:
     if isinstance(data, list) and len(data) == 1:
         data = data[0]
 
-    print(f'data: {data}')
+    # print(f'data: {data}')
 
     pattern = r"(\d+[\)\.\s]?)\s+"
     matches = [(m.start(0), m.end(1)) for m in re.finditer(pattern, data)]
@@ -83,7 +84,7 @@ def parse_single_choice_options(data: str) -> List[str]:
     options_dict: Dict[int, str] = {}
     for i, match in enumerate(matches[:-1]):
         index = data[match[0]:match[1]]
-        print(f'index: {index}')
+        # print(f'index: {index}')
         start = match[1]
         end = matches[i+1][0]
         option = data[start:end]
@@ -92,7 +93,7 @@ def parse_single_choice_options(data: str) -> List[str]:
     # add last option
     options_dict[int(strip_stuff(data[matches[-1][0]:matches[-1][1]]))] = strip_stuff(data[matches[-1][1]:])
 
-    print(f'options_dict: {options_dict}')
+    # print(f'options_dict: {options_dict}')
     return options_dict
 
 def parse_ratings(data, questions: List[Question]) -> List[Rating]:
@@ -100,7 +101,7 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
     ratings: List[Rating] = []
 
     for row in answer_lines:
-        print(f'row: {row}')
+        # print(f'row: {row}')
         # every row should have: name of file, answers to individual questions (single or multiple columns according to question type)
         file = row[0].strip()
         if file == '':
@@ -108,22 +109,22 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
 
         row_index = 1
         for question in questions:
-            print('')
-            print(f'row_index: {row_index}')
-            print(f'question: {question.model_dump()}')
+            # print('')
+            # print(f'row_index: {row_index}')
+            # print(f'question: {question.model_dump()}')
             if question.single_choice:
-                print(f'row[{row_index}]: {row[row_index]}')
+                # print(f'row[{row_index}]: {row[row_index]}')
                 answer = get_single_choice_answer(row[row_index], question)
-                print(f'answer: {answer}')
+                # print(f'answer: {answer}')
                 rating = Rating(file=file, question_id=question.name, rating_results=answer)
             else:
-                print(f'row[{row_index}:]: {row[row_index:]}')
+                # print(f'row[{row_index}:]: {row[row_index:]}')
                 answers = get_multi_choice_answers(row[row_index:], question)
                 rating = Rating(file=file, question_id=question.name, rating_results=answers)
 
-            print(f'rating: {rating.model_dump()}')
+            # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1
-            print(f'Adding {len(question.options)} to row_index ({question.model_dump()})')
+            # print(f'Adding {len(question.options)} to row_index (number of question options), whole question: ({question.model_dump()})')
             ratings.append(rating)
 
     return ratings
@@ -167,16 +168,15 @@ if __name__ == '__main__':
     args = parse_args()
     parse_dir(args.input_path, args.output_path)
     # example: parse_dir('experiments/gaza/coder_results_original/', 'experiments/gaza/coder_results_ratings/')
-    print('Done')
+    print('\n')
+    print('--------------------------------------')
+    print('Parsing ratings from GSpreadsheet DONE')
+    print('--------------------------------------')
+    print('\n')
 
 """Example input document:
 ,Zpravodajské hodnoty,,,,,Hlavní téma článku,Mediální rámce,,,,,,Mluvčí,,,,,,,,,,,
-,Negativita negativity,Blízkost proximity,Elitní osoby prominence,Personalizace personalization,Dopad impact,"1) Vnitřní politické dění; 2) Mezinárodní politické reakce
-3) Vojenské operace Izraele 4) Teroristické operace
-5)  Dílčí konflikty a střety
-6) Dopad na civilisty a humanitární krize
-7) Humanitární pomoc 8) Globální reakce veřejnosti
-9) Jiné",Rámec konfliktu,Rámec budování míru,Humanitární rámec,Historicko-kulturní rámec,Geopolitický rámec,Lokální rámec,Političtí představitelé Izraele,Političtí představitelé Palestiny,Politici z blízkovýcho>
+,Negativita negativity,Blízkost proximity,Elitní osoby prominence,Personalizace personalization,Dopad impact,"1) Vnitřní politické dění; 2) Mezinárodní politické reakce, 3) Vojenské operace Izraele 4) Teroristické operace, 5)  Dílčí konflikty a střety, 6) Dopad na civilisty a humanitární krize, 7) Humanitární pomoc 8) Globální reakce veřejnosti, 9) Jiné",Rámec konfliktu,Rámec budování míru,Humanitární rámec,Historicko-kulturní rámec,Geopolitický rámec,Lokální rámec,Političtí představitelé Izraele,Političtí představitelé Palestiny,Politici z blízkovýcho...
 2023-10-07T00-00-00_2023WN280011.txt,1,0,0,1,1,5,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
 2023-10-08T21-44-00_2023WN281071.txt,1,0,1,0,1,1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1 (intermediální agenda)
 """

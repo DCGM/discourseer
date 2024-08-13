@@ -1,0 +1,10 @@
+{
+  "overall": 0.83748,
+  "mean_through_prompts": 0.50463,
+  "prompts": {
+    "rozsah": 1.0,
+    "zanr": -0.0,
+    "spoustec-zpravy": 0.11111,
+    "misto": 0.90743
+  }
+}

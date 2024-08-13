@@ -4,6 +4,7 @@ import re
 import os
 import logging
 from enum import Enum
+from typing import Dict
 
 logger = logging.getLogger()
 
@@ -19,6 +20,11 @@ def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str):
         json.dump(model.model_dump(), f, ensure_ascii=False, indent=2)
 
 
+def dict_to_json_file(data: dict, file_path: str):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def json_file_to_pydantic(file_path: str, cls):
     if not issubclass(cls, pydantic.BaseModel):
         raise ValueError(f"Class {cls} is not a subclass of pydantic.BaseModel")
@@ -28,6 +34,14 @@ def json_file_to_pydantic(file_path: str, cls):
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
         return cls.parse_obj(data)
+
+
+def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path: str):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write('question,option,irr\n')
+        for question, options in results.items():
+            for option, irr in options.items():
+                f.write(f'{question},{option},{irr}\n')
 
 
 class JSONParser:

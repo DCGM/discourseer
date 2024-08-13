@@ -1,0 +1,35 @@
+question,option,irr
+Mediální rámce (multiple),Geopolitický rámec,0.51875
+Mediální rámce (multiple),Historicko-kulturní rámec,0.22379
+Mediální rámce (multiple),Humanitární rámec,0.52469
+Mediální rámce (multiple),Lokální rámec,0.3652
+Mediální rámce (multiple),Rámec budování míru,0.62874
+Mediální rámce (multiple),Rámec konfliktu,0.2924
+Mluvčí,Jiní,1.0
+Mluvčí,Média a novináři,0.35673
+Mluvčí,Nezávislí experti a analytici,-0.0
+Mluvčí,Očití svědci a civilisté z Izraele,0.78904
+Mluvčí,Očití svědci a civilisté z Palestiny,1.0
+Mluvčí,Politici z blízkovýchodních zemí,0.46269
+Mluvčí,Politici ze ostatních světových zemí,0.63971
+Mluvčí,Političtí představitelé Izraele,0.70299
+Mluvčí,Političtí představitelé Palestiny,0.75201
+Mluvčí,Představitelé mezinárodních a neziskových organizací,0.45
+Mluvčí,Vojenští představitelé Izraele,0.54706
+Mluvčí,Členové teroristických skupin,0.39608
+Témata článku,Dopad na izraelské civilisty,0.33173
+Témata článku,Dopad na palestinské civilisty,0.17988
+Témata článku,Dílčí konflikty a střety,0.13372
+Témata článku,Ekonomické důsledky,-0.0
+Témata článku,Globální reakce veřejnosti,0.3818
+Témata článku,Historie/kontextualizace,0.49635
+Témata článku,Humanitární pomoc,0.43192
+Témata článku,Mezinárodní politické reakce,0.63704
+Témata článku,Teroristické operace,0.37563
+Témata článku,Vnitřní politické dění,0.43047
+Témata článku,Vojenské operace Izraele,0.4047
+Zpravodajské hodnoty (multiple),Blízkost proximity,1.0
+Zpravodajské hodnoty (multiple),Dopad impact,0.04938
+Zpravodajské hodnoty (multiple),Elitní osoby prominence,0.57129
+Zpravodajské hodnoty (multiple),Negativita negativity,0.35072
+Zpravodajské hodnoty (multiple),Personalizace personalization,0.56015

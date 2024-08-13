@@ -1,0 +1,16 @@
+file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
+1.1._Zelení_chtějí_hlavu_Čunka.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.24._Schwarzenberg_k_odsunu:_bylo_to_vyhnání.txt,single_choice,Ne,Ne,Ano,Ne,--WORST-CASE
+1.25._Zelení_už_mají_Čunka_dost.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.26._Zeman_byl_u_zrodu_nové_strany_Jany_Volfové.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.28._ODS_podpořila_Klause_na_Hrad.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.34._Policejní_prezident_by_mohl_mít_časově_omezené_funkční_období.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.35._ČSSD_viní_Langra_z_ovlivňování_kauzy_Kubice.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.5._Vedení_ODS:_Zvolte_Klause_opět_prezidentem.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.58._Buď_Čunek_nebo_my_navrhovala_část_zelených.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.6._Květinko_hýčkal_Zeman_Volfovou.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.64._Křehká_květinka_má_stranu.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.71._Zelení_chtějí_aby_Jiří_Čunek_odešel_z_vlády.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.79._Volfová_neuspěla_známé_tváře_nepřišly.txt,single_choice,Ne,Ano,Ano,Ano,--WORST-CASE
+1.88._Strany_stále_víc_závisejí_na_státní_pokladně.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.93._Sociolog:_Čunek_vyvolává_rasové_démony.txt,single_choice,Ano,Ano,Ano,Ano,--WORST-CASE
