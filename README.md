@@ -115,3 +115,5 @@ Seznam implementovaných formátovacích řetězců:
 - `prompt_json`: JSON se všemi informacemi o otázkách
 - `response_json_schema`: JSON schéma, které odpovídá formátu odpovědí modelu
 - `response_json_schema_with_options`: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi
+
+Viz [format_string_examples](format_string_examples.md) pro příklady

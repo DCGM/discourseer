@@ -1,0 +1,64 @@
+{
+  "prompts": {
+    "zpravodajské-hodnoty": {
+      "name": "Zpravodajské hodnoty",
+      "question_id": "Zpravodajské hodnoty",
+      "description": "Zpravodajské hodnoty se používají k výběru událostí.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Negativita",
+          "description": "Zdůrazňují se negativní jevy negativní emoce."
+        },
+        {
+          "name": "Blízkost",
+          "description": "Události jsou zobrazeny jako geograficky nebo kulturně blízké."
+        },
+        {
+          "name": "Elitní osoby",
+          "description": "Zpráva obsahuje stanoviska lidí a organizací vnímaných jako autority"
+        }
+      ]
+    },
+    "message-single": {
+      "name": "Message",
+      "question_id": "Hlavní téma článku",
+      "description": "Hlavní téma by mělo být obsaženo už v titulku a leadu.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "name": "Vnitřní politika",
+          "description": "Informuje o politickém vývoji v Izraeli nebo v Gaze."
+        },
+        {
+          "name": "Mezinárodní politika",
+          "description": "Informuje o mezinárodních reakcích na konflikt."
+        },
+        {
+          "name": "Vojenské operace",
+          "description": "Zpráva popisuje vojenské operace."
+        }
+      ]
+    },
+    "medialni-ramec": {
+      "name": "Mediální rámce",
+      "question_id": "Mediální rámce",
+      "description": "Mediální rámce jsou způsoby, jakými média strukturovaně zpracovávají informace o tématech.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Rámec konfliktu",
+          "description": "Zpráva situaci zobrazuje jako napjatou nebo konfliktní."
+        },
+        {
+          "name": "Rámec budování míru",
+          "description": "Zpráva zvýrazňuje snahy o řešení konfliktu prostřednictvím."
+        },
+        {
+          "name": "Humanitární rámec",
+          "description": "Zpráva zobrazuje důsledky konfliktu pro běžný občanský život."
+        }
+      ]
+    }
+  }
+}
