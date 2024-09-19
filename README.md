@@ -103,15 +103,15 @@ Používají se při definici promptů v souboru `prompt_schema_definitions.json
 v souboru `discourseer/extraction_prompts.py`, kde jdou jednoduše přidat další podle předlohy `custom_format_string`.
 
 Seznam implementovaných formátovacích řetězců:
-- text: vložení textu článku
-- prompt_names: jména otázek oddělené čárkou
-- prompt_descriptions: popisy otázek oddělené mezerou (popis by měla být celá věta)
-- prompt_names_and_descriptions_colon: jména a popisy otázek oddělené dvojtečkou (např. "Země": "Země původu textu.") 
-- prompt_names_and_descriptions_parentheses: jména a popisy otázek oddělené závorkami (např. "Země" ("Země původu textu."))
-- single_choice_prompts: jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou
-- multiple_choice_prompts: jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou
-- prompt_options: několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce 
-- whole_prompt_info: několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce 
-- prompt_json: JSON se všemi informacemi o otázkách
-- response_json_schema: JSON schéma, které odpovídá formátu odpovědí modelu
-- response_json_schema_with_options: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi
+- `text`: vložení textu článku
+- `prompt_names`: jména otázek oddělené čárkou
+- `prompt_descriptions`: popisy otázek oddělené mezerou (popis by měla být celá věta)
+- `prompt_names_and_descriptions_colon`: jména a popisy otázek oddělené dvojtečkou (např. "Země": "Země původu textu.") 
+- `prompt_names_and_descriptions_parentheses`: jména a popisy otázek oddělené závorkami (např. "Země" ("Země původu textu."))
+- `single_choice_prompts`: jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou
+- `multiple_choice_prompts`: jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou
+- `prompt_options`: několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce 
+- `whole_prompt_info`: několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce 
+- `prompt_json`: JSON se všemi informacemi o otázkách
+- `response_json_schema`: JSON schéma, které odpovídá formátu odpovědí modelu
+- `response_json_schema_with_options`: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi

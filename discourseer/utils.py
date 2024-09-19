@@ -33,7 +33,7 @@ def json_file_to_pydantic(file_path: str, cls):
 
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
-        return cls.parse_obj(data)
+        return cls.model_validate(data)
 
 
 def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path: str):
