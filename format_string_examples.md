@@ -15,7 +15,6 @@ Tyto příklady jsou vytvořeny podle zadání v souboru [prompt_definitions.jso
 9. [prompt_json](#prompt_json)
 10. [response_json_schema](#response_json_schema)
 11. [response_json_schema_with_options](#response_json_schema_with_options)
-12. [custom_format_string](#custom_format_string)
 
 **prompt_names** (jména otázek oddělené čárkou)
 <a name="prompt_names"></a>
@@ -80,7 +79,7 @@ Mediální rámce: multiple_choice (description: Mediální rámce jsou způsoby
 **prompt_json** (JSON se všemi informacemi o otázkách)
 <a name="prompt_json"></a>
 
-viz [prompt_json.json](../experiments/example/json_outputs/prompt_json.json)
+viz [prompt_json.json](../experiments/example/json_outputs/prompt_json.json) pro kompletní výstup
 ```json
 {
   "prompts": {
@@ -103,7 +102,7 @@ viz [prompt_json.json](../experiments/example/json_outputs/prompt_json.json)
 **response_json_schema** (JSON schéma, které odpovídá formátu odpovědí modelu)
 <a name="response_json_schema"></a>
 
-viz [response_json_schema.json](../experiments/example/json_outputs/response_json_schema.json)
+viz [response_json_schema.json](../experiments/example/json_outputs/response_json_schema.json) pro kompletní výstup
 ```json
 {
   "properties": {
@@ -126,7 +125,7 @@ viz [response_json_schema.json](../experiments/example/json_outputs/response_jso
 **response_json_schema_with_options** (JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi)
 <a name="response_json_schema_with_options"></a>
 
-viz [response_json_schema_with_options.json](../experiments/example/json_outputs/response_json_schema_with_options.json)
+viz [response_json_schema_with_options.json](../experiments/example/json_outputs/response_json_schema_with_options.json) pro kompletní výstup
 ```json
 {
   "properties": {
