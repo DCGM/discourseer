@@ -102,6 +102,8 @@ Používají se při definici promptů v souboru `prompt_schema_definitions.json
 (např. `experiments/default_experiment/prompt_schema_definitions.json`) a jsou definovány 
 v souboru `discourseer/extraction_prompts.py`, kde jdou jednoduše přidat další podle předlohy `custom_format_string`.
 
+Viz [format_string_examples](format_string_examples.md) pro příklady.
+
 Seznam implementovaných formátovacích řetězců:
 - `text`: vložení textu článku
 - `prompt_names`: jména otázek oddělené čárkou
@@ -115,5 +117,3 @@ Seznam implementovaných formátovacích řetězců:
 - `prompt_json`: JSON se všemi informacemi o otázkách
 - `response_json_schema`: JSON schéma, které odpovídá formátu odpovědí modelu
 - `response_json_schema_with_options`: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi
-
-Viz [format_string_examples](format_string_examples.md) pro příklady
