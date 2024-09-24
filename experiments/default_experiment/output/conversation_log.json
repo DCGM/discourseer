@@ -4,7 +4,7 @@
   "temperature": 0.0,
   "top_p": 0,
   "response_format": "json",
-  "schema": [
+  "schema_definition": [
     {
       "role": "system",
       "content": "You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {prompt_names_and_descriptions_colon}. For every question pick only options from these lists.\n{prompt_options}\n\nYou will pick one option for these questions: {single_choice_prompts}. You will pick one or more options for these prompts: {multiple_choice_prompts}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
@@ -87,7 +87,7 @@
         "content": {
           "range": "3",
           "genre": "report",
-          "message-trigger": "politician",
+          "message-trigger": "security-forces",
           "place": [
             "ukraine"
           ]

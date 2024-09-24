@@ -22,6 +22,9 @@ else
     OUTPUT_FOLDER=$2
 fi
 
+echo "Input folder: $INPUT_FOLDER"
+echo "Output folder: $OUTPUT_FOLDER"
+
 # --------------- Realculating Inter-rater reliability for dataframe  -----------
 
 python $DISCOURSEER/calc_irr_for_dataframe.py \

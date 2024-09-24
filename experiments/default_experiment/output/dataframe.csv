@@ -19,7 +19,7 @@ Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,slovakia,False,False,False
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,ukraine,True,True,True,True,True,True,False
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,unknown,False,False,False,False,False,True,True
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,rozsah,single_choice,3,3,3,3,3,True,--WORST-CASE
-Rusko_použilo_hypersonickou_střelu_Zirkon.txt,spoustec-zpravy,single_choice,security-forces,other,security-forces,politician,security-forces,False,--WORST-CASE
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,spoustec-zpravy,single_choice,security-forces,other,security-forces,security-forces,security-forces,True,--WORST-CASE
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,zanr,single_choice,report,report,report,report,report,True,--WORST-CASE
 Tvrdík_skončil_jako_viceprezident.txt,misto,czech-republic,True,True,True,True,True,True,False
 Tvrdík_skončil_jako_viceprezident.txt,misto,germany,False,False,False,False,False,True,True
