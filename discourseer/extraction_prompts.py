@@ -53,10 +53,10 @@ class ExtractionPrompts(pydantic.BaseModel):
         return " ".join([prompt.description for prompt in self.prompts.values()])
 
     def prompt_names_and_descriptions_colon(self) -> str:
-        return " ".join([f'{prompt.name}: {prompt.description}' for prompt in self.prompts.values()])
+        return ". ".join([f'{prompt.name}: {prompt.description}' for prompt in self.prompts.values()])
 
     def prompt_names_and_descriptions_parentheses(self) -> str:
-        return " ".join([f'{prompt.name} ({prompt.description})' for prompt in self.prompts.values()])
+        return ". ".join([f'{prompt.name} ({prompt.description})' for prompt in self.prompts.values()])
 
     def single_choice_prompts(self) -> str:
         return ", ".join([prompt.name for prompt in self.prompts.values() if not prompt.multiple_choice])
@@ -70,7 +70,7 @@ class ExtractionPrompts(pydantic.BaseModel):
 
     def whole_prompt_info(self) -> str:
         """Whole prompt info in one string. Individual prompts are separated by newline."""
-        return "\n".join([f"{prompt.name} {multiple_choice_tag if prompt.multiple_choice else single_choice_tag} "
+        return "\n".join([f"{prompt.name}: {multiple_choice_tag if prompt.multiple_choice else single_choice_tag} "
                           f"(description: {prompt.description}) options: {prompt.list_options_details()}"
                           for prompt in self.prompts.values()])
 
@@ -86,7 +86,7 @@ class ExtractionPrompts(pydantic.BaseModel):
                 value = str
             response_format[prompt_key] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
-        return json.dumps(response_format.model_json_schema(), indent=2)
+        return json.dumps(response_format.model_json_schema(), indent=2, ensure_ascii=False)
 
     def response_json_schema_with_options(self) -> str:
         response_format = {}
@@ -99,7 +99,7 @@ class ExtractionPrompts(pydantic.BaseModel):
                 value = Literal[tuple(option_names)] if len(option_names) > 0 else str
             response_format[prompt.name] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
-        return json.dumps(response_format.model_json_schema(), indent=2)
+        return json.dumps(response_format.model_json_schema(), indent=2, ensure_ascii=False)
 
     def get_format_strings(self) -> Dict[str, str]:
         return {
@@ -120,7 +120,7 @@ class ExtractionPrompts(pydantic.BaseModel):
 
     def custom_format_string(self) -> str:
         # define your custom format string here with the same name
-        return ", ".join([prompt.name for prompt in self.prompts.values() if prompt.multiple_choice])
+        return ". ".join([f'{prompt.name} ({prompt.description})' for prompt in self.prompts.values()])
 
 
 class ExtractionPrompt(pydantic.BaseModel):
