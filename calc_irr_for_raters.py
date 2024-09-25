@@ -64,7 +64,7 @@ class Calculator:
     def __call__(self):
         self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
         irr_results = self.irr_calculator()
-        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
         utils.dict_to_json_file(irr_results.get_one_metric_and_variant(self.metric, 'without_model'),
@@ -143,7 +143,7 @@ class Calculator:
         print(f"For threshold {threshold} there are ({len(acceptable_questions)} out of {len(all_questions)}) acceptable questions:")
         if acceptable_questions:
             print(f"{acceptable_questions_names}")
-            print(f"{json.dumps(acceptable_questions, indent=2)}")
+            print(f"{json.dumps(acceptable_questions, indent=2, ensure_ascii=False)}")
         else:
             print(f"No acceptable questions found")
 

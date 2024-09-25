@@ -117,7 +117,7 @@ class ChatClient:
 
 
 def print_conversation_schema():
-    print(json.dumps(Conversation.model_json_schema(), indent=2))
+    print(json.dumps(Conversation.model_json_schema(), indent=2, ensure_ascii=False))
 
 
 if __name__ == '__main__':

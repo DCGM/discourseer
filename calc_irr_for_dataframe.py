@@ -78,7 +78,7 @@ class Calculator:
         irr_calculator = IRR(df=self.df, extraction_prompts=self.prompts, out_dir=self.output_dir)
         irr_results = irr_calculator()
 
-        print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
+        print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         Discourseer.save_output(self.output_dir, irr_results)
 
