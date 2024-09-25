@@ -10,7 +10,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-07T00-00-00_2023WN280011.txt,Média a novináři,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-07T00-00-00_2023WN280011.txt,Jiní,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -22,7 +21,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-07T00-00-00_2023WN280056.txt,Média a novináři,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-07T00-00-00_2023WN280056.txt,Jiní,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -34,7 +32,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-09T09-11-00_2023WN282037.txt,Média a novináři,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-09T09-11-00_2023WN282037.txt,Jiní,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -46,7 +43,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-09T12-53-00_2023WN282086.txt,Média a novináři,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-09T12-53-00_2023WN282086.txt,Jiní,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -58,7 +54,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-09T14-50-00_2023WN282113.txt,Média a novináři,True,True,True,False
 2023-10-09T14-50-00_2023WN282113.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-09T14-50-00_2023WN282113.txt,Jiní,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -70,7 +65,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-09T16-46-00_2023WN282130.txt,Média a novináři,True,True,True,False
 2023-10-09T16-46-00_2023WN282130.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-09T16-46-00_2023WN282130.txt,Jiní,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -82,7 +76,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-10T18-48-00_2023WN283308.txt,Média a novináři,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-10T18-48-00_2023WN283308.txt,Jiní,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -94,7 +87,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-10T18-51-00_2023WN283162.txt,Média a novináři,True,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-10T18-51-00_2023WN283162.txt,Jiní,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -106,7 +98,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-10T21-42-00_2023WN283183.txt,Média a novináři,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-10T21-42-00_2023WN283183.txt,Jiní,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -118,7 +109,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-11T09-07-00_2023WN284024.txt,Média a novináři,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-11T09-07-00_2023WN284024.txt,Jiní,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Političtí představitelé Izraele,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Političtí představitelé Palestiny,True,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -130,7 +120,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-12T12-23-00_2023WN285197.txt,Média a novináři,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-12T12-23-00_2023WN285197.txt,Jiní,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Političtí představitelé Izraele,False,True,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -142,7 +131,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-12T13-54-00_2023WN285106.txt,Média a novináři,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,Očití svědci a civilisté z Izraele,False,True,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-12T13-54-00_2023WN285106.txt,Jiní,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -154,7 +142,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-12T16-14-00_2023WN285137.txt,Média a novináři,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-12T16-14-00_2023WN285137.txt,Jiní,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -166,7 +153,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-13T06-36-00_2023WN286013.txt,Média a novináři,False,True,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-13T06-36-00_2023WN286013.txt,Jiní,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -178,7 +164,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-15T14-52-00_2023WN288050.txt,Média a novináři,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-15T14-52-00_2023WN288050.txt,Jiní,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Političtí představitelé Izraele,True,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -190,7 +175,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-15T20-07-00_2023WN288080.txt,Média a novináři,True,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Očití svědci a civilisté z Palestiny,False,True,False,True
-2023-10-15T20-07-00_2023WN288080.txt,Jiní,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -202,7 +186,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-16T10-36-00_2023WN289052.txt,Média a novináři,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-16T10-36-00_2023WN289052.txt,Jiní,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -214,7 +197,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-18T13-55-00_2023WN291081.txt,Média a novináři,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-18T13-55-00_2023WN291081.txt,Jiní,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Političtí představitelé Palestiny,True,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Politici z blízkovýchodních zemí,True,True,True,False
@@ -226,7 +208,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-18T18-43-00_2023WN291136.txt,Média a novináři,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-18T18-43-00_2023WN291136.txt,Jiní,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -238,7 +219,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-19T10-57-00_2023WN292057.txt,Média a novináři,True,True,True,False
 2023-10-19T10-57-00_2023WN292057.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-19T10-57-00_2023WN292057.txt,Jiní,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -250,7 +230,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-19T15-13-00_2023WN292147.txt,Média a novináři,False,True,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-19T15-13-00_2023WN292147.txt,Jiní,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -262,7 +241,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-22T07-25-00_2023WN295017.txt,Média a novináři,False,True,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-22T07-25-00_2023WN295017.txt,Jiní,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -274,7 +252,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-22T07-25-00_2023WN295038.txt,Média a novináři,True,True,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-22T07-25-00_2023WN295038.txt,Jiní,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -286,7 +263,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-23T09-18-00_2023WN296031.txt,Média a novináři,True,True,True,False
 2023-10-23T09-18-00_2023WN296031.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-23T09-18-00_2023WN296031.txt,Jiní,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -298,7 +274,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-23T12-37-00_2023WN296192.txt,Média a novináři,True,True,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-23T12-37-00_2023WN296192.txt,Jiní,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -310,7 +285,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-24T08-41-00_2023WN297021.txt,Média a novináři,False,True,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-24T08-41-00_2023WN297021.txt,Jiní,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Političtí představitelé Izraele,True,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -322,7 +296,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-24T12-12-00_2023WN297062.txt,Média a novináři,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-24T12-12-00_2023WN297062.txt,Jiní,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -334,7 +307,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-26T00-00-00_2023WN299091.txt,Média a novináři,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-26T00-00-00_2023WN299091.txt,Jiní,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -346,7 +318,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-26T00-00-00_2023WN299176.txt,Média a novináři,True,True,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-26T00-00-00_2023WN299176.txt,Jiní,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -358,7 +329,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-26T00-00-00_2023WN299198.txt,Média a novináři,True,True,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-26T00-00-00_2023WN299198.txt,Jiní,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Političtí představitelé Palestiny,False,True,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -370,7 +340,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-27T00-00-00_2023WN300050.txt,Média a novináři,True,True,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-27T00-00-00_2023WN300050.txt,Jiní,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -382,7 +351,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-30T00-00-00_2023WN303025.txt,Média a novináři,True,True,True,False
 2023-10-30T00-00-00_2023WN303025.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-30T00-00-00_2023WN303025.txt,Jiní,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -394,7 +362,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-30T00-00-00_2023WN303134.txt,Média a novináři,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-30T00-00-00_2023WN303134.txt,Jiní,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Političtí představitelé Izraele,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -406,7 +373,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-10-30T11-19-00_2023WN303199.txt,Média a novináři,True,True,True,False
 2023-10-30T11-19-00_2023WN303199.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2023-10-30T11-19-00_2023WN303199.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Jiní,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -418,7 +384,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-01T16-09-00_2023WN305157.txt,Média a novináři,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Jiní,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Političtí představitelé Palestiny,False,True,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -430,7 +395,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-02T08-14-00_2023WN306018.txt,Média a novináři,True,True,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-02T08-14-00_2023WN306018.txt,Jiní,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -442,7 +406,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-02T11-09-00_2023WN306067.txt,Média a novináři,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-02T11-09-00_2023WN306067.txt,Jiní,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Političtí představitelé Palestiny,True,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -454,7 +417,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-04T16-30-00_2023WN308069.txt,Média a novináři,False,True,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-04T16-30-00_2023WN308069.txt,Jiní,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -466,7 +428,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-05T08-41-00_2023WN309011.txt,Média a novináři,True,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Jiní,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -478,7 +439,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-05T08-41-00_2023WN309016.txt,Média a novináři,True,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-05T08-41-00_2023WN309016.txt,Jiní,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Političtí představitelé Palestiny,True,True,True,False
 2023-11-05T10-57-00_2023WN309100.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -490,7 +450,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-05T10-57-00_2023WN309100.txt,Média a novináři,False,True,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-05T10-57-00_2023WN309100.txt,Jiní,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -502,7 +461,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-08T08-45-00_2023WN312032.txt,Média a novináři,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-08T08-45-00_2023WN312032.txt,Jiní,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -514,7 +472,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-08T11-17-00_2023WN312083.txt,Média a novináři,True,True,True,False
 2023-11-08T11-17-00_2023WN312083.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Jiní,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Politici z blízkovýchodních zemí,True,True,True,False
@@ -526,7 +483,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-08T17-35-00_2023WN312200.txt,Média a novináři,True,True,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Jiní,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -538,7 +494,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-12T10-35-00_2023WN316132.txt,Média a novináři,True,True,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-12T10-35-00_2023WN316132.txt,Jiní,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -550,7 +505,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-13T08-16-00_2023WN317030.txt,Média a novináři,True,True,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Očití svědci a civilisté z Palestiny,False,True,False,True
-2023-11-13T08-16-00_2023WN317030.txt,Jiní,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -562,7 +516,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-13T11-01-00_2023WN317254.txt,Média a novináři,True,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-13T11-01-00_2023WN317254.txt,Jiní,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Političtí představitelé Izraele,True,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -574,7 +527,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-15T13-35-00_2023WN319151.txt,Média a novináři,True,True,True,False
 2023-11-15T13-35-00_2023WN319151.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-15T13-35-00_2023WN319151.txt,Jiní,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Političtí představitelé Izraele,False,True,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Politici z blízkovýchodních zemí,True,True,True,False
@@ -586,7 +538,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-15T16-48-00_2023WN319208.txt,Média a novináři,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-15T16-48-00_2023WN319208.txt,Jiní,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Političtí představitelé Izraele,True,True,True,False
 2023-11-16T08-16-00_2023WN320030.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -598,7 +549,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-16T08-16-00_2023WN320030.txt,Média a novináři,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-16T08-16-00_2023WN320030.txt,Jiní,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -610,7 +560,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-16T15-21-00_2023WN320146.txt,Média a novináři,True,True,True,False
 2023-11-16T15-21-00_2023WN320146.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-16T15-21-00_2023WN320146.txt,Jiní,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -622,7 +571,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-19T19-42-00_2023WN323084.txt,Média a novináři,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-19T19-42-00_2023WN323084.txt,Jiní,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -634,7 +582,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-20T20-25-00_2023WN324202.txt,Média a novináři,True,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-20T20-25-00_2023WN324202.txt,Jiní,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -646,7 +593,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-23T11-44-00_2023WN327073.txt,Média a novináři,True,True,True,False
 2023-11-23T11-44-00_2023WN327073.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Očití svědci a civilisté z Palestiny,False,True,False,True
-2023-11-23T11-44-00_2023WN327073.txt,Jiní,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Političtí představitelé Palestiny,True,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Politici z blízkovýchodních zemí,True,True,True,False
@@ -658,7 +604,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-23T16-26-00_2023WN327164.txt,Média a novináři,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-23T16-26-00_2023WN327164.txt,Jiní,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Političtí představitelé Izraele,True,True,True,False
 2023-11-24T21-16-00_2023WN328215.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Politici z blízkovýchodních zemí,False,True,False,True
@@ -670,7 +615,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-24T21-16-00_2023WN328215.txt,Média a novináři,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-24T21-16-00_2023WN328215.txt,Jiní,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -682,7 +626,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-29T08-32-00_2023WN333030.txt,Média a novináři,False,True,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-29T08-32-00_2023WN333030.txt,Jiní,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -694,7 +637,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-29T15-51-00_2023WN333171.txt,Média a novináři,True,True,True,False
 2023-11-29T15-51-00_2023WN333171.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-29T15-51-00_2023WN333171.txt,Jiní,False,False,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -706,7 +648,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-30T06-54-00_2023WN334015.txt,Média a novináři,True,True,True,False
 2023-11-30T06-54-00_2023WN334015.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-30T06-54-00_2023WN334015.txt,Jiní,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Političtí představitelé Izraele,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -718,7 +659,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-11-30T11-33-00_2023WN334072.txt,Média a novináři,True,True,True,False
 2023-11-30T11-33-00_2023WN334072.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-11-30T11-33-00_2023WN334072.txt,Jiní,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -730,7 +670,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-04T12-14-00_2023WN338101.txt,Média a novináři,True,True,True,False
 2023-12-04T12-14-00_2023WN338101.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-04T12-14-00_2023WN338101.txt,Jiní,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -742,7 +681,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-05T06-39-00_2023WN339011.txt,Média a novináři,True,True,True,False
 2023-12-05T06-39-00_2023WN339011.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-05T06-39-00_2023WN339011.txt,Jiní,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -754,7 +692,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-05T14-45-00_2023WN339132.txt,Média a novináři,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-05T14-45-00_2023WN339132.txt,Jiní,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -766,7 +703,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-06T09-06-00_2023WN340025.txt,Média a novináři,True,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Očití svědci a civilisté z Izraele,True,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Očití svědci a civilisté z Palestiny,False,True,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Jiní,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -778,7 +714,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-09T11-05-00_2023WN343035.txt,Média a novináři,True,True,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Očití svědci a civilisté z Izraele,True,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Jiní,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -790,7 +725,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-09T19-24-00_2023WN343081.txt,Média a novináři,True,True,True,False
 2023-12-09T19-24-00_2023WN343081.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-09T19-24-00_2023WN343081.txt,Jiní,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -802,7 +736,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-14T08-16-00_2023WN348008.txt,Média a novináři,True,True,True,False
 2023-12-14T08-16-00_2023WN348008.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Jiní,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -814,7 +747,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-14T16-08-00_2023WN348142.txt,Média a novináři,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Jiní,False,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -826,7 +758,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-15T12-15-00_2023WN349091.txt,Média a novináři,True,True,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-15T12-15-00_2023WN349091.txt,Jiní,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Političtí představitelé Izraele,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -838,7 +769,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-20T16-52-00_2023WN354149.txt,Média a novináři,True,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Jiní,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Političtí představitelé Izraele,False,True,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Političtí představitelé Palestiny,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -850,7 +780,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2023-12-30T12-42-00_2023WN364030.txt,Média a novináři,True,True,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2023-12-30T12-42-00_2023WN364030.txt,Jiní,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Političtí představitelé Izraele,False,True,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -862,7 +791,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-01T20-24-00_2024WN001075.txt,Média a novináři,True,True,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Jiní,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Političtí představitelé Izraele,False,True,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -874,7 +802,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-02T16-55-00_2024WN002143.txt,Média a novináři,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-02T16-55-00_2024WN002143.txt,Jiní,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Političtí představitelé Izraele,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Političtí představitelé Palestiny,False,True,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -886,7 +813,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-11T16-10-00_2024WN011155.txt,Média a novináři,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-11T16-10-00_2024WN011155.txt,Jiní,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Političtí představitelé Izraele,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -898,7 +824,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-12T10-01-00_2024WN012058.txt,Média a novináři,True,True,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-12T10-01-00_2024WN012058.txt,Jiní,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Političtí představitelé Izraele,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -910,7 +835,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-12T15-46-00_2024WN012144.txt,Média a novináři,True,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-12T15-46-00_2024WN012144.txt,Jiní,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Političtí představitelé Izraele,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -922,7 +846,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-18T10-32-00_2024WN018055.txt,Média a novináři,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-18T10-32-00_2024WN018055.txt,Jiní,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Političtí představitelé Izraele,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -934,7 +857,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-19T12-20-00_2024WN019033.txt,Média a novináři,True,True,True,False
 2024-01-19T12-20-00_2024WN019033.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-19T12-20-00_2024WN019033.txt,Jiní,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Političtí představitelé Izraele,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Politici z blízkovýchodních zemí,True,False,False,True
@@ -946,7 +868,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-20T10-17-00_2024WN020031.txt,Média a novináři,True,True,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-20T10-17-00_2024WN020031.txt,Jiní,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Političtí představitelé Izraele,True,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Političtí představitelé Palestiny,True,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -958,7 +879,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-28T19-21-00_2024WN028084.txt,Média a novináři,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Očití svědci a civilisté z Izraele,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-01-28T19-21-00_2024WN028084.txt,Jiní,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Političtí představitelé Izraele,True,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Političtí představitelé Palestiny,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -970,7 +890,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-01-30T12-22-00_2024WN030086.txt,Média a novináři,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Očití svědci a civilisté z Palestiny,False,True,False,True
-2024-01-30T12-22-00_2024WN030086.txt,Jiní,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Političtí představitelé Izraele,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Političtí představitelé Palestiny,True,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Politici z blízkovýchodních zemí,True,True,True,False
@@ -982,7 +901,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-02-06T20-53-00_2024WN037171.txt,Média a novináři,True,True,True,False
 2024-02-06T20-53-00_2024WN037171.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-02-06T20-53-00_2024WN037171.txt,Jiní,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Političtí představitelé Izraele,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -994,7 +912,6 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-02-08T12-53-00_2024WN039088.txt,Média a novináři,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-02-08T12-53-00_2024WN039088.txt,Jiní,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Političtí představitelé Izraele,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Političtí představitelé Palestiny,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Politici z blízkovýchodních zemí,False,False,False,True
@@ -1006,4 +923,3 @@ file,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,maj
 2024-02-15T21-49-00_2024WN046201.txt,Média a novináři,True,True,True,False
 2024-02-15T21-49-00_2024WN046201.txt,Očití svědci a civilisté z Izraele,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Očití svědci a civilisté z Palestiny,False,False,False,True
-2024-02-15T21-49-00_2024WN046201.txt,Jiní,False,False,False,True
