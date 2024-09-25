@@ -63,6 +63,10 @@ def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
 
 def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
     logging.debug(f'Loading prompts from file: {prompts_file}')
+
+    if not os.path.exists(prompts_file):
+        raise FileNotFoundError(f"File {prompts_file} not found.")
+
     with open(prompts_file, 'r', encoding='utf-8') as f:
         prompts = json.load(f)
     prompts = ExtractionPrompts.model_validate(prompts)
