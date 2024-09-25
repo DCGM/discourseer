@@ -51,10 +51,6 @@
           "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označ"
         },
         {
-          "name": "Dílčí konflikty a střety",
-          "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích."
-        },
-        {
           "name": "Dopad na izraelské civilisty",
           "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem."
         },
@@ -101,10 +97,6 @@
         {
           "name": "Teroristické operace",
           "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů)."
-        },
-        {
-          "name": "Dílčí konflikty a střety",
-          "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích."
         },
         {
           "name": "Dopad na izraelské civilisty",
