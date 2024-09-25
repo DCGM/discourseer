@@ -11,13 +11,12 @@
     "Mezinárodní politické reakce": 0.55794,
     "Vojenské operace Izraele": 0.43771,
     "Teroristické operace": 0.3235,
-    "Dílčí konflikty a střety": 1.0,
-    "Dopad na izraelské civilisty": 0.11515,
-    "Dopad na palestinské civilisty": 0.28632,
-    "Humanitární pomoc": 0.44571,
-    "Globální reakce veřejnosti": 0.58765,
-    "Ekonomické důsledky": 0.69301,
-    "Historie/kontextualizace": 0.66149
+    "Dopad na izraelské civilisty": 0.28632,
+    "Dopad na palestinské civilisty": 0.44571,
+    "Humanitární pomoc": 0.58765,
+    "Globální reakce veřejnosti": 0.69301,
+    "Ekonomické důsledky": 0.66149,
+    "Historie/kontextualizace": 0.39273
   },
   "Mediální rámce (multiple)": {
     "Rámec konfliktu": 0.40967,
