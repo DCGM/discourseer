@@ -192,7 +192,7 @@ class Discourseer:
 
     @staticmethod
     def save_output(output_dir: str, irr_results: IRR):
-        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
         pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'))
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
 
