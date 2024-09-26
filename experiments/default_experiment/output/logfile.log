@@ -1,20 +1,21 @@
 DEBUG:root:run_discourseer.py:main: Python file location: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/run_discourseer.py
 DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/projects/discourseer/experiments/default_experiment', texts_dir=None, ratings_dir=None, output_dir=None, prompt_schema_definition=None, prompt_definitions=None, prompt_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
+DEBUG:root:run_discourseer.py:prepare_output_dir: Directory /home/xvlach22/projects/discourseer/experiments/default_experiment/output already exists. Saving the result to /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240926-142528
 DEBUG:root:run_discourseer.py:load_prompts: Loading prompts from file: /home/xvlach22/projects/discourseer/experiments/default_experiment/prompt_definitions.json
 DEBUG:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt definition from file:/home/xvlach22/projects/discourseer/experiments/default_experiment/prompt_schema_definition.json
 DEBUG:httpx:_config.py:load_ssl_context: load_ssl_context verify=True cert=None trust_env=True http2=False
 DEBUG:httpx:_config.py:load_ssl_context_verify: load_verify_locations cafile='/etc/ssl/certs/ca-certificates.crt'
 DEBUG:openai._base_client:_base_client.py:_build_request: Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are a friendly chat bot.'}, {'role': 'user', 'content': 'Say Hi!'}], 'model': 'gpt-3.5-turbo'}}
 DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
-DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x756dee860880>
-DEBUG:httpcore.connection:_trace.py:trace: start_tls.started ssl_context=<ssl.SSLContext object at 0x756dee9b6340> server_hostname='api.openai.com' timeout=5.0
-DEBUG:httpcore.connection:_trace.py:trace: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x756dee860850>
+DEBUG:httpcore.connection:_trace.py:trace: connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x70794a030b20>
+DEBUG:httpcore.connection:_trace.py:trace: start_tls.started ssl_context=<ssl.SSLContext object at 0x70794a1961c0> server_hostname='api.openai.com' timeout=5.0
+DEBUG:httpcore.connection:_trace.py:trace: start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x70794a030af0>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 25 Sep 2024 12:36:51 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'230'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199972'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'8ms'), (b'x-request-id', b'req_59750da2d3d55daa4bf8f935e97a422b'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=iNYjiG89bWqk9wcmJGB.akSrl4rfCvn7qDNngrV1p.w-1727267811-1.0.1.1-DBYbhbqw.CF54.xrETaAQvkXv__Xpfk719WDg1vFFTRp9ocu9yXmezDDaZAkbRu5SvBCQC4hEbmqEnXMBb24Wg; path=/; expires=Wed, 25-Sep-24 13:06:51 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=Q1rrTyM3PxC9Y_AgYIHuP6ZzD2OBl.bxGC_DaecMwQM-1727267811608-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c8b0feb3a1b6e98-PRG'), (b'Content-Encoding', b'gzip')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 26 Sep 2024 12:25:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'219'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199972'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'8ms'), (b'x-request-id', b'req_cd26a72184171bfd399853035ed702f3'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=QhBdnZZMJJtY232OICIS9xwIVNSNnDY2fWSxSPnEk94-1727353529-1.0.1.1-JK390g5l7BBi51LzSBEs8CeeWoAls3Q68_og348Bm4v5LIJRd1QZ2v2nRlX2UWZj060fZIqPJyTDqM4jfWCVwg; path=/; expires=Thu, 26-Sep-24 12:55:29 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=y7vtMN.y1xDOJXMJgb2E5vmL0AD.zl6QeNoiPa9BU0I-1727353529300-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c933ca2b8ab2794-PRG'), (b'Content-Encoding', b'gzip')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
@@ -34,7 +35,7 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 25 Sep 2024 12:36:52 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'757'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'197677'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'696ms'), (b'x-request-id', b'req_c17b0014645c0641e9c355cabcc9b2b9'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c8b0feec8406e98-PRG'), (b'Content-Encoding', b'gzip')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 26 Sep 2024 12:25:30 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'757'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'197677'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'696ms'), (b'x-request-id', b'req_1353bf40a26b1561e5933b520abd534b'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c933ca64d192794-PRG'), (b'Content-Encoding', b'gzip')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
@@ -62,7 +63,7 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 25 Sep 2024 12:36:53 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'939'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'197866'), (b'x-ratelimit-reset-requests', b'16.175s'), (b'x-ratelimit-reset-tokens', b'640ms'), (b'x-request-id', b'req_9374afebd03699e872402561cb404f97'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c8b0ff5ace56e98-PRG'), (b'Content-Encoding', b'gzip')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 26 Sep 2024 12:25:31 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'797'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9998'), (b'x-ratelimit-remaining-tokens', b'197866'), (b'x-ratelimit-reset-requests', b'16.202s'), (b'x-ratelimit-reset-tokens', b'640ms'), (b'x-request-id', b'req_20b43579cc9c62dbf61e1502e5145e2a'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c933cac8cff2794-PRG'), (b'Content-Encoding', b'gzip')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
@@ -90,106 +91,106 @@ DEBUG:httpcore.http11:_trace.py:trace: send_request_headers.complete
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: send_request_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 25 Sep 2024 12:36:55 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'791'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9997'), (b'x-ratelimit-remaining-tokens', b'197952'), (b'x-ratelimit-reset-requests', b'23.533s'), (b'x-ratelimit-reset-tokens', b'614ms'), (b'x-request-id', b'req_ac7307a36e4d6d4b515f0e0523ff3da7'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c8b0ffdade36e98-PRG'), (b'Content-Encoding', b'gzip')])
+DEBUG:httpcore.http11:_trace.py:trace: receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 26 Sep 2024 12:25:32 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-eojliflj4bavern4nobjkpw0'), (b'openai-processing-ms', b'869'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9997'), (b'x-ratelimit-remaining-tokens', b'197952'), (b'x-ratelimit-reset-requests', b'23.802s'), (b'x-ratelimit-reset-tokens', b'614ms'), (b'x-request-id', b'req_a5cd88253b846550b33175f8eb8120f6'), (b'CF-Cache-Status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'8c933cb38ea22794-PRG'), (b'Content-Encoding', b'gzip')])
 INFO:httpx:_client.py:_send_single_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:_trace.py:trace: receive_response_body.complete
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.started
 DEBUG:httpcore.http11:_trace.py:trace: response_closed.complete
 DEBUG:openai._base_client:_base_client.py:_request: HTTP Request: POST https://api.openai.com/v1/chat/completions "200 OK"
-DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['ukraine']}
+DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['ukraine', 'russia']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='range-v1' question_id='rozsah' rating_results=['3']
 DEBUG:root:rater.py:add_model_response: Adding rating: genre, report
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='genre-v1' question_id='zanr' rating_results=['report']
 DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politician
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='message-trigger-v1' question_id='spoustec-zpravy' rating_results=['politician']
-DEBUG:root:rater.py:add_model_response: Adding rating: place, ['ukraine']
-DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='place-v1' question_id='misto' rating_results=['ukraine']
+DEBUG:root:rater.py:add_model_response: Adding rating: place, ['ukraine', 'russia']
+DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' prompt_key='place-v1' question_id='misto' rating_results=['ukraine', 'russia']
 DEBUG:root:inter_rater_reliability.py:clean_data: Removed 0/33 rows with NaN values.
-DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/projects/discourseer/experiments/default_experiment/output/dataframe.csv):
+DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240926-142528/dataframe.csv):
                                                                                   rater_1.csv rater_2.csv      rater_3.csv            model         majority  maj_agreement_with_model    worst_case
 file                                          prompt_key      rating                                                                                                                                
-Chci_spravedlnost_pro_dceru.txt               misto           czech-republic             True        True             True             True             True                      True         False
-                                                              germany                   False       False            False            False            False                      True          True
-                                                              other                     False       False            False            False            False                      True          True
-                                                              poland                    False       False            False            False            False                      True          True
-                                                              russia                    False       False            False            False            False                      True          True
-                                                              slovakia                  False       False            False            False            False                      True          True
-                                                              ukraine                   False       False            False            False            False                      True          True
-                                                              unknown                   False       False            False            False            False                      True          True
-                                              rozsah          single_choice                 5           5                5                3                5                     False  --WORST-CASE
-                                              spoustec-zpravy single_choice            public      public  security-forces           public           public                      True  --WORST-CASE
+Chci_spravedlnost_pro_dceru.txt               rozsah          single_choice                 5           5                5                3                5                     False  --WORST-CASE
                                               zanr            single_choice            report       other           report           report           report                      True  --WORST-CASE
-Rusko_použilo_hypersonickou_střelu_Zirkon.txt misto           czech-republic            False       False            False            False            False                      True          True
-                                                              germany                   False       False            False            False            False                      True          True
-                                                              other                     False       False            False            False            False                      True          True
-                                                              poland                    False       False            False            False            False                      True          True
-                                                              russia                     True        True             True            False             True                     False         False
+                                              spoustec-zpravy single_choice            public      public  security-forces           public           public                      True  --WORST-CASE
+                                              misto           czech-republic             True        True             True             True             True                      True         False
                                                               slovakia                  False       False            False            False            False                      True          True
-                                                              ukraine                    True        True             True             True             True                      True         False
-                                                              unknown                   False       False            False            False            False                      True          True
-                                              rozsah          single_choice                 3           3                3                3                3                      True  --WORST-CASE
-                                              spoustec-zpravy single_choice   security-forces       other  security-forces       politician  security-forces                     False  --WORST-CASE
-                                              zanr            single_choice            report      report           report           report           report                      True  --WORST-CASE
-Tvrdík_skončil_jako_viceprezident.txt         misto           czech-republic             True        True             True             True             True                      True         False
-                                                              germany                   False       False            False            False            False                      True          True
-                                                              other                     False       False             True            False            False                      True          True
                                                               poland                    False       False            False            False            False                      True          True
+                                                              germany                   False       False            False            False            False                      True          True
                                                               russia                    False       False            False            False            False                      True          True
-                                                              slovakia                  False       False            False            False            False                      True          True
                                                               ukraine                   False       False            False            False            False                      True          True
+                                                              other                     False       False            False            False            False                      True          True
                                                               unknown                   False       False            False            False            False                      True          True
-                                              rozsah          single_choice                 4           4                4                3                4                     False  --WORST-CASE
-                                              spoustec-zpravy single_choice            public      public       politician       politician           public                     False  --WORST-CASE
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt rozsah          single_choice                 3           3                3                3                3                      True  --WORST-CASE
+                                              zanr            single_choice            report      report           report           report           report                      True  --WORST-CASE
+                                              spoustec-zpravy single_choice   security-forces       other  security-forces       politician  security-forces                     False  --WORST-CASE
+                                              misto           czech-republic            False       False            False            False            False                      True          True
+                                                              slovakia                  False       False            False            False            False                      True          True
+                                                              poland                    False       False            False            False            False                      True          True
+                                                              germany                   False       False            False            False            False                      True          True
+                                                              russia                     True        True             True             True             True                      True         False
+                                                              ukraine                    True        True             True             True             True                      True         False
+                                                              other                     False       False            False            False            False                      True          True
+                                                              unknown                   False       False            False            False            False                      True          True
+Tvrdík_skončil_jako_viceprezident.txt         rozsah          single_choice                 4           4                4                3                4                     False  --WORST-CASE
                                               zanr            single_choice            report      report           report  extended_report           report                     False  --WORST-CASE
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt misto
+                                              spoustec-zpravy single_choice            public      public       politician       politician           public                     False  --WORST-CASE
+                                              misto           czech-republic             True        True             True             True             True                      True         False
+                                                              slovakia                  False       False            False            False            False                      True          True
+                                                              poland                    False       False            False            False            False                      True          True
+                                                              germany                   False       False            False            False            False                      True          True
+                                                              russia                    False       False            False            False            False                      True          True
+                                                              ukraine                   False       False            False            False            False                      True          True
+                                                              other                     False       False             True            False            False                      True          True
+                                                              unknown                   False       False            False            False            False                      True          True
 INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt rozsah
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt spoustec-zpravy
 INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt zanr
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt spoustec-zpravy
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for prompt misto
 INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summary:
 {
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.75014,
+      "with_model": 0.77778,
       "worst_case": 0.21868,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.75203,
+      "with_model": 0.77946,
       "worst_case": 0.2246,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.8387,
+      "with_model": 0.85472,
       "worst_case": 0.41361,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.818
+    "majority_agreement": 0.848
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.30345,
+      "with_model": 0.32308,
       "worst_case": -0.03963,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.35876,
+      "with_model": 0.37819,
       "worst_case": 0.02652,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.54994,
+      "with_model": 0.55701,
       "worst_case": 0.14416,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.57275
+    "majority_agreement": 0.58325
   }
 }
-INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/projects/discourseer/experiments/default_experiment/output/model_ratings.csv
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/projects/discourseer/experiments/default_experiment/output_20240926-142528/model_ratings.csv
