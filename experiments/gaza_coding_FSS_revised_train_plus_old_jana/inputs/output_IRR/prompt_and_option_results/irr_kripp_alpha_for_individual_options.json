@@ -1,0 +1,42 @@
+{
+  "Zpravodajské hodnoty (multiple)": {
+    "Negativita negativity": 0.68048,
+    "Blízkost proximity": 0.77549,
+    "Elitní osoby prominence": 0.47812,
+    "Personalizace personalization": 0.34766,
+    "Dopad impact": 0.00434
+  },
+  "Témata článku": {
+    "Vnitřní politické dění": 0.26587,
+    "Mezinárodní politické reakce": 0.55794,
+    "Vojenské operace Izraele": 0.43771,
+    "Teroristické operace": 0.3235,
+    "Dopad na izraelské civilisty": 0.28632,
+    "Dopad na palestinské civilisty": 0.44571,
+    "Humanitární pomoc": 0.58765,
+    "Globální reakce veřejnosti": 0.69301,
+    "Ekonomické důsledky": 0.66149,
+    "Historie/kontextualizace": 0.39273
+  },
+  "Mediální rámce (multiple)": {
+    "Rámec konfliktu": 0.40967,
+    "Rámec budování míru": 0.51594,
+    "Humanitární rámec": 0.21473,
+    "Historicko-kulturní rámec": 0.18853,
+    "Geopolitický rámec": 0.64493,
+    "Lokální rámec": 0.45371
+  },
+  "Mluvčí": {
+    "Političtí představitelé Izraele": 0.40357,
+    "Političtí představitelé Palestiny": 0.25409,
+    "Politici z blízkovýchodních zemí": 0.5446,
+    "Politici ze ostatních světových zemí": 0.65068,
+    "Představitelé mezinárodních a neziskových organizací": 0.6461,
+    "Vojenští představitelé Izraele": 0.54767,
+    "Členové teroristických skupin": 0.70505,
+    "Nezávislí experti a analytici": 0.66149,
+    "Média a novináři": 0.61825,
+    "Očití svědci a civilisté z Izraele": 0.82303,
+    "Očití svědci a civilisté z Palestiny": -0.02454
+  }
+}
