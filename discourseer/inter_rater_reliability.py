@@ -1,6 +1,7 @@
 from __future__ import annotations
 import logging
 import os
+import json
 
 import pydantic
 from typing import Optional, Dict
@@ -519,6 +520,11 @@ class IRR:
         for rater in raters:
             rater.name = IRR.get_unique_rater_name(rater.name, list(raters_dict.keys()))
             raters_dict[rater.name] = rater.to_series()
+
+        # check if all raters have the same length
+        lens = [len(rater) for rater in raters_dict.values()]
+        if len(set(lens)) != 1:
+            logging.warning(f"Raters have different lengths of ratings: {lens}. Is it possible the ratings come from different sets of texts?")
 
         df = pd.DataFrame(raters_dict)
         for col in df.columns:
