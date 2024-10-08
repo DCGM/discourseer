@@ -127,6 +127,7 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
             # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1
             # print(f'Adding {len(question.options)} to row_index (number of question options), whole question: ({question.model_dump()})')
+            # if len(rating.rating_results) > 0:  # this can cause unhandled errors in calculating IRRs for some reason...
             ratings.append(rating)
 
     return ratings
