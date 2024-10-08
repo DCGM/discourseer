@@ -1,4 +1,4 @@
-file,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
+file,Jana revize trénovacích.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,False,False,False,False,True
@@ -11,7 +11,7 @@ file,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revi
 2023-10-11T09-07-00_2023WN284024.txt,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,False,False,False,False,True
-2023-10-12T16-14-00_2023WN285137.txt,True,False,False,False,True
+2023-10-12T16-14-00_2023WN285137.txt,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,True,True,True,True,False
 2023-10-15T14-52-00_2023WN288050.txt,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,True,True,True,True,False

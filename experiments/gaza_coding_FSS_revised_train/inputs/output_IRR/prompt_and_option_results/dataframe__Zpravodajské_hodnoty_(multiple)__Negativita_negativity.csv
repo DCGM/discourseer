@@ -1,9 +1,9 @@
-file,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
+file,Jana revize trénovacích.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280056.txt,False,True,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,True,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,False,True,False,False,True
-2023-10-09T14-50-00_2023WN282113.txt,False,True,False,False,True
+2023-10-09T14-50-00_2023WN282113.txt,True,True,False,True,False
 2023-10-09T16-46-00_2023WN282130.txt,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,False,True,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,True,True,True,True,False
@@ -12,9 +12,9 @@ file,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revi
 2023-10-12T12-23-00_2023WN285197.txt,True,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,False,False,True,False,True
 2023-10-12T16-14-00_2023WN285137.txt,True,True,True,True,False
-2023-10-13T06-36-00_2023WN286013.txt,False,False,False,False,True
+2023-10-13T06-36-00_2023WN286013.txt,True,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,False,False,False,False,True
-2023-10-15T20-07-00_2023WN288080.txt,False,False,False,False,True
+2023-10-15T20-07-00_2023WN288080.txt,True,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,True,True,True,True,False
@@ -57,7 +57,7 @@ file,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revi
 2023-11-24T21-16-00_2023WN328215.txt,False,True,True,True,False
 2023-11-29T08-32-00_2023WN333030.txt,True,True,True,True,False
 2023-11-29T15-51-00_2023WN333171.txt,False,True,False,False,True
-2023-11-30T06-54-00_2023WN334015.txt,False,False,True,False,True
+2023-11-30T06-54-00_2023WN334015.txt,True,False,True,True,False
 2023-11-30T11-33-00_2023WN334072.txt,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,True,True,True,True,False
 2023-12-05T06-39-00_2023WN339011.txt,True,True,True,True,False

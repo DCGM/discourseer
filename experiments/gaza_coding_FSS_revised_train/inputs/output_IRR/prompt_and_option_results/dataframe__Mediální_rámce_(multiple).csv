@@ -1,4 +1,4 @@
-file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
+file,rating,Jana revize trénovacích.csv,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Rámec konfliktu,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Rámec budování míru,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Humanitární rámec,True,True,False,True,False
@@ -9,7 +9,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-10-07T00-00-00_2023WN280056.txt,Rámec budování míru,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Humanitární rámec,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Historicko-kulturní rámec,True,True,False,True,False
-2023-10-07T00-00-00_2023WN280056.txt,Geopolitický rámec,True,True,False,True,False
+2023-10-07T00-00-00_2023WN280056.txt,Geopolitický rámec,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Lokální rámec,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Rámec konfliktu,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Rámec budování míru,False,False,False,False,True
@@ -40,7 +40,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-10-10T18-48-00_2023WN283308.txt,Humanitární rámec,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Geopolitický rámec,True,False,False,False,True
-2023-10-10T18-48-00_2023WN283308.txt,Lokální rámec,False,True,True,True,False
+2023-10-10T18-48-00_2023WN283308.txt,Lokální rámec,True,True,True,True,False
 2023-10-10T18-51-00_2023WN283162.txt,Rámec konfliktu,True,True,True,True,False
 2023-10-10T18-51-00_2023WN283162.txt,Rámec budování míru,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Humanitární rámec,False,True,False,False,True
@@ -68,15 +68,15 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-10-12T13-54-00_2023WN285106.txt,Rámec konfliktu,True,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,Rámec budování míru,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Humanitární rámec,False,False,False,False,True
-2023-10-12T13-54-00_2023WN285106.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-10-12T13-54-00_2023WN285106.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Geopolitický rámec,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Lokální rámec,False,True,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Rámec konfliktu,True,False,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Rámec budování míru,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Humanitární rámec,True,False,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Historicko-kulturní rámec,False,False,False,False,True
-2023-10-12T16-14-00_2023WN285137.txt,Geopolitický rámec,False,True,True,True,False
-2023-10-12T16-14-00_2023WN285137.txt,Lokální rámec,False,False,True,False,True
+2023-10-12T16-14-00_2023WN285137.txt,Geopolitický rámec,True,True,True,True,False
+2023-10-12T16-14-00_2023WN285137.txt,Lokální rámec,True,False,True,True,False
 2023-10-13T06-36-00_2023WN286013.txt,Rámec konfliktu,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Rámec budování míru,True,True,False,True,False
 2023-10-13T06-36-00_2023WN286013.txt,Humanitární rámec,True,True,True,True,False
@@ -100,7 +100,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-10-16T10-36-00_2023WN289052.txt,Humanitární rámec,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Geopolitický rámec,False,False,True,False,True
-2023-10-16T10-36-00_2023WN289052.txt,Lokální rámec,False,True,False,False,True
+2023-10-16T10-36-00_2023WN289052.txt,Lokální rámec,True,True,False,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Rámec konfliktu,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Rámec budování míru,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Humanitární rámec,True,True,True,True,False
@@ -200,12 +200,12 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-10-30T11-19-00_2023WN303199.txt,Rámec konfliktu,False,True,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Rámec budování míru,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Humanitární rámec,False,False,False,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Historicko-kulturní rámec,True,False,True,True,False
+2023-10-30T11-19-00_2023WN303199.txt,Historicko-kulturní rámec,False,False,True,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Geopolitický rámec,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Lokální rámec,False,False,True,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Rámec konfliktu,True,True,False,True,False
-2023-11-01T16-09-00_2023WN305157.txt,Rámec budování míru,False,False,True,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Humanitární rámec,True,False,False,False,True
+2023-11-01T16-09-00_2023WN305157.txt,Rámec konfliktu,False,True,False,False,True
+2023-11-01T16-09-00_2023WN305157.txt,Rámec budování míru,True,False,True,True,False
+2023-11-01T16-09-00_2023WN305157.txt,Humanitární rámec,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Geopolitický rámec,True,True,True,True,False
 2023-11-01T16-09-00_2023WN305157.txt,Lokální rámec,False,False,False,False,True
@@ -223,7 +223,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-02T11-09-00_2023WN306067.txt,Lokální rámec,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Rámec konfliktu,False,True,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Rámec budování míru,True,True,True,True,False
-2023-11-04T16-30-00_2023WN308069.txt,Humanitární rámec,False,False,False,False,True
+2023-11-04T16-30-00_2023WN308069.txt,Humanitární rámec,True,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Geopolitický rámec,True,True,True,True,False
 2023-11-04T16-30-00_2023WN308069.txt,Lokální rámec,True,True,False,True,False
@@ -232,7 +232,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-05T08-41-00_2023WN309011.txt,Humanitární rámec,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Historicko-kulturní rámec,True,True,True,True,False
 2023-11-05T08-41-00_2023WN309011.txt,Geopolitický rámec,False,False,False,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Lokální rámec,False,False,True,False,True
+2023-11-05T08-41-00_2023WN309011.txt,Lokální rámec,True,False,True,True,False
 2023-11-05T08-41-00_2023WN309016.txt,Rámec konfliktu,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Rámec budování míru,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Humanitární rámec,False,False,False,False,True
@@ -241,8 +241,8 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-05T08-41-00_2023WN309016.txt,Lokální rámec,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Rámec konfliktu,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Rámec budování míru,True,True,True,True,False
-2023-11-05T10-57-00_2023WN309100.txt,Humanitární rámec,True,False,True,True,False
-2023-11-05T10-57-00_2023WN309100.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-11-05T10-57-00_2023WN309100.txt,Humanitární rámec,False,False,True,False,True
+2023-11-05T10-57-00_2023WN309100.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Geopolitický rámec,True,True,True,True,False
 2023-11-05T10-57-00_2023WN309100.txt,Lokální rámec,False,True,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Rámec konfliktu,True,False,True,True,False
@@ -256,11 +256,11 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-08T11-17-00_2023WN312083.txt,Humanitární rámec,False,True,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Historicko-kulturní rámec,True,True,False,True,False
 2023-11-08T11-17-00_2023WN312083.txt,Geopolitický rámec,False,False,False,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Lokální rámec,False,True,True,True,False
+2023-11-08T11-17-00_2023WN312083.txt,Lokální rámec,True,True,True,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Rámec konfliktu,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Rámec budování míru,True,True,True,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Humanitární rámec,False,False,False,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Historicko-kulturní rámec,True,False,True,True,False
+2023-11-08T17-35-00_2023WN312200.txt,Historicko-kulturní rámec,False,False,True,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Geopolitický rámec,False,False,True,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Lokální rámec,True,True,False,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Rámec konfliktu,True,True,True,True,False
@@ -284,7 +284,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-15T13-35-00_2023WN319151.txt,Rámec konfliktu,True,True,True,True,False
 2023-11-15T13-35-00_2023WN319151.txt,Rámec budování míru,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Humanitární rámec,False,False,False,False,True
-2023-11-15T13-35-00_2023WN319151.txt,Historicko-kulturní rámec,True,True,False,True,False
+2023-11-15T13-35-00_2023WN319151.txt,Historicko-kulturní rámec,False,True,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Geopolitický rámec,True,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Lokální rámec,False,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Rámec konfliktu,True,True,True,True,False
@@ -292,7 +292,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-15T16-48-00_2023WN319208.txt,Humanitární rámec,False,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Geopolitický rámec,True,True,True,True,False
-2023-11-15T16-48-00_2023WN319208.txt,Lokální rámec,False,True,False,False,True
+2023-11-15T16-48-00_2023WN319208.txt,Lokální rámec,True,True,False,True,False
 2023-11-16T08-16-00_2023WN320030.txt,Rámec konfliktu,False,True,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Rámec budování míru,True,True,True,True,False
 2023-11-16T08-16-00_2023WN320030.txt,Humanitární rámec,True,False,True,True,False
@@ -307,7 +307,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-16T15-21-00_2023WN320146.txt,Lokální rámec,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Rámec konfliktu,True,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Rámec budování míru,False,False,False,False,True
-2023-11-19T19-42-00_2023WN323084.txt,Humanitární rámec,True,True,True,True,False
+2023-11-19T19-42-00_2023WN323084.txt,Humanitární rámec,False,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Geopolitický rámec,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Lokální rámec,False,True,True,True,False
@@ -334,7 +334,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-24T21-16-00_2023WN328215.txt,Humanitární rámec,True,False,True,True,False
 2023-11-24T21-16-00_2023WN328215.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Geopolitický rámec,True,True,True,True,False
-2023-11-24T21-16-00_2023WN328215.txt,Lokální rámec,False,False,False,False,True
+2023-11-24T21-16-00_2023WN328215.txt,Lokální rámec,True,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Rámec konfliktu,False,True,True,True,False
 2023-11-29T08-32-00_2023WN333030.txt,Rámec budování míru,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Humanitární rámec,False,True,False,False,True
@@ -350,7 +350,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-11-30T06-54-00_2023WN334015.txt,Rámec konfliktu,False,False,False,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Rámec budování míru,True,True,True,True,False
 2023-11-30T06-54-00_2023WN334015.txt,Humanitární rámec,False,False,False,False,True
-2023-11-30T06-54-00_2023WN334015.txt,Historicko-kulturní rámec,True,True,True,True,False
+2023-11-30T06-54-00_2023WN334015.txt,Historicko-kulturní rámec,False,True,True,True,False
 2023-11-30T06-54-00_2023WN334015.txt,Geopolitický rámec,False,False,True,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Lokální rámec,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Rámec konfliktu,False,False,True,False,True
@@ -374,19 +374,19 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-12-05T14-45-00_2023WN339132.txt,Rámec konfliktu,True,True,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Rámec budování míru,False,True,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Humanitární rámec,False,False,False,False,True
-2023-12-05T14-45-00_2023WN339132.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-12-05T14-45-00_2023WN339132.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Geopolitický rámec,True,True,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Lokální rámec,False,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Rámec konfliktu,True,True,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Rámec budování míru,False,False,False,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Humanitární rámec,True,True,True,True,False
+2023-12-06T09-06-00_2023WN340025.txt,Humanitární rámec,False,True,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Geopolitický rámec,False,False,False,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Lokální rámec,True,True,True,True,False
-2023-12-09T11-05-00_2023WN343035.txt,Rámec konfliktu,True,True,True,True,False
+2023-12-06T09-06-00_2023WN340025.txt,Lokální rámec,False,True,True,True,False
+2023-12-09T11-05-00_2023WN343035.txt,Rámec konfliktu,False,True,True,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Rámec budování míru,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Humanitární rámec,False,True,False,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-12-09T11-05-00_2023WN343035.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Geopolitický rámec,True,True,True,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Lokální rámec,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Rámec konfliktu,True,True,True,True,False
@@ -399,42 +399,42 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2023-12-14T08-16-00_2023WN348008.txt,Rámec budování míru,False,True,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Humanitární rámec,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Historicko-kulturní rámec,False,False,False,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Geopolitický rámec,False,True,True,True,False
+2023-12-14T08-16-00_2023WN348008.txt,Geopolitický rámec,True,True,True,True,False
 2023-12-14T08-16-00_2023WN348008.txt,Lokální rámec,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Rámec konfliktu,True,True,True,True,False
 2023-12-14T16-08-00_2023WN348142.txt,Rámec budování míru,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Humanitární rámec,False,False,False,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-12-14T16-08-00_2023WN348142.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Geopolitický rámec,False,False,False,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Lokální rámec,True,True,True,True,False
-2023-12-15T12-15-00_2023WN349091.txt,Rámec konfliktu,False,False,True,False,True
+2023-12-14T16-08-00_2023WN348142.txt,Lokální rámec,False,True,True,True,False
+2023-12-15T12-15-00_2023WN349091.txt,Rámec konfliktu,True,False,True,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Rámec budování míru,False,False,False,False,True
-2023-12-15T12-15-00_2023WN349091.txt,Humanitární rámec,True,True,False,True,False
+2023-12-15T12-15-00_2023WN349091.txt,Humanitární rámec,False,True,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Geopolitický rámec,True,True,True,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Lokální rámec,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Rámec konfliktu,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Rámec budování míru,True,True,True,True,False
 2023-12-20T16-52-00_2023WN354149.txt,Humanitární rámec,False,False,True,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Historicko-kulturní rámec,True,True,False,True,False
+2023-12-20T16-52-00_2023WN354149.txt,Historicko-kulturní rámec,False,True,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Geopolitický rámec,True,True,True,True,False
 2023-12-20T16-52-00_2023WN354149.txt,Lokální rámec,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Rámec konfliktu,True,True,True,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Rámec budování míru,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Humanitární rámec,False,False,False,False,True
-2023-12-30T12-42-00_2023WN364030.txt,Historicko-kulturní rámec,True,False,False,False,True
+2023-12-30T12-42-00_2023WN364030.txt,Historicko-kulturní rámec,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Geopolitický rámec,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Lokální rámec,False,True,True,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Rámec konfliktu,False,True,True,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Rámec budování míru,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Humanitární rámec,False,False,False,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Historicko-kulturní rámec,True,False,False,False,True
+2024-01-01T20-24-00_2024WN001075.txt,Historicko-kulturní rámec,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Geopolitický rámec,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Lokální rámec,False,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Rámec konfliktu,True,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Rámec budování míru,False,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Humanitární rámec,False,False,False,False,True
-2024-01-02T16-55-00_2024WN002143.txt,Historicko-kulturní rámec,True,False,True,True,False
+2024-01-02T16-55-00_2024WN002143.txt,Historicko-kulturní rámec,False,False,True,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Geopolitický rámec,False,False,True,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Lokální rámec,True,True,False,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Rámec konfliktu,True,True,True,True,False
@@ -442,7 +442,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2024-01-11T16-10-00_2024WN011155.txt,Humanitární rámec,True,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Historicko-kulturní rámec,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Geopolitický rámec,False,False,False,False,True
-2024-01-11T16-10-00_2024WN011155.txt,Lokální rámec,True,False,True,True,False
+2024-01-11T16-10-00_2024WN011155.txt,Lokální rámec,False,False,True,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Rámec konfliktu,True,True,True,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Rámec budování míru,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Humanitární rámec,False,False,False,False,True
@@ -457,7 +457,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2024-01-12T15-46-00_2024WN012144.txt,Lokální rámec,False,True,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Rámec konfliktu,True,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Rámec budování míru,False,False,False,False,True
-2024-01-18T10-32-00_2024WN018055.txt,Humanitární rámec,True,True,False,True,False
+2024-01-18T10-32-00_2024WN018055.txt,Humanitární rámec,False,True,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Historicko-kulturní rámec,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Geopolitický rámec,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Lokální rámec,False,False,True,False,True
@@ -477,7 +477,7 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2024-01-28T19-21-00_2024WN028084.txt,Rámec budování míru,False,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Humanitární rámec,True,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Historicko-kulturní rámec,False,False,False,False,True
-2024-01-28T19-21-00_2024WN028084.txt,Geopolitický rámec,False,False,False,False,True
+2024-01-28T19-21-00_2024WN028084.txt,Geopolitický rámec,True,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Lokální rámec,False,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Rámec konfliktu,True,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Rámec budování míru,False,False,False,False,True
@@ -502,4 +502,4 @@ file,rating,Jana původní trénovací.csv,Robin revize trénovacích.csv,Veroni
 2024-02-15T21-49-00_2024WN046201.txt,Humanitární rámec,False,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Historicko-kulturní rámec,False,False,False,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Geopolitický rámec,True,True,True,True,False
-2024-02-15T21-49-00_2024WN046201.txt,Lokální rámec,True,True,False,True,False
+2024-02-15T21-49-00_2024WN046201.txt,Lokální rámec,False,True,False,False,True
