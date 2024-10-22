@@ -100,7 +100,7 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
     answer_lines = data[2:]
     ratings: List[Rating] = []
 
-    for row in answer_lines:
+    for row_id, row in enumerate(answer_lines):
         # print(f'row: {row}')
         # every row should have: name of file, answers to individual questions (single or multiple columns according to question type)
         file = row[0].strip()
@@ -115,6 +115,8 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
             if question.single_choice:
                 # print(f'row[{row_index}]: {row[row_index]}')
                 answer = get_single_choice_answer(row[row_index], question)
+                if len(answer) == 0:
+                    print(f'WARNING: single choice question "{question.name}" has no answer on row {row_id} ({row[0]}...)')
                 # print(f'answer: {answer}')
                 rating = Rating(file=file, question_id=question.name, rating_results=answer)
             else:
@@ -125,6 +127,7 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
             # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1
             # print(f'Adding {len(question.options)} to row_index (number of question options), whole question: ({question.model_dump()})')
+            # if len(rating.rating_results) > 0:  # this can cause unhandled errors in calculating IRRs for some reason...
             ratings.append(rating)
 
     return ratings
@@ -136,7 +139,7 @@ def clean_single_choice_answer(answer: str) -> str:
         answer = match_result.group(1)
     return answer
 
-def get_single_choice_answer(answer: str, question: Question) -> str:
+def get_single_choice_answer(answer: str, question: Question) -> List:
     answer = clean_single_choice_answer(answer)
 
     if not answer:
@@ -153,6 +156,7 @@ def get_multi_choice_answers(row: List[str], question: Question) -> List[str]:
 
     for i, answer in enumerate(binary_answers):
         answer = clean_single_choice_answer(answer)
+        # options signaling positive rating (everything else is meant as negative, typically 0 or "")
         if answer in ['ano', 'yes', '1', '2', '3', '4']:
             answers.append(question.options[i])
 

@@ -111,6 +111,10 @@ class Rater:
                     ratings_dict[(rating.file, rating.question_id, option.name)] = option.name in rating.rating_results
             else:
                 ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rating_results[0]
+
+        # sort ratings_dict by only file and leave prompt_key and rating as they are
+        ratings_dict = dict(sorted(ratings_dict.items(), key=lambda x: x[0][0]))
+
         series = pd.Series(ratings_dict,
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),

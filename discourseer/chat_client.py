@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import pydantic
-from typing import Literal, List
+from typing import Literal, List, Dict
 from enum import Enum
 import json
 import logging
@@ -53,6 +53,11 @@ class Conversation(pydantic.BaseModel):
 class ChatMessage(pydantic.BaseModel):
     role: Literal["system", "user", "assistant"]
     content: str | dict
+
+
+class ConversationLog(Conversation):
+    schema_definition: List[ChatMessage]
+    texts: Dict[str, List[ChatMessage]] = {}
 
 
 class ChatClient:
@@ -112,7 +117,7 @@ class ChatClient:
 
 
 def print_conversation_schema():
-    print(json.dumps(Conversation.model_json_schema(), indent=2))
+    print(json.dumps(Conversation.model_json_schema(), indent=2, ensure_ascii=False))
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@
     "germany": 1.0,
     "russia": 1.0,
     "ukraine": 1.0,
-    "other": -0.0,
+    "other": 0.0,
     "unknown": 1.0
   }
 }

@@ -2,39 +2,108 @@
 
 import argparse
 import os
+from typing import List
+import shutil
+import json
 
 import numpy as np
 import pandas as pd
-from typing import List
 from irrCAC.raw import CAC
+
 from discourseer.inter_rater_reliability import IRR
+from run_discourseer import Discourseer
+from discourseer import utils
 
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Recalculate IRR for a dataframe')
-    parser.add_argument('input', type=str, help='input dataframe')
+    parser.add_argument('--input-dir', type=str,
+                        help='input folder containing the csv file with the ratings (output of previous experiment)')
+    parser.add_argument('--output-dir', type=str, 
+                        help='output folder to save the recalculated IRR results')
+    parser.add_argument('--prompt-definitions', type=str,
+                        help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
-    if not os.path.isfile(args.input):
-        raise ValueError(f'Input file {args.input} does not exist')
 
-    print(f'Loading dataframe from {args.input}')
-    df = pd.read_csv(args.input).set_index('file')
+    Calculator(
+        input_dir=args.input_dir,
+        output_dir=args.output_dir,
+        prompt_definitions=args.prompt_definitions
+    )()
 
-    df = df.replace({'nan': np.nan, 0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
-                     4.0: '4', 5.0: '5'})
-    df = df.astype('string')
 
-    print(f'Recalculating IRR for dataframe:\n{df}')
-    cac = CAC(df)
-    kripp = IRR.get_cac_metric(cac, 'krippendorff')
-    print(f'Krippendorff\'s alpha for this dataframe is: {kripp}')
+class Calculator:
+    def __init__(self, input_dir: str, output_dir: str, prompt_definitions: str = None):
+        self.input_dir = input_dir
+        if not os.path.isdir(self.input_dir):
+            raise ValueError(f'Input dir {self.input_dir} does not exist')
 
-    # save dataframe to csv without header and index if needed
-    # df.to_csv('output.csv', header=False, index=False)
+        self.output_dir = utils.prepare_output_dir(output_dir, create_new=False)
+        self.prompts = utils.load_prompts(prompt_definitions)
+
+        print(f'Input directory: {self.input_dir}')
+        print(f'Output directory: {self.output_dir}')
+
+        # copy everything from input_dir to output_dir using shutil.copytree except the dataframe
+        shutil.copytree(self.input_dir, self.output_dir, ignore=shutil.ignore_patterns(IRR.DATAFRAME_NAME))
+
+        self.df_file = os.path.join(self.input_dir, IRR.DATAFRAME_NAME)
+        if not os.path.isfile(self.df_file):
+            raise ValueError(f'Input file {self.df_file} does not exist')
+        self.df = pd.read_csv(self.df_file)
+        if len(self.df) == 0:
+            raise ValueError(f'Input dataframe is empty')
+
+        index_cols = self.check_present_in_df(self.df, IRR.index_cols)
+        self.df.set_index(index_cols, inplace=True)
+
+        # self.df = self.df.replace({True: 'True', False: 'False', 'nan': np.nan})
+
+        for col in self.df.columns:
+            if col in [IRR.col_maj_agree_with_model]:
+                continue
+            self.df[col] = self.df[col].astype(str)
+            self.df[col] = self.df[col].apply(self.convert_to_str)  # TODO check if this is needed
+
+        # print(f'df:\n{self.df}')
+        # print(f'df.types: {self.df.dtypes}')
+        
+        # self.df = self.df.astype('string')
+
+    def __call__(self):
+        irr_calculator = IRR(df=self.df, extraction_prompts=self.prompts, out_dir=self.output_dir)
+        irr_results = irr_calculator()
+
+        print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
+
+        Discourseer.save_output(self.output_dir, irr_results)
+
+    def check_present_in_df(self, df: pd.DataFrame, cols: List[str]) -> List[str]:
+        missing_cols = [col for col in cols if col not in df.columns]
+        if missing_cols:
+            raise ValueError(f'Columns {missing_cols} are missing in the dataframe')
+        return cols
+
+    @staticmethod
+    def convert_to_str(value):
+        # print(f'convert_to_str: {value} ({type(value)})')
+        return str(value)
+    
+        # Convert None to empty string
+        if value is None:
+            return ''
+        
+        if isinstance(value, int):
+            return str(value)
+        # Convert bools to their string representation
+        elif isinstance(value, bool):
+            return str(value)
+        else:
+            return str(value)
 
 
 if __name__ == '__main__':

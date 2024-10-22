@@ -3,14 +3,12 @@ import argparse
 import logging
 import os
 import json
-import time
 from typing import List, Union, Dict
 
 import matplotlib.pyplot as plt
 import pandas as pd
 from irrCAC.raw import CAC
 
-from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.visualize_IRR import visualize_irr_results_only_human_raters
@@ -23,7 +21,7 @@ def parse_args():
 
     parser.add_argument('--ratings-dir', nargs='*', type=str,
                         help='The directory containing the csv files with answer ratings.')
-    parser.add_argument('--output-dir',
+    parser.add_argument('--output-dir', type=str, default='output_IRR',
                         help='Directory to save the results to.')
     parser.add_argument('--prompt-definitions', default=None,
                         help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
@@ -51,10 +49,10 @@ def main():
 
 class Calculator:
 
-    def __init__(self, ratings_dirs: List[str], output_dir: str, prompt_definitions, metric: str = 'krippendorff_alpha',
+    def __init__(self, ratings_dirs: List[str], prompt_definitions, output_dir: str = 'output_IRR', metric: str = 'krippendorff_alpha',
                  thresholds: List[float] = [0.8, 0.6]):
-        self.output_dir = self.prepare_output_dir(output_dir)
-        self.prompts = self.load_prompts(prompt_definitions)
+        self.output_dir = utils.prepare_output_dir(output_dir)
+        self.prompts = utils.load_prompts(prompt_definitions)
         self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
         self.thresholds = thresholds
         self.metric = metric
@@ -66,7 +64,7 @@ class Calculator:
     def __call__(self):
         self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
         irr_results = self.irr_calculator()
-        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2)}")
+        logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
         utils.dict_to_json_file(irr_results.get_one_metric_and_variant(self.metric, 'without_model'),
@@ -145,7 +143,7 @@ class Calculator:
         print(f"For threshold {threshold} there are ({len(acceptable_questions)} out of {len(all_questions)}) acceptable questions:")
         if acceptable_questions:
             print(f"{acceptable_questions_names}")
-            print(f"{json.dumps(acceptable_questions, indent=2)}")
+            print(f"{json.dumps(acceptable_questions, indent=2, ensure_ascii=False)}")
         else:
             print(f"No acceptable questions found")
 
@@ -154,27 +152,6 @@ class Calculator:
         with open(self.get_output_file(f'acceptable_questions_{metric}_{threshold}.txt'), 'w') as f:
             f.write(acceptable_questions_names + '\n')
 
-    @staticmethod
-    def prepare_output_dir(output_dir: str = None) -> str:
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            return output_dir
-
-        output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
-        os.makedirs(output_dir_new)
-        logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
-
-        return output_dir_new
-
-    @staticmethod
-    def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
-
-        logging.debug(f'Loading prompts from file: {prompts_file}')
-        with open(prompts_file, 'r', encoding='utf-8') as f:
-            prompts = json.load(f)
-        prompts = ExtractionPrompts.model_validate(prompts)
-
-        return prompts.select_unique_names_and_question_ids()
 
 
 if __name__ == "__main__":

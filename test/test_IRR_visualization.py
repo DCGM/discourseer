@@ -11,7 +11,7 @@ class TestIRRVisualization(unittest.TestCase):
     def test_load(self):
         file = os.path.join(self.dir, 'irr_results.json')
         results = IRRResults.from_json_file(file)
-        # print(json.dumps(results.model_dump(), indent=4))
+        # print(json.dumps(results.model_dump(), indent=4, ensure_ascii=False))
         assert results is not None
 
         out_file = os.path.join(self.dir, 'test_out_gwet.png')
