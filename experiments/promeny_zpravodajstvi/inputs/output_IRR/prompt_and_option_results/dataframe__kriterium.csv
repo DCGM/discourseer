@@ -4,7 +4,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.100._Vyšší_mzdy_ve_Škodě_ohrozí_její_rozvoj.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.101._Unimex_Group_loni_vydělal_téměř_miliardu.txt,single_choice,krátký,krátký,krátký,krátký,--WORST-CASE
 1.11._Dva_muži_napadli_policejní_hlídku.txt,single_choice,krátký,krátký,krátký,krátký,--WORST-CASE
-1.12._Zneužila_Transparency_International_dotaci?.txt,single_choice,krátký,krátký,krátký,krátký,--WORST-CASE
+1.12._Zneužila_Transparency_International_dotaci.txt,single_choice,krátký,krátký,krátký,krátký,--WORST-CASE
 1.13._Takto_žáky_zkoušet_nechceme.txt,single_choice,nezpravodajský,nezpravodajský,nezpravodajský,nezpravodajský,--WORST-CASE
 1.14._Velikonoce_budou_slunečné.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.15._Tunel_v_Praze_pod_Letnou_se_může_začít_stavět.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
@@ -15,7 +15,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.2._Kamery_viděly_do_soukromí._Soud_to_potrestal.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.20._Heslem_Nic_než_národ_„bojují“_za_životní_prostředí.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.21._Jak_„naučit“_děti_číst.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
-1.22._Co_říkáte_zkouškám?.txt,single_choice,nezpravodajský,nezpravodajský,nezpravodajský,nezpravodajský,--WORST-CASE
+1.22._Co_říkáte_zkouškám.txt,single_choice,nezpravodajský,nezpravodajský,nezpravodajský,nezpravodajský,--WORST-CASE
 1.23._Velikonoce_budou_slunečné.txt,single_choice,nezpravodajský,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.24._Schwarzenberg_k_odsunu_bylo_to_vyhnání.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.25._Zelení_už_mají_Čunka_dost.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
@@ -68,7 +68,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.68._Neonacisté_se_snaží_působit_skrytě.txt,single_choice,nezpravodajský,nezpravodajský,nezpravodajský,nezpravodajský,--WORST-CASE
 1.69._Hvězda_dříve_patřila_rejdařům.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.7._Opilý_chlapec_ohrožoval_lidi_mačetou.txt,single_choice,krátký,krátký,krátký,krátký,--WORST-CASE
-1.70._Jak_na_radikály?_S_kapesní_brožurou.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
+1.70._Jak_na_radikály_S_kapesní_brožurou.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.71._Zelení_chtějí_aby_Jiří_Čunek_odešel_z_vlády.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.72._O_nájem_olomouckých_nemocnic_bude_boj.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.73._Škodě_Auto_hrozí_stávky.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
@@ -90,7 +90,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.88._Strany_stále_víc_závisejí_na_státní_pokladně.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.89._Padělky_měly_zničit_Británii_vězňům_zachránily_život.txt,single_choice,nezpravodajský,nezpravodajský,nezpravodajský,nezpravodajský,--WORST-CASE
 1.9._Dospělí_se_pořádně_zapotili.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
-1.90._Národní_fotbalový_stadion?_Verdikt_se_odkládá.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
+1.90._Národní_fotbalový_stadion_Verdikt_se_odkládá.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.91._Agrobanka_čelí_konkurzu_stát_má_problém.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.92._Lidé_nevěří_nabídkám_levné_letecké_přepravy.txt,single_choice,nezpravodajský,vyhovující,vyhovující,vyhovující,--WORST-CASE
 1.93._Sociolog_Čunek_vyvolává_rasové_démony.txt,single_choice,vyhovující,vyhovující,vyhovující,vyhovující,--WORST-CASE
