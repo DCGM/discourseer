@@ -9,7 +9,7 @@
 1.9._Dospělí_se_pořádně_zapotili.txt
 1.10._Hokejka_z_Nagana_pomohla_dětem.txt
 1.11._Dva_muži_napadli_policejní_hlídku.txt
-1.12._Zneužila_Transparency_International_dotaci?.txt
+1.12._Zneužila_Transparency_International_dotaci.txt
 1.13._Takto_žáky_zkoušet_nechceme.txt
 1.14._Velikonoce_budou_slunečné.txt
 1.15._Tunel_v_Praze_pod_Letnou_se_může_začít_stavět.txt
@@ -19,7 +19,7 @@
 1.19._Na_všechny_kamery_musí_být_povolení.txt
 1.20._Heslem_Nic_než_národ_„bojují“_za_životní_prostředí.txt
 1.21._Jak_„naučit“_děti_číst.txt
-1.22._Co_říkáte_zkouškám?.txt
+1.22._Co_říkáte_zkouškám.txt
 1.23._Velikonoce_budou_slunečné.txt
 1.24._Schwarzenberg_k_odsunu_bylo_to_vyhnání.txt
 1.25._Zelení_už_mají_Čunka_dost.txt
@@ -67,7 +67,7 @@
 1.67._Vybrali_si_hezký_název_říká_jeho_autor_Zeman.txt
 1.68._Neonacisté_se_snaží_působit_skrytě.txt
 1.69._Hvězda_dříve_patřila_rejdařům.txt
-1.70._Jak_na_radikály?_S_kapesní_brožurou.txt
+1.70._Jak_na_radikály_S_kapesní_brožurou.txt
 1.71._Zelení_chtějí_aby_Jiří_Čunek_odešel_z_vlády.txt
 1.72._O_nájem_olomouckých_nemocnic_bude_boj.txt
 1.73._Škodě_Auto_hrozí_stávky.txt
@@ -87,7 +87,7 @@
 1.87._POLITIKON_Jindřicha_Šídla.txt
 1.88._Strany_stále_víc_závisejí_na_státní_pokladně.txt
 1.89._Padělky_měly_zničit_Británii_vězňům_zachránily_život.txt
-1.90._Národní_fotbalový_stadion?_Verdikt_se_odkládá.txt
+1.90._Národní_fotbalový_stadion_Verdikt_se_odkládá.txt
 1.91._Agrobanka_čelí_konkurzu_stát_má_problém.txt
 1.92._Lidé_nevěří_nabídkám_levné_letecké_přepravy.txt
 1.93._Sociolog_Čunek_vyvolává_rasové_démony.txt

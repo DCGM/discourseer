@@ -39,7 +39,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.61._Hrady_musí_mít_dvojnásobek_průvodců.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.64._Křehká_květinka_má_stranu.txt,single_choice,Ano,Ne,Ano,Ano,--WORST-CASE
 1.69._Hvězda_dříve_patřila_rejdařům.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
-1.70._Jak_na_radikály?_S_kapesní_brožurou.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.70._Jak_na_radikály_S_kapesní_brožurou.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.71._Zelení_chtějí_aby_Jiří_Čunek_odešel_z_vlády.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.72._O_nájem_olomouckých_nemocnic_bude_boj.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.73._Škodě_Auto_hrozí_stávky.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
@@ -48,7 +48,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.84._V_cizině_chtějí_český_systém_prodeje_letenek.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.88._Strany_stále_víc_závisejí_na_státní_pokladně.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.9._Dospělí_se_pořádně_zapotili.txt,single_choice,Ano,Ne,Ano,Ano,--WORST-CASE
-1.90._Národní_fotbalový_stadion?_Verdikt_se_odkládá.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.90._Národní_fotbalový_stadion_Verdikt_se_odkládá.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.91._Agrobanka_čelí_konkurzu_stát_má_problém.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.93._Sociolog_Čunek_vyvolává_rasové_démony.txt,single_choice,Ne,Ne,Ano,Ne,--WORST-CASE
 1.94._Češi_mění_hory_za_pobyt_u_moře.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
