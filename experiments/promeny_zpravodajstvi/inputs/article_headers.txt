@@ -1,8 +1,8 @@
 1.1._Zelení_chtějí_hlavu_Čunka.txt
 1.2._Kamery_viděly_do_soukromí._Soud_to_potrestal.txt
-1.3._Test_MF_DNES:_Přijímačky_jsou_těžké_i_pro_dospělé.txt
+1.3._Test_MF_DNES_Přijímačky_jsou_těžké_i_pro_dospělé.txt
 1.4._Sledují_každý_náš_krok.txt
-1.5._Vedení_ODS:_Zvolte_Klause_opět_prezidentem.txt
+1.5._Vedení_ODS_Zvolte_Klause_opět_prezidentem.txt
 1.6._Květinko_hýčkal_Zeman_Volfovou.txt
 1.7._Opilý_chlapec_ohrožoval_lidi_mačetou.txt
 1.8._Langer_chce_šéfa_policie_na_pět_let.txt
@@ -21,7 +21,7 @@
 1.21._Jak_„naučit“_děti_číst.txt
 1.22._Co_říkáte_zkouškám?.txt
 1.23._Velikonoce_budou_slunečné.txt
-1.24._Schwarzenberg_k_odsunu:_bylo_to_vyhnání.txt
+1.24._Schwarzenberg_k_odsunu_bylo_to_vyhnání.txt
 1.25._Zelení_už_mají_Čunka_dost.txt
 1.26._Zeman_byl_u_zrodu_nové_strany_Jany_Volfové.txt
 1.27._V_obcích_uspěli_opět_nezávislí.txt
@@ -50,7 +50,7 @@
 1.50._Najel_na_strážníka.txt
 1.51._Sklepy_se_změnily_v_turistické_korzo.txt
 1.52._Čunek_chce_výpověď_z_bytu_bez_důvodu_delší_než_dva_roky.txt
-1.53._Říman:_o_žalobě_na_EK_kvůli_emisím_rozhodne_analýza.txt
+1.53._Říman_o_žalobě_na_EK_kvůli_emisím_rozhodne_analýza.txt
 1.54._Topolánek_už_s_vulgarismy_narazil_i_u_manželky_Pavly.txt
 1.55._Vyšetřování_prověrek_v_NBÚ_policie_odložila.txt
 1.56._Češi_a_Němci_o_nacionalismu_a_strachu.txt
@@ -74,7 +74,7 @@
 1.74._Národní_fotbalový_stadion_zatím_nebude.txt
 1.75._Lobkovický_palác_láká_na_hvězdnou_expozici.txt
 1.76._Vláda_důkladně_prověří_Budvar.txt
-1.77._Hruda:_Bruselu_jsme_nemuseli_nic_vracet.txt
+1.77._Hruda_Bruselu_jsme_nemuseli_nic_vracet.txt
 1.78._Ministerstvo_zemědělství_změnilo_vedení_fondu.txt
 1.79._Volfová_neuspěla_známé_tváře_nepřišly.txt
 1.80._ČESKÝ_RUCH.txt
@@ -90,12 +90,12 @@
 1.90._Národní_fotbalový_stadion?_Verdikt_se_odkládá.txt
 1.91._Agrobanka_čelí_konkurzu_stát_má_problém.txt
 1.92._Lidé_nevěří_nabídkám_levné_letecké_přepravy.txt
-1.93._Sociolog:_Čunek_vyvolává_rasové_démony.txt
+1.93._Sociolog_Čunek_vyvolává_rasové_démony.txt
 1.94._Češi_mění_hory_za_pobyt_u_moře.txt
 1.95._Za_tři_měsíce_vyneslo_mýtné_132_miliardy.txt
 1.96._Hrad_a_církev_budou_spravovat_sv._Víta_spolu.txt
 1.97._Omluva.txt
-1.98._Čunek:_Lhůta_pro_výpověď_z_bytu_déle_než_dva_roky.txt
+1.98._Čunek_Lhůta_pro_výpověď_z_bytu_déle_než_dva_roky.txt
 1.99._Česká_spořitelna_prodlužuje_provoz_na_pobočkách.txt
 1.100._Vyšší_mzdy_ve_Škodě_ohrozí_její_rozvoj.txt
 1.101._Unimex_Group_loni_vydělal_téměř_miliardu.txt
