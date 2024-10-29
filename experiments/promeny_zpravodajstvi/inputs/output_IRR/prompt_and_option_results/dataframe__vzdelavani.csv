@@ -7,12 +7,12 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.2._Kamery_viděly_do_soukromí._Soud_to_potrestal.txt,single_choice,Ne,Ne,Ano,Ne,--WORST-CASE
 1.20._Heslem_Nic_než_národ_„bojují“_za_životní_prostředí.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.21._Jak_„naučit“_děti_číst.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
-1.24._Schwarzenberg_k_odsunu:_bylo_to_vyhnání.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.24._Schwarzenberg_k_odsunu_bylo_to_vyhnání.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.25._Zelení_už_mají_Čunka_dost.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.26._Zeman_byl_u_zrodu_nové_strany_Jany_Volfové.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.28._ODS_podpořila_Klause_na_Hrad.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.29._Dnes_je_poslední_den_na_přiznání_a_zaplacení_daně.txt,single_choice,Ano,Ano,Ano,Ano,--WORST-CASE
-1.3._Test_MF_DNES:_Přijímačky_jsou_těžké_i_pro_dospělé.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.3._Test_MF_DNES_Přijímačky_jsou_těžké_i_pro_dospělé.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.30._Spadl_ze_skály.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.31._Akcie_ČEZ_jsou_opět_nad_940_Kč.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.34._Policejní_prezident_by_mohl_mít_časově_omezené_funkční_období.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
@@ -27,7 +27,7 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.47._Opilci_napadali_policisty.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.48._Dceru_matce_vrátil_až_za_policejní_asistence.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.49._Pacienti_mají_znát_vše_důležité.txt,single_choice,Ano,Ne,Ano,Ano,--WORST-CASE
-1.5._Vedení_ODS:_Zvolte_Klause_opět_prezidentem.txt,single_choice,Ano,Ne,Ne,Ne,--WORST-CASE
+1.5._Vedení_ODS_Zvolte_Klause_opět_prezidentem.txt,single_choice,Ano,Ne,Ne,Ne,--WORST-CASE
 1.51._Sklepy_se_změnily_v_turistické_korzo.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.54._Topolánek_už_s_vulgarismy_narazil_i_u_manželky_Pavly.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.56._Češi_a_Němci_o_nacionalismu_a_strachu.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
@@ -50,6 +50,6 @@ file,rating,rater_0.csv,rater_1.csv,rater_2.csv,majority,worst_case
 1.9._Dospělí_se_pořádně_zapotili.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.90._Národní_fotbalový_stadion?_Verdikt_se_odkládá.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.91._Agrobanka_čelí_konkurzu_stát_má_problém.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
-1.93._Sociolog:_Čunek_vyvolává_rasové_démony.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
+1.93._Sociolog_Čunek_vyvolává_rasové_démony.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.94._Češi_mění_hory_za_pobyt_u_moře.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
 1.99._Česká_spořitelna_prodlužuje_provoz_na_pobočkách.txt,single_choice,Ne,Ne,Ne,Ne,--WORST-CASE
