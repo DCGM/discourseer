@@ -13,7 +13,9 @@
 Obsahová analýza dokumentů je jeden z procesů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
 kteří po přečtení textu odpovídají na otázky pomocí výběru z možností: téma článku, vystupjící mluvčí, atd. 
 Mezi odpověďmi několika respondentů se následně provádí analýza podobnosti, protože ne vždy je odpověď přesně daná.
-Projekt Discourseer má za cíl otestovat, zda se velké jazykové modely do tohoto procesu mohou zapojit či ho zcela nahradit.
+
+**Projekt Discourseer** má za cíl otestovat, zda se velké jazykové modely do tohoto procesu mohou zapojit či ho zcela nahradit.
+Ve spolupráci s odborníky z oboru vytváříme vlastní sadu obsahové analýzy, na které budeme testovat jazykové modely a měřit jejich úspěšnost a podobnost s reálnými respondenty.
 
 ## Obsah
 1. [Současný stav](#soucasny-stav)
