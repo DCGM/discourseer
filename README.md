@@ -10,12 +10,12 @@
   <a href="https://github.com/DCGM/discourseer">Discourseer na Githubu</a>
 </p>
 
-Obsahová analýza dokumentů je jeden z procesů žurnalistického výzkumu. Je prováděn manuálně několika nezávislými respondenty,
-kteří po přečtení textu odpovídají na otázky pomocí výběru z možností: téma článku, vystupjící mluvčí, atd. 
-Mezi odpověďmi několika respondentů se následně provádí analýza podobnosti, protože ne vždy je odpověď přesně daná.
+Obsahová analýza je jedna z technik mediálně vědného výzkumu. Je prováděna manuálně několika kodéry, 
+kteří po přečtení vybraných zpravodajských textů odpovídají na otázky týkající se tématu článku, zastoupených  mluvčí, přítomných zpravodajských hodnot či mediálních rámců. 
+Na základě datových matic jednotlivých kodérů se následně provádí analýza inter-rater reliability, kde koeficient (Krippendorfovo alpha, Cohennovo kappa) určí míru vzájemné shody.
 
-**Projekt Discourseer** má za cíl otestovat, zda se velké jazykové modely do tohoto procesu mohou zapojit či ho zcela nahradit.
-Ve spolupráci s odborníky z oboru vytváříme vlastní sadu obsahové analýzy, na které budeme testovat jazykové modely a měřit jejich úspěšnost a podobnost s reálnými respondenty.
+**Projekt Discourseer** má za cíl otestovat, zda se velké jazykové modely mohou do procesu obsahové analýzy zapojit či  manuální kódování i zcela nahradit. 
+Ve spolupráci s odborníky z oboru jsme vytvořili sadu obsahové analýzy, na které budeme testovat jazykové modely a měřit jejich úspěšnost a podobnost s reálnými respondenty.
 
 ## Obsah
 1. [Současný stav](#soucasny-stav)
