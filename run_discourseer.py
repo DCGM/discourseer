@@ -250,7 +250,14 @@ class Discourseer:
             prompts = json.load(f)
         prompts = ExtractionPrompts.model_validate(prompts)
 
-        return prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+        prompts_after_selection = prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+
+        if len(prompts_after_selection.prompts) == 0:
+            raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
+                             "Check the prompt_subset argument and use one or more of the following: "
+                             f"{list(prompts.prompts.keys())}")
+
+        return prompts_after_selection
 
     @staticmethod
     def load_raters(experiment_dir: str, ratings_dirs: List[str] = None, prompts: ExtractionPrompts = None) -> List[Rater]:
