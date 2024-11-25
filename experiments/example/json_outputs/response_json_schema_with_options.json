@@ -3,41 +3,94 @@
     "Zpravodajské hodnoty": {
       "items": {
         "enum": [
-          "Negativita",
-          "Blízkost",
-          "Elitní osoby"
+          "Negativita negativity",
+          "Blízkost proximity",
+          "Elitní osoby prominence",
+          "Personalizace personalization",
+          "Dopad impact"
         ],
         "type": "string"
       },
       "title": "Zpravodajské Hodnoty",
       "type": "array"
     },
-    "Message": {
+    "Témata článku": {
+      "items": {
+        "enum": [
+          "Vnitřní politické dění",
+          "Mezinárodní politické reakce",
+          "Vojenské operace Izraele",
+          "Teroristické operace",
+          "Dopad na izraelské civilisty",
+          "Dopad na palestinské civilisty",
+          "Humanitární pomoc",
+          "Globální reakce veřejnosti",
+          "Ekonomické důsledky",
+          "Historie/kontextualizace"
+        ],
+        "type": "string"
+      },
+      "title": "Témata Článku",
+      "type": "array"
+    },
+    "Hlavní téma článku": {
       "enum": [
-        "Vnitřní politika",
-        "Mezinárodní politika",
-        "Vojenské operace"
+        "Vnitřní politické dění",
+        "Mezinárodní politické reakce",
+        "Vojenské operace Izraele",
+        "Teroristické operace",
+        "Dopad na izraelské civilisty",
+        "Dopad na palestinské civilisty",
+        "Humanitární pomoc",
+        "Globální reakce veřejnosti",
+        "Ekonomické důsledky",
+        "Historie/kontextualizace"
       ],
-      "title": "Message",
+      "title": "Hlavní Téma Článku",
       "type": "string"
     },
-    "Mediální rámce": {
+    "Mediální rámce (multiple)": {
       "items": {
         "enum": [
           "Rámec konfliktu",
           "Rámec budování míru",
-          "Humanitární rámec"
+          "Humanitární rámec",
+          "Historicko-kulturní rámec",
+          "Geopolitický rámec",
+          "Lokální rámec"
         ],
         "type": "string"
       },
-      "title": "Mediální Rámce",
+      "title": "Mediální Rámce (Multiple)",
+      "type": "array"
+    },
+    "Mluvčí": {
+      "items": {
+        "enum": [
+          "Političtí představitelé Izraele",
+          "Političtí představitelé Palestiny",
+          "Politici z blízkovýchodních zemí",
+          "Politici ze ostatních světových zemí",
+          "Představitelé mezinárodních a neziskových organizací",
+          "Vojenští představitelé Izraele",
+          "Členové teroristických skupin",
+          "Nezávislí experti a analytici",
+          "Média a novináři",
+          "Očití svědci a civilisté z Izraele",
+          "Očití svědci a civilisté z Palestiny"
+        ],
+        "type": "string"
+      },
+      "title": "Mluvčí",
       "type": "array"
     }
   },
   "required": [
     "Zpravodajské hodnoty",
-    "Message",
-    "Mediální rámce"
+    "Témata článku",
+    "Hlavní téma článku",
+    "Mediální rámce (multiple)",
+    "Mluvčí"
   ],
   "title": "ResponseFormat",
   "type": "object"

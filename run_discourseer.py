@@ -197,17 +197,17 @@ class Discourseer:
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
 
     @staticmethod
-    def load_prompt_schema_definition(experiment_dir: str, prompt_definition: str = None) -> Conversation:
-        if not prompt_definition:
-            prompt_definition = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_schema_definition')
+    def load_prompt_schema_definition(experiment_dir: str, prompt_schema: str = None) -> Conversation:
+        if not prompt_schema:
+            prompt_schema = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_schema_definition')
 
-        logging.debug(f'Loading prompt definition from file:{prompt_definition}')
-        with open(prompt_definition, 'r', encoding='utf-8') as f:
-            prompt_definition = json.load(f)
+        logging.info(f'Loading prompt definition from file:{prompt_schema}')
+        with open(prompt_schema, 'r', encoding='utf-8') as f:
+            prompt_schema = json.load(f)
 
-        prompt_definition = Conversation.model_validate(prompt_definition)
+        prompt_schema = Conversation.model_validate(prompt_schema)
 
-        return prompt_definition
+        return prompt_schema
 
     @staticmethod
     def prepare_output_dir(experiment_dir: str, output_dir: str = None) -> str:
@@ -245,7 +245,7 @@ class Discourseer:
         if not prompts_file:
             prompts_file = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_definitions')
 
-        logging.debug(f'Loading prompts from file: {prompts_file}')
+        logging.info(f'Loading prompts from file: {prompts_file}')
         with open(prompts_file, 'r', encoding='utf-8') as f:
             prompts = json.load(f)
         prompts = ExtractionPrompts.model_validate(prompts)
