@@ -1,0 +1,45 @@
+{
+  "properties": {
+    "zpravodajské_hodnoty": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Zpravodajské Hodnoty",
+      "type": "array"
+    },
+    "temata_clanku": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Temata Clanku",
+      "type": "array"
+    },
+    "hlavni_tema_clanku": {
+      "title": "Hlavni Tema Clanku",
+      "type": "string"
+    },
+    "medialni_ramce": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Medialni Ramce",
+      "type": "array"
+    },
+    "mluvci": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Mluvci",
+      "type": "array"
+    }
+  },
+  "required": [
+    "zpravodajské_hodnoty",
+    "temata_clanku",
+    "hlavni_tema_clanku",
+    "medialni_ramce",
+    "mluvci"
+  ],
+  "title": "ResponseFormat",
+  "type": "object"
+}
