@@ -131,7 +131,7 @@ Zpravodajské hodnoty: multiple_choice (description: Zpravodajské hodnoty jsou 
 **prompt_json** (JSON se všemi informacemi o otázkách)
 <a name="prompt_json"></a>
 
-viz [prompt_json.json](../experiments/example/json_outputs/prompt_json.json) pro kompletní výstup
+viz [prompt_json.json](experiments/example/json_outputs/prompt_json.json) pro kompletní výstup
 ```json
 {
   "prompts": {
@@ -154,7 +154,7 @@ viz [prompt_json.json](../experiments/example/json_outputs/prompt_json.json) pro
 **response_json_schema** (JSON schéma, které odpovídá formátu odpovědí modelu)
 <a name="response_json_schema"></a>
 
-viz [response_json_schema.json](../experiments/example/json_outputs/response_json_schema.json) pro kompletní výstup
+viz [response_json_schema.json](experiments/example/json_outputs/response_json_schema.json) pro kompletní výstup
 ```json
 {
   "properties": {
@@ -177,7 +177,7 @@ viz [response_json_schema.json](../experiments/example/json_outputs/response_jso
 **response_json_schema_with_options** (JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi)
 <a name="response_json_schema_with_options"></a>
 
-viz [response_json_schema_with_options.json](../experiments/example/json_outputs/response_json_schema_with_options.json) pro kompletní výstup
+viz [response_json_schema_with_options.json](experiments/example/json_outputs/response_json_schema_with_options.json) pro kompletní výstup
 ```json
 {
   "properties": {

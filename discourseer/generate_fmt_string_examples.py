@@ -67,10 +67,11 @@ def print_prompt_exmples():
         if "json" in key:
             json_output = json.loads(value)
             json_output_file = f'{key}.json'
-            json_output_path = os.path.join('..', 'experiments', 'example', 'json_outputs', json_output_file)
+            json_link_path = os.path.join('experiments', 'example', 'json_outputs', json_output_file)
+            json_output_path = os.path.join('..', json_link_path)
             utils.dict_to_json_file(json_output, json_output_path)
 
-            print(f"viz [{json_output_file}]({json_output_path}) pro kompletní výstup")
+            print(f"viz [{json_output_file}]({json_link_path}) pro kompletní výstup")
             print(f"```json")
             print('\n'.join(value.split('\n')[:15]))
             print("...")
