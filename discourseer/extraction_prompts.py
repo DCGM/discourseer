@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import pydantic
-from typing import List, Dict, Literal
+from typing import List, Dict, Literal, Optional
 
 single_choice_tag = "single_choice"
 multiple_choice_tag = "multiple_choice"
@@ -65,13 +65,27 @@ class ExtractionPrompts(pydantic.BaseModel):
         return ", ".join([prompt.name for prompt in self.prompts.values() if prompt.multiple_choice])
 
     def prompt_options(self) -> str:
-        return "\n".join([f'{prompt.name}: {prompt.list_options_details()}' for prompt in self.prompts.values()
+        return "\n".join([f'{prompt.name}: {prompt.list_options()}' for prompt in self.prompts.values()
+                          if len(prompt.options) > 0])
+
+    def prompt_options_with_examples(self) -> str:
+        return "\n".join([f'{prompt.name}: {prompt.list_options_with_examples()}' for prompt in self.prompts.values()
+                          if len(prompt.options) > 0])
+
+    def prompt_options_with_examples_bulletpoints(self) -> str:
+        return "\n".join([f'{prompt.name}:\n - {prompt.list_options_with_examples_bulletpoints()}' for prompt in self.prompts.values()
                           if len(prompt.options) > 0])
 
     def whole_prompt_info(self) -> str:
         """Whole prompt info in one string. Individual prompts are separated by newline."""
         return "\n".join([f"{prompt.name}: {multiple_choice_tag if prompt.multiple_choice else single_choice_tag} "
-                          f"(description: {prompt.description}) options: {prompt.list_options_details()}"
+                          f"(description: {prompt.description}) options: {prompt.list_options_with_examples()}"
+                          for prompt in self.prompts.values()])
+
+    def whole_prompt_info_bulletpoints(self) -> str:
+        """Whole prompt info in one string. Individual prompts are separated by newline. Info is structured using bulletpoints on two levels."""
+        return "\n".join([f"{prompt.name}: {multiple_choice_tag if prompt.multiple_choice else single_choice_tag} "
+                          f"(description: {prompt.description})options:\n - {prompt.list_options_with_examples_bulletpoints()}"
                           for prompt in self.prompts.values()])
 
     def prompts_json(self) -> str:
@@ -110,7 +124,10 @@ class ExtractionPrompts(pydantic.BaseModel):
             "single_choice_prompts": self.single_choice_prompts(),
             "multiple_choice_prompts": self.multiple_choice_prompts(),
             "prompt_options": self.prompt_options(),
+            "prompt_options_with_examples": self.prompt_options_with_examples(),
+            "prompt_options_with_examples_bulletpoints": self.prompt_options_with_examples_bulletpoints(),
             "whole_prompt_info": self.whole_prompt_info(),
+            "whole_prompt_info_bulletpoints": self.whole_prompt_info_bulletpoints(),
             "prompt_json": self.prompts_json(),
             "response_json_schema": self.response_json_schema(),
             "response_json_schema_with_options": self.response_json_schema_with_options(),
@@ -136,16 +153,26 @@ class ExtractionPrompt(pydantic.BaseModel):
     def get_description(self) -> str:
         return self.description + " " + " ".join(str(option) for option in self.options)
 
-    def list_options(self) -> str:
+    def list_option_names(self) -> str:
         return ", ".join([option.name for option in self.options])
 
-    def list_options_details(self) -> str:
+    def list_options(self) -> str:
+        return ", ".join([option.name + " (" + option.description + ")" for option in self.options])
+
+    def list_options_with_examples(self) -> str:
         return ", ".join([str(option) for option in self.options])
+
+    def list_options_with_examples_bulletpoints(self) -> str:
+        return "\n - ".join([option.to_str_bulletpoint() for option in self.options])
 
 
 class ResultOption(pydantic.BaseModel):
     name: str
     description: str
+    examples: Optional[List[str]] = []
+
+    def to_str_bulletpoint(self) -> str:
+        return self.name + " (" + self.description + ")" + (" Examples: " + "\n  - ".join(self.examples) if self.examples else "")
 
     def __str__(self) -> str:
-        return self.name + " (" + self.description + ")"
+        return self.name + " (" + self.description + ")" + (" Examples: " + ", ".join(self.examples) if self.examples else "")

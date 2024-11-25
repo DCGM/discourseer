@@ -4,9 +4,9 @@ from pydantic import BaseModel
 from typing import Dict, List
 import json
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "../discourseer"))
-from extraction_prompts import ExtractionPrompts
-import utils
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+from discourseer.extraction_prompts import ExtractionPrompts
+from discourseer import utils
 
 intro = """
 # Formátovací řetězce pro vytvoření zadání modelu pro každou otázku
@@ -24,7 +24,10 @@ format_string_descriptions = {
     "single_choice_prompts": "jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou",
     "multiple_choice_prompts": "jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou",
     "prompt_options": "několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce",
+    "prompt_options_with_examples": "seznam možností jako `prompt_options` s přidanými příklady na každém řádku",
+    "prompt_options_with_examples_bulletpoints": "seznam možností jako `prompt_options_with_examples` strukturované pomocí odrážek",
     "whole_prompt_info": "několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce",
+    "whole_prompt_info_bulletpoints": "několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) strukturované pomocí odrážek",
     "prompt_json": "JSON se všemi informacemi o otázkách",
     "response_json_schema": "JSON schéma, které odpovídá formátu odpovědí modelu",
     "response_json_schema_with_options": "JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi"
@@ -60,6 +63,7 @@ def print_prompt_exmples():
         print(f"**{key}** ({format_string_descriptions[key]})")
         print(f'<a name="{key}"></a>')
         print('')
+
         if "json" in key:
             json_output = json.loads(value)
             json_output_file = f'{key}.json'
@@ -73,7 +77,11 @@ def print_prompt_exmples():
             print(f"```")
         else:
             print(f"```")
-            print(f"{value}")
+            if 'bulletpoints' in key:
+                print('\n'.join(value.split('\n')[:10]))
+                print("...")
+            else:
+                print(f"{value}")
             print(f"```")
 
 if __name__ == "__main__":
