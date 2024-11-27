@@ -17,12 +17,12 @@ Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,czech-republic,False,False
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,slovakia,False,False,False,False,False,True,True
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,poland,False,False,False,False,False,True,True
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,germany,False,False,False,False,False,True,True
-Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,russia,True,True,True,True,True,True,False
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,russia,True,True,True,False,True,False,False
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,ukraine,True,True,True,True,True,True,False
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,other,False,False,False,False,False,True,True
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,misto,unknown,False,False,False,False,False,True,True
 Tvrdík_skončil_jako_viceprezident.txt,rozsah,single_choice,4,4,4,3,4,False,--WORST-CASE
-Tvrdík_skončil_jako_viceprezident.txt,zanr,single_choice,report,report,report,extended_report,report,False,--WORST-CASE
+Tvrdík_skončil_jako_viceprezident.txt,zanr,single_choice,report,report,report,report,report,True,--WORST-CASE
 Tvrdík_skončil_jako_viceprezident.txt,spoustec-zpravy,single_choice,public,public,politician,politician,public,False,--WORST-CASE
 Tvrdík_skončil_jako_viceprezident.txt,misto,czech-republic,True,True,True,True,True,True,False
 Tvrdík_skončil_jako_viceprezident.txt,misto,slovakia,False,False,False,False,False,True,True
