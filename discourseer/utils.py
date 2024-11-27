@@ -105,6 +105,8 @@ class JSONParser:
 
     @staticmethod
     def from_markdown_code_block(response: str) -> str:
+        if "```" not in response:
+            return response
         _, response, *_ = re.split("```", response)
         response = response.strip()
         if response.startswith('json'):

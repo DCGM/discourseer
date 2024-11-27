@@ -203,7 +203,7 @@ class IRR:
 
         if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
-            logging.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
+            logger.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
             df_before_cleaning.to_csv(self.out_dataframe)
             return IRR.EMPTY_IRR_RESULTS
 
@@ -524,7 +524,7 @@ class IRR:
         # check if all raters have the same length
         lens = [len(rater) for rater in raters_dict.values()]
         if len(set(lens)) != 1:
-            logging.warning(f"Raters have different lengths of ratings: {lens}. Is it possible the ratings come from different sets of texts?")
+            logger.warning(f"Raters have different lengths of ratings: {lens}. Is it possible the ratings come from different sets of texts?")
 
         df = pd.DataFrame(raters_dict)
         for col in df.columns:
