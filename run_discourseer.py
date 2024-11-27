@@ -62,18 +62,24 @@ def setup_logging(log_level: str, log_file: str):
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
 
-    mpl_logger = logging.getLogger('matplotlib')
-    mpl_logger.setLevel(logging.WARNING)
-
     logging.getLogger().addHandler(file_handler)
     logging.getLogger().addHandler(stream_handler)
+
+    # suppress logs from specific libraries
+    for lib in ['httpx', 'httpcore', 'openai', 'matplotlib']:
+        logger = logging.getLogger(lib)
+        logger.setLevel(logging.WARNING)
 
 
 def main():
     args = parse_args()
+
     tmp_dir = 'tmp'
     log_file = os.path.join(tmp_dir, 'logfile.log')
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    if os.path.exists(log_file):
+        os.remove(log_file)
+
     setup_logging(args.log, log_file)
     logging.debug(f"Python file location: {os.path.abspath(__file__)}")
     logging.debug(f"Arguments: {args}")
@@ -144,7 +150,8 @@ class Discourseer:
 
     def extract_answers(self, text: str, text_id: str):
         logging.debug('New document:\n\n')
-        logging.debug(f'Extracting answers from text: {text[:min(50, len(text))]}...')
+        text_short = text[:min(50, len(text))].replace('\n', '')
+        logging.info(f"Extracting answers from text: {text_id} ({text_short}...)")
 
         conversation = self.prompt_schema_definition.model_copy(deep=True)
         for message in conversation.messages:
@@ -157,6 +164,7 @@ class Discourseer:
         conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
+        logging.debug(f"Response raw: {response}")
         response = response.choices[0].message.content
         response = JSONParser.response_to_dict(response)
 
