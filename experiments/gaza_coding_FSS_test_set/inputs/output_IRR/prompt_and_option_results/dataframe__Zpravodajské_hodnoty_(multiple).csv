@@ -1,0 +1,501 @@
+file,rating,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,majority,worst_case
+2023-10-07T00-00-00_2023WN280031.txt,Negativita negativity,True,True,False,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Blízkost proximity,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Personalizace personalization,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Dopad impact,False,True,True,True,False
+2023-10-09T09-30-00_2023WN282044.txt,Negativita negativity,True,True,True,True,False
+2023-10-09T09-30-00_2023WN282044.txt,Blízkost proximity,True,True,False,True,False
+2023-10-09T09-30-00_2023WN282044.txt,Elitní osoby prominence,False,True,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Personalizace personalization,False,True,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Dopad impact,True,True,True,True,False
+2023-10-09T13-14-00_2023WN282092.txt,Negativita negativity,True,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Blízkost proximity,True,True,True,True,False
+2023-10-09T13-14-00_2023WN282092.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-09T13-14-00_2023WN282092.txt,Personalizace personalization,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Dopad impact,True,True,True,True,False
+2023-10-09T15-15-00_2023WN282115.txt,Negativita negativity,True,True,True,True,False
+2023-10-09T15-15-00_2023WN282115.txt,Blízkost proximity,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Personalizace personalization,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Dopad impact,True,False,True,True,False
+2023-10-10T18-48-00_2023WN283309.txt,Negativita negativity,False,False,True,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Blízkost proximity,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-10T18-48-00_2023WN283309.txt,Personalizace personalization,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Dopad impact,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Negativita negativity,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Blízkost proximity,True,True,True,True,False
+2023-10-10T19-06-00_2023WN283165.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-10T19-06-00_2023WN283165.txt,Personalizace personalization,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Dopad impact,False,True,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Negativita negativity,False,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Blízkost proximity,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Personalizace personalization,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Dopad impact,False,False,True,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Negativita negativity,True,True,True,True,False
+2023-10-12T12-23-00_2023WN285198.txt,Blízkost proximity,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Personalizace personalization,True,True,True,True,False
+2023-10-12T12-23-00_2023WN285198.txt,Dopad impact,False,True,True,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Negativita negativity,True,True,True,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Blízkost proximity,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Personalizace personalization,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Dopad impact,True,True,True,True,False
+2023-10-15T15-10-00_2023WN288053.txt,Negativita negativity,True,True,True,True,False
+2023-10-15T15-10-00_2023WN288053.txt,Blízkost proximity,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Personalizace personalization,True,True,True,True,False
+2023-10-15T15-10-00_2023WN288053.txt,Dopad impact,False,True,True,True,False
+2023-10-15T22-57-00_2023WN288085.txt,Negativita negativity,True,True,True,True,False
+2023-10-15T22-57-00_2023WN288085.txt,Blízkost proximity,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-15T22-57-00_2023WN288085.txt,Personalizace personalization,False,True,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Dopad impact,True,False,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Negativita negativity,False,True,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Blízkost proximity,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Elitní osoby prominence,True,False,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Personalizace personalization,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Dopad impact,False,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Negativita negativity,False,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Blízkost proximity,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Elitní osoby prominence,False,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Personalizace personalization,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Dopad impact,False,True,True,True,False
+2023-10-18T18-55-00_2023WN291138.txt,Negativita negativity,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Blízkost proximity,True,True,True,True,False
+2023-10-18T18-55-00_2023WN291138.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Personalizace personalization,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Dopad impact,False,False,True,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Negativita negativity,True,True,True,True,False
+2023-10-19T12-46-00_2023WN292103.txt,Blízkost proximity,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Personalizace personalization,True,True,True,True,False
+2023-10-19T12-46-00_2023WN292103.txt,Dopad impact,False,True,True,True,False
+2023-10-22T07-25-00_2023WN295020.txt,Negativita negativity,True,True,True,True,False
+2023-10-22T07-25-00_2023WN295020.txt,Blízkost proximity,True,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Elitní osoby prominence,False,True,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Personalizace personalization,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Dopad impact,False,True,True,True,False
+2023-10-22T07-25-00_2023WN295041.txt,Negativita negativity,True,True,True,True,False
+2023-10-22T07-25-00_2023WN295041.txt,Blízkost proximity,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-22T07-25-00_2023WN295041.txt,Personalizace personalization,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Dopad impact,True,False,True,True,False
+2023-10-23T10-25-00_2023WN296049.txt,Negativita negativity,True,True,True,True,False
+2023-10-23T10-25-00_2023WN296049.txt,Blízkost proximity,True,True,True,True,False
+2023-10-23T10-25-00_2023WN296049.txt,Elitní osoby prominence,False,True,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Personalizace personalization,False,True,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Dopad impact,False,False,True,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Negativita negativity,False,True,True,True,False
+2023-10-23T13-07-00_2023WN296102.txt,Blízkost proximity,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-23T13-07-00_2023WN296102.txt,Personalizace personalization,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Dopad impact,True,True,True,True,False
+2023-10-24T09-40-00_2023WN297177.txt,Negativita negativity,False,False,True,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Blízkost proximity,True,True,True,True,False
+2023-10-24T09-40-00_2023WN297177.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-24T09-40-00_2023WN297177.txt,Personalizace personalization,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Dopad impact,False,False,True,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Negativita negativity,False,True,True,True,False
+2023-10-24T14-23-00_2023WN297100.txt,Blízkost proximity,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Personalizace personalization,True,True,True,True,False
+2023-10-24T14-23-00_2023WN297100.txt,Dopad impact,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299130.txt,Negativita negativity,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299130.txt,Blízkost proximity,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Personalizace personalization,True,False,True,True,False
+2023-10-26T00-00-00_2023WN299130.txt,Dopad impact,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299182.txt,Negativita negativity,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Blízkost proximity,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299182.txt,Personalizace personalization,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Dopad impact,False,True,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Negativita negativity,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300102.txt,Blízkost proximity,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Personalizace personalization,False,True,True,True,False
+2023-10-27T00-00-00_2023WN300102.txt,Dopad impact,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Negativita negativity,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Blízkost proximity,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Personalizace personalization,False,True,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Dopad impact,False,True,True,True,False
+2023-10-30T00-00-00_2023WN303135.txt,Negativita negativity,True,False,True,True,False
+2023-10-30T00-00-00_2023WN303135.txt,Blízkost proximity,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303135.txt,Elitní osoby prominence,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Personalizace personalization,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Dopad impact,False,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Negativita negativity,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Blízkost proximity,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Personalizace personalization,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Dopad impact,False,True,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Negativita negativity,False,True,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Blízkost proximity,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Elitní osoby prominence,True,True,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Personalizace personalization,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Dopad impact,False,False,True,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Negativita negativity,True,True,True,True,False
+2023-11-01T20-08-00_2023WN305205.txt,Blízkost proximity,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Personalizace personalization,False,True,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Dopad impact,True,True,True,True,False
+2023-11-02T08-14-00_2023WN306020.txt,Negativita negativity,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Blízkost proximity,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-02T08-14-00_2023WN306020.txt,Personalizace personalization,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Dopad impact,False,True,True,True,False
+2023-11-02T16-02-00_2023WN306156.txt,Negativita negativity,True,False,True,True,False
+2023-11-02T16-02-00_2023WN306156.txt,Blízkost proximity,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Elitní osoby prominence,False,False,True,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Personalizace personalization,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Dopad impact,False,True,True,True,False
+2023-11-04T18-33-00_2023WN308071.txt,Negativita negativity,False,False,True,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Blízkost proximity,True,False,True,True,False
+2023-11-04T18-33-00_2023WN308071.txt,Elitní osoby prominence,False,False,True,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Personalizace personalization,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Dopad impact,False,False,True,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Negativita negativity,True,True,False,True,False
+2023-11-05T14-59-00_2023WN309050.txt,Blízkost proximity,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-05T14-59-00_2023WN309050.txt,Personalizace personalization,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Dopad impact,True,True,False,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Negativita negativity,True,False,True,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Blízkost proximity,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Personalizace personalization,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Dopad impact,True,False,True,True,False
+2023-11-08T12-04-00_2023WN312097.txt,Negativita negativity,True,True,False,True,False
+2023-11-08T12-04-00_2023WN312097.txt,Blízkost proximity,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-08T12-04-00_2023WN312097.txt,Personalizace personalization,False,True,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Dopad impact,False,False,True,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Negativita negativity,True,True,False,True,False
+2023-11-08T18-38-00_2023WN312210.txt,Blízkost proximity,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-08T18-38-00_2023WN312210.txt,Personalizace personalization,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Dopad impact,True,True,True,True,False
+2023-11-12T10-11-00_2023WN316039.txt,Negativita negativity,True,True,True,True,False
+2023-11-12T10-11-00_2023WN316039.txt,Blízkost proximity,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Personalizace personalization,False,True,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Dopad impact,True,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Negativita negativity,True,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Blízkost proximity,True,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Elitní osoby prominence,False,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Personalizace personalization,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Dopad impact,False,False,True,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Negativita negativity,True,True,True,True,False
+2023-11-13T08-23-00_2023WN317033.txt,Blízkost proximity,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Personalizace personalization,False,True,True,True,False
+2023-11-13T08-23-00_2023WN317033.txt,Dopad impact,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Negativita negativity,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Blízkost proximity,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Elitní osoby prominence,False,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Personalizace personalization,False,True,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Dopad impact,False,True,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Negativita negativity,True,True,False,True,False
+2023-11-15T18-58-00_2023WN319238.txt,Blízkost proximity,True,True,True,True,False
+2023-11-15T18-58-00_2023WN319238.txt,Elitní osoby prominence,False,True,True,True,False
+2023-11-15T18-58-00_2023WN319238.txt,Personalizace personalization,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Dopad impact,False,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Negativita negativity,True,False,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Blízkost proximity,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Personalizace personalization,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Dopad impact,False,False,True,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Negativita negativity,True,True,False,True,False
+2023-11-16T19-47-00_2023WN320191.txt,Blízkost proximity,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-16T19-47-00_2023WN320191.txt,Personalizace personalization,True,False,True,True,False
+2023-11-16T19-47-00_2023WN320191.txt,Dopad impact,False,True,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Negativita negativity,True,True,True,True,False
+2023-11-19T21-20-00_2023WN323090.txt,Blízkost proximity,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Personalizace personalization,False,False,True,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Dopad impact,False,True,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Negativita negativity,True,True,True,True,False
+2023-11-20T10-29-00_2023WN324050.txt,Blízkost proximity,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Elitní osoby prominence,False,True,True,True,False
+2023-11-20T10-29-00_2023WN324050.txt,Personalizace personalization,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Dopad impact,False,True,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Negativita negativity,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Blízkost proximity,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Elitní osoby prominence,False,True,True,True,False
+2023-11-21T08-43-00_2023WN325032.txt,Personalizace personalization,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Dopad impact,True,True,False,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Negativita negativity,True,True,True,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Blízkost proximity,True,True,True,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Personalizace personalization,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Dopad impact,False,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Negativita negativity,True,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Blízkost proximity,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Personalizace personalization,False,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Dopad impact,True,True,True,True,False
+2023-11-24T14-23-00_2023WN328136.txt,Negativita negativity,True,True,True,True,False
+2023-11-24T14-23-00_2023WN328136.txt,Blízkost proximity,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Elitní osoby prominence,True,True,True,True,False
+2023-11-24T14-23-00_2023WN328136.txt,Personalizace personalization,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Dopad impact,False,False,True,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Negativita negativity,True,True,True,True,False
+2023-11-25T11-25-00_2023WN329031.txt,Blízkost proximity,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Elitní osoby prominence,True,False,True,True,False
+2023-11-25T11-25-00_2023WN329031.txt,Personalizace personalization,False,True,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Dopad impact,True,True,True,True,False
+2023-11-29T09-38-00_2023WN333049.txt,Negativita negativity,True,True,True,True,False
+2023-11-29T09-38-00_2023WN333049.txt,Blízkost proximity,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Personalizace personalization,True,True,True,True,False
+2023-11-29T09-38-00_2023WN333049.txt,Dopad impact,True,True,True,True,False
+2023-11-29T16-48-00_2023WN333186.txt,Negativita negativity,True,True,True,True,False
+2023-11-29T16-48-00_2023WN333186.txt,Blízkost proximity,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Personalizace personalization,False,True,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Dopad impact,False,True,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Negativita negativity,True,True,True,True,False
+2023-11-30T07-26-00_2023WN334018.txt,Blízkost proximity,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Elitní osoby prominence,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Personalizace personalization,False,True,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Dopad impact,False,True,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Negativita negativity,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Blízkost proximity,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Elitní osoby prominence,True,True,True,True,False
+2023-12-05T07-38-00_2023WN339020.txt,Personalizace personalization,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Dopad impact,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Negativita negativity,True,True,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Blízkost proximity,True,False,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Elitní osoby prominence,True,True,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Personalizace personalization,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Dopad impact,False,False,True,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Negativita negativity,True,True,True,True,False
+2023-12-09T12-15-00_2023WN343042.txt,Blízkost proximity,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Elitní osoby prominence,True,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Personalizace personalization,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Dopad impact,False,True,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Negativita negativity,True,True,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Blízkost proximity,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Elitní osoby prominence,True,False,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Personalizace personalization,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Dopad impact,False,True,True,True,False
+2023-12-10T11-34-00_2023WN344037.txt,Negativita negativity,True,True,True,True,False
+2023-12-10T11-34-00_2023WN344037.txt,Blízkost proximity,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Elitní osoby prominence,True,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Personalizace personalization,True,True,True,True,False
+2023-12-10T11-34-00_2023WN344037.txt,Dopad impact,True,True,True,True,False
+2023-12-14T18-05-00_2023WN348154.txt,Negativita negativity,True,False,True,True,False
+2023-12-14T18-05-00_2023WN348154.txt,Blízkost proximity,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Elitní osoby prominence,True,True,False,True,False
+2023-12-14T18-05-00_2023WN348154.txt,Personalizace personalization,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Dopad impact,False,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Negativita negativity,True,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Blízkost proximity,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Elitní osoby prominence,False,False,True,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Personalizace personalization,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Dopad impact,True,True,True,True,False
+2023-12-21T09-39-00_2023WN355039.txt,Negativita negativity,False,True,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Blízkost proximity,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Elitní osoby prominence,True,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Personalizace personalization,False,True,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Dopad impact,True,True,False,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Negativita negativity,True,True,True,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Blízkost proximity,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Elitní osoby prominence,False,True,True,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Personalizace personalization,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Dopad impact,True,True,True,True,False
+2023-12-23T14-29-00_2023WN357061.txt,Negativita negativity,True,True,True,True,False
+2023-12-23T14-29-00_2023WN357061.txt,Blízkost proximity,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Elitní osoby prominence,False,False,True,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Personalizace personalization,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Dopad impact,True,True,False,True,False
+2023-12-31T12-11-00_2023WN365037.txt,Negativita negativity,True,True,True,True,False
+2023-12-31T12-11-00_2023WN365037.txt,Blízkost proximity,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Elitní osoby prominence,False,True,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Personalizace personalization,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Dopad impact,False,True,True,True,False
+2024-01-02T18-18-00_2024WN002160.txt,Negativita negativity,True,True,True,True,False
+2024-01-02T18-18-00_2024WN002160.txt,Blízkost proximity,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Elitní osoby prominence,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Personalizace personalization,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Dopad impact,False,True,True,True,False
+2024-01-04T05-35-00_2024WN004003.txt,Negativita negativity,True,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Blízkost proximity,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Elitní osoby prominence,False,False,True,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Personalizace personalization,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Dopad impact,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Negativita negativity,True,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Blízkost proximity,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Elitní osoby prominence,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Personalizace personalization,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Dopad impact,True,False,True,True,False
+2024-01-12T11-45-00_2024WN012085.txt,Negativita negativity,True,False,True,True,False
+2024-01-12T11-45-00_2024WN012085.txt,Blízkost proximity,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Elitní osoby prominence,False,True,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Personalizace personalization,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Dopad impact,False,False,True,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Negativita negativity,True,True,True,True,False
+2024-01-12T16-04-00_2024WN012115.txt,Blízkost proximity,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Elitní osoby prominence,False,True,True,True,False
+2024-01-12T16-04-00_2024WN012115.txt,Personalizace personalization,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Dopad impact,True,True,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Negativita negativity,True,False,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Blízkost proximity,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Elitní osoby prominence,True,True,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Personalizace personalization,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Dopad impact,False,True,True,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Negativita negativity,True,True,False,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Blízkost proximity,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Elitní osoby prominence,True,True,False,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Personalizace personalization,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Dopad impact,False,False,True,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Negativita negativity,True,True,True,True,False
+2024-01-19T14-38-00_2024WN019126.txt,Blízkost proximity,False,True,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Elitní osoby prominence,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Personalizace personalization,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Dopad impact,True,True,True,True,False
+2024-01-28T20-24-00_2024WN028088.txt,Negativita negativity,False,False,True,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Blízkost proximity,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Elitní osoby prominence,True,True,True,True,False
+2024-01-28T20-24-00_2024WN028088.txt,Personalizace personalization,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Dopad impact,True,True,True,True,False
+2024-01-29T14-22-00_2024WN029073.txt,Negativita negativity,True,True,True,True,False
+2024-01-29T14-22-00_2024WN029073.txt,Blízkost proximity,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Elitní osoby prominence,False,False,True,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Personalizace personalization,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Dopad impact,False,True,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Negativita negativity,True,True,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Blízkost proximity,True,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Elitní osoby prominence,True,True,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Personalizace personalization,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Dopad impact,True,True,True,True,False
+2024-01-31T09-52-00_2024WN031056.txt,Negativita negativity,False,False,True,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Blízkost proximity,True,True,False,True,False
+2024-01-31T09-52-00_2024WN031056.txt,Elitní osoby prominence,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Personalizace personalization,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Dopad impact,False,True,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Negativita negativity,True,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Blízkost proximity,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Elitní osoby prominence,True,True,True,True,False
+2024-02-07T08-50-00_2024WN038191.txt,Personalizace personalization,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Dopad impact,False,False,True,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Negativita negativity,True,False,True,True,False
+2024-02-07T20-57-00_2024WN038200.txt,Blízkost proximity,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Elitní osoby prominence,True,True,True,True,False
+2024-02-07T20-57-00_2024WN038200.txt,Personalizace personalization,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Dopad impact,True,True,True,True,False
+2024-02-14T20-31-00_2024WN045169.txt,Negativita negativity,True,True,False,True,False
+2024-02-14T20-31-00_2024WN045169.txt,Blízkost proximity,True,True,True,True,False
+2024-02-14T20-31-00_2024WN045169.txt,Elitní osoby prominence,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Personalizace personalization,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Dopad impact,False,True,True,True,False
+2024-02-15T14-13-00_2024WN046130.txt,Negativita negativity,True,True,True,True,False
+2024-02-15T14-13-00_2024WN046130.txt,Blízkost proximity,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Elitní osoby prominence,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Personalizace personalization,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Dopad impact,True,True,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Negativita negativity,True,False,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Blízkost proximity,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Elitní osoby prominence,True,True,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Personalizace personalization,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Dopad impact,True,False,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Negativita negativity,True,True,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Blízkost proximity,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Elitní osoby prominence,True,True,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Personalizace personalization,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Dopad impact,True,True,True,True,False
+2024WN053024.txt,Negativita negativity,True,True,True,True,False
+2024WN053024.txt,Blízkost proximity,False,False,False,False,True
+2024WN053024.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN053024.txt,Personalizace personalization,False,False,False,False,True
+2024WN053024.txt,Dopad impact,False,True,True,True,False
+2024WN058034.txt,Negativita negativity,False,False,False,False,True
+2024WN058034.txt,Blízkost proximity,False,False,False,False,True
+2024WN058034.txt,Elitní osoby prominence,True,False,True,True,False
+2024WN058034.txt,Personalizace personalization,False,False,False,False,True
+2024WN058034.txt,Dopad impact,True,False,True,True,False
+2024WN064149.txt,Negativita negativity,True,True,True,True,False
+2024WN064149.txt,Blízkost proximity,False,False,False,False,True
+2024WN064149.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN064149.txt,Personalizace personalization,False,False,False,False,True
+2024WN064149.txt,Dopad impact,False,True,True,True,False
+2024WN079145.txt,Negativita negativity,True,True,True,True,False
+2024WN079145.txt,Blízkost proximity,False,False,False,False,True
+2024WN079145.txt,Elitní osoby prominence,True,True,True,True,False
+2024WN079145.txt,Personalizace personalization,False,False,False,False,True
+2024WN079145.txt,Dopad impact,False,False,True,False,True
+2024WN096007.txt,Negativita negativity,True,False,True,True,False
+2024WN096007.txt,Blízkost proximity,False,False,False,False,True
+2024WN096007.txt,Elitní osoby prominence,True,True,False,True,False
+2024WN096007.txt,Personalizace personalization,False,False,False,False,True
+2024WN096007.txt,Dopad impact,True,True,True,True,False
+2024WN104121.txt,Negativita negativity,True,True,True,True,False
+2024WN104121.txt,Blízkost proximity,False,False,False,False,True
+2024WN104121.txt,Elitní osoby prominence,True,True,True,True,False
+2024WN104121.txt,Personalizace personalization,False,False,False,False,True
+2024WN104121.txt,Dopad impact,True,True,True,True,False
+2024WN109163.txt,Negativita negativity,True,True,True,True,False
+2024WN109163.txt,Blízkost proximity,False,False,False,False,True
+2024WN109163.txt,Elitní osoby prominence,True,False,True,True,False
+2024WN109163.txt,Personalizace personalization,False,False,False,False,True
+2024WN109163.txt,Dopad impact,False,False,True,False,True
+2024WN119043.txt,Negativita negativity,True,True,True,True,False
+2024WN119043.txt,Blízkost proximity,False,False,False,False,True
+2024WN119043.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN119043.txt,Personalizace personalization,False,False,True,False,True
+2024WN119043.txt,Dopad impact,True,False,True,True,False
+2024WN128128.txt,Negativita negativity,True,True,True,True,False
+2024WN128128.txt,Blízkost proximity,True,True,True,True,False
+2024WN128128.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN128128.txt,Personalizace personalization,False,False,False,False,True
+2024WN128128.txt,Dopad impact,False,True,True,True,False
+2024WN140018.txt,Negativita negativity,True,True,True,True,False
+2024WN140018.txt,Blízkost proximity,False,False,False,False,True
+2024WN140018.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN140018.txt,Personalizace personalization,False,False,False,False,True
+2024WN140018.txt,Dopad impact,False,True,True,True,False
+2024WN149082.txt,Negativita negativity,True,True,True,True,False
+2024WN149082.txt,Blízkost proximity,False,False,False,False,True
+2024WN149082.txt,Elitní osoby prominence,True,True,True,True,False
+2024WN149082.txt,Personalizace personalization,True,True,False,True,False
+2024WN149082.txt,Dopad impact,True,True,True,True,False
+2024WN161064.txt,Negativita negativity,True,True,True,True,False
+2024WN161064.txt,Blízkost proximity,False,False,False,False,True
+2024WN161064.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN161064.txt,Personalizace personalization,True,True,True,True,False
+2024WN161064.txt,Dopad impact,True,True,True,True,False
+2024WN172020.txt,Negativita negativity,True,True,True,True,False
+2024WN172020.txt,Blízkost proximity,False,False,False,False,True
+2024WN172020.txt,Elitní osoby prominence,True,False,True,True,False
+2024WN172020.txt,Personalizace personalization,False,False,False,False,True
+2024WN172020.txt,Dopad impact,True,False,True,True,False
+2024WN185176.txt,Negativita negativity,True,True,True,True,False
+2024WN185176.txt,Blízkost proximity,False,False,False,False,True
+2024WN185176.txt,Elitní osoby prominence,True,False,False,False,True
+2024WN185176.txt,Personalizace personalization,False,False,False,False,True
+2024WN185176.txt,Dopad impact,False,True,True,True,False
+2024WN201004.txt,Negativita negativity,True,True,True,True,False
+2024WN201004.txt,Blízkost proximity,False,False,False,False,True
+2024WN201004.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN201004.txt,Personalizace personalization,False,False,False,False,True
+2024WN201004.txt,Dopad impact,True,True,True,True,False
+2024WN213189.txt,Negativita negativity,True,True,True,True,False
+2024WN213189.txt,Blízkost proximity,False,False,False,False,True
+2024WN213189.txt,Elitní osoby prominence,True,True,True,True,False
+2024WN213189.txt,Personalizace personalization,False,False,False,False,True
+2024WN213189.txt,Dopad impact,True,False,True,True,False
+2024WN223008.txt,Negativita negativity,True,True,True,True,False
+2024WN223008.txt,Blízkost proximity,False,False,False,False,True
+2024WN223008.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN223008.txt,Personalizace personalization,False,False,False,False,True
+2024WN223008.txt,Dopad impact,True,True,True,True,False
+2024WN240099.txt,Negativita negativity,True,False,False,False,True
+2024WN240099.txt,Blízkost proximity,False,False,False,False,True
+2024WN240099.txt,Elitní osoby prominence,False,False,False,False,True
+2024WN240099.txt,Personalizace personalization,False,False,False,False,True
+2024WN240099.txt,Dopad impact,False,True,True,True,False
