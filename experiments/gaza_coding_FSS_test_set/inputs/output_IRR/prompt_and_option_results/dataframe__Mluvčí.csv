@@ -1,0 +1,1101 @@
+file,rating,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,majority,worst_case
+2023-10-07T00-00-00_2023WN280031.txt,Političtí představitelé Izraele,False,True,True,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-10-07T00-00-00_2023WN280031.txt,Členové teroristických skupin,False,False,True,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Média a novináři,False,False,True,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-07T00-00-00_2023WN280031.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-09T09-30-00_2023WN282044.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Média a novináři,True,True,True,True,False
+2023-10-09T09-30-00_2023WN282044.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-09T09-30-00_2023WN282044.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-09T13-14-00_2023WN282092.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Média a novináři,True,True,True,True,False
+2023-10-09T13-14-00_2023WN282092.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-09T13-14-00_2023WN282092.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Média a novináři,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-09T15-15-00_2023WN282115.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-10T18-48-00_2023WN283309.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Média a novináři,False,True,True,True,False
+2023-10-10T18-48-00_2023WN283309.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-10T18-48-00_2023WN283309.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-10T19-06-00_2023WN283165.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Média a novináři,False,False,True,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-10T19-06-00_2023WN283165.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Političtí představitelé Palestiny,True,False,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Politici z blízkovýchodních zemí,True,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Členové teroristických skupin,True,False,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Média a novináři,False,True,True,True,False
+2023-10-10T21-42-00_2023WN283184.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-10T21-42-00_2023WN283184.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-12T12-23-00_2023WN285198.txt,Média a novináři,True,True,True,True,False
+2023-10-12T12-23-00_2023WN285198.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2023-10-12T12-23-00_2023WN285198.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Politici z blízkovýchodních zemí,True,True,False,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Politici ze ostatních světových zemí,False,True,True,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Média a novináři,True,True,True,True,False
+2023-10-12T16-14-00_2023WN285133.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-12T16-14-00_2023WN285133.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-15T15-10-00_2023WN288053.txt,Média a novináři,True,True,True,True,False
+2023-10-15T15-10-00_2023WN288053.txt,Očití svědci a civilisté z Izraele,False,True,True,True,False
+2023-10-15T15-10-00_2023WN288053.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-15T22-57-00_2023WN288085.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Média a novináři,True,True,True,True,False
+2023-10-15T22-57-00_2023WN288085.txt,Očití svědci a civilisté z Izraele,False,False,True,False,True
+2023-10-15T22-57-00_2023WN288085.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Političtí představitelé Palestiny,True,True,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Politici z blízkovýchodních zemí,True,True,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Média a novináři,True,True,True,True,False
+2023-10-16T10-36-00_2023WN289053.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-16T10-36-00_2023WN289053.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Političtí představitelé Izraele,False,True,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Politici z blízkovýchodních zemí,True,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Nezávislí experti a analytici,True,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Média a novináři,True,True,True,True,False
+2023-10-18T15-48-00_2023WN291099.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-18T15-48-00_2023WN291099.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Média a novináři,False,True,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-18T18-55-00_2023WN291138.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Politici ze ostatních světových zemí,True,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2023-10-19T12-46-00_2023WN292103.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Média a novináři,True,True,True,True,False
+2023-10-19T12-46-00_2023WN292103.txt,Očití svědci a civilisté z Izraele,False,True,False,False,True
+2023-10-19T12-46-00_2023WN292103.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Politici ze ostatních světových zemí,False,True,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Média a novináři,True,True,True,True,False
+2023-10-22T07-25-00_2023WN295020.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295020.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-22T07-25-00_2023WN295041.txt,Političtí představitelé Palestiny,False,True,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Média a novináři,True,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-22T07-25-00_2023WN295041.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Nezávislí experti a analytici,False,True,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Média a novináři,True,True,False,True,False
+2023-10-23T10-25-00_2023WN296049.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-23T10-25-00_2023WN296049.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Političtí představitelé Izraele,True,True,False,True,False
+2023-10-23T13-07-00_2023WN296102.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-23T13-07-00_2023WN296102.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Média a novináři,True,False,True,True,False
+2023-10-23T13-07-00_2023WN296102.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-23T13-07-00_2023WN296102.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-24T09-40-00_2023WN297177.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Média a novináři,True,True,True,True,False
+2023-10-24T09-40-00_2023WN297177.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-24T09-40-00_2023WN297177.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Média a novináři,False,False,True,False,True
+2023-10-24T14-23-00_2023WN297100.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2023-10-24T14-23-00_2023WN297100.txt,Očití svědci a civilisté z Palestiny,False,False,True,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Média a novináři,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299130.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299130.txt,Očití svědci a civilisté z Palestiny,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299182.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299182.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Nezávislí experti a analytici,True,True,True,True,False
+2023-10-26T00-00-00_2023WN299182.txt,Média a novináři,False,False,True,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-26T00-00-00_2023WN299182.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Političtí představitelé Izraele,False,True,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-10-27T00-00-00_2023WN300102.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-27T00-00-00_2023WN300102.txt,Média a novináři,True,False,True,True,False
+2023-10-27T00-00-00_2023WN300102.txt,Očití svědci a civilisté z Izraele,True,False,True,True,False
+2023-10-27T00-00-00_2023WN300102.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Vojenští představitelé Izraele,False,True,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Nezávislí experti a analytici,True,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Média a novináři,True,False,True,True,False
+2023-10-30T00-00-00_2023WN303044.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303044.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Politici ze ostatních světových zemí,False,True,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Média a novináři,True,True,True,True,False
+2023-10-30T00-00-00_2023WN303135.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-30T00-00-00_2023WN303135.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Političtí představitelé Palestiny,False,False,True,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-10-30T12-21-00_2023WN303202.txt,Média a novináři,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2023-10-30T12-21-00_2023WN303202.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Představitelé mezinárodních a neziskových organizací,True,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Členové teroristických skupin,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Nezávislí experti a analytici,False,False,True,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Média a novináři,True,False,True,True,False
+2023-10-31T10-28-00_2023WN304046.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-10-31T10-28-00_2023WN304046.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Média a novináři,True,True,True,True,False
+2023-11-01T20-08-00_2023WN305205.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-01T20-08-00_2023WN305205.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-02T08-14-00_2023WN306020.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Média a novináři,True,True,True,True,False
+2023-11-02T08-14-00_2023WN306020.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-02T08-14-00_2023WN306020.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Nezávislí experti a analytici,False,True,True,True,False
+2023-11-02T16-02-00_2023WN306156.txt,Média a novináři,False,True,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-02T16-02-00_2023WN306156.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Politici ze ostatních světových zemí,True,False,True,True,False
+2023-11-04T18-33-00_2023WN308071.txt,Představitelé mezinárodních a neziskových organizací,False,True,True,True,False
+2023-11-04T18-33-00_2023WN308071.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Média a novináři,True,True,True,True,False
+2023-11-04T18-33-00_2023WN308071.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-04T18-33-00_2023WN308071.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-11-05T14-59-00_2023WN309050.txt,Političtí představitelé Palestiny,True,False,True,True,False
+2023-11-05T14-59-00_2023WN309050.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Média a novináři,True,True,True,True,False
+2023-11-05T14-59-00_2023WN309050.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-05T14-59-00_2023WN309050.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Nezávislí experti a analytici,True,True,True,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Média a novináři,True,True,True,True,False
+2023-11-08T09-27-00_2023WN312233.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-08T09-27-00_2023WN312233.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-11-08T12-04-00_2023WN312097.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Média a novináři,True,False,True,True,False
+2023-11-08T12-04-00_2023WN312097.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-08T12-04-00_2023WN312097.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-11-08T18-38-00_2023WN312210.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Politici ze ostatních světových zemí,True,False,True,True,False
+2023-11-08T18-38-00_2023WN312210.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Média a novináři,True,True,True,True,False
+2023-11-08T18-38-00_2023WN312210.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-08T18-38-00_2023WN312210.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Političtí představitelé Izraele,True,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Političtí představitelé Palestiny,False,True,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2023-11-12T10-11-00_2023WN316039.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-11-12T10-11-00_2023WN316039.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Média a novináři,True,True,True,True,False
+2023-11-12T10-11-00_2023WN316039.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-12T10-11-00_2023WN316039.txt,Očití svědci a civilisté z Palestiny,True,False,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Média a novináři,True,False,True,True,False
+2023-11-12T15-38-00_2023WN316094.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-12T15-38-00_2023WN316094.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Představitelé mezinárodních a neziskových organizací,True,True,False,True,False
+2023-11-13T08-23-00_2023WN317033.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Média a novináři,True,False,True,True,False
+2023-11-13T08-23-00_2023WN317033.txt,Očití svědci a civilisté z Izraele,False,True,False,False,True
+2023-11-13T08-23-00_2023WN317033.txt,Očití svědci a civilisté z Palestiny,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Média a novináři,True,True,True,True,False
+2023-11-15T15-46-00_2023WN319189.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-15T15-46-00_2023WN319189.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-15T18-58-00_2023WN319238.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Média a novináři,True,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-15T18-58-00_2023WN319238.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Političtí představitelé Izraele,False,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Političtí představitelé Palestiny,True,False,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Média a novináři,True,True,True,True,False
+2023-11-16T08-27-00_2023WN320033.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-16T08-27-00_2023WN320033.txt,Očití svědci a civilisté z Palestiny,False,True,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Představitelé mezinárodních a neziskových organizací,False,True,True,True,False
+2023-11-16T19-47-00_2023WN320191.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Média a novináři,True,True,True,True,False
+2023-11-16T19-47-00_2023WN320191.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-16T19-47-00_2023WN320191.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-11-19T21-20-00_2023WN323090.txt,Členové teroristických skupin,True,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Média a novináři,True,True,True,True,False
+2023-11-19T21-20-00_2023WN323090.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-19T21-20-00_2023WN323090.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-20T10-29-00_2023WN324050.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Členové teroristických skupin,True,True,True,True,False
+2023-11-20T10-29-00_2023WN324050.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Média a novináři,True,True,True,True,False
+2023-11-20T10-29-00_2023WN324050.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-20T10-29-00_2023WN324050.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Političtí představitelé Palestiny,True,True,True,True,False
+2023-11-21T08-43-00_2023WN325032.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-21T08-43-00_2023WN325032.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Média a novináři,True,True,True,True,False
+2023-11-21T08-43-00_2023WN325032.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-21T08-43-00_2023WN325032.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Média a novináři,True,True,True,True,False
+2023-11-23T13-26-00_2023WN327118.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-23T13-26-00_2023WN327118.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Média a novináři,True,True,True,True,False
+2023-11-23T16-26-00_2023WN327165.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-23T16-26-00_2023WN327165.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-11-24T14-23-00_2023WN328136.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Média a novináři,True,True,False,True,False
+2023-11-24T14-23-00_2023WN328136.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-24T14-23-00_2023WN328136.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-11-25T11-25-00_2023WN329031.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Členové teroristických skupin,False,True,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Média a novináři,True,True,True,True,False
+2023-11-25T11-25-00_2023WN329031.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-25T11-25-00_2023WN329031.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-29T09-38-00_2023WN333049.txt,Média a novináři,True,True,True,True,False
+2023-11-29T09-38-00_2023WN333049.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2023-11-29T09-38-00_2023WN333049.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-11-29T16-48-00_2023WN333186.txt,Členové teroristických skupin,True,True,True,True,False
+2023-11-29T16-48-00_2023WN333186.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Média a novináři,True,True,True,True,False
+2023-11-29T16-48-00_2023WN333186.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-29T16-48-00_2023WN333186.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Političtí představitelé Izraele,False,True,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Členové teroristických skupin,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Média a novináři,True,True,True,True,False
+2023-11-30T07-26-00_2023WN334018.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-11-30T07-26-00_2023WN334018.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Politici z blízkovýchodních zemí,True,True,False,True,False
+2023-12-05T07-38-00_2023WN339020.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Média a novináři,True,True,True,True,False
+2023-12-05T07-38-00_2023WN339020.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-05T07-38-00_2023WN339020.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Představitelé mezinárodních a neziskových organizací,True,True,False,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Členové teroristických skupin,True,False,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Média a novináři,True,True,True,True,False
+2023-12-05T16-50-00_2023WN339165.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-05T16-50-00_2023WN339165.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Političtí představitelé Izraele,False,True,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Politici z blízkovýchodních zemí,True,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Vojenští představitelé Izraele,True,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Média a novináři,True,True,True,True,False
+2023-12-09T12-15-00_2023WN343042.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-09T12-15-00_2023WN343042.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Političtí představitelé Izraele,True,True,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Političtí představitelé Palestiny,True,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Členové teroristických skupin,False,True,True,True,False
+2023-12-09T20-08-00_2023WN343089.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Média a novináři,False,False,True,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-09T20-08-00_2023WN343089.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-10T11-34-00_2023WN344037.txt,Média a novináři,True,True,True,True,False
+2023-12-10T11-34-00_2023WN344037.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2023-12-10T11-34-00_2023WN344037.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Političtí představitelé Izraele,True,True,False,True,False
+2023-12-14T18-05-00_2023WN348154.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Vojenští představitelé Izraele,False,True,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Média a novináři,True,True,True,True,False
+2023-12-14T18-05-00_2023WN348154.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-14T18-05-00_2023WN348154.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Členové teroristických skupin,False,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Nezávislí experti a analytici,True,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Média a novináři,False,True,True,True,False
+2023-12-15T17-14-00_2023WN349144.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-15T17-14-00_2023WN349144.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2023-12-21T09-39-00_2023WN355039.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Média a novináři,True,True,True,True,False
+2023-12-21T09-39-00_2023WN355039.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-21T09-39-00_2023WN355039.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Političtí představitelé Palestiny,True,True,False,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Politici z blízkovýchodních zemí,True,True,False,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Nezávislí experti a analytici,True,True,True,True,False
+2023-12-22T08-25-00_2023WN356016.txt,Média a novináři,False,True,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-22T08-25-00_2023WN356016.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-12-23T14-29-00_2023WN357061.txt,Představitelé mezinárodních a neziskových organizací,True,True,False,True,False
+2023-12-23T14-29-00_2023WN357061.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Členové teroristických skupin,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Média a novináři,True,True,True,True,False
+2023-12-23T14-29-00_2023WN357061.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-23T14-29-00_2023WN357061.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Političtí představitelé Izraele,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2023-12-31T12-11-00_2023WN365037.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Členové teroristických skupin,True,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Nezávislí experti a analytici,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Média a novináři,True,True,True,True,False
+2023-12-31T12-11-00_2023WN365037.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2023-12-31T12-11-00_2023WN365037.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Média a novináři,True,True,True,True,False
+2024-01-02T18-18-00_2024WN002160.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-02T18-18-00_2024WN002160.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024-01-04T05-35-00_2024WN004003.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Nezávislí experti a analytici,True,True,True,True,False
+2024-01-04T05-35-00_2024WN004003.txt,Média a novináři,True,True,True,True,False
+2024-01-04T05-35-00_2024WN004003.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-04T05-35-00_2024WN004003.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-01-11T16-57-00_2024WN011163.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Média a novináři,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-11T16-57-00_2024WN011163.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-01-12T11-45-00_2024WN012085.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-01-12T11-45-00_2024WN012085.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Média a novináři,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-12T11-45-00_2024WN012085.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Představitelé mezinárodních a neziskových organizací,True,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Nezávislí experti a analytici,False,True,True,True,False
+2024-01-12T16-04-00_2024WN012115.txt,Média a novináři,True,True,True,True,False
+2024-01-12T16-04-00_2024WN012115.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-12T16-04-00_2024WN012115.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Média a novináři,True,True,True,True,False
+2024-01-14T11-21-00_2024WN014028.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-14T11-21-00_2024WN014028.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Politici ze ostatních světových zemí,True,True,False,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Nezávislí experti a analytici,True,True,True,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Média a novináři,True,True,False,True,False
+2024-01-18T14-08-00_2024WN018124.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-18T14-08-00_2024WN018124.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Představitelé mezinárodních a neziskových organizací,False,True,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Členové teroristických skupin,True,True,True,True,False
+2024-01-19T14-38-00_2024WN019126.txt,Nezávislí experti a analytici,True,True,True,True,False
+2024-01-19T14-38-00_2024WN019126.txt,Média a novináři,True,True,True,True,False
+2024-01-19T14-38-00_2024WN019126.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-19T14-38-00_2024WN019126.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-01-28T20-24-00_2024WN028088.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Politici z blízkovýchodních zemí,True,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Politici ze ostatních světových zemí,True,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Média a novináři,True,True,True,True,False
+2024-01-28T20-24-00_2024WN028088.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-28T20-24-00_2024WN028088.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Političtí představitelé Izraele,True,True,False,True,False
+2024-01-29T14-22-00_2024WN029073.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2024-01-29T14-22-00_2024WN029073.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Média a novináři,True,True,True,True,False
+2024-01-29T14-22-00_2024WN029073.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-29T14-22-00_2024WN029073.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Političtí představitelé Izraele,True,False,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Představitelé mezinárodních a neziskových organizací,True,True,False,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Média a novináři,True,True,True,True,False
+2024-01-30T12-35-00_2024WN030052.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-30T12-35-00_2024WN030052.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-01-31T09-52-00_2024WN031056.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Členové teroristických skupin,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Média a novináři,True,True,True,True,False
+2024-01-31T09-52-00_2024WN031056.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-01-31T09-52-00_2024WN031056.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-02-07T08-50-00_2024WN038191.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Nezávislí experti a analytici,True,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Média a novináři,True,True,False,True,False
+2024-02-07T08-50-00_2024WN038191.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-07T08-50-00_2024WN038191.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-02-07T20-57-00_2024WN038200.txt,Političtí představitelé Palestiny,True,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Média a novináři,True,True,True,True,False
+2024-02-07T20-57-00_2024WN038200.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-07T20-57-00_2024WN038200.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Politici ze ostatních světových zemí,False,True,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Média a novináři,False,True,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-14T20-31-00_2024WN045169.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024-02-15T14-13-00_2024WN046130.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Média a novináři,True,True,True,True,False
+2024-02-15T14-13-00_2024WN046130.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-15T14-13-00_2024WN046130.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Vojenští představitelé Izraele,True,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Média a novináři,False,True,True,True,False
+2024-02-16T06-10-00_2024WN047006.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-16T06-10-00_2024WN047006.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Političtí představitelé Palestiny,True,False,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Politici ze ostatních světových zemí,True,False,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Členové teroristických skupin,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Média a novináři,True,True,True,True,False
+2024-02-17T21-11-00_2024WN048103.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024-02-17T21-11-00_2024WN048103.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN053024.txt,Političtí představitelé Izraele,False,True,False,False,True
+2024WN053024.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN053024.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN053024.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN053024.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2024WN053024.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN053024.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN053024.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN053024.txt,Média a novináři,True,False,True,True,False
+2024WN053024.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN053024.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN058034.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024WN058034.txt,Političtí představitelé Palestiny,True,True,False,True,False
+2024WN058034.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN058034.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024WN058034.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN058034.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN058034.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN058034.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN058034.txt,Média a novináři,True,True,True,True,False
+2024WN058034.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN058034.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN064149.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN064149.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN064149.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN064149.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN064149.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN064149.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN064149.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN064149.txt,Nezávislí experti a analytici,True,True,True,True,False
+2024WN064149.txt,Média a novináři,True,True,True,True,False
+2024WN064149.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN064149.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN079145.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN079145.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN079145.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN079145.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024WN079145.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2024WN079145.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN079145.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN079145.txt,Nezávislí experti a analytici,False,False,True,False,True
+2024WN079145.txt,Média a novináři,True,True,True,True,False
+2024WN079145.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN079145.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN096007.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024WN096007.txt,Političtí představitelé Palestiny,True,False,True,True,False
+2024WN096007.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN096007.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024WN096007.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2024WN096007.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN096007.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN096007.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN096007.txt,Média a novináři,True,True,True,True,False
+2024WN096007.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN096007.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN104121.txt,Političtí představitelé Izraele,True,False,True,True,False
+2024WN104121.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN104121.txt,Politici z blízkovýchodních zemí,True,False,True,True,False
+2024WN104121.txt,Politici ze ostatních světových zemí,True,True,False,True,False
+2024WN104121.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN104121.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024WN104121.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN104121.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN104121.txt,Média a novináři,True,True,True,True,False
+2024WN104121.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN104121.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN109163.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN109163.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN109163.txt,Politici z blízkovýchodních zemí,True,True,True,True,False
+2024WN109163.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN109163.txt,Představitelé mezinárodních a neziskových organizací,True,False,True,True,False
+2024WN109163.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN109163.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN109163.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN109163.txt,Média a novináři,True,True,True,True,False
+2024WN109163.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN109163.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN119043.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN119043.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN119043.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN119043.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN119043.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN119043.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN119043.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN119043.txt,Nezávislí experti a analytici,True,False,True,True,False
+2024WN119043.txt,Média a novináři,False,True,False,False,True
+2024WN119043.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2024WN119043.txt,Očití svědci a civilisté z Palestiny,True,True,False,True,False
+2024WN128128.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN128128.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN128128.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN128128.txt,Politici ze ostatních světových zemí,True,False,False,False,True
+2024WN128128.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN128128.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN128128.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN128128.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN128128.txt,Média a novináři,True,True,True,True,False
+2024WN128128.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN128128.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN140018.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN140018.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN140018.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN140018.txt,Politici ze ostatních světových zemí,False,False,True,False,True
+2024WN140018.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN140018.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN140018.txt,Členové teroristických skupin,False,True,True,True,False
+2024WN140018.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN140018.txt,Média a novináři,True,True,True,True,False
+2024WN140018.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN140018.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN149082.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024WN149082.txt,Političtí představitelé Palestiny,True,False,False,False,True
+2024WN149082.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN149082.txt,Politici ze ostatních světových zemí,True,False,True,True,False
+2024WN149082.txt,Představitelé mezinárodních a neziskových organizací,True,True,True,True,False
+2024WN149082.txt,Vojenští představitelé Izraele,True,True,False,True,False
+2024WN149082.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN149082.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN149082.txt,Média a novináři,True,True,True,True,False
+2024WN149082.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN149082.txt,Očití svědci a civilisté z Palestiny,True,True,True,True,False
+2024WN161064.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN161064.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN161064.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN161064.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN161064.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN161064.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN161064.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN161064.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN161064.txt,Média a novináři,True,True,True,True,False
+2024WN161064.txt,Očití svědci a civilisté z Izraele,True,True,True,True,False
+2024WN161064.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN172020.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN172020.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN172020.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN172020.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024WN172020.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN172020.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN172020.txt,Členové teroristických skupin,True,True,True,True,False
+2024WN172020.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN172020.txt,Média a novináři,True,True,True,True,False
+2024WN172020.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN172020.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN185176.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN185176.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN185176.txt,Politici z blízkovýchodních zemí,True,False,False,False,True
+2024WN185176.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN185176.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN185176.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024WN185176.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN185176.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN185176.txt,Média a novináři,True,False,True,True,False
+2024WN185176.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN185176.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN201004.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN201004.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN201004.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN201004.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN201004.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN201004.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024WN201004.txt,Členové teroristických skupin,True,True,True,True,False
+2024WN201004.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN201004.txt,Média a novináři,True,True,True,True,False
+2024WN201004.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN201004.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN213189.txt,Političtí představitelé Izraele,True,True,True,True,False
+2024WN213189.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN213189.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN213189.txt,Politici ze ostatních světových zemí,True,True,True,True,False
+2024WN213189.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN213189.txt,Vojenští představitelé Izraele,False,False,False,False,True
+2024WN213189.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN213189.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN213189.txt,Média a novináři,True,True,True,True,False
+2024WN213189.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN213189.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN223008.txt,Političtí představitelé Izraele,False,True,False,False,True
+2024WN223008.txt,Političtí představitelé Palestiny,True,True,True,True,False
+2024WN223008.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN223008.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN223008.txt,Představitelé mezinárodních a neziskových organizací,False,False,True,False,True
+2024WN223008.txt,Vojenští představitelé Izraele,False,True,True,True,False
+2024WN223008.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN223008.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN223008.txt,Média a novináři,True,True,True,True,False
+2024WN223008.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN223008.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
+2024WN240099.txt,Političtí představitelé Izraele,False,False,False,False,True
+2024WN240099.txt,Političtí představitelé Palestiny,False,False,False,False,True
+2024WN240099.txt,Politici z blízkovýchodních zemí,False,False,False,False,True
+2024WN240099.txt,Politici ze ostatních světových zemí,False,False,False,False,True
+2024WN240099.txt,Představitelé mezinárodních a neziskových organizací,False,False,False,False,True
+2024WN240099.txt,Vojenští představitelé Izraele,True,True,True,True,False
+2024WN240099.txt,Členové teroristických skupin,False,False,False,False,True
+2024WN240099.txt,Nezávislí experti a analytici,False,False,False,False,True
+2024WN240099.txt,Média a novináři,False,False,False,False,True
+2024WN240099.txt,Očití svědci a civilisté z Izraele,False,False,False,False,True
+2024WN240099.txt,Očití svědci a civilisté z Palestiny,False,False,False,False,True
