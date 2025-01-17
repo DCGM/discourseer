@@ -1,4 +1,6 @@
 {
+  "codebook_name": "testbook_range_trigger_place",
+  "codebook_version": "v0",
   "prompts": {
     "range-v1": {
       "name": "range",

@@ -9,6 +9,8 @@ multiple_choice_tag = "multiple_choice"
 
 
 class ExtractionPrompts(pydantic.BaseModel):
+    codebook_name: Optional[str] = None
+    codebook_version: Optional[str] = None
     prompts: Dict[str, ExtractionPrompt] = {}
 
     def __getitem__(self, item):
@@ -25,7 +27,8 @@ class ExtractionPrompts(pydantic.BaseModel):
     def select_subset(self, subset: List[str] = None) -> ExtractionPrompts:
         if not subset:
             return self
-        return ExtractionPrompts(prompts={key: value for key, value in self.prompts.items() if key in subset})
+        self.prompts = {key: value for key, value in self.prompts.items() if key in subset}
+        return self  # for optional chaining select calls
 
     def select_unique_names_and_question_ids(self) -> ExtractionPrompts:
         unique_names = set()
@@ -44,7 +47,9 @@ class ExtractionPrompts(pydantic.BaseModel):
 
         if duplicate_prompts:
             print(f"Skipping prompts {', '.join(duplicate_prompts)} as it has duplicate names or questions.")
-        return ExtractionPrompts(prompts=unique_prompts)
+
+        self.prompts = unique_prompts
+        return self  # for optional chaining select calls
 
     def prompt_names(self) -> str:
         return ", ".join([prompt.name for prompt in self.prompts.values()])
@@ -89,7 +94,18 @@ class ExtractionPrompts(pydantic.BaseModel):
                           for prompt in self.prompts.values()])
 
     def prompts_json(self) -> str:
-        return self.model_dump_json(indent=2)
+        keys_not_meant_for_chat = []  # choose what keys don't go to chat client
+
+        prompts_json = {}
+        for prompt_key, prompt in self.prompts.items():
+            prompt_dict = prompt.model_dump()
+            for key in keys_not_meant_for_chat:
+                prompt_dict.pop(key, None)
+            prompts_json[prompt_key] = prompt_dict
+
+        output_dict = {'prompts': prompts_json}
+        output_str = json.dumps(output_dict, indent=2, ensure_ascii=False)
+        return output_str
 
     def response_json_schema(self) -> str:
         response_format = {}

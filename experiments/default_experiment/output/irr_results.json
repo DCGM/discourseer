@@ -2,47 +2,47 @@
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.7747,
+      "with_model": 0.75014,
       "worst_case": 0.21868,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.77641,
+      "with_model": 0.75203,
       "worst_case": 0.2246,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.8538,
+      "with_model": 0.8387,
       "worst_case": 0.41361,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.848
+    "majority_agreement": 0.818
   },
   "mean_through_prompts": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.31644,
+      "with_model": 0.30345,
       "worst_case": -0.03963,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.37067,
+      "with_model": 0.35876,
       "worst_case": 0.02652,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.59832,
+      "with_model": 0.54994,
       "worst_case": 0.14416,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.656
+    "majority_agreement": 0.57275
   },
   "prompts": {
-    "rozsah": {
+    "range": {
       "fleiss_kappa": {
         "best_case": 1.0,
         "with_model": 0.46667,
@@ -63,28 +63,28 @@
       },
       "majority_agreement": 0.333
     },
-    "zanr": {
+    "genre": {
       "fleiss_kappa": {
         "best_case": -0.09091,
-        "with_model": -0.09091,
+        "with_model": -0.14286,
         "worst_case": -0.25714,
         "without_model": -0.125
       },
       "krippendorff_alpha": {
         "best_case": 0.0,
-        "with_model": 0.0,
+        "with_model": -0.04762,
         "worst_case": -0.15238,
         "without_model": -0.0
       },
       "gwet_ac1": {
         "best_case": 0.80328,
-        "with_model": 0.80328,
+        "with_model": 0.60976,
         "worst_case": 0.19266,
         "without_model": 0.72308
       },
-      "majority_agreement": 1.0
+      "majority_agreement": 0.667
     },
-    "spoustec-zpravy": {
+    "message-trigger": {
       "fleiss_kappa": {
         "best_case": 0.2,
         "with_model": 0.04,
@@ -105,7 +105,7 @@
       },
       "majority_agreement": 0.333
     },
-    "misto": {
+    "place": {
       "fleiss_kappa": {
         "best_case": 0.92852,
         "with_model": 0.85,

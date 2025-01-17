@@ -36,7 +36,7 @@
         "role": "assistant",
         "content": {
           "range": "3",
-          "genre": "report",
+          "genre": "extended_report",
           "message-trigger": "politician",
           "place": [
             "czech-republic"
