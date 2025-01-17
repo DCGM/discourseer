@@ -2,7 +2,7 @@
   "prompts": {
     "range-v1": {
       "name": "range",
-      "question_id": "rozsah",
+      "question_id": "range",
       "description": "Number of paragraphs in the text.",
       "multiple_choice": false,
       "options": [
@@ -50,7 +50,7 @@
     },
     "genre-v1": {
       "name": "genre",
-      "question_id": "zanr",
+      "question_id": "genre",
       "description": "The genre of the text.",
       "multiple_choice": false,
       "options": [
@@ -74,7 +74,7 @@
     },
     "message-trigger-v1": {
       "name": "message-trigger",
-      "question_id": "spoustec-zpravy",
+      "question_id": "message-trigger",
       "description": "The message trigger is the event or situation that causes the message to be sent.",
       "multiple_choice": false,
       "options": [
@@ -98,7 +98,7 @@
     },
     "place-v1": {
       "name": "place",
-      "question_id": "misto",
+      "question_id": "place",
       "description": "The country where the event or situation occurs.",
       "multiple_choice": true,
       "options": [
