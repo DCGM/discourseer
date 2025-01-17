@@ -158,13 +158,15 @@ class IRR:
     col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
-                 extraction_prompts: ExtractionPrompts = None, out_dir: str = 'IRR_output',
+                 out_dir: str = 'IRR_output',
                  calculate_irr_for_options: bool = False):
+                 # extraction_prompts: ExtractionPrompts = None,
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
-        self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
+
+        # self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
         self.out_dir = out_dir
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
@@ -180,11 +182,15 @@ class IRR:
 
         self.option_results = {}
 
-        if df is not None:
-            self.df = df
-        else:
+        if df is None:  # df not provided as an argument, prepare it from raters
             self.df = self.prepare_dataframe_from_raters()
-        self.results = self.get_inter_rater_reliability(self.df)
+        else:
+            self.df = df
+
+        if self.df is None:  # empty DataFrame after cleaning
+            self.results = IRR.EMPTY_IRR_RESULTS
+        else:
+            self.results = self.get_inter_rater_reliability(self.df)
 
     def __call__(self) -> IRRResults:
         return self.results
@@ -205,7 +211,7 @@ class IRR:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             logger.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
             df_before_cleaning.to_csv(self.out_dataframe)
-            return IRR.EMPTY_IRR_RESULTS
+            return None
 
         return df
 
