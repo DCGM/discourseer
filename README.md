@@ -138,17 +138,6 @@ Pro vytvoření vlastního experimentu je třeba vytvořit:
 ### Prompt engineering
 Typické využití Discourseeru může být testování různých formulací popisů otázek a možností za účelem získat co nejlepší odpovědi od chatového klienta (prompt engineering). V tomto případě většinou zůstávají **stejné texty a hodnocení kodérů** a mění se codebook (různé formulace otázek a možností). Je nutné se řídit následující tabulkou, aby Discourseer správně fungoval.
 
-<p align="center">
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-
-</style>
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"><span style="font-weight:bold">Struktura codebooku</span></th>
@@ -242,12 +231,13 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-0pky"></td>
   </tr>
 </tbody></table>
-</p>
 
 \* můžu měnit názvy v codebooku, bez změny odpovědí kodérů
 
 ## Výstupy spuštění
 <a name="vystupy-spusteni"></a>
+
+příklad viz [default_experiment](experiments/default_experiment/output)
 
 * `conversation_log.json` - záznam komunikace s modelem a její konfigurace
 * `dataframe.csv` - data použitá k počítání metrik úspěšnosti (odpovědi na otázky od lidských kodérů a chat klinta) v .csv ve formátu `file_id,question_id,rating,kodér1,[kodér2,...],model,majority,maj_agreement_with_model,worst_case`
