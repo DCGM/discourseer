@@ -1,6 +1,6 @@
 {
   "codebook_name": "codebook_gaza",
-  "codebook_version": "v0_kveten",
+  "codebook_version": "v2_srpen",
   "prompts": {
     "zpravodajské_hodnoty": {
       "name": "Zpravodajské hodnoty",
