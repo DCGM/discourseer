@@ -4,7 +4,7 @@ import re
 import os
 import logging
 from enum import Enum
-from typing import Dict
+from typing import Dict, List
 import time
 
 from discourseer.extraction_prompts import ExtractionPrompts
@@ -61,7 +61,8 @@ def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
     return output_dir_new
 
 
-def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
+def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None
+                 ) -> ExtractionPrompts:
     logging.debug(f'Loading prompts from file: {prompts_file}')
 
     if not os.path.exists(prompts_file):
@@ -70,8 +71,18 @@ def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
     with open(prompts_file, 'r', encoding='utf-8') as f:
         prompts = json.load(f)
     prompts = ExtractionPrompts.model_validate(prompts)
+    logging.debug(f"Loaded prompts from codebook: {prompts.codebook_name} (verze: {prompts.codebook_version})")
 
-    return prompts.select_unique_names_and_question_ids()
+    orig_prompt_keys = set(prompts.prompts.keys())
+
+    prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+
+    if len(prompts.prompts) == 0:
+        raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
+                          "Check the prompt_subset argument and use one or more of the following: "
+                          f"{', '.join(orig_prompt_keys)}")
+
+    return prompts
 
 
 class JSONParser:

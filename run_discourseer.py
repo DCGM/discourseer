@@ -10,6 +10,7 @@ from discourseer.extraction_prompts import ExtractionPrompts
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
 from discourseer.chat_client import ChatClient, Conversation, ChatMessage, ConversationLog
+from discourseer import utils
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
 from discourseer.visualize_IRR import visualize_results
 
@@ -141,7 +142,7 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, extraction_prompts=self.prompts, out_dir=self.output_dir)
+        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir, extraction_prompts=self.prompts)
         irr_results = irr_calculator()
 
         self.save_output(self.output_dir, irr_results)
@@ -209,7 +210,7 @@ class Discourseer:
         if not prompt_schema:
             prompt_schema = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_schema_definition')
 
-        logging.info(f'Loading prompt definition from file:{prompt_schema}')
+        logging.info(f'Loading prompt schema definition from file:{prompt_schema}')
         with open(prompt_schema, 'r', encoding='utf-8') as f:
             prompt_schema = json.load(f)
 
@@ -221,16 +222,9 @@ class Discourseer:
     def prepare_output_dir(experiment_dir: str, output_dir: str = None) -> str:
         if not output_dir:
             output_dir = os.path.join(experiment_dir, 'output')
+        output_dir = utils.prepare_output_dir(output_dir, create_new=True)
 
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            return output_dir
-
-        output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
-        os.makedirs(output_dir_new)
-        logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
-
-        return output_dir_new
+        return output_dir
 
     @staticmethod
     def get_input_files(experiment_dir: str, texts_dir: str = None, text_count: int = None) -> List[str]:
@@ -253,19 +247,8 @@ class Discourseer:
         if not prompts_file:
             prompts_file = Discourseer.find_file_in_experiment_dir(experiment_dir, 'prompt_definitions')
 
-        logging.info(f'Loading prompts from file: {prompts_file}')
-        with open(prompts_file, 'r', encoding='utf-8') as f:
-            prompts = json.load(f)
-        prompts = ExtractionPrompts.model_validate(prompts)
-
-        prompts_after_selection = prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
-
-        if len(prompts_after_selection.prompts) == 0:
-            raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
-                             "Check the prompt_subset argument and use one or more of the following: "
-                             f"{list(prompts.prompts.keys())}")
-
-        return prompts_after_selection
+        prompts = utils.load_prompts(prompts_file, prompt_subset)
+        return prompts
 
     @staticmethod
     def load_raters(experiment_dir: str, ratings_dirs: List[str] = None, prompts: ExtractionPrompts = None) -> List[Rater]:
