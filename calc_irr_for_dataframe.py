@@ -42,7 +42,10 @@ class Calculator:
         if not os.path.isdir(self.input_dir):
             raise ValueError(f'Input dir {self.input_dir} does not exist')
 
-        self.output_dir = utils.prepare_output_dir(output_dir, create_new=False)
+        self.output_dir, backup_dir = utils.prepare_output_dir(output_dir, create_new=False)
+        if self.output_dir == self.input_dir:
+            self.input_dir = backup_dir  # the input_dir changed to the backup_dir
+
         self.prompts = utils.load_prompts(prompt_definitions)
 
         print(f'Input directory: {self.input_dir}')

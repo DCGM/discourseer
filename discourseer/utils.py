@@ -4,7 +4,7 @@ import re
 import os
 import logging
 from enum import Enum
-from typing import Dict, List
+from typing import Dict, List, Tuple
 import time
 
 from discourseer.extraction_prompts import ExtractionPrompts
@@ -48,21 +48,21 @@ def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path
                 f.write(f'{question},{option},{irr}\n')
 
 
-def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
-    # create_new False is used in calc_irr_for_dataframe.py, because it copies the input_dir to output_dir
+def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> Tuple[str, str]:
+    # create_new False is used in calc_irr_for_dataframe.py, where the input_dir is copied to output_dir, so we don't want to create a new output_dir
     if not os.path.exists(output_dir):
         if create_new:
             os.makedirs(output_dir)
-        return output_dir
+        return output_dir, None
 
-    # create a backup of existing output_dir with a timestamp
     backup_dir = os.path.normpath(output_dir) + '_backup_' + time.strftime("%Y%m%d-%H%M%S")
     os.rename(output_dir, backup_dir)
-    logging.debug(f"Directory {output_dir} already existed. Saving backup to {backup_dir}. New output will be saved in {output_dir}")
 
     if create_new:
         os.makedirs(output_dir)
-    return output_dir
+    logging.debug(f"Directory {output_dir} already existed. Saving backup to {backup_dir}. New output will be saved in {output_dir}")
+
+    return output_dir, backup_dir
 
 
 def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None

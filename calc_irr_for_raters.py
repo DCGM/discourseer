@@ -51,7 +51,7 @@ class Calculator:
 
     def __init__(self, ratings_dirs: List[str], prompt_definitions, output_dir: str = 'output_IRR', metric: str = 'krippendorff_alpha',
                  thresholds: List[float] = [0.8, 0.6]):
-        self.output_dir = utils.prepare_output_dir(output_dir)
+        self.output_dir, _ = utils.prepare_output_dir(output_dir)
         self.prompts = utils.load_prompts(prompt_definitions)
         self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
         self.thresholds = thresholds

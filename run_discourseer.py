@@ -222,7 +222,7 @@ class Discourseer:
     def prepare_output_dir(experiment_dir: str, output_dir: str = None) -> str:
         if not output_dir:
             output_dir = os.path.join(experiment_dir, 'output')
-        output_dir = utils.prepare_output_dir(output_dir, create_new=True)
+        output_dir, _ = utils.prepare_output_dir(output_dir, create_new=True)
 
         return output_dir
 
