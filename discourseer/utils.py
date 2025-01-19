@@ -49,16 +49,20 @@ def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path
 
 
 def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
+    # create_new False is used in calc_irr_for_dataframe.py, because it copies the input_dir to output_dir
     if not os.path.exists(output_dir):
         if create_new:
             os.makedirs(output_dir)
         return output_dir
 
-    output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
+    # create a backup of existing output_dir with a timestamp
+    backup_dir = os.path.normpath(output_dir) + '_backup_' + time.strftime("%Y%m%d-%H%M%S")
+    os.rename(output_dir, backup_dir)
+    logging.debug(f"Directory {output_dir} already existed. Saving backup to {backup_dir}. New output will be saved in {output_dir}")
+
     if create_new:
-        os.makedirs(output_dir_new)
-    logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
-    return output_dir_new
+        os.makedirs(output_dir)
+    return output_dir
 
 
 def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None
