@@ -43,8 +43,8 @@ class Rater:
         self.name = name
         self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
 
-        self.name_to_question_id = {p.name: p.question_id for p in self.extraction_prompts.prompts.values()}
-        self.key_to_question_id = {key: prompt.question_id for key, prompt in self.extraction_prompts.prompts.items()}
+        self.question_name_to_question_id = {p.name: p.question_id for p in self.extraction_prompts.prompts.values()}
+        self.prompt_key_to_question_id = {key: prompt.question_id for key, prompt in self.extraction_prompts.prompts.items()}
         self.question_id_to_key = {prompt.question_id: key for key, prompt in self.extraction_prompts.prompts.items()}
         self.question_ids_to_options = {p.question_id: p.options for p in self.extraction_prompts.prompts.values()}
         self.prompt_name_to_prompt_key = {p.name: key for key, p in self.extraction_prompts.prompts.items()}
@@ -54,7 +54,7 @@ class Rater:
         for response_id, value in response.items():
             logger.debug(f"Adding rating: {response_id}, {value}")
             if not value:
-                logger.warning(f"None orempty value for response ID {response_id}. Skipping.")
+                logger.warning(f"None or empty value for response ID {response_id}. Skipping.")
                 continue
 
             prompt_key = self.map_response_id_to_prompt_key(response_id)
@@ -118,7 +118,7 @@ class Rater:
         series = pd.Series(ratings_dict,
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),
-                               names=['file', 'prompt_key', 'rating']))
+                               names=['file', 'question_id', 'rating']))
         return series
 
     def get_prompt_from_rating(self, rating: Rating) -> ExtractionPrompt | None:

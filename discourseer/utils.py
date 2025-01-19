@@ -4,7 +4,7 @@ import re
 import os
 import logging
 from enum import Enum
-from typing import Dict
+from typing import Dict, List, Tuple
 import time
 
 from discourseer.extraction_prompts import ExtractionPrompts
@@ -48,20 +48,25 @@ def individual_option_irr_to_csv(results: Dict[str, Dict[str, float]], file_path
                 f.write(f'{question},{option},{irr}\n')
 
 
-def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> str:
+def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> Tuple[str, str]:
+    # create_new False is used in calc_irr_for_dataframe.py, where the input_dir is copied to output_dir, so we don't want to create a new output_dir
     if not os.path.exists(output_dir):
         if create_new:
             os.makedirs(output_dir)
-        return output_dir
+        return output_dir, None
 
-    output_dir_new = os.path.normpath(output_dir) + time.strftime("_%Y%m%d-%H%M%S")
+    backup_dir = os.path.normpath(output_dir) + '_backup_' + time.strftime("%Y%m%d-%H%M%S")
+    os.rename(output_dir, backup_dir)
+
     if create_new:
-        os.makedirs(output_dir_new)
-    logging.debug(f"Directory {output_dir} already exists. Saving the result to {output_dir_new}")
-    return output_dir_new
+        os.makedirs(output_dir)
+    logging.debug(f"Directory {output_dir} already existed. Saving backup to {backup_dir}. New output will be saved in {output_dir}")
+
+    return output_dir, backup_dir
 
 
-def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
+def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None
+                 ) -> ExtractionPrompts:
     logging.debug(f'Loading prompts from file: {prompts_file}')
 
     if not os.path.exists(prompts_file):
@@ -70,8 +75,18 @@ def load_prompts(prompts_file: str = None) -> ExtractionPrompts:
     with open(prompts_file, 'r', encoding='utf-8') as f:
         prompts = json.load(f)
     prompts = ExtractionPrompts.model_validate(prompts)
+    logging.debug(f"Loaded prompts from codebook: {prompts.codebook_name} (verze: {prompts.codebook_version})")
 
-    return prompts.select_unique_names_and_question_ids()
+    orig_prompt_keys = set(prompts.prompts.keys())
+
+    prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+
+    if len(prompts.prompts) == 0:
+        raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
+                          "Check the prompt_subset argument and use one or more of the following: "
+                          f"{', '.join(orig_prompt_keys)}")
+
+    return prompts
 
 
 class JSONParser:

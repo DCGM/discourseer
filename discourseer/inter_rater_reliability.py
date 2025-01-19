@@ -153,18 +153,20 @@ class IRR:
     col_model = 'model'
     col_worst_case = 'worst_case'
     col_best_case = col_majority
-    index_cols = ['file', 'prompt_key', 'rating']
+    index_cols = ['file', 'question_id', 'rating']
     col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
     col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
-                 extraction_prompts: ExtractionPrompts = None, out_dir: str = 'IRR_output',
+                 out_dir: str = 'IRR_output',
                  calculate_irr_for_options: bool = False):
+                 # extraction_prompts: ExtractionPrompts = None,
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
-        self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
+
+        # self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
         self.out_dir = out_dir
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
@@ -180,11 +182,15 @@ class IRR:
 
         self.option_results = {}
 
-        if df is not None:
-            self.df = df
-        else:
+        if df is None:  # df not provided as an argument, prepare it from raters
             self.df = self.prepare_dataframe_from_raters()
-        self.results = self.get_inter_rater_reliability(self.df)
+        else:
+            self.df = df
+
+        if self.df is None:  # empty DataFrame after cleaning
+            self.results = IRR.EMPTY_IRR_RESULTS
+        else:
+            self.results = self.get_inter_rater_reliability(self.df)
 
     def __call__(self) -> IRRResults:
         return self.results
@@ -205,14 +211,14 @@ class IRR:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             logger.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
             df_before_cleaning.to_csv(self.out_dataframe)
-            return IRR.EMPTY_IRR_RESULTS
+            return None
 
         return df
 
     def get_inter_rater_reliability(self, df: pd.DataFrame) -> IRRResults:
         self.input_columns = df.columns.difference(self.col_non_input_columns).to_list()
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
-        prompt_keys = df.index.get_level_values('prompt_key').unique().to_list()
+        question_ids = df.index.get_level_values('question_id').unique().to_list()
 
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
@@ -224,17 +230,17 @@ class IRR:
         overall_results = self.get_irr_result(df)
 
         prompt_irr_results = {}
-        for prompt_key in prompt_keys:
-            logger.info(f"Calculating IRR for prompt {prompt_key}")
-            df_prompt = df.xs(prompt_key, level='prompt_key')
-            prompt_irr_results[prompt_key] = self.get_irr_result(df_prompt)
+        for question_id in question_ids:
+            logger.info(f"Calculating IRR for prompt {question_id}")
+            df_prompt = df.xs(question_id, level='question_id')
+            prompt_irr_results[question_id] = self.get_irr_result(df_prompt)
 
             # save df_prompt to csv
             if self.calculate_irr_for_options:
                 df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
-                                                     f"dataframe__{prompt_key.replace(' ', '_')}")
+                                                     f"dataframe__{question_id.replace(' ', '_')}")
                 df_prompt.to_csv(df_prompt_output_file + '.csv')
-                self.calculate_irr_for_each_option(df_prompt, prompt_key, df_prompt_output_file)
+                self.calculate_irr_for_each_option(df_prompt, question_id, df_prompt_output_file)
 
         if self.calculate_irr_for_options:
             utils.dict_to_json_file(
@@ -368,7 +374,7 @@ class IRR:
         df.reset_index(inplace=True)
         # set worst case as opposite of majority agreement
         df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = df[self.col_majority].apply(self.get_opposite_rating)
-        df.set_index(['file', 'prompt_key', 'rating'], inplace=True)
+        df.set_index(['file', 'question_id', 'rating'], inplace=True)
 
         df[self.col_worst_case] = df[self.col_worst_case].astype('string')
         return df
@@ -387,31 +393,31 @@ class IRR:
     def get_reorganized_raters(self) -> pd.DataFrame:
         return self.df.loc[:, self.input_columns]
 
-    def calculate_irr_for_each_option(self, df: pd.DataFrame, prompt_key: str, out_file: str):
+    def calculate_irr_for_each_option(self, df: pd.DataFrame, question_id: str, out_file: str):
         df.reset_index(inplace=True)
         unique_options = df['rating'].unique().tolist()
 
         if len(unique_options) < 2:
             return
 
-        # get index_cols without 'prompt_key'
+        # get index_cols without 'question_id'
         index_cols_without_prompt = self.index_cols.copy()
-        index_cols_without_prompt.remove('prompt_key')
+        index_cols_without_prompt.remove('question_id')
 
         df.set_index(index_cols_without_prompt, inplace=True)
-        self.option_results[prompt_key] = {}
+        self.option_results[question_id] = {}
 
         # calculate IRR for each option
         for option in unique_options:
             df_option = df.xs(option, level='rating')
             if df_option.shape[0] == 0:
-                logger.debug(f"No ratings for option {option} in prompt {prompt_key}. Skipping IRR calculation.")
+                logger.debug(f"No ratings for option {option} in prompt {question_id}. Skipping IRR calculation.")
                 continue
 
             out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
             df_option.to_csv(out_file_option)
             option_irr_kripp = self.get_irr_result(df_option).krippendorff_alpha.without_model
-            self.option_results[prompt_key][option] = option_irr_kripp
+            self.option_results[question_id][option] = option_irr_kripp
 
         return
 

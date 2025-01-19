@@ -1,4 +1,6 @@
 {
+  "codebook_name": "codebook_promeny_zpravodajstvi",
+  "codebook_version": "v0",
   "prompts": {
     "kriterium": {
       "name": "kritérium",

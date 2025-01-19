@@ -7,7 +7,6 @@
 <p align="center">
   Vojtěch Vlach, xvlach22@vutbr.cz</br>
   <a href="assets/presentation.pdf">Prezentace na závěr fáze příprav kódu.</a></br>
-  <a href="https://github.com/DCGM/discourseer">Discourseer na Githubu</a>
 </p>
 
 Obsahová analýza je jedna z technik mediálně vědného výzkumu. Je prováděna manuálně několika kodéry, 
@@ -26,6 +25,8 @@ Ve spolupráci s odborníky z oboru jsme vytvořili sadu obsahové analýzy, na 
 6. [Automatické testování](#automaticke-testovani)
 7. [Popis parametrů](#popis-parametru)
 8. [Formátovací řetězce](#formatovaci-retezce)
+9. [Vytváření vlastních experimentů](#vytvareni-vlastnich-experimentu)
+10. [Výstupy spuštění](#vystupy-spusteni)
 
 ## Současný stav
 <a name="soucasny-stav"></a>
@@ -33,16 +34,17 @@ Momentálně je software připraven na experimenty. Data pro experimenty se při
 
 ## Funkcionalita
 <a name="funkcionalita"></a>
-Nástroj Discourseer umožňuje využít velké jazykové modely pomocí openAI API pro analýzu textů a odpovídání na otázky s předdefinovanými možnostmi odpovědí.
+Nástroj Discourseer umožňuje využít velké jazykové modely pomocí openAI API pro analýzu textů a odpovídání na otázky s předdefinovanými možnostmi odpovědí. Umožňuje výběr jedné nebo více odpovědí pro každou otázku.
 
-Vstupy:
+**Vstupy** (detailnější popis, viz [Vytváření vlastních experimentů](#vytvareni-vlastnich-experimentu))
 
-- texty k analýze
-- definice otázek a možných odpovědí
-- definice promptů pro modely a vybrání modelu
-- předchozí odpovědi respondentů
+- články (texty) k analýze v .txt
+- definice promptů pro modely a vybrání modelu v .json
+- odpovědi lidských kodérů (ratings) v .csv
+- definice otázek a možných odpovědí (codebook) v .json
 
-Výstupy:
+
+**Výstupy**
 - odpovědi modelu na otázky (ve formátu CSV)
 - výsledky analýzy podobnosti odpovědí modelu a respondentů pomocí Inter-rater reliability (IRR) (ve formátu JSON)
 
@@ -122,3 +124,130 @@ Seznam implementovaných formátovacích řetězců:
 - `prompt_json`: JSON se všemi informacemi o otázkách
 - `response_json_schema`: JSON schéma, které odpovídá formátu odpovědí modelu
 - `response_json_schema_with_options`: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi
+
+
+## Vytváření vlastních experimentů
+<a name="vytvareni-vlastnich-experimentu"></a>
+
+Pro vytvoření vlastního experimentu je třeba vytvořit:
+* základní prompt s formátovacími řetězci, viz např. (prompt_schema_definition.json)[experiments/default_experiment/prompt_schema_definition.json]
+* textové dokumenty s texty článků s názvem odpovídajícím odpovědím kodérů: `file_id.txt`
+* Odpovědi kodérů po souborech pro jednotlivé kodéry (ratings) v csv formátu: `file_id,question_id,option_id,[option_id, ...]`, kde je možnost přidat neomezeně možností na jeden řádek.
+* codebook definující zkoumané otázky, jejich popis, zda je možnost vybrat více možností naráz, pro každou možnost sadu odpovědí a případně příklady možností, viz např: [Codebook ke konfilktu v Gaze v2 (srpen)](codebooks/codebook_gaza_v2_srpen.json)
+
+### Prompt engineering
+Typické využití Discourseeru může být testování různých formulací popisů otázek a možností za účelem získat co nejlepší odpovědi od chatového klienta (prompt engineering). V tomto případě většinou zůstávají **stejné texty a hodnocení kodérů** a mění se codebook (různé formulace otázek a možností). Je nutné se řídit následující tabulkou, aby Discourseer správně fungoval.
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-c3ow"><span style="font-weight:bold">Struktura codebooku</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Vidí chat</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Můžu měnit*</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Komentář</span></th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">codebook_name</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">codebook_version</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">prompts</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">_prompt_key</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky">slouží k výběru otázek při spuštění experimentu</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__question_id</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__name</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__description</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__multiple_choice</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__options</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">___option_id</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">___name</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">___description</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">___examples</td>
+    <td class="tg-c3ow">---</td>
+    <td class="tg-c3ow">---</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">____option_example</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+</tbody></table>
+
+\* můžu měnit názvy v codebooku, bez změny odpovědí kodérů
+
+## Výstupy spuštění
+<a name="vystupy-spusteni"></a>
+
+příklad viz [default_experiment](experiments/default_experiment/output)
+
+* `conversation_log.json` - záznam komunikace s modelem a její konfigurace
+* `dataframe.csv` - data použitá k počítání metrik úspěšnosti (odpovědi na otázky od lidských kodérů a chat klinta) v .csv ve formátu `file_id,question_id,rating,kodér1,[kodér2,...],model,majority,maj_agreement_with_model,worst_case`
+  * `rating` - buď option_id, nebo "single_choice" pro otázky s výběrem jedné odpovědi
+  * `kodérN` - jména kodérů a jejich odpovědi. Vybraná možnost pro otázky s výběrem jedno odpovědi, jinak True/False dané možnosti
+  * `model` - odpovědi modelu
+  * `majority` - většinová odpověď lidských kodérů
+  * `maj_agreement_with_model` - True/False zda model souhlasí s většinou lidských kodérů
+  * `worst_case` - pomocný sloupec pro výpočet odhadu potenciální nejhorší úspěšnosti modelu
+* `irr_results.json` - různé metriky úspěšnosti modelu identifikované pro jednotlivé otázky pomocí `question_id`
+* `irr_results.png` - vizualizace výsledků do grafu (zobrazená metrika viz nadpis)
+* `logfile.log` - debugovací informace o průběhu experimentu
+* `model_ratings.csv` - odpovědi modelu ve stejném formátu jako vstupní odpovědi lidských kodérů

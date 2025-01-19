@@ -42,7 +42,7 @@
     "majority_agreement": 0.656
   },
   "prompts": {
-    "rozsah": {
+    "range": {
       "fleiss_kappa": {
         "best_case": 1.0,
         "with_model": 0.46667,
@@ -63,7 +63,7 @@
       },
       "majority_agreement": 0.333
     },
-    "zanr": {
+    "genre": {
       "fleiss_kappa": {
         "best_case": -0.09091,
         "with_model": -0.09091,
@@ -84,7 +84,7 @@
       },
       "majority_agreement": 1.0
     },
-    "spoustec-zpravy": {
+    "message-trigger": {
       "fleiss_kappa": {
         "best_case": 0.2,
         "with_model": 0.04,
@@ -105,7 +105,7 @@
       },
       "majority_agreement": 0.333
     },
-    "misto": {
+    "place": {
       "fleiss_kappa": {
         "best_case": 0.92852,
         "with_model": 0.85,
