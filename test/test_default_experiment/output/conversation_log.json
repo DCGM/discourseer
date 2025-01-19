@@ -89,7 +89,8 @@
           "genre": "report",
           "message-trigger": "politician",
           "place": [
-            "ukraine"
+            "ukraine",
+            "russia"
           ]
         }
       }
