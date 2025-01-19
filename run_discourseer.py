@@ -142,7 +142,7 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir) #, extraction_prompts=self.prompts)
+        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir)
         irr_results = irr_calculator()
 
         self.save_output(self.output_dir, irr_results)

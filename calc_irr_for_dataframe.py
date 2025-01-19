@@ -61,6 +61,10 @@ class Calculator:
         if len(self.df) == 0:
             raise ValueError(f'Input dataframe is empty')
 
+        # Allow loading older versions of the dataframe with different column name
+        if 'prompt_key' in self.df.columns:
+            self.df.rename(columns={'prompt_key': IRR.index_cols[1]}, inplace=True)
+
         index_cols = self.check_present_in_df(self.df, IRR.index_cols)
         self.df.set_index(index_cols, inplace=True)
 
@@ -78,7 +82,7 @@ class Calculator:
         # self.df = self.df.astype('string')
 
     def __call__(self):
-        irr_calculator = IRR(df=self.df, extraction_prompts=self.prompts, out_dir=self.output_dir)
+        irr_calculator = IRR(df=self.df, out_dir=self.output_dir)
         irr_results = irr_calculator()
 
         print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
