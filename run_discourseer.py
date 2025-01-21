@@ -137,8 +137,9 @@ class Discourseer:
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
 
+        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
+
         if not self.raters:
-            self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
@@ -147,7 +148,6 @@ class Discourseer:
 
         self.save_output(self.output_dir, irr_results)
         self.copy_input_ratings_to_output(irr_calculator)
-        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
 
     def extract_answers(self, text: str, text_id: str):
         logging.debug('New document:\n\n')

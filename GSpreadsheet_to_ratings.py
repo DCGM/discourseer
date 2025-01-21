@@ -118,11 +118,11 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
                 if len(answer) == 0:
                     print(f'WARNING: single choice question "{question.name}" has no answer on row {row_id} ({row[0]}...)')
                 # print(f'answer: {answer}')
-                rating = Rating(file=file, question_id=question.name, rating_results=answer)
+                rating = Rating(file=file, prompt_id=question.name, rating_results=answer)
             else:
                 # print(f'row[{row_index}:]: {row[row_index:]}')
                 answers = get_multi_choice_answers(row[row_index:], question)
-                rating = Rating(file=file, question_id=question.name, rating_results=answers)
+                rating = Rating(file=file, prompt_id=question.name, rating_results=answers)
 
             # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1

@@ -17,6 +17,8 @@ class RatingsCopyMode(Enum):
     original = "original"
     reorganized = "reorganized"
 
+def result_dataframe_index_columns():
+    return ['file', 'prompt_id', 'rating']
 
 def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None):
     model_dump = model.model_dump(exclude=exclude)
@@ -74,17 +76,21 @@ def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None
 
     with open(prompts_file, 'r', encoding='utf-8') as f:
         prompts = json.load(f)
-    prompts = ExtractionPrompts.model_validate(prompts)
+
+    try:
+        prompts = ExtractionPrompts.model_validate(prompts)
+    except pydantic.ValidationError as e:
+        raise ValueError(f"Failed to validate prompts from file {prompts_file}. Error: {e}")
     logging.debug(f"Loaded prompts from codebook: {prompts.codebook_name} (verze: {prompts.codebook_version})")
 
-    orig_prompt_keys = set(prompts.prompts.keys())
+    orig_prompt_ids = set(prompts.prompts.keys())
 
-    prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+    prompts.select_subset(prompt_subset).select_unique_names()
 
     if len(prompts.prompts) == 0:
         raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
                           "Check the prompt_subset argument and use one or more of the following: "
-                          f"{', '.join(orig_prompt_keys)}")
+                          f"{', '.join(orig_prompt_ids)}")
 
     return prompts
 

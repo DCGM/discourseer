@@ -11,7 +11,7 @@ multiple_choice_tag = "multiple_choice"
 class ExtractionPrompts(pydantic.BaseModel):
     codebook_name: Optional[str] = None
     codebook_version: Optional[str] = None
-    prompts: Dict[str, ExtractionPrompt] = {}
+    prompts: Dict[str, ExtractionPrompt] = {}  # prompt_id: prompt
 
     def __getitem__(self, item):
         return self.prompts.get(item, None)
@@ -25,28 +25,27 @@ class ExtractionPrompts(pydantic.BaseModel):
         return self.prompts[prompt].multiple_choice
 
     def select_subset(self, subset: List[str] = None) -> ExtractionPrompts:
+        # select subset of prompts via prompt_id (keys)
         if not subset:
             return self
         self.prompts = {key: value for key, value in self.prompts.items() if key in subset}
         return self  # for optional chaining select calls
 
-    def select_unique_names_and_question_ids(self) -> ExtractionPrompts:
+    def select_unique_names(self) -> ExtractionPrompts:
         unique_names = set()
-        unique_question_ids = set()
         unique_prompts = {}
 
-        duplicate_prompts = []
+        duplicate_prompt_ids = []
 
-        for key, prompt in self.prompts.items():
-            if prompt.name not in unique_names and prompt.question_id not in unique_question_ids:
+        for prompt_id, prompt in self.prompts.items():
+            if prompt.name not in unique_names:
                 unique_names.add(prompt.name)
-                unique_question_ids.add(prompt.question_id)
-                unique_prompts[key] = prompt
+                unique_prompts[prompt_id] = prompt
             else:
-                duplicate_prompts.append(key)
+                duplicate_prompt_ids.append(prompt_id)
 
-        if duplicate_prompts:
-            print(f"Skipping prompts {', '.join(duplicate_prompts)} as it has duplicate names or questions.")
+        if duplicate_prompt_ids:
+            print(f"Skipping {len(duplicate_prompt_ids)} prompts {', '.join(duplicate_prompt_ids)} as it has duplicate names.")
 
         self.prompts = unique_prompts
         return self  # for optional chaining select calls
@@ -97,11 +96,11 @@ class ExtractionPrompts(pydantic.BaseModel):
         keys_not_meant_for_chat = []  # choose what keys don't go to chat client
 
         prompts_json = {}
-        for prompt_key, prompt in self.prompts.items():
+        for prompt_id, prompt in self.prompts.items():
             prompt_dict = prompt.model_dump()
             for key in keys_not_meant_for_chat:
                 prompt_dict.pop(key, None)
-            prompts_json[prompt_key] = prompt_dict
+            prompts_json[prompt_id] = prompt_dict
 
         output_dict = {'prompts': prompts_json}
         output_str = json.dumps(output_dict, indent=2, ensure_ascii=False)
@@ -109,19 +108,19 @@ class ExtractionPrompts(pydantic.BaseModel):
 
     def response_json_schema(self) -> str:
         response_format = {}
-        for prompt_key, prompt in self.prompts.items():
+        for prompt_id, prompt in self.prompts.items():
             if prompt.multiple_choice:
                 value = List[str]
             else:
                 value = str
-            response_format[prompt_key] = (value, ...)
+            response_format[prompt_id] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
         return json.dumps(response_format.model_json_schema(), indent=2, ensure_ascii=False)
 
     def response_json_schema_with_options(self) -> str:
         response_format = {}
         for _, prompt in self.prompts.items():
-            option_names = [option.name for option in prompt.options]
+            option_names = [option.name for option in prompt.options.values()]
 
             if prompt.multiple_choice:
                 value = List[Literal[tuple(option_names)]] if len(option_names) > 0 else List[str]
@@ -158,28 +157,28 @@ class ExtractionPrompts(pydantic.BaseModel):
 
 class ExtractionPrompt(pydantic.BaseModel):
     name: str
-    question_id: str
+    # question_id: str
     description: str
     multiple_choice: bool = False
-    options: List[ResultOption] = []
+    options: Dict[str, ResultOption] = {}  # option_id: option
 
     def has_option(self, option: str) -> bool:
-        return option in [option.name for option in self.options]
+        return option in [option.name for option in self.options.values()]
 
     def get_description(self) -> str:
-        return self.description + " " + " ".join(str(option) for option in self.options)
+        return self.description + " " + " ".join(str(option) for option in self.options.values())
 
     def list_option_names(self) -> str:
-        return ", ".join([option.name for option in self.options])
+        return ", ".join([option.name for option in self.options.values()])
 
     def list_options(self) -> str:
-        return ", ".join([option.name + " (" + option.description + ")" for option in self.options])
+        return ", ".join([option.name + " (" + option.description + ")" for option in self.options.values()])
 
     def list_options_with_examples(self) -> str:
-        return ", ".join([str(option) for option in self.options])
+        return ", ".join([str(option) for option in self.options.values()])
 
     def list_options_with_examples_bulletpoints(self) -> str:
-        return "\n - ".join([option.to_str_bulletpoint() for option in self.options])
+        return "\n - ".join([option.to_str_bulletpoint() for option in self.options.values()])
 
 
 class ResultOption(pydantic.BaseModel):

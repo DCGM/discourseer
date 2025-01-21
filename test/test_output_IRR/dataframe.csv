@@ -1,4 +1,4 @@
-file,question_id,rating,rater_1.csv,rater_1.csv_1,model,majority,maj_agreement_with_model,worst_case
+file,prompt_id,rating,rater_1.csv,rater_1.csv_1,model,majority,maj_agreement_with_model,worst_case
 Chci_spravedlnost_pro_dceru.txt,genre,single_choice,report,report,report,report,True,--WORST-CASE
 Chci_spravedlnost_pro_dceru.txt,message-trigger,single_choice,public,public,public,public,True,--WORST-CASE
 Chci_spravedlnost_pro_dceru.txt,range,single_choice,5,5,5,5,True,--WORST-CASE

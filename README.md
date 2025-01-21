@@ -132,7 +132,7 @@ Seznam implementovaných formátovacích řetězců:
 Pro vytvoření vlastního experimentu je třeba vytvořit:
 * základní prompt s formátovacími řetězci, viz např. (prompt_schema_definition.json)[experiments/default_experiment/prompt_schema_definition.json]
 * textové dokumenty s texty článků s názvem odpovídajícím odpovědím kodérů: `file_id.txt`
-* Odpovědi kodérů po souborech pro jednotlivé kodéry (ratings) v csv formátu: `file_id,question_id,option_id,[option_id, ...]`, kde je možnost přidat neomezeně možností na jeden řádek.
+* Odpovědi kodérů po souborech pro jednotlivé kodéry (ratings) v csv formátu: `file_id,prompt_id,option_id,[option_id,...]`, kde je možnost přidat neomezeně možností na jeden řádek.
 * codebook definující zkoumané otázky, jejich popis, zda je možnost vybrat více možností naráz, pro každou možnost sadu odpovědí a případně příklady možností, viz např: [Codebook ke konfilktu v Gaze v2 (srpen)](codebooks/codebook_gaza_v2_srpen.json)
 
 ### Prompt engineering
@@ -165,17 +165,17 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">_prompt_key</td>
+    <td class="tg-0pky">_prompt_id</td>
     <td class="tg-c3ow">NE</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-0pky">slouží k výběru otázek při spuštění experimentu</td>
+    <td class="tg-c3ow">NE</td>
+    <td class="tg-0pky">slouží k výběru promptů pomocí <code>--prompt-subset</code> při spuštění experimentu <br>musí zůstat stejné jako v odpovědích kodérů</td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td class="tg-0pky">__question_id</td>
     <td class="tg-c3ow">NE</td>
     <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
-  </tr>
+  </tr> -->
   <tr>
     <td class="tg-0pky">__name</td>
     <td class="tg-c3ow">ANO</td>
@@ -207,25 +207,25 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
   </tr>
   <tr>
-    <td class="tg-0pky">___name</td>
+    <td class="tg-0pky">____name</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">___description</td>
+    <td class="tg-0pky">____description</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">___examples</td>
+    <td class="tg-0pky">____examples</td>
     <td class="tg-c3ow">---</td>
     <td class="tg-c3ow">---</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">____option_example</td>
+    <td class="tg-0pky">_____option_example</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
