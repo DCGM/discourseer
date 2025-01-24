@@ -56,7 +56,7 @@ class Calculator:
 
         self.df_file = os.path.join(self.input_dir, IRR.DATAFRAME_NAME)
         if not os.path.isfile(self.df_file):
-            raise ValueError(f'Input file {self.df_file} does not exist')
+            raise FileNotFoundError(f'Input file {self.df_file} not found')
         self.df = pd.read_csv(self.df_file)
         if len(self.df) == 0:
             raise ValueError(f'Input dataframe is empty')
@@ -70,7 +70,7 @@ class Calculator:
         index_cols = self.check_present_in_df(self.df, IRR.index_cols)
         self.df.set_index(index_cols, inplace=True)
 
-        # self.df = self.df.replace({True: 'True', False: 'False', 'nan': np.nan})
+        # self.df = self.df.replace({True: 'True', False: 'False', 'nan': None, np.nan: None})
 
         for col in self.df.columns:
             if col in [IRR.col_maj_agree_with_model]:

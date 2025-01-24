@@ -184,8 +184,10 @@ class IRR:
 
         if df is None:  # df not provided as an argument, prepare it from raters
             self.df = self.prepare_dataframe_from_raters()
+            self.df = self.preprocess_dataframe(self.df)
         else:
-            self.df = df
+            self.df = self.preprocess_dataframe(df)
+            self.df[self.col_maj_agree_with_model] = self.df[self.col_maj_agree_with_model].astype('object').replace({'False': False, 'True': True}).astype('bool')
 
         if self.df is None:  # empty DataFrame after cleaning
             self.results = IRR.EMPTY_IRR_RESULTS
@@ -200,17 +202,18 @@ class IRR:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
             df = self.raters_to_dataframe(self.raters)
-        self.rater_columns = df.columns.difference(self.col_non_rater_columns).to_list()
-
-        df_before_cleaning = df.copy()
 
         df = self.reorganize_raters(df)
+        return df
+
+    def preprocess_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        df_before_cleaning = df.copy()
         df = self.clean_data(df)
 
         if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             logger.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
-            df_before_cleaning.to_csv(self.out_dataframe)
+            df_before_cleaning.to_csv(self.out_dataframe.replace('.csv', '_before_cleaning.csv'))
             return None
 
         return df
@@ -349,10 +352,11 @@ class IRR:
         return df_all
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
+        self.rater_columns = df.columns.difference(self.col_non_rater_columns).to_list()
         rows_before = df.shape[0]
         df = df.replace('nan', np.nan)
         # replace 'nan' strings with NaN for calculating IRR
-        # ('nan' would be treated as a separate category, np.nan is treated as missing value)
+        # ('nan' would be treated as a separate category, np.nan should be treated as missing value)
 
         # if model column is present, remove rows with NaN in model column
         if self.col_model in df.columns:
