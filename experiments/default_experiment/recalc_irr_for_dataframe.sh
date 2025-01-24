@@ -35,4 +35,4 @@ echo "Output folder: $OUTPUT_FOLDER"
 python $DISCOURSEER/calc_irr_for_dataframe.py \
     --input-dir $INPUT_FOLDER \
     --output-dir $EXPERIMENT_DIR/$OUTPUT_FOLDER \
-    --prompt-definitions $EXPERIMENT_DIR/prompt_definitions.json
+    --codebook $EXPERIMENT_DIR/codebook.json
