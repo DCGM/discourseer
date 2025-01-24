@@ -132,7 +132,7 @@ Seznam implementovaných formátovacích řetězců:
 Pro vytvoření vlastního experimentu je třeba vytvořit:
 * základní prompt s formátovacími řetězci, viz např. (prompt_schema_definition.json)[experiments/default_experiment/prompt_schema_definition.json]
 * textové dokumenty s texty článků s názvem odpovídajícím odpovědím kodérů: `file_id.txt`
-* Odpovědi kodérů po souborech pro jednotlivé kodéry (ratings) v csv formátu: `file_id,prompt_id,option_id,[option_id,...]`, kde je možnost přidat neomezeně možností na jeden řádek.
+* Odpovědi kodérů po souborech pro jednotlivé kodéry (ratings) v csv formátu: `file_id,question_id,option_id,[option_id,...]`, kde je možnost přidat neomezeně možností na jeden řádek.
 * codebook definující zkoumané otázky, jejich popis, zda je možnost vybrat více možností naráz, pro každou možnost sadu odpovědí a případně příklady možností, viz např: [Codebook ke konfilktu v Gaze v2 (srpen)](codebooks/codebook_gaza_v2_srpen.json)
 
 ### Prompt engineering
