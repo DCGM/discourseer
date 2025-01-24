@@ -2,19 +2,10 @@
 
 # get location of this script
 EXPERIMENT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-# if $DISCOURSEER variable is not set, default to current directory
+# if $DISCOURSEER variable is not set, raise an error
 if [ -z $DISCOURSEER ]; then
-    DISCOURSEER="./"
-fi
-
-# ---------------------------  PARSING ARGUMENT  ---------------------------
-# first arg: 'mini' (store true) or nothing (store false)
-TEXT_COUNT=''
-OUTPUT_DIR=''
-# check if the first argument is 'mini' or nothin
-if [ "$1" = "mini" ]; then
-    TEXT_COUNT='--text-count 3'
-    OUTPUT="--output-dir $EXPERIMENT_DIR/output_mini/"
+    echo "DISCOURSEER variable is not set. Please set DISCOURSEER variable to the location of the discourseer repository."
+    exit 1
 fi
 
 
@@ -24,3 +15,5 @@ python $DISCOURSEER/run_discourseer.py \
     --log DEBUG \
     $TEXT_COUNT \
     $OUTPUT
+
+exit $?  # exit with the exit code of the last command
