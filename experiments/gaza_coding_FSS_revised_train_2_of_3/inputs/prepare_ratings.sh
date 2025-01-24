@@ -22,5 +22,5 @@ python $DISCOURSEER/GSpreadsheet_to_ratings.py \
 python $DISCOURSEER/calc_irr_for_raters.py \
     --ratings-dir $RATINGS \
     --output-dir $EXPERIMENT_DIR/output_IRR/ \
-    --prompt-definitions $EXPERIMENT_DIR/prompt_definitions_codebook_gaza_srpen.json \
+    --codebook $EXPERIMENT_DIR/codebook_codebook_gaza_srpen.json \
     --thresholds 0.8 0.6

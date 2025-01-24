@@ -1,6 +1,6 @@
 {
   "overall": 0.73301,
-  "mean_through_prompts": 0.36476,
+  "mean_through_questions": 0.36476,
   "prompts": {
     "citace_a_parafraze": 0.0,
     "dopad": 0.19388,

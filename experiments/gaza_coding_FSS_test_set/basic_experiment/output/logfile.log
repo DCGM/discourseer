@@ -1,8 +1,8 @@
 DEBUG:root:run_discourseer.py:main: Python file location: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/run_discourseer.py
-DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment', texts_dir='/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/../inputs/texts/', ratings_dir=['/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/../inputs/ratings/'], output_dir=None, prompt_schema_definition=None, prompt_definitions=None, prompt_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
-INFO:root:run_discourseer.py:load_prompts: Loading prompts from file: /home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/prompt_definitions.json
+DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment', texts_dir='/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/../inputs/texts/', ratings_dir=['/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/../inputs/ratings/'], output_dir=None, prompt_schema_definition=None, codebook=None, question_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
+INFO:root:run_discourseer.py:load_prompts: Loading prompts from file: /home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/codebook.json
 INFO:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt definition from file:/home/xvlach22/projects/discourseer/experiments/gaza_coding_FSS_test_set/basic_experiment/prompt_schema_definition.json
-INFO:root:run_discourseer.py:__init__: First prompt: You are a media content analyst. You are analyzing the following text to extract {prompt_names}. {pr...
+INFO:root:run_discourseer.py:__init__: First prompt: You are a media content analyst. You are analyzing the following text to extract {question_names}. {pr...
 DEBUG:root:run_discourseer.py:extract_answers: New document:
 
 
@@ -1848,7 +1848,7 @@ INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summar
     },
     "majority_agreement": 0.724
   },
-  "mean_through_prompts": {
+  "mean_through_questions": {
     "fleiss_kappa": {
       "best_case": 0.71949,
       "with_model": 0.48838,
