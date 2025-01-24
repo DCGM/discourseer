@@ -10,6 +10,7 @@
 
 **/tmp/*
 experiments/**/output_*/*
+!experiments/**/output_recalc/*
 !experiments/**/output_IRR/*
 
 test/test_out*.png

@@ -22,7 +22,7 @@ else
 fi
 
 if [ -z $2 ]; then
-    OUTPUT_FOLDER="output"  # default to output folder
+    OUTPUT_FOLDER="output_recalc"  # default to output folder
 else
     OUTPUT_FOLDER=$2
 fi
