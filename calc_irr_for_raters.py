@@ -129,7 +129,7 @@ class Calculator:
         plt.xlim(0, 1)
         plt.ylim(0, 1)
         plt.tight_layout()
-        plt.savefig(os.path.join(out_dirname, 'results_scatter.png'))
+        plt.savefig(os.path.join(self.output_dir, 'results_scatter.png'))
         plt.clf()
 
     def analyze_acceptable_questions(self, results: IRR, metric: str = 'krippendorff_alpha', threshold: float = 0.8):

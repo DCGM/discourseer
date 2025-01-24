@@ -159,7 +159,8 @@ class IRR:
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
-                 calculate_irr_for_options: bool = False):
+                 calculate_irr_for_options: bool = False,
+                 export_dataframes_for_options: bool = False):
                  # extraction_prompts: ExtractionPrompts = None,
         self.raters = raters
         self.model_rater = model_rater
@@ -168,6 +169,7 @@ class IRR:
 
         # self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
+        self.export_dataframes_for_options = export_dataframes_for_options
         self.out_dir = out_dir
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
         os.makedirs(self.out_dir, exist_ok=True)
@@ -239,16 +241,17 @@ class IRR:
             if self.calculate_irr_for_options:
                 df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
                                                      f"dataframe__{prompt_id.replace(' ', '_')}")
-                df_prompt.to_csv(df_prompt_output_file + '.csv')
+                if self.export_dataframes_for_options:
+                    df_prompt.to_csv(df_prompt_output_file + '.csv')
                 self.calculate_irr_for_each_option(df_prompt, prompt_id, df_prompt_output_file)
 
         if self.calculate_irr_for_options:
             utils.dict_to_json_file(
                 self.option_results,
-                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.json"))
+                os.path.join(self.out_dir, f"irr_kripp_alpha_for_individual_options.json"))
             utils.individual_option_irr_to_csv(
                 self.option_results,
-                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.csv"))
+                os.path.join(self.out_dir, f"irr_kripp_alpha_for_individual_options.csv"))
 
         irr_results = IRRResults(
             overall=overall_results,
@@ -415,7 +418,8 @@ class IRR:
                 continue
 
             out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
-            df_option.to_csv(out_file_option)
+            if self.export_dataframes_for_options:
+                df_option.to_csv(out_file_option)
             option_irr_kripp = self.get_irr_result(df_option).krippendorff_alpha.without_model
             self.option_results[prompt_id][option] = option_irr_kripp
 
