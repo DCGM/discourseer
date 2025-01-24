@@ -9,7 +9,7 @@ RATINGS=$EXPERIMENT_DIR/ratings
 python $discourseer/calc_irr_for_raters.py \
     --ratings-dir $RATINGS \
     --output-dir $EXPERIMENT_DIR/output_IRR/ \
-    --prompt-definitions $EXPERIMENT_DIR/prompt_definitions.json
+    --codebook $EXPERIMENT_DIR/codebook.json
 
 
 exit $?  # exit with the exit code of the last command

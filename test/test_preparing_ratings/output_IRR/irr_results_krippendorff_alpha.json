@@ -1,7 +1,7 @@
 {
   "overall": 0.63038,
-  "mean_through_prompts": 0.59775,
-  "prompts": {
+  "mean_through_questions": 0.59775,
+  "questions": {
     "Zpravodajské hodnoty (multiple)": 0.55606,
     "Témata článku": 0.56055,
     "Hlavní téma článku": 0.61702,

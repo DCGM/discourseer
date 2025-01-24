@@ -1,7 +1,7 @@
 {
   "overall": 0.83748,
-  "mean_through_prompts": 0.50463,
-  "prompts": {
+  "mean_through_questions": 0.50463,
+  "questions": {
     "range": 1.0,
     "genre": -0.0,
     "message-trigger": 0.11111,
