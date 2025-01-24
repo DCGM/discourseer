@@ -107,7 +107,7 @@ class Rater:
             question = self.codebook[rating.question_id]
             if question is not None and question.multiple_choice:
                 for option in question.options:
-                    ratings_dict[(rating.file, rating.question_id, option.name)] = option.name in rating.rated_option_ids
+                    ratings_dict[(rating.file, rating.question_id, option.id)] = option.id in rating.rated_option_ids
             else:
                 ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rated_option_ids[0]
 
@@ -118,6 +118,10 @@ class Rater:
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),
                                names=utils.result_dataframe_index_columns()))
+        series.name = self.name
+
+        print(f"series: {series}")
+
         return series
 
     @classmethod
