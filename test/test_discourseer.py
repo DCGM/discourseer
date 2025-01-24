@@ -3,12 +3,12 @@ import os
 import shutil
 
 from run_discourseer import Discourseer
-from discourseer.extraction_prompts import ExtractionPrompts
+from discourseer.codebook import Codebook
 from discourseer import utils
 
 
-class TestTopicExtractor(unittest.TestCase):
-    dir = os.path.join(os.path.dirname(__file__), 'test_topic_extractor')
+class TestDiscourseer(unittest.TestCase):
+    dir = os.path.join(os.path.dirname(__file__), 'test_discourseer')
 
     def test_default_run(self):
         output_dir = os.path.join(self.dir, 'outputs')
@@ -19,7 +19,7 @@ class TestTopicExtractor(unittest.TestCase):
             texts_dir=os.path.join(self.dir, 'texts-vlach'),
             ratings_dirs=[os.path.join(self.dir, 'texts-vlach-ratings-MofN')],
             output_dir=output_dir,
-            prompt_definitions=os.path.join(self.dir, 'prompt_definitions.json'),
+            codebook=os.path.join(self.dir, 'codebook.json'),
             prompt_schema_definition=os.path.join(self.dir, 'prompt_schema_definition.json'),
         )()
 
@@ -44,12 +44,12 @@ class TestTopicExtractor(unittest.TestCase):
             assert 'null' not in f.read().lower()
 
     def test_format_strings(self):
-        prompt_definitions = os.path.join(self.dir, 'prompt_definitions.json')
+        codebook = os.path.join(self.dir, 'codebook.json')
 
-        # load ExtractionPrompts from prompt_definitions
-        prompts = utils.load_prompts(prompt_definitions)
-        assert isinstance(prompts, ExtractionPrompts)
+        # load Codebook from codebook
+        codebook = utils.load_codebook(codebook)
+        assert isinstance(codebook, Codebook)
 
-        format_strings = prompts.get_format_strings()
+        format_strings = codebook.get_format_strings()
         assert isinstance(format_strings, dict)
         assert len(format_strings) > 0
