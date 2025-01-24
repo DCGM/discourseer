@@ -1,138 +1,168 @@
 {
   "codebook_name": "testbook_range_trigger_place",
   "codebook_version": "v0",
-  "prompts": {
-    "range": {
+  "questions": [
+    {
+      "id": "range",
       "name": "range",
       "description": "Number of paragraphs in the text.",
       "multiple_choice": false,
-      "options": {
-        "1": {
+      "options": [
+        {
+          "id": "1",
           "name": "1",
           "description": "1 paragraph."
         },
-        "2": {
+        {
+          "id": "2",
           "name": "2",
           "description": "2 paragraphs."
         },
-        "3": {
+        {
+          "id": "3",
           "name": "3",
           "description": "3 paragraphs."
         },
-        "4": {
+        {
+          "id": "4",
           "name": "4",
           "description": "4 paragraphs."
         },
-        "5": {
+        {
+          "id": "5",
           "name": "5",
           "description": "5 paragraphs."
         },
-        "6": {
+        {
+          "id": "6",
           "name": "6",
           "description": "6 paragraphs."
         },
-        "7": {
+        {
+          "id": "7",
           "name": "7",
           "description": "7 paragraphs."
         },
-        "8": {
+        {
+          "id": "8",
           "name": "8",
           "description": "8 paragraphs."
         },
-        "9": {
+        {
+          "id": "9",
           "name": "9",
           "description": "9 paragraphs."
         },
-        "10": {
+        {
+          "id": "10",
           "name": "10",
           "description": "10 paragraphs."
         }
-      }
+      ]
     },
-    "genre": {
+    {
+      "id": "genre",
       "name": "genre",
       "description": "The genre of the text.",
       "multiple_choice": false,
-      "options": {
-        "report": {
+      "options": [
+        {
+          "id": "report",
           "name": "report",
           "description": "Report is information about a current event answering questions: who, what, where."
         },
-        "extended_report": {
+        {
+          "id": "extended_report",
           "name": "extended_report",
           "description": "Report is information about a current event answering questions: who, what, where, when, how and why."
         },
-        "interview": {
+        {
+          "id": "interview",
           "name": "interview",
           "description": "Interview is a conversation between two or more people."
         },
-        "other": {
+        {
+          "id": "other",
           "name": "other",
           "description": "Other genre."
         }
-      }
+      ]
     },
-    "message-trigger": {
+    {
+      "id": "message-trigger",
       "name": "message-trigger",
       "description": "The message trigger is the event or situation that causes the message to be sent.",
       "multiple_choice": false,
-      "options": {
-        "politician": {
+      "options": [
+        {
+          "id": "politician",
           "name": "politician",
           "description": "The message reacts on actions of a politician"
         },
-        "security-forces": {
+        {
+          "id": "security-forces",
           "name": "security-forces",
           "description": "The message reacts on action of security forces."
         },
-        "public": {
+        {
+          "id": "public",
           "name": "public",
           "description": "The message reacts on action of public."
         },
-        "other": {
+        {
+          "id": "other",
           "name": "other",
           "description": "Other message trigger."
         }
-      }
+      ]
     },
-    "place": {
+    {
+      "id": "place",
       "name": "place",
       "description": "The country where the event or situation occurs.",
       "multiple_choice": true,
-      "options": {
-        "czech-republic": {
+      "options": [
+        {
+          "id": "czech-republic",
           "name": "czech-republic",
           "description": "The event or situation occurs in the Czech Republic."
         },
-        "slovakia": {
+        {
+          "id": "slovakia",
           "name": "slovakia",
           "description": "The event or situation occurs in Slovakia."
         },
-        "poland": {
+        {
+          "id": "poland",
           "name": "poland",
           "description": "The event or situation occurs in Poland."
         },
-        "germany": {
+        {
+          "id": "germany",
           "name": "germany",
           "description": "The event or situation occurs in Germany."
         },
-        "russia": {
+        {
+          "id": "russia",
           "name": "russia",
           "description": "The event or situation occurs in Russia."
         },
-        "ukraine": {
+        {
+          "id": "ukraine",
           "name": "ukraine",
           "description": "The event or situation occurs in Ukraine."
         },
-        "other": {
+        {
+          "id": "other",
           "name": "other",
           "description": "The event or situation occurs in other country."
         },
-        "unknown": {
+        {
+          "id": "unknown",
           "name": "unknown",
           "description": "The event or situation occurs in unknown country."
         }
-      }
+      ]
     }
-  }
+  ]
 }

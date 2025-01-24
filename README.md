@@ -87,8 +87,8 @@ python -m unittest test.test_IRR.test_IRR.TestIRRWithoutModel.test_irr_equal
 -  `--experiment-dir` (složka) - Výchozí složka pro vstupy a výstupy experimentu. Jednotlivé cesty jdou definovat pomocí dalších argumentů.
 - `--texts-dir` (složka s .txt soubory) - Adresář s texty, které chcete analyzovat.
 - `--ratings-dir` (složka jedna nebo víc s .csv soubory) - Adresáře s hodnoceními textů od respondentů.
-- `--prompt-definitions` (soubor .json) - Soubor s definicemi otázek, které chcete z textů extrahovat. (viz `experiments/default_experiment/prompt_definitions.json`)
-- `--prompt-subset` - Názvy otázek, které se mají vybrat ze souboru `--prompt-definitions`. Ostatní nejsou brány v potaz. Pokud tento argument není zadán, berou se všechny otázky.
+- `--codebook` (soubor .json) - Soubor s definicemi otázek, které chcete z textů extrahovat. viz např. [Codebook ke konfilktu v Gaze v2 (srpen)](codebooks/codebook_gaza_v2_srpen.json)
+- `--question-subset` - Názvy otázek, které se mají vybrat ze souboru `--codebook`. Ostatní nejsou brány v potaz. Pokud tento argument není zadán, berou se všechny otázky.
 - `--prompt-schema-definition` (soubor .json) - Soubor s textem hlavního promptu + formátovacími řetězci pro témata. (viz `experiments/default_experiment/prompt_schema_definitions.json`)
 - `--output-dir` (složka) - Složka, kam se uloží výsledky analýzy.
 - `--text-count` (číslo) - Možnost omezit počet dokumentů, nad kterýmu se provede analýza
@@ -104,24 +104,24 @@ python -m unittest test.test_IRR.test_IRR.TestIRRWithoutModel.test_irr_equal
 Pomocí formátovacích řetězců lze přesně definovat formulaci otázek pro modely a to nezávisle na konkrétní otázce.
 Používají se při definici promptů v souboru `prompt_schema_definitions.json` 
 (např. `experiments/default_experiment/prompt_schema_definitions.json`) a jsou definovány 
-v souboru `discourseer/extraction_prompts.py`, kde jdou jednoduše přidat další podle předlohy `custom_format_string`.
+v souboru `discourseer/codebook.py`, kde jdou jednoduše přidat další podle předlohy `custom_format_string`.
 
 Viz [format_string_examples](format_string_examples.md) pro příklady.
 
 Seznam implementovaných formátovacích řetězců:
 - `text`: vložení textu článku
-- `prompt_names`: jména otázek oddělené čárkou
-- `prompt_descriptions`: popisy otázek oddělené mezerou (popis by měla být celá věta)
-- `prompt_names_and_descriptions_colon`: jména a popisy otázek oddělené dvojtečkou (např. "Země": "Země původu textu.") 
-- `prompt_names_and_descriptions_parentheses`: jména a popisy otázek oddělené závorkami (např. "Země" ("Země původu textu."))
-- `single_choice_prompts`: jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou
-- `multiple_choice_prompts`: jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou
-- `prompt_options`: několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce
-- `prompt_options_with_examples`: seznam možností jako `prompt_options` s přidanými příklady na každém řádku
-`prompt_options_with_examples_bulletpoints`": seznam možností jako `prompt_options_with_examples`, strukturované pomocí odrážek
-- `whole_prompt_info`: několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce 
-`whole_prompt_info_bulletpoints`: několikařádkový seznam informací jako `whole_prompt_info`, strukturované pomocí odrážek
-- `prompt_json`: JSON se všemi informacemi o otázkách
+- `question_names`: jména otázek oddělené čárkou
+- `question_descriptions`: popisy otázek oddělené mezerou (popis by měla být celá věta)
+- `question_names_and_descriptions_colon`: jména a popisy otázek oddělené dvojtečkou (např. "Země": "Země původu textu.") 
+- `question_names_and_descriptions_parentheses`: jména a popisy otázek oddělené závorkami (např. "Země" ("Země původu textu."))
+- `single_choice_questions`: jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou
+- `multiple_choice_questions`: jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou
+- `question_options`: několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce
+- `question_options_with_examples`: seznam možností jako `question_options` s přidanými příklady na každém řádku
+`question_options_with_examples_bulletpoints`": seznam možností jako `question_options_with_examples`, strukturované pomocí odrážek
+- `whole_question_info`: několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce 
+`whole_question_info_bulletpoints`: několikařádkový seznam informací jako `whole_question_info`, strukturované pomocí odrážek
+- `questions_json`: JSON se všemi informacemi o otázkách
 - `response_json_schema`: JSON schéma, které odpovídá formátu odpovědí modelu
 - `response_json_schema_with_options`: JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi
 
@@ -159,16 +159,16 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">prompts</td>
+    <td class="tg-0pky">questions</td>
     <td class="tg-c3ow">--</td>
     <td class="tg-c3ow">--</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">_prompt_id</td>
+    <td class="tg-0pky">_id</td>
     <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
-    <td class="tg-0pky">slouží k výběru promptů pomocí <code>--prompt-subset</code> při spuštění experimentu <br>musí zůstat stejné jako v odpovědích kodérů</td>
+    <td class="tg-0pky">slouží k výběru otázek pomocí <code>--question-subset</code> při spuštění experimentu <br>musí zůstat stejné jako v odpovědích kodérů</td>
   </tr>
   <!-- <tr>
     <td class="tg-0pky">__question_id</td>
@@ -176,6 +176,36 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
   </tr> -->
+  <tr>
+    <td class="tg-0pky">_name</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">_description</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">_multiple_choice</td>
+    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">_options</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-c3ow">--</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">__id</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
+  </tr>
   <tr>
     <td class="tg-0pky">__name</td>
     <td class="tg-c3ow">ANO</td>
@@ -189,43 +219,13 @@ Typické využití Discourseeru může být testování různých formulací pop
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">__multiple_choice</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">__options</td>
-    <td class="tg-c3ow">--</td>
-    <td class="tg-c3ow">--</td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">___option_id</td>
-    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
-    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
-    <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">____name</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">____description</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-c3ow">ANO</td>
-    <td class="tg-0pky"></td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">____examples</td>
+    <td class="tg-0pky">__examples</td>
     <td class="tg-c3ow">---</td>
     <td class="tg-c3ow">---</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">_____option_example</td>
+    <td class="tg-0pky">___option_example</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
