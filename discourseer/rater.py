@@ -119,9 +119,6 @@ class Rater:
                                ratings_dict.keys(),
                                names=utils.result_dataframe_index_columns()))
         series.name = self.name
-
-        print(f"series: {series}")
-
         return series
 
     @classmethod
