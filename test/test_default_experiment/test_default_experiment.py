@@ -59,16 +59,6 @@ class TestDefaultExperiment(unittest.TestCase):
             file_path = os.path.join(work_dir, "output_IRR", file)
             self.assertTrue(os.path.isfile(file_path),
                             f"File {file} not found in output_IRR directory")
-
-        # output_IRR_folders = [
-        #     "prompt_and_option_results",
-        #     "prompt_and_option_results_exported",
-        # ]
-
-        # for folder in output_IRR_folders:
-        #     folder_path = os.path.join(work_dir, "output_IRR", folder)
-        #     self.assertTrue(os.path.isdir(folder_path),
-        #                     f"Folder {folder} not found in output_IRR directory")
             
         # remove the backup output directories output_backup_* and output_IRR_backup_* if they exist
         subprocess.run(f"cd {work_dir} && rm -rf output_backup_*", shell=True)
