@@ -1,0 +1,224 @@
+{
+  "prompts": {
+    "zpravodajské-hodnoty": {
+      "name": "Zpravodajské hodnoty",
+      "question_id": "Zpravodajské hodnoty (multiple)",
+      "description": "Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní).",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Negativita negativity",
+          "description": "Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost)."
+        },
+        {
+          "name": "Blízkost proximity",
+          "description": "Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). "
+        },
+        {
+          "name": "Elitní osoby prominence",
+          "description": "Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů."
+        },
+        {
+          "name": "Personalizace personalization",
+          "description": "Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP)."
+        },
+        {
+          "name": "Dopad impact",
+          "description": "Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry)."
+        }
+      ]
+    },
+    "message_multiple":{
+      "name": "Messages",
+      "question_id": "Témata článku",
+      "description": "Témata prosím kódujte, pokud se bezprostředně vztahují k událostem vyvolaným útokem Hamásu ze 7. 10. 2023. Pokud se téma ve zprávě vztahuje primárně k historii (holokaust, založení Izraele, intifády, jom-kipurská válka), uvádějte pouze téma historie/kontextualizace.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Vnitřní politické dění",
+          "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu nebo jejich reakcích na zahraniční diplomatické úsilí. Patří sem i zprávy o výměnách rukojmí. I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky."
+        },
+        {
+          "name": "Mezinárodní politické reakce",
+          "description": "Zpráva informuje o mezinárodních reakcích na konflikt ze strany vrcholných politiků, mezinárodních organizací jako UN, o diplomatických iniciativách, jednáních, snahách o zprostředkování příměří.  Jde o vnější a institucionalizovanou reakci - pro reakce veřejnosti je definováno téma separátně."
+        },
+        {
+          "name": "Vojenské operace Izraele",
+          "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování."
+        },
+        {
+          "name": "Teroristické operace",
+          "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů)."
+        },
+        {
+          "name": "Dílčí konflikty a střety",
+          "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích. húsiové, antisemitismus ve světě, střety na demonstracích."
+        },
+        {
+          "name": "Dopad na izraelské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem."
+        },
+        {
+          "name": "Dopad na palestinské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na palestinské civilisty, soustředí se na oběti, vysídlení, dění v uprchlických táborech."
+        },
+        {
+          "name": "Humanitární pomoc",
+          "description": "Zpráva popisuje snahy o poskytování nebo blokování humanitární pomoci, věnuje se možnostem podpory civilistům zasažených konfliktem, které vznikly z iniciativ vlád, nevládních organizací a mezinárodních organizací."
+        },
+        {
+          "name": "Globální reakce veřejnosti",
+          "description": "Zpráva informuje o demonstracích a jiných vyjádřeních podpory (otevřené dopisy, blokování produktů, online iniciativy) Izraele nebo Palestiny ve světě."
+        },
+        {
+          "name": "Ekonomické důsledky",
+          "description": "Zpráva informuje o globálních ekonomických důsledcích konfliktu (vliv na ceny ropy, zpožďování a zdražování přepravy zboží kvůli situaci v Suezském průplavu, komplikace pro turismus atd.)."
+        },
+        {
+          "name": "Historie/kontextualizace",
+          "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti)."
+        }
+      ]
+    },
+    "message_single": {
+      "name": "Message",
+      "question_id": "Hlavní téma článku",
+      "description": "Z témat zaznačených v předchozím kroku vyberte to stěžejní. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, respektive v první polovině článku.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "name": "Vnitřní politické dění",
+          "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu nebo jejich reakcích na zahraniční diplomatické úsilí. Patří sem i zprávy o výměnách rukojmí. I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky."
+        },
+        {
+          "name": "Mezinárodní politické reakce",
+          "description": "Zpráva informuje o mezinárodních reakcích na konflikt ze strany vrcholných politiků, mezinárodních organizací jako UN, o diplomatických iniciativách, jednáních, snahách o zprostředkování příměří.  Jde o vnější a institucionalizovanou reakci - pro reakce veřejnosti je definováno téma separátně."
+        },
+        {
+          "name": "Vojenské operace Izraele",
+          "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování."
+        },
+        {
+          "name": "Teroristické operace",
+          "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů)."
+        },
+        {
+          "name": "Dílčí konflikty a střety",
+          "description": "Zpráva informuje o dílčích konfliktech a nevraživostech, o izolovaných případech násilí, jako jsou útoky osadníků nebo střelba na kontrolních stanovištích. húsiové, antisemitismus ve světě, střety na demonstracích."
+        },
+        {
+          "name": "Dopad na izraelské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem."
+        },
+        {
+          "name": "Dopad na palestinské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na palestinské civilisty, soustředí se na oběti, vysídlení, dění v uprchlických táborech."
+        },
+        {
+          "name": "Humanitární pomoc",
+          "description": "Zpráva popisuje snahy o poskytování nebo blokování humanitární pomoci, věnuje se možnostem podpory civilistům zasažených konfliktem, které vznikly z iniciativ vlád, nevládních organizací a mezinárodních organizací."
+        },
+        {
+          "name": "Globální reakce veřejnosti",
+          "description": "Zpráva informuje o demonstracích a jiných vyjádřeních podpory (otevřené dopisy, blokování produktů, online iniciativy) Izraele nebo Palestiny ve světě."
+        },
+        {
+          "name": "Ekonomické důsledky",
+          "description": "Zpráva informuje o globálních ekonomických důsledcích konfliktu (vliv na ceny ropy, zpožďování a zdražování přepravy zboží kvůli situaci v Suezském průplavu, komplikace pro turismus atd.)."
+        },
+        {
+          "name": "Historie/kontextualizace",
+          "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti)."
+        }
+      ]
+    },
+    "medialni-ramec": {
+      "name": "Mediální rámce (multiple)",
+      "question_id": "Mediální rámce (multiple)",
+      "description": "Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Rámec konfliktu",
+          "description": "Zpráva situaci zobrazuje jako napjatou, konfliktní, nespravedlivou, polarizovanou. Dané rozpory jsou implicitně nebo explicitně zobrazeny jako těžko řešitelné, resp. řešitelné především silou. Zpráva implicitně nebo explicitně rozvrhuje aktéry do ingroup a outgroup, kde zisk jedné ze stran znamená ztrátu pro druhou a naopak."
+        },
+        {
+          "name": "Rámec budování míru",
+          "description": "Zpráva zvýrazňuje snahy o řešení konfliktu prostřednictvím diplomacie, jednání a iniciativ budování míru. Tento rámec zdůrazňuje konstruktivní kroky směrem k míru a povzbuzuje optimismus ohledně možných řešení. Palestince a Izraelce nestaví proti sobě jako inherentně nepřátelské strany, ale apeluje na lidskost obou."
+        },
+        {
+          "name": "Humanitární rámec",
+          "description": "Zpráva se soustředí na důsledky konfliktu pro běžný občanský život, zdůrazňuje civilní oběti, vysídlování a utrpení lidí na obou stranách. Tento rámec pomáhá vyvolat empatii a zdůrazňuje naléhavou potřebu humanitární pomoci."
+        },
+        {
+          "name": "Historicko-kulturní rámec",
+          "description": "Zpráva zobrazuje situaci jako součást komplikovaného dlouhotvrajícího konfliktu, zdůrazňuje potřebnost znalosti historického kontextu, geopolitických faktorů či perspektiv zúčastněných aktérů pro pochopení současného stavu. Tento rámec pomáhá divákům rozvinout hlubší porozumění základních příčin a dynamiky konfliktu."
+        },
+        {
+          "name": "Geopolitický rámec",
+          "description": "Zpráva zdůrazňuje geopolitický rozměr konfliktu, jehož důležitost přesahuje bezprostředně zasažené aktéry (blízký Východ). Zohledňuje mezinárodní reakce na konflikt, a to jak politické (diplomatická prohlášení, protesty a výzev k akci ze strany globálního společenství), tak občanské (demonstrace na podporu Izraele nebo Palestiny, diskuze na akademické půdě)."
+        },
+        {
+          "name": "Lokální rámec",
+          "description": "Zpráva zobrazuje události jako zasahující bezprostředně zúčastněné (blízký Východ, tj některou nebo některé ze zemí Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko, Spojené arabské emiráty), obsahuje výpovědi, komentáře, deklarace svědectví místních lidí, politiků, organizací."
+        }
+      ]
+    },
+    "mluvci": {
+      "name": "Mluvčí",
+      "question_id": "Mluvčí",
+      "description": "Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba \"ministerstvo vydalo prohlášení\", \"think tank poukázal na riziko\"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci (\"bývalý diplomat v Izraeli\", \"šéf policistů\", \"akademik\") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "name": "Političtí představitelé Izraele",
+          "description": "Vládní i opoziční izraelští politici, diplomaté Izraele ve světě."
+        },
+        {
+          "name": "Političtí představitelé Palestiny",
+          "description": "Političtí představitelé Palestinské samosprávy, ale i Hamasu, pokud jsou citováni v souvislosti s politickými rozhodnutími nebo vyjednáváními. Dále velvyslanci či diplomatičtí představitelé Palestiny."
+        },
+        {
+          "name": "Politici z blízkovýchodních zemí",
+          "description": "Politici z jiných arabských nebo blízkovýchodních zemí (Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko a Spojené arabské emiráty)."
+        },
+        {
+          "name": "Politici ze ostatních světových zemí",
+          "description": "Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina..."
+        },
+        {
+          "name": "Představitelé mezinárodních a neziskových organizací",
+          "description": "Například UN, UNRWA, Lékaři bez hranic, atp."
+        },
+        {
+          "name": "Vojenští představitelé Izraele",
+          "description": "Vojenští velitelé, vojáci nebo mluvčí z Izraelských obranných sil (IDF), zástupci izraelských bezpečnostních agentur, nebo zpravodajských služeb (Mosad)."
+        },
+        {
+          "name": "Členové teroristických skupin",
+          "description": "Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie."
+        },
+        {
+          "name": "Nezávislí experti a analytici",
+          "description": "Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země."
+        },
+        {
+          "name": "Média a novináři",
+          "description": "V textu jsou citovány informace převzaté z jiných médií (např. \"\"podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu média, informace poskytnuté anonymně atd.)"
+        },
+        {
+          "name": "Očití svědci a civilisté z Izraele",
+          "description": "Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi."
+        },
+        {
+          "name": "Očití svědci a civilisté z Palestiny",
+          "description": "Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci"
+        },
+        {
+          "name": "Jiní",
+          "description": ""
+        }
+      ]
+    }
+  }
+}
