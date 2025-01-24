@@ -3,6 +3,8 @@ import os
 import shutil
 
 from run_discourseer import Discourseer
+from discourseer.extraction_prompts import ExtractionPrompts
+from discourseer import utils
 
 
 class TestTopicExtractor(unittest.TestCase):
@@ -40,3 +42,14 @@ class TestTopicExtractor(unittest.TestCase):
             assert len(f.readlines()) >= 17
             # assert no null values
             assert 'null' not in f.read().lower()
+
+    def test_format_strings(self):
+        prompt_definitions = os.path.join(self.dir, 'prompt_definitions.json')
+
+        # load ExtractionPrompts from prompt_definitions
+        prompts = utils.load_prompts(prompt_definitions)
+        assert isinstance(prompts, ExtractionPrompts)
+
+        format_strings = prompts.get_format_strings()
+        assert isinstance(format_strings, dict)
+        assert len(format_strings) > 0

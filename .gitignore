@@ -14,6 +14,7 @@ experiments/**/output_*/*
 
 test/test_out*.png
 test/test_topic_extractor/outputs/*
+test/test_default_experiment/output/logfile.log
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

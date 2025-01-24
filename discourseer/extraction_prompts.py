@@ -157,13 +157,18 @@ class ExtractionPrompts(pydantic.BaseModel):
 
 class ExtractionPrompt(pydantic.BaseModel):
     name: str
-    # question_id: str
     description: str
     multiple_choice: bool = False
     options: Dict[str, ResultOption] = {}  # option_id: option
 
-    def has_option(self, option: str) -> bool:
-        return option in [option.name for option in self.options.values()]
+    def has_option_id(self, option_id: str) -> bool:
+        return option_id in self.options
+
+    def has_option_name(self, option_name: str) -> bool:
+        for option in self.options.values():
+            if option.name == option_name:
+                return True
+        return False        
 
     def get_description(self) -> str:
         return self.description + " " + " ".join(str(option) for option in self.options.values())
