@@ -285,7 +285,7 @@ class Discourseer:
         if files:
             if len(files) > 1:
                 raise FileExistsError(f"Multiple files with name {file_name} found in {experiment_dir}. "
-                                      f"Specify the file in args or specify all paths individually. ")
+                                      f"Specify the file with corresponding argument. (see run_discourseer.py --help)")
             return os.path.join(experiment_dir, files[0])
 
         return None
