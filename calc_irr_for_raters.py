@@ -23,8 +23,8 @@ def parse_args():
                         help='The directory containing the csv files with answer ratings.')
     parser.add_argument('--output-dir', type=str, default='output_IRR',
                         help='Directory to save the results to.')
-    parser.add_argument('--prompt-definitions', default=None,
-                        help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
+    parser.add_argument('--codebook', default=None,
+                        help='JSON file containing the codebook (codebok name+version, questions, options...).')
     parser.add_argument('--thresholds', type=float, nargs='*', default=[0.8, 0.6],
                         help='The thresholds for IRR of a question to be considered acceptable.')
     parser.add_argument('--metric', default='krippendorff_alpha', choices=['krippendorff_alpha', 'gwet_ac1', 'fleiss_kappa'],
@@ -40,7 +40,7 @@ def main():
     calculator = Calculator(
         ratings_dirs=args.ratings_dir,
         output_dir=args.output_dir,
-        prompt_definitions=args.prompt_definitions,
+        codebook=args.codebook,
         thresholds=args.thresholds,
         metric=args.metric
     )
@@ -49,17 +49,19 @@ def main():
 
 class Calculator:
 
-    def __init__(self, ratings_dirs: List[str], prompt_definitions, output_dir: str = 'output_IRR', metric: str = 'krippendorff_alpha',
+    def __init__(self, ratings_dirs: List[str], codebook, output_dir: str = 'output_IRR', metric: str = 'krippendorff_alpha',
                  thresholds: List[float] = [0.8, 0.6]):
         self.output_dir, _ = utils.prepare_output_dir(output_dir)
-        self.prompts = utils.load_prompts(prompt_definitions)
-        self.raters = Rater.from_dirs(ratings_dirs, self.prompts)
+        self.codebook = utils.load_codebook(codebook)
+        self.raters = Rater.from_dirs(ratings_dirs, self.codebook)
         self.thresholds = thresholds
         self.metric = metric
 
         if not self.raters:
             logging.error("No rater files found. Inter-rater reliability will not be calculated.")
             exit(0)
+        
+        self.irr_calculator = None
 
     def __call__(self):
         self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
@@ -77,16 +79,16 @@ class Calculator:
             self.analyze_acceptable_questions(irr_results, metric=self.metric, threshold=threshold)
             print('')
 
-        self.export_prompt_option_results()
+        self.export_question_option_results()
 
     def get_output_file(self, file_name: str):
         return os.path.join(self.output_dir, file_name)
 
-    def export_prompt_option_results(self):
-        input_dir = self.irr_calculator.out_prompts_and_options_dir
+    def export_question_option_results(self):
+        input_dir = self.irr_calculator.out_questions_and_options_dir
 
         if not os.path.isdir(input_dir):
-            raise ValueError(f'Input {input_dir} for export_prompt_option_results does not exist or is not a folder.')
+            raise ValueError(f'Input {input_dir} for export_question_option_results does not exist or is not a folder.')
 
         out_dirname = input_dir + '_exported'
         os.makedirs(out_dirname, exist_ok=True)
@@ -134,15 +136,15 @@ class Calculator:
 
     def analyze_acceptable_questions(self, results: IRR, metric: str = 'krippendorff_alpha', threshold: float = 0.8):
         all_questions = results.to_dict_of_results_of_metric_and_variant(metric, 'without_model')
-        acceptable_questions = {k: v for k, v in all_questions.items() if v >= threshold}
+        acceptable_questions = {question_id: v for question_id, v in all_questions.items() if v >= threshold}
 
-        acceptable_questions_names = [q for q in acceptable_questions.keys() 
-                                      if q not in ['overall', 'mean_through_prompts']]
-        acceptable_questions_names = ' '.join(acceptable_questions_names)
+        acceptable_questions_ids = [question_id for question_id in acceptable_questions.keys()
+                                      if question_id not in ['overall', 'mean_through_questions']]
+        acceptable_questions_ids = ' '.join(acceptable_questions_ids)
 
         print(f"For threshold {threshold} there are ({len(acceptable_questions)} out of {len(all_questions)}) acceptable questions:")
         if acceptable_questions:
-            print(f"{acceptable_questions_names}")
+            print(f"{acceptable_questions_ids}")
             print(f"{json.dumps(acceptable_questions, indent=2, ensure_ascii=False)}")
         else:
             print(f"No acceptable questions found")
@@ -150,7 +152,7 @@ class Calculator:
         utils.dict_to_json_file(acceptable_questions, self.get_output_file(f'acceptable_questions_{metric}_{threshold}.json'))
 
         with open(self.get_output_file(f'acceptable_questions_{metric}_{threshold}.txt'), 'w') as f:
-            f.write(acceptable_questions_names + '\n')
+            f.write(acceptable_questions_ids + '\n')
 
 
 
