@@ -1,4 +1,4 @@
-file,prompt_key,rating,coding FSS - coding sheet JB.csv,coding FSS - coding sheet RF.csv,coding FSS - coding sheet VN.csv,majority,worst_case
+file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding sheet RF.csv,coding FSS - coding sheet VN.csv,majority,worst_case
 2023-10-10T18-48-00_2023WN283307.txt,Hlavní téma článku,single_choice,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,Mezinárodní politické reakce,--WORST-CASE
 2023-10-10T18-48-00_2023WN283307.txt,Mediální rámce (multiple),Geopolitický rámec,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283307.txt,Mediální rámce (multiple),Historicko-kulturní rámec,False,False,False,False,False

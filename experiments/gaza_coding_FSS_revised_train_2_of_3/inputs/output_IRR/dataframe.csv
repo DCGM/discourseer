@@ -1,4 +1,4 @@
-file,prompt_key,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
+file,question_id,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,True

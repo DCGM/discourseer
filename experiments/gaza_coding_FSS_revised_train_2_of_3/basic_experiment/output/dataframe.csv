@@ -1,4 +1,4 @@
-file,prompt_key,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,model,majority,maj_agreement_with_model,worst_case
+file,question_id,rating,Robin revize trénovacích.csv,Veronica revize trénovacích.csv,model,majority,maj_agreement_with_model,worst_case
 2023-10-19T10-57-00_2023WN292057.txt,Hlavní téma článku,single_choice,Globální reakce veřejnosti,Globální reakce veřejnosti,Vojenské operace Izraele,Globální reakce veřejnosti,False,--WORST-CASE
 2023-10-19T10-57-00_2023WN292057.txt,Mediální rámce (multiple),Geopolitický rámec,True,True,False,True,False,False
 2023-10-19T10-57-00_2023WN292057.txt,Mediální rámce (multiple),Historicko-kulturní rámec,False,False,False,False,True,True

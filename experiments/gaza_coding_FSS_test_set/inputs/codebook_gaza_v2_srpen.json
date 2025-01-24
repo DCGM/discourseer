@@ -1,0 +1,360 @@
+{
+  "codebook_name": "codebook_gaza",
+  "codebook_version": "v2_srpen",
+  "questions": [
+    {
+      "id": "Zpravodajské hodnoty (multiple)",
+      "name": "Zpravodajské hodnoty",
+      "description": "Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Negativita negativity",
+          "name": "Negativita negativity",
+          "description": "Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a \"náš nepřítel\". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.",
+          "examples": [
+            "Izraelská armáda zneškodnila desítky palestinských bojovníků na moři",
+            "Svědectví z Gazy: Prázdné ulice, shromažďování zásob a čekání na nálety",
+            "Na ženy a děti nebudeme brát ohledy, burcují Palestinci"
+          ]
+        },
+        {
+          "id": "Blízkost proximity",
+          "name": "Blízkost proximity",
+          "description": "Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). I dění ve státech bezprostředně sousedící s Českem (Rakousko, Německo, Polsko, Slovensko) kódujeme jako blízké, ve vzdálenějších ne.",
+          "examples": [
+            "V Izraeli je 200 Čechů, hlásí cestovky",
+            "Temné měsíce po Mnichovu. Vyhánění Čechoslováků i útěky židovského obyvatelstva",
+            "Lipavský navštívil Izrael"
+          ]
+        },
+        {
+          "id": "Elitní osoby prominence",
+          "name": "Elitní osoby prominence",
+          "description": "Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů. Úředníky, policisty, členy městských zastupitelstev atp. nebereme jako elitní osoby; prezidenty, premiéry, ministry, velvyslance bereme jako elitní osoby. Musí jít o živé osoby, ne třeba státní útvary (Izrael řekl, že...)",
+          "examples": [
+            "Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty",
+            "Hvězda seriálu Fauda Lior Raz bojuje proti Hamásu",
+            "Musk si po boku Netanjahua prohlédl kibuc, kde vraždili teroristé z Hamásu"
+          ]
+        },
+        {
+          "id": "Personalizace personalization",
+          "name": "Personalizace personalization",
+          "description": "Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP).",
+          "examples": [
+            "Mámu vám zabil Hamás, dozvěděli se sourozenci po propuštění",
+            "Na festivalu měli Izraelci střelbu za hudební kulisu, v panice pak utíkali všemi směry",
+            "Lidé zapalují svíčky u izraelského velvyslanectví v Praze"
+          ]
+        },
+        {
+          "id": "Dopad impact",
+          "name": "Dopad impact",
+          "description": "Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry). Může se vztahovat k jedincům (třeba surové zavraždění babičky a nahrání videa toto zaznamenávajícího na její fb profil), i ke skupinám. Nemusí jít nutně o mezinárodní politický a ekonomický dopad, ale i lidské tragédie (znovu izraelská babička).",
+          "examples": [
+            "Brazílie svolá kvůli útoku na Izrael mimořádné zasedání Rady bezpečnosti OSN",
+            "Izrael je ve válce",
+            "Vůdce Hamásu potvrdil, že „od řeky k moři“ opravdu znamená zničení Izraele. Pochválil západní studenty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Témata článku",
+      "name": "Témata článku",
+      "description": "Témata prosím kódujte, pokud se bezprostředně vztahují k událostem vyvolaným útokem Hamásu ze 7. 10. 2023. Pokud se téma ve zprávě vztahuje primárně k historii (holokaust, založení Izraele, intifády, jom-kipurská válka), uvádějte pouze téma historie/kontextualizace. Pokud je téma vyjádřeno i jednou větou, kódujte je jako přítomné (vojenské operace izraele a teroristické akce Hamásu, dopad na izraelské/palestinské civilisty). Pro hierarchizaci témat, resp. volbu toho dominantního, je až následující kategorie (hlavní téma článku).",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Vnitřní politické dění",
+          "name": "Vnitřní politické dění",
+          "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu. (Izrael a Hamas spolu nekomunikují přímo, tj. i dohody o ceasefire a výměně rukojmích jsou někým jiným zprostředkovány - USA, Katarem etc., toto pak metinárodní politická reakce.) I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky. Průzkumy veřejného mínění n. demonstrace přímo v Izraeli (proti Netanjahuovi, za osvobození rukojmích, proti trestání izraelských vojáků etc.) sem patří taky. vyjádření občanů. Střety osadníků a Palestinců, jejich neshody na checkpointech sem patří taky.",
+          "examples": [
+            "Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty",
+            "„Jsme příliš humánní, Gazu je třeba vypálit.“ Poslanec za Likud si nebral servítky",
+            "Hamás navrhuje Izraeli třífázové příměří, které by vedlo k ukončení války"
+          ]
+        },
+        {
+          "id": "Mezinárodní politické reakce",
+          "name": "Mezinárodní politické reakce",
+          "description": "Zpráva informuje o mezinárodních reakcích na konflikt ze strany vrcholných politiků, mezinárodních organizací jako UN, o diplomatických iniciativách, jednáních, snahách o zprostředkování příměří.  Jde o vnější a institucionalizovanou reakci - pro reakce veřejnosti je definováno téma separátně.",
+          "examples": [
+            "Biden: Existuje reálná šance na prodloužení příměří",
+            "V Bruselu se scházejí ministři zahraničí NATO. Řešit budou Ukrajinu i Blízký východ",
+            "Blinken znovu navštíví Izrael"
+          ]
+        },
+        {
+          "id": "Vojenské operace Izraele",
+          "name": "Vojenské operace Izraele",
+          "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování. Zahrnujeme sem i vojenskou přítomnost spojenců Izraele (USA, státy EU, Kanada, Austrálie).",
+          "examples": [
+            "Izraelská armáda zasahuje v nemocnici Aš-Šifá. Uvedla, že narazila na výzbroj Hamásu",
+            "Izraelci v Gaze obsadili ministerstva, parlament i centrálu policie",
+            "Izraelská armáda zasahuje v uprchlickém táboře u Hebronu na Západním břehu"
+          ]
+        },
+        {
+          "id": "Teroristické operace",
+          "name": "Teroristické operace",
+          "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů), případně  vojenskou podporu států na straně Palestiny (Irán).",
+          "examples": [
+            "Nový pozemní útok. Palestinští radikálové pronikli do oblasti Eškolu",
+            "Hamás nutil unesené dítě sledovat záznamy masakrů",
+            "Hamás zaútočil na humanitární koridor z Gazy"
+          ]
+        },
+        {
+          "id": "Dopad na izraelské civilisty",
+          "name": "Dopad na izraelské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem",
+          "examples": [
+            "Seniorka po propuštění Hamásem bojuje v nemocnici o život",
+            "Jedna z propuštěných Izraelek potřebovala naléhavou péči, na říjnovém festivalu ji postřelili",
+            "Devítiletou dívku považoval otec týdny za mrtvou, po 50 dnech v zajetí mu padla do náručí"
+          ]
+        },
+        {
+          "id": "Dopad na palestinské civilisty",
+          "name": "Dopad na palestinské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na palestinské civilisty, soustředí se na oběti, vysídlení, dění v uprchlických táborech.",
+          "examples": [
+            "Rakety zasáhly školu, kterou v Gaze provozuje OSN. Mrtvých má být podle Palestinců nejméně 50",
+            "Lidé pěšky opouštějí nemocnici Šifá, Izrael jim na to dal hodinu",
+            "Al-Arabíja: Hamás vymění stovku rukojmích za palestinské ženy a děti z izraelských věznic"
+          ]
+        },
+        {
+          "id": "Humanitární pomoc",
+          "name": "Humanitární pomoc",
+          "description": "Zpráva popisuje snahy o poskytování nebo blokování humanitární pomoci, věnuje se možnostem podpory civilistům zasažených konfliktem, které vznikly z iniciativ vlád, nevládních organizací a mezinárodních organizací.",
+          "examples": [
+            "Rafáh se znovu otevřel. Do Pásma Gazy proudí další pomoc",
+            "Stop penězům Palestině, navrhuje Lipavský",
+            "Izrael opět pustil do Gazy pitnou vodu"
+          ]
+        },
+        {
+          "id": "Globální reakce veřejnosti",
+          "name": "Globální reakce veřejnosti",
+          "description": "Zpráva informuje o demonstracích a jiných vyjádřeních podpory (otevřené dopisy, blokování produktů, online iniciativy) Izraele nebo Palestiny ve světě.",
+          "examples": [
+            "Desítky akademiků podepsaly výzvu proti rozšíření antisemitismu na českých VŠ",
+            "„Zastavte to.“ Drzost a síla islamistických protestů šokovaly Německo",
+            "Stovky lidí pochodují Prahou na podporu Palestinců"
+          ]
+        },
+        {
+          "id": "Ekonomické důsledky",
+          "name": "Ekonomické důsledky",
+          "description": "Zpráva informuje o globálních ekonomických důsledcích konfliktu (vliv na ceny ropy, zpožďování a zdražování přepravy zboží kvůli situaci v Suezském průplavu, komplikace pro turismus atd.)",
+          "examples": [
+            "Benzin znovu zlevní pod 39 korun. Navzdory konfliktu v Izraeli",
+            "Cena plynu na burze kvůli Blízkému východu stále výrazně roste",
+            "Útoky v Rudém moři zdrží i prodraží dopravu"
+          ]
+        },
+        {
+          "id": "Historie/kontextualizace",
+          "name": "Historie/kontextualizace",
+          "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti). Jako kontextualizaci nekódujeme potenciální závěrečný odstavec ve smyslu \"Hamás dne 7. října 2023 zaútočil...\") - toto zohledňujeme v předchozích kategoriích (teroristické operace). Musí jít o odkaz na to, že celé aktuální dění (od 7. října on) není náhodným výbuchem esenciální nenávisti. Patří sem i zprávy informujícví o reformě soudnictví v Izraeli. která útoku ze 7. 10. časově předcházela, nebo i spekulativní připomínky - že teroristé zaútočili na výročí jomkipurské války.",
+          "examples": [
+            "Křišťálová noc před 85 lety rozpoutala protižidovské peklo",
+            "Izrael v Haagu odmítl obvinění z genocidy. A připomněl holokaust"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Hlavní téma článku",
+      "name": "Hlavní téma článku",
+      "description": "Zvolte hlavní téma článku. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, měla by k němu odkazovat většina výroků v textu. U každé zprávy lze určit jen jedno hlavní téma.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "id": "Vnitřní politické dění",
+          "name": "Vnitřní politické dění",
+          "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu nebo jejich reakcích na zahraniční diplomatické úsilí. Patří sem i zprávy o výměnách rukojmí. I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky."
+        },
+        {
+          "id": "Mezinárodní politické reakce",
+          "name": "Mezinárodní politické reakce",
+          "description": "Zpráva informuje o mezinárodních reakcích na konflikt ze strany vrcholných politiků, mezinárodních organizací jako UN, o diplomatických iniciativách, jednáních, snahách o zprostředkování příměří.  Jde o vnější a institucionalizovanou reakci - pro reakce veřejnosti je definováno téma separátně."
+        },
+        {
+          "id": "Vojenské operace Izraele",
+          "name": "Vojenské operace Izraele",
+          "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování."
+        },
+        {
+          "id": "Teroristické operace",
+          "name": "Teroristické operace",
+          "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů)."
+        },
+        {
+          "id": "Dopad na izraelské civilisty",
+          "name": "Dopad na izraelské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na Iizraelské civilisty, soustředí se na oběti, provizorní přemístění přeživších, zoufalství a nejistotu příbuzných rukojmí zajatých Hamásem"
+        },
+        {
+          "id": "Dopad na palestinské civilisty",
+          "name": "Dopad na palestinské civilisty",
+          "description": "Zpráva popisuje dopady konfliktu na palestinské civilisty, soustředí se na oběti, vysídlení, dění v uprchlických táborech."
+        },
+        {
+          "id": "Humanitární pomoc",
+          "name": "Humanitární pomoc",
+          "description": "Zpráva popisuje snahy o poskytování nebo blokování humanitární pomoci, věnuje se možnostem podpory civilistům zasažených konfliktem, které vznikly z iniciativ vlád, nevládních organizací a mezinárodních organizací."
+        },
+        {
+          "id": "Globální reakce veřejnosti",
+          "name": "Globální reakce veřejnosti",
+          "description": "Zpráva informuje o demonstracích a jiných vyjádřeních podpory (otevřené dopisy, blokování produktů, online iniciativy) Izraele nebo Palestiny ve světě."
+        },
+        {
+          "id": "Ekonomické důsledky",
+          "name": "Ekonomické důsledky",
+          "description": "Zpráva informuje o globálních ekonomických důsledcích konfliktu (vliv na ceny ropy, zpožďování a zdražování přepravy zboží kvůli situaci v Suezském průplavu, komplikace pro turismus atd.)"
+        },
+        {
+          "id": "Historie/kontextualizace",
+          "name": "Historie/kontextualizace",
+          "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti)."
+        }
+      ]
+    },
+    {
+      "id": "Mediální rámce (multiple)",
+      "name": "Mediální rámce (multiple)",
+      "description": "Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Rámec konfliktu",
+          "name": "Rámec konfliktu",
+          "description": "Zpráva situaci zobrazuje jako napjatou, konfliktní, nespravedlivou, polarizovanou. Dané rozpory jsou implicitně nebo explicitně zobrazeny jako těžko řešitelné, resp. řešitelné především silou. Zpráva implicitně nebo explicitně rozvrhuje aktéry do ingroup a outgroup, kde zisk jedné ze stran znamená ztrátu pro druhou a naopak.",
+          "examples": [
+            "Tisíce aktivistů v Izraeli se připravují na poválečné osídlování Pásma Gazy",
+            "V Pásmu Gazy zemřelo v pondělí 21 izraelských vojáků. Většinu zabily exploze ve dvou budovách",
+            "Američané opět zaútočili na pozice Húsíů v Jemenu"
+          ]
+        },
+        {
+          "id": "Rámec budování míru",
+          "name": "Rámec budování míru",
+          "description": "Zpráva zvýrazňuje snahy o řešení konfliktu prostřednictvím diplomacie, jednání a iniciativ budování míru. Tento rámec zdůrazňuje konstruktivní kroky směrem k míru a povzbuzuje optimismus ohledně možných řešení. Palestince a Izraelce nestaví proti sobě jako inherentně nepřátelské strany, ale apeluje na lidskost obou.",
+          "examples": [
+            "Izrael a Hamás se dohodly na prodloužení příměří",
+            "Nenávist je možné porazit. Spolek Arabů a Židů vyzývá k zastavení nekonečné spirály násilí",
+            "Hamás navrhuje Izraeli třífázové příměří, které by vedlo k ukončení války"
+          ]
+        },
+        {
+          "id": "Humanitární rámec",
+          "name": "Humanitární rámec",
+          "description": "Zpráva se soustředí na důsledky konfliktu pro běžný občanský život, zdůrazňuje civilní oběti, vysídlování a utrpení lidí na obou stranách. Tento rámec pomáhá vyvolat empatii, případně zdůrazňuje potřebu humanitární pomoci.",
+          "examples": [
+            "Příměří zajistí podstatné navýšení humanitární pomoci do Pásma Gazy",
+            "V Pásmu Gazy přestala fungovat druhá největší nemocnice, poslední na jihu",
+            "Americký ministr zahraničí kritizoval Izrael, že nedokáže ochránit civilisty v Gaze"
+          ]
+        },
+        {
+          "id": "Historicko-kulturní rámec",
+          "name": "Historicko-kulturní rámec",
+          "description": "Zpráva zobrazuje situaci jako součást komplikovaného dlouhotvrajícího konfliktu, zdůrazňuje potřebnost znalosti historického kontextu, geopolitických faktorů či perspektiv zúčastněných aktérů pro pochopení současného stavu. Tento rámec pomáhá divákům rozvinout hlubší porozumění základních příčin a dynamiky konfliktu, přesahujících aktuální politické a ekonomické aspekty.",
+          "examples": [
+            "Temné měsíce po Mnichovu. Vyhánění Čechoslováků i útěky židovského obyvatelstva",
+            "Húsíové odsoudili k smrti 13 lidí za to, že jsou homosexuálové",
+            "Rasistická zaměstnankyně BBC popírala holokaust a šířila antisemitismus nejhrubšího zrna"
+          ]
+        },
+        {
+          "id": "Geopolitický rámec",
+          "name": "Geopolitický rámec",
+          "description": "Zpráva zdůrazňuje geopolitický rozměr konfliktu, jehož důležitost přesahuje bezprostředně zasažené aktéry (blízký Východ). Zohledňuje mezinárodní reakce na konflikt, a to jak politické (diplomatická prohlášení, protesty a výzev k akci ze strany globálního společenství), tak občanské (demonstrace na podporu Izraele nebo Palestiny, diskuze na akademické půdě).",
+          "examples": [
+            "Nejen Izrael. Vzplanout může celý Blízký východ, obává se EU",
+            "Biden rozhodl o ochraně Palestinců v USA před deportací kvůli podmínkám v Gaze",
+            "Irsko i přes skandál zaměstnanců UNRWA věnuje úřadu přes půl miliardy"
+          ]
+        },
+        {
+          "id": "Lokální rámec",
+          "name": "Lokální rámec",
+          "description": "Zpráva zobrazuje události jako zasahující bezprostředně zúčastněné (blízký Východ, tj některou nebo některé ze zemí Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko, Spojené arabské emiráty), obsahuje výpovědi, komentáře, deklarace svědectví místních lidí, politiků, organizací.",
+          "examples": [
+            "Policista zastřelil dva izraelské turisty v Egyptě. Zemřel i jeden Egypťan",
+            "Teror na zastávce v Izraeli: dva mrtví a čtyři zranění",
+            "Ušetřete Palestince katastrofy a vraťte Izraeli rukojmí, vyzval Abbás teroristy z Hamásu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Mluvčí",
+      "name": "Mluvčí",
+      "description": "Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba \"ministerstvo vydalo prohlášení\", \"think tank poukázal na riziko\"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci (\"bývalý diplomat v Izraeli\", \"šéf policistů\", \"akademik\") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Političtí představitelé Izraele",
+          "name": "Političtí představitelé Izraele",
+          "description": "Vládní i opoziční izraelští politici, diplomaté Izraele ve světě."
+        },
+        {
+          "id": "Političtí představitelé Palestiny",
+          "name": "Političtí představitelé Palestiny",
+          "description": "Političtí představitelé Palestinské samosprávy, ale i Hamasu, pokud jsou citováni v souvislosti s politickými rozhodnutími nebo vyjednáváními. Dále velvyslanci či diplomatičtí představitelé Palestiny."
+        },
+        {
+          "id": "Politici z blízkovýchodních zemí",
+          "name": "Politici z blízkovýchodních zemí",
+          "description": "Politici z jiných arabských nebo blízkovýchodních zemí (Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko a Spojené arabské emiráty)."
+        },
+        {
+          "id": "Politici ze ostatních světových zemí",
+          "name": "Politici ze ostatních světových zemí",
+          "description": "Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina..."
+        },
+        {
+          "id": "Představitelé mezinárodních a neziskových organizací",
+          "name": "Představitelé mezinárodních a neziskových organizací",
+          "description": "Například UN, UNRWA, Lékaři bez hranic, atp."
+        },
+        {
+          "id": "Vojenští představitelé Izraele",
+          "name": "Vojenští představitelé Izraele",
+          "description": "Vojenští velitelé, vojáci nebo mluvčí z Izraelských obranných sil (IDF), zástupci izraelských bezpečnostních agentur, nebo zpravodajských služeb (Mosad)."
+        },
+        {
+          "id": "Členové teroristických skupin",
+          "name": "Členové teroristických skupin",
+          "description": "Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie."
+        },
+        {
+          "id": "Nezávislí experti a analytici",
+          "name": "Nezávislí experti a analytici",
+          "description": "Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země."
+        },
+        {
+          "id": "Média a novináři",
+          "name": "Média a novináři",
+          "description": "V textu jsou citovány informace, komentáře, analýzy převzaté z jiných médií (např. \"podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu citovaného média, informace poskytnuté mu anonymně atd.)"
+        },
+        {
+          "id": "Očití svědci a civilisté z Izraele",
+          "name": "Očití svědci a civilisté z Izraele",
+          "description": "Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi."
+        },
+        {
+          "id": "Očití svědci a civilisté z Palestiny",
+          "name": "Očití svědci a civilisté z Palestiny",
+          "description": "Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci"
+        }
+      ]
+    }
+  ]
+}

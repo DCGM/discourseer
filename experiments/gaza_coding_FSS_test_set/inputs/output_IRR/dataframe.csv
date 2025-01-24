@@ -1,4 +1,4 @@
-file,prompt_key,rating,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,majority,worst_case
+file,question_id,rating,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,False
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,False
