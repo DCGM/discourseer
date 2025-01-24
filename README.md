@@ -141,20 +141,20 @@ Typické využití Discourseeru může být testování různých formulací pop
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow"><span style="font-weight:bold">Struktura codebooku</span></th>
-    <th class="tg-c3ow"><span style="font-weight:bold">Vidí chat</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Vidí model</span></th>
     <th class="tg-c3ow"><span style="font-weight:bold">Můžu měnit*</span></th>
     <th class="tg-c3ow"><span style="font-weight:bold">Komentář</span></th>
   </tr></thead>
 <tbody>
   <tr>
     <td class="tg-0pky">codebook_name</td>
-    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
     <td class="tg-0pky">codebook_version</td>
-    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-c3ow">ANO</td>
     <td class="tg-0pky"></td>
   </tr>
@@ -166,8 +166,8 @@ Typické využití Discourseeru může být testování různých formulací pop
   </tr>
   <tr>
     <td class="tg-0pky">_prompt_id</td>
-    <td class="tg-c3ow">NE</td>
-    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-0pky">slouží k výběru promptů pomocí <code>--prompt-subset</code> při spuštění experimentu <br>musí zůstat stejné jako v odpovědích kodérů</td>
   </tr>
   <!-- <tr>
@@ -191,7 +191,7 @@ Typické využití Discourseeru může být testování různých formulací pop
   <tr>
     <td class="tg-0pky">__multiple_choice</td>
     <td class="tg-c3ow">ANO</td>
-    <td class="tg-c3ow">ANO</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
@@ -202,7 +202,7 @@ Typické využití Discourseeru může být testování různých formulací pop
   </tr>
   <tr>
     <td class="tg-0pky">___option_id</td>
-    <td class="tg-c3ow">NE</td>
+    <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-c3ow"><span style="font-weight:bold">NE</span></td>
     <td class="tg-0pky">musí zůstat stejné jako v odpovědích kodérů</td>
   </tr>
