@@ -45,7 +45,7 @@ def parse_spreadsheet(data) -> Rater:
     questions = parse_question_headers(data, question_names_and_indexes)
     print(f'Parsed {len(questions)} questions from headers: {[q.name for q in questions]}')
     ratings = parse_ratings(data, questions)
-    print(f'Parsed {len(ratings)} ratings with {sum([len(r.rating_results) for r in ratings])} answers')
+    print(f'Parsed {len(ratings)} ratings with {sum([len(r.rated_option_ids) for r in ratings])} answers')
     return Rater(ratings=ratings)
 
 def parse_question_headers(data, question_names_and_indexes) -> List[Question]:
@@ -118,11 +118,11 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
                 if len(answer) == 0:
                     print(f'WARNING: single choice question "{question.name}" has no answer on row {row_id} ({row[0]}...)')
                 # print(f'answer: {answer}')
-                rating = Rating(file=file, prompt_id=question.name, rating_results=answer)
+                rating = Rating(file=file, prompt_id=question.name, rated_option_ids=answer)
             else:
                 # print(f'row[{row_index}:]: {row[row_index:]}')
                 answers = get_multi_choice_answers(row[row_index:], question)
-                rating = Rating(file=file, prompt_id=question.name, rating_results=answers)
+                rating = Rating(file=file, prompt_id=question.name, rated_option_ids=answers)
 
             # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1
