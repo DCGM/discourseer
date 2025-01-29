@@ -8,14 +8,14 @@ from run_discourseer import Discourseer
 
 class TestIRRWithoutModel(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'IRR_texts')
-    prompts = Discourseer.load_prompts('', os.path.join(os.path.dirname(__file__),
-                                                        'prompt_definitions.json'))
+    codebook = Discourseer.load_codebook('', os.path.join(os.path.dirname(__file__),
+                                                        'codebook.json'))
 
     def test_irr_equal(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
-                                 extraction_prompts=self.prompts)
+                                 codebook=self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
-                                 extraction_prompts=self.prompts)
+                                 codebook=self.codebook)
         irr_results = IRR([rater_1, rater_2], out_dir='test/test_output_IRR')()
 
         self.assertEqual(irr_results.overall.fleiss_kappa.without_model, 1.0)
@@ -26,8 +26,8 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
     def test_irr_diff(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.prompts)
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.prompts)
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
         irr_results = IRR([rater_1, rater_2], out_dir='test/test_output_IRR')()
 
         self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.89, 1)
@@ -38,8 +38,8 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
     def test_irr_ignore_nan(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.prompts)
-        rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'), self.prompts)
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
+        rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'), self.codebook)
 
         irr_results = IRR([rater_1, rater_4], out_dir='test/test_output_IRR')()
 
@@ -53,12 +53,12 @@ class TestIRRWithoutModel(unittest.TestCase):
 
 class TestMajAgreement(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'maj_agreement')
-    prompts = Discourseer.load_prompts('', os.path.join(os.path.dirname(__file__),
-                                                        'prompt_definitions.json'))
+    codebook = Discourseer.load_codebook('', os.path.join(os.path.dirname(__file__),
+                                                        'codebook.json'))
 
     def test_equal(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'))
 
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir='test/test_output_IRR')()
@@ -66,8 +66,8 @@ class TestMajAgreement(unittest.TestCase):
         self.assertEqual(irr_results.overall.majority_agreement, 1.0)
 
     def test_diff(self):
-        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
-        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.prompts)
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_75_diff.csv'))
 
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir='test/test_output_IRR')()

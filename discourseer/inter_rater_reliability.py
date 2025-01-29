@@ -11,7 +11,7 @@ import pandas as pd
 from irrCAC.raw import CAC
 
 from discourseer.rater import Rater
-from discourseer.extraction_prompts import ExtractionPrompts, single_choice_tag
+from discourseer.codebook import single_choice_tag
 from discourseer import utils
 
 logger = logging.getLogger()
@@ -31,11 +31,11 @@ IRRResultsFlattenedOneVariant = Dict[str, float]
 
 class IRRResults(pydantic.BaseModel):
     overall: IRRResult
-    mean_through_prompts: Optional[IRRResult] = None
-    prompts: Optional[Dict[str, IRRResult]] = {}
+    mean_through_questions: Optional[IRRResult] = None
+    questions: Optional[Dict[str, IRRResult]] = {}
 
-    def get_mean_through_prompts(self) -> IRRResult:
-        if not self.prompts:
+    def get_mean_through_questions(self) -> IRRResult:
+        if not self.questions:
             return IRRResult()
         return IRRResult(
             fleiss_kappa=self.get_mean('fleiss_kappa'),
@@ -45,7 +45,7 @@ class IRRResults(pydantic.BaseModel):
         )
 
     def get_mean(self, metric: str) -> IRRVariants:
-        if not self.prompts:
+        if not self.questions:
             return IRRVariants()
         return IRRVariants(
             best_case=self.get_mean_value(metric, 'best_case'),
@@ -55,23 +55,23 @@ class IRRResults(pydantic.BaseModel):
         )
 
     def get_mean_value(self, metric: str, variant: str) -> float:
-        sum_values = sum([result.model_dump()[metric][variant] for result in self.prompts.values()
+        sum_values = sum([result.model_dump()[metric][variant] for result in self.questions.values()
                           if result.model_dump()[metric][variant] is not None])
-        return round(sum_values / len(self.prompts), 5)
+        return round(sum_values / len(self.questions), 5)
 
     def get_mean_majority_agreement(self) -> float | None:
-        if not self.prompts:
+        if not self.questions:
             return None
-        sum_values = sum([result.majority_agreement for result in self.prompts.values()
+        sum_values = sum([result.majority_agreement for result in self.questions.values()
                           if result.majority_agreement is not None])
-        return round(sum_values / len(self.prompts), 5)
+        return round(sum_values / len(self.questions), 5)
 
     def to_dict_of_results(self) -> Dict[str, IRRResult]:
         results: Dict[str, IRRResult] = {'overall': self.overall}
-        if self.mean_through_prompts is not None:
-            results['mean_through_prompts'] = self.mean_through_prompts
+        if self.mean_through_questions is not None:
+            results['mean_through_questions'] = self.mean_through_questions
 
-        for key, result in self.prompts.items():
+        for key, result in self.questions.items():
             if result is not None:
                 results[key] = result
 
@@ -87,8 +87,8 @@ class IRRResults(pydantic.BaseModel):
 
     def get_summary(self) -> Dict:
         results = {'overall': self.overall.model_dump()}
-        if self.mean_through_prompts is not None:
-            results['mean_through_prompts'] = self.mean_through_prompts.model_dump()
+        if self.mean_through_questions is not None:
+            results['mean_through_questions'] = self.mean_through_questions.model_dump()
         return results
 
     def get_one_metric(self, metric: str) -> Dict:
@@ -96,25 +96,25 @@ class IRRResults(pydantic.BaseModel):
             return self.get_summary()
 
         results = {'overall': self.overall.get_metric(metric)}
-        if self.mean_through_prompts is not None:
-            results['mean_through_prompts'] = self.mean_through_prompts.get_metric(metric)
+        if self.mean_through_questions is not None:
+            results['mean_through_questions'] = self.mean_through_questions.get_metric(metric)
 
-        results['prompts'] = {}
-        for key, result in self.prompts.items():
+        results['questions'] = {}
+        for key, result in self.questions.items():
             if result is not None:
-                results['prompts'][key] = result.get_metric(metric)
+                results['questions'][key] = result.get_metric(metric)
         return results
     
     def get_one_metric_and_variant(self, metric: str, variant: str) -> Dict:
         results = self.get_one_metric(metric)
 
         results['overall'] = results['overall'][variant]
-        if self.mean_through_prompts is not None:
-            results['mean_through_prompts'] = results['mean_through_prompts'][variant]
+        if self.mean_through_questions is not None:
+            results['mean_through_questions'] = results['mean_through_questions'][variant]
 
-        for key, result in results['prompts'].items():
+        for key, result in results['questions'].items():
             if result is not None:
-                results['prompts'][key] = result[variant]
+                results['questions'][key] = result[variant]
         
         return results
 
@@ -153,28 +153,28 @@ class IRR:
     col_model = 'model'
     col_worst_case = 'worst_case'
     col_best_case = col_majority
-    index_cols = ['file', 'question_id', 'rating']
+    index_cols = utils.result_dataframe_index_columns()
     col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
     col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
-                 calculate_irr_for_options: bool = False):
-                 # extraction_prompts: ExtractionPrompts = None,
+                 calculate_irr_for_options: bool = False,
+                 export_dataframes_for_options: bool = False):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
             self.model_rater.name = self.col_model
 
-        # self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
         self.calculate_irr_for_options = calculate_irr_for_options
+        self.export_dataframes_for_options = export_dataframes_for_options
         self.out_dir = out_dir
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
         os.makedirs(self.out_dir, exist_ok=True)
 
         if self.calculate_irr_for_options:
-            self.out_prompts_and_options_dir = os.path.join(self.out_dir, 'prompt_and_option_results')
-            os.makedirs(self.out_prompts_and_options_dir, exist_ok=True)
+            self.out_questions_and_options_dir = os.path.join(self.out_dir, 'question_and_option_results')
+            os.makedirs(self.out_questions_and_options_dir, exist_ok=True)
 
         self.input_columns = []
         self.model_columns = []
@@ -184,8 +184,10 @@ class IRR:
 
         if df is None:  # df not provided as an argument, prepare it from raters
             self.df = self.prepare_dataframe_from_raters()
+            self.df = self.preprocess_dataframe(self.df)
         else:
-            self.df = df
+            self.df = self.preprocess_dataframe(df)
+            self.df[self.col_maj_agree_with_model] = self.df[self.col_maj_agree_with_model].astype('object').replace({'False': False, 'True': True}).astype('bool')
 
         if self.df is None:  # empty DataFrame after cleaning
             self.results = IRR.EMPTY_IRR_RESULTS
@@ -200,17 +202,18 @@ class IRR:
             df = self.raters_to_dataframe(self.raters + [self.model_rater])
         else:
             df = self.raters_to_dataframe(self.raters)
-        self.rater_columns = df.columns.difference(self.col_non_rater_columns).to_list()
-
-        df_before_cleaning = df.copy()
 
         df = self.reorganize_raters(df)
+        return df
+
+    def preprocess_dataframe(self, df: pd.DataFrame) -> pd.DataFrame:
+        df_before_cleaning = df.copy()
         df = self.clean_data(df)
 
         if df.shape[0] == 0:
             logger.warning("Empty DataFrame after cleaning. Cannot calculate inter-rater reliability.")
             logger.debug(f"Data before cleaning (see whole dataframe in {self.out_dataframe}):\n{df_before_cleaning}")
-            df_before_cleaning.to_csv(self.out_dataframe)
+            df_before_cleaning.to_csv(self.out_dataframe.replace('.csv', '_before_cleaning.csv'))
             return None
 
         return df
@@ -218,7 +221,7 @@ class IRR:
     def get_inter_rater_reliability(self, df: pd.DataFrame) -> IRRResults:
         self.input_columns = df.columns.difference(self.col_non_input_columns).to_list()
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
-        question_ids = df.index.get_level_values('question_id').unique().to_list()
+        question_ids = df.index.get_level_values(self.index_cols[1]).unique().to_list()
 
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
@@ -229,33 +232,34 @@ class IRR:
 
         overall_results = self.get_irr_result(df)
 
-        prompt_irr_results = {}
+        question_irr_results = {}
         for question_id in question_ids:
-            logger.info(f"Calculating IRR for prompt {question_id}")
-            df_prompt = df.xs(question_id, level='question_id')
-            prompt_irr_results[question_id] = self.get_irr_result(df_prompt)
+            logger.info(f"Calculating IRR for question {question_id}")
+            df_question = df.xs(question_id, level=self.index_cols[1])
+            question_irr_results[question_id] = self.get_irr_result(df_question)
 
-            # save df_prompt to csv
+            # save df_question to csv
             if self.calculate_irr_for_options:
-                df_prompt_output_file = os.path.join(self.out_prompts_and_options_dir,
+                df_question_output_file = os.path.join(self.out_questions_and_options_dir,
                                                      f"dataframe__{question_id.replace(' ', '_')}")
-                df_prompt.to_csv(df_prompt_output_file + '.csv')
-                self.calculate_irr_for_each_option(df_prompt, question_id, df_prompt_output_file)
+                if self.export_dataframes_for_options:
+                    df_question.to_csv(df_question_output_file + '.csv')
+                self.calculate_irr_for_each_option(df_question, question_id, df_question_output_file)
 
         if self.calculate_irr_for_options:
             utils.dict_to_json_file(
                 self.option_results,
-                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.json"))
+                os.path.join(self.out_dir, f"irr_kripp_alpha_for_individual_options.json"))
             utils.individual_option_irr_to_csv(
                 self.option_results,
-                os.path.join(self.out_prompts_and_options_dir, f"irr_kripp_alpha_for_individual_options.csv"))
+                os.path.join(self.out_dir, f"irr_kripp_alpha_for_individual_options.csv"))
 
         irr_results = IRRResults(
             overall=overall_results,
-            prompts=prompt_irr_results
+            questions=question_irr_results
         )
 
-        irr_results.mean_through_prompts = irr_results.get_mean_through_prompts()
+        irr_results.mean_through_questions = irr_results.get_mean_through_questions()
         self.df = df
 
         return irr_results
@@ -348,10 +352,11 @@ class IRR:
         return df_all
 
     def clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
+        self.rater_columns = df.columns.difference(self.col_non_rater_columns).to_list()
         rows_before = df.shape[0]
         df = df.replace('nan', np.nan)
         # replace 'nan' strings with NaN for calculating IRR
-        # ('nan' would be treated as a separate category, np.nan is treated as missing value)
+        # ('nan' would be treated as a separate category, np.nan should be treated as missing value)
 
         # if model column is present, remove rows with NaN in model column
         if self.col_model in df.columns:
@@ -374,7 +379,7 @@ class IRR:
         df.reset_index(inplace=True)
         # set worst case as opposite of majority agreement
         df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = df[self.col_majority].apply(self.get_opposite_rating)
-        df.set_index(['file', 'question_id', 'rating'], inplace=True)
+        df.set_index(self.index_cols, inplace=True)
 
         df[self.col_worst_case] = df[self.col_worst_case].astype('string')
         return df
@@ -401,21 +406,22 @@ class IRR:
             return
 
         # get index_cols without 'question_id'
-        index_cols_without_prompt = self.index_cols.copy()
-        index_cols_without_prompt.remove('question_id')
+        index_cols_without_question = self.index_cols.copy()
+        index_cols_without_question.remove(self.index_cols[1])
 
-        df.set_index(index_cols_without_prompt, inplace=True)
+        df.set_index(index_cols_without_question, inplace=True)
         self.option_results[question_id] = {}
 
         # calculate IRR for each option
         for option in unique_options:
             df_option = df.xs(option, level='rating')
             if df_option.shape[0] == 0:
-                logger.debug(f"No ratings for option {option} in prompt {question_id}. Skipping IRR calculation.")
+                logger.debug(f"No ratings for option {option} in question_id {question_id}. Skipping IRR calculation.")
                 continue
 
             out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
-            df_option.to_csv(out_file_option)
+            if self.export_dataframes_for_options:
+                df_option.to_csv(out_file_option)
             option_irr_kripp = self.get_irr_result(df_option).krippendorff_alpha.without_model
             self.option_results[question_id][option] = option_irr_kripp
 
