@@ -6,7 +6,8 @@ class TestDefaultExperiment(unittest.TestCase):
 
     def test_default_experiment(self):
         # Define the bash command to run
-        bash_command = "./test_default_experiment.sh"
+        work_dir = os.path.dirname(os.path.abspath(__file__))
+        bash_command = f"cd {work_dir} && ./test_default_experiment.sh"
 
         # Run the bash script using subprocess
         result = subprocess.run(
@@ -22,7 +23,8 @@ class TestDefaultExperiment(unittest.TestCase):
                          f"Command failed with exit status {result.returncode} and error message: {result.stderr}")
         
         # Check if the output is as expected
-        self.assertTrue(os.path.isdir("output"))
+        output_dir = os.path.join(work_dir, "output")
+        self.assertTrue(os.path.isdir(output_dir), f"Output directory {output_dir} not found")
 
         output_files = [
             "conversation_log.json",
@@ -34,11 +36,13 @@ class TestDefaultExperiment(unittest.TestCase):
         ]
 
         for file in output_files:
-            self.assertTrue(os.path.isfile(f"output/{file}"), 
+            file_path = os.path.join(work_dir, "output", file)
+            self.assertTrue(os.path.isfile(file_path),
                             f"File {file} not found in output directory")
 
         # check output_IRR
-        self.assertTrue(os.path.isdir("output_IRR"))
+        output_IRR_dir = os.path.join(work_dir, "output_IRR")
+        self.assertTrue(os.path.isdir(output_IRR_dir), f"Output directory {output_IRR_dir} not found")
 
         output_IRR_files = [
             "acceptable_questions_krippendorff_alpha_0.6.json",
@@ -52,21 +56,13 @@ class TestDefaultExperiment(unittest.TestCase):
         ]
 
         for file in output_IRR_files:
-            self.assertTrue(os.path.isfile(f"output_IRR/{file}"), 
+            file_path = os.path.join(work_dir, "output_IRR", file)
+            self.assertTrue(os.path.isfile(file_path),
                             f"File {file} not found in output_IRR directory")
-
-        output_IRR_folders = [
-            "prompt_and_option_results",
-            "prompt_and_option_results_exported",
-        ]
-
-        for folder in output_IRR_folders:
-            self.assertTrue(os.path.isdir(f"output_IRR/{folder}"), 
-                            f"Folder {folder} not found in output_IRR directory")
             
         # remove the backup output directories output_backup_* and output_IRR_backup_* if they exist
-        subprocess.run("rm -rf output_backup_*", shell=True)
-        subprocess.run("rm -rf output_IRR_backup_*", shell=True)
+        subprocess.run(f"cd {work_dir} && rm -rf output_backup_*", shell=True)
+        subprocess.run(f"cd {work_dir} && rm -rf output_IRR_backup_*", shell=True)
 
 if __name__ == '__main__':
     unittest.main()

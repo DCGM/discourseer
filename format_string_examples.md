@@ -1,68 +1,67 @@
 
 # Formátovací řetězce pro vytvoření zadání modelu pro každou otázku
 
-Tyto příklady jsou vytvořeny podle zadání v souboru [prompt_definitions.json](experiments/example/prompt_definitions.json).
+Tyto příklady jsou vytvořeny podle zadání v souboru codebook_gaza_v2_srpen.json.
 
-
-1. [prompt_names](#prompt_names)
-2. [prompt_descriptions](#prompt_descriptions)
-3. [prompt_names_and_descriptions_colon](#prompt_names_and_descriptions_colon)
-4. [prompt_names_and_descriptions_parentheses](#prompt_names_and_descriptions_parentheses)
-5. [single_choice_prompts](#single_choice_prompts)
-6. [multiple_choice_prompts](#multiple_choice_prompts)
-7. [prompt_options](#prompt_options)
-8. [prompt_options_with_examples](#prompt_options_with_examples)
-9. [prompt_options_with_examples_bulletpoints](#prompt_options_with_examples_bulletpoints)
-10. [whole_prompt_info](#whole_prompt_info)
-11. [whole_prompt_info_bulletpoints](#whole_prompt_info_bulletpoints)
-12. [prompt_json](#prompt_json)
+1. [question_names](#question_names)
+2. [question_descriptions](#question_descriptions)
+3. [question_names_and_descriptions_colon](#question_names_and_descriptions_colon)
+4. [question_names_and_descriptions_parentheses](#question_names_and_descriptions_parentheses)
+5. [single_choice_questions](#single_choice_questions)
+6. [multiple_choice_questions](#multiple_choice_questions)
+7. [question_options](#question_options)
+8. [question_options_with_examples](#question_options_with_examples)
+9. [question_options_with_examples_bulletpoints](#question_options_with_examples_bulletpoints)
+10. [whole_question_info](#whole_question_info)
+11. [whole_question_info_bulletpoints](#whole_question_info_bulletpoints)
+12. [questions_json](#questions_json)
 13. [response_json_schema](#response_json_schema)
 14. [response_json_schema_with_options](#response_json_schema_with_options)
 
-**prompt_names** (jména otázek oddělené čárkou)
-<a name="prompt_names"></a>
+**question_names** (jména otázek oddělené čárkou)
+<a name="question_names"></a>
 
 ```
 Zpravodajské hodnoty, Témata článku, Hlavní téma článku, Mediální rámce (multiple), Mluvčí
 ```
 
-**prompt_descriptions** (popisy otázek oddělené mezerou (popis by měla být celá věta))
-<a name="prompt_descriptions"></a>
+**question_descriptions** (popisy otázek oddělené mezerou (popis by měla být celá věta))
+<a name="question_descriptions"></a>
 
 ```
 Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano. Témata prosím kódujte, pokud se bezprostředně vztahují k událostem vyvolaným útokem Hamásu ze 7. 10. 2023. Pokud se téma ve zprávě vztahuje primárně k historii (holokaust, založení Izraele, intifády, jom-kipurská válka), uvádějte pouze téma historie/kontextualizace. Pokud je téma vyjádřeno i jednou větou, kódujte je jako přítomné (vojenské operace izraele a teroristické akce Hamásu, dopad na izraelské/palestinské civilisty). Pro hierarchizaci témat, resp. volbu toho dominantního, je až následující kategorie (hlavní téma článku). Zvolte hlavní téma článku. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, měla by k němu odkazovat většina výroků v textu. U každé zprávy lze určit jen jedno hlavní téma. Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu. Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba "ministerstvo vydalo prohlášení", "think tank poukázal na riziko"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci ("bývalý diplomat v Izraeli", "šéf policistů", "akademik") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.
 ```
 
-**prompt_names_and_descriptions_colon** (jména a popisy otázek oddělené dvojtečkou)
-<a name="prompt_names_and_descriptions_colon"></a>
+**question_names_and_descriptions_colon** (jména a popisy otázek oddělené dvojtečkou)
+<a name="question_names_and_descriptions_colon"></a>
 
 ```
 Zpravodajské hodnoty: Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.. Témata článku: Témata prosím kódujte, pokud se bezprostředně vztahují k událostem vyvolaným útokem Hamásu ze 7. 10. 2023. Pokud se téma ve zprávě vztahuje primárně k historii (holokaust, založení Izraele, intifády, jom-kipurská válka), uvádějte pouze téma historie/kontextualizace. Pokud je téma vyjádřeno i jednou větou, kódujte je jako přítomné (vojenské operace izraele a teroristické akce Hamásu, dopad na izraelské/palestinské civilisty). Pro hierarchizaci témat, resp. volbu toho dominantního, je až následující kategorie (hlavní téma článku).. Hlavní téma článku: Zvolte hlavní téma článku. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, měla by k němu odkazovat většina výroků v textu. U každé zprávy lze určit jen jedno hlavní téma.. Mediální rámce (multiple): Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu.. Mluvčí: Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba "ministerstvo vydalo prohlášení", "think tank poukázal na riziko"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci ("bývalý diplomat v Izraeli", "šéf policistů", "akademik") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.
 ```
 
-**prompt_names_and_descriptions_parentheses** (jména a popisy otázek oddělené závorkami)
-<a name="prompt_names_and_descriptions_parentheses"></a>
+**question_names_and_descriptions_parentheses** (jména a popisy otázek oddělené závorkami)
+<a name="question_names_and_descriptions_parentheses"></a>
 
 ```
 Zpravodajské hodnoty (Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.). Témata článku (Témata prosím kódujte, pokud se bezprostředně vztahují k událostem vyvolaným útokem Hamásu ze 7. 10. 2023. Pokud se téma ve zprávě vztahuje primárně k historii (holokaust, založení Izraele, intifády, jom-kipurská válka), uvádějte pouze téma historie/kontextualizace. Pokud je téma vyjádřeno i jednou větou, kódujte je jako přítomné (vojenské operace izraele a teroristické akce Hamásu, dopad na izraelské/palestinské civilisty). Pro hierarchizaci témat, resp. volbu toho dominantního, je až následující kategorie (hlavní téma článku).). Hlavní téma článku (Zvolte hlavní téma článku. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, měla by k němu odkazovat většina výroků v textu. U každé zprávy lze určit jen jedno hlavní téma.). Mediální rámce (multiple) (Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu.). Mluvčí (Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba "ministerstvo vydalo prohlášení", "think tank poukázal na riziko"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci ("bývalý diplomat v Izraeli", "šéf policistů", "akademik") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.)
 ```
 
-**single_choice_prompts** (jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou)
-<a name="single_choice_prompts"></a>
+**single_choice_questions** (jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou)
+<a name="single_choice_questions"></a>
 
 ```
 Hlavní téma článku
 ```
 
-**multiple_choice_prompts** (jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou)
-<a name="multiple_choice_prompts"></a>
+**multiple_choice_questions** (jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou)
+<a name="multiple_choice_questions"></a>
 
 ```
 Zpravodajské hodnoty, Témata článku, Mediální rámce (multiple), Mluvčí
 ```
 
-**prompt_options** (několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce)
-<a name="prompt_options"></a>
+**question_options** (několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce)
+<a name="question_options"></a>
 
 ```
 Zpravodajské hodnoty: Negativita negativity (Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a "náš nepřítel". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.), Blízkost proximity (Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). I dění ve státech bezprostředně sousedící s Českem (Rakousko, Německo, Polsko, Slovensko) kódujeme jako blízké, ve vzdálenějších ne.), Elitní osoby prominence (Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů. Úředníky, policisty, členy městských zastupitelstev atp. nebereme jako elitní osoby; prezidenty, premiéry, ministry, velvyslance bereme jako elitní osoby. Musí jít o živé osoby, ne třeba státní útvary (Izrael řekl, že...)), Personalizace personalization (Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP).), Dopad impact (Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry). Může se vztahovat k jedincům (třeba surové zavraždění babičky a nahrání videa toto zaznamenávajícího na její fb profil), i ke skupinám. Nemusí jít nutně o mezinárodní politický a ekonomický dopad, ale i lidské tragédie (znovu izraelská babička).)
@@ -72,8 +71,8 @@ Mediální rámce (multiple): Rámec konfliktu (Zpráva situaci zobrazuje jako n
 Mluvčí: Političtí představitelé Izraele (Vládní i opoziční izraelští politici, diplomaté Izraele ve světě.), Političtí představitelé Palestiny (Političtí představitelé Palestinské samosprávy, ale i Hamasu, pokud jsou citováni v souvislosti s politickými rozhodnutími nebo vyjednáváními. Dále velvyslanci či diplomatičtí představitelé Palestiny.), Politici z blízkovýchodních zemí (Politici z jiných arabských nebo blízkovýchodních zemí (Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko a Spojené arabské emiráty).), Politici ze ostatních světových zemí (Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina...), Představitelé mezinárodních a neziskových organizací (Například UN, UNRWA, Lékaři bez hranic, atp.), Vojenští představitelé Izraele (Vojenští velitelé, vojáci nebo mluvčí z Izraelských obranných sil (IDF), zástupci izraelských bezpečnostních agentur, nebo zpravodajských služeb (Mosad).), Členové teroristických skupin (Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie.), Nezávislí experti a analytici (Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země.), Média a novináři (V textu jsou citovány informace, komentáře, analýzy převzaté z jiných médií (např. "podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu citovaného média, informace poskytnuté mu anonymně atd.)), Očití svědci a civilisté z Izraele (Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi.), Očití svědci a civilisté z Palestiny (Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci)
 ```
 
-**prompt_options_with_examples** (seznam možností jako `prompt_options` s přidanými příklady na každém řádku)
-<a name="prompt_options_with_examples"></a>
+**question_options_with_examples** (seznam možností jako `question_options` s přidanými příklady na každém řádku)
+<a name="question_options_with_examples"></a>
 
 ```
 Zpravodajské hodnoty: Negativita negativity (Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a "náš nepřítel". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.) Examples: Izraelská armáda zneškodnila desítky palestinských bojovníků na moři, Svědectví z Gazy: Prázdné ulice, shromažďování zásob a čekání na nálety, Na ženy a děti nebudeme brát ohledy, burcují Palestinci, Blízkost proximity (Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). I dění ve státech bezprostředně sousedící s Českem (Rakousko, Německo, Polsko, Slovensko) kódujeme jako blízké, ve vzdálenějších ne.) Examples: V Izraeli je 200 Čechů, hlásí cestovky, Temné měsíce po Mnichovu. Vyhánění Čechoslováků i útěky židovského obyvatelstva, Lipavský navštívil Izrael, Elitní osoby prominence (Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů. Úředníky, policisty, členy městských zastupitelstev atp. nebereme jako elitní osoby; prezidenty, premiéry, ministry, velvyslance bereme jako elitní osoby. Musí jít o živé osoby, ne třeba státní útvary (Izrael řekl, že...)) Examples: Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty, Hvězda seriálu Fauda Lior Raz bojuje proti Hamásu, Musk si po boku Netanjahua prohlédl kibuc, kde vraždili teroristé z Hamásu, Personalizace personalization (Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP).) Examples: Mámu vám zabil Hamás, dozvěděli se sourozenci po propuštění, Na festivalu měli Izraelci střelbu za hudební kulisu, v panice pak utíkali všemi směry, Lidé zapalují svíčky u izraelského velvyslanectví v Praze, Dopad impact (Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry). Může se vztahovat k jedincům (třeba surové zavraždění babičky a nahrání videa toto zaznamenávajícího na její fb profil), i ke skupinám. Nemusí jít nutně o mezinárodní politický a ekonomický dopad, ale i lidské tragédie (znovu izraelská babička).) Examples: Brazílie svolá kvůli útoku na Izrael mimořádné zasedání Rady bezpečnosti OSN, Izrael je ve válce, Vůdce Hamásu potvrdil, že „od řeky k moři“ opravdu znamená zničení Izraele. Pochválil západní studenty
@@ -83,8 +82,8 @@ Mediální rámce (multiple): Rámec konfliktu (Zpráva situaci zobrazuje jako n
 Mluvčí: Političtí představitelé Izraele (Vládní i opoziční izraelští politici, diplomaté Izraele ve světě.), Političtí představitelé Palestiny (Političtí představitelé Palestinské samosprávy, ale i Hamasu, pokud jsou citováni v souvislosti s politickými rozhodnutími nebo vyjednáváními. Dále velvyslanci či diplomatičtí představitelé Palestiny.), Politici z blízkovýchodních zemí (Politici z jiných arabských nebo blízkovýchodních zemí (Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko a Spojené arabské emiráty).), Politici ze ostatních světových zemí (Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina...), Představitelé mezinárodních a neziskových organizací (Například UN, UNRWA, Lékaři bez hranic, atp.), Vojenští představitelé Izraele (Vojenští velitelé, vojáci nebo mluvčí z Izraelských obranných sil (IDF), zástupci izraelských bezpečnostních agentur, nebo zpravodajských služeb (Mosad).), Členové teroristických skupin (Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie.), Nezávislí experti a analytici (Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země.), Média a novináři (V textu jsou citovány informace, komentáře, analýzy převzaté z jiných médií (např. "podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu citovaného média, informace poskytnuté mu anonymně atd.)), Očití svědci a civilisté z Izraele (Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi.), Očití svědci a civilisté z Palestiny (Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci)
 ```
 
-**prompt_options_with_examples_bulletpoints** (seznam možností jako `prompt_options_with_examples` strukturované pomocí odrážek)
-<a name="prompt_options_with_examples_bulletpoints"></a>
+**question_options_with_examples_bulletpoints** (seznam možností jako `question_options_with_examples` strukturované pomocí odrážek)
+<a name="question_options_with_examples_bulletpoints"></a>
 
 ```
 Zpravodajské hodnoty:
@@ -100,8 +99,8 @@ Zpravodajské hodnoty:
 ...
 ```
 
-**whole_prompt_info** (několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce)
-<a name="whole_prompt_info"></a>
+**whole_question_info** (několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce)
+<a name="whole_question_info"></a>
 
 ```
 Zpravodajské hodnoty: multiple_choice (description: Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.) options: Negativita negativity (Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a "náš nepřítel". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.) Examples: Izraelská armáda zneškodnila desítky palestinských bojovníků na moři, Svědectví z Gazy: Prázdné ulice, shromažďování zásob a čekání na nálety, Na ženy a děti nebudeme brát ohledy, burcují Palestinci, Blízkost proximity (Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). I dění ve státech bezprostředně sousedící s Českem (Rakousko, Německo, Polsko, Slovensko) kódujeme jako blízké, ve vzdálenějších ne.) Examples: V Izraeli je 200 Čechů, hlásí cestovky, Temné měsíce po Mnichovu. Vyhánění Čechoslováků i útěky židovského obyvatelstva, Lipavský navštívil Izrael, Elitní osoby prominence (Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů. Úředníky, policisty, členy městských zastupitelstev atp. nebereme jako elitní osoby; prezidenty, premiéry, ministry, velvyslance bereme jako elitní osoby. Musí jít o živé osoby, ne třeba státní útvary (Izrael řekl, že...)) Examples: Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty, Hvězda seriálu Fauda Lior Raz bojuje proti Hamásu, Musk si po boku Netanjahua prohlédl kibuc, kde vraždili teroristé z Hamásu, Personalizace personalization (Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP).) Examples: Mámu vám zabil Hamás, dozvěděli se sourozenci po propuštění, Na festivalu měli Izraelci střelbu za hudební kulisu, v panice pak utíkali všemi směry, Lidé zapalují svíčky u izraelského velvyslanectví v Praze, Dopad impact (Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry). Může se vztahovat k jedincům (třeba surové zavraždění babičky a nahrání videa toto zaznamenávajícího na její fb profil), i ke skupinám. Nemusí jít nutně o mezinárodní politický a ekonomický dopad, ale i lidské tragédie (znovu izraelská babička).) Examples: Brazílie svolá kvůli útoku na Izrael mimořádné zasedání Rady bezpečnosti OSN, Izrael je ve válce, Vůdce Hamásu potvrdil, že „od řeky k moři“ opravdu znamená zničení Izraele. Pochválil západní studenty
@@ -111,8 +110,8 @@ Mediální rámce (multiple): multiple_choice (description: Mediální rámce js
 Mluvčí: multiple_choice (description: Mluvčími jsou myšleni aktéři, kteří jsou ve zprávě citováni nebo parafrázováni - ti, kteří mluví, ne ti, o kterých se mluví. Jako mluvčího lze vnímat i instituce, u kterých není specifikován konkrétní aktér (třeba "ministerstvo vydalo prohlášení", "think tank poukázal na riziko"). Pokud je nějaký aktér zařaditelný do více kategorií, použijte první nominaci ("bývalý diplomat v Izraeli", "šéf policistů", "akademik") a podle té ho zařaďte, zvolte pro něj tedy pouze jednu kategorii.) options: Političtí představitelé Izraele (Vládní i opoziční izraelští politici, diplomaté Izraele ve světě.), Političtí představitelé Palestiny (Političtí představitelé Palestinské samosprávy, ale i Hamasu, pokud jsou citováni v souvislosti s politickými rozhodnutími nebo vyjednáváními. Dále velvyslanci či diplomatičtí představitelé Palestiny.), Politici z blízkovýchodních zemí (Politici z jiných arabských nebo blízkovýchodních zemí (Bahrajn, Egypt, Irák, Írán, Izrael, Jordánsko, Katar, Kuvajt, Libanon, Omán, Jemen, Saúdská Arábie, Sýrie, Turecko a Spojené arabské emiráty).), Politici ze ostatních světových zemí (Např. USA, politici členských států EU nebo zastupující instituce EU, Rusko, Čina...), Představitelé mezinárodních a neziskových organizací (Například UN, UNRWA, Lékaři bez hranic, atp.), Vojenští představitelé Izraele (Vojenští velitelé, vojáci nebo mluvčí z Izraelských obranných sil (IDF), zástupci izraelských bezpečnostních agentur, nebo zpravodajských služeb (Mosad).), Členové teroristických skupin (Vůdci i řadoví členové militantních nebo teroristických skupin působících v regionu, jako jsou Hamas, Islámský džihád nebo Hizballáh. Pokud je člen Hamasu citován v souvislosti s násilnými akcemi, raketovými útoky nebo jinými teroristickými aktivitami, zařaďte jej do této kategorie.), Nezávislí experti a analytici (Odborníci, akademici, analytici nebo komentátoři specializující se na blízkovýchodní záležitosti, řešení konfliktu, mezinárodní vztahy nebo související oblasti, poskytující porozumění a analýzu konfliktu. Pokud je aktér velvyslanec/diplomat, zařaďte jej mezi politické představitele příslušné země.), Média a novináři (V textu jsou citovány informace, komentáře, analýzy převzaté z jiných médií (např. "podle New York Times...), k nimž není přiřazen žádný jiný mluvčí (může jít o investigativu citovaného média, informace poskytnuté mu anonymně atd.)), Očití svědci a civilisté z Izraele (Izraelští civiliní obyvatelé zasaženi konfliktem, poskytující svědectví, kmentář, pohled na události na místě. Běžní Izraelci - přeživší, příbuzní obětí ze 7. 10., ale i Izraelci demonstrující proti Netanjahuovi.), Očití svědci a civilisté z Palestiny (Palestinští civiliní obyvatelé postižení konfliktem, poskytující svědectví, komentář, pohled na události na místě - běžní Palestinci)
 ```
 
-**whole_prompt_info_bulletpoints** (několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) strukturované pomocí odrážek)
-<a name="whole_prompt_info_bulletpoints"></a>
+**whole_question_info_bulletpoints** (několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) strukturované pomocí odrážek)
+<a name="whole_question_info_bulletpoints"></a>
 
 ```
 Zpravodajské hodnoty: multiple_choice (description: Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.)options:
@@ -128,26 +127,26 @@ Zpravodajské hodnoty: multiple_choice (description: Zpravodajské hodnoty jsou 
 ...
 ```
 
-**prompt_json** (JSON se všemi informacemi o otázkách)
-<a name="prompt_json"></a>
+**questions_json** (JSON se všemi informacemi o otázkách)
+<a name="questions_json"></a>
 
-viz [prompt_json.json](experiments/example/json_outputs/prompt_json.json) pro kompletní výstup
+viz [questions_json.json](experiments/example/json_outputs/questions_json.json) pro kompletní výstup
 ```json
 {
-  "prompts": {
-    "zpravodajské_hodnoty": {
+  "questions": {
+    "Zpravodajské hodnoty (multiple)": {
+      "id": "Zpravodajské hodnoty (multiple)",
       "name": "Zpravodajské hodnoty",
-      "question_id": "Zpravodajské hodnoty (multiple)",
       "description": "Zpravodajské hodnoty jsou kritéria, která novináři používají k hodnocení a výběru událostí, jež se stanou zpravodajskými příběhy (ne každá událost se stane zprávou, musí být něčím specifická - newsworthy, předpokládaně zajímavá, důležitá, relevantní). Pokud se článek o izraelsko-palestinském konfliktu zmiňuje třeba jen v jednom odstavci, zpravodajské hodnoty musejí být relevantní k tomuto odstavci, ne jen obecně (ie., pokud něco komentuje Biden a nijak se to nevztahuje ke sledovanému konfliktu, nekódujte jej jako přítomnou elitní osobu - pokud se ale Biden vyjadřuje třeba k podmínkám příměří, pak ano.",
       "multiple_choice": true,
       "options": [
         {
+          "id": "Negativita negativity",
           "name": "Negativita negativity",
           "description": "Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a \"náš nepřítel\". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.",
           "examples": [
             "Izraelská armáda zneškodnila desítky palestinských bojovníků na moři",
             "Svědectví z Gazy: Prázdné ulice, shromažďování zásob a čekání na nálety",
-            "Na ženy a děti nebudeme brát ohledy, burcují Palestinci"
 ...
 ```
 
@@ -158,18 +157,18 @@ viz [response_json_schema.json](experiments/example/json_outputs/response_json_s
 ```json
 {
   "properties": {
-    "zpravodajské_hodnoty": {
+    "Zpravodajské hodnoty": {
       "items": {
         "type": "string"
       },
       "title": "Zpravodajské Hodnoty",
       "type": "array"
     },
-    "temata_clanku": {
+    "Témata článku": {
       "items": {
         "type": "string"
       },
-      "title": "Temata Clanku",
+      "title": "Témata Článku",
       "type": "array"
 ...
 ```

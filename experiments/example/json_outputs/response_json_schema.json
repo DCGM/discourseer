@@ -1,44 +1,44 @@
 {
   "properties": {
-    "zpravodajské_hodnoty": {
+    "Zpravodajské hodnoty": {
       "items": {
         "type": "string"
       },
       "title": "Zpravodajské Hodnoty",
       "type": "array"
     },
-    "temata_clanku": {
+    "Témata článku": {
       "items": {
         "type": "string"
       },
-      "title": "Temata Clanku",
+      "title": "Témata Článku",
       "type": "array"
     },
-    "hlavni_tema_clanku": {
-      "title": "Hlavni Tema Clanku",
+    "Hlavní téma článku": {
+      "title": "Hlavní Téma Článku",
       "type": "string"
     },
-    "medialni_ramce": {
+    "Mediální rámce (multiple)": {
       "items": {
         "type": "string"
       },
-      "title": "Medialni Ramce",
+      "title": "Mediální Rámce (Multiple)",
       "type": "array"
     },
-    "mluvci": {
+    "Mluvčí": {
       "items": {
         "type": "string"
       },
-      "title": "Mluvci",
+      "title": "Mluvčí",
       "type": "array"
     }
   },
   "required": [
-    "zpravodajské_hodnoty",
-    "temata_clanku",
-    "hlavni_tema_clanku",
-    "medialni_ramce",
-    "mluvci"
+    "Zpravodajské hodnoty",
+    "Témata článku",
+    "Hlavní téma článku",
+    "Mediální rámce (multiple)",
+    "Mluvčí"
   ],
   "title": "ResponseFormat",
   "type": "object"

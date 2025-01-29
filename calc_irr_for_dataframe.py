@@ -21,8 +21,8 @@ def parse_args():
                         help='input folder containing the csv file with the ratings (output of previous experiment)')
     parser.add_argument('--output-dir', type=str, 
                         help='output folder to save the recalculated IRR results')
-    parser.add_argument('--prompt-definitions', type=str,
-                        help='JSON file containing the prompt definitions (prompts, question ids, choices...).')
+    parser.add_argument('--codebook', type=str,
+                        help='JSON file containing the codebook (codebok name+version, questions, options...).')
     return parser.parse_args()
 
 
@@ -32,12 +32,12 @@ def main():
     Calculator(
         input_dir=args.input_dir,
         output_dir=args.output_dir,
-        prompt_definitions=args.prompt_definitions
+        codebook=args.codebook
     )()
 
 
 class Calculator:
-    def __init__(self, input_dir: str, output_dir: str, prompt_definitions: str = None):
+    def __init__(self, input_dir: str, output_dir: str, codebook: str = None):
         self.input_dir = input_dir
         if not os.path.isdir(self.input_dir):
             raise ValueError(f'Input dir {self.input_dir} does not exist')
@@ -46,7 +46,7 @@ class Calculator:
         if self.output_dir == self.input_dir:
             self.input_dir = backup_dir  # the input_dir changed to the backup_dir
 
-        self.prompts = utils.load_prompts(prompt_definitions)
+        self.codebook = utils.load_codebook(codebook)
 
         print(f'Input directory: {self.input_dir}')
         print(f'Output directory: {self.output_dir}')
@@ -56,7 +56,7 @@ class Calculator:
 
         self.df_file = os.path.join(self.input_dir, IRR.DATAFRAME_NAME)
         if not os.path.isfile(self.df_file):
-            raise ValueError(f'Input file {self.df_file} does not exist')
+            raise FileNotFoundError(f'Input file {self.df_file} not found')
         self.df = pd.read_csv(self.df_file)
         if len(self.df) == 0:
             raise ValueError(f'Input dataframe is empty')
@@ -64,11 +64,13 @@ class Calculator:
         # Allow loading older versions of the dataframe with different column name
         if 'prompt_key' in self.df.columns:
             self.df.rename(columns={'prompt_key': IRR.index_cols[1]}, inplace=True)
+        if 'prompt_id' in self.df.columns:
+            self.df.rename(columns={'prompt_id': IRR.index_cols[1]}, inplace=True)
 
         index_cols = self.check_present_in_df(self.df, IRR.index_cols)
         self.df.set_index(index_cols, inplace=True)
 
-        # self.df = self.df.replace({True: 'True', False: 'False', 'nan': np.nan})
+        # self.df = self.df.replace({True: 'True', False: 'False', 'nan': None, np.nan: None})
 
         for col in self.df.columns:
             if col in [IRR.col_maj_agree_with_model]:

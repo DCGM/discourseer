@@ -1,6 +1,6 @@
 {
   "overall": 0.55525,
-  "mean_through_prompts": 0.50713,
+  "mean_through_questions": 0.50713,
   "prompts": {
     "Hlavní téma článku": 0.59311,
     "Mediální rámce (multiple)": 0.41624,

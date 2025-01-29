@@ -23,7 +23,7 @@ python $DISCOURSEER/run_discourseer.py \
     --experiment-dir $EXPERIMENT_DIR \
     --ratings-dir $EXPERIMENT_DIR/../inputs/ratings/ \
     --texts-dir $EXPERIMENT_DIR/../inputs/texts/ \
-    --prompt-subset dotazy kriterium obtezujici_okolnosti odborny_zdroj odstavce politicka_zprava vyvazenost \
+    --question-subset dotazy kriterium obtezujici_okolnosti odborny_zdroj odstavce politicka_zprava vyvazenost \
     --log DEBUG \
     $TEXT_COUNT \
     $OUTPUT

@@ -20,7 +20,7 @@
     },
     "majority_agreement": 0.778
   },
-  "mean_through_prompts": {
+  "mean_through_questions": {
     "fleiss_kappa": {
       "best_case": 0.61551,
       "with_model": 0.34968,

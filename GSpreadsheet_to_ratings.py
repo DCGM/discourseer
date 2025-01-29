@@ -10,7 +10,7 @@ from discourseer.rater import Rater, Rating
 
 
 class Question(pydantic.BaseModel):
-    name: str
+    id: str
     single_choice: bool
     options: Union[List[str], Dict[int, str]] = []
 
@@ -41,29 +41,29 @@ def parse_dir(input_path: str, output_path: str):
         rater.save_to_csv(os.path.join(output_path, out_file))
 
 def parse_spreadsheet(data) -> Rater:
-    question_names_and_indexes = [(d, i) for i, d in enumerate(data[0]) if d != '']
-    questions = parse_question_headers(data, question_names_and_indexes)
-    print(f'Parsed {len(questions)} questions from headers: {[q.name for q in questions]}')
+    question_ids_and_indexes = [(d, i) for i, d in enumerate(data[0]) if d != '']
+    questions = parse_question_headers(data, question_ids_and_indexes)
+    print(f'Parsed {len(questions)} questions from headers: {[q.id for q in questions]}')
     ratings = parse_ratings(data, questions)
-    print(f'Parsed {len(ratings)} ratings with {sum([len(r.rating_results) for r in ratings])} answers')
+    print(f'Parsed {len(ratings)} ratings with {sum([len(r.rated_option_ids) for r in ratings])} answers')
     return Rater(ratings=ratings)
 
-def parse_question_headers(data, question_names_and_indexes) -> List[Question]:
+def parse_question_headers(data, question_ids_and_indexes) -> List[Question]:
     questions: List[Question] = []
-    for i, (name, index) in enumerate(question_names_and_indexes):
-        last_question = i == len(question_names_and_indexes) - 1
+    for i, (question_id, index) in enumerate(question_ids_and_indexes):
+        last_question = i == len(question_ids_and_indexes) - 1
         if last_question:
             next_question_index = len(data[1])
         else:
-            next_question_index = question_names_and_indexes[i+1][1]
+            next_question_index = question_ids_and_indexes[i+1][1]
 
         if next_question_index == index+1:
             # single choice question
-            question = Question(name=name, single_choice=True, options=parse_single_choice_options([data[1][index]]))
+            question = Question(id=question_id, single_choice=True, options=parse_single_choice_options([data[1][index]]))
         else:
             # multiple choice question
             options = [strip_stuff(o) for o in data[1][index:next_question_index]]
-            question = Question(name=name, single_choice=False, 
+            question = Question(id=question_id, single_choice=False, 
                                 options=options)
         questions.append(question)
 
@@ -116,13 +116,13 @@ def parse_ratings(data, questions: List[Question]) -> List[Rating]:
                 # print(f'row[{row_index}]: {row[row_index]}')
                 answer = get_single_choice_answer(row[row_index], question)
                 if len(answer) == 0:
-                    print(f'WARNING: single choice question "{question.name}" has no answer on row {row_id} ({row[0]}...)')
+                    print(f'WARNING: single choice question "{question.id}" has no answer on row {row_id} ({row[0]}...)')
                 # print(f'answer: {answer}')
-                rating = Rating(file=file, question_id=question.name, rating_results=answer)
+                rating = Rating(file=file, question_id=question.id, rated_option_ids=answer)
             else:
                 # print(f'row[{row_index}:]: {row[row_index:]}')
                 answers = get_multi_choice_answers(row[row_index:], question)
-                rating = Rating(file=file, question_id=question.name, rating_results=answers)
+                rating = Rating(file=file, question_id=question.id, rated_option_ids=answers)
 
             # print(f'rating: {rating.model_dump()}')
             row_index += len(question.options) if not question.single_choice else 1

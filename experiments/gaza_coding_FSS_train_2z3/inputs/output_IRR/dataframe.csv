@@ -1,4 +1,4 @@
-file,prompt_key,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - Copy of vyhodnocení Robin.csv,coding FSS - Copy of vyhodnocení Veronica.csv,majority,worst_case
+file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - Copy of vyhodnocení Robin.csv,coding FSS - Copy of vyhodnocení Veronica.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Hlavní téma článku,single_choice,Teroristické operace,Dílčí konflikty a střety,Teroristické operace,Teroristické operace,--WORST-CASE
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Geopolitický rámec,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Historicko-kulturní rámec,False,True,False,False,True

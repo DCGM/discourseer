@@ -1,4 +1,4 @@
-file,prompt_key,rating,rater_0.csv,rater_1.csv,rater_2.csv,model,majority,maj_agreement_with_model,worst_case
+file,question_id,rating,rater_0.csv,rater_1.csv,rater_2.csv,model,majority,maj_agreement_with_model,worst_case
 1.1._Zelení_chtějí_hlavu_Čunka.txt,citace_a_parafraze,single_choice,Ano,Ano,Ano,Ano,Ano,True,--WORST-CASE
 1.1._Zelení_chtějí_hlavu_Čunka.txt,dopad,single_choice,Ne,Ne,Ne,Ano,Ne,False,--WORST-CASE
 1.1._Zelení_chtějí_hlavu_Čunka.txt,dotazy,single_choice,Ne,Ne,Ne,Ne,Ne,True,--WORST-CASE

@@ -7,7 +7,7 @@ from enum import Enum
 from typing import Dict, List, Tuple
 import time
 
-from discourseer.extraction_prompts import ExtractionPrompts
+from discourseer.codebook import Codebook
 
 logger = logging.getLogger()
 
@@ -17,6 +17,8 @@ class RatingsCopyMode(Enum):
     original = "original"
     reorganized = "reorganized"
 
+def result_dataframe_index_columns():
+    return ['file', 'question_id', 'rating']
 
 def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None):
     model_dump = model.model_dump(exclude=exclude)
@@ -65,28 +67,32 @@ def prepare_output_dir(output_dir: str = None, create_new: bool = True) -> Tuple
     return output_dir, backup_dir
 
 
-def load_prompts(prompts_file: str = None, prompt_subset: List[str] = None
-                 ) -> ExtractionPrompts:
-    logging.debug(f'Loading prompts from file: {prompts_file}')
+def load_codebook(codebook_file: str = None, question_subset: List[str] = None
+                 ) -> Codebook:
+    logging.debug(f'Loading codebook from file: {codebook_file}')
 
-    if not os.path.exists(prompts_file):
-        raise FileNotFoundError(f"File {prompts_file} not found.")
+    if not os.path.exists(codebook_file):
+        raise FileNotFoundError(f"File {codebook_file} not found.")
 
-    with open(prompts_file, 'r', encoding='utf-8') as f:
-        prompts = json.load(f)
-    prompts = ExtractionPrompts.model_validate(prompts)
-    logging.debug(f"Loaded prompts from codebook: {prompts.codebook_name} (verze: {prompts.codebook_version})")
+    with open(codebook_file, 'r', encoding='utf-8') as f:
+        codebook_json = json.load(f)
 
-    orig_prompt_keys = set(prompts.prompts.keys())
+    try:
+        codebook = Codebook.model_validate(codebook_json)
+    except pydantic.ValidationError as e:
+        raise ValueError(f"Failed to validate codebook from file {codebook_file}. Error: {e}")
+    logging.debug(f"Loaded codebook: {codebook.codebook_name} (verze: {codebook.codebook_version})")
 
-    prompts.select_subset(prompt_subset).select_unique_names_and_question_ids()
+    orig_question_ids = set([q.id for q in codebook.questions])
 
-    if len(prompts.prompts) == 0:
-        raise ValueError(f"No prompts selected from prompt_subset {prompt_subset}. "
-                          "Check the prompt_subset argument and use one or more of the following: "
-                          f"{', '.join(orig_prompt_keys)}")
+    codebook.select_subset(question_subset).select_unique_names()
 
-    return prompts
+    if len(codebook.questions) == 0:
+        raise ValueError(f"No questions selected from question_subset {question_subset}. "
+                          "Check the question_subset argument and use one or more of the following: "
+                          f"{', '.join(orig_question_ids)}")
+
+    return codebook
 
 
 class JSONParser:

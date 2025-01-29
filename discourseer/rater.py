@@ -6,86 +6,85 @@ from typing import List
 
 import pandas as pd
 
-from discourseer.extraction_prompts import ExtractionPrompts, single_choice_tag, ExtractionPrompt
+from discourseer import utils
+from discourseer.codebook import Codebook, single_choice_tag, Question
 
 logger = logging.getLogger()
 
 
 class Rating(pydantic.BaseModel):
     file: str
-    prompt_key: str = None
     question_id: str
-    rating_results: list[str]
+    rated_option_ids: list[str]
 
     model_config = pydantic.ConfigDict(coerce_numbers_to_str=True)  # allow numbers to be stored as strings
 
     @classmethod
-    def from_csv_line(cls, line: str, question_id_to_key: dict[str, str]):
+    def from_csv_line(cls, line: str):#, question_id_to_key: dict[str, str]):
         values_from_csv = line.strip().split(sep=',')
         values_from_csv = [v.strip() for v in values_from_csv]
 
         if len(values_from_csv) >= 3:
-            file, question_id, *rating_results = values_from_csv
-            prompt_key = question_id_to_key.get(question_id, question_id)
-            return cls(file=file, prompt_key=prompt_key, question_id=question_id, rating_results=rating_results)
+            file, question_id, *rated_option_ids = values_from_csv
+            return cls(file=file, question_id=question_id, rated_option_ids=rated_option_ids)
         else:
             return None
 
 
 class Rater:
-    UNKNOWN_QUESTION = "<unknown_question>"
-    UNKNOWN_OPTION = "<unknown_option>"
-    MOST_LIKELY_OPTION = "<most_likely_option>"
 
-    def __init__(self, ratings: List[Rating] = None, name: str = None, extraction_prompts: ExtractionPrompts = None):
+    def __init__(self, ratings: List[Rating] = None, name: str = None, codebook: Codebook = None):
         """Rater consists of list of ratings. (see Rating class)"""
         self.ratings = ratings if ratings else []
         self.name = name
-        self.extraction_prompts = extraction_prompts if extraction_prompts else ExtractionPrompts()
+        self.codebook = codebook if codebook else Codebook()
 
-        self.question_name_to_question_id = {p.name: p.question_id for p in self.extraction_prompts.prompts.values()}
-        self.prompt_key_to_question_id = {key: prompt.question_id for key, prompt in self.extraction_prompts.prompts.items()}
-        self.question_id_to_key = {prompt.question_id: key for key, prompt in self.extraction_prompts.prompts.items()}
-        self.question_ids_to_options = {p.question_id: p.options for p in self.extraction_prompts.prompts.values()}
-        self.prompt_name_to_prompt_key = {p.name: key for key, p in self.extraction_prompts.prompts.items()}
+        self.not_matched_response_names = {}  # {response_name: response_value}
+        self.not_matched_response_values = {}  # {question_id: response_value}
+
+        self.question_name_to_question_id = {question.name: question.id for question in self.codebook.questions}
+        assert len(self.question_name_to_question_id) == len(self.codebook.questions), \
+            "Question names are not unique: " + ', '.join([p.name for p in self.codebook.questions.values()])
+
+        self.option_name_to_option_id = {}  # {question_id: {option_name: option_key}}
+        for question in self.codebook.questions:
+            self.option_name_to_option_id[question.id] = {option.name: option.id for option in question.options}
+            assert len(self.option_name_to_option_id[question.id]) == len(question.options), \
+                f"Option names are not unique for question {question.id}: " + ', '.join([o.name for o in question.options])
 
     def add_model_response(self, file, response: dict):
-        """Add model response to rater. Response_id should be prompt names."""
-        for response_id, value in response.items():
-            logger.debug(f"Adding rating: {response_id}, {value}")
-            if not value:
-                logger.warning(f"None or empty value for response ID {response_id}. Skipping.")
+        """Add model response to rater. Response_id should be question names."""
+        for response_name, response_value in response.items():
+            logger.debug(f"Adding rating: {response_name}, {response_value}")
+
+            question_id = self.question_name_to_question_id.get(response_name, None)
+            if not question_id:
+                logger.warning(f"Response name {response_name} not found in question names. Skipping.")
+                self.not_matched_response_names[response_name] = response_value
                 continue
 
-            prompt_key = self.map_response_id_to_prompt_key(response_id)
-            if not prompt_key:
+            if not response_value:
+                logger.warning(f"None or empty response_value for response ID {response_name}. Skipping.")
+                self.not_matched_response_values[question_id] = response_value
                 continue
 
-            question_id = self.extraction_prompts[prompt_key].question_id
+            if isinstance(response_value, str):
+                response_value = [response_value]
 
-            if isinstance(value, str):
-                value = [value]
+            # match response names to response ids
+            matched_response_ids = []
+            for response_option_name in response_value:
+                option_id = self.option_name_to_option_id[question_id].get(response_option_name, None)
+                if not option_id:
+                    logger.warning(f"Response option name {response_option_name} not found in question options. Skipping.")
+                    self.not_matched_response_values[question_id] = response_option_name
+                    continue
+                matched_response_ids.append(option_id)
 
-            self.ratings.append(
-                Rating(file=file, prompt_key=prompt_key, question_id=question_id, rating_results=value))
-            logger.debug(f"saved rating: {self.ratings[-1]}")
-
-    def map_response_id_to_prompt_key(self, response_id: str) -> str | None:
-        prompt_key = self.prompt_name_to_prompt_key.get(response_id, None)
-        if prompt_key:
-            return prompt_key
-
-        logger.warning(f"Response ID {response_id} not found in extraction prompts. Deleting it.")
-        return None
-
-    # def validate_ratings(self, topic_key: str, ratings: list[str]) -> list[str]:
-    #     extraction_topic = self.extraction_prompts[topic_key]
-    #     if extraction_topic is None:
-    #         return [f'{Rater.UNKNOWN_QUESTION}{r}' for r in ratings]
-    #
-    #     valid_ratings = [Rater.validate_rating_against_topic_options(extraction_topic, r) for r in ratings]
-    #     valid_ratings = list(set(valid_ratings))  # return unique ratings only
-    #     return valid_ratings
+            if matched_response_ids:
+                new_rating = Rating(file=file, question_id=question_id, rated_option_ids=matched_response_ids)
+                self.ratings.append(new_rating)
+                logger.debug(f"saved rating: {new_rating}")
 
     def save_to_csv(self, out_file: str):
         out_path = os.path.dirname(out_file)
@@ -97,76 +96,48 @@ class Rater:
 
         with open(out_file, 'w', encoding='utf-8') as f:
             for rating in self.ratings:
-                rating_results = ','.join(rating.rating_results)
-                f.write(f"{rating.file},{rating.question_id},{rating_results}\n")
+                rated_option_ids = ','.join(rating.rated_option_ids)
+                f.write(f"{rating.file},{rating.question_id},{rated_option_ids}\n")
 
         logger.info(f"Rater {self.name} saved to {out_file}")
 
     def to_series(self) -> pd.Series:
         ratings_dict = {}
         for rating in self.ratings:
-            extraction_prompt = self.get_prompt_from_rating(rating)
-            if extraction_prompt is not None and extraction_prompt.multiple_choice:
-                for option in extraction_prompt.options:
-                    ratings_dict[(rating.file, rating.question_id, option.name)] = option.name in rating.rating_results
+            question = self.codebook[rating.question_id]
+            if question is not None and question.multiple_choice:
+                for option in question.options:
+                    ratings_dict[(rating.file, rating.question_id, option.id)] = option.id in rating.rated_option_ids
             else:
-                ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rating_results[0]
+                ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rated_option_ids[0]
 
-        # sort ratings_dict by only file and leave prompt_key and rating as they are
+        # sort ratings_dict by only file and leave question_id and rating as they are
         ratings_dict = dict(sorted(ratings_dict.items(), key=lambda x: x[0][0]))
 
         series = pd.Series(ratings_dict,
                            index=pd.MultiIndex.from_tuples(
                                ratings_dict.keys(),
-                               names=['file', 'question_id', 'rating']))
+                               names=utils.result_dataframe_index_columns()))
+        series.name = self.name
         return series
 
-    def get_prompt_from_rating(self, rating: Rating) -> ExtractionPrompt | None:
-        if rating.prompt_key is not None and rating.prompt_key in self.extraction_prompts:
-            return self.extraction_prompts[rating.prompt_key]
-
-        prompt_key = self.question_id_to_key.get(rating.question_id, None)
-        if prompt_key is not None:
-            return self.extraction_prompts[prompt_key]
-
-        logger.info(f"Rating {rating} has no prompt key or question id. Question will be seen as single choice "
-                    "with an answer as the first of the list.")
-        return None
-
-    # @staticmethod
-    # def validate_rating_against_prompt_options(extraction_prompt, rating) -> str:
-    #     if extraction_prompt.has_option(rating):
-    #         return rating
-    #
-    #     in_ratings = [o for o in extraction_prompt.options
-    #                   if rating in o.name]
-    #     if len(in_ratings) == 1:
-    #         return f'{Rater.MOST_LIKELY_OPTION}{rating}'
-    #
-    #     return f'{Rater.UNKNOWN_OPTION}{rating}'
-
     @classmethod
-    def from_csv(cls, rater_file: str, extraction_prompts: ExtractionPrompts = None):
-        rater = cls(ratings=[], extraction_prompts=extraction_prompts, name=os.path.basename(rater_file))
+    def from_csv(cls, rater_file: str, codebook: Codebook = None):
+        rater = cls(ratings=[], codebook=codebook, name=os.path.basename(rater_file))
 
         with open(rater_file, 'r', encoding='utf-8') as f:
-            for line in f:
+            for i, line in enumerate(f):
                 line = line.strip()
-                rating = Rating.from_csv_line(line, rater.question_id_to_key)
+                rating = Rating.from_csv_line(line) #, rater.question_id_to_key)
 
                 if rating is None:
-                    logger.warning(f"Can not parse rating from line {line}. Skipping.")
-                    continue
-
-                if not rating.prompt_key:
-                    logger.warning(f"Question ID {rating.question_id} not found in extraction prompts. Deleting it.")
-                    continue
+                    raise ValueError(f"Error parsing file {rater_file} at line: {i+1}. Content: {line}")
 
                 rater.ratings.append(rating)
         return rater
 
     @classmethod
-    def from_dir(cls, ratings_dir: str = None, extraction_prompts: ExtractionPrompts = None) -> list[Rater]:
+    def from_dir(cls, ratings_dir: str = None, codebook: Codebook = None) -> list[Rater]:
         if not ratings_dir or not os.path.isdir(ratings_dir):
             return []
 
@@ -175,18 +146,18 @@ class Rater:
 
         for file in files:
             if os.path.isfile(os.path.join(ratings_dir, file)) and file.endswith('.csv'):
-                raters.append(cls.from_csv(os.path.join(ratings_dir, file), extraction_prompts=extraction_prompts))
+                raters.append(cls.from_csv(os.path.join(ratings_dir, file), codebook=codebook))
 
         return raters
 
     @classmethod
-    def from_dirs(cls, ratings_dirs: list[str] = None, extraction_prompts: ExtractionPrompts = None) -> list[Rater]:
+    def from_dirs(cls, ratings_dirs: list[str] = None, codebook: Codebook = None) -> list[Rater]:
         if not ratings_dirs:
             return []
 
         raters = []
         for ratings_dir in ratings_dirs:
-            raters += cls.from_dir(ratings_dir, extraction_prompts=extraction_prompts)
+            raters += cls.from_dir(ratings_dir, codebook=codebook)
         return raters
 
     @classmethod
@@ -202,13 +173,13 @@ class Rater:
         ratings = []
         for (file, question_id, rating), value in series.items():
             if rating == 'single_choice':
-                ratings.append(Rating(file=file, question_id=question_id, rating_results=[value]))
+                ratings.append(Rating(file=file, question_id=question_id, rated_option_ids=[value]))
             elif Rater.str_to_bool(value):
-                if ratings[-1].question_id == question_id:
-                    ratings[-1].rating_results.append(rating)
+                if len(ratings) > 0 and ratings[-1].question_id == question_id:
+                    ratings[-1].rated_option_ids.append(rating)
                 else:
                     ratings.append(
-                        Rating(file=file, question_id=question_id, rating_results=[rating]))
+                        Rating(file=file, question_id=question_id, rated_option_ids=[rating]))
         return cls(ratings=ratings, name=name if name else str(series.name))
 
     @staticmethod

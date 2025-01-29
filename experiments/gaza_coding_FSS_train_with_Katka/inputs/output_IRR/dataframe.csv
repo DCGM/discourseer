@@ -1,4 +1,4 @@
-file,prompt_key,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS - Robin.csv,coding FSS - Veronica.csv,majority,worst_case
+file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS - Robin.csv,coding FSS - Veronica.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
