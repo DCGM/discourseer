@@ -10,34 +10,34 @@
       "options": [
         {
           "id": "Negativita negativity",
-          "name": "Negativita negativity",
+          "name": "Negativita",
           "description": "Zdůrazňují se negativní jevy (konflikty, útoky, tragédie), negativní emoce (panika, strach, zoufalství), negativní jednání (krutost)."
         },
         {
           "id": "Blízkost proximity",
-          "name": "Blízkost proximity",
+          "name": "Blízkost",
           "description": "Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, na relevanci zprávy pro Česko a Čechy; čeští politici vyjadřující se k situaci)."
         },
         {
           "id": "Elitní osoby prominence",
-          "name": "Elitní osoby prominence",
+          "name": "Elitní osoby",
           "description": "Zpráva obsahuje stanoviska vrcholných politiků, mezinárodních organizací, celebrit - lidí a organizací vnímaných jako autority"
         },
         {
           "id": "Personalizace personalization",
-          "name": "Personalizace personalization",
+          "name": "Personalizace",
           "description": "Zpráva přibližuje osobní příběhy 'obyčejných' lidí (HLP)"
         },
         {
           "id": "Dopad impact",
-          "name": "Dopad impact",
+          "name": "Dopad",
           "description": "Zpráva reflektuje důsledky událostí, ty jsou zobrazené jaké globální spíš než lokální, značné, dalekosáhlé, mimořádné, týkající se či ovlivňující velký počet lidí."
         }
       ]
     },
     {
       "id": "Témata článku",
-      "name": "Messages",
+      "name": "Témata článku",
       "description": "Pokud je téma v libovolné míře přítomné.",
       "multiple_choice": true,
       "options": [
@@ -95,7 +95,7 @@
     },
     {
       "id": "Hlavní téma článku",
-      "name": "Message",
+      "name": "Hlavní téma článku",
       "description": "Zvolte hlavní téma článku. Podle modelu obracené pyramidy by hlavní téma mělo být obsaženo už v titulku a leadu, měla by k němu odkazovat většina výroků v textu. U každé zprávy lze určit jen jedno hlavní téma.",
       "multiple_choice": false,
       "options": [

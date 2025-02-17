@@ -10,7 +10,7 @@
       "options": [
         {
           "id": "Negativita negativity",
-          "name": "Negativita negativity",
+          "name": "Negativita",
           "description": "Zpráva informuje o negativních jevech (konflikty, útoky, tragédie), zobrazuje negativní emoce (panika, strach, zoufalství), popisuje negativní či nepřátelské jednání (krutost, nespravedlnost, zákeřnost). Nebereme negativitu z kulturního hlediska, kdy bychom například zprávu o eliminaci Haníji kódovali jako pozitivní, ptz smrt teroristy, a vraždy způsobené Hamasem jako negativní, ptz teroristé a \"náš nepřítel\". Smrt je smrt a kódujeme vždy jako výraz negativity v textu.",
           "examples": [
             "Izraelská armáda zneškodnila desítky palestinských bojovníků na moři",
@@ -20,7 +20,7 @@
         },
         {
           "id": "Blízkost proximity",
-          "name": "Blízkost proximity",
+          "name": "Blízkost",
           "description": "Reportované události jsou zobrazeny jako geograficky nebo kulturně blízké (explicitní odkazy na společné hodnoty, historii, vzájemné porozumění či spolupráci, na relevanci zprávy pro Česko a Čechy). I dění ve státech bezprostředně sousedící s Českem (Rakousko, Německo, Polsko, Slovensko) kódujeme jako blízké, ve vzdálenějších ne.",
           "examples": [
             "V Izraeli je 200 Čechů, hlásí cestovky",
@@ -30,7 +30,7 @@
         },
         {
           "id": "Elitní osoby prominence",
-          "name": "Elitní osoby prominence",
+          "name": "Elitní osoby",
           "description": "Zpráva obsahuje stanoviska vrcholných politiků (českých i zahraničních), respektovaných mezinárodních organizací, popkulturních celebrit, expertů. Úředníky, policisty, členy městských zastupitelstev atp. nebereme jako elitní osoby; prezidenty, premiéry, ministry, velvyslance bereme jako elitní osoby. Musí jít o živé osoby, ne třeba státní útvary (Izrael řekl, že...)",
           "examples": [
             "Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty",
@@ -40,7 +40,7 @@
         },
         {
           "id": "Personalizace personalization",
-          "name": "Personalizace personalization",
+          "name": "Personalizace",
           "description": "Zpráva přibližuje osobní příběhy, svědectví, zkušenosti lidí zasažených nebo ovlivněných reportovanou událostí. Spíš než přes deklarace institucionalizovaných autorit událost prezentuje přes její prožívání lidmi (HLP).",
           "examples": [
             "Mámu vám zabil Hamás, dozvěděli se sourozenci po propuštění",
@@ -50,7 +50,7 @@
         },
         {
           "id": "Dopad impact",
-          "name": "Dopad impact",
+          "name": "Dopad",
           "description": "Zpráva reflektuje důsledky událostí, ty jsou zobrazené významné, dalekosáhlé, mimořádné, extenzivní (týkající se či ovlivňující velký počet lidí) nebo intenzivní (emocionálně, psychologicky náročné pro personalizované aktéry). Může se vztahovat k jedincům (třeba surové zavraždění babičky a nahrání videa toto zaznamenávajícího na její fb profil), i ke skupinám. Nemusí jít nutně o mezinárodní politický a ekonomický dopad, ale i lidské tragédie (znovu izraelská babička).",
           "examples": [
             "Brazílie svolá kvůli útoku na Izrael mimořádné zasedání Rady bezpečnosti OSN",
@@ -68,7 +68,7 @@
       "options": [
         {
           "id": "Vnitřní politické dění",
-          "name": "Vnitřní politické dění",
+          "name": "Vnitřní politické a občanské dění",
           "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu. (Izrael a Hamas spolu nekomunikují přímo, tj. i dohody o ceasefire a výměně rukojmích jsou někým jiným zprostředkovány - USA, Katarem etc., toto pak metinárodní politická reakce.) I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky. Průzkumy veřejného mínění n. demonstrace přímo v Izraeli (proti Netanjahuovi, za osvobození rukojmích, proti trestání izraelských vojáků etc.) sem patří taky. vyjádření občanů. Střety osadníků a Palestinců, jejich neshody na checkpointech sem patří taky.",
           "examples": [
             "Netanjahu nabídl opozici, aby s ním utvořila vládu národní jednoty",
@@ -88,7 +88,7 @@
         },
         {
           "id": "Vojenské operace Izraele",
-          "name": "Vojenské operace Izraele",
+          "name": "Vojenské operace Izraele a jeho spojenců",
           "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování. Zahrnujeme sem i vojenskou přítomnost spojenců Izraele (USA, státy EU, Kanada, Austrálie).",
           "examples": [
             "Izraelská armáda zasahuje v nemocnici Aš-Šifá. Uvedla, že narazila na výzbroj Hamásu",
@@ -98,7 +98,7 @@
         },
         {
           "id": "Teroristické operace",
-          "name": "Teroristické operace",
+          "name": "Teroristické operace Hamasu a jeho spojenců",
           "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů), případně  vojenskou podporu států na straně Palestiny (Irán).",
           "examples": [
             "Nový pozemní útok. Palestinští radikálové pronikli do oblasti Eškolu",
@@ -158,7 +158,7 @@
         },
         {
           "id": "Historie/kontextualizace",
-          "name": "Historie/kontextualizace",
+          "name": "Historie",
           "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti). Jako kontextualizaci nekódujeme potenciální závěrečný odstavec ve smyslu \"Hamás dne 7. října 2023 zaútočil...\") - toto zohledňujeme v předchozích kategoriích (teroristické operace). Musí jít o odkaz na to, že celé aktuální dění (od 7. října on) není náhodným výbuchem esenciální nenávisti. Patří sem i zprávy informujícví o reformě soudnictví v Izraeli. která útoku ze 7. 10. časově předcházela, nebo i spekulativní připomínky - že teroristé zaútočili na výročí jomkipurské války.",
           "examples": [
             "Křišťálová noc před 85 lety rozpoutala protižidovské peklo",
@@ -175,7 +175,7 @@
       "options": [
         {
           "id": "Vnitřní politické dění",
-          "name": "Vnitřní politické dění",
+          "name": "Vnitřní politické a občanské dění",
           "description": "Zpráva informuje o politickém vývoji v Izraeli, v Gaze, na Západním břehu, o prohlášeních tamějích politiků, jejich návrzích na řešení konfliktu nebo jejich reakcích na zahraniční diplomatické úsilí. Patří sem i zprávy o výměnách rukojmí. I vyjádření představitelů Hamasu mohou mít politický, ne vojenský charakter - hnutí Hamás v roce 2006 zvítězilo v palestinských parlamentních volbách a reprezentuje tedy pásmo Gazy politicky."
         },
         {
@@ -185,12 +185,12 @@
         },
         {
           "id": "Vojenské operace Izraele",
-          "name": "Vojenské operace Izraele",
+          "name": "Vojenské operace Izraele a jeho spojenců",
           "description": "Zpráva popisuje izraelské vojenské operace, jejich provedení, ale i plánování a taktizování."
         },
         {
           "id": "Teroristické operace",
-          "name": "Teroristické operace",
+          "name": "Teroristické operace Hamasu a jeho spojenců",
           "description": "Zpráva se soustředí na útoky palestinských frakcí jako Hamas, Hizballáh a dalších ozbrojených skupin, které jsou označeny jako teroristické (útoky Hútiů/Húsiů)."
         },
         {
@@ -220,14 +220,14 @@
         },
         {
           "id": "Historie/kontextualizace",
-          "name": "Historie/kontextualizace",
+          "name": "Historie",
           "description": "Zpráva informuje o historii palestinsko-izraelského konfliktu, o geopolitických aspektech konfliktu (vztah Západu a Blízkého východu jako post-kolonie, informace o etnických a náboženských střetech v oblasti)."
         }
       ]
     },
     {
       "id": "Mediální rámce (multiple)",
-      "name": "Mediální rámce (multiple)",
+      "name": "Mediální rámce",
       "description": "Mediální rámce jsou způsoby, jakými média prezentují a strukturovaně zpracovávají informace o událostech a tématech. Jsou to perspektivy, úhly pohledu, které ovlivňují, jak publikum interpretuje a chápe danou zprávu.",
       "multiple_choice": true,
       "options": [
