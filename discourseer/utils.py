@@ -74,8 +74,11 @@ def load_codebook(codebook_file: str = None, question_subset: List[str] = None
     if not os.path.exists(codebook_file):
         raise FileNotFoundError(f"File {codebook_file} not found.")
 
-    with open(codebook_file, 'r', encoding='utf-8') as f:
-        codebook_json = json.load(f)
+    try:
+        with open(codebook_file, 'r', encoding='utf-8') as f:
+            codebook_json = json.load(f)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Failed to load json file (codebook) {codebook_file}. Error: {e}")
 
     try:
         codebook = Codebook.model_validate(codebook_json)
