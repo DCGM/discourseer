@@ -99,7 +99,7 @@
       "description": "Choose the main topic of the article. According to the inverted pyramid model, the main topic should be included in the headline and lead, and most of the statements in the text should refer to it. Only one main topic can be specified for each report.",
       "multiple_choice": false,
       "options": [
-       {
+        {
           "id": "Vnitřní politické dění",
           "name": "Domestic politic affairs",
           "description": "The news article provides information on political developments in Israel or Gaza, statements by local politicians, their proposals for resolving the conflict, or reactions to foreign diplomatic efforts. This also includes reports on hostage exchanges."
@@ -218,22 +218,22 @@
         {
           "id": "Představitelé mezinárodních a neziskových organizací",
           "name": "Representatives of international and non-profit organizations",
-	"description": "For example, UN, UNRWA, Doctors Without Borders, etc."
+          "description": "For example, UN, UNRWA, Doctors Without Borders, etc."
         },
         {
           "id": "Vojenští představitelé Izraele",
           "name": "Israeli military officials",
-	"description": "Military leaders, commanders, or spokespeople from the Israel Defense Forces (IDF) or other Israeli security agencies involved in military operations."
+          "description": "Military leaders, commanders, or spokespeople from the Israel Defense Forces (IDF) or other Israeli security agencies involved in military operations."
         },
         {
           "id": "Členové teroristických skupin",
           "name": "Members of terrorist groups",
-	"description": "Leaders and rank-and-file members of militant or terrorist groups operating in the region, such as Hamas, Islamic Jihad, or Hezbollah. If a Hamas member is cited in connection with violent actions, rocket attacks, or other terrorist activities, include them in this category."
+          "description": "Leaders and rank-and-file members of militant or terrorist groups operating in the region, such as Hamas, Islamic Jihad, or Hezbollah. If a Hamas member is cited in connection with violent actions, rocket attacks, or other terrorist activities, include them in this category."
         },
         {
           "id": "Nezávislí experti a analytici",
           "name": "Independent experts and researchers",
-	"description": "Experts, academics, researchers or commentators specializing in Middle East affairs, conflict resolution, international relations or related fields, providing understanding and analysis of the conflict. If the actor is an ambassador/diplomat, classify them as a political representative of the country concerned."
+          "description": "Experts, academics, researchers or commentators specializing in Middle East affairs, conflict resolution, international relations or related fields, providing understanding and analysis of the conflict. If the actor is an ambassador/diplomat, classify them as a political representative of the country concerned."
         },
         {
           "id": "Média a novináři",
@@ -243,12 +243,12 @@
         {
           "id": "Očití svědci a civilisté z Izraele",
           "name": "Eyewitnesses and civilians from Israel",
-	"description": "Israeli civilians affected by the conflict, providing testimony, or commentary. Ordinary Israelis - survivors, relatives of the victims of 10/7, but also Israelis demonstrating against Netanyahu."
+          "description": "Israeli civilians affected by the conflict, providing testimony, or commentary. Ordinary Israelis - survivors, relatives of the victims of 10/7, but also Israelis demonstrating against Netanyahu."
         },
         {
           "id": "Očití svědci a civilisté z Palestiny",
           "name": "Eyewitnesses and Civilians from Palestine",
-	"description": "Palestinian civilians affected by the conflict, providing testimony, or commentary - ordinary Palestinians"
+          "description": "Palestinian civilians affected by the conflict, providing testimony, or commentary - ordinary Palestinians"
         }
       ]
     }

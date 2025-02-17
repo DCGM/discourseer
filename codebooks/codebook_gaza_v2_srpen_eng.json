@@ -23,9 +23,9 @@
           "name": "Proximity",
           "description": "Reported events are depicted as geographically or culturally close (explicit references to common values, history, mutual understanding or cooperation, to the relevance of the report for the Czech Republic and Czechs). As close we also code events in countries immediately neighboring with the Czech Republic (Austria, Germany, Poland, Slovakia), while in more distant ones we do not.",
           "examples": [
-"200 Czechs in Israel, report travel agencies",
-    "Dark months after Munich: Expulsion of Czechoslovaks and Jewish exodus",
-    "Lipavský visits Israel"
+            "200 Czechs in Israel, report travel agencies",
+            "Dark months after Munich: Expulsion of Czechoslovaks and Jewish exodus",
+            "Lipavský visits Israel"
           ]
         },
         {
@@ -33,9 +33,9 @@
           "name": "Prominence",
           "description": "The news article contains the opinions of top politicians (Czech and foreign), respected international organizations, pop culture celebrities, experts. We do not consider officials, police officers, members of city councils, etc. as elite persons; we consider presidents, prime ministers, ministers, ambassadors as elite persons. They must be living persons, not state departments (ie. not Israel said that...).",
           "examples": [
-"Netanyahu offers opposition to form a national unity government with him",
-    "Fauda star Lior Raz joins fight against Hamas",
-    "Musk, alongside Netanyahu, tours kibbutz where Hamas terrorists carried out massacres"
+            "Netanyahu offers opposition to form a national unity government with him",
+            "Fauda star Lior Raz joins fight against Hamas",
+            "Musk, alongside Netanyahu, tours kibbutz where Hamas terrorists carried out massacres"
           ]
         },
         {
@@ -44,8 +44,8 @@
           "description": "The news article presents personal stories, testimonies, and experiences of people affected or influenced by the reported event. Rather than through declarations by institutionalized authorities, it presents the event through people's experiences (human-interest stories).",
           "examples": [
             "'Hamas killed your mother,' siblings learn after their release",
-    "At the festival, Israelis faced gunfire as a backdrop to the music, then fled in panic in all directions",
-    "People light candles at the Israeli embassy in Prague"
+            "At the festival, Israelis faced gunfire as a backdrop to the music, then fled in panic in all directions",
+            "People light candles at the Israeli embassy in Prague"
           ]
         },
         {
@@ -54,8 +54,8 @@
           "description": "The news article reflects the consequences of events, which are depicted as significant, far-reaching, extraordinary, extensive (concerning or influencing a large number of people) or intense (emotionally, psychologically demanding for personalized actors). It can relate to individuals (for example, the brutal murder of a grandmother and uploading a video recording this to her Facebook profile), as well as to groups. It does not necessarily have to be about international political and economic impact, but also human tragedies (again, the Israeli grandmother).",
           "examples": [
             "Brazil to call emergency UN Security Council meeting over attack on Israel",
-    "Israel is at war",
-    "Hamas leader confirms that 'from the river to the sea' truly means the destruction of Israel. He praises Western students"
+            "Israel is at war",
+            "Hamas leader confirms that 'from the river to the sea' truly means the destruction of Israel. He praises Western students"
           ]
         }
       ]
@@ -72,8 +72,8 @@
           "description": "The news article informs about political developments in Israel, Gaza, and the West Bank, about statements by local politicians, their proposals for resolving the conflict (Israel and Hamas do not communicate directly, i.e. even the agreements on a ceasefire and the exchange of hostages are mediated by someone else - the USA, Qatar, etc., which is then it is coded as a transnational political reaction.) Even statements by Hamas representatives may have a political, not a military, character - the Hamas movement won the Palestinian parliamentary elections in 2006 and therefore represents the Gaza Strip politically. Public opinion polls on demonstrations directly in Israel (against Netanyahu, for the release of hostages, against the punishment of Israeli soldiers, etc.) also belong here. Statements by citizens. Clashes between settlers and Palestinians, their disagreements at checkpoints also belong here.",
           "examples": [
             "Netanyahu offers opposition to form a national unity government with him",
-    "'We are too humane, Gaza must be burned to the ground.' Likud MP holds nothing back",
-    "Hamas proposes a three-phase truce to Israel that would lead to the end of the war"
+            "'We are too humane, Gaza must be burned to the ground.' Likud MP holds nothing back",
+            "Hamas proposes a three-phase truce to Israel that would lead to the end of the war"
           ]
         },
         {
@@ -82,8 +82,8 @@
           "description": "The news article provides information on international responses to the conflict from top politicians, international organizations such as the UN, diplomatic initiatives, negotiations, and efforts to broker a ceasefire. This is an external and institutionalized response - a separate topic is defined for public reactions.",
           "examples": [
             "Biden: There is a real chance to extend the truce",
-    "NATO foreign ministers meet in Brussels to discuss Ukraine and the Middle East",
-    "Blinken to visit Israel again"
+            "NATO foreign ministers meet in Brussels to discuss Ukraine and the Middle East",
+            "Blinken to visit Israel again"
           ]
         },
         {
@@ -102,8 +102,8 @@
           "description": "The news article focuses on attacks by Palestinian factions such as Hamas, Hezbollah and other armed groups that are designated as terrorist (Houthi attacks), or military support from states supporting Palestine (Iran).",
           "examples": [
             "New ground attack: Palestinian radicals infiltrate the Eshkol region",
-    "Hamas forced kidnapped child to watch footage of massacres",
-    "Hamas attacks humanitarian corridor from Gaza"
+            "Hamas forced kidnapped child to watch footage of massacres",
+            "Hamas attacks humanitarian corridor from Gaza"
           ]
         },
         {
@@ -112,8 +112,8 @@
           "description": "The news article describes the impact of the conflict on Israeli civilians, focusing on the casualties, the temporary relocation of survivors, and the despair and uncertainty of relatives of hostages taken by Hamas.",
           "examples": [
             "Elderly woman fights for her life in hospital after release by Hamas",
-    "One of the Israeli women freed needed urgent care, shot at October festival",
-    "Father believed his nine-year-old daughter was dead for weeks; after 50 days in captivity, she fell into his arms"
+            "One of the Israeli women freed needed urgent care, shot at October festival",
+            "Father believed his nine-year-old daughter was dead for weeks; after 50 days in captivity, she fell into his arms"
           ]
         },
         {
@@ -121,9 +121,9 @@
           "name": "Impact on Palestinian civilians",
           "description": "The news article describes the impact of the conflict on Palestinian civilians, focusing on casualties, displacement, and events in refugee camps.",
           "examples": [
-           "Rockets hit UN-run school in Gaza; Palestinians report at least 50 dead",
-    "People leaving Shifa Hospital on foot; Israel gives them one hour",
-    "Al-Arabiya: Hamas to exchange 100 hostages for Palestinian women and children from Israeli prisons"
+            "Rockets hit UN-run school in Gaza; Palestinians report at least 50 dead",
+            "People leaving Shifa Hospital on foot; Israel gives them one hour",
+            "Al-Arabiya: Hamas to exchange 100 hostages for Palestinian women and children from Israeli prisons"
           ]
         },
         {
@@ -132,8 +132,8 @@
           "description": "The news article describes efforts to provide or block humanitarian aid, and addresses options for supporting civilians affected by the conflict, which have arisen from initiatives by governments, NGOs and international organizations.",
           "examples": [
             "Rafah reopens: More aid flows into Gaza",
-    "Stop funding Palestine, suggests Lipavský",
-    "Israel allows drinking water into Gaza again"
+            "Stop funding Palestine, suggests Lipavský",
+            "Israel allows drinking water into Gaza again"
           ]
         },
         {
@@ -142,8 +142,8 @@
           "description": "The news article informs about demonstrations in support of Israel or Palestine around the world.",
           "examples": [
             "Dozens of academics sign petition against the spread of antisemitism at Czech universities",
-    "'Stop this.' The audacity and power of Islamist protests shock Germany",
-    "Hundreds march through Prague in support of Palestinians"
+            "'Stop this.' The audacity and power of Islamist protests shock Germany",
+            "Hundreds march through Prague in support of Palestinians"
           ]
         },
         {
@@ -152,8 +152,8 @@
           "description": "The news article informs about the global economic consequences of the conflict (impact on oil prices, delays and increases in the cost of transporting goods due to the situation in the Suez Canal, complications for tourism, etc.)",
           "examples": [
             "Gasoline prices drop below 39 crowns again, despite the conflict in Israel",
-    "Natural gas prices on the exchange continue to rise sharply due to the Middle East situation",
-    "Attacks in the Red Sea will delay and increase transportation costs"
+            "Natural gas prices on the exchange continue to rise sharply due to the Middle East situation",
+            "Attacks in the Red Sea will delay and increase transportation costs"
           ]
         },
         {
@@ -162,7 +162,7 @@
           "description": "The news article informs about the history of the Palestinian-Israeli conflict, about the geopolitical aspects of the conflict (the relationship between the West and the Middle East as a post-colony, information about ethnic and religious clashes in the region). As contextualization, we do not code the potential final paragraph in the sense of \"On October 7, 2023 Hamas had attacked...\") - we consider such a notion into relation with the previous categories (terrorist operations). To be coded in this category, the news article should explain and give a broader context to the fact that current events (from October 7 onwards) are not a random explosion of essential hatred. Into this category we also include articles informing about the reform of the judiciary in Israel, which preceded the attack on October 7, or even speculative declarations - that terrorists attacked on the anniversary of the Yom Kippur War.",
           "examples": [
             "85 years ago, Kristallnacht unleashed anti-Jewish hell",
-    "Israel rejects genocide charges in The Hague, reminds of the Holocaust"
+            "Israel rejects genocide charges in The Hague, reminds of the Holocaust"
           ]
         }
       ]
@@ -237,8 +237,8 @@
           "description": "The news article portrays the situation as tense, conflictual, unfair, and polarized. The given contradictions are implicitly or explicitly portrayed as difficult to resolve, or rather, as solvable primarily by force. The report implicitly or explicitly divides the actors into ingroup and outgroup, where the gain of one party means the loss of the other and vice versa.",
           "examples": [
             "Thousands of activists in Israel prepare for post-war settlement of Gaza Strip",
-    "21 Israeli soldiers killed in Gaza Strip on Monday, most by explosions in two buildings",
-    "Americans launch new attack on Houthi positions in Yemen"
+            "21 Israeli soldiers killed in Gaza Strip on Monday, most by explosions in two buildings",
+            "Americans launch new attack on Houthi positions in Yemen"
           ]
         },
         {
@@ -257,8 +257,8 @@
           "description": "The news article focuses on the impact of the conflict on ordinary civilian life, highlighting civilian casualties, displacement and human suffering on both sides. This framework helps to evoke empathy and highlights the urgent need for humanitarian assistance.",
           "examples": [
             "Truce to ensure significant increase in humanitarian aid to Gaza Strip",
-    "Second-largest hospital in Gaza shuts down, the last one in the south",
-    "US Secretary of State criticizes Israel for failing to protect civilians in Gaza"
+            "Second-largest hospital in Gaza shuts down, the last one in the south",
+            "US Secretary of State criticizes Israel for failing to protect civilians in Gaza"
           ]
         },
         {
@@ -266,9 +266,9 @@
           "name": "Historical and cultural frame",
           "description": "The news article portrays the situation as part of a complex, long-running conflict, emphasizing the need to understand the historical context, geopolitical factors, and perspectives of the actors involved in order to understand the current situation. This framework helps viewers develop a deeper understanding of the underlying causes and dynamics of the conflict, beyond the current political and economic aspects.",
           "examples": [
-           "Dark months after Munich: Expulsion of Czechoslovaks and the exodus of the Jewish population",
-    "Houthis sentence 13 people to death for being homosexuals",
-    "Racist BBC employee denied the Holocaust and spread the vilest antisemitism"
+            "Dark months after Munich: Expulsion of Czechoslovaks and the exodus of the Jewish population",
+            "Houthis sentence 13 people to death for being homosexuals",
+            "Racist BBC employee denied the Holocaust and spread the vilest antisemitism"
           ]
         },
         {
@@ -277,8 +277,8 @@
           "description": "The news article highlights the global geopolitical dimension of the conflict, whose importance goes beyond the actors immediately affected (the Middle East). It takes into account international responses to the conflict, both political (diplomatic statements, protests and calls for action by the global community) and civic (demonstrations in support of Israel or Palestine, discussions on academic campuses). This framework illustrates the interconnectedness of the conflict with broader geopolitical dynamics and public opinion around the world.",
           "examples": [
             "Not just Israel: EU fears the entire Middle East could erupt",
-    "Biden decides to protect Palestinians in the US from deportation due to conditions in Gaza",
-    "Ireland, despite UNRWA employee scandal, donates over half a billion to the agency"
+            "Biden decides to protect Palestinians in the US from deportation due to conditions in Gaza",
+            "Ireland, despite UNRWA employee scandal, donates over half a billion to the agency"
           ]
         },
         {
@@ -287,8 +287,8 @@
           "description": "The news article depicts events as involving those directly involved (the Middle East); responses from individuals, communities, and organizations within Israel and Palestine.",
           "examples": [
             "Police officer shoots two Israeli tourists in Egypt; one Egyptian also killed",
-    "Terror at a bus stop in Israel: two dead and four injured",
-    "Save the Palestinians from disaster and return the hostages to Israel, Abbas calls on Hamas terrorists"
+            "Terror at a bus stop in Israel: two dead and four injured",
+            "Save the Palestinians from disaster and return the hostages to Israel, Abbas calls on Hamas terrorists"
           ]
         }
       ]

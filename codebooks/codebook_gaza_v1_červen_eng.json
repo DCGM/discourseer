@@ -13,29 +13,29 @@
           "name": "Negativity",
           "description": "The news article informs about negative phenomena (conflicts, attacks, tragedies), depicts negative emotions (panic, fear, despair), describes negative or hostile actions (cruelty, injustice, deceit).",
           "examples": [
-   "Israeli army neutralizes dozens of Palestinian fighters at sea",
-    "Eyewitness account from Gaza: Empty streets, stockpiling supplies, and waiting for airstrikes",
-    "We won't spare women and children, Palestinians rally"
+            "Israeli army neutralizes dozens of Palestinian fighters at sea",
+            "Eyewitness account from Gaza: Empty streets, stockpiling supplies, and waiting for airstrikes",
+            "We won't spare women and children, Palestinians rally"
           ]
         },
         {
           "id": "Blízkost proximity",
           "name": "Proximity",
           "description": "Reported events are depicted as geographically or culturally close (explicit references to common values, history, mutual understanding or cooperation, and the relevance of the report for the Czech Republic and Czech people). ",
-"examples": [
-"200 Czechs in Israel, report travel agencies",
-    "Dark months after Munich: Expulsion of Czechoslovaks and Jewish exodus",
-    "Lipavský visits Israel"
-          ] 
-       },
+          "examples": [
+            "200 Czechs in Israel, report travel agencies",
+            "Dark months after Munich: Expulsion of Czechoslovaks and Jewish exodus",
+            "Lipavský visits Israel"
+          ]
+        },
         {
           "id": "Elitní osoby prominence",
           "name": "Prominence",
           "description": "The news article contains opinions from top politicians (Czech and foreign), respected international organizations, pop culture celebrities, and experts.",
-         "examples": [
-           "Netanyahu offers opposition to form a national unity government with him",
-    "Fauda star Lior Raz joins fight against Hamas",
-    "Musk, alongside Netanyahu, tours kibbutz where Hamas terrorists carried out massacres"
+          "examples": [
+            "Netanyahu offers opposition to form a national unity government with him",
+            "Fauda star Lior Raz joins fight against Hamas",
+            "Musk, alongside Netanyahu, tours kibbutz where Hamas terrorists carried out massacres"
           ]
         },
         {
@@ -43,9 +43,9 @@
           "name": "Personalization",
           "description": "The news article presents personal stories, testimonies, and experiences of people affected or influenced by the reported event. Rather than through declarations by institutionalized authorities, it presents the event through people's experiences.",
           "examples": [
-           "'Hamas killed your mother,' siblings learn after their release",
-    "At the festival, Israelis faced gunfire as a backdrop to the music, then fled in panic in all directions",
-    "People light candles at the Israeli embassy in Prague"
+            "'Hamas killed your mother,' siblings learn after their release",
+            "At the festival, Israelis faced gunfire as a backdrop to the music, then fled in panic in all directions",
+            "People light candles at the Israeli embassy in Prague"
           ]
         },
         {
@@ -54,8 +54,9 @@
           "description": "The news article reflects the consequences of events, which are depicted as significant, far-reaching, extraordinary, extensive (concerning or affecting a large number of people) or intense (emotionally, psychologically demanding for personalized actors).",
           "examples": [
             "Brazil to call emergency UN Security Council meeting over attack on Israel",
-    "Israel is at war",
-    "Hamas leader confirms that 'from the river to the sea' truly means the destruction of Israel. He praises Western students"]
+            "Israel is at war",
+            "Hamas leader confirms that 'from the river to the sea' truly means the destruction of Israel. He praises Western students"
+          ]
         }
       ]
     },
@@ -71,8 +72,8 @@
           "description": "The news article provides information on political developments in Israel, Gaza, and the West Bank, as well as statements by local politicians, their proposals for resolving the conflict, and their reactions to foreign diplomatic efforts. This includes reports on hostage exchanges. Statements by Hamas officials may also be of a political, not military, nature - Hamas won the Palestinian parliamentary elections in 2006 and thus represents the Gaza Strip politically.",
           "examples": [
             "Netanyahu offers opposition to form a national unity government with him",
-    "'We are too humane, Gaza must be burned to the ground.' Likud MP holds nothing back",
-    "Hamas proposes a three-phase truce to Israel that would lead to the end of the war"
+            "'We are too humane, Gaza must be burned to the ground.' Likud MP holds nothing back",
+            "Hamas proposes a three-phase truce to Israel that would lead to the end of the war"
           ]
         },
         {
@@ -81,8 +82,8 @@
           "description": "The news article provides information on international responses to the conflict from top politicians, international organizations such as the UN, diplomatic initiatives, negotiations, and efforts to broker a ceasefire. This is an external and institutionalized response - a separate topic is defined for public reactions.",
           "examples": [
             "Biden: There is a real chance to extend the truce",
-    "NATO foreign ministers meet in Brussels to discuss Ukraine and the Middle East",
-    "Blinken to visit Israel again"
+            "NATO foreign ministers meet in Brussels to discuss Ukraine and the Middle East",
+            "Blinken to visit Israel again"
           ]
         },
         {
@@ -91,8 +92,8 @@
           "description": "The news article describes Israeli military operations, their execution, as well as planning and tactics.",
           "examples": [
             "Israeli army raids Al-Shifa Hospital, claims to have found Hamas weaponry",
-    "Israelis take over ministries, parliament, and police headquarters in Gaza",
-    "Israeli army operates in a refugee camp near Hebron in the West Bank"
+            "Israelis take over ministries, parliament, and police headquarters in Gaza",
+            "Israeli army operates in a refugee camp near Hebron in the West Bank"
           ]
         },
         {
@@ -100,9 +101,9 @@
           "name": "Terorist actions",
           "description": "The news article focuses on attacks by Palestinian factions such as Hamas, Hezbollah and other armed groups that are designated as terrorist (Houthi attacks).",
           "examples": [
-             "New ground attack: Palestinian radicals infiltrate the Eshkol region",
-    "Hamas forced kidnapped child to watch footage of massacres",
-    "Hamas attacks humanitarian corridor from Gaza"
+            "New ground attack: Palestinian radicals infiltrate the Eshkol region",
+            "Hamas forced kidnapped child to watch footage of massacres",
+            "Hamas attacks humanitarian corridor from Gaza"
           ]
         },
         {
@@ -116,8 +117,8 @@
           "description": "The news article describes the impact of the conflict on Israeli civilians, focusing on the casualties, the temporary relocation of survivors, and the despair and uncertainty of relatives of hostages taken by Hamas.",
           "examples": [
             "Elderly woman fights for her life in hospital after release by Hamas",
-    "One of the Israeli women freed needed urgent care, shot at October festival",
-    "Father believed his nine-year-old daughter was dead for weeks; after 50 days in captivity, she fell into his arms"
+            "One of the Israeli women freed needed urgent care, shot at October festival",
+            "Father believed his nine-year-old daughter was dead for weeks; after 50 days in captivity, she fell into his arms"
           ]
         },
         {
@@ -126,8 +127,8 @@
           "description": "The news article describes the impact of the conflict on Palestinian civilians, focusing on casualties, displacement, and events in refugee camps.",
           "examples": [
             "Rockets hit UN-run school in Gaza; Palestinians report at least 50 dead",
-    "People leaving Shifa Hospital on foot; Israel gives them one hour",
-    "Al-Arabiya: Hamas to exchange 100 hostages for Palestinian women and children from Israeli prisons"
+            "People leaving Shifa Hospital on foot; Israel gives them one hour",
+            "Al-Arabiya: Hamas to exchange 100 hostages for Palestinian women and children from Israeli prisons"
           ]
         },
         {
@@ -189,7 +190,7 @@
         },
         {
           "id": "Vojenské operace Izraele",
-           "name": "Military operations of Israel",
+          "name": "Military operations of Israel",
           "description": "The news article describes Israeli military operations, their execution, as well as planning and tactics."
         },
         {
@@ -224,12 +225,12 @@
         },
         {
           "id": "Ekonomické důsledky",
-           "name": "Ekonomic consequences",
+          "name": "Ekonomic consequences",
           "description": "The news article informs about the global economic consequences of the conflict (impact on oil prices, delays and increases in the cost of transporting goods due to the situation in the Suez Canal, complications for tourism, etc.)."
         },
         {
           "id": "Historie/kontextualizace",
-         "name": "History",
+          "name": "History",
           "description": "The news article provides information on the history of the Palestinian-Israeli conflict, on the geopolitical aspects of the conflict (the relationship between the West and the Middle East as post-colonies, information on ethnic and religious clashes in the region)."
         }
       ]
@@ -257,7 +258,7 @@
           "examples": [
             "Israel and Hamas agree to extend the truce",
             "Hatred can be defeated: Arab and Jewish association calls for an end to the endless spiral of violence",
-            "Hamas proposes a three-phase truce to Israel that would lead to the end of the,..." 
+            "Hamas proposes a three-phase truce to Israel that would lead to the end of the,..."
           ]
         },
         {
@@ -266,8 +267,8 @@
           "description": "The news article focuses on the impact of the conflict on ordinary civilian life, highlighting civilian casualties, displacement and human suffering on both sides. This framework helps to evoke empathy and highlights the urgent need for humanitarian assistance.",
           "examples": [
             "Truce to ensure significant increase in humanitarian aid to Gaza Strip",
-    "Second-largest hospital in Gaza shuts down, the last one in the south",
-    "US Secretary of State criticizes Israel for failing to protect civilians in Gaza"
+            "Second-largest hospital in Gaza shuts down, the last one in the south",
+            "US Secretary of State criticizes Israel for failing to protect civilians in Gaza"
           ]
         },
         {
@@ -275,9 +276,9 @@
           "name": "Historical and cultural frame",
           "description": "The news article portrays the situation as part of a complex, long-running conflict, emphasizing the need to understand the historical context, geopolitical factors, and perspectives of the actors involved in order to understand the current situation. This framework helps viewers develop a deeper understanding of the underlying causes and dynamics of the conflict.",
           "examples": [
-           "Dark months after Munich: Expulsion of Czechoslovaks and the exodus of the Jewish population",
-    "Houthis sentence 13 people to death for being homosexuals",
-    "Racist BBC employee denied the Holocaust and spread the vilest antisemitism"
+            "Dark months after Munich: Expulsion of Czechoslovaks and the exodus of the Jewish population",
+            "Houthis sentence 13 people to death for being homosexuals",
+            "Racist BBC employee denied the Holocaust and spread the vilest antisemitism"
           ]
         },
         {
@@ -286,8 +287,8 @@
           "description": "The news article highlights the geopolitical dimension of the conflict, whose importance goes beyond the actors immediately affected (the Middle East). It takes into account international responses to the conflict, both political (diplomatic statements, protests and calls for action by the global community) and civic (demonstrations in support of Israel or Palestine, discussions on academic campuses).",
           "examples": [
             "Not just Israel: EU fears the entire Middle East could erupt",
-    "Biden decides to protect Palestinians in the US from deportation due to conditions in Gaza",
-    "Ireland, despite UNRWA employee scandal, donates over half a billion to the agency"
+            "Biden decides to protect Palestinians in the US from deportation due to conditions in Gaza",
+            "Ireland, despite UNRWA employee scandal, donates over half a billion to the agency"
           ]
         },
         {
@@ -296,8 +297,8 @@
           "description": "The news article depicts events as involving those directly involved (the Middle East, i.e. one or more of the countries Bahrain, Egypt, Iraq, Iran, Israel, Jordan, Qatar, Kuwait, Lebanon, Oman, Yemen, Saudi Arabia, Syria, Turkey, United Arab Emirates), contains statements, comments, declarations of testimony from local people, politicians, and organizations.",
           "examples": [
             "Police officer shoots two Israeli tourists in Egypt; one Egyptian also killed",
-    "Terror at a bus stop in Israel: two dead and four injured",
-    "Save the Palestinians from disaster and return the hostages to Israel, Abbas calls on Hamas terrorists"
+            "Terror at a bus stop in Israel: two dead and four injured",
+            "Save the Palestinians from disaster and return the hostages to Israel, Abbas calls on Hamas terrorists"
           ]
         }
       ]
