@@ -137,6 +137,7 @@ class Discourseer:
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
 
         self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
+        self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
 
         if not self.raters:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
