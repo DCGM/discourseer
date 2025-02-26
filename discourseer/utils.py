@@ -18,7 +18,7 @@ class RatingsCopyMode(Enum):
     reorganized = "reorganized"
 
 def result_dataframe_index_columns():
-    return ['file', 'question_id', 'rating']
+    return ['file', 'question_id', 'option_id']
 
 def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None):
     model_dump = model.model_dump(exclude=exclude)
