@@ -105,8 +105,8 @@ class Calculator:
 
             # print(f'\nLoading dataframe from {file_path}')
             df = pd.read_csv(file_path)
-            if 'rating' in df.columns:
-                df.set_index(['file', 'rating'], inplace=True)
+            if 'option_id' in df.columns:
+                df.set_index(['file', 'option_id'], inplace=True)
             else:
                 df.set_index('file', inplace=True)
 

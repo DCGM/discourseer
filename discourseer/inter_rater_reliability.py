@@ -378,7 +378,7 @@ class IRR:
 
         df.reset_index(inplace=True)
         # set worst case as opposite of majority agreement
-        df.loc[df['rating'] != single_choice_tag, self.col_worst_case] = df[self.col_majority].apply(self.get_opposite_rating)
+        df.loc[df['option_id'] != single_choice_tag, self.col_worst_case] = df[self.col_majority].apply(self.get_opposite_rating)
         df.set_index(self.index_cols, inplace=True)
 
         df[self.col_worst_case] = df[self.col_worst_case].astype('string')
@@ -400,7 +400,7 @@ class IRR:
 
     def calculate_irr_for_each_option(self, df: pd.DataFrame, question_id: str, out_file: str):
         df.reset_index(inplace=True)
-        unique_options = df['rating'].unique().tolist()
+        unique_options = df['option_id'].unique().tolist()
 
         if len(unique_options) < 2:
             return
@@ -414,7 +414,7 @@ class IRR:
 
         # calculate IRR for each option
         for option in unique_options:
-            df_option = df.xs(option, level='rating')
+            df_option = df.xs(option, level='option_id')
             if df_option.shape[0] == 0:
                 logger.debug(f"No ratings for option {option} in question_id {question_id}. Skipping IRR calculation.")
                 continue
