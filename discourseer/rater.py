@@ -39,8 +39,8 @@ class Rater:
         self.name = name
         self.codebook = codebook if codebook else Codebook()
 
-        self.not_matched_response_names = {}  # {response_name: response_value}
-        self.not_matched_response_values = {}  # {question_id: response_value}
+        self.unmatched_response_question_names = {}  # {response_question_name: response_option_name}
+        self.unmatched_response_option_names = {}  # {question_id: response_option_name}
 
         self.question_name_to_question_id = {question.name: question.id for question in self.codebook.questions}
         assert len(self.question_name_to_question_id) == len(self.codebook.questions), \
@@ -54,30 +54,30 @@ class Rater:
 
     def add_model_response(self, file, response: dict):
         """Add model response to rater. Response_id should be question names."""
-        for response_name, response_value in response.items():
-            logger.debug(f"Adding rating: {response_name}, {response_value}")
+        for response_question_name, response_option_name in response.items():
+            logger.debug(f"Adding rating: {response_question_name}, {response_option_name}")
 
-            question_id = self.question_name_to_question_id.get(response_name, None)
+            question_id = self.question_name_to_question_id.get(response_question_name, None)
             if not question_id:
-                logger.warning(f"Response name {response_name} not found in question names. Skipping.")
-                self.not_matched_response_names[response_name] = response_value
+                logger.info(f"Response name {response_question_name} not found in question names. Skipping.")
+                self.unmatched_response_question_names[response_question_name] = response_option_name
                 continue
 
-            if not response_value:
-                logger.warning(f"None or empty response_value for response ID {response_name}. Skipping.")
-                self.not_matched_response_values[question_id] = response_value
+            if not response_option_name:
+                logger.info(f"None or empty response_option_name for response ID {response_question_name}. Skipping.")
+                self.unmatched_response_option_names[question_id] = response_option_name
                 continue
 
-            if isinstance(response_value, str):
-                response_value = [response_value]
+            if isinstance(response_option_name, str):
+                response_option_name = [response_option_name]
 
             # match response names to response ids
             matched_response_ids = []
-            for response_option_name in response_value:
+            for response_option_name in response_option_name:
                 option_id = self.option_name_to_option_id[question_id].get(response_option_name, None)
                 if not option_id:
-                    logger.warning(f"Response option name {response_option_name} not found in question options. Skipping.")
-                    self.not_matched_response_values[question_id] = response_option_name
+                    logger.info(f"Response option name {response_option_name} not found in question options. Skipping.")
+                    self.unmatched_response_option_names[question_id] = response_option_name
                     continue
                 matched_response_ids.append(option_id)
 
@@ -120,6 +120,35 @@ class Rater:
                                names=utils.result_dataframe_index_columns()))
         series.name = self.name
         return series
+
+    def save_unmatched_responses(self, out_file: str):
+        out_path = os.path.dirname(out_file)
+        if not os.path.exists(out_path):
+            os.makedirs(out_path)
+        out_file = out_file if out_file.endswith('.json') else out_file + '.json'
+
+        unmatched_responses = {
+            'codebook_name': self.codebook.codebook_name,
+            'codebook_version': self.codebook.codebook_version,
+            'rater_name': self.name,
+            'unmatched_question_names_count': len(self.unmatched_response_question_names),
+            'unmatched_option_names_count': len(self.unmatched_response_option_names),
+        }
+
+        if len(self.unmatched_response_question_names) > 0 or len(self.unmatched_response_option_names) > 0:
+            if len(self.unmatched_response_question_names) > 0:
+                unmatched_responses['unmatched_question_names'] = self.unmatched_response_question_names
+        
+            if len(self.unmatched_response_option_names) > 0:
+                unmatched_responses['unmatched_option_names'] = self.unmatched_response_option_names
+
+            unmatched_responses['question_name_to_question_id'] = self.question_name_to_question_id,
+            unmatched_responses['option_name_to_option_id'] = self.option_name_to_option_id
+
+        utils.dict_to_json_file(unmatched_responses, out_file)
+        logger.info(f'Unmatched response names saved to {out_file}')
+        logger.info(f'\t- {len(self.unmatched_response_question_names)} unmatched question names')
+        logger.info(f'\t- {len(self.unmatched_response_option_names)} unmatched option names') 
 
     @classmethod
     def from_csv(cls, rater_file: str, codebook: Codebook = None):
