@@ -159,8 +159,8 @@ class IRR:
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
-                 calculate_irr_for_options: bool = False,
-                 export_dataframes_for_options: bool = False):
+                 calculate_irr_for_options: bool = True,
+                 export_dataframes_for_options: bool = True):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
@@ -172,7 +172,7 @@ class IRR:
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
         os.makedirs(self.out_dir, exist_ok=True)
 
-        if self.calculate_irr_for_options:
+        if self.export_dataframes_for_options:
             self.out_questions_and_options_dir = os.path.join(self.out_dir, 'question_and_option_results')
             os.makedirs(self.out_questions_and_options_dir, exist_ok=True)
 
@@ -232,16 +232,23 @@ class IRR:
 
         overall_results = self.get_irr_result(df)
 
+        print(f'whole dataframe before adding options to answers:\n{df}')
+
+        df = self.add_option_id_to_answers(df)
+
+        print(f'whole dataframe after adding options to answers:\n{df}')
+
         question_irr_results = {}
         for question_id in question_ids:
             logger.info(f"Calculating IRR for question {question_id}")
             df_question = df.xs(question_id, level=self.index_cols[1])
+            # print(f'\ndf_question for {question_id}:\n{df_question}')
             question_irr_results[question_id] = self.get_irr_result(df_question)
 
             # save df_question to csv
             if self.calculate_irr_for_options:
                 df_question_output_file = os.path.join(self.out_questions_and_options_dir,
-                                                     f"dataframe__{question_id.replace(' ', '_')}")
+                                                    f"dataframe__{question_id.replace(' ', '_')}")
                 if self.export_dataframes_for_options:
                     df_question.to_csv(df_question_output_file + '.csv')
                 self.calculate_irr_for_each_option(df_question, question_id, df_question_output_file)
@@ -263,10 +270,26 @@ class IRR:
         self.df = df
 
         return irr_results
+    
+    def add_option_id_to_answers(self, df: pd.DataFrame) -> pd.DataFrame:
+        # in every rater_column and every row, there is True or False
+        # add option_id to each value and convert to string
+
+        for rater_column in self.input_columns + self.model_columns + [self.col_worst_case] + [self.col_best_case]:
+            df[f'{rater_column}_str'] = df[rater_column].astype(str) + '_' + df.index.get_level_values(2).astype(str)
+            df.drop(columns=rater_column, inplace=True)
+            df.rename(columns={f'{rater_column}_str': rater_column}, inplace=True)
+
+        return df
 
     def get_irr_result(self, df: pd.DataFrame) -> IRRResult:
         if self.model_rater or self.col_model in df.columns:
-            cac_with_model = CAC(df.loc[:, self.input_columns + self.model_columns])
+            df_with_model = df.loc[:, self.input_columns + self.model_columns]
+            # df_with_model.reset_index(inplace=True)
+            # df_with_model = df_with_model.loc[:, self.input_columns + self.model_columns]
+            cac_with_model = CAC(df_with_model)
+            # print(f'cac_with_model: {cac_with_model}')
+            # print(f'cac_with_model:\n{cac_with_model.ratings}')  # to print the whole DataFrame again
         else:
             cac_with_model = None
 
@@ -419,8 +442,8 @@ class IRR:
                 logger.debug(f"No ratings for option {option} in question_id {question_id}. Skipping IRR calculation.")
                 continue
 
-            out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
             if self.export_dataframes_for_options:
+                out_file_option = f"{out_file}__{option.replace(' ', '_').replace('/', '_or_')}.csv"
                 df_option.to_csv(out_file_option)
             option_irr_kripp = self.get_irr_result(df_option).krippendorff_alpha.without_model
             self.option_results[question_id][option] = option_irr_kripp
