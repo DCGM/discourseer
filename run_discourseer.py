@@ -129,9 +129,10 @@ class Discourseer:
         logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
-        for file in self.input_files:
+        for file_id, file in enumerate(self.input_files):
             with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
+                logging.debug(f'New document {file_id + 1}/{len(self.input_files)}:\n\n')
                 response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
@@ -150,7 +151,6 @@ class Discourseer:
         self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_answers(self, text: str, text_id: str):
-        logging.debug('New document:\n\n')
         text_short = text[:min(50, len(text))].replace('\n', '')
         logging.info(f"Extracting answers from text: {text_id} ({text_short}...)")
 
@@ -167,6 +167,8 @@ class Discourseer:
 
         logging.debug(f"Response raw: {response}")
         response = response.choices[0].message.content
+        if response == '':
+            raise ValueError(f"Empty response from GPT model for text: {text_id}. Possible cause is not enough output tokens. Consider raising max_tokens parameter especially if using an o series reasoning model like o1 or o3")
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")
