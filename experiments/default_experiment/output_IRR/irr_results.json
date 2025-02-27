@@ -1,43 +1,43 @@
 {
   "overall": {
     "fleiss_kappa": {
-      "best_case": 0.87627,
+      "best_case": 0.78218,
       "with_model": null,
-      "worst_case": 0.21868,
-      "without_model": 0.83582
+      "worst_case": 0.19713,
+      "without_model": 0.71286
     },
     "krippendorff_alpha": {
-      "best_case": 0.8772,
+      "best_case": 0.78383,
       "with_model": null,
-      "worst_case": 0.2246,
-      "without_model": 0.83748
+      "worst_case": 0.20321,
+      "without_model": 0.71576
     },
     "gwet_ac1": {
-      "best_case": 0.91871,
+      "best_case": 0.85344,
       "with_model": null,
-      "worst_case": 0.41361,
-      "without_model": 0.89158
+      "worst_case": 0.39147,
+      "without_model": 0.80442
     },
     "majority_agreement": null
   },
   "mean_through_questions": {
     "fleiss_kappa": {
-      "best_case": 0.5094,
+      "best_case": 0.44525,
       "with_model": 0.0,
-      "worst_case": -0.03963,
-      "without_model": 0.44528
+      "worst_case": -0.04725,
+      "without_model": 0.36349
     },
     "krippendorff_alpha": {
-      "best_case": 0.54898,
+      "best_case": 0.4855,
       "with_model": 0.0,
-      "worst_case": 0.02652,
-      "without_model": 0.50463
+      "worst_case": 0.01898,
+      "without_model": 0.42398
     },
     "gwet_ac1": {
-      "best_case": 0.78558,
+      "best_case": 0.75477,
       "with_model": 0.0,
-      "worst_case": 0.14416,
-      "without_model": 0.70662
+      "worst_case": 0.126,
+      "without_model": 0.66467
     },
     "majority_agreement": 0.0
   },
@@ -107,22 +107,22 @@
     },
     "place": {
       "fleiss_kappa": {
-        "best_case": 0.92852,
+        "best_case": 0.67191,
         "with_model": null,
-        "worst_case": -0.12362,
-        "without_model": 0.90613
+        "worst_case": -0.1541,
+        "without_model": 0.57895
       },
       "krippendorff_alpha": {
-        "best_case": 0.92926,
+        "best_case": 0.67532,
         "with_model": null,
-        "worst_case": -0.11191,
-        "without_model": 0.90743
+        "worst_case": -0.14208,
+        "without_model": 0.5848
       },
       "gwet_ac1": {
-        "best_case": 0.9706,
+        "best_case": 0.84738,
         "with_model": null,
-        "worst_case": 0.07631,
-        "without_model": 0.96055
+        "worst_case": 0.00364,
+        "without_model": 0.79275
       },
       "majority_agreement": null
     }

@@ -37,7 +37,7 @@
         "content": {
           "range": "3",
           "genre": "report",
-          "message-trigger": "politician",
+          "message-trigger": "public",
           "place": [
             "czech-republic"
           ]
@@ -89,8 +89,7 @@
           "genre": "report",
           "message-trigger": "politician",
           "place": [
-            "ukraine",
-            "russia"
+            "ukraine"
           ]
         }
       }

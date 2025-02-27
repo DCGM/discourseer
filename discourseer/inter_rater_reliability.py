@@ -159,7 +159,7 @@ class IRR:
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
-                 calculate_irr_for_options: bool = False,
+                 calculate_irr_for_options: bool = True,
                  export_dataframes_for_options: bool = False):
         self.raters = raters
         self.model_rater = model_rater
