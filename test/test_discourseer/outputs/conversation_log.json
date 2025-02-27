@@ -2,7 +2,7 @@
   "model": "gpt-3.5-turbo-0125",
   "max_tokens": 1024,
   "temperature": 0.0,
-  "top_p": 0,
+  "top_p": 0.0,
   "response_format": "json",
   "schema_definition": [
     {
@@ -37,7 +37,7 @@
         "content": {
           "range": "3",
           "genre": "report",
-          "message-trigger": "public",
+          "message-trigger": "politician",
           "place": [
             "czech-republic"
           ]
@@ -89,8 +89,8 @@
           "genre": "report",
           "message-trigger": "politician",
           "place": [
-            "russia",
-            "ukraine"
+            "ukraine",
+            "russia"
           ]
         }
       }

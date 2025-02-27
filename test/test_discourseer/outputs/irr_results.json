@@ -2,44 +2,44 @@
   "overall": {
     "fleiss_kappa": {
       "best_case": 0.87627,
-      "with_model": 0.81024,
+      "with_model": 0.8021,
       "worst_case": 0.21868,
       "without_model": 0.83582
     },
     "krippendorff_alpha": {
       "best_case": 0.8772,
-      "with_model": 0.81168,
+      "with_model": 0.8036,
       "worst_case": 0.2246,
       "without_model": 0.83748
     },
     "gwet_ac1": {
       "best_case": 0.91871,
-      "with_model": 0.87536,
+      "with_model": 0.86994,
       "worst_case": 0.41361,
       "without_model": 0.89158
     },
-    "majority_agreement": 0.909
+    "majority_agreement": 0.879
   },
   "mean_through_questions": {
     "fleiss_kappa": {
       "best_case": 0.5094,
-      "with_model": 0.34203,
+      "with_model": 0.33607,
       "worst_case": -0.03963,
       "without_model": 0.44528
     },
     "krippendorff_alpha": {
       "best_case": 0.54898,
-      "with_model": 0.39555,
+      "with_model": 0.39009,
       "worst_case": 0.02652,
       "without_model": 0.50463
     },
     "gwet_ac1": {
       "best_case": 0.78558,
-      "with_model": 0.62699,
+      "with_model": 0.60539,
       "worst_case": 0.14416,
       "without_model": 0.70662
     },
-    "majority_agreement": 0.75
+    "majority_agreement": 0.6665
   },
   "questions": {
     "range": {
@@ -87,23 +87,23 @@
     "message-trigger": {
       "fleiss_kappa": {
         "best_case": 0.2,
-        "with_model": 0.06383,
+        "with_model": 0.04,
         "worst_case": -0.11111,
         "without_model": 0.0
       },
       "krippendorff_alpha": {
         "best_case": 0.26667,
-        "with_model": 0.14184,
+        "with_model": 0.12,
         "worst_case": -0.01852,
         "without_model": 0.11111
       },
       "gwet_ac1": {
         "best_case": 0.36842,
-        "with_model": 0.21893,
+        "with_model": 0.13253,
         "worst_case": -0.02564,
         "without_model": 0.14286
       },
-      "majority_agreement": 0.667
+      "majority_agreement": 0.333
     },
     "place": {
       "fleiss_kappa": {
