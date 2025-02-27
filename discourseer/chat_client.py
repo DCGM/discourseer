@@ -20,11 +20,6 @@ models_max_chars = {
     'gpt-3.5-turbo-0125': 35000
 }
 
-# o_series_models = [
-#     'o3',
-#     'o1'
-# ]
-
 class ResponseFormat(Enum):
     json = "json"
     normal = "normal"
@@ -80,28 +75,6 @@ class ChatClient:
         self.test_client()
 
     def invoke(self, response_format: ResponseFormat = ResponseFormat.normal, **kwargs):
-        # if "model" not in kwargs:
-        #     raise ValueError("Model not provided in the arguments.")
-
-        # if self.is_o_series_model(kwargs["model"]):
-        #     max_tokens = kwargs.get("max_tokens", None)
-        #     if max_tokens:
-        #         kwargs.pop("max_tokens")
-        #         kwargs["max_completion_tokens"] = max_tokens
-
-        #     kwargs.pop("temperature", None)
-        #     kwargs.pop('top_p', None)
-
-        #     if kwargs["model"].startswith("o1"):
-        #         for message in kwargs["messages"]:
-        #             if message["role"] == "system":
-        #                 message["role"] = "user"
-        #         kwargs.pop("reasoning_effort", None)
-        # else:
-        #     kwargs.pop("reasoning_effort", None)
-
-        # print(f'response_format: {response_format}')
-
         kwargs = self.exclude_none_values(kwargs)
 
         if response_format == ResponseFormat.json:
@@ -118,7 +91,6 @@ class ChatClient:
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
     def completions_with_backoff(self, **kwargs):
-        # print(f'kwargs: \n{json.dumps(kwargs, indent=2)}')
         return self.client.chat.completions.create(**kwargs)
 
     def test_client(self):
@@ -146,11 +118,8 @@ class ChatClient:
             # shorten last message to fit the model's max tokens
             conversation.messages[-1].content = conversation.messages[-1].content[:-excess]
             logger.debug(f"Shortened last message to fit the model's max tokens, new length: {conversation.get_messages_length_in_chars()}")
-        
-        return conversation
 
-    # def is_o_series_model(self, model: str) -> bool:
-    #     return any(model.startswith(o) for o in o_series_models)
+        return conversation
 
     def exclude_none_values(self, kwargs: dict) -> dict:
         return {k: v for k, v in kwargs.items() if v is not None}
