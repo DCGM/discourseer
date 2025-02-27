@@ -120,7 +120,9 @@ class Discourseer:
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
-        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[])
+        conversation_setting = self.prompt_schema_definition.model_dump()
+        conversation_setting.pop('messages', None)
+        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], **conversation_setting)
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", codebook=self.codebook)
@@ -135,7 +137,7 @@ class Discourseer:
                 logging.debug(f'New document {file_id + 1}/{len(self.input_files)}:\n\n')
                 response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
-            pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
+            pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
 
         self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
         self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
@@ -204,7 +206,7 @@ class Discourseer:
     @staticmethod
     def save_output(output_dir: str, irr_results: IRR):
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
-        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'))
+        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'), exclude_none=True)
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
 
     @staticmethod
