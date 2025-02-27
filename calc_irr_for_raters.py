@@ -64,7 +64,7 @@ class Calculator:
         self.irr_calculator = None
 
     def __call__(self):
-        self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, calculate_irr_for_options=True)
+        self.irr_calculator = IRR(self.raters, out_dir=self.output_dir)
         irr_results = self.irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
