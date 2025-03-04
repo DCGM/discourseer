@@ -5,6 +5,7 @@ import os
 import json
 import time
 from typing import List, Union
+from tqdm import tqdm
 
 from discourseer.codebook import Codebook
 from discourseer.rater import Rater
@@ -131,10 +132,10 @@ class Discourseer:
         logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
-        for file_id, file in enumerate(self.input_files):
+        for file in tqdm(self.input_files):
             with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
-                logging.debug(f'New document {file_id + 1}/{len(self.input_files)}:\n\n')
+                logging.debug(f'New document:\n\n')
                 response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
