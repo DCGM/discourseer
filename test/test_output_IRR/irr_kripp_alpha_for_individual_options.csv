@@ -1,1 +1,9 @@
 question,option,irr
+place,czech-republic,0.44444
+place,slovakia,1.0
+place,poland,1.0
+place,germany,1.0
+place,russia,-0.25
+place,ukraine,0.0
+place,other,1.0
+place,unknown,1.0

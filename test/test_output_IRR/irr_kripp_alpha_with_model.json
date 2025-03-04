@@ -1,0 +1,37 @@
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "krippendorff_alpha": {
+      "with_model": 1.0
+    }
+  },
+  "questions": {
+    "genre": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": 1.0
+        }
+      },
+      "options": {}
+    },
+    "message-trigger": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": 1.0
+        }
+      },
+      "options": {}
+    },
+    "range": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": 1.0
+        }
+      },
+      "options": {}
+    }
+  }
+}
