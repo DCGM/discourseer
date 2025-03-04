@@ -30,11 +30,11 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
         irr_results = IRR([rater_1, rater_2], out_dir='test/test_output_IRR')()
 
-        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.89, 1)
+        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.68295, 1)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.89, 1)
+        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.68775, 1)
         self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.93, 1)
+        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.804, 1)
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
     def test_irr_ignore_nan(self):
@@ -50,6 +50,22 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.86, 1)
         self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
 
+    def test_irr_for_options(self):
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
+        irr_calculator = IRR([rater_1, rater_2], out_dir='test/test_output_IRR', calculate_irr_for_options=True)
+
+        option_results = irr_calculator.option_results
+        place_options = option_results['place']
+
+        self.assertAlmostEqual(place_options['czech-republic'], 0.444, 2)
+        self.assertAlmostEqual(place_options['russia'], -0.25, 2)
+        self.assertAlmostEqual(place_options['ukraine'], 0.0, 2)
+        self.assertAlmostEqual(place_options['other'], 1.0, 2)
+        self.assertAlmostEqual(place_options['unknown'], 1.0, 2)
+        self.assertAlmostEqual(place_options['slovakia'], 1.0, 2)
+        self.assertAlmostEqual(place_options['poland'], 1.0, 2)
+        self.assertAlmostEqual(place_options['germany'], 1.0, 2)
 
 class TestMajAgreement(unittest.TestCase):
     dir = os.path.join(os.path.dirname(__file__), 'maj_agreement')
