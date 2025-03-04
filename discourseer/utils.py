@@ -98,6 +98,19 @@ def load_codebook(codebook_file: str = None, question_subset: List[str] = None
 
     return codebook
 
+def name_to_path(name: str) -> str:
+    name = name.replace(' ', '_')
+    name = name.replace('/', '_')
+    name = name.replace('\\', '_')
+    name = name.replace(':', '_')
+    name = name.replace('*', '_')
+    name = name.replace('?', '_')
+    name = name.replace('"', '_')
+    name = name.replace('<', '_')
+    name = name.replace('>', '_')
+    name = name.replace('|', '_')
+    return name
+
 
 class JSONParser:
     @staticmethod
