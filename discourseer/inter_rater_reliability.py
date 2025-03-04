@@ -70,12 +70,18 @@ class IRRResults(pydantic.BaseModel):
         results = self.get_metric(metric)
 
         if 'irr_result' in results:
-            results['irr_result'] = results['irr_result'][variant]
+            if hasattr(results['irr_result'], variant):
+                results['irr_result'] = getattr(results['irr_result'], variant)
+            else:
+                raise KeyError(f'Variant {variant} not found in irr_result: {results["irr_result"]}')
 
         for key, result in results['questions'].items():
             if result is not None:
-                results['questions'][key] = result[variant]
-        
+                if hasattr(result['irr_result'], variant):
+                    results['questions'][key] = getattr(result['irr_result'], variant)
+                else:
+                    raise KeyError(f"Variant {variant} not found in question {key}: {result['irr_result']}")
+
         return results
 
     def select(self, questions: List[str] = None, options: List[str] = None,
