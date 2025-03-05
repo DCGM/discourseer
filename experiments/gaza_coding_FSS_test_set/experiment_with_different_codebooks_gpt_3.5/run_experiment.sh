@@ -47,12 +47,10 @@ done
 
 # ---------------------------  PRINTING RESULTS  ---------------------------
 
+echo "Printing mean krippendorf alpha results through questions:"
+
 for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     codebook_name=$(basename $codebook | sed 's/.json//')
-    # echo -e "\n\n=============================================================="
-    # echo -e "\tcodebook: $codebook"
-    # echo -e "\tcodebook_name: $codebook_name"
-    # echo -e "==============================================================\n\n"
     if [ "$1" = "mini" ]; then
         OUTPUT_DIR="$EXPERIMENT_DIR/output_mini_$codebook_name"
     else
@@ -60,8 +58,8 @@ for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     fi
 
     # cat $OUTPUT_DIR/irr_results.json
-    echo -ne "$codebook_name:\t"
-    cat $OUTPUT_DIR/irr_results.json | jq '.["mean_through_questions"]["krippendorff_alpha"]["with_model"]'
+    echo -ne "$codebook_name:\t"  | tee -a $EXPERIMENT_DIR/irr_results.txt
+    cat $OUTPUT_DIR/irr_results.json | jq '.["mean_through_questions"]["krippendorff_alpha"]["with_model"]' |  tee -a $EXPERIMENT_DIR/irr_results.txt
 
 done
 
