@@ -1,11 +1,10 @@
 {
-  "overall": 0.63038,
-  "mean_through_questions": 0.59775,
+  "irr_result": 0.53928,
   "questions": {
-    "Zpravodajské hodnoty (multiple)": 0.55606,
-    "Témata článku": 0.56055,
+    "Zpravodajské hodnoty (multiple)": 0.48657,
+    "Témata článku": 0.54113,
     "Hlavní téma článku": 0.61702,
-    "Mediální rámce (multiple)": 0.55284,
-    "Mluvčí": 0.70229
+    "Mediální rámce (multiple)": 0.45815,
+    "Mluvčí": 0.59351
   }
 }

@@ -88,6 +88,10 @@ def visualize_results(results: IRRResults, location: str = None, metric: str = '
         logger.info('No results to visualize, see \{output_folder\}/irr_results.json.')
         return
     results = results.to_dict_of_results()
+    # print('results:')
+    # results_serialized = {k: v.model_dump() for k, v in results.items()}
+    # import json
+    # print(json.dumps(results_serialized, indent=2))
     majority_agreements = [k.majority_agreement for k in results.values()]
     results = {k: getattr(v, metric) for k, v in results.items()}  # visualize only given metric
 

@@ -22,12 +22,12 @@ class TestIRRWithoutModel(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')    
         irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
 
-        self.assertEqual(irr_results.overall.fleiss_kappa.without_model, 1.0)
-        self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertEqual(irr_results.overall.krippendorff_alpha.without_model, 1.0)
-        self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertEqual(irr_results.overall.gwet_ac1.without_model, 1.0)
-        self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
+        self.assertEqual(irr_results.irr_result.fleiss_kappa.without_model, 1.0)
+        self.assertEqual(irr_results.irr_result.fleiss_kappa.with_model, None)
+        self.assertEqual(irr_results.irr_result.krippendorff_alpha.without_model, 1.0)
+        self.assertEqual(irr_results.irr_result.krippendorff_alpha.with_model, None)
+        self.assertEqual(irr_results.irr_result.gwet_ac1.without_model, 1.0)
+        self.assertEqual(irr_results.irr_result.gwet_ac1.with_model, None)
 
     def test_irr_diff(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
@@ -37,12 +37,12 @@ class TestIRRWithoutModel(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
 
-        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.68295, 1)
-        self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.68775, 1)
-        self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.804, 1)
-        self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.fleiss_kappa.without_model, 0.42812, 1)
+        self.assertEqual(irr_results.irr_result.fleiss_kappa.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.krippendorff_alpha.without_model, 0.52344, 1)
+        self.assertEqual(irr_results.irr_result.krippendorff_alpha.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.gwet_ac1.without_model, 0.7007, 1)
+        self.assertEqual(irr_results.irr_result.gwet_ac1.with_model, None)
 
     def test_irr_ignore_nan(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
@@ -52,12 +52,12 @@ class TestIRRWithoutModel(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_4], out_dir=output_dir)()
 
-        self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.78, 1)
-        self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.krippendorff_alpha.without_model, 0.79, 1)
-        self.assertEqual(irr_results.overall.krippendorff_alpha.with_model, None)
-        self.assertAlmostEqual(irr_results.overall.gwet_ac1.without_model, 0.86, 1)
-        self.assertEqual(irr_results.overall.gwet_ac1.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.fleiss_kappa.without_model, 0.72182, 1)
+        self.assertEqual(irr_results.irr_result.fleiss_kappa.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.krippendorff_alpha.without_model, 0.76818, 1)
+        self.assertEqual(irr_results.irr_result.krippendorff_alpha.with_model, None)
+        self.assertAlmostEqual(irr_results.irr_result.gwet_ac1.without_model, 0.78492, 1)
+        self.assertEqual(irr_results.irr_result.gwet_ac1.with_model, None)
 
     def test_irr_for_options(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
@@ -65,11 +65,20 @@ class TestIRRWithoutModel(unittest.TestCase):
 
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
-        irr_calculator = IRR([rater_1, rater_2], out_dir=output_dir,
-                             calculate_irr_for_options=True)
+        irr_calculator = IRR([rater_1, rater_2], out_dir=output_dir)
+        irr_results = irr_calculator()
 
-        option_results = irr_calculator.option_results
-        place_options = option_results['place']
+        option_results = irr_results.questions['place'].options
+
+        place_options = {}
+        place_options['czech-republic'] = option_results['czech-republic'].krippendorff_alpha.without_model
+        place_options['russia'] = option_results['russia'].krippendorff_alpha.without_model
+        place_options['ukraine'] = option_results['ukraine'].krippendorff_alpha.without_model
+        place_options['other'] = option_results['other'].krippendorff_alpha.without_model
+        place_options['unknown'] = option_results['unknown'].krippendorff_alpha.without_model
+        place_options['slovakia'] = option_results['slovakia'].krippendorff_alpha.without_model
+        place_options['poland'] = option_results['poland'].krippendorff_alpha.without_model
+        place_options['germany'] = option_results['germany'].krippendorff_alpha.without_model
 
         self.assertAlmostEqual(place_options['czech-republic'], 0.444, 2)
         self.assertAlmostEqual(place_options['russia'], -0.25, 2)
@@ -94,7 +103,7 @@ class TestMajAgreement(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
-        self.assertEqual(irr_results.overall.majority_agreement, 1.0)
+        self.assertEqual(irr_results.irr_result.majority_agreement, 1.0)
 
     def test_question_level(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
@@ -105,7 +114,7 @@ class TestMajAgreement(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
-        self.assertAlmostEqual(irr_results.overall.majority_agreement, 0.697, 2)
+        self.assertAlmostEqual(irr_results.irr_result.majority_agreement, 0.697, 2)
         self.assertAlmostEqual(irr_results.questions['range'].majority_agreement, 0.0, 2)
         self.assertAlmostEqual(irr_results.questions['genre'].majority_agreement, 0.333, 2)
         self.assertAlmostEqual(irr_results.questions['message-trigger'].majority_agreement, 0.333, 2)

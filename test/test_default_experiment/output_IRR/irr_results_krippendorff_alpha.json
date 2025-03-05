@@ -1,10 +1,9 @@
 {
-  "overall": 0.83748,
-  "mean_through_questions": 0.50463,
+  "irr_result": 0.49653,
   "questions": {
     "range": 1.0,
     "genre": -0.0,
     "message-trigger": 0.11111,
-    "place": 0.90743
+    "place": 0.875
   }
 }

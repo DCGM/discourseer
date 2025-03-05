@@ -37,7 +37,7 @@
         "content": {
           "range": "3",
           "genre": "report",
-          "message-trigger": "politician",
+          "message-trigger": "public",
           "place": [
             "czech-republic"
           ]

@@ -60,16 +60,16 @@ class Calculator:
         if not self.raters:
             logging.error("No rater files found. Inter-rater reliability will not be calculated.")
             exit(0)
-        
+
         self.irr_calculator = None
 
     def __call__(self):
-        self.irr_calculator = IRR(self.raters, out_dir=self.output_dir)
+        self.irr_calculator = IRR(self.raters, out_dir=self.output_dir, export_dataframes_for_options=True)
         irr_results = self.irr_calculator()
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
-        utils.dict_to_json_file(irr_results.get_one_metric_and_variant(self.metric, 'without_model'),
+        utils.dict_to_json_file(irr_results.get_metric_and_variant(self.metric, 'without_model'),
                                 self.get_output_file(f'irr_results_{self.metric}.json'))
 
         visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file(f'irr_results_{self.metric}.png'), metric=self.metric, thresholds=self.thresholds)

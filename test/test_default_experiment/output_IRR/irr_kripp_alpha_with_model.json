@@ -1,0 +1,95 @@
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "krippendorff_alpha": {
+      "with_model": null
+    }
+  },
+  "questions": {
+    "range": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "options": {}
+    },
+    "genre": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "options": {}
+    },
+    "message-trigger": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "options": {}
+    },
+    "place": {
+      "irr_result": {
+        "description": "mean IRR through options",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "options": {
+        "czech-republic": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "slovakia": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "poland": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "germany": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "russia": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "ukraine": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "other": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        },
+        "unknown": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": null
+          }
+        }
+      }
+    }
+  }
+}
