@@ -1,5 +1,6 @@
 import os
 import unittest
+import sys
 
 from discourseer.inter_rater_reliability import IRR
 from discourseer.rater import Rater
@@ -16,7 +17,10 @@ class TestIRRWithoutModel(unittest.TestCase):
                                  codebook=self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
                                  codebook=self.codebook)
-        irr_results = IRR([rater_1, rater_2], out_dir='test/test_output_IRR')()
+
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')    
+        irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
 
         self.assertEqual(irr_results.overall.fleiss_kappa.without_model, 1.0)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
@@ -28,7 +32,10 @@ class TestIRRWithoutModel(unittest.TestCase):
     def test_irr_diff(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
-        irr_results = IRR([rater_1, rater_2], out_dir='test/test_output_IRR')()
+
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
 
         self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.68295, 1)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
@@ -41,7 +48,9 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'), self.codebook)
 
-        irr_results = IRR([rater_1, rater_4], out_dir='test/test_output_IRR')()
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_results = IRR([rater_1, rater_4], out_dir=output_dir)()
 
         self.assertAlmostEqual(irr_results.overall.fleiss_kappa.without_model, 0.78, 1)
         self.assertEqual(irr_results.overall.fleiss_kappa.with_model, None)
@@ -53,7 +62,11 @@ class TestIRRWithoutModel(unittest.TestCase):
     def test_irr_for_options(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
-        irr_calculator = IRR([rater_1, rater_2], out_dir='test/test_output_IRR', calculate_irr_for_options=True)
+
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_calculator = IRR([rater_1, rater_2], out_dir=output_dir,
+                             calculate_irr_for_options=True)
 
         option_results = irr_calculator.option_results
         place_options = option_results['place']
@@ -77,7 +90,9 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'))
 
-        irr_results = IRR([rater_1, rater_2], model_rater, out_dir='test/test_output_IRR')()
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
         self.assertEqual(irr_results.overall.majority_agreement, 1.0)
 
@@ -86,7 +101,9 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'))
 
-        irr_results = IRR([rater_1, rater_2], model_rater, out_dir='test/test_output_IRR')()
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
         self.assertEqual(irr_results.overall.majority_agreement, 0.222)
 
