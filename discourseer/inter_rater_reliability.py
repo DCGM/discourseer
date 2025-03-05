@@ -54,6 +54,8 @@ class IRRResults(pydantic.BaseModel):
         results: Dict[str, dict] = {}
         if self.irr_result is not None:
             results['irr_result'] = self.irr_result.model_dump()
+        if self.majority_agreement is not None:
+            results['majority_agreement'] = self.majority_agreement
         return results
 
     def get_metric(self, metric: str) -> Dict[str, dict]:
