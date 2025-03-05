@@ -1,0 +1,8 @@
+prompt_schema_definition_default_gpt_3.5:	prompt_schema_definition_extensive_gpt_3.5:	prompt_schema_definition_default_gpt_3.5:	0.45057
+prompt_schema_definition_extensive_gpt_3.5:	prompt_schema_definition_default_gpt_3.5:	0.45774
+prompt_schema_definition_extensive_gpt_3.5:	prompt_schema_definition_default_gpt_3.5:	0.47681
+prompt_schema_definition_extensive_gpt_3.5:	prompt_schema_definition_default_gpt_3.5:	0.4651
+prompt_schema_definition_extensive_gpt_3.5:	prompt_schema_definition_default_gpt_3.5:	0.46912
+prompt_schema_definition_extensive_gpt_3.5:	0.5181
+prompt_schema_definition_default_gpt_3.5:	0.46659
+prompt_schema_definition_extensive_gpt_3.5:	0.48131
