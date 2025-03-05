@@ -20,6 +20,7 @@ logger = logging.getLogger()
 
 class IRRResults(pydantic.BaseModel):
     irr_result: IRRResult = None  # mean of all question IRR results
+    majority_agreement: Optional[float] = None
     questions: Optional[Dict[str, IRRQuestionResult]] = {}
 
     def calc_mean_through_questions(self) -> IRRResult:
@@ -105,8 +106,8 @@ class IRRResults(pydantic.BaseModel):
         return results
 
     def is_empty(self) -> bool:
-        return (self.irr_result is None or
-                self.irr_result.fleiss_kappa.without_model is None or
+        return ((self.irr_result is None or self.irr_result.is_empty()) and
+                self.majority_agreement is None and
                 not self.questions)
 
     @classmethod
@@ -117,6 +118,7 @@ class IRRResults(pydantic.BaseModel):
 class IRRQuestionResult(pydantic.BaseModel):
     multiple_choice: bool
     irr_result: IRRResult = None
+    majority_agreement: Optional[float]
     options: Optional[Dict[str, IRRResult]] = {}
 
     def calc_mean_through_options(self) -> IRRResult:
@@ -349,7 +351,6 @@ class IRR:
     def get_inter_rater_reliability(self, df: pd.DataFrame) -> IRRResults:
         self.input_columns = df.columns.difference(self.col_non_input_columns).to_list()
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
-        question_ids = df.index.get_level_values(self.index_cols[1]).unique().to_list()
 
         df = self.prepare_majority_agreement(df)
         df = self.add_worst_case(df)
@@ -357,7 +358,8 @@ class IRR:
         logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
         df.to_csv(self.out_dataframe)
 
-        irr_question_results = {}
+        question_ids = df.index.get_level_values(self.index_cols[1]).unique().to_list()
+        irr_question_results: Dict[str, IRRQuestionResult] = {}
         for question_id in question_ids:
             logger.info(f"Calculating IRR for question {question_id}")
 
@@ -372,13 +374,17 @@ class IRR:
                 # question is single choice, calculate IRR for the question as a whole
                 irr_result=self.get_irr_result(df_question)
                 irr_result.description = IRRResultDescription.irr_for_single_choice_question
-                irr_question_results[question_id] = IRRQuestionResult(irr_result=irr_result, multiple_choice=False)
+                irr_question_results[question_id] = IRRQuestionResult(
+                    multiple_choice=False,
+                    irr_result=irr_result,
+                    majority_agreement=irr_result.majority_agreement)
             else:  # multiple choice question
                 irr_question_results[question_id] = self.calculate_irr_for_each_option(
                     df_question, unique_options, question_id)
 
         irr_results = IRRResults(
-            questions=irr_question_results
+            majority_agreement=self.calc_majority_agreement(df),
+            questions = irr_question_results
         )
         irr_results.calc_mean_through_questions()
         self.df = df
@@ -413,8 +419,9 @@ class IRR:
                 df_option.to_csv(df_option_output_file)
 
         irr_question_result = IRRQuestionResult(
+            multiple_choice=True,
+            majority_agreement=self.calc_majority_agreement(df_question),
             options=option_results,
-            multiple_choice=True
         )
         irr_question_result.calc_mean_through_options()
 

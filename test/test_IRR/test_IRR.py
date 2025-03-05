@@ -114,7 +114,7 @@ class TestMajAgreement(unittest.TestCase):
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
-        self.assertAlmostEqual(irr_results.irr_result.majority_agreement, 0.697, 2)
+        self.assertAlmostEqual(irr_results.majority_agreement, 0.697, 2)
         self.assertAlmostEqual(irr_results.questions['range'].majority_agreement, 0.0, 2)
         self.assertAlmostEqual(irr_results.questions['genre'].majority_agreement, 0.333, 2)
         self.assertAlmostEqual(irr_results.questions['message-trigger'].majority_agreement, 0.333, 2)
@@ -132,17 +132,9 @@ class TestMajAgreement(unittest.TestCase):
         irr_results = irr_calculator()
         self.assertAlmostEqual(irr_results.questions['place'].majority_agreement, 0.875, 2)
 
-        # calculate majority agreement for each option
-        df = irr_calculator.df.copy()
-        df_question = df.xs('place', level=irr_calculator.index_cols[1])
-        unique_options = list(df_question.index.get_level_values('option_id').unique())
-        # print(unique_options)
         option_maj_agreements = {}
-        for option in unique_options:
-            option_df = df_question.xs(option, level='option_id')
-            option_maj_agg = irr_calculator.calc_majority_agreement(option_df)
-            option_maj_agreements[option] = option_maj_agg
-            # print(f'option_maj_agg for {option}: {option_maj_agg}')
+        for option_id, option_irr_result in irr_results.questions['place'].options.items():
+            option_maj_agreements[option_id] = option_irr_result.majority_agreement
 
         self.assertAlmostEqual(option_maj_agreements['czech-republic'], 0.667, 2)
         self.assertAlmostEqual(option_maj_agreements['russia'], 0.333, 2)
