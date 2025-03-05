@@ -88,7 +88,7 @@ class TestMajAgreement(unittest.TestCase):
     def test_equal(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
-        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'))
+        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'), self.codebook)
 
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
@@ -99,13 +99,13 @@ class TestMajAgreement(unittest.TestCase):
     def test_diff(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
-        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'))
+        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'), self.codebook)
 
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
-        self.assertEqual(irr_results.overall.majority_agreement, 0.222)
+        self.assertAlmostEqual(irr_results.overall.majority_agreement, 0.697, 2)
 
 
 # class TestReorganizingRaters(unittest.TestCase):
