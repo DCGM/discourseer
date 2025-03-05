@@ -26,6 +26,11 @@ class Codebook(pydantic.BaseModel):
                 return True
         return False
 
+    def is_empty(self) -> bool:
+        return (self.codebook_name is None and
+                self.codebook_version is None and 
+                len(self.questions) == 0)
+
     def is_multiple_choice(self, question_id: str) -> bool:
         for question in self.questions:
             if question.id == question_id:

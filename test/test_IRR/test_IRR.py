@@ -84,7 +84,7 @@ class TestMajAgreement(unittest.TestCase):
     def test_diff(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
-        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_75_diff.csv'))
+        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'))
 
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir='test/test_output_IRR')()
 
