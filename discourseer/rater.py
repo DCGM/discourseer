@@ -105,7 +105,16 @@ class Rater:
         ratings_dict = {}
         for rating in self.ratings:
             question = self.codebook[rating.question_id]
-            if question is not None and question.multiple_choice:
+            if question is None:
+                if len(rating.rated_option_ids) > 1:
+                    if self.codebook.is_empty():
+                        logger.warning(f"Codebook is empty, so question ID {rating.question_id} is encoded as a single choice question and only first rating is saved: (option_id: {rating.rated_option_ids[0]}).")
+                    else:
+                        logger.warning(f"Question ID {rating.question_id} not found in codebook. Adding only first rating (option_id: {rating.rated_option_ids[0]}) as a single choice question.")
+                ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rated_option_ids[0]
+                continue
+
+            if question.multiple_choice:
                 for option in question.options:
                     ratings_dict[(rating.file, rating.question_id, option.id)] = option.id in rating.rated_option_ids
             else:
@@ -152,6 +161,9 @@ class Rater:
 
     @classmethod
     def from_csv(cls, rater_file: str, codebook: Codebook = None):
+        if codebook is None:
+            logger.warning(f"Codebook not provided for rater {rater_file}. Multi-choice questions will be treated as single-choice.")
+
         rater = cls(ratings=[], codebook=codebook, name=os.path.basename(rater_file))
 
         with open(rater_file, 'r', encoding='utf-8') as f:
