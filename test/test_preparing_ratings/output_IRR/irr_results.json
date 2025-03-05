@@ -21,6 +21,7 @@
     },
     "majority_agreement": null
   },
+  "majority_agreement": null,
   "questions": {
     "Zpravodajské hodnoty (multiple)": {
       "multiple_choice": true,
@@ -46,6 +47,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {
         "Negativita negativity": {
           "description": "IRR for this option",
@@ -183,6 +185,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {
         "Vnitřní politické dění": {
           "description": "IRR for this option",
@@ -430,6 +433,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {}
     },
     "Mediální rámce (multiple)": {
@@ -456,6 +460,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {
         "Rámec konfliktu": {
           "description": "IRR for this option",
@@ -615,6 +620,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {
         "Političtí představitelé Izraele": {
           "description": "IRR for this option",

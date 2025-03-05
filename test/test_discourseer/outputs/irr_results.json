@@ -3,24 +3,25 @@
     "description": "mean IRR through questions",
     "fleiss_kappa": {
       "best_case": 0.49318,
-      "with_model": 0.31985,
+      "with_model": 0.30596,
       "worst_case": -0.06089,
       "without_model": 0.4336
     },
     "krippendorff_alpha": {
       "best_case": 0.53542,
-      "with_model": 0.37653,
+      "with_model": 0.36379,
       "worst_case": 0.02752,
       "without_model": 0.49653
     },
     "gwet_ac1": {
       "best_case": 0.78678,
-      "with_model": 0.60659,
+      "with_model": 0.59826,
       "worst_case": 0.15262,
       "without_model": 0.70783
     },
-    "majority_agreement": 0.6665
+    "majority_agreement": 0.65609
   },
+  "majority_agreement": 0.848,
   "questions": {
     "range": {
       "multiple_choice": false,
@@ -46,6 +47,7 @@
         },
         "majority_agreement": 0.333
       },
+      "majority_agreement": 0.333,
       "options": {}
     },
     "genre": {
@@ -72,6 +74,7 @@
         },
         "majority_agreement": 1.0
       },
+      "majority_agreement": 1.0,
       "options": {}
     },
     "message-trigger": {
@@ -98,6 +101,7 @@
         },
         "majority_agreement": 0.333
       },
+      "majority_agreement": 0.333,
       "options": {}
     },
     "place": {
@@ -106,24 +110,25 @@
         "description": "mean IRR through options",
         "fleiss_kappa": {
           "best_case": 0.86364,
-          "with_model": 0.86364,
+          "with_model": 0.80808,
           "worst_case": -0.20863,
           "without_model": 0.85938
         },
         "krippendorff_alpha": {
           "best_case": 0.875,
-          "with_model": 0.875,
+          "with_model": 0.82407,
           "worst_case": -0.10791,
           "without_model": 0.875
         },
         "gwet_ac1": {
           "best_case": 0.97541,
-          "with_model": 0.97541,
+          "with_model": 0.94208,
           "worst_case": 0.11014,
           "without_model": 0.96538
         },
-        "majority_agreement": 1.0
+        "majority_agreement": 0.95837
       },
+      "majority_agreement": 0.958,
       "options": {
         "czech-republic": {
           "description": "IRR for this option",
@@ -217,23 +222,23 @@
           "description": "IRR for this option",
           "fleiss_kappa": {
             "best_case": 1.0,
-            "with_model": 1.0,
+            "with_model": 0.55556,
             "worst_case": -0.02857,
             "without_model": 1.0
           },
           "krippendorff_alpha": {
             "best_case": 1.0,
-            "with_model": 1.0,
+            "with_model": 0.59259,
             "worst_case": 0.05714,
             "without_model": 1.0
           },
           "gwet_ac1": {
             "best_case": 1.0,
-            "with_model": 1.0,
+            "with_model": 0.73333,
             "worst_case": 0.02703,
             "without_model": 1.0
           },
-          "majority_agreement": 1.0
+          "majority_agreement": 0.667
         },
         "ukraine": {
           "description": "IRR for this option",

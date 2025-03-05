@@ -21,6 +21,7 @@
     },
     "majority_agreement": null
   },
+  "majority_agreement": null,
   "questions": {
     "range": {
       "multiple_choice": false,
@@ -46,6 +47,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {}
     },
     "genre": {
@@ -72,6 +74,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {}
     },
     "message-trigger": {
@@ -98,6 +101,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {}
     },
     "place": {
@@ -124,6 +128,7 @@
         },
         "majority_agreement": null
       },
+      "majority_agreement": null,
       "options": {
         "czech-republic": {
           "description": "IRR for this option",
