@@ -24,7 +24,7 @@ class IRRResults(pydantic.BaseModel):
 
     def calc_mean_through_questions(self) -> IRRResult:
         if not self.questions:
-            return IRRResult()
+            return IRRResult.get_empty()
 
         self.irr_result = IRRResult.calc_mean_of_IRRResults([result.irr_result for result in self.questions.values()])
         self.irr_result.description = IRRResultDescription.mean_irr_through_questions
@@ -121,7 +121,7 @@ class IRRQuestionResult(pydantic.BaseModel):
 
     def calc_mean_through_options(self) -> IRRResult:
         if not self.options:
-            return IRRResult()
+            return IRRResult.get_empty()
 
         self.irr_result = IRRResult.calc_mean_of_IRRResults([result for result in self.options.values()])
         self.irr_result.description = IRRResultDescription.mean_irr_through_options
@@ -160,7 +160,7 @@ class IRRQuestionResult(pydantic.BaseModel):
 
 
 class IRRResult(pydantic.BaseModel):
-    description: Optional[str] = None
+    description: Optional[IRRResultDescription] = None
     fleiss_kappa: IRRVariants
     krippendorff_alpha: IRRVariants
     gwet_ac1: IRRVariants
@@ -184,13 +184,26 @@ class IRRResult(pydantic.BaseModel):
                     results[metric] = getattr(self, metric).select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)
                 else:
                     results[metric] = getattr(self, metric)
-
         return results
+
+    def is_empty(self) -> bool:
+        return (self.fleiss_kappa.is_empty() and
+                self.krippendorff_alpha.is_empty() and
+                self.gwet_ac1.is_empty() and
+                self.majority_agreement is None)
+
+    @classmethod
+    def get_empty(cls) -> IRRResult:
+        return IRRResult(
+            fleiss_kappa=IRRVariants(),
+            krippendorff_alpha=IRRVariants(),
+            gwet_ac1=IRRVariants()
+        )
 
     @staticmethod
     def calc_mean_of_IRRResults(results: list[IRRResult]) -> IRRResult:
         if not results:
-            return IRRResult()
+            return IRRResult.get_empty()
         return IRRResult(
             fleiss_kappa=IRRResult.calc_mean_of_IRRVariants([result.fleiss_kappa for result in results]),
             krippendorff_alpha=IRRResult.calc_mean_of_IRRVariants([result.krippendorff_alpha for result in results]),
@@ -224,6 +237,12 @@ class IRRVariants(pydantic.BaseModel):
     with_model: Optional[float] = None
     worst_case: Optional[float] = None
     without_model: Optional[float] = None
+
+    def is_empty(self) -> bool:
+        return (self.best_case is None and
+                self.with_model is None and
+                self.worst_case is None and
+                self.without_model is None)
 
     def select(self, questions: List[str] = None, options: List[str] = None,
             metrics: List[str] = None, variants: List[str] = None,

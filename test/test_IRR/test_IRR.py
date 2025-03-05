@@ -50,7 +50,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         self.assertAlmostEqual(irr_results.irr_result.gwet_ac1.without_model, 0.78492, 1)
         self.assertEqual(irr_results.irr_result.gwet_ac1.with_model, None)
 
-    def test_irr_for_options_new(self):
+    def test_irr_for_options(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
         irr_calculator = IRR([rater_1, rater_2], out_dir='test/test_output_IRR') #, calculate_irr_for_options=True)
