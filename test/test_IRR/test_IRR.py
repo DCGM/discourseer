@@ -96,7 +96,7 @@ class TestMajAgreement(unittest.TestCase):
 
         self.assertEqual(irr_results.overall.majority_agreement, 1.0)
 
-    def test_diff(self):
+    def test_question_level(self):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'), self.codebook)
@@ -106,7 +106,43 @@ class TestMajAgreement(unittest.TestCase):
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
 
         self.assertAlmostEqual(irr_results.overall.majority_agreement, 0.697, 2)
+        self.assertAlmostEqual(irr_results.questions['range'].majority_agreement, 0.0, 2)
+        self.assertAlmostEqual(irr_results.questions['genre'].majority_agreement, 0.333, 2)
+        self.assertAlmostEqual(irr_results.questions['message-trigger'].majority_agreement, 0.333, 2)
+        self.assertAlmostEqual(irr_results.questions['place'].majority_agreement, 0.875, 2)
 
+    def test_option_level(self):
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
+        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'), self.codebook)
+
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr_calculator = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)
+
+        irr_results = irr_calculator()
+        self.assertAlmostEqual(irr_results.questions['place'].majority_agreement, 0.875, 2)
+
+        # calculate majority agreement for each option
+        df = irr_calculator.df.copy()
+        df_question = df.xs('place', level=irr_calculator.index_cols[1])
+        unique_options = list(df_question.index.get_level_values('option_id').unique())
+        # print(unique_options)
+        option_maj_agreements = {}
+        for option in unique_options:
+            option_df = df_question.xs(option, level='option_id')
+            option_maj_agg = irr_calculator.calc_majority_agreement(option_df)
+            option_maj_agreements[option] = option_maj_agg
+            # print(f'option_maj_agg for {option}: {option_maj_agg}')
+
+        self.assertAlmostEqual(option_maj_agreements['czech-republic'], 0.667, 2)
+        self.assertAlmostEqual(option_maj_agreements['russia'], 0.333, 2)
+        self.assertAlmostEqual(option_maj_agreements['slovakia'], 1.0, 2)
+        self.assertAlmostEqual(option_maj_agreements['poland'], 1.0, 2)
+        self.assertAlmostEqual(option_maj_agreements['germany'], 1.0, 2)
+        self.assertAlmostEqual(option_maj_agreements['ukraine'], 1.0, 2)
+        self.assertAlmostEqual(option_maj_agreements['other'], 1.0, 2)
+        self.assertAlmostEqual(option_maj_agreements['unknown'], 1.0, 2)
 
 # class TestReorganizingRaters(unittest.TestCase):
 #     dir = os.path.join(os.path.dirname(__file__), 'reorganizing_raters')

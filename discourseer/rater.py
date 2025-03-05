@@ -104,9 +104,6 @@ class Rater:
     def to_series(self) -> pd.Series:
         ratings_dict = {}
         for rating in self.ratings:
-            if self.name == 'model':
-                print(f'model rater to_series: adding rating: {rating}')
-
             question = self.codebook[rating.question_id]
             if question is None:
                 if len(rating.rated_option_ids) > 1:
