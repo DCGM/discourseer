@@ -42,8 +42,7 @@ for prompt_schema in `ls $DISCOURSEER/prompt_schemas/prompt_schema_definition*`;
     OUTPUT="--output-dir $OUTPUT_DIR"
 
     if [ "$1" = "recalc" ]; then
-        # recalculate IRR for dataframe using calc_irr_for_dataframe.py
-
+        # Check for exactly one codebook in the experiment directory
         codebook_count=$(ls $EXPERIMENT_DIR/codebook* | wc -l)
         if [ $codebook_count -eq 0 ]; then
             echo "No codebooks found in $EXPERIMENT_DIR"
@@ -56,6 +55,7 @@ for prompt_schema in `ls $DISCOURSEER/prompt_schemas/prompt_schema_definition*`;
             codebook_name=$(ls $EXPERIMENT_DIR/codebook*)
         fi
 
+        # recalculate IRR for dataframe using calc_irr_for_dataframe.py
         echo "Recalculating IRR for dataframe using calc_irr_for_dataframe.py"
         python $DISCOURSEER/calc_irr_for_dataframe.py \
             --input-dir $OUTPUT_DIR \

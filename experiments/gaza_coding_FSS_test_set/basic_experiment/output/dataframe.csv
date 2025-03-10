@@ -1,4 +1,4 @@
-file,question_id,rating,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,model,majority,maj_agreement_with_model,worst_case
+file,question_id,option_id,Jana_test_set.csv,Robin_test_set.csv,Veronica_test_set.csv,model,majority,maj_agreement_with_model,worst_case
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,True,False
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280031.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,False,True,False,False
