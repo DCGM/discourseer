@@ -66,6 +66,8 @@ class Calculator:
             self.df.rename(columns={'prompt_key': IRR.index_cols[1]}, inplace=True)
         if 'prompt_id' in self.df.columns:
             self.df.rename(columns={'prompt_id': IRR.index_cols[1]}, inplace=True)
+        if 'rating' in self.df.columns:
+            self.df.rename(columns={'rating': IRR.index_cols[2]}, inplace=True)
 
         index_cols = self.check_present_in_df(self.df, IRR.index_cols)
         self.df.set_index(index_cols, inplace=True)
