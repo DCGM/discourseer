@@ -3,41 +3,25 @@
     "description": "mean IRR through questions",
     "fleiss_kappa": {
       "best_case": 0.43224,
-<<<<<<< HEAD
-      "with_model": 0.2559,
-=======
-      "with_model": 0.24994,
->>>>>>> new_experiments
+      "with_model": 0.25504,
       "worst_case": -0.06565,
       "without_model": 0.36216
     },
     "krippendorff_alpha": {
       "best_case": 0.47956,
-<<<<<<< HEAD
-      "with_model": 0.3179,
-=======
-      "with_model": 0.31244,
->>>>>>> new_experiments
+      "with_model": 0.31711,
       "worst_case": 0.02316,
       "without_model": 0.43304
     },
     "gwet_ac1": {
       "best_case": 0.7536,
-<<<<<<< HEAD
-      "with_model": 0.59432,
+      "with_model": 0.56771,
       "worst_case": 0.1337,
       "without_model": 0.6616
     },
-    "majority_agreement": 0.73959
-=======
-      "with_model": 0.57273,
-      "worst_case": 0.1337,
-      "without_model": 0.6616
-    },
-    "majority_agreement": 0.65609
->>>>>>> new_experiments
+    "majority_agreement": 0.64569
   },
-  "majority_agreement": 0.879,
+  "majority_agreement": 0.818,
   "questions": {
     "range": {
       "multiple_choice": false,
@@ -63,10 +47,7 @@
         },
         "majority_agreement": 0.333
       },
-<<<<<<< HEAD
       "majority_agreement": 0.333,
-=======
->>>>>>> new_experiments
       "options": {}
     },
     "genre": {
@@ -102,25 +83,25 @@
         "description": "IRR for single choice question",
         "fleiss_kappa": {
           "best_case": 0.2,
-          "with_model": 0.06383,
+          "with_model": 0.04,
           "worst_case": -0.11111,
           "without_model": 0.0
         },
         "krippendorff_alpha": {
           "best_case": 0.26667,
-          "with_model": 0.14184,
+          "with_model": 0.12,
           "worst_case": -0.01852,
           "without_model": 0.11111
         },
         "gwet_ac1": {
           "best_case": 0.36842,
-          "with_model": 0.21893,
+          "with_model": 0.13253,
           "worst_case": -0.02564,
           "without_model": 0.14286
         },
-        "majority_agreement": 0.667
+        "majority_agreement": 0.333
       },
-      "majority_agreement": 0.667,
+      "majority_agreement": 0.333,
       "options": {}
     },
     "place": {
@@ -129,25 +110,25 @@
         "description": "mean IRR through options",
         "fleiss_kappa": {
           "best_case": 0.61989,
-          "with_model": 0.58401,
+          "with_model": 0.60438,
           "worst_case": -0.22768,
           "without_model": 0.57366
         },
         "krippendorff_alpha": {
           "best_case": 0.65156,
-          "with_model": 0.61867,
+          "with_model": 0.63735,
           "worst_case": -0.12537,
           "without_model": 0.62103
         },
         "gwet_ac1": {
           "best_case": 0.84272,
-          "with_model": 0.83994,
+          "with_model": 0.81986,
           "worst_case": 0.03446,
           "without_model": 0.78048
         },
-        "majority_agreement": 0.95837
+        "majority_agreement": 0.91675
       },
-      "majority_agreement": 0.958,
+      "majority_agreement": 0.917,
       "options": {
         "czech-republic": {
           "description": "IRR for this option",
@@ -241,23 +222,23 @@
           "description": "IRR for this option",
           "fleiss_kappa": {
             "best_case": -0.2,
-            "with_model": -0.2,
+            "with_model": -0.03704,
             "worst_case": -0.25714,
             "without_model": -0.28571
           },
           "krippendorff_alpha": {
             "best_case": -0.1,
-            "with_model": -0.1,
+            "with_model": 0.04938,
             "worst_case": -0.15238,
             "without_model": -0.14286
           },
           "gwet_ac1": {
             "best_case": 0.53846,
-            "with_model": 0.53846,
+            "with_model": 0.37778,
             "worst_case": -0.18919,
             "without_model": 0.32075
           },
-          "majority_agreement": 1.0
+          "majority_agreement": 0.667
         },
         "ukraine": {
           "description": "IRR for this option",

@@ -2,7 +2,7 @@
   "irr_result": {
     "description": "mean IRR through questions",
     "krippendorff_alpha": {
-      "with_model": 0.3179
+      "with_model": 0.31711
     }
   },
   "questions": {
@@ -28,7 +28,7 @@
       "irr_result": {
         "description": "IRR for single choice question",
         "krippendorff_alpha": {
-          "with_model": 0.14184
+          "with_model": 0.12
         }
       },
       "options": {}
@@ -37,7 +37,7 @@
       "irr_result": {
         "description": "mean IRR through options",
         "krippendorff_alpha": {
-          "with_model": 0.61867
+          "with_model": 0.63735
         }
       },
       "options": {
@@ -68,7 +68,7 @@
         "russia": {
           "description": "IRR for this option",
           "krippendorff_alpha": {
-            "with_model": -0.1
+            "with_model": 0.04938
           }
         },
         "ukraine": {
