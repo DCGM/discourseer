@@ -17,7 +17,7 @@ logger = logging.getLogger()
 
 
 models_max_chars = {
-    'gpt-3.5-turbo-0125': 35000
+    'gpt-3.5-turbo-0125': 38000
 }
 
 class ResponseFormat(Enum):
@@ -109,7 +109,7 @@ class ChatClient:
     def ensure_maximal_length(self, conversation: Conversation) -> Conversation:
         conversation_len = conversation.get_messages_length_in_chars()
         logger.debug(f"Messages length in chars: {conversation_len}")
-        current_max_chars = models_max_chars.get(conversation.model, 35000)
+        current_max_chars = models_max_chars.get(conversation.model, 50_000)
         logger.debug(f"Current maximal chars: {current_max_chars}")
 
         if conversation_len > current_max_chars:
