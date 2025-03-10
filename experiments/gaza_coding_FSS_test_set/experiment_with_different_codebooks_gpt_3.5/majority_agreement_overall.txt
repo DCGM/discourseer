@@ -1,0 +1,6 @@
+0.724	./output_codebook_gaza_v0_kveten/irr_results.json
+0.722	./output_codebook_gaza_v0_kveten_eng/irr_results.json
+0.698	./output_codebook_gaza_v2_srpen_eng/irr_results.json
+0.729	./output_codebook_gaza_v1_červen/irr_results.json
+0.735	./output_codebook_gaza_v1_červen_eng/irr_results.json
+0.71	./output_codebook_gaza_v2_srpen/irr_results.json

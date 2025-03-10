@@ -1,0 +1,2 @@
+0.724	./output_prompt_schema_definition_extensive_gpt_3.5/irr_results.json
+0.702	./output_prompt_schema_definition_default_gpt_3.5/irr_results.json
