@@ -18,6 +18,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'),
                                  codebook=self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')    
         irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
@@ -33,6 +34,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], out_dir=output_dir)()
@@ -48,6 +50,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_4 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_4.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_4], out_dir=output_dir)()
@@ -63,6 +66,7 @@ class TestIRRWithoutModel(unittest.TestCase):
         rater_1 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_1.csv'), self.codebook)
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'texts-vlach-ratings-1ofN', 'rater_2.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_calculator = IRR([rater_1, rater_2], out_dir=output_dir)
@@ -99,6 +103,7 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_equal.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
@@ -110,6 +115,7 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_results = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)()
@@ -125,6 +131,7 @@ class TestMajAgreement(unittest.TestCase):
         rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
         model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater_diff.csv'), self.codebook)
 
+        # set output dir with the name of the function
         func_name = sys._getframe().f_code.co_name
         output_dir = os.path.join(self.dir, f'{func_name}_output')
         irr_calculator = IRR([rater_1, rater_2], model_rater, out_dir=output_dir)
