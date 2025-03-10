@@ -17,8 +17,8 @@ DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='range' rated_option_ids=['3']
 DEBUG:root:rater.py:add_model_response: Adding rating: genre, report
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='genre' rated_option_ids=['report']
-DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, public
-DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='message-trigger' rated_option_ids=['public']
+DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politician
+DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='message-trigger' rated_option_ids=['politician']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['czech-republic']
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='place' rated_option_ids=['czech-republic']
 DEBUG:root:run_discourseer.py:__call__: New document:

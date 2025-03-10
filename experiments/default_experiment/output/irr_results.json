@@ -3,23 +3,39 @@
     "description": "mean IRR through questions",
     "fleiss_kappa": {
       "best_case": 0.43224,
+<<<<<<< HEAD
       "with_model": 0.2559,
+=======
+      "with_model": 0.24994,
+>>>>>>> new_experiments
       "worst_case": -0.06565,
       "without_model": 0.36216
     },
     "krippendorff_alpha": {
       "best_case": 0.47956,
+<<<<<<< HEAD
       "with_model": 0.3179,
+=======
+      "with_model": 0.31244,
+>>>>>>> new_experiments
       "worst_case": 0.02316,
       "without_model": 0.43304
     },
     "gwet_ac1": {
       "best_case": 0.7536,
+<<<<<<< HEAD
       "with_model": 0.59432,
       "worst_case": 0.1337,
       "without_model": 0.6616
     },
     "majority_agreement": 0.73959
+=======
+      "with_model": 0.57273,
+      "worst_case": 0.1337,
+      "without_model": 0.6616
+    },
+    "majority_agreement": 0.65609
+>>>>>>> new_experiments
   },
   "majority_agreement": 0.879,
   "questions": {
@@ -47,7 +63,10 @@
         },
         "majority_agreement": 0.333
       },
+<<<<<<< HEAD
       "majority_agreement": 0.333,
+=======
+>>>>>>> new_experiments
       "options": {}
     },
     "genre": {

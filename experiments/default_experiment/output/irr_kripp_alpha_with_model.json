@@ -2,7 +2,7 @@
   "irr_result": {
     "description": "mean IRR through questions",
     "krippendorff_alpha": {
-      "with_model": 0.3179
+      "with_model": 0.31244
     }
   },
   "questions": {

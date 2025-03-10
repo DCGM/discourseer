@@ -20,6 +20,9 @@ fi
 
 # ---------------------------  RUNNING EXPERIMENTS  ---------------------------
 
+RESULT_FILE=$EXPERIMENT_DIR/krippendorff_alpha_means_through_questions.txt
+echo -n "" > $RESULT_FILE
+
 for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     # echo "codebook: $codebook"
     codebook_name=$(basename $codebook | sed 's/.json//')
@@ -29,48 +32,44 @@ for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     echo -e "==============================================================\n\n"
 
     if [ "$1" = "mini" ]; then
-        OUTPUT="--output-dir $EXPERIMENT_DIR/output_mini_$codebook_name"
+        OUTPUT_DIR="$EXPERIMENT_DIR/output_mini_$codebook_name"
     else
-        OUTPUT="--output-dir $EXPERIMENT_DIR/output_$codebook_name"
+        OUTPUT_DIR="$EXPERIMENT_DIR/output_$codebook_name"
+    fi
+    OUTPUT="--output-dir $OUTPUT_DIR"
+
+    if [ "$1" = "recalc" ]; then
+        # recalculate IRR for dataframe using calc_irr_for_dataframe.py
+        echo "Recalculating IRR for dataframe using calc_irr_for_dataframe.py"
+
+        python $DISCOURSEER/calc_irr_for_dataframe.py \
+            --input-dir $EXPERIMENT_DIR/output_$codebook_name \
+            --output-dir $EXPERIMENT_DIR/output_$codebook_name \
+            --codebook $codebook
+    else
+        # run discourseer normaly
+        echo "Running discourseer"
+        python $DISCOURSEER/run_discourseer.py \
+            --experiment-dir $EXPERIMENT_DIR \
+            --ratings-dir $EXPERIMENT_DIR/../inputs/ratings/ \
+            --texts-dir $EXPERIMENT_DIR/../inputs/texts/ \
+            --codebook $codebook \
+            --log DEBUG \
+            $TEXT_COUNT \
+            $OUTPUT
     fi
 
-    python $DISCOURSEER/run_discourseer.py \
-        --experiment-dir $EXPERIMENT_DIR \
-        --ratings-dir $EXPERIMENT_DIR/../inputs/ratings/ \
-        --texts-dir $EXPERIMENT_DIR/../inputs/texts/ \
-        --codebook $codebook \
-        --log DEBUG \
-        $TEXT_COUNT \
-        $OUTPUT
+
+    cat $OUTPUT_DIR/irr_results.json | jq '.["irr_result"]["krippendorff_alpha"]["with_model"]' | tr -d '\n' >> $RESULT_FILE
+    echo -e "\t$codebook_name" >> $RESULT_FILE
+
+    echo -e "\nresults so far:"
+    cat $RESULT_FILE
+    echo "(last codebook: $codebook_name)"
 done
 
 
 # ---------------------------  PRINTING RESULTS  ---------------------------
 
-for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
-    codebook_name=$(basename $codebook | sed 's/.json//')
-    # echo -e "\n\n=============================================================="
-    # echo -e "\tcodebook: $codebook"
-    # echo -e "\tcodebook_name: $codebook_name"
-    # echo -e "==============================================================\n\n"
-    if [ "$1" = "mini" ]; then
-        OUTPUT_DIR="$EXPERIMENT_DIR/output_mini_$codebook_name"
-    else
-        OUTPUT_DIR="$EXPERIMENT_DIR/output_$codebook_name"
-    fi
-
-    # cat $OUTPUT_DIR/irr_results.json
-    echo -ne "$codebook_name:\t"
-    cat $OUTPUT_DIR/irr_results.json | jq '.["mean_through_questions"]["krippendorff_alpha"]["with_model"]'
-
-done
-
-
-
-# for dir in `ls -d $EXPERIMENT_DIR/output*`; do
-#     dir=$(basename $dir)
-#     cat $dir/irr_results.json | jq '.["mean_through_questions"]["krippendorff_alpha"]["with_model"]'
-#     # echo -e "\n\n=============================================================="
-#     # echo -e "\tdir: $dir"
-#     # echo -e "==============================================================\n\n"
-# done
+echo -e "\nsorted results:"
+cat $RESULT_FILE | sort -n

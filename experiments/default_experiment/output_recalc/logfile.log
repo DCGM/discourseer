@@ -11,14 +11,14 @@ DEBUG:root:run_discourseer.py:__call__: New document:
 INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Tvrdík_skončil_jako_viceprezident.txt (Tvrdík skončil jako viceprezident čínské Citic, ch...)
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4996
 DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 35000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B7m908cn8UZvaxI362jaYJ11JRC5q', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "range": "3",\n    "genre": "report",\n    "message-trigger": "public",\n    "place": [\n        "czech-republic"\n    ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None))], created=1741193062, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1592, total_tokens=1631, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B5W8VMfIMPfr8A8KCqSU3xgdv2WSw', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', role='assistant', function_call=None, tool_calls=None, refusal=None))], created=1740654871, model='gpt-3.5-turbo-0125', object='chat.completion', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1592, total_tokens=1631, prompt_tokens_details={'cached_tokens': 0, 'audio_tokens': 0}, completion_tokens_details={'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}), service_tier='default')
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'public', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='range' rated_option_ids=['3']
 DEBUG:root:rater.py:add_model_response: Adding rating: genre, report
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='genre' rated_option_ids=['report']
-DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, public
-DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='message-trigger' rated_option_ids=['public']
+DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politician
+DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='message-trigger' rated_option_ids=['politician']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['czech-republic']
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='place' rated_option_ids=['czech-republic']
 DEBUG:root:run_discourseer.py:__call__: New document:
@@ -27,7 +27,7 @@ DEBUG:root:run_discourseer.py:__call__: New document:
 INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Chci_spravedlnost_pro_dceru.txt (Chci spravedlnost pro dceru Elišku, říká matka zav...)
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4290
 DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 35000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B7m91u9xRe798LWTJH7ewNt8SAb1s', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None))], created=1741193063, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B5W8WzV7d3yR2CMDG3JiFHivyU5P0', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', role='assistant', function_call=None, tool_calls=None, refusal=None))], created=1740654872, model='gpt-3.5-turbo-0125', object='chat.completion', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, prompt_tokens_details={'cached_tokens': 0, 'audio_tokens': 0}, completion_tokens_details={'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}), service_tier='default')
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'public', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Chci_spravedlnost_pro_dceru.txt' question_id='range' rated_option_ids=['3']
@@ -116,24 +116,44 @@ INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summar
   "irr_result": {
     "description": "mean IRR through questions",
     "fleiss_kappa": {
-      "best_case": 0.43224,
-      "with_model": 0.2559,
-      "worst_case": -0.06565,
-      "without_model": 0.36216
+      "best_case": 0.78218,
+      "with_model": 0.70634,
+      "worst_case": 0.19713,
+      "without_model": 0.71286
     },
     "krippendorff_alpha": {
-      "best_case": 0.47956,
-      "with_model": 0.3179,
-      "worst_case": 0.02316,
-      "without_model": 0.43304
+      "best_case": 0.78383,
+      "with_model": 0.70857,
+      "worst_case": 0.20321,
+      "without_model": 0.71576
     },
     "gwet_ac1": {
-      "best_case": 0.7536,
-      "with_model": 0.59432,
-      "worst_case": 0.1337,
-      "without_model": 0.6616
+      "best_case": 0.85344,
+      "with_model": 0.80475,
+      "worst_case": 0.39147,
+      "without_model": 0.80442
     },
-    "majority_agreement": 0.73959
+    "majority_agreement": 0.879
   },
-  "majority_agreement": 0.879
+  "mean_through_questions": {
+    "fleiss_kappa": {
+      "best_case": 0.44525,
+      "with_model": 0.26873,
+      "worst_case": -0.04725,
+      "without_model": 0.36349
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.4855,
+      "with_model": 0.32302,
+      "worst_case": 0.01898,
+      "without_model": 0.42398
+    },
+    "gwet_ac1": {
+      "best_case": 0.75477,
+      "with_model": 0.59439,
+      "worst_case": 0.126,
+      "without_model": 0.66467
+    },
+    "majority_agreement": 0.7395
+  }
 }

@@ -1,6 +1,6 @@
 {
   "model": "o3-mini-2025-01-31",
-  "max_completion_tokens": 4096,
+  "max_completion_tokens": 6096,
   "response_format": "json",
   "messages": [
     {
