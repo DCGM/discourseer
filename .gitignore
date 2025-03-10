@@ -9,15 +9,13 @@
 .vscode/*
 
 **/tmp/*
-experiments/**/output_*/*
-!experiments/**/output_recalc/*
-!experiments/**/output_IRR/*
+experiments/**/output*_backup_*/*
+experiments/**/output_mini*/*
 
 test/test_out*.png
 test/test_topic_extractor/outputs/*
 test/test_default_experiment/output/logfile.log
-test/**/output_backup_*
-test/**/output_IRR_backup_*
+test/**/output*_backup_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

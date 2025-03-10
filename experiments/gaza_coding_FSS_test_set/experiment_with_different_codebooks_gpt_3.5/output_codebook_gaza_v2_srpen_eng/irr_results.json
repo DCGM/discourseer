@@ -1,0 +1,151 @@
+{
+  "overall": {
+    "fleiss_kappa": {
+      "best_case": 0.73828,
+      "with_model": 0.49806,
+      "worst_case": -0.05622,
+      "without_model": 0.65101
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.73823,
+      "with_model": 0.49798,
+      "worst_case": -0.05627,
+      "without_model": 0.65093
+    },
+    "gwet_ac1": {
+      "best_case": 0.87211,
+      "with_model": 0.74961,
+      "worst_case": 0.43462,
+      "without_model": 0.82978
+    },
+    "majority_agreement": 0.698
+  },
+  "mean_through_questions": {
+    "fleiss_kappa": {
+      "best_case": 0.71948,
+      "with_model": 0.46839,
+      "worst_case": -0.04804,
+      "without_model": 0.62766
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.71955,
+      "with_model": 0.46858,
+      "worst_case": -0.04734,
+      "without_model": 0.62778
+    },
+    "gwet_ac1": {
+      "best_case": 0.76236,
+      "with_model": 0.55404,
+      "worst_case": 0.01832,
+      "without_model": 0.68543
+    },
+    "majority_agreement": 0.6518
+  },
+  "questions": {
+    "Hlavní téma článku": {
+      "fleiss_kappa": {
+        "best_case": 0.74968,
+        "with_model": 0.50333,
+        "worst_case": 0.24918,
+        "without_model": 0.67663
+      },
+      "krippendorff_alpha": {
+        "best_case": 0.74962,
+        "with_model": 0.50348,
+        "worst_case": 0.2511,
+        "without_model": 0.67652
+      },
+      "gwet_ac1": {
+        "best_case": 0.76878,
+        "with_model": 0.5412,
+        "worst_case": 0.3082,
+        "without_model": 0.70143
+      },
+      "majority_agreement": 0.43
+    },
+    "Mediální rámce (multiple)": {
+      "fleiss_kappa": {
+        "best_case": 0.68637,
+        "with_model": 0.44553,
+        "worst_case": -0.11484,
+        "without_model": 0.5809
+      },
+      "krippendorff_alpha": {
+        "best_case": 0.6865,
+        "with_model": 0.44576,
+        "worst_case": -0.11437,
+        "without_model": 0.58113
+      },
+      "gwet_ac1": {
+        "best_case": 0.71554,
+        "with_model": 0.5124,
+        "worst_case": -0.08447,
+        "without_model": 0.62148
+      },
+      "majority_agreement": 0.698
+    },
+    "Mluvčí": {
+      "fleiss_kappa": {
+        "best_case": 0.82656,
+        "with_model": 0.44385,
+        "worst_case": -0.12673,
+        "without_model": 0.76909
+      },
+      "krippendorff_alpha": {
+        "best_case": 0.8266,
+        "with_model": 0.44398,
+        "worst_case": -0.12647,
+        "without_model": 0.76916
+      },
+      "gwet_ac1": {
+        "best_case": 0.90899,
+        "with_model": 0.65589,
+        "worst_case": 0.03469,
+        "without_model": 0.87856
+      },
+      "majority_agreement": 0.657
+    },
+    "Témata článku": {
+      "fleiss_kappa": {
+        "best_case": 0.6585,
+        "with_model": 0.48209,
+        "worst_case": -0.13804,
+        "without_model": 0.54377
+      },
+      "krippendorff_alpha": {
+        "best_case": 0.65859,
+        "with_model": 0.48222,
+        "worst_case": -0.13775,
+        "without_model": 0.54392
+      },
+      "gwet_ac1": {
+        "best_case": 0.7388,
+        "with_model": 0.59056,
+        "worst_case": -0.06193,
+        "without_model": 0.65226
+      },
+      "majority_agreement": 0.762
+    },
+    "Zpravodajské hodnoty (multiple)": {
+      "fleiss_kappa": {
+        "best_case": 0.67627,
+        "with_model": 0.46717,
+        "worst_case": -0.10978,
+        "without_model": 0.5679
+      },
+      "krippendorff_alpha": {
+        "best_case": 0.67644,
+        "with_model": 0.46744,
+        "worst_case": -0.10923,
+        "without_model": 0.56819
+      },
+      "gwet_ac1": {
+        "best_case": 0.67971,
+        "with_model": 0.47016,
+        "worst_case": -0.10489,
+        "without_model": 0.5734
+      },
+      "majority_agreement": 0.712
+    }
+  }
+}
