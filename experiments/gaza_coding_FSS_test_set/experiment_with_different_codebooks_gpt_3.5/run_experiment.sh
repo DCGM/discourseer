@@ -20,8 +20,10 @@ fi
 
 # ---------------------------  RUNNING EXPERIMENTS  ---------------------------
 
-RESULT_FILE=$EXPERIMENT_DIR/krippendorff_alpha_means_through_questions.txt
-echo -n "" > $RESULT_FILE
+RESULT_FILE_KRIP=$EXPERIMENT_DIR/krippendorff_alpha_means_through_questions.txt
+RESULT_FILE_MAJ=$EXPERIMENT_DIR/majority_agreement_overall.txt
+echo -n "" > $RESULT_FILE_KRIP
+echo -n "" > $RESULT_FILE_MAJ
 
 for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     # echo "codebook: $codebook"
@@ -60,16 +62,26 @@ for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
     fi
 
 
-    cat $OUTPUT_DIR/irr_results.json | jq '.["irr_result"]["krippendorff_alpha"]["with_model"]' | tr -d '\n' >> $RESULT_FILE
-    echo -e "\t$codebook_name" >> $RESULT_FILE
+    cat $OUTPUT_DIR/irr_results.json | jq '.["irr_result"]["krippendorff_alpha"]["with_model"]' | tr -d '\n' >> $RESULT_FILE_KRIP
+    echo -e "\t$codebook_name" >> $RESULT_FILE_KRIP
+    cat $OUTPUT_DIR/irr_results.json | jq '.["majority_agreement"]' | tr -d '\n' >> $RESULT_FILE_MAJ
+    echo -e "\t$codebook_name" >> $RESULT_FILE_MAJ
 
-    echo -e "\nresults so far:"
-    cat $RESULT_FILE
+    echo -e "\nKrippendorf results so far:"
+    cat $RESULT_FILE_KRIP
+
+    echo -e "\nMajority agreement results so far:"
+    cat $RESULT_FILE_MAJ
     echo "(last codebook: $codebook_name)"
+
 done
 
 
 # ---------------------------  PRINTING RESULTS  ---------------------------
+echo "--------------------------------------------------------------"
 
-echo -e "\nsorted results:"
-cat $RESULT_FILE | sort -n
+echo -e "\nKrippendorf sorted results:"
+cat $RESULT_FILE_KRIP | sort -n
+
+echo -e "\nMajority agreement sorted results:"
+cat $RESULT_FILE_MAJ | sort -n
