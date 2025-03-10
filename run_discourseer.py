@@ -132,10 +132,10 @@ class Discourseer:
         logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
-        for file in tqdm(self.input_files):
+        for file_counter, file in enumerate(tqdm(self.input_files)):
             with open(file, 'r', encoding='utf-8') as f:
                 text = f.read()
-                logging.debug(f'New document:\n\n')
+                logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
                 response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
