@@ -61,7 +61,6 @@ for codebook in `ls $DISCOURSEER/codebooks/codebook_gaza_v*`; do
             $OUTPUT
     fi
 
-
     cat $OUTPUT_DIR/irr_results.json | jq '.["irr_result"]["krippendorff_alpha"]["with_model"]' | tr -d '\n' >> $RESULT_FILE_KRIP
     echo -e "\t$codebook_name" >> $RESULT_FILE_KRIP
     cat $OUTPUT_DIR/irr_results.json | jq '.["majority_agreement"]' | tr -d '\n' >> $RESULT_FILE_MAJ
