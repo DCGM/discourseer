@@ -672,7 +672,10 @@ class IRR:
         # check if all raters have the same length
         lens = [len(rater) for rater in raters_dict.values()]
         if len(set(lens)) != 1:
-            logger.warning(f"Raters have different lengths of ratings: {lens}. Is it possible the ratings come from different sets of texts?")
+            for rater_name, rater in raters_dict.items():
+                unique_file_lens = {rater_name: len(rater.index.get_level_values(0).unique().to_list()) for rater_name, rater in raters_dict.items()}
+                if len(set(unique_file_lens.values())) != 1:
+                    logger.warning(f'Raters have different numbers of unique files. Are you sure, these raters shoul be in one experiment?\n{unique_file_lens}')
 
         df = pd.DataFrame(raters_dict)
         for col in df.columns:
