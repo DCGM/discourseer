@@ -25,7 +25,7 @@ RESULT_FILE_MAJ=$EXPERIMENT_DIR/majority_agreement_overall.txt
 echo -n "" > $RESULT_FILE_KRIP
 echo -n "" > $RESULT_FILE_MAJ
 
-for prompt_schema in `ls $DISCOURSEER/prompt_schemas/prompt_schema_definition*`; do
+for prompt_schema in `ls $EXPERIMENT_DIR/prompt_schema_*`; do
     # echo "codebook: $codebook"
     # codebook_name=$(basename $codebook | sed 's/.json//')
     prompt_schema_name=$(basename $prompt_schema | sed 's/.json//')
