@@ -118,6 +118,11 @@ class Discourseer:
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
 
+        if getattr(self.prompt_schema_definition, 'prompt_individual_questions', False):
+            self.individual_codebooks = self.codebook.split_by_individual_questions()
+        else:
+            self.individual_codebooks = [self.codebook]
+
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
@@ -133,11 +138,12 @@ class Discourseer:
 
     def __call__(self):
         for file_counter, file in enumerate(tqdm(self.input_files)):
-            with open(file, 'r', encoding='utf-8') as f:
-                text = f.read()
-                logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
-                response = self.extract_answers(text, os.path.basename(file))
-                self.model_rater.add_model_response(os.path.basename(file), response)
+            for codebook in self.individual_codebooks:
+                with open(file, 'r', encoding='utf-8') as f:
+                    text = f.read()
+                    logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
+                    response = self.extract_answers(text, os.path.basename(file), codebook)
+                    self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
             self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
             self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
@@ -152,14 +158,14 @@ class Discourseer:
         self.save_output(self.output_dir, irr_results)
         self.copy_input_ratings_to_output(irr_calculator)
 
-    def extract_answers(self, text: str, text_id: str):
+    def extract_answers(self, text: str, text_id: str, codebook: Codebook):
         text_short = text[:min(50, len(text))].replace('\n', '')
         logging.info(f"Extracting answers from text: {text_id} ({text_short}...)")
 
         conversation = self.prompt_schema_definition.model_copy(deep=True)
         for message in conversation.messages:
             try:
-                message.content = message.content.format(**self.codebook.get_format_strings(), text=text)
+                message.content = message.content.format(**codebook.get_format_strings(), text=text)
             except KeyError as e:
                 raise KeyError(f"Non-existing format string {e} in message: "
                                f"({message.content[:min(80, len(message.content))]}...")
@@ -170,7 +176,9 @@ class Discourseer:
         logging.debug(f"Response raw: {response}")
         response = response.choices[0].message.content
         if response == '':
-            logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter especially if using an o series reasoning model like o1 or o3")
+            logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is "
+                            f"not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter"
+                            f" especially if using an o series reasoning model like o1 or o3")
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")

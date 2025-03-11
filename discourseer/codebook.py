@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import logging
 import json
 import pydantic
 from typing import List, Dict, Literal, Optional
+
+logger = logging.getLogger()
 
 single_choice_tag = "single_choice"
 multiple_choice_tag = "multiple_choice"
@@ -64,6 +67,15 @@ class Codebook(pydantic.BaseModel):
         self.questions = unique_questions
         return self  # for optional chaining select calls
 
+    def split_by_individual_questions(self) -> List[Codebook]:
+        codebooks = []
+        for i, question in enumerate(self.questions):
+            new_codebook = self.deepcopy()
+            new_codebook.questions = [question]
+            codebooks.append(new_codebook)
+
+        return codebooks
+
     def question_names(self) -> str:
         return ", ".join([question.name for question in self.questions])
 
@@ -81,6 +93,21 @@ class Codebook(pydantic.BaseModel):
 
     def multiple_choice_questions(self) -> str:
         return ", ".join([question.name for question in self.questions if question.multiple_choice])
+
+    def first_question_single_or_multi_choice(self) -> str:
+        if len(self.questions) == 0:
+            logger.warning("No questions defined in the codebook.")
+            return ""
+
+        if len(self.questions) > 1:
+            logger.info(f"Prompt schema defined 'first_question_single_or_multi_choice' format string which should be used for experiments with individual questions. "
+                           f"Only the first question '{self.questions[0].name}' will be used. "
+                           f"If you want to prompt model with individual questions, define '\"prompt_individual_questions\":true' in the prompt schema.")
+
+        if self.questions[0].multiple_choice:
+            return "multiple choice, meaning you can select multiple options."
+        else:
+            return "single choice, meaning you can select only one option."
 
     def question_options(self) -> str:
         return "\n".join([f'{question.name}: {question.list_options()}' for question in self.questions
@@ -152,6 +179,7 @@ class Codebook(pydantic.BaseModel):
             "question_names_and_descriptions_parentheses": self.question_names_and_descriptions_parentheses(),
             "single_choice_questions": self.single_choice_questions(),
             "multiple_choice_questions": self.multiple_choice_questions(),
+            "first_question_single_or_multi_choice": self.first_question_single_or_multi_choice(),
             "question_options": self.question_options(),
             "question_options_with_examples": self.question_options_with_examples(),
             "question_options_with_examples_bulletpoints": self.question_options_with_examples_bulletpoints(),
