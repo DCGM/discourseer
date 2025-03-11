@@ -1,0 +1,149 @@
+INFO:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt schema definition from file:/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_wihout_examples/prompt_schema_definition_extensive_gpt_3.5_without_examples.json
+INFO:root:run_discourseer.py:__init__: First prompt: As an expert annotator with a focus on news and media content analyses, your role is to scrutinize o...
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-02T18-18-00_2024WN002160.txt (Propalestinští demonstranti na Nový rok opět bloko...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T09-30-00_2023WN282044.txt (Teroristé zabili nebo zavlekli do Gazy i mnoho ciz...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-12T11-45-00_2024WN012085.txt (Izrael v Haagu odmítl obvinění z genocidy. A připo...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN149082.txt (Za vysokým počtem obětí požáru stanového městečka ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-28T20-24-00_2024WN028088.txt (Jednání o rukojmích v Paříži byla konstruktivní, h...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN119043.txt (Teroristé si zamilovali „podzemní ementál“Konste...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-05T14-59-00_2023WN309050.txt (Izraelský ministr nevyloučil jaderný útok na Gazu....)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-31T12-11-00_2023WN365037.txt (Další pirátský útok Húsíjů v Rudém moři. USA zasáh...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T00-00-00_2023WN303044.txt (Za honem na Židy na letišti v Machačkale stojí Ukr...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-22T07-25-00_2023WN295020.txt (Stotisícová propalestinská demonstrace zneklidnila...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN058034.txt (Hamás dostal nabídku na přerušení bojů. Není jasné...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-29T09-38-00_2023WN333049.txt (Hamás nutil unesené dítě sledovat záznamy masakrů...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-11T16-57-00_2024WN011163.txt (FOTO: Před soudem v Haagu se sešli proizraelští a ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-04T05-35-00_2024WN004003.txt (Hizballáh má propracovanější systém tunelů než Ham...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN172020.txt (Hizballáh už hrozí útokem i Kypru, členské zemi EU...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN240099.txt (Izraelská armáda zachránila v Gaze rukojmího. Je t...)
+INFO:root:rater.py:add_model_response: Response option name Izraelští vojáci not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Tajná služba Šin Bet not found in question options. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-16T06-10-00_2024WN047006.txt (Izrael odmítá diktát ze zahraničí ohledně vztahů s...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-26T00-00-00_2023WN299130.txt (Při výbuchu v Pásmu Gazy zahynula rodina reportéra...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-12T16-04-00_2024WN012115.txt (ZBYTEČNÁ VÁLKA: Americko-britský úder proti povsta...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-22T08-25-00_2023WN356016.txt (Na severu Pásma Gazy Izrael zničil dvě třetiny bud...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-01T20-08-00_2023WN305205.txt (V USA zadrželi studenta, který vyhrožoval zabíjení...)
+INFO:root:rater.py:add_model_response: None or empty response_option_name for response ID Mluvčí. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-07T20-57-00_2024WN038200.txt (Netanjahu odmítl požadavky Hamásu. Jediné řešení j...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN201004.txt (Tel Avivem otřásl výbuch po zásahu dronemNejméně...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-22T07-25-00_2023WN295041.txt (Izrael promítne novinářům nové záběry z řádění Ham...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-25T11-25-00_2023WN329031.txt (Na Západním břehu zlynčovali dva Palestince a pově...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-23T16-26-00_2023WN327165.txt (Palestinských dětí jsme zabili málo, smál se musli...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-24T14-23-00_2023WN297100.txt (Stařenka vozila nemocné z Gazy do Izraele. Hamás j...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN064149.txt (Střela z Libanonu zabíjela v IzraeliJeden muž ze...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-09T20-08-00_2023WN343089.txt (Izrael: Zabili jsme již více než 7000 ozbrojenců...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN140018.txt (Húsíové zasáhli ropný tanker v Rudém mořiJemenšt...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-29T16-48-00_2023WN333186.txt (Unesené izraelské miminko i s matkou a starším bra...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-14T20-31-00_2024WN045169.txt (Na propalestinské demonstraci v Praze se chtěl upá...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T21-42-00_2023WN283184.txt (Erdogan obvinil USA, že poslaly loď k Izraeli, aby...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-30T12-35-00_2024WN030052.txt (Svět se po skandálu pracovníků - teroristů OSN obr...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T00-00-00_2023WN303135.txt (Německo musí nyní říct NE! všem, kteří nám říkají ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-12T16-14-00_2023WN285133.txt (Biden varoval Írán, aby byl v současné situaci kol...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-23T13-26-00_2023WN327118.txt (Obří razie proti Hamásu po celém NěmeckuNěmecká ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-16T10-36-00_2023WN289053.txt (ANALÝZA: Proč Egypt nechce přijmout uprchlíky z Ga...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-15T18-58-00_2023WN319238.txt (Heslo „From the river…“ může být trestné, vzkazuje...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T12-04-00_2023WN312097.txt (Angelina Jolie se vyjádřila ke Gaze. Nejdřív jí vy...)
+INFO:root:rater.py:add_model_response: Response option name Hollywoodská hvězda Angelina Jolie not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Izraelský prezident Jicchak Herzog not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Jon Voight - otec Angeliny Jolie not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Britský novinář Piers Morgan not found in question options. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T19-06-00_2023WN283165.txt (Přesun ambasády do Jeruzaléma vyřešila Sněmovna ša...)
+INFO:root:rater.py:add_model_response: Response option name Hlavní téma článku not found in question options. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-16T19-47-00_2023WN320191.txt (Roger Waters má na turné problém. Kvůli názorům na...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-24T09-40-00_2023WN297177.txt (Premiér Fiala poletí zítra do IzraeleČeský premi...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-18T14-08-00_2024WN018124.txt (Musíme začít bourat mešity. Švédská pravice se pro...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T13-14-00_2023WN282092.txt (Rakousko a Německo pozastavily Palestincům platby...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN109163.txt (Náš „mírový“ jaderný program se může změnit, pohro...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-21T09-39-00_2023WN355039.txt (Izrael ukázal síť tunelů, kterou mělo používat ved...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN213189.txt (Izrael oplatí jakoukoli agresi, pohrozil Netanjahu...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-17T21-11-00_2024WN048103.txt (Požadavky Hamásu jsou nerealistické, řekl Netanjah...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-04T18-33-00_2023WN308071.txt (V evropských městech se konaly propalestinské demo...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T18-38-00_2023WN312210.txt (Netanjahu se nervově zhroutil, tvrdí izraelský exp...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-16T08-27-00_2023WN320033.txt (Jedinou odpovědí na konflikt je dvoustátní řešení,...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-07T00-00-00_2023WN280031.txt (Izraelská vláda kvůli útoku Hamásu zrušila jednání...)
+INFO:root:rater.py:add_model_response: Response option name Mluvčí českého kabinetu not found in question options. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-21T08-43-00_2023WN325032.txt (Dohoda o příměří je blízko, tvrdí politický šéf Ha...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-31T10-28-00_2023WN304046.txt (USA odmítly tvrzení Moskvy, že za pokusem o pogrom...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-29T14-22-00_2024WN029073.txt (Izrael předložil důkazy, že se zaměstnanci OSN zap...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-15T15-10-00_2023WN288053.txt (Izraelský miliardář zaměstnával talentované Palest...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-10T11-34-00_2023WN344037.txt (Svědectví ze zajetí Hamásem: Jako holokaust, dny t...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-15T15-46-00_2023WN319189.txt (Palestinský otec českých dětí v Pásmu Gazy jim ned...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN096007.txt (Izrael chce otevřením dalšího hraničního přechodu ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T09-27-00_2023WN312233.txt (Je čas na sankce proti Izraeli, míní belgická vice...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-12T12-23-00_2023WN285198.txt (Dvojice přežila masakr na festivalu. Vzápětí dobro...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN128128.txt (Nenávist vůči Izraeli opanovala i evropské vysoké ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T15-15-00_2023WN282115.txt (FOTO: Víkend hrůzy pro IzraelV sobotu vyhlásil I...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-05T07-38-00_2023WN339020.txt (Trumpova dcera s manželem zorganizovali schůzku ka...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-23T14-29-00_2023WN357061.txt (Nákladní loď nedaleko indického pobřeží zasáhl dro...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-20T10-29-00_2023WN324050.txt (Húsíové po únosu lodi pohrozili dalšími útoky prot...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN223008.txt (Desítky mrtvých po zásahu budovy školy v Pásmu Gaz...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN161064.txt (Zachráněná Noa se shledala se smrtelně nemocnou ma...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-15T14-13-00_2024WN046130.txt (Izrael vtrhl do nemocnice v Chán Júnisu, zatkl tam...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-12T10-11-00_2023WN316039.txt (Dvě děti zemřely v nemocnici v Gaze. Izrael pomůže...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-12T15-38-00_2023WN316094.txt (Vondrášek: Postihy jako v Bavorsku za propalestins...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-30T07-26-00_2023WN334018.txt (Útočníci postřelili v Jeruzalémě na zastávce autob...)
+INFO:root:rater.py:add_model_response: None or empty response_option_name for response ID Mluvčí. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-14T11-21-00_2024WN014028.txt (Nikdo nás nezastaví, ani mezinárodní soud, prohlás...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-23T10-25-00_2023WN296049.txt (Židé jako lakmusový papírek? Když cítí ohrožení, j...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-13T08-23-00_2023WN317033.txt (V Pásmu Gazy se lidé ve frontách bouří proti Hamás...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN053024.txt (Střelci zaútočili na auta mířící do Jeruzaléma, je...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-18T15-48-00_2023WN291099.txt (Konflikt na Blízkém východě žene cenu ropy nahoru...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-19T12-46-00_2023WN292103.txt (Nacistické pozdravy spolužáků vyhání židovské děti...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-18T18-55-00_2023WN291138.txt (Centrem Prahy pochodují příznivci PalestinyNa St...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-09T12-15-00_2023WN343042.txt (Izraelský dron v Sýrii zabil syna velitele Hizball...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN104121.txt (Írán vypustil drony na IzraelÍrán vyslal na Izra...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-24T14-23-00_2023WN328136.txt (Mezinárodní organizace mlčí k brutalitě útoku Hamá...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T12-21-00_2023WN303202.txt (Osvoboďte nás, žádá rukojmí premiéra Netanjahua na...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-27T00-00-00_2023WN300102.txt (Hamás se chová divně, cvičí a kope díry. Varování ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T18-48-00_2023WN283309.txt (Zářivý krach americké politiky. Putin hodil vinu z...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-02T16-02-00_2023WN306156.txt (PŘEHLEDNĚ: Válka Izraele s Hamásem z pohledu mezin...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-15T17-14-00_2023WN349144.txt (Piráti unesli bulharskou nákladní loď. Na pomoc jí...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-02T08-14-00_2023WN306020.txt (Biden vyzval k humanitární pauze v GazeAmerický ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-05T16-50-00_2023WN339165.txt (O svátcích bude riziko teroristických útoků obrovs...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-31T09-52-00_2024WN031056.txt (ČTK mění přístup. Hamás bude označovat jako terori...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-23T13-07-00_2023WN296102.txt (Američané chtějí po Izraeli plán, co bude s Gazou ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN185176.txt (Na Izrael letělo sto raket z LibanonuZ území Lib...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-07T08-50-00_2024WN038191.txt (Le Penová nakukuje do prezidentského paláceKrajn...)
+INFO:root:rater.py:add_model_response: Response option name Hlavní téma článku not found in question options. Skipping.
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-26T00-00-00_2023WN299182.txt (Přímé náklady Izraele na válku s Hamásem se blíží ...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-15T22-57-00_2023WN288085.txt (Izraelec si utahoval z unesených v Gaze. Policie j...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN079145.txt (Židé volící demokraty nenávidí Izrael, běsnil Trum...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-19T14-38-00_2024WN019126.txt (Kvůli útokům v Rudém moři může Evropa více ekonomi...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-14T18-05-00_2023WN348154.txt (Devět milionů za Sinvára. Izrael vypsal na šéfa Ha...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-19T21-20-00_2023WN323090.txt (V nemocnici Šifá byli rukojmí z Nepálu a Thajska, ...)
+INFO:root:rater.py:add_model_response: Response option name Izraelská armáda not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_wihout_examples/output_prompt_schema_definition_extensive_gpt_3.5_without_examples/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_wihout_examples/output_prompt_schema_definition_extensive_gpt_3.5_without_examples/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summary:
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "fleiss_kappa": {
+      "best_case": 0.63832,
+      "with_model": 0.36606,
+      "worst_case": -0.09628,
+      "without_model": 0.52942
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.6391,
+      "with_model": 0.36741,
+      "worst_case": -0.0935,
+      "without_model": 0.53076
+    },
+    "gwet_ac1": {
+      "best_case": 0.78127,
+      "with_model": 0.59282,
+      "worst_case": 0.0524,
+      "without_model": 0.70888
+    },
+    "majority_agreement": 0.65733
+  },
+  "majority_agreement": 0.716
+}
