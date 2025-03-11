@@ -1,4 +1,4 @@
-file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - Copy of vyhodnocení Robin.csv,coding FSS - Copy of vyhodnocení Veronica.csv,majority,worst_case
+file,question_id,option_id,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - Copy of vyhodnocení Robin.csv,coding FSS - Copy of vyhodnocení Veronica.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Hlavní téma článku,single_choice,Teroristické operace,Dílčí konflikty a střety,Teroristické operace,Teroristické operace,--WORST-CASE
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Geopolitický rámec,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Historicko-kulturní rámec,False,True,False,False,True
@@ -6,7 +6,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Lokální rámec,True,False,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -20,7 +19,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dílčí konflikty a střety,True,True,False,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Historie/kontextualizace,True,False,True,True,False
@@ -41,7 +39,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-07T00-00-00_2023WN280056.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,True,False,True
-2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Nezávislí experti a analytici,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -55,7 +52,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Historie/kontextualizace,True,True,True,True,False
@@ -76,7 +72,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T09-11-00_2023WN282037.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,False
@@ -90,7 +85,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dílčí konflikty a střety,False,True,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -111,7 +105,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T12-53-00_2023WN282086.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,False,False,True
-2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Nezávislí experti a analytici,True,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -125,7 +118,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Ekonomické důsledky,True,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -146,7 +138,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T14-50-00_2023WN282113.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Média a novináři,False,True,True,True,False
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -160,7 +151,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Globální reakce veřejnosti,False,False,True,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Historie/kontextualizace,True,False,False,False,True
@@ -181,7 +171,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T16-46-00_2023WN282130.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,False,False,True
-2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -195,7 +184,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Globální reakce veřejnosti,True,True,True,True,False
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -216,7 +204,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T18-48-00_2023WN283308.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -230,7 +217,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dopad na izraelské civilisty,True,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -251,7 +237,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T18-51-00_2023WN283162.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Média a novináři,False,True,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -265,7 +250,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dílčí konflikty a střety,True,False,True,True,False
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Globální reakce veřejnosti,True,True,True,True,False
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -286,7 +270,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T21-42-00_2023WN283183.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,False
@@ -300,7 +283,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Členové teroristických skupin,False,False,True,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dílčí konflikty a střety,True,False,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Historie/kontextualizace,True,False,False,False,True
@@ -321,7 +303,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-11T09-07-00_2023WN284024.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,False,False,True
-2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Nezávislí experti a analytici,True,True,True,True,False
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -335,7 +316,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Ekonomické důsledky,True,True,True,True,False
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -356,7 +336,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T12-23-00_2023WN285197.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Média a novináři,False,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -370,7 +349,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -391,7 +369,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T13-54-00_2023WN285106.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Nezávislí experti a analytici,False,True,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,True,False,True
@@ -405,7 +382,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -426,7 +402,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T16-14-00_2023WN285137.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -440,7 +415,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dopad na izraelské civilisty,True,False,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dopad na palestinské civilisty,False,False,True,False,True
-2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Ekonomické důsledky,False,False,True,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Historie/kontextualizace,True,False,True,True,False
@@ -461,7 +435,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-13T06-36-00_2023WN286013.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mediální rámce (multiple),Rámec budování míru,True,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,False,False,True
-2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Média a novináři,False,False,True,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -475,7 +448,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dopad na palestinské civilisty,True,False,True,True,False
-2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -496,7 +468,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-15T14-52-00_2023WN288050.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,False,False,True
-2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Nezávislí experti a analytici,False,False,True,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -510,7 +481,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Ekonomické důsledky,True,True,True,True,False
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -531,7 +501,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-15T20-07-00_2023WN288080.txt,Mediální rámce (multiple),Lokální rámec,False,True,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -545,7 +514,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dopad na palestinské civilisty,True,True,True,True,False
-2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -566,7 +534,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-16T10-36-00_2023WN289052.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -580,7 +547,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dopad na palestinské civilisty,True,True,True,True,False
-2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Globální reakce veřejnosti,True,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -601,7 +567,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-16T15-13-00_2023WN289115.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Média a novináři,False,True,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -615,7 +580,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Členové teroristických skupin,False,False,True,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dopad na izraelské civilisty,False,False,True,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Globální reakce veřejnosti,False,True,True,True,False
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Historie/kontextualizace,True,True,True,True,False
@@ -636,7 +600,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-18T13-55-00_2023WN291081.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,True,False
-2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Média a novináři,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,False
@@ -650,7 +613,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,True
-2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -671,7 +633,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-18T18-43-00_2023WN291136.txt,Mediální rámce (multiple),Lokální rámec,True,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,False
-2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -685,7 +646,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Členové teroristických skupin,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dopad na palestinské civilisty,True,False,True,True,False
-2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dílčí konflikty a střety,False,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Globální reakce veřejnosti,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -706,7 +666,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-19T10-57-00_2023WN292057.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,True,False,True
-2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Jiní,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Média a novináři,True,True,True,True,False
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,True
@@ -720,7 +679,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dopad na palestinské civilisty,False,False,True,False,True
-2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dílčí konflikty a střety,False,False,True,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Ekonomické důsledky,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Globální reakce veřejnosti,True,True,True,True,False
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Historie/kontextualizace,False,False,False,False,True
@@ -741,7 +699,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-19T15-13-00_2023WN292147.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -755,7 +712,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Ekonomické důsledky,True,False,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -776,7 +732,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-22T07-25-00_2023WN295017.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -790,7 +745,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -811,7 +765,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-22T07-25-00_2023WN295038.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -825,7 +778,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -846,7 +798,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-23T09-18-00_2023WN296031.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -860,7 +811,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -881,7 +831,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-23T12-37-00_2023WN296192.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -895,7 +844,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -916,7 +864,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-24T08-41-00_2023WN297021.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -930,7 +877,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -951,7 +897,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-24T12-12-00_2023WN297062.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -965,7 +910,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -986,7 +930,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299091.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1000,7 +943,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Ekonomické důsledky,True,True,,True,False
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1021,7 +963,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299176.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1035,7 +976,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1056,7 +996,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299198.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1070,7 +1009,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1091,7 +1029,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-27T00-00-00_2023WN300050.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1105,7 +1042,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Členové teroristických skupin,True,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1126,7 +1062,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T00-00-00_2023WN303025.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1140,7 +1075,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1161,7 +1095,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T00-00-00_2023WN303134.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,,True,False
@@ -1175,7 +1108,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dopad na izraelské civilisty,True,True,,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1196,7 +1128,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T11-19-00_2023WN303199.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,,False,True
@@ -1210,7 +1141,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1231,7 +1161,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-31T08-47-00_2023WN304015.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Jiní,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1245,7 +1174,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1266,7 +1194,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-01T16-09-00_2023WN305157.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1280,7 +1207,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1301,7 +1227,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-01T20-08-00_2023WN305204.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1315,7 +1240,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1336,7 +1260,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-02T08-14-00_2023WN306018.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1350,7 +1273,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Členové teroristických skupin,True,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dílčí konflikty a střety,True,True,,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1371,7 +1293,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-02T11-09-00_2023WN306067.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1385,7 +1306,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1406,7 +1326,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-04T16-30-00_2023WN308069.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,,False,True
-2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1420,7 +1339,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Členové teroristických skupin,False,True,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1441,7 +1359,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1455,7 +1372,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -1476,7 +1392,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T08-41-00_2023WN309016.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1490,7 +1405,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -1511,7 +1425,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T10-57-00_2023WN309100.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Mediální rámce (multiple),Rámec budování míru,True,True,,True,False
 2023-11-05T10-57-00_2023WN309100.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1525,7 +1438,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1546,7 +1458,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T08-45-00_2023WN312032.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1560,7 +1471,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Ekonomické důsledky,False,True,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -1581,7 +1491,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T11-17-00_2023WN312083.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1595,7 +1504,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -1616,7 +1524,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T17-35-00_2023WN312200.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1630,7 +1537,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Ekonomické důsledky,False,True,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1651,7 +1557,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-09T09-11-00_2023WN313029.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-09T09-11-00_2023WN313029.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-11-09T09-11-00_2023WN313029.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1665,7 +1570,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-09T09-11-00_2023WN313029.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-09T09-11-00_2023WN313029.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -1686,7 +1590,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-12T06-03-00_2023WN316008.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1700,7 +1603,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -1721,7 +1623,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-12T10-35-00_2023WN316132.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1735,7 +1636,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1756,7 +1656,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-13T08-16-00_2023WN317030.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1770,7 +1669,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1791,7 +1689,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-13T11-01-00_2023WN317254.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1805,7 +1702,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1826,7 +1722,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-15T13-35-00_2023WN319151.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1840,7 +1735,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1861,7 +1755,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-15T16-48-00_2023WN319208.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1875,7 +1768,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -1896,7 +1788,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-16T08-16-00_2023WN320030.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1910,7 +1801,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -1931,7 +1821,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-16T15-21-00_2023WN320146.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1945,7 +1834,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -1966,7 +1854,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-19T19-42-00_2023WN323084.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -1980,7 +1867,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2001,7 +1887,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T09-03-00_2023WN324033.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2015,7 +1900,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -2036,7 +1920,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T15-21-00_2023WN324135.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2050,7 +1933,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2071,7 +1953,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T20-25-00_2023WN324202.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,,False,True
-2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2085,7 +1966,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2106,7 +1986,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-23T11-44-00_2023WN327073.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2120,7 +1999,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Členové teroristických skupin,False,True,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2141,7 +2019,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-23T16-26-00_2023WN327164.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-11-23T16-26-00_2023WN327164.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,,False,True
-2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2155,7 +2032,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2176,7 +2052,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-24T12-39-00_2023WN328101.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-24T12-39-00_2023WN328101.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-11-24T12-39-00_2023WN328101.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2190,7 +2065,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-24T12-39-00_2023WN328101.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Ekonomické důsledky,False,True,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-24T12-39-00_2023WN328101.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2211,7 +2085,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-24T21-16-00_2023WN328215.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,,False,True
-2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2225,7 +2098,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2246,7 +2118,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-29T08-32-00_2023WN333030.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Média a novináři,False,True,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2260,7 +2131,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2281,7 +2151,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-29T15-51-00_2023WN333171.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2295,7 +2164,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2316,7 +2184,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-30T06-54-00_2023WN334015.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Mediální rámce (multiple),Rámec budování míru,False,True,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-11-30T06-54-00_2023WN334015.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-30T06-54-00_2023WN334015.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2330,7 +2197,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-30T06-54-00_2023WN334015.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-11-30T06-54-00_2023WN334015.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -2351,7 +2217,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-30T11-33-00_2023WN334072.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Jiní,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2365,7 +2230,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Ekonomické důsledky,True,False,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2386,7 +2250,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-04T12-14-00_2023WN338101.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2400,7 +2263,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2421,7 +2283,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-05T06-39-00_2023WN339011.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2435,7 +2296,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -2456,7 +2316,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-05T14-45-00_2023WN339132.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mediální rámce (multiple),Rámec budování míru,True,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2470,7 +2329,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2491,7 +2349,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-06T09-06-00_2023WN340025.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,False,,False,True
@@ -2505,7 +2362,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dopad na izraelské civilisty,True,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2526,7 +2382,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-09T11-05-00_2023WN343035.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,False,,False,True
@@ -2540,7 +2395,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dopad na izraelské civilisty,True,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2561,7 +2415,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-09T19-24-00_2023WN343081.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2575,7 +2428,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Globální reakce veřejnosti,True,False,,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2596,7 +2448,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-10T08-59-00_2023WN344015.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2610,7 +2461,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -2631,7 +2481,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-14T08-16-00_2023WN348008.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Mediální rámce (multiple),Rámec budování míru,True,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2645,7 +2494,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Ekonomické důsledky,True,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2666,7 +2514,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-14T16-08-00_2023WN348142.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-12-14T16-08-00_2023WN348142.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Média a novináři,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2680,7 +2527,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dopad na izraelské civilisty,True,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2701,7 +2547,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-15T12-15-00_2023WN349091.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-12-15T12-15-00_2023WN349091.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2715,7 +2560,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-15T12-15-00_2023WN349091.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Globální reakce veřejnosti,True,True,,True,False
 2023-12-15T12-15-00_2023WN349091.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2736,7 +2580,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-20T16-52-00_2023WN354149.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mediální rámce (multiple),Rámec budování míru,True,True,,True,False
 2023-12-20T16-52-00_2023WN354149.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2750,7 +2593,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2771,7 +2613,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-21T09-21-00_2023WN355034.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2023-12-21T09-21-00_2023WN355034.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-21T09-21-00_2023WN355034.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2023-12-21T09-21-00_2023WN355034.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2785,7 +2626,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-21T09-21-00_2023WN355034.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Dopad na palestinské civilisty,False,True,,False,True
-2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Ekonomické důsledky,False,True,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-21T09-21-00_2023WN355034.txt,Témata článku,Historie/kontextualizace,True,True,,True,False
@@ -2806,7 +2646,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-21T21-05-00_2023WN355189.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2023-12-21T21-05-00_2023WN355189.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Mluvčí,Média a novináři,True,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2820,7 +2659,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-21T21-05-00_2023WN355189.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Globální reakce veřejnosti,True,False,,False,True
 2023-12-21T21-05-00_2023WN355189.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2841,7 +2679,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-30T12-42-00_2023WN364030.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Jiní,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Média a novináři,True,True,,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2855,7 +2692,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2876,7 +2712,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-01T20-24-00_2024WN001075.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,,False,True
@@ -2890,7 +2725,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Globální reakce veřejnosti,True,False,,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2911,7 +2745,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-02T16-55-00_2024WN002143.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2925,7 +2758,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -2946,7 +2778,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-11T16-10-00_2024WN011155.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,,True,False
@@ -2960,7 +2791,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Členové teroristických skupin,True,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dopad na izraelské civilisty,True,True,,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -2981,7 +2811,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-12T10-01-00_2024WN012058.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -2995,7 +2824,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dílčí konflikty a střety,False,True,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3016,7 +2844,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-12T15-46-00_2024WN012144.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Média a novináři,True,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3030,7 +2857,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Globální reakce veřejnosti,False,True,,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -3051,7 +2877,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-18T10-32-00_2024WN018055.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Mediální rámce (multiple),Rámec budování míru,True,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,,True,False
@@ -3065,7 +2890,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dílčí konflikty a střety,True,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3086,7 +2910,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-19T12-20-00_2024WN019033.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3100,7 +2923,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -3121,7 +2943,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-20T10-17-00_2024WN020031.txt,Mediální rámce (multiple),Lokální rámec,True,True,,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3135,7 +2956,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Historie/kontextualizace,False,True,,False,True
@@ -3156,7 +2976,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-28T19-21-00_2024WN028084.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,,True,False
@@ -3170,7 +2989,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dopad na palestinské civilisty,True,True,,True,False
-2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3191,7 +3009,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-29T12-00-00_2024WN029085.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-01-29T12-00-00_2024WN029085.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Mluvčí,Média a novináři,True,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Mluvčí,Nezávislí experti a analytici,False,True,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3205,7 +3022,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-29T12-00-00_2024WN029085.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Ekonomické důsledky,True,True,,True,False
 2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-29T12-00-00_2024WN029085.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3226,7 +3042,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-30T12-22-00_2024WN030086.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Jiní,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3240,7 +3055,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3261,7 +3075,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-06T20-53-00_2024WN037171.txt,Mediální rámce (multiple),Lokální rámec,False,True,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,,True,False
-2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3275,7 +3088,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dopad na izraelské civilisty,False,True,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3296,7 +3108,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-07T20-29-00_2024WN038197.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-02-07T20-29-00_2024WN038197.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-02-07T20-29-00_2024WN038197.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2024-02-07T20-29-00_2024WN038197.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3310,7 +3121,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-07T20-29-00_2024WN038197.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Ekonomické důsledky,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-07T20-29-00_2024WN038197.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -3331,7 +3141,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-08T12-53-00_2024WN039088.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Média a novináři,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3345,7 +3154,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Ekonomické důsledky,True,True,,True,False
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3366,7 +3174,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-14T18-32-00_2024WN045167.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-02-14T18-32-00_2024WN045167.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Mluvčí,Média a novináři,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Mluvčí,Nezávislí experti a analytici,True,True,,True,False
 2024-02-14T18-32-00_2024WN045167.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3380,7 +3187,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-14T18-32-00_2024WN045167.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Ekonomické důsledky,True,True,,True,False
 2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-14T18-32-00_2024WN045167.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -3401,7 +3207,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-15T13-18-00_2024WN046102.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Mediální rámce (multiple),Rámec budování míru,True,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-02-15T13-18-00_2024WN046102.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Mluvčí,Média a novináři,True,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Mluvčí,Nezávislí experti a analytici,True,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3415,7 +3220,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-15T13-18-00_2024WN046102.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Ekonomické důsledky,True,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-15T13-18-00_2024WN046102.txt,Témata článku,Historie/kontextualizace,True,False,,False,True
@@ -3436,7 +3240,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-15T21-49-00_2024WN046201.txt,Mediální rámce (multiple),Lokální rámec,True,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,,False,True
-2024-02-15T21-49-00_2024WN046201.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-02-15T21-49-00_2024WN046201.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3450,7 +3253,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-15T21-49-00_2024WN046201.txt,Mluvčí,Členové teroristických skupin,True,True,,True,False
 2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Dílčí konflikty a střety,True,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Ekonomické důsledky,False,True,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-15T21-49-00_2024WN046201.txt,Témata článku,Historie/kontextualizace,False,False,,False,True
@@ -3471,7 +3273,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-21T16-43-00_2024WN052158.txt,Mediální rámce (multiple),Lokální rámec,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Mediální rámce (multiple),Rámec budování míru,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,,False,True
-2024-02-21T16-43-00_2024WN052158.txt,Mluvčí,Jiní,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Mluvčí,Média a novináři,True,True,,True,False
 2024-02-21T16-43-00_2024WN052158.txt,Mluvčí,Nezávislí experti a analytici,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,,False,True
@@ -3485,7 +3286,6 @@ file,question_id,rating,coding FSS - Copy of vyhodnocení Jana.csv,coding FSS - 
 2024-02-21T16-43-00_2024WN052158.txt,Mluvčí,Členové teroristických skupin,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Dopad na izraelské civilisty,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Dopad na palestinské civilisty,False,False,,False,True
-2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Dílčí konflikty a střety,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Ekonomické důsledky,True,True,,True,False
 2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Globální reakce veřejnosti,False,False,,False,True
 2024-02-21T16-43-00_2024WN052158.txt,Témata článku,Historie/kontextualizace,False,False,,False,True

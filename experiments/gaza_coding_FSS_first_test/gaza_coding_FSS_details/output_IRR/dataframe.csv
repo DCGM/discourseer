@@ -1,4 +1,4 @@
-file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding sheet Katka.csv,coding FSS - coding sheet RF.csv,coding FSS - coding sheet VN.csv,majority,worst_case
+file,question_id,option_id,coding FSS - coding sheet JB.csv,coding FSS - coding sheet Katka.csv,coding FSS - coding sheet RF.csv,coding FSS - coding sheet VN.csv,majority,worst_case
 2023-10-09T08-46-00_2023WN282030.tx,Hlavní téma článku,single_choice,Teroristické operace,,,,Teroristické operace,--WORST-CASE
 2023-10-09T08-46-00_2023WN282030.tx,Mediální rámce (multiple),Geopolitický rámec,True,,,,True,False
 2023-10-09T08-46-00_2023WN282030.tx,Mediální rámce (multiple),Historicko-kulturní rámec,True,,,,True,False
@@ -6,7 +6,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-09T08-46-00_2023WN282030.tx,Mediální rámce (multiple),Lokální rámec,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Mediální rámce (multiple),Rámec budování míru,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Mediální rámce (multiple),Rámec konfliktu,True,,,,True,False
-2023-10-09T08-46-00_2023WN282030.tx,Mluvčí,Jiní,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Mluvčí,Média a novináři,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Mluvčí,Nezávislí experti a analytici,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Mluvčí,Očití svědci a civilisté z Izraele,False,,,,False,True
@@ -20,7 +19,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-09T08-46-00_2023WN282030.tx,Mluvčí,Členové teroristických skupin,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Dopad na izraelské civilisty,True,,,,True,False
 2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Dopad na palestinské civilisty,False,,,,False,True
-2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Dílčí konflikty a střety,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Ekonomické důsledky,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Globální reakce veřejnosti,False,,,,False,True
 2023-10-09T08-46-00_2023WN282030.tx,Témata článku,Historie/kontextualizace,True,,,,True,False
@@ -41,7 +39,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-09T08-46-00_2023WN282030.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,,True,False
-2023-10-09T08-46-00_2023WN282030.txt,Mluvčí,Jiní,False,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Mluvčí,Média a novináři,False,True,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,,False,True
@@ -55,7 +52,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-09T08-46-00_2023WN282030.txt,Mluvčí,Členové teroristických skupin,False,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Dopad na izraelské civilisty,False,False,True,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Dopad na palestinské civilisty,False,False,True,,False,True
-2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Dílčí konflikty a střety,False,False,True,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Ekonomické důsledky,False,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Globální reakce veřejnosti,True,False,False,,False,True
 2023-10-09T08-46-00_2023WN282030.txt,Témata článku,Historie/kontextualizace,False,False,True,,False,True
@@ -76,7 +72,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-10T18-48-00_2023WN283307.txt,Mediální rámce (multiple),Lokální rámec,True,False,False,True,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Mediální rámce (multiple),Rámec budování míru,False,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283307.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,False,True,False,True
-2023-10-10T18-48-00_2023WN283307.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283307.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -90,7 +85,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-10T18-48-00_2023WN283307.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Dopad na izraelské civilisty,True,False,False,True,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,True,False,True
-2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Globální reakce veřejnosti,False,False,False,True,False,True
 2023-10-10T18-48-00_2023WN283307.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -111,7 +105,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-12T12-23-00_2023WN285196.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,True,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Mediální rámce (multiple),Rámec budování míru,False,False,True,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,False,True,True,False
-2023-10-12T12-23-00_2023WN285196.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Mluvčí,Média a novináři,True,False,False,True,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -125,7 +118,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-12T12-23-00_2023WN285196.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Dopad na izraelské civilisty,True,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285196.txt,Témata článku,Historie/kontextualizace,True,True,False,False,False,True
@@ -146,7 +138,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-15T13-09-00_2023WN288035.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,True,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-10-15T13-09-00_2023WN288035.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-15T13-09-00_2023WN288035.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
@@ -160,7 +151,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-15T13-09-00_2023WN288035.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,False,False,True
-2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Dílčí konflikty a střety,False,False,True,True,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Globální reakce veřejnosti,False,True,False,False,False,True
 2023-10-15T13-09-00_2023WN288035.txt,Témata článku,Historie/kontextualizace,True,True,False,True,True,False
@@ -181,7 +171,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-18T13-55-00_2023WN291072.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,True,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-10-18T13-55-00_2023WN291072.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291072.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,True,False,True
@@ -195,7 +184,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-18T13-55-00_2023WN291072.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,True,False,True
-2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Dílčí konflikty a střety,False,False,True,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Globální reakce veřejnosti,False,True,False,False,False,True
 2023-10-18T13-55-00_2023WN291072.txt,Témata článku,Historie/kontextualizace,True,True,False,True,True,False
@@ -216,7 +204,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-22T07-25-00_2023WN295016.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,False,True,False,True
-2023-10-22T07-25-00_2023WN295016.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-22T07-25-00_2023WN295016.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -230,7 +217,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-22T07-25-00_2023WN295016.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Dílčí konflikty a střety,True,False,True,True,True,False
 2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Globální reakce veřejnosti,False,True,False,False,False,True
 2023-10-22T07-25-00_2023WN295016.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -251,7 +237,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-23T07-25-00_2023WN296007.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,True,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-10-23T07-25-00_2023WN296007.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-23T07-25-00_2023WN296007.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -265,7 +250,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-23T07-25-00_2023WN296007.txt,Mluvčí,Členové teroristických skupin,False,False,False,True,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,True,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,True,False,True
-2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Dílčí konflikty a střety,False,False,True,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-10-23T07-25-00_2023WN296007.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -286,7 +270,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-26T00-00-00_2023WN299074.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299074.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-10-26T00-00-00_2023WN299074.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299074.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -300,7 +283,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-26T00-00-00_2023WN299074.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,True,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,True,False,True
-2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299074.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -321,7 +303,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-30T00-00-00_2023WN303022.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,False,True,True,False
-2023-10-30T00-00-00_2023WN303022.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-10-30T00-00-00_2023WN303022.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -335,7 +316,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-10-30T00-00-00_2023WN303022.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Globální reakce veřejnosti,False,False,True,False,False,True
 2023-10-30T00-00-00_2023WN303022.txt,Témata článku,Historie/kontextualizace,False,False,False,True,False,True
@@ -356,7 +336,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-01T15-03-00_2023WN305137.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Mediální rámce (multiple),Rámec konfliktu,False,True,True,True,True,False
-2023-11-01T15-03-00_2023WN305137.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-01T15-03-00_2023WN305137.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -370,7 +349,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-01T15-03-00_2023WN305137.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Globální reakce veřejnosti,False,True,True,True,True,False
 2023-11-01T15-03-00_2023WN305137.txt,Témata článku,Historie/kontextualizace,True,True,True,True,True,False
@@ -391,7 +369,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-04T14-46-00_2023WN308056.txt,Mediální rámce (multiple),Lokální rámec,True,True,True,True,True,False
 2023-11-04T14-46-00_2023WN308056.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,False,True,False
-2023-11-04T14-46-00_2023WN308056.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-04T14-46-00_2023WN308056.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -405,7 +382,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-04T14-46-00_2023WN308056.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
-2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-11-04T14-46-00_2023WN308056.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -426,7 +402,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-08T06-27-00_2023WN312011.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Mediální rámce (multiple),Rámec budování míru,True,True,True,True,True,False
 2023-11-08T06-27-00_2023WN312011.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,False,False,False,True
-2023-11-08T06-27-00_2023WN312011.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-11-08T06-27-00_2023WN312011.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -440,7 +415,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-08T06-27-00_2023WN312011.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-11-08T06-27-00_2023WN312011.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -461,7 +435,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-11T17-11-00_2023WN315075.txt,Mediální rámce (multiple),Lokální rámec,True,True,False,True,True,False
 2023-11-11T17-11-00_2023WN315075.txt,Mediální rámce (multiple),Rámec budování míru,False,True,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-11-11T17-11-00_2023WN315075.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Mluvčí,Média a novináři,True,False,False,True,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -475,7 +448,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-11T17-11-00_2023WN315075.txt,Mluvčí,Členové teroristických skupin,True,False,True,True,True,False
 2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Globální reakce veřejnosti,True,True,True,False,True,False
 2023-11-11T17-11-00_2023WN315075.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -496,7 +468,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-15T11-43-00_2023WN319104.txt,Mediální rámce (multiple),Lokální rámec,False,True,True,True,True,False
 2023-11-15T11-43-00_2023WN319104.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,False,False,True
-2023-11-15T11-43-00_2023WN319104.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-15T11-43-00_2023WN319104.txt,Mluvčí,Nezávislí experti a analytici,True,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -510,7 +481,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-15T11-43-00_2023WN319104.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-11-15T11-43-00_2023WN319104.txt,Témata článku,Historie/kontextualizace,False,True,False,False,False,True
@@ -531,7 +501,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-19T17-52-00_2023WN323078.txt,Mediální rámce (multiple),Lokální rámec,True,True,True,True,True,False
 2023-11-19T17-52-00_2023WN323078.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-11-19T17-52-00_2023WN323078.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Mluvčí,Média a novináři,True,True,False,True,True,False
 2023-11-19T17-52-00_2023WN323078.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -545,7 +514,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-19T17-52-00_2023WN323078.txt,Mluvčí,Členové teroristických skupin,True,False,True,True,True,False
 2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Dílčí konflikty a střety,True,False,True,True,True,False
 2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-11-19T17-52-00_2023WN323078.txt,Témata článku,Historie/kontextualizace,True,False,False,False,False,True
@@ -566,7 +534,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-23T11-32-00_2023WN327069.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-11-23T11-32-00_2023WN327069.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Mluvčí,Média a novináři,True,True,False,True,True,False
 2023-11-23T11-32-00_2023WN327069.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -580,7 +547,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-23T11-32-00_2023WN327069.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Globální reakce veřejnosti,True,True,True,True,True,False
 2023-11-23T11-32-00_2023WN327069.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -601,7 +567,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-28T21-12-00_2023WN332213.txt,Mediální rámce (multiple),Lokální rámec,True,True,False,True,True,False
 2023-11-28T21-12-00_2023WN332213.txt,Mediální rámce (multiple),Rámec budování míru,True,True,True,True,True,False
 2023-11-28T21-12-00_2023WN332213.txt,Mediální rámce (multiple),Rámec konfliktu,False,False,False,False,False,True
-2023-11-28T21-12-00_2023WN332213.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -615,7 +580,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-11-28T21-12-00_2023WN332213.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Dopad na izraelské civilisty,True,False,False,True,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,True,False,True
-2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-11-28T21-12-00_2023WN332213.txt,Témata článku,Historie/kontextualizace,False,False,False,False,False,True
@@ -636,7 +600,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-04T11-40-00_2023WN338096.txt,Mediální rámce (multiple),Lokální rámec,False,False,True,True,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Mediální rámce (multiple),Rámec budování míru,False,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,True,True,True,False
-2023-12-04T11-40-00_2023WN338096.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Mluvčí,Média a novináři,False,True,False,True,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -650,7 +613,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-04T11-40-00_2023WN338096.txt,Mluvčí,Členové teroristických skupin,True,False,False,True,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Dílčí konflikty a střety,True,False,False,True,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Ekonomické důsledky,True,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Globální reakce veřejnosti,False,False,False,False,False,True
 2023-12-04T11-40-00_2023WN338096.txt,Témata článku,Historie/kontextualizace,True,True,False,False,False,True
@@ -671,7 +633,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-09T10-22-00_2023WN343033.txt,Mediální rámce (multiple),Lokální rámec,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Mediální rámce (multiple),Rámec budování míru,False,True,True,True,True,False
 2023-12-09T10-22-00_2023WN343033.txt,Mediální rámce (multiple),Rámec konfliktu,True,True,False,True,True,False
-2023-12-09T10-22-00_2023WN343033.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
@@ -685,7 +646,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-09T10-22-00_2023WN343033.txt,Mluvčí,Členové teroristických skupin,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
-2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Ekonomické důsledky,False,False,False,False,False,True
 2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Globální reakce veřejnosti,True,True,False,True,True,False
 2023-12-09T10-22-00_2023WN343033.txt,Témata článku,Historie/kontextualizace,True,True,True,True,True,False
@@ -706,7 +666,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-13T21-24-00_2023WN347213.txt,Mediální rámce (multiple),Lokální rámec,True,True,True,,True,False
 2023-12-13T21-24-00_2023WN347213.txt,Mediální rámce (multiple),Rámec budování míru,True,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Mediální rámce (multiple),Rámec konfliktu,True,False,True,,True,False
-2023-12-13T21-24-00_2023WN347213.txt,Mluvčí,Jiní,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Mluvčí,Média a novináři,True,True,False,,True,False
 2023-12-13T21-24-00_2023WN347213.txt,Mluvčí,Nezávislí experti a analytici,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,,False,True
@@ -720,7 +679,6 @@ file,question_id,rating,coding FSS - coding sheet JB.csv,coding FSS - coding she
 2023-12-13T21-24-00_2023WN347213.txt,Mluvčí,Členové teroristických skupin,False,False,True,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,,False,True
-2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Dílčí konflikty a střety,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Ekonomické důsledky,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Globální reakce veřejnosti,False,False,False,,False,True
 2023-12-13T21-24-00_2023WN347213.txt,Témata článku,Historie/kontextualizace,True,True,True,,True,False
