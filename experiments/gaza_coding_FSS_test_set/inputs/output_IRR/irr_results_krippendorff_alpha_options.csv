@@ -1,4 +1,4 @@
-question,option,irr
+question_id,option_id,krippendorff_alpha
 Zpravodajské hodnoty (multiple),Negativita negativity,0.33665
 Zpravodajské hodnoty (multiple),Blízkost proximity,0.83256
 Zpravodajské hodnoty (multiple),Elitní osoby prominence,0.57286

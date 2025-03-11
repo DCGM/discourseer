@@ -1,11 +1,61 @@
 {
-  "overall": 0.65129,
-  "mean_through_questions": 0.62779,
-  "prompts": {
-    "Zpravodajské hodnoty (multiple)": 0.56819,
-    "Témata článku": 0.54392,
-    "Hlavní téma článku": 0.67652,
-    "Mediální rámce (multiple)": 0.58113,
-    "Mluvčí": 0.76919
+  "irr_result": 0.53095,
+  "questions": {
+    "Zpravodajské hodnoty (multiple)": {
+      "irr_result": 0.45435,
+      "options": {
+        "Negativita negativity": 0.33665,
+        "Blízkost proximity": 0.83256,
+        "Elitní osoby prominence": 0.57286,
+        "Personalizace personalization": 0.5216,
+        "Dopad impact": 0.00807
+      }
+    },
+    "Témata článku": {
+      "irr_result": 0.46156,
+      "options": {
+        "Vnitřní politické dění": 0.5451,
+        "Mezinárodní politické reakce": 0.58775,
+        "Vojenské operace Izraele": 0.32118,
+        "Teroristické operace": 0.30591,
+        "Dopad na izraelské civilisty": 0.46377,
+        "Dopad na palestinské civilisty": 0.4812,
+        "Humanitární pomoc": 0.39652,
+        "Globální reakce veřejnosti": 0.81429,
+        "Ekonomické důsledky": 0.41334,
+        "Historie/kontextualizace": 0.2865
+      }
+    },
+    "Hlavní téma článku": {
+      "irr_result": 0.67652,
+      "options": {}
+    },
+    "Mediální rámce (multiple)": {
+      "irr_result": 0.39139,
+      "options": {
+        "Rámec konfliktu": 0.16619,
+        "Rámec budování míru": 0.38947,
+        "Humanitární rámec": 0.35256,
+        "Historicko-kulturní rámec": 0.41111,
+        "Geopolitický rámec": 0.63331,
+        "Lokální rámec": 0.39568
+      }
+    },
+    "Mluvčí": {
+      "irr_result": 0.67092,
+      "options": {
+        "Političtí představitelé Izraele": 0.77852,
+        "Političtí představitelé Palestiny": 0.50541,
+        "Politici z blízkovýchodních zemí": 0.67148,
+        "Politici ze ostatních světových zemí": 0.80907,
+        "Představitelé mezinárodních a neziskových organizací": 0.47376,
+        "Vojenští představitelé Izraele": 0.86296,
+        "Členové teroristických skupin": 0.65759,
+        "Nezávislí experti a analytici": 0.75974,
+        "Média a novináři": 0.33764,
+        "Očití svědci a civilisté z Izraele": 0.8037,
+        "Očití svědci a civilisté z Palestiny": 0.72023
+      }
+    }
   }
 }
