@@ -139,9 +139,8 @@ class Discourseer:
                 response = self.extract_answers(text, os.path.basename(file))
                 self.model_rater.add_model_response(os.path.basename(file), response)
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
-
-        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
-        self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
+            self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
+            self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
 
         if not self.raters:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
@@ -171,7 +170,7 @@ class Discourseer:
         logging.debug(f"Response raw: {response}")
         response = response.choices[0].message.content
         if response == '':
-            raise ValueError(f"Empty response from GPT model for text: {text_id}. Possible cause is not enough output tokens. Consider raising max_tokens parameter especially if using an o series reasoning model like o1 or o3")
+            logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter especially if using an o series reasoning model like o1 or o3")
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")
