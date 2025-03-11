@@ -69,8 +69,24 @@ class Calculator:
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         utils.pydantic_to_json_file(irr_results, self.get_output_file('irr_results.json'))
-        utils.dict_to_json_file(irr_results.get_metric_and_variant(self.metric, 'without_model'),
+        main_metric_results = irr_results.get_metric_and_variant(self.metric, 'without_model')
+        utils.dict_to_json_file(main_metric_results,
                                 self.get_output_file(f'irr_results_{self.metric}.json'))
+        main_metric_question_results = {k: v['irr_result'] for k, v in main_metric_results["questions"].items()}
+        utils.dict_to_json_file(main_metric_question_results,
+                                self.get_output_file(f'irr_results_{self.metric}_questions.json'))
+        question_results_df = pd.DataFrame(main_metric_question_results.items(), columns=['question_id', self.metric])
+        question_results_df.to_csv(self.get_output_file(f'irr_results_{self.metric}_questions.csv'), index=False)
+
+        main_metric_option_results = {k: v['options'] for k, v in main_metric_results["questions"].items()}
+        utils.dict_to_json_file(main_metric_option_results,
+                                self.get_output_file(f'irr_results_{self.metric}_options.json'))
+        results = []
+        for question_id, options in main_metric_option_results.items():
+            for option_id, option_result in options.items():
+                results.append({'question_id': question_id, 'option_id': option_id, self.metric: option_result})
+        option_results_df = pd.DataFrame(results)
+        option_results_df.to_csv(self.get_output_file(f'irr_results_{self.metric}_options.csv'), index=False)
 
         visualize_irr_results_only_human_raters(irr_results, location=self.get_output_file(f'irr_results_{self.metric}.png'), metric=self.metric, thresholds=self.thresholds)
 

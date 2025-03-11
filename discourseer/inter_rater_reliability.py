@@ -63,13 +63,12 @@ class IRRResults(pydantic.BaseModel):
         if self.irr_result is not None:
             results['irr_result'] = self.irr_result.get_metric(metric)
 
-        results['questions'] = {}
-        for key, irr_question_result in self.questions.items():
-            if irr_question_result is not None:
-                results['questions'][key] = irr_question_result.get_metric(metric)
+        results['questions'] = {question_id: irr_question_result.get_metric(metric)
+                                for question_id, irr_question_result in self.questions.items() if irr_question_result is not None}
+
         return results
 
-    def get_metric_and_variant(self, metric: str, variant: str) -> Dict:
+    def get_metric_and_variant(self, metric: str, variant: str) -> Dict[str, dict]:
         results = self.get_metric(metric)
 
         if 'irr_result' in results:
@@ -78,12 +77,8 @@ class IRRResults(pydantic.BaseModel):
             else:
                 raise KeyError(f'Variant {variant} not found in irr_result: {results["irr_result"]}')
 
-        for key, result in results['questions'].items():
-            if result is not None:
-                if hasattr(result['irr_result'], variant):
-                    results['questions'][key] = getattr(result['irr_result'], variant)
-                else:
-                    raise KeyError(f"Variant {variant} not found in question {key}: {result['irr_result']}")
+        results['questions'] = {key: question_result.get_metric_and_variant(metric, variant)
+                                for key, question_result in self.questions.items() if question_result is not None}
 
         return results
 
@@ -131,15 +126,24 @@ class IRRQuestionResult(pydantic.BaseModel):
         self.irr_result.description = IRRResultDescription.mean_irr_through_options
         return self.irr_result
 
-    def get_metric(self, metric: str):
+    def get_metric(self, metric: str) -> Dict[str, IRRVariants]:
         results = {}
         if self.irr_result is not None:
             results['irr_result'] = self.irr_result.get_metric(metric)
 
-        results['options'] = {}
-        for key, irr_option_result in self.options.items():
-            if irr_option_result is not None:
-                results['options'][key] = irr_option_result.get_metric(metric)
+        results['options'] = {option_id: irr_option_result.get_metric(metric)
+                              for option_id, irr_option_result in self.options.items() if irr_option_result is not None}
+        return results
+
+    def get_metric_and_variant(self, metric: str, variant: str) -> Dict[str, float]:
+        results = {}
+
+        if self.irr_result is not None:
+            results['irr_result'] = self.irr_result.get_metric_and_variant(metric, variant)
+
+        results['options'] = {option_id: option_result.get_metric_and_variant(metric, variant)
+                              for option_id, option_result in self.options.items() if option_result is not None}
+
         return results
 
     def select(self, questions: List[str] = None, options: List[str] = None,
@@ -170,9 +174,15 @@ class IRRResult(pydantic.BaseModel):
     gwet_ac1: IRRVariants
     majority_agreement: Optional[float] = None
 
-    def get_metric(self, metric: str):
+    def get_metric(self, metric: str) -> Optional[IRRVariants]:
         if hasattr(self, metric):
             return getattr(self, metric)
+        return None
+
+    def get_metric_and_variant(self, metric: str, variant: str) -> float:
+        metric_results = self.get_metric(metric)
+        if metric_results is not None:
+            return metric_results.get_variant(variant)
         return None
 
     def select(self, questions: List[str] = None, options: List[str] = None,
@@ -247,6 +257,11 @@ class IRRVariants(pydantic.BaseModel):
                 self.with_model is None and
                 self.worst_case is None and
                 self.without_model is None)
+    
+    def get_variant(self, variant: str) -> float:
+        if hasattr(self, variant):
+            return getattr(self, variant)
+        return None
 
     def select(self, questions: List[str] = None, options: List[str] = None,
             metrics: List[str] = None, variants: List[str] = None,
@@ -391,7 +406,6 @@ class IRR:
         irr_results.calc_mean_through_questions()
         self.df = df
 
-        # kripp_alphas_with_model = irr_results.to_dict_of_results_of_metric_and_variant('krippendorff_alpha', 'with_model')
         kripp_alphas_with_model = irr_results.select(metrics=['krippendorff_alpha'], variants=['with_model'])
         utils.dict_to_json_file(
             kripp_alphas_with_model,
