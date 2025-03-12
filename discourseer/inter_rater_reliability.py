@@ -22,6 +22,7 @@ class IRRResults(pydantic.BaseModel):
     irr_result: IRRResult = None  # mean of all question IRR results
     majority_agreement: Optional[float] = None
     questions: Optional[Dict[str, IRRQuestionResult]] = {}
+    files: Optional[Dict[str, IRRFileResult]] = {}
 
     def calc_mean_through_questions(self) -> IRRResult:
         if not self.questions:
@@ -66,11 +67,13 @@ class IRRResults(pydantic.BaseModel):
         results['questions'] = {question_id: irr_question_result.get_metric(metric)
                                 for question_id, irr_question_result in self.questions.items() if irr_question_result is not None}
 
+        results['files'] = {file_id: file_result.get_metric(metric)
+                            for file_id, file_result in self.files.items() if file_result is not None}
+
         return results
 
     def get_metric_and_variant(self, metric: str, variant: str) -> Dict[str, dict]:
         results = self.get_metric(metric)
-
         if 'irr_result' in results:
             if hasattr(results['irr_result'], variant):
                 results['irr_result'] = getattr(results['irr_result'], variant)
@@ -80,26 +83,37 @@ class IRRResults(pydantic.BaseModel):
         results['questions'] = {key: question_result.get_metric_and_variant(metric, variant)
                                 for key, question_result in self.questions.items() if question_result is not None}
 
+        results['files'] = {key: file_result.get_metric_and_variant(metric, variant)
+                            for key, file_result in self.files.items() if file_result is not None}
+
         return results
 
-    def select(self, questions: List[str] = None, options: List[str] = None,
+    def select(self, files: List[str] = None,
+               questions: List[str] = None, options: List[str] = None,
                metrics: List[str] = None, variants: List[str] = None,
-               include_multiple_choice: bool = True, include_single_choice: bool = True) -> Dict:
-        results = {'irr_result': self.irr_result.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)}
+               include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+               include_files: bool = True) -> Dict:
+        results = {'irr_result': self.irr_result.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions)}
 
-        selected_questions: Dict[str, IRRQuestionResult] = {}
+        if 'majority_agreement' in metrics and self.majority_agreement is not None:
+            results['majority_agreement'] = self.majority_agreement
 
-        for question_id, irr_question_result in self.questions.items():
-            if not questions or question_id in questions:
-                if irr_question_result.multiple_choice and include_multiple_choice:
-                    selected_questions[question_id] = irr_question_result.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)
-                elif not irr_question_result.multiple_choice and include_single_choice:
-                    selected_questions[question_id] = irr_question_result.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)
+        selected_questions = IRRQuestionResult.select_questions(self.questions, files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
 
-        if not selected_questions:
-            return results
+        if selected_questions:
+            results['questions'] = selected_questions
 
-        results['questions'] = selected_questions
+        selected_files: Dict[str, IRRFileResult] = {}
+
+        for file_id, irr_file_result in self.files.items():
+            if not files or file_id in files:
+                selected_file = irr_file_result.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
+                if selected_file:
+                    selected_files[file_id] = selected_file
+
+        if selected_files:
+            results['files'] = selected_files
+
         return results
 
     def is_empty(self) -> bool:
@@ -111,11 +125,63 @@ class IRRResults(pydantic.BaseModel):
     def from_json_file(cls, file: str) -> IRRResults:
         return utils.json_file_to_pydantic(file, cls)
 
+class IRRFileResult(pydantic.BaseModel):
+    irr_result: Optional[IRRResult] = None
+    majority_agreement: Optional[float]
+    questions: Optional[Dict[str, IRRQuestionResult]] = {}
+
+    def calc_mean_through_questions(self) -> IRRResult:
+        if not self.questions:
+            return IRRResult.get_empty()
+
+        self.irr_result = IRRResult.calc_mean_of_IRRResults([result.irr_result for result in self.questions.values()])
+        self.irr_result.description = IRRResultDescription.mean_irr_through_questions_in_file
+        return self.irr_result
+
+    def get_metric(self, metric: str) -> Dict[str, IRRVariants]:
+        results = {}
+        if self.irr_result is not None:
+            results['irr_result'] = self.irr_result.get_metric(metric)
+
+        results['questions'] = {question_id: irr_question_result.get_metric(metric)
+                                for question_id, irr_question_result in self.questions.items() if irr_question_result is not None}
+        return results
+    
+    def get_metric_and_variant(self, metric: str, variant: str) -> Dict[str, float]:
+        results = {}
+        if self.irr_result is not None:
+            results['irr_result'] = self.irr_result.get_metric_and_variant(metric, variant)
+
+        results['questions'] = {question_id: question_result.get_metric_and_variant(metric, variant)
+                                for question_id, question_result in self.questions.items() if question_result is not None}
+        
+        return results
+    
+    def select(self, files: List[str] = None,
+            questions: List[str] = None, options: List[str] = None,
+            metrics: List[str] = None, variants: List[str] = None,
+            include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+            include_files: bool = True) -> Dict:
+        results = {}
+
+        if self.irr_result is not None:
+            results['irr_result'] = self.irr_result.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions)
+
+        if 'majority_agreement' in metrics and self.majority_agreement is not None:
+            results['majority_agreement'] = self.majority_agreement
+
+        selected_questions = IRRQuestionResult.select_questions(self.questions, files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
+
+        if selected_questions:
+            results['questions'] = selected_questions
+
+        return results
+
 
 class IRRQuestionResult(pydantic.BaseModel):
     multiple_choice: bool
     irr_result: IRRResult = None
-    majority_agreement: Optional[float]
+    majority_agreement: Optional[float] = None
     options: Optional[Dict[str, IRRResult]] = {}
 
     def calc_mean_through_options(self) -> IRRResult:
@@ -131,40 +197,76 @@ class IRRQuestionResult(pydantic.BaseModel):
         if self.irr_result is not None:
             results['irr_result'] = self.irr_result.get_metric(metric)
 
+        if not self.options:
+            return results
         results['options'] = {option_id: irr_option_result.get_metric(metric)
                               for option_id, irr_option_result in self.options.items() if irr_option_result is not None}
         return results
 
     def get_metric_and_variant(self, metric: str, variant: str) -> Dict[str, float]:
         results = {}
-
         if self.irr_result is not None:
             results['irr_result'] = self.irr_result.get_metric_and_variant(metric, variant)
 
+        if not self.options:
+            return results
         results['options'] = {option_id: option_result.get_metric_and_variant(metric, variant)
                               for option_id, option_result in self.options.items() if option_result is not None}
 
         return results
 
-    def select(self, questions: List[str] = None, options: List[str] = None,
+    def select(self, files: List[str] = None,
+               questions: List[str] = None, options: List[str] = None,
                metrics: List[str] = None, variants: List[str] = None,
-               include_multiple_choice: bool = True, include_single_choice: bool = True) -> Dict:
-        results = {'irr_result': self.irr_result.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)}
-        if not options:
-            results['options'] = {k: v.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice) for k, v in self.options.items()}
+               include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+               include_files: bool = True) -> Dict:
+        results = {}
+
+        if self.irr_result is not None:
+            results['irr_result'] = self.irr_result.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions)
+
+        if 'majority_agreement' in metrics and self.majority_agreement is not None:
+            results['majority_agreement'] = self.majority_agreement
+
+        if not self.options:  # no options found
+            return results
+
+        if not options:  # select all options
+            results['options'] = {k: v.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files) for k, v in self.options.items()}
             return results
 
         selected_options: Dict[str, IRRResult] = {}
 
         for option_id, irr_result in self.options.items():
             if option_id in options:
-                selected_options[option_id] = irr_result.select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)
+                selected_options[option_id] = irr_result.select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
 
         if not selected_options:
             return results
 
         results['options'] = selected_options
         return results
+
+    @staticmethod
+    def select_questions(all_questions: Dict[str, IRRQuestionResult], files: List[str] = None,
+            questions_to_select: List[str] = None, options: List[str] = None,
+            metrics: List[str] = None, variants: List[str] = None,
+            include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+            include_files: bool = True) -> Dict[str, IRRQuestionResult]:
+        selected_questions: Dict[str, IRRQuestionResult] = {}
+
+        for question_id, irr_question_result in all_questions.items():
+            if not questions_to_select or question_id in questions_to_select:
+                selected = None
+                if irr_question_result.multiple_choice and include_multiple_choice_questions:
+                    selected = irr_question_result.select(files, questions_to_select, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
+                elif not irr_question_result.multiple_choice and include_single_choice_questions:
+                    selected = irr_question_result.select(files, questions_to_select, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
+
+                if selected:
+                    selected_questions[question_id] = selected
+
+        return selected_questions
 
 
 class IRRResult(pydantic.BaseModel):
@@ -185,9 +287,11 @@ class IRRResult(pydantic.BaseModel):
             return metric_results.get_variant(variant)
         return None
 
-    def select(self, questions: List[str] = None, options: List[str] = None,
+    def select(self, files: List[str] = None,
+               questions: List[str] = None, options: List[str] = None,
                metrics: List[str] = None, variants: List[str] = None,
-               include_multiple_choice: bool = True, include_single_choice: bool = True) -> Dict:
+               include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+               include_files: bool = True) -> Dict:
         if not metrics:
             return self.model_dump()
 
@@ -195,7 +299,7 @@ class IRRResult(pydantic.BaseModel):
         for metric in metrics:
             if hasattr(self, metric) and (metric not in ['description']):
                 if isinstance(getattr(self, metric), IRRVariants):
-                    results[metric] = getattr(self, metric).select(questions, options, metrics, variants, include_multiple_choice, include_single_choice)
+                    results[metric] = getattr(self, metric).select(files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
                 else:
                     results[metric] = getattr(self, metric)
         return results
@@ -263,9 +367,11 @@ class IRRVariants(pydantic.BaseModel):
             return getattr(self, variant)
         return None
 
-    def select(self, questions: List[str] = None, options: List[str] = None,
-            metrics: List[str] = None, variants: List[str] = None,
-            include_multiple_choice: bool = True, include_single_choice: bool = True) -> Dict:
+    def select(self, files: List[str] = None,
+               questions: List[str] = None, options: List[str] = None,
+               metrics: List[str] = None, variants: List[str] = None,
+               include_multiple_choice_questions: bool = True, include_single_choice_questions: bool = True,
+               include_files: bool = True) -> Dict:
         if not variants:
             return self.model_dump()
 
@@ -279,6 +385,7 @@ class IRRVariants(pydantic.BaseModel):
 class IRRResultDescription(str, Enum):
     # string enums to make it serializable to JSON
     mean_irr_through_questions = "mean IRR through questions"
+    mean_irr_through_questions_in_file = "mean IRR through questions in file"
     mean_irr_through_options = "mean IRR through options"
     irr_for_single_choice_question = "IRR for single choice question"
     irr_for_this_option = "IRR for this option"
@@ -375,13 +482,42 @@ class IRR:
         logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
         df.to_csv(self.out_dataframe)
 
-        question_ids = df.index.get_level_values(self.index_cols[1]).unique().to_list()
+        irr_results = IRRResults(
+            majority_agreement=self.calc_majority_agreement(df),
+            questions = self.calculate_irr_for_each_question(df),
+            files=self.calculate_irr_for_each_file(df)
+        )
+        irr_results.calc_mean_through_questions()
+        self.df = df
+
+        kripp_alphas_with_model = irr_results.select(metrics=['krippendorff_alpha'], variants=['with_model'], include_files=False)
+        utils.dict_to_json_file(
+            kripp_alphas_with_model,
+            os.path.join(self.out_dir, f"irr_kripp_alpha_with_model.json"))
+
+        maj_agg_files = irr_results.select(metrics=['majority_agreement'], variants=['with_model'], include_multiple_choice_questions=False, include_single_choice_questions=False)
+        utils.dict_to_json_file(
+            maj_agg_files,
+            os.path.join(self.out_dir, f"majority_agreements_of_files.json"))
+
+        return irr_results
+
+    def calculate_irr_for_each_question(self, df: pd.DataFrame, only_maj_agreement: bool = False) -> Dict[str, IRRQuestionResult]:
         irr_question_results: Dict[str, IRRQuestionResult] = {}
+        question_ids = df.index.get_level_values(self.index_cols[1]).unique().to_list()
+
         for question_id in question_ids:
             logger.info(f"Calculating IRR for question {question_id}")
 
             df_question = df.xs(question_id, level=self.index_cols[1])
             unique_options = list(df_question.index.get_level_values('option_id').unique())
+
+            if only_maj_agreement:
+                irr_question_results[question_id] = IRRQuestionResult(
+                    multiple_choice=len(unique_options) > 1,
+                    majority_agreement=self.calc_majority_agreement(df_question)
+                )
+                continue
 
             if len(unique_options) == 0:
                 logger.warning(f"No ratings for question_id {question_id}. Skipping IRR calculation.")
@@ -398,26 +534,43 @@ class IRR:
             else:  # multiple choice question
                 irr_question_results[question_id] = self.calculate_irr_for_each_option(
                     df_question, unique_options, question_id)
+            
+        return irr_question_results
 
-        irr_results = IRRResults(
-            majority_agreement=self.calc_majority_agreement(df),
-            questions = irr_question_results
-        )
-        irr_results.calc_mean_through_questions()
-        self.df = df
+    def calculate_irr_for_each_file(self, df: pd.DataFrame, only_maj_agreement: bool = True
+                                    ) -> Dict[str, IRRFileResult]:
+        file_results: Dict[str, IRRFileResult] = {}
+        file_ids = df.index.get_level_values(self.index_cols[0]).unique().to_list()
 
-        kripp_alphas_with_model = irr_results.select(metrics=['krippendorff_alpha'], variants=['with_model'])
-        utils.dict_to_json_file(
-            kripp_alphas_with_model,
-            os.path.join(self.out_dir, f"irr_kripp_alpha_with_model.json"))
+        for file_id in file_ids:
+            df_file = df.xs(file_id, level=self.index_cols[0])
 
-        return irr_results
+            file_result = IRRFileResult(
+                    majority_agreement=self.calc_majority_agreement(df_file),
+                    questions=self.calculate_irr_for_each_question(df_file, only_maj_agreement=only_maj_agreement)
+                )
+            if only_maj_agreement:
+                for question_id, irr_question_result in file_result.questions.items():
+                    irr_question_result.irr_result = None
+                    irr_question_result.options = None
+            else:
+                file_result.irr_result = file_result.calc_mean_through_questions(file_results[file_id].questions)
+
+            file_results[file_id] = file_result
+
+        return file_results
 
     def calculate_irr_for_each_option(self, df_question: pd.DataFrame, unique_options: list[str], question_id: str) -> IRRQuestionResult:
         option_results: Dict[str, IRRResult] = {}
 
         for option in unique_options:
-            df_option = df_question.xs(option, level='option_id')
+
+            index_column_count = len(df_question.index.names)
+            if index_column_count > 1:
+                df_option = df_question.xs(option, level='option_id')
+            else:
+                df_option = df_question[df_question.index.get_level_values('option_id') == option]
+
             if df_option.shape[0] == 0:
                 logger.debug(f"No ratings for option {option} in question_id {question_id}. Skipping IRR calculation.")
                 continue

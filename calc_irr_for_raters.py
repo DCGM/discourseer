@@ -78,7 +78,7 @@ class Calculator:
         question_results_df = pd.DataFrame(main_metric_question_results.items(), columns=['question_id', self.metric])
         question_results_df.to_csv(self.get_output_file(f'irr_results_{self.metric}_questions.csv'), index=False)
 
-        main_metric_option_results = {k: v['options'] for k, v in main_metric_results["questions"].items()}
+        main_metric_option_results = {k: v['options'] for k, v in main_metric_results["questions"].items() if 'options' in v}
         utils.dict_to_json_file(main_metric_option_results,
                                 self.get_output_file(f'irr_results_{self.metric}_options.json'))
         results = []

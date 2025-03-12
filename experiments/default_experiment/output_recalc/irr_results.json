@@ -308,5 +308,70 @@
         }
       }
     }
+  },
+  "files": {
+    "Chci_spravedlnost_pro_dceru.txt": {
+      "majority_agreement": 0.909,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "majority_agreement": 0.0
+        },
+        "genre": {
+          "multiple_choice": false,
+          "majority_agreement": 1.0
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "majority_agreement": 1.0
+        },
+        "place": {
+          "multiple_choice": true,
+          "majority_agreement": 1.0
+        }
+      }
+    },
+    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "majority_agreement": 0.727,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "majority_agreement": 1.0
+        },
+        "genre": {
+          "multiple_choice": false,
+          "majority_agreement": 1.0
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "majority_agreement": 0.0
+        },
+        "place": {
+          "multiple_choice": true,
+          "majority_agreement": 0.75
+        }
+      }
+    },
+    "Tvrdík_skončil_jako_viceprezident.txt": {
+      "majority_agreement": 0.818,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "majority_agreement": 0.0
+        },
+        "genre": {
+          "multiple_choice": false,
+          "majority_agreement": 1.0
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "majority_agreement": 0.0
+        },
+        "place": {
+          "multiple_choice": true,
+          "majority_agreement": 1.0
+        }
+      }
+    }
   }
 }

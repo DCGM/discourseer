@@ -12,8 +12,7 @@
         "krippendorff_alpha": {
           "with_model": 0.51111
         }
-      },
-      "options": {}
+      }
     },
     "genre": {
       "irr_result": {
@@ -21,8 +20,7 @@
         "krippendorff_alpha": {
           "with_model": 0.0
         }
-      },
-      "options": {}
+      }
     },
     "message-trigger": {
       "irr_result": {
@@ -30,8 +28,7 @@
         "krippendorff_alpha": {
           "with_model": 0.12
         }
-      },
-      "options": {}
+      }
     },
     "place": {
       "irr_result": {
