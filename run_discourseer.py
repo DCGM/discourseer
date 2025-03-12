@@ -152,10 +152,10 @@ class Discourseer:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir)
-        irr_results = irr_calculator()
+        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir,
+                             export_majority_agreement_files_and_questions=True)
 
-        self.save_output(self.output_dir, irr_results)
+        self.save_output(self.output_dir, irr_calculator)
         self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_answers(self, text: str, text_id: str, codebook: Codebook):
@@ -212,7 +212,11 @@ class Discourseer:
             rater.save_to_csv(self.get_output_file(rater.name, input_ratings=True))
 
     @staticmethod
-    def save_output(output_dir: str, irr_results: IRR):
+    def save_output(output_dir: str, irr_calculator: IRR):
+        logging.info(irr_calculator.get_maj_agg_files_and_questions_summary())
+
+        irr_results = irr_calculator()
+
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
         pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'), exclude_none=True)
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))

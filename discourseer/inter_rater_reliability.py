@@ -9,6 +9,8 @@ from typing import Optional, Dict, List
 import numpy as np
 import pandas as pd
 from irrCAC.raw import CAC
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from discourseer.rater import Rater
 from discourseer.codebook import single_choice_tag
@@ -120,6 +122,30 @@ class IRRResults(pydantic.BaseModel):
         return ((self.irr_result is None or self.irr_result.is_empty()) and
                 self.majority_agreement is None and
                 not self.questions)
+
+    def file_results_to_pandas(self) -> Optional[pd.DataFrame]:
+        if not self.files:
+            return None
+
+        file_results = []
+        for file_id, irr_file_result in self.files.items():
+            if not irr_file_result:
+                continue
+
+            file_result = {'file_id': file_id}
+            if irr_file_result.majority_agreement is not None:
+                file_result['file_majority_agreement'] = irr_file_result.majority_agreement
+
+            file_result.update({question_id: irr_question_result.majority_agreement
+                                for question_id, irr_question_result in irr_file_result.questions.items() if irr_question_result is not None})
+
+            file_result['file_id'] = file_id
+            file_results.append(file_result)
+
+        df = pd.DataFrame(file_results).set_index('file_id')
+        df = df.sort_values(by='file_majority_agreement')
+
+        return df
 
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
@@ -412,9 +438,13 @@ class IRR:
     col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
     col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
 
+    df_maj_agg_files_and_questions = None
+    maj_agg_files_and_questions_file = 'majority_agreements_of_files_and_questions.csv'
+
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
-                 export_dataframes_for_options: bool = False):
+                 export_dataframes_for_options: bool = False,
+                 export_majority_agreement_files_and_questions: bool = False):
         self.raters = raters
         self.model_rater = model_rater
         if model_rater:
@@ -422,6 +452,7 @@ class IRR:
 
         # self.calculate_irr_for_options = True
         self.export_dataframes_for_options = export_dataframes_for_options
+        self.export_majority_agreement_files_and_questions = export_majority_agreement_files_and_questions
         self.out_dir = out_dir
         self.out_dataframe = os.path.join(self.out_dir, self.DATAFRAME_NAME)
         os.makedirs(self.out_dir, exist_ok=True)
@@ -491,14 +522,15 @@ class IRR:
         self.df = df
 
         kripp_alphas_with_model = irr_results.select(metrics=['krippendorff_alpha'], variants=['with_model'], include_files=False)
-        utils.dict_to_json_file(
-            kripp_alphas_with_model,
-            os.path.join(self.out_dir, f"irr_kripp_alpha_with_model.json"))
+        kripp_alphas_with_model_path = os.path.join(self.out_dir, f"irr_kripp_alpha_with_model.json")
+        utils.dict_to_json_file(kripp_alphas_with_model, kripp_alphas_with_model_path)
 
-        maj_agg_files = irr_results.select(metrics=['majority_agreement'], variants=['with_model'], include_multiple_choice_questions=False, include_single_choice_questions=False)
-        utils.dict_to_json_file(
-            maj_agg_files,
-            os.path.join(self.out_dir, f"majority_agreements_of_files.json"))
+        if self.col_model in df.columns and self.export_majority_agreement_files_and_questions:
+            maj_agg_files = irr_results.select(metrics=['majority_agreement'], variants=['with_model'], include_multiple_choice_questions=False, include_single_choice_questions=False)
+            maj_agg_files_path = os.path.join(self.out_dir, f"majority_agreements_of_files.json")
+            utils.dict_to_json_file(maj_agg_files, maj_agg_files_path)
+
+            self.export_maj_agg_files_and_questions(irr_results)
 
         return irr_results
 
@@ -715,7 +747,67 @@ class IRR:
 
         df[self.col_worst_case] = df[self.col_worst_case].astype('string')
         return df
-    
+
+    def export_maj_agg_files_and_questions(self, irr_results: IRRResults):
+        df_files = irr_results.file_results_to_pandas()
+        if df_files is None:
+            return
+
+        df_files_output_file = os.path.join(self.out_dir, self.maj_agg_files_and_questions_file)
+        self.df_maj_agg_files_and_questions = df_files.copy()
+        df_files.to_csv(df_files_output_file)
+
+        worst_n = 40
+        if df_files.shape[0] <= worst_n // 2:
+            fig, ax = plt.subplots(1, 1) #, figsize=(10, 20))
+            IRR.plot_heatmap(df_files, ax)
+        else:
+            df_files = df_files.head(worst_n)
+            df_files_1 = df_files.iloc[:worst_n//2]
+            df_files_2 = df_files.iloc[worst_n//2:]
+
+            # plot two heatmaps in the same figure
+            fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(10, 20))
+            IRR.plot_heatmap(df_files_1, ax0)
+            IRR.plot_heatmap(df_files_2, ax1)
+            ax1.legend().remove()
+
+        fig.suptitle(f'Majority agreement for each question in each file (worst {worst_n} files)', fontsize=13)
+        fig.tight_layout(rect=[0, 0, 1, 0.99])
+
+        # save to image
+        out_file = os.path.join(self.out_dir, 'majority_agreement_heatmap.png')
+        plt.savefig(out_file)
+        plt.close()
+
+    def get_maj_agg_files_and_questions_summary(self) -> str:
+        if self.df_maj_agg_files_and_questions is None or self.df_maj_agg_files_and_questions.empty:
+            return ""
+
+        message = '3 worst files according to majority agreement:\n'
+        message += self.df_maj_agg_files_and_questions.head(3).to_string()
+        message += f'\n(see whole in {self.maj_agg_files_and_questions_file})\n'
+        return message
+
+    @staticmethod
+    def plot_heatmap(df: pd.DataFrame, ax: plt.Axes):
+        sns.heatmap(df, annot=True, fmt=".2f", ax=ax)
+        ax.set_ylabel('')
+
+        n_chars = 15
+
+        yticks_values = np.arange(0, df.shape[0], 1) + 0.5
+        yticks_labels = [f if len(f) < n_chars else f[:n_chars] + '...'
+                         for f in df.index]
+        ax.set_yticks(yticks_values, labels=yticks_labels)
+
+        xticks_values = np.arange(0, df.shape[1], 1) + 0.5
+        xticks_labels = [f if len(f) < n_chars else f[:n_chars] + '...'
+                         for f in df.columns]
+        ax.set_xticks(xticks_values, labels=xticks_labels, rotation=90)
+        ax.tick_params(top=True, labeltop=True, bottom=False, labelbottom=False)
+
+
     @staticmethod
     def get_opposite_rating(rating: str) -> str:
         # check for NA first

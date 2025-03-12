@@ -86,12 +86,14 @@ class Calculator:
         # self.df = self.df.astype('string')
 
     def __call__(self):
-        irr_calculator = IRR(df=self.df, out_dir=self.output_dir)
+        irr_calculator = IRR(df=self.df, out_dir=self.output_dir, export_majority_agreement_files_and_questions=True)
         irr_results = irr_calculator()
+
+        print(irr_calculator.get_maj_agg_files_and_questions_summary())
 
         print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
-        Discourseer.save_output(self.output_dir, irr_results)
+        Discourseer.save_output(self.output_dir, irr_calculator)
 
     def check_present_in_df(self, df: pd.DataFrame, cols: List[str]) -> List[str]:
         missing_cols = [col for col in cols if col not in df.columns]

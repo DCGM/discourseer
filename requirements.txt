@@ -5,3 +5,4 @@ backoff
 numpy
 matplotlib
 pandas
+seaborn
