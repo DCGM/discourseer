@@ -7,10 +7,10 @@ import time
 from typing import List, Union
 from tqdm import tqdm
 
-from discourseer.codebook import Codebook
+from discourseer.codebook import Codebook, all_questions_at_once_tag
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
-from discourseer.chat_client import ChatClient, Conversation, ChatMessage, ConversationLog
+from discourseer.chat_client import ChatClient, Conversation, ChatMessage, LogChatMessage, ConversationLog
 from discourseer import utils
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
 from discourseer.visualize_IRR import visualize_results
@@ -128,7 +128,7 @@ class Discourseer:
 
         conversation_setting = self.prompt_schema_definition.model_dump()
         conversation_setting.pop('messages', None)
-        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], **conversation_setting)
+        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], chat_log=[], **conversation_setting)
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", codebook=self.codebook)
@@ -137,6 +137,7 @@ class Discourseer:
         logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
+        logging.info(f'Processing {len(self.input_files)} texts with {len(self.individual_codebooks)} codebook(s).')
         for file_counter, file in enumerate(tqdm(self.input_files)):
             for codebook in self.individual_codebooks:
                 with open(file, 'r', encoding='utf-8') as f:
@@ -159,11 +160,13 @@ class Discourseer:
         self.copy_input_ratings_to_output(irr_calculator)
 
     def extract_answers(self, text: str, text_id: str, codebook: Codebook):
-        text_short = text[:min(50, len(text))].replace('\n', '')
-        logging.info(f"Extracting answers from text: {text_id} ({text_short}...)")
+        text_short = text[:min(40, len(text))].replace('\n', '')
+        question_message = "" if len(codebook.questions) > 1 else f"for question: {codebook.questions[0].id}"
+        logging.info(f"Extracting answers from text: {text_id} ({text_short}...) {question_message}")
 
         conversation = self.prompt_schema_definition.model_copy(deep=True)
         for message in conversation.messages:
+            codebook.check_correct_usage_of_format_strings(message.content)
             try:
                 message.content = message.content.format(**codebook.get_format_strings(), text=text)
             except KeyError as e:
@@ -182,8 +185,16 @@ class Discourseer:
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")
-        self.conversation_log.texts[text_id] = conversation.messages
-        self.conversation_log.texts[text_id].append(ChatMessage(role="assistant", content=response))
+        if len(codebook.questions) > 1:
+            question_id = all_questions_at_once_tag
+        else:
+            question_id = codebook.questions[0].id
+
+        log_chat_message = LogChatMessage(
+            text_id=text_id,
+            question_id=question_id,
+            messages=conversation.messages + [ChatMessage(role="assistant", content=response)])
+        self.conversation_log.chat_log.append(log_chat_message)
 
         return response
 

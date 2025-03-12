@@ -33,6 +33,7 @@ class Conversation(pydantic.BaseModel):
     top_p: Optional[float] = None # 0
     response_format: Optional[ResponseFormat] = None #ResponseFormat.json
     messages: list[ChatMessage]
+    prompt_individual_questions: Optional[bool] = None
 
     @pydantic.field_serializer('response_format')
     def serialize_response_format(self, response_format: ResponseFormat, _info):
@@ -52,14 +53,20 @@ class Conversation(pydantic.BaseModel):
         return sum(len(message.content) for message in self.messages)
 
 
+class ConversationLog(Conversation):
+    schema_definition: List[ChatMessage]
+    chat_log: List[LogChatMessage]
+
+
+class LogChatMessage(pydantic.BaseModel):
+    text_id: str
+    question_id: str
+    messages: List[ChatMessage]
+
+
 class ChatMessage(pydantic.BaseModel):
     role: Literal["system", "user", "assistant"]
     content: str | dict
-
-
-class ConversationLog(Conversation):
-    schema_definition: List[ChatMessage]
-    texts: Dict[str, List[ChatMessage]] = {}
 
 
 class ChatClient:
@@ -76,6 +83,11 @@ class ChatClient:
 
     def invoke(self, response_format: ResponseFormat = ResponseFormat.normal, **kwargs):
         kwargs = self.exclude_none_values(kwargs)
+
+        non_completion_kwargs = ['prompt_individual_questions']
+        for kwarg in non_completion_kwargs:
+            if kwarg in kwargs:
+                del kwargs[kwarg]
 
         if response_format == ResponseFormat.json:
             try:

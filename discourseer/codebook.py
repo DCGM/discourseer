@@ -4,11 +4,13 @@ import logging
 import json
 import pydantic
 from typing import List, Dict, Literal, Optional
+from copy import deepcopy
 
 logger = logging.getLogger()
 
 single_choice_tag = "single_choice"
 multiple_choice_tag = "multiple_choice"
+all_questions_at_once_tag = "all_questions_at_once"
 
 
 class Codebook(pydantic.BaseModel):
@@ -70,7 +72,7 @@ class Codebook(pydantic.BaseModel):
     def split_by_individual_questions(self) -> List[Codebook]:
         codebooks = []
         for i, question in enumerate(self.questions):
-            new_codebook = self.deepcopy()
+            new_codebook = deepcopy(self)
             new_codebook.questions = [question]
             codebooks.append(new_codebook)
 
@@ -95,16 +97,13 @@ class Codebook(pydantic.BaseModel):
         return ", ".join([question.name for question in self.questions if question.multiple_choice])
 
     def first_question_single_or_multi_choice(self) -> str:
-        if len(self.questions) == 0:
-            logger.warning("No questions defined in the codebook.")
-            return ""
+        try:
+            first_question = self.questions[0]
+        except IndexError:
+            raise ValueError(f"No questions defined in the codebook (codebook_name: {self.codebook_name}, codebook_version: {self.codebook_version}).")
 
-        if len(self.questions) > 1:
-            logger.info(f"Prompt schema defined 'first_question_single_or_multi_choice' format string which should be used for experiments with individual questions. "
-                           f"Only the first question '{self.questions[0].name}' will be used. "
-                           f"If you want to prompt model with individual questions, define '\"prompt_individual_questions\":true' in the prompt schema.")
 
-        if self.questions[0].multiple_choice:
+        if first_question.multiple_choice:
             return "multiple choice, meaning you can select multiple options."
         else:
             return "single choice, meaning you can select only one option."
@@ -170,6 +169,15 @@ class Codebook(pydantic.BaseModel):
             response_format[question.name] = (value, ...)
         response_format = pydantic.create_model('ResponseFormat', **response_format)
         return json.dumps(response_format.model_json_schema(), indent=2, ensure_ascii=False)
+
+    def check_correct_usage_of_format_strings(self, message_content):
+        if len(self.questions) == 0:
+            raise ValueError("No questions defined in the codebook.")
+        elif len(self.questions) > 1 and '{first_question_single_or_multi_choice}' in message_content:
+            logger.warning(
+                f"'first_question_single_or_multi_choice' format string defined in the prompt schema which should be used for experiments with individual questions. "
+                f"Only the first question '{self.questions[0].name}' will be used. Out of {len(self.questions)} questions: {self.question_names()}. "
+                f"If you want to prompt model with individual questions, define '\"prompt_individual_questions\":true' in the prompt schema.")
 
     def get_format_strings(self) -> Dict[str, str]:
         return {
