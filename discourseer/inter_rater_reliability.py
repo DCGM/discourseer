@@ -934,7 +934,7 @@ class IRR:
             for rater_name, rater in raters_dict.items():
                 unique_file_lens = {rater_name: len(rater.index.get_level_values(0).unique().to_list()) for rater_name, rater in raters_dict.items()}
                 if len(set(unique_file_lens.values())) != 1:
-                    logger.warning(f'Raters have different numbers of unique files. Are you sure, these raters shoul be in one experiment?\n{unique_file_lens}')
+                    logger.warning(f'Raters have different numbers of unique files. Are you sure, these raters should be in one experiment?\n{unique_file_lens}')
 
         df = pd.DataFrame(raters_dict)
         for col in df.columns:
