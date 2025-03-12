@@ -2,7 +2,7 @@
   "irr_result": {
     "description": "mean IRR through questions",
     "krippendorff_alpha": {
-      "with_model": 0.38199
+      "with_model": 0.36379
     }
   },
   "questions": {
@@ -12,8 +12,7 @@
         "krippendorff_alpha": {
           "with_model": 0.51111
         }
-      },
-      "options": {}
+      }
     },
     "genre": {
       "irr_result": {
@@ -21,23 +20,21 @@
         "krippendorff_alpha": {
           "with_model": 0.0
         }
-      },
-      "options": {}
+      }
     },
     "message-trigger": {
       "irr_result": {
         "description": "IRR for single choice question",
         "krippendorff_alpha": {
-          "with_model": 0.14184
+          "with_model": 0.12
         }
-      },
-      "options": {}
+      }
     },
     "place": {
       "irr_result": {
         "description": "mean IRR through options",
         "krippendorff_alpha": {
-          "with_model": 0.875
+          "with_model": 0.82407
         }
       },
       "options": {
@@ -68,7 +65,7 @@
         "russia": {
           "description": "IRR for this option",
           "krippendorff_alpha": {
-            "with_model": 1.0
+            "with_model": 0.59259
           }
         },
         "ukraine": {

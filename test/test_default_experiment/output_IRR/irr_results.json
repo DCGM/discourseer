@@ -308,5 +308,97 @@
         }
       }
     }
+  },
+  "files": {
+    "Chci_spravedlnost_pro_dceru.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
+    },
+    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
+    },
+    "Tvrdík_skončil_jako_viceprezident.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
+    }
   }
 }
