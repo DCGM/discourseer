@@ -1,0 +1,21 @@
+{
+  "model": "gpt-4o-2024-08-06",
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.0,
+  "response_format": "json",
+  "messages": [
+    {
+      "role": "user",
+      "content": "As an expert annotator with a focus on news and media content analyses, your role is to scrutinize online news articles on Israeli-Palestinian conflict. \nThe latest outburst of the long-standing conflict arouse after Hamas attack on Israel on 7th October 2023, followed by a fierce military response from Israel. \nYou will read articles from Novinky.cz, a major Czech online news portal. The political representation of the Czech Republic holds strong pro-Israeli stances, arguably based on historical experiences (both Czechs and Jews struggled for wider political recognition of their nations during the World War I and World War Two) and contemporary political orientation (after 1989, the Czech Republic takes the Global West as its allies and dissociates from the East, namely Russia). The representation of Israeli-Palestinian conflict in the Czech news and the stances of political representatives of the Czech Republic need not be aligned with each other, as the principles of democracy guarantee. Nonetheless, the sheer understanding of the Jews as those culturally closer to \"us\" is not marginal, as well as implicit attitudes of islamophobia. \nThe overall conflict between Palestine and Israel is a highly polarized and complicated one, so please do your best to avoid any overinterpretation or bias that could favour one of its side. \nYour expertise is crucial in identifying routinized practices of journalists, such as news values, frames, or sourcing. The content analysis will help look at the news reporting with a critical distance and give viable recommendations to the journalists how to improve their work.\n\nYou are analyzing the following text to extract {question_names}. {question_names_and_descriptions_colon}. For every question pick only options from these lists.\n{question_options}\n\nYou will pick one option for these questions: {single_choice_questions}. You will pick one or more options for these questions: {multiple_choice_questions}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "user",
+      "content": "{response_json_schema_with_options}"
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    }
+  ]
+}
