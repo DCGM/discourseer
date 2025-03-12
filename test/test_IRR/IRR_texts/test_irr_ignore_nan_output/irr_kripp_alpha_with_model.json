@@ -12,8 +12,7 @@
         "krippendorff_alpha": {
           "with_model": null
         }
-      },
-      "options": {}
+      }
     },
     "message-trigger": {
       "irr_result": {
@@ -21,8 +20,7 @@
         "krippendorff_alpha": {
           "with_model": null
         }
-      },
-      "options": {}
+      }
     },
     "place": {
       "irr_result": {
@@ -88,8 +86,7 @@
         "krippendorff_alpha": {
           "with_model": null
         }
-      },
-      "options": {}
+      }
     },
     "place-pseudo": {
       "irr_result": {
@@ -97,8 +94,7 @@
         "krippendorff_alpha": {
           "with_model": null
         }
-      },
-      "options": {}
+      }
     }
   }
 }
