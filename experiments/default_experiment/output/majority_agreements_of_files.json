@@ -1,18 +1,18 @@
 {
   "irr_result": {
     "description": "mean IRR through questions",
-    "majority_agreement": 0.75
+    "majority_agreement": 0.64569
   },
-  "majority_agreement": 0.909,
+  "majority_agreement": 0.818,
   "files": {
     "Chci_spravedlnost_pro_dceru.txt": {
       "majority_agreement": 0.909
     },
     "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
-      "majority_agreement": 0.909
+      "majority_agreement": 0.727
     },
     "Tvrdík_skončil_jako_viceprezident.txt": {
-      "majority_agreement": 0.909
+      "majority_agreement": 0.818
     }
   }
 }

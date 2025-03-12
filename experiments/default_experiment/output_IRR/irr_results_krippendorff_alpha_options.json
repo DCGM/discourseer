@@ -1,0 +1,12 @@
+{
+  "place": {
+    "czech-republic": 1.0,
+    "slovakia": 1.0,
+    "poland": 0.11111,
+    "germany": 1.0,
+    "russia": -0.14286,
+    "ukraine": 1.0,
+    "other": 0.0,
+    "unknown": 1.0
+  }
+}

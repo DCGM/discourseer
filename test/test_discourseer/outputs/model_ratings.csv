@@ -1,6 +1,6 @@
 Tvrdík_skončil_jako_viceprezident.txt,range,3
 Tvrdík_skončil_jako_viceprezident.txt,genre,report
-Tvrdík_skončil_jako_viceprezident.txt,message-trigger,politician
+Tvrdík_skončil_jako_viceprezident.txt,message-trigger,public
 Tvrdík_skončil_jako_viceprezident.txt,place,czech-republic
 Chci_spravedlnost_pro_dceru.txt,range,3
 Chci_spravedlnost_pro_dceru.txt,genre,report
@@ -9,4 +9,4 @@ Chci_spravedlnost_pro_dceru.txt,place,czech-republic
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,range,3
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,genre,report
 Rusko_použilo_hypersonickou_střelu_Zirkon.txt,message-trigger,politician
-Rusko_použilo_hypersonickou_střelu_Zirkon.txt,place,ukraine
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt,place,russia,ukraine

@@ -18,81 +18,94 @@
       "content": "The text to analyze is: {text}"
     }
   ],
-  "texts": {
-    "Tvrdík_skončil_jako_viceprezident.txt": [
-      {
-        "role": "system",
-        "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
-      },
-      {
-        "role": "system",
-        "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
-      },
-      {
-        "role": "user",
-        "content": "The text to analyze is: Tvrdík skončil jako viceprezident čínské Citic, chce se více věnovat Slavii\n\nJaroslav Tvrdík skončil jako viceprezident čínské Citic Europe Holding, pokračovat\nbude jen jako člen představenstva skupiny. Končí i jako šéf představenstva Pivovarů\nLobkowicz. Prioritou je pro něj rozvoj fotbalové Slavie. Někdejší sociálnědemokratický\npolitik se tak rozhodl krátce poté, co Slavii koupil od společnosti Citic miliardář\nPavel Tykač, informoval o tom portál Seznam Zprávy.\n\n„V souvislosti s prodejem SK Slavia Praha novému akcionáři a s ohledem na svůj zdravotní\nstav jsem se rozhodl upravit svoje časové priority a pracovní nasazení. Proto jsem opustil\nvýkonné funkce v Citic Europe Holding včetně pozice viceprezidenta skupiny nebo předsedy\npředstavenstva Pivovary Lobkowicz Group,“ řekl Tvrdík na dotaz SZ Byznys. „Nově budu působit\nv Citic Europe Holding pouze jako člen představenstva skupiny a chci se výrazněji věnovat\nrozvoji Slavie pod Pavlem Tykačem,“ dodal Tvrdík.\n\nV roce 2013 získal Tvrdík místo neplaceného „honorárního poradce“ premiéra pro vztahy s\nČínou. Od roku 2012 je prezidentem Smíšené česko čínské komory vzájemné spolupráce a\nje spojen s pronikáním čínského kapitálu na český trh. Komora byla mimo jiné zadavatelem\nvyvěšení vlajek při návštěvě čínského prezidenta v roce 2016. Jako zástupce CEFC se Tvrdík\nv roce 2015 podílel na převzetí fotbalového klubu Slavia Praha čínským investorem. Do vedení\nSlavie se dostal již v říjnu 2015, kdy byl zvolen místopředsedou dozorčí rady.\n\nÚřad pro ochranu hospodářské soutěže minulý týden informoval, že podnikatel a investor Tykač\nmůže od čínské společnosti Citic Group prostřednictvím společnosti Fulleren fotbalový\nklub Slavia Praha včetně stadionu v Edenu koupit. Úřad to povolil ve zjednodušeném řízení,\nrozhodnutí je pravomocné. Citic byla majoritním vlastníkem pět let, před ní červenobílí patřili\nod roku 2015 jiné čínské společnosti CEFC. Klub o transakci informoval v prosinci, cenu nezveřejnil,\npodle odhadů médií činí zhruba dvě miliardy korun.\n"
-      },
-      {
-        "role": "assistant",
-        "content": {
-          "range": "3",
-          "genre": "report",
-          "message-trigger": "politician",
-          "place": [
-            "czech-republic"
-          ]
+  "chat_log": [
+    {
+      "text_id": "Tvrdík_skončil_jako_viceprezident.txt",
+      "question_id": "all_questions_at_once",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+        },
+        {
+          "role": "system",
+          "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "The text to analyze is: Tvrdík skončil jako viceprezident čínské Citic, chce se více věnovat Slavii\n\nJaroslav Tvrdík skončil jako viceprezident čínské Citic Europe Holding, pokračovat\nbude jen jako člen představenstva skupiny. Končí i jako šéf představenstva Pivovarů\nLobkowicz. Prioritou je pro něj rozvoj fotbalové Slavie. Někdejší sociálnědemokratický\npolitik se tak rozhodl krátce poté, co Slavii koupil od společnosti Citic miliardář\nPavel Tykač, informoval o tom portál Seznam Zprávy.\n\n„V souvislosti s prodejem SK Slavia Praha novému akcionáři a s ohledem na svůj zdravotní\nstav jsem se rozhodl upravit svoje časové priority a pracovní nasazení. Proto jsem opustil\nvýkonné funkce v Citic Europe Holding včetně pozice viceprezidenta skupiny nebo předsedy\npředstavenstva Pivovary Lobkowicz Group,“ řekl Tvrdík na dotaz SZ Byznys. „Nově budu působit\nv Citic Europe Holding pouze jako člen představenstva skupiny a chci se výrazněji věnovat\nrozvoji Slavie pod Pavlem Tykačem,“ dodal Tvrdík.\n\nV roce 2013 získal Tvrdík místo neplaceného „honorárního poradce“ premiéra pro vztahy s\nČínou. Od roku 2012 je prezidentem Smíšené česko čínské komory vzájemné spolupráce a\nje spojen s pronikáním čínského kapitálu na český trh. Komora byla mimo jiné zadavatelem\nvyvěšení vlajek při návštěvě čínského prezidenta v roce 2016. Jako zástupce CEFC se Tvrdík\nv roce 2015 podílel na převzetí fotbalového klubu Slavia Praha čínským investorem. Do vedení\nSlavie se dostal již v říjnu 2015, kdy byl zvolen místopředsedou dozorčí rady.\n\nÚřad pro ochranu hospodářské soutěže minulý týden informoval, že podnikatel a investor Tykač\nmůže od čínské společnosti Citic Group prostřednictvím společnosti Fulleren fotbalový\nklub Slavia Praha včetně stadionu v Edenu koupit. Úřad to povolil ve zjednodušeném řízení,\nrozhodnutí je pravomocné. Citic byla majoritním vlastníkem pět let, před ní červenobílí patřili\nod roku 2015 jiné čínské společnosti CEFC. Klub o transakci informoval v prosinci, cenu nezveřejnil,\npodle odhadů médií činí zhruba dvě miliardy korun.\n"
+        },
+        {
+          "role": "assistant",
+          "content": {
+            "range": "3",
+            "genre": "report",
+            "message-trigger": "public",
+            "place": [
+              "czech-republic"
+            ]
+          }
         }
-      }
-    ],
-    "Chci_spravedlnost_pro_dceru.txt": [
-      {
-        "role": "system",
-        "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
-      },
-      {
-        "role": "system",
-        "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
-      },
-      {
-        "role": "user",
-        "content": "The text to analyze is: Chci spravedlnost pro dceru Elišku, říká matka zavražděné studentky z fakulty\n\nEliška Šimůnková by v lednu oslavila dvacáté první narozeniny. Kvůli prosincovému\nřádění šíleného střelce Davida K. na filozofické fakultě se jich však nedožila.\nJejí matka Lenka byla první z pozůstalých čtrnácti vrahových obětí, která se rozhodla\npromluvit veřejně.\n\nVe svém emotivním vystoupení v pořadu 168 hodin České televize kromě jiného opakovaně\nvyzvala policii, aby jí vysvětlila, co se ten den stalo. „Pokud policie stála před\nuniverzitou a byla tam z nějakého důvodu přivolána, z jakého důvodu byla odvolána.\nJaký byl ten důvod? Kdo odvolal policii od fakulty, kde byly děti? Chci vás vidět a chci,\nabyste mi to řekl do očí. Chci vidět pravdu o čtvrtku,“ uvedla doslova.\n\nPro rozhovor s MF DNES si Lenka Šimůnková vyžádala otázky prostřednictvím e-mailu.\nS vysvětlením, že se jí tak odpovědi budou formulovat přesněji. Policie se jí dosud\nneozvala a ona v ni podle svých slov už nemá důvěru.\n\n„Neukazuje mi dosud, že bych mít měla. Domnívám se, že se snaží zakrýt fatální pochybení\ns hrůzně tragickými následky,“ napsala Lenka Šimůnková.\n\nV rozhovoru mluví i o tom, že chtěla nahlédnout přímo do policejního spisu, přála by si\nzřízení vyšetřovací komise ve Sněmovně, a že by si ráda promluvila s matkou vraha Davida K.\n"
-      },
-      {
-        "role": "assistant",
-        "content": {
-          "range": "3",
-          "genre": "report",
-          "message-trigger": "public",
-          "place": [
-            "czech-republic"
-          ]
+      ]
+    },
+    {
+      "text_id": "Chci_spravedlnost_pro_dceru.txt",
+      "question_id": "all_questions_at_once",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+        },
+        {
+          "role": "system",
+          "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "The text to analyze is: Chci spravedlnost pro dceru Elišku, říká matka zavražděné studentky z fakulty\n\nEliška Šimůnková by v lednu oslavila dvacáté první narozeniny. Kvůli prosincovému\nřádění šíleného střelce Davida K. na filozofické fakultě se jich však nedožila.\nJejí matka Lenka byla první z pozůstalých čtrnácti vrahových obětí, která se rozhodla\npromluvit veřejně.\n\nVe svém emotivním vystoupení v pořadu 168 hodin České televize kromě jiného opakovaně\nvyzvala policii, aby jí vysvětlila, co se ten den stalo. „Pokud policie stála před\nuniverzitou a byla tam z nějakého důvodu přivolána, z jakého důvodu byla odvolána.\nJaký byl ten důvod? Kdo odvolal policii od fakulty, kde byly děti? Chci vás vidět a chci,\nabyste mi to řekl do očí. Chci vidět pravdu o čtvrtku,“ uvedla doslova.\n\nPro rozhovor s MF DNES si Lenka Šimůnková vyžádala otázky prostřednictvím e-mailu.\nS vysvětlením, že se jí tak odpovědi budou formulovat přesněji. Policie se jí dosud\nneozvala a ona v ni podle svých slov už nemá důvěru.\n\n„Neukazuje mi dosud, že bych mít měla. Domnívám se, že se snaží zakrýt fatální pochybení\ns hrůzně tragickými následky,“ napsala Lenka Šimůnková.\n\nV rozhovoru mluví i o tom, že chtěla nahlédnout přímo do policejního spisu, přála by si\nzřízení vyšetřovací komise ve Sněmovně, a že by si ráda promluvila s matkou vraha Davida K.\n"
+        },
+        {
+          "role": "assistant",
+          "content": {
+            "range": "3",
+            "genre": "report",
+            "message-trigger": "public",
+            "place": [
+              "czech-republic"
+            ]
+          }
         }
-      }
-    ],
-    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": [
-      {
-        "role": "system",
-        "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
-      },
-      {
-        "role": "system",
-        "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
-      },
-      {
-        "role": "user",
-        "content": "The text to analyze is: Rusko použilo hypersonickou střelu Zirkon na Ukrajině, dosvědčují to úlomky\n\nRusko při útoku na Ukrajinu začátkem února použilo svou novou hypersonickou střelu Zirkon.\nDosvědčuje to značení na nalezených úlomcích, uvedl šéf Kyjevského výzkumného institutu\nforenzních expertiz Oleksandr Ruvin. Ruský prezident Vladimir Putin označil Zirkon za součást\nnové generace bezkonkurenčních zbraňových systémů.\n\nNadzvukovou střelu Zirkon Rusko podle Ruvina použilo ve středu 7. února. Ředitel kyjevského\ninstitutu to uvedl na platformě Telegram, kde zároveň zveřejnil záběry úlomků rakety. Nalezeny\nbyly fragmenty motoru a řídících mechanismů.\n\nAgentura Reuters poznamenala, že jde o novou výzvu pro ukrajinskou protivzdušnou obranu.\nPůvodně protilodní střely Zirkon jsou totiž podle dřívějších prohlášení ruské armády schopny\ndosáhnout až devítinásobku rychlosti zvuku a při doletu od 600 do 1 500 kilometrů můžou\nzasahovat námořní i pozemní cíle. Pravděpodobně tak budou zasahovat objekty hlouběji v\nokupované zemi.\n"
-      },
-      {
-        "role": "assistant",
-        "content": {
-          "range": "3",
-          "genre": "report",
-          "message-trigger": "politician",
-          "place": [
-            "ukraine"
-          ]
+      ]
+    },
+    {
+      "text_id": "Rusko_použilo_hypersonickou_střelu_Zirkon.txt",
+      "question_id": "all_questions_at_once",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a media content analyst. You are analyzing the following text to extract range, genre, message-trigger, place. range: Number of paragraphs in the text.. genre: The genre of the text.. message-trigger: The message trigger is the event or situation that causes the message to be sent.. place: The country where the event or situation occurs.. For every question pick only options from these lists.\nrange: 1 (1 paragraph.), 2 (2 paragraphs.), 3 (3 paragraphs.), 4 (4 paragraphs.), 5 (5 paragraphs.), 6 (6 paragraphs.), 7 (7 paragraphs.), 8 (8 paragraphs.), 9 (9 paragraphs.), 10 (10 paragraphs.)\ngenre: report (Report is information about a current event answering questions: who, what, where.), extended_report (Report is information about a current event answering questions: who, what, where, when, how and why.), interview (Interview is a conversation between two or more people.), other (Other genre.)\nmessage-trigger: politician (The message reacts on actions of a politician), security-forces (The message reacts on action of security forces.), public (The message reacts on action of public.), other (Other message trigger.)\nplace: czech-republic (The event or situation occurs in the Czech Republic.), slovakia (The event or situation occurs in Slovakia.), poland (The event or situation occurs in Poland.), germany (The event or situation occurs in Germany.), russia (The event or situation occurs in Russia.), ukraine (The event or situation occurs in Ukraine.), other (The event or situation occurs in other country.), unknown (The event or situation occurs in unknown country.)\n\nYou will pick one option for these questions: range, genre, message-trigger. You will pick one or more options for these questions: place.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+        },
+        {
+          "role": "system",
+          "content": "{\n  \"properties\": {\n    \"range\": {\n      \"enum\": [\n        \"1\",\n        \"2\",\n        \"3\",\n        \"4\",\n        \"5\",\n        \"6\",\n        \"7\",\n        \"8\",\n        \"9\",\n        \"10\"\n      ],\n      \"title\": \"Range\",\n      \"type\": \"string\"\n    },\n    \"genre\": {\n      \"enum\": [\n        \"report\",\n        \"extended_report\",\n        \"interview\",\n        \"other\"\n      ],\n      \"title\": \"Genre\",\n      \"type\": \"string\"\n    },\n    \"message-trigger\": {\n      \"enum\": [\n        \"politician\",\n        \"security-forces\",\n        \"public\",\n        \"other\"\n      ],\n      \"title\": \"Message-Trigger\",\n      \"type\": \"string\"\n    },\n    \"place\": {\n      \"items\": {\n        \"enum\": [\n          \"czech-republic\",\n          \"slovakia\",\n          \"poland\",\n          \"germany\",\n          \"russia\",\n          \"ukraine\",\n          \"other\",\n          \"unknown\"\n        ],\n        \"type\": \"string\"\n      },\n      \"title\": \"Place\",\n      \"type\": \"array\"\n    }\n  },\n  \"required\": [\n    \"range\",\n    \"genre\",\n    \"message-trigger\",\n    \"place\"\n  ],\n  \"title\": \"ResponseFormat\",\n  \"type\": \"object\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "The text to analyze is: Rusko použilo hypersonickou střelu Zirkon na Ukrajině, dosvědčují to úlomky\n\nRusko při útoku na Ukrajinu začátkem února použilo svou novou hypersonickou střelu Zirkon.\nDosvědčuje to značení na nalezených úlomcích, uvedl šéf Kyjevského výzkumného institutu\nforenzních expertiz Oleksandr Ruvin. Ruský prezident Vladimir Putin označil Zirkon za součást\nnové generace bezkonkurenčních zbraňových systémů.\n\nNadzvukovou střelu Zirkon Rusko podle Ruvina použilo ve středu 7. února. Ředitel kyjevského\ninstitutu to uvedl na platformě Telegram, kde zároveň zveřejnil záběry úlomků rakety. Nalezeny\nbyly fragmenty motoru a řídících mechanismů.\n\nAgentura Reuters poznamenala, že jde o novou výzvu pro ukrajinskou protivzdušnou obranu.\nPůvodně protilodní střely Zirkon jsou totiž podle dřívějších prohlášení ruské armády schopny\ndosáhnout až devítinásobku rychlosti zvuku a při doletu od 600 do 1 500 kilometrů můžou\nzasahovat námořní i pozemní cíle. Pravděpodobně tak budou zasahovat objekty hlouběji v\nokupované zemi.\n"
+        },
+        {
+          "role": "assistant",
+          "content": {
+            "range": "3",
+            "genre": "report",
+            "message-trigger": "politician",
+            "place": [
+              "russia",
+              "ukraine"
+            ]
+          }
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
