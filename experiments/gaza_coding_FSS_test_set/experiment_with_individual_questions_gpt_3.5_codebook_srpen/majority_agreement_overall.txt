@@ -1,0 +1,4 @@
+0.755	prompt_schema_definition_default_gpt_3.5_indi
+0.707	prompt_schema_definition_default_gpt_3.5
+0.762	prompt_schema_definition_extensive_gpt_3.5_indi
+0.726	prompt_schema_definition_extensive_gpt_3.5

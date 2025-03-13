@@ -1,0 +1,1055 @@
+INFO:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt schema definition from file:/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/prompt_schema_definition_default_gpt_3.5.json
+INFO:root:run_discourseer.py:__init__: First prompt: You are a media content analyst. You are analyzing the following text to extract {question_names}. {...
+INFO:root:run_discourseer.py:__call__: Processing 100 texts with 1 codebook(s).
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-02T18-18-00_2024WN002160.txt (Propalestinští demonstranti na Nový rok ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T09-30-00_2023WN282044.txt (Teroristé zabili nebo zavlekli do Gazy i...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-12T11-45-00_2024WN012085.txt (Izrael v Haagu odmítl obvinění z genocid...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN149082.txt (Za vysokým počtem obětí požáru stanového...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-28T20-24-00_2024WN028088.txt (Jednání o rukojmích v Paříži byla konstr...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN119043.txt (Teroristé si zamilovali „podzemní ementá...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-05T14-59-00_2023WN309050.txt (Izraelský ministr nevyloučil jaderný úto...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-31T12-11-00_2023WN365037.txt (Další pirátský útok Húsíjů v Rudém moři....) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T00-00-00_2023WN303044.txt (Za honem na Židy na letišti v Machačkale...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-22T07-25-00_2023WN295020.txt (Stotisícová propalestinská demonstrace z...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN058034.txt (Hamás dostal nabídku na přerušení bojů. ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-29T09-38-00_2023WN333049.txt (Hamás nutil unesené dítě sledovat záznam...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-11T16-57-00_2024WN011163.txt (FOTO: Před soudem v Haagu se sešli proiz...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-04T05-35-00_2024WN004003.txt (Hizballáh má propracovanější systém tune...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN172020.txt (Hizballáh už hrozí útokem i Kypru, člens...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN240099.txt (Izraelská armáda zachránila v Gaze rukoj...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-16T06-10-00_2024WN047006.txt (Izrael odmítá diktát ze zahraničí ohledn...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-26T00-00-00_2023WN299130.txt (Při výbuchu v Pásmu Gazy zahynula rodina...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-12T16-04-00_2024WN012115.txt (ZBYTEČNÁ VÁLKA: Americko-britský úder pr...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-22T08-25-00_2023WN356016.txt (Na severu Pásma Gazy Izrael zničil dvě t...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-01T20-08-00_2023WN305205.txt (V USA zadrželi studenta, který vyhrožova...) 
+INFO:root:rater.py:add_model_response: None or empty response_option_name for response ID Mluvčí. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-07T20-57-00_2024WN038200.txt (Netanjahu odmítl požadavky Hamásu. Jedin...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN201004.txt (Tel Avivem otřásl výbuch po zásahu drone...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-22T07-25-00_2023WN295041.txt (Izrael promítne novinářům nové záběry z ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-25T11-25-00_2023WN329031.txt (Na Západním břehu zlynčovali dva Palesti...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-23T16-26-00_2023WN327165.txt (Palestinských dětí jsme zabili málo, smá...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-24T14-23-00_2023WN297100.txt (Stařenka vozila nemocné z Gazy do Izrael...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN064149.txt (Střela z Libanonu zabíjela v IzraeliJe...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-09T20-08-00_2023WN343089.txt (Izrael: Zabili jsme již více než 7000 oz...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN140018.txt (Húsíové zasáhli ropný tanker v Rudém moř...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-29T16-48-00_2023WN333186.txt (Unesené izraelské miminko i s matkou a s...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-14T20-31-00_2024WN045169.txt (Na propalestinské demonstraci v Praze se...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T21-42-00_2023WN283184.txt (Erdogan obvinil USA, že poslaly loď k Iz...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-30T12-35-00_2024WN030052.txt (Svět se po skandálu pracovníků - teroris...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T00-00-00_2023WN303135.txt (Německo musí nyní říct NE! všem, kteří n...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-12T16-14-00_2023WN285133.txt (Biden varoval Írán, aby byl v současné s...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-23T13-26-00_2023WN327118.txt (Obří razie proti Hamásu po celém Německu...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-16T10-36-00_2023WN289053.txt (ANALÝZA: Proč Egypt nechce přijmout uprc...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-15T18-58-00_2023WN319238.txt (Heslo „From the river…“ může být trestné...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T12-04-00_2023WN312097.txt (Angelina Jolie se vyjádřila ke Gaze. Nej...) 
+INFO:root:rater.py:add_model_response: Response option name Hollywoodská hvězda Angelina Jolie not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Izraelský prezident Jicchak Herzog not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Jon Voight - otec Angeliny Jolie not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Britský novinář Piers Morgan not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T19-06-00_2023WN283165.txt (Přesun ambasády do Jeruzaléma vyřešila S...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-16T19-47-00_2023WN320191.txt (Roger Waters má na turné problém. Kvůli ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-24T09-40-00_2023WN297177.txt (Premiér Fiala poletí zítra do IzraeleČ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-18T14-08-00_2024WN018124.txt (Musíme začít bourat mešity. Švédská prav...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T13-14-00_2023WN282092.txt (Rakousko a Německo pozastavily Palestinc...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN109163.txt (Náš „mírový“ jaderný program se může změ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-21T09-39-00_2023WN355039.txt (Izrael ukázal síť tunelů, kterou mělo po...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN213189.txt (Izrael oplatí jakoukoli agresi, pohrozil...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-17T21-11-00_2024WN048103.txt (Požadavky Hamásu jsou nerealistické, řek...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-04T18-33-00_2023WN308071.txt (V evropských městech se konaly propalest...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T18-38-00_2023WN312210.txt (Netanjahu se nervově zhroutil, tvrdí izr...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-16T08-27-00_2023WN320033.txt (Jedinou odpovědí na konflikt je dvoustát...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-07T00-00-00_2023WN280031.txt (Izraelská vláda kvůli útoku Hamásu zruši...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-21T08-43-00_2023WN325032.txt (Dohoda o příměří je blízko, tvrdí politi...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-31T10-28-00_2023WN304046.txt (USA odmítly tvrzení Moskvy, že za pokuse...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-29T14-22-00_2024WN029073.txt (Izrael předložil důkazy, že se zaměstnan...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-15T15-10-00_2023WN288053.txt (Izraelský miliardář zaměstnával talentov...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-10T11-34-00_2023WN344037.txt (Svědectví ze zajetí Hamásem: Jako holoka...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-15T15-46-00_2023WN319189.txt (Palestinský otec českých dětí v Pásmu Ga...) 
+INFO:root:rater.py:add_model_response: Response option name Mluvčí ministerstva zahraničí not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Ministr zahraničí Jan Lipavský (Piráti) not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Ředitel ÚMPOD Zdeněk Kapitán not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN096007.txt (Izrael chce otevřením dalšího hraničního...) 
+INFO:root:rater.py:add_model_response: Response option name Mluvčí pro národní bezpečnost not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Pentagon not found in question options. Skipping.
+INFO:root:rater.py:add_model_response: Response option name Mezinárodní organizace a agentury OSN not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-08T09-27-00_2023WN312233.txt (Je čas na sankce proti Izraeli, míní bel...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-12T12-23-00_2023WN285198.txt (Dvojice přežila masakr na festivalu. Vzá...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN128128.txt (Nenávist vůči Izraeli opanovala i evrops...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-09T15-15-00_2023WN282115.txt (FOTO: Víkend hrůzy pro IzraelV sobotu ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-05T07-38-00_2023WN339020.txt (Trumpova dcera s manželem zorganizovali ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-23T14-29-00_2023WN357061.txt (Nákladní loď nedaleko indického pobřeží ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-20T10-29-00_2023WN324050.txt (Húsíové po únosu lodi pohrozili dalšími ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN223008.txt (Desítky mrtvých po zásahu budovy školy v...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 1 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN161064.txt (Zachráněná Noa se shledala se smrtelně n...) 
+INFO:root:rater.py:add_model_response: Response option name Personalizace not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-15T14-13-00_2024WN046130.txt (Izrael vtrhl do nemocnice v Chán Júnisu,...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-12T10-11-00_2023WN316039.txt (Dvě děti zemřely v nemocnici v Gaze. Izr...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-12T15-38-00_2023WN316094.txt (Vondrášek: Postihy jako v Bavorsku za pr...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-30T07-26-00_2023WN334018.txt (Útočníci postřelili v Jeruzalémě na zast...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-14T11-21-00_2024WN014028.txt (Nikdo nás nezastaví, ani mezinárodní sou...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-23T10-25-00_2023WN296049.txt (Židé jako lakmusový papírek? Když cítí o...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-13T08-23-00_2023WN317033.txt (V Pásmu Gazy se lidé ve frontách bouří p...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN053024.txt (Střelci zaútočili na auta mířící do Jeru...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-18T15-48-00_2023WN291099.txt (Konflikt na Blízkém východě žene cenu ro...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-19T12-46-00_2023WN292103.txt (Nacistické pozdravy spolužáků vyhání žid...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-18T18-55-00_2023WN291138.txt (Centrem Prahy pochodují příznivci Palest...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-09T12-15-00_2023WN343042.txt (Izraelský dron v Sýrii zabil syna velite...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN104121.txt (Írán vypustil drony na IzraelÍrán vysl...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-24T14-23-00_2023WN328136.txt (Mezinárodní organizace mlčí k brutalitě ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-30T12-21-00_2023WN303202.txt (Osvoboďte nás, žádá rukojmí premiéra Net...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-27T00-00-00_2023WN300102.txt (Hamás se chová divně, cvičí a kope díry....) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-10T18-48-00_2023WN283309.txt (Zářivý krach americké politiky. Putin ho...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-02T16-02-00_2023WN306156.txt (PŘEHLEDNĚ: Válka Izraele s Hamásem z poh...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-15T17-14-00_2023WN349144.txt (Piráti unesli bulharskou nákladní loď. N...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-02T08-14-00_2023WN306020.txt (Biden vyzval k humanitární pauze v Gaze...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-05T16-50-00_2023WN339165.txt (O svátcích bude riziko teroristických út...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-31T09-52-00_2024WN031056.txt (ČTK mění přístup. Hamás bude označovat j...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-23T13-07-00_2023WN296102.txt (Američané chtějí po Izraeli plán, co bud...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN185176.txt (Na Izrael letělo sto raket z LibanonuZ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-02-07T08-50-00_2024WN038191.txt (Le Penová nakukuje do prezidentského pal...) 
+INFO:root:rater.py:add_model_response: Response option name Hlavní téma článku not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-26T00-00-00_2023WN299182.txt (Přímé náklady Izraele na válku s Hamásem...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-10-15T22-57-00_2023WN288085.txt (Izraelec si utahoval z unesených v Gaze....) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024WN079145.txt (Židé volící demokraty nenávidí Izrael, b...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2024-01-19T14-38-00_2024WN019126.txt (Kvůli útokům v Rudém moři může Evropa ví...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-12-14T18-05-00_2023WN348154.txt (Devět milionů za Sinvára. Izrael vypsal ...) 
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: 2023-11-19T21-20-00_2023WN323090.txt (V nemocnici Šifá byli rukojmí z Nepálu a...) 
+INFO:root:rater.py:add_model_response: Response option name Izraelská armáda not found in question options. Skipping.
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/gaza_coding_FSS_test_set/experiment_with_individual_questions_gpt_3.5_codebook_srpen/output_prompt_schema_definition_default_gpt_3.5/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 2 unmatched option names
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Hlavní téma článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mediální rámce (multiple)
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Mluvčí
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Témata článku
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question Zpravodajské hodnoty (multiple)
+WARNING:matplotlib.legend:legend.py:_parse_legend_args: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+INFO:root:run_discourseer.py:save_output: 3 worst files according to majority agreement:
+                                      file_majority_agreement  Hlavní téma článku  Mediální rámce (multiple)  Mluvčí  Témata článku  Zpravodajské hodnoty (multiple)
+file_id                                                                                                                                                             
+2023-11-16T19-47-00_2023WN320191.txt                    0.485                 0.0                      0.500   0.545            0.4                              0.6
+2023-11-15T18-58-00_2023WN319238.txt                    0.485                 0.0                      0.500   0.364            0.5                              0.8
+2023-11-12T15-38-00_2023WN316094.txt                    0.485                 0.0                      0.667   0.455            0.4                              0.6
+(see whole in majority_agreements_of_files_and_questions.csv)
+
+INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summary:
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "fleiss_kappa": {
+      "best_case": 0.63859,
+      "with_model": 0.36356,
+      "worst_case": -0.09628,
+      "without_model": 0.5298
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.63937,
+      "with_model": 0.3649,
+      "worst_case": -0.09352,
+      "without_model": 0.53114
+    },
+    "gwet_ac1": {
+      "best_case": 0.78132,
+      "with_model": 0.58711,
+      "worst_case": 0.05244,
+      "without_model": 0.70894
+    },
+    "majority_agreement": 0.64988
+  },
+  "majority_agreement": 0.707
+}
