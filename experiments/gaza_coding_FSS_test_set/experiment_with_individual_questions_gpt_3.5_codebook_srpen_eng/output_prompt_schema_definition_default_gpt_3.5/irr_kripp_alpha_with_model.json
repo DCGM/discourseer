@@ -1,0 +1,250 @@
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "krippendorff_alpha": {
+      "with_model": 0.36644
+    }
+  },
+  "questions": {
+    "Zpravodajské hodnoty (multiple)": {
+      "irr_result": {
+        "description": "mean IRR through options",
+        "krippendorff_alpha": {
+          "with_model": 0.27448
+        }
+      },
+      "options": {
+        "Negativita negativity": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.34225
+          }
+        },
+        "Blízkost proximity": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.30011
+          }
+        },
+        "Elitní osoby prominence": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.32885
+          }
+        },
+        "Personalizace personalization": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.41422
+          }
+        },
+        "Dopad impact": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": -0.01301
+          }
+        }
+      }
+    },
+    "Témata článku": {
+      "irr_result": {
+        "description": "mean IRR through options",
+        "krippendorff_alpha": {
+          "with_model": 0.40541
+        }
+      },
+      "options": {
+        "Vnitřní politické dění": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.31451
+          }
+        },
+        "Mezinárodní politické reakce": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.56736
+          }
+        },
+        "Vojenské operace Izraele": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.35227
+          }
+        },
+        "Teroristické operace": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.31908
+          }
+        },
+        "Dopad na izraelské civilisty": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.35161
+          }
+        },
+        "Dopad na palestinské civilisty": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.31195
+          }
+        },
+        "Humanitární pomoc": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.455
+          }
+        },
+        "Globální reakce veřejnosti": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.68935
+          }
+        },
+        "Ekonomické důsledky": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.44672
+          }
+        },
+        "Historie/kontextualizace": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.24624
+          }
+        }
+      }
+    },
+    "Hlavní téma článku": {
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "krippendorff_alpha": {
+          "with_model": 0.51481
+        }
+      }
+    },
+    "Mediální rámce (multiple)": {
+      "irr_result": {
+        "description": "mean IRR through options",
+        "krippendorff_alpha": {
+          "with_model": 0.26954
+        }
+      },
+      "options": {
+        "Rámec konfliktu": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.23069
+          }
+        },
+        "Rámec budování míru": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.3464
+          }
+        },
+        "Humanitární rámec": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.37708
+          }
+        },
+        "Historicko-kulturní rámec": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.18359
+          }
+        },
+        "Geopolitický rámec": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.3344
+          }
+        },
+        "Lokální rámec": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.14511
+          }
+        }
+      }
+    },
+    "Mluvčí": {
+      "irr_result": {
+        "description": "mean IRR through options",
+        "krippendorff_alpha": {
+          "with_model": 0.36798
+        }
+      },
+      "options": {
+        "Političtí představitelé Izraele": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.54836
+          }
+        },
+        "Političtí představitelé Palestiny": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.17901
+          }
+        },
+        "Politici z blízkovýchodních zemí": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.48278
+          }
+        },
+        "Politici ze ostatních světových zemí": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.61639
+          }
+        },
+        "Představitelé mezinárodních a neziskových organizací": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.33151
+          }
+        },
+        "Vojenští představitelé Izraele": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.4939
+          }
+        },
+        "Členové teroristických skupin": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.161
+          }
+        },
+        "Nezávislí experti a analytici": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.67457
+          }
+        },
+        "Média a novináři": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": -0.0
+          }
+        },
+        "Očití svědci a civilisté z Izraele": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.386
+          }
+        },
+        "Očití svědci a civilisté z Palestiny": {
+          "description": "IRR for this option",
+          "krippendorff_alpha": {
+            "with_model": 0.17427
+          }
+        }
+      }
+    }
+  }
+}

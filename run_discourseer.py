@@ -5,11 +5,12 @@ import os
 import json
 import time
 from typing import List, Union
+from tqdm import tqdm
 
-from discourseer.codebook import Codebook
+from discourseer.codebook import Codebook, all_questions_at_once_tag
 from discourseer.rater import Rater
 from discourseer.inter_rater_reliability import IRR
-from discourseer.chat_client import ChatClient, Conversation, ChatMessage, ConversationLog
+from discourseer.chat_client import ChatClient, Conversation, ChatMessage, LogChatMessage, ConversationLog
 from discourseer import utils
 from discourseer.utils import pydantic_to_json_file, JSONParser, RatingsCopyMode
 from discourseer.visualize_IRR import visualize_results
@@ -117,10 +118,17 @@ class Discourseer:
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
 
+        if getattr(self.prompt_schema_definition, 'prompt_individual_questions', False):
+            self.individual_codebooks = self.codebook.split_by_individual_questions()
+        else:
+            self.individual_codebooks = [self.codebook]
+
         if not self.raters:
             logging.warning("No rater files found. Inter-rater reliability will not be calculated.")
 
-        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[])
+        conversation_setting = self.prompt_schema_definition.model_dump()
+        conversation_setting.pop('messages', None)
+        self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], chat_log=[], **conversation_setting)
 
         self.client = ChatClient(openai_api_key=openai_api_key)
         self.model_rater = Rater(name="model", codebook=self.codebook)
@@ -129,35 +137,38 @@ class Discourseer:
         logging.info(f"First prompt: {first_prompt[:min(100, len(first_prompt))]}...")
 
     def __call__(self):
-        for file in self.input_files:
-            with open(file, 'r', encoding='utf-8') as f:
-                text = f.read()
-                response = self.extract_answers(text, os.path.basename(file))
-                self.model_rater.add_model_response(os.path.basename(file), response)
-            pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'])
-
-        self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
-        self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
+        logging.info(f'Processing {len(self.input_files)} texts with {len(self.individual_codebooks)} codebook(s).')
+        for file_counter, file in enumerate(tqdm(self.input_files)):
+            for codebook in self.individual_codebooks:
+                with open(file, 'r', encoding='utf-8') as f:
+                    text = f.read()
+                    logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
+                    response = self.extract_answers(text, os.path.basename(file), codebook)
+                    self.model_rater.add_model_response(os.path.basename(file), response)
+            pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
+            self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
+            self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
 
         if not self.raters:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
             return
 
-        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir)
-        irr_results = irr_calculator()
+        irr_calculator = IRR(raters=self.raters, model_rater=self.model_rater, out_dir=self.output_dir,
+                             export_majority_agreement_files_and_questions=True)
 
-        self.save_output(self.output_dir, irr_results)
+        self.save_output(self.output_dir, irr_calculator)
         self.copy_input_ratings_to_output(irr_calculator)
 
-    def extract_answers(self, text: str, text_id: str):
-        logging.debug('New document:\n\n')
-        text_short = text[:min(50, len(text))].replace('\n', '')
-        logging.info(f"Extracting answers from text: {text_id} ({text_short}...)")
+    def extract_answers(self, text: str, text_id: str, codebook: Codebook):
+        text_short = text[:min(40, len(text))].replace('\n', '')
+        question_message = "" if len(codebook.questions) > 1 else f"for question: {codebook.questions[0].id}"
+        logging.info(f"Extracting answers from text: {text_id} ({text_short}...) {question_message}")
 
         conversation = self.prompt_schema_definition.model_copy(deep=True)
         for message in conversation.messages:
+            codebook.check_correct_usage_of_format_strings(message.content)
             try:
-                message.content = message.content.format(**self.codebook.get_format_strings(), text=text)
+                message.content = message.content.format(**codebook.get_format_strings(), text=text)
             except KeyError as e:
                 raise KeyError(f"Non-existing format string {e} in message: "
                                f"({message.content[:min(80, len(message.content))]}...")
@@ -167,11 +178,23 @@ class Discourseer:
 
         logging.debug(f"Response raw: {response}")
         response = response.choices[0].message.content
+        if response == '':
+            logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is "
+                            f"not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter"
+                            f" especially if using an o series reasoning model like o1 or o3")
         response = JSONParser.response_to_dict(response)
 
         logging.debug(f"Response: {response}")
-        self.conversation_log.texts[text_id] = conversation.messages
-        self.conversation_log.texts[text_id].append(ChatMessage(role="assistant", content=response))
+        if len(codebook.questions) > 1:
+            question_id = all_questions_at_once_tag
+        else:
+            question_id = codebook.questions[0].id
+
+        log_chat_message = LogChatMessage(
+            text_id=text_id,
+            question_id=question_id,
+            messages=conversation.messages + [ChatMessage(role="assistant", content=response)])
+        self.conversation_log.chat_log.append(log_chat_message)
 
         return response
 
@@ -200,9 +223,13 @@ class Discourseer:
             rater.save_to_csv(self.get_output_file(rater.name, input_ratings=True))
 
     @staticmethod
-    def save_output(output_dir: str, irr_results: IRR):
+    def save_output(output_dir: str, irr_calculator: IRR):
+        logging.info(irr_calculator.get_maj_agg_files_and_questions_summary())
+
+        irr_results = irr_calculator()
+
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
-        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'))
+        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'), exclude_none=True)
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
 
     @staticmethod

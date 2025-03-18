@@ -1,4 +1,4 @@
-file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS - Robin.csv,coding FSS - Veronica.csv,majority,worst_case
+file,question_id,option_id,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS - Robin.csv,coding FSS - Veronica.csv,majority,worst_case
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -8,7 +8,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dílčí konflikty a střety,True,False,True,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -33,7 +32,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-07T00-00-00_2023WN280011.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280056.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-07T00-00-00_2023WN280056.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -43,7 +41,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -68,7 +65,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-07T00-00-00_2023WN280056.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -78,7 +74,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dílčí konflikty a střety,False,False,True,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-09T09-11-00_2023WN282037.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -103,7 +98,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-09T09-11-00_2023WN282037.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -113,7 +107,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dopad na izraelské civilisty,False,False,True,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -138,7 +131,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-09T12-53-00_2023WN282086.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,True,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -148,7 +140,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Mezinárodní politické reakce,False,True,True,True,True,False
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Vojenské operace Izraele,False,False,False,True,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Teroristické operace,False,False,False,True,False,True
-2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -173,7 +164,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Média a novináři,False,True,True,True,True,False
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-09T14-50-00_2023WN282113.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,True,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,True,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -183,7 +173,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Mezinárodní politické reakce,True,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -208,7 +197,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-09T16-46-00_2023WN282130.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -218,7 +206,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dopad na izraelské civilisty,True,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -243,7 +230,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-10T18-48-00_2023WN283308.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-10T18-51-00_2023WN283162.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,True,False,False,True
@@ -253,7 +239,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Vojenské operace Izraele,True,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Teroristické operace,True,False,False,False,False,True
-2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dílčí konflikty a střety,True,False,False,True,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -278,7 +263,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Média a novináři,False,True,True,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-10T18-51-00_2023WN283162.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -288,7 +272,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Teroristické operace,False,True,True,True,True,False
-2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dílčí konflikty a střety,True,False,False,True,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -313,7 +296,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Média a novináři,False,True,False,False,False,True
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-10T21-42-00_2023WN283183.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-11T09-07-00_2023WN284024.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -323,7 +305,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -348,7 +329,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-11T09-07-00_2023WN284024.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -358,7 +338,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Teroristické operace,True,True,True,False,True,False
-2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -383,7 +362,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Média a novináři,False,True,True,True,True,False
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-12T12-23-00_2023WN285197.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -393,7 +371,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Teroristické operace,True,False,False,False,False,True
-2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -418,7 +395,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,False,True,False,True
 2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-12T13-54-00_2023WN285106.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -428,7 +404,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Mezinárodní politické reakce,False,True,True,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Vojenské operace Izraele,True,True,False,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,True,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Témata článku,Humanitární pomoc,True,False,False,False,False,True
@@ -453,7 +428,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-12T16-14-00_2023WN285137.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -463,7 +437,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-10-13T06-36-00_2023WN286013.txt,Témata článku,Humanitární pomoc,True,False,True,True,True,False
@@ -488,7 +461,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Média a novináři,False,True,False,True,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-13T06-36-00_2023WN286013.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-15T14-52-00_2023WN288050.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -498,7 +470,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -523,7 +494,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-15T14-52-00_2023WN288050.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,True,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -533,7 +503,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Vojenské operace Izraele,False,False,True,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Dopad na palestinské civilisty,True,True,True,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Témata článku,Humanitární pomoc,True,True,False,True,True,False
@@ -558,7 +527,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,True,False,True,False,True
-2023-10-15T20-07-00_2023WN288080.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -568,7 +536,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Teroristické operace,True,True,False,False,False,True
-2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Dopad na palestinské civilisty,True,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Témata článku,Humanitární pomoc,True,True,True,True,True,False
@@ -593,7 +560,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-16T10-36-00_2023WN289052.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-16T15-13-00_2023WN289115.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,True,True,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -603,7 +569,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Teroristické operace,False,True,True,True,True,False
-2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,True,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -628,7 +593,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-16T15-13-00_2023WN289115.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -638,7 +602,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Vojenské operace Izraele,True,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Témata článku,Humanitární pomoc,False,False,False,True,False,True
@@ -663,7 +626,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-18T13-55-00_2023WN291081.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,True,True,True,False
@@ -673,7 +635,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Mezinárodní politické reakce,False,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dílčí konflikty a střety,False,False,True,True,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -698,7 +659,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-18T18-43-00_2023WN291136.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-19T10-57-00_2023WN292057.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,True,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -708,7 +668,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,True,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -733,7 +692,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-19T10-57-00_2023WN292057.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,True,True,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -743,7 +701,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Mezinárodní politické reakce,False,True,False,True,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -768,7 +725,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Média a novináři,True,False,False,True,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-19T15-13-00_2023WN292147.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-22T07-25-00_2023WN295017.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,True,True,True,False
 2023-10-22T07-25-00_2023WN295017.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -778,7 +734,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -803,7 +758,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Média a novináři,True,True,False,True,True,False
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-22T07-25-00_2023WN295017.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,False,False,True
@@ -813,7 +767,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -838,7 +791,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-22T07-25-00_2023WN295038.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,True,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -848,7 +800,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Vojenské operace Izraele,True,False,False,True,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Teroristické operace,True,False,False,False,False,True
-2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Témata článku,Humanitární pomoc,True,True,True,True,True,False
@@ -873,7 +824,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-23T09-18-00_2023WN296031.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -883,7 +833,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -908,7 +857,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-23T12-37-00_2023WN296192.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -918,7 +866,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Vojenské operace Izraele,True,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Témata článku,Humanitární pomoc,True,False,False,True,False,True
@@ -943,7 +890,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Média a novináři,False,True,False,True,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-24T08-41-00_2023WN297021.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-24T12-12-00_2023WN297062.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -953,7 +899,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Vojenské operace Izraele,True,True,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -978,7 +923,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Média a novináři,True,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-24T12-12-00_2023WN297062.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299091.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -988,7 +932,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1013,7 +956,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-26T00-00-00_2023WN299091.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1023,7 +965,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1048,7 +989,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-26T00-00-00_2023WN299176.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1058,7 +998,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1083,7 +1022,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-26T00-00-00_2023WN299198.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,False,True,False,True
@@ -1093,7 +1031,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1118,7 +1055,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-27T00-00-00_2023WN300050.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-10-30T00-00-00_2023WN303025.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1128,7 +1064,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1153,7 +1088,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-30T00-00-00_2023WN303025.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1163,7 +1097,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Mezinárodní politické reakce,True,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-30T00-00-00_2023WN303134.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1188,7 +1121,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,True,True,True,False
 2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-30T00-00-00_2023WN303134.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,True,True,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1198,7 +1130,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1223,7 +1154,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,False,True,False,True
 2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-30T11-19-00_2023WN303199.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-10-31T08-47-00_2023WN304015.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,False,True,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1233,7 +1163,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Mezinárodní politické reakce,False,False,False,True,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Teroristické operace,False,False,True,False,False,True
-2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1258,7 +1187,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-10-31T08-47-00_2023WN304015.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-11-01T16-09-00_2023WN305157.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1268,7 +1196,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Témata článku,Humanitární pomoc,False,True,False,True,False,True
@@ -1293,7 +1220,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-01T16-09-00_2023WN305157.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-11-01T20-08-00_2023WN305204.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,True,True,True,False
 2023-11-01T20-08-00_2023WN305204.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,True,False,True
@@ -1303,7 +1229,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1328,7 +1253,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-01T20-08-00_2023WN305204.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1338,7 +1262,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Vojenské operace Izraele,True,True,False,True,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Teroristické operace,False,False,True,False,False,True
-2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dílčí konflikty a střety,False,False,True,True,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Témata článku,Humanitární pomoc,False,False,False,True,False,True
@@ -1363,7 +1286,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-02T08-14-00_2023WN306018.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,True,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-11-02T11-09-00_2023WN306067.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,True,True,True,False
@@ -1373,7 +1295,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Vojenské operace Izraele,True,True,False,True,True,False
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Teroristické operace,True,True,False,False,False,True
-2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1398,7 +1319,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-02T11-09-00_2023WN306067.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-11-04T16-30-00_2023WN308069.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1408,7 +1328,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Teroristické operace,True,True,False,False,False,True
-2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1433,7 +1352,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Média a novináři,False,False,False,True,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-04T16-30-00_2023WN308069.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1443,7 +1361,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Vojenské operace Izraele,False,True,False,True,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Teroristické operace,False,True,False,True,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1468,7 +1385,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-05T08-41-00_2023WN309011.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,True,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,False,False,True
@@ -1478,7 +1394,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1503,7 +1418,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-05T08-41-00_2023WN309016.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,True,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1513,7 +1427,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Vojenské operace Izraele,False,True,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,True,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Témata článku,Humanitární pomoc,True,True,False,False,False,True
@@ -1538,7 +1451,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Média a novináři,True,True,False,True,True,False
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-05T10-57-00_2023WN309100.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-11-08T08-45-00_2023WN312032.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,False,True,True,True,False
 2023-11-08T08-45-00_2023WN312032.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1548,7 +1460,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Mezinárodní politické reakce,False,False,False,True,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Témata článku,Humanitární pomoc,False,False,False,True,False,True
@@ -1573,7 +1484,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Média a novináři,False,False,False,True,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-08T08-45-00_2023WN312032.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1583,7 +1493,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1608,7 +1517,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-08T11-17-00_2023WN312083.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -1618,7 +1526,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1643,7 +1550,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-08T17-35-00_2023WN312200.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-12T06-03-00_2023WN316008.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,True,True,True,False
 2023-11-12T06-03-00_2023WN316008.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1653,7 +1559,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,True,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1678,7 +1583,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-12T06-03-00_2023WN316008.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,True,False,True
@@ -1688,7 +1592,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Mezinárodní politické reakce,True,True,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dílčí konflikty a střety,False,False,False,True,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1713,7 +1616,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,False,False,False,True
 2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-12T10-35-00_2023WN316132.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1723,7 +1625,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Témata článku,Humanitární pomoc,False,True,True,True,True,False
@@ -1748,7 +1649,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,True,False,True
-2023-11-13T08-16-00_2023WN317030.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1758,7 +1658,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Mezinárodní politické reakce,True,False,True,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Vojenské operace Izraele,True,True,False,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Témata článku,Humanitární pomoc,True,False,True,True,True,False
@@ -1783,7 +1682,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-13T11-01-00_2023WN317254.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,True,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1793,7 +1691,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Vojenské operace Izraele,False,True,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1818,7 +1715,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-15T13-35-00_2023WN319151.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,True,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1828,7 +1724,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Vojenské operace Izraele,False,True,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Teroristické operace,False,True,True,False,False,True
-2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1853,7 +1748,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-15T16-48-00_2023WN319208.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,True,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -1863,7 +1757,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Témata článku,Humanitární pomoc,True,True,False,True,True,False
@@ -1888,7 +1781,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-16T08-16-00_2023WN320030.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-16T15-21-00_2023WN320146.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,True,True,True,False
 2023-11-16T15-21-00_2023WN320146.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -1898,7 +1790,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Vojenské operace Izraele,False,True,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1923,7 +1814,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-16T15-21-00_2023WN320146.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -1933,7 +1823,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Témata článku,Humanitární pomoc,True,True,False,False,False,True
@@ -1958,7 +1847,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-19T19-42-00_2023WN323084.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,True,True,True,False
 2023-11-20T09-03-00_2023WN324033.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-11-20T09-03-00_2023WN324033.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -1968,7 +1856,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Mezinárodní politické reakce,True,False,False,True,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -1993,7 +1880,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-20T09-03-00_2023WN324033.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-20T15-21-00_2023WN324135.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -2003,7 +1889,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Teroristické operace,False,False,True,False,False,True
-2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2028,7 +1913,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-20T15-21-00_2023WN324135.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,True,True,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-11-20T20-25-00_2023WN324202.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -2038,7 +1922,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,True,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Témata článku,Humanitární pomoc,False,False,False,True,False,True
@@ -2063,7 +1946,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-20T20-25-00_2023WN324202.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-23T11-44-00_2023WN327073.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2073,7 +1955,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2098,7 +1979,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,True,False,True
-2023-11-23T11-44-00_2023WN327073.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2108,7 +1988,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Teroristické operace,True,False,False,False,False,True
-2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Témata článku,Humanitární pomoc,True,True,True,True,True,False
@@ -2133,7 +2012,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-23T16-26-00_2023WN327164.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -2143,7 +2021,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,True,True,False
 2023-11-24T21-16-00_2023WN328215.txt,Témata článku,Humanitární pomoc,True,True,False,True,True,False
@@ -2168,7 +2045,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-24T21-16-00_2023WN328215.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-11-29T08-32-00_2023WN333030.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -2178,7 +2054,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Mezinárodní politické reakce,True,True,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2203,7 +2078,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Média a novináři,True,True,False,True,True,False
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-29T08-32-00_2023WN333030.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,True,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,False,True,True,False
@@ -2213,7 +2087,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Teroristické operace,False,False,True,False,False,True
-2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2238,7 +2111,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-29T15-51-00_2023WN333171.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -2248,7 +2120,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Mezinárodní politické reakce,False,False,False,True,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2273,7 +2144,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Média a novináři,False,True,True,True,True,False
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-11-30T11-33-00_2023WN334072.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-04T12-14-00_2023WN338101.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,False,True,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -2283,7 +2153,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2308,7 +2177,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-04T12-14-00_2023WN338101.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-05T06-39-00_2023WN339011.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -2318,7 +2186,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Vojenské operace Izraele,True,True,True,False,True,False
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dílčí konflikty a střety,False,True,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,True,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2343,7 +2210,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-05T06-39-00_2023WN339011.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,True,True,True,False
@@ -2353,7 +2219,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Vojenské operace Izraele,True,True,False,True,True,False
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Teroristické operace,True,True,False,True,True,False
-2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2378,7 +2243,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Média a novináři,True,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-05T14-45-00_2023WN339132.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,True,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2388,7 +2252,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Mezinárodní politické reakce,False,True,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dopad na izraelské civilisty,False,True,True,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Dopad na palestinské civilisty,True,False,False,True,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2413,7 +2276,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,True,False,False,True
 2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,True,False,True
-2023-12-06T09-06-00_2023WN340025.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2423,7 +2285,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dopad na izraelské civilisty,False,True,True,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2448,7 +2309,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,True,True,False,False,True
 2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-09T11-05-00_2023WN343035.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-09T19-24-00_2023WN343081.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2458,7 +2318,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Mezinárodní politické reakce,False,False,False,True,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Témata článku,Humanitární pomoc,True,False,False,False,False,True
@@ -2483,7 +2342,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-09T19-24-00_2023WN343081.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-10T08-59-00_2023WN344015.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -2493,7 +2351,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2518,7 +2375,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-10T08-59-00_2023WN344015.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -2528,7 +2384,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2553,7 +2408,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Média a novináři,True,False,True,True,True,False
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-14T08-16-00_2023WN348008.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,True,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -2563,7 +2417,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Teroristické operace,False,True,True,False,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dopad na izraelské civilisty,False,False,True,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2588,7 +2441,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Média a novináři,False,True,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,True,False,True
-2023-12-14T16-08-00_2023WN348142.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2023-12-20T16-52-00_2023WN354149.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,True,True,True,True,False
@@ -2598,7 +2450,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Témata článku,Humanitární pomoc,True,True,False,True,True,False
@@ -2623,7 +2474,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Média a novináři,True,False,True,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-20T16-52-00_2023WN354149.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -2633,7 +2483,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2658,7 +2507,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2023-12-30T12-42-00_2023WN364030.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,False,False,True,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -2668,7 +2516,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2693,7 +2540,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Média a novináři,False,True,True,True,True,False
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,True,False,True
 2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-01T20-24-00_2024WN001075.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -2703,7 +2549,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Mezinárodní politické reakce,True,True,False,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dílčí konflikty a střety,True,False,False,True,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Dopad na palestinské civilisty,True,True,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2728,7 +2573,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-02T16-55-00_2024WN002143.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,True,False,True
@@ -2738,7 +2582,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Teroristické operace,True,True,True,False,True,False
-2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dopad na izraelské civilisty,True,True,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-11T16-10-00_2024WN011155.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2763,7 +2606,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-11T16-10-00_2024WN011155.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,True,True,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,True,False,True,True,True,False
@@ -2773,7 +2615,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Mezinárodní politické reakce,False,False,True,True,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Teroristické operace,True,False,True,True,True,False
-2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dílčí konflikty a střety,True,False,False,True,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2798,7 +2639,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-12T10-01-00_2024WN012058.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,True,True,True,True,False
 2024-01-12T15-46-00_2024WN012144.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -2808,7 +2648,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2833,7 +2672,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Média a novináři,False,False,True,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-12T15-46-00_2024WN012144.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2843,7 +2681,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Teroristické operace,True,True,True,True,True,False
-2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dílčí konflikty a střety,False,False,True,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-18T10-32-00_2024WN018055.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2868,7 +2705,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-18T10-32-00_2024WN018055.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2024-01-19T12-20-00_2024WN019033.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -2878,7 +2714,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Mezinárodní politické reakce,True,True,True,True,True,False
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2903,7 +2738,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Média a novináři,False,True,True,True,True,False
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-19T12-20-00_2024WN019033.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,False,False,True
@@ -2913,7 +2747,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Mezinárodní politické reakce,True,True,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Vojenské operace Izraele,True,True,True,True,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Teroristické operace,False,False,False,False,False,True
-2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dopad na izraelské civilisty,False,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -2938,7 +2771,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-20T10-17-00_2024WN020031.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,False,True,False,True
@@ -2948,7 +2780,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Mezinárodní politické reakce,False,True,False,True,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Vojenské operace Izraele,False,True,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dílčí konflikty a střety,True,False,False,False,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,True,False,True
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Dopad na palestinské civilisty,True,True,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Témata článku,Humanitární pomoc,True,True,True,True,True,False
@@ -2973,7 +2804,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Očití svědci a civilisté z Izraele,True,True,True,True,True,False
 2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-01-28T19-21-00_2024WN028084.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,False,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,False,True,False,True
@@ -2983,7 +2813,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Mezinárodní politické reakce,False,True,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Vojenské operace Izraele,True,False,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -3008,7 +2837,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,True,False,True
-2024-01-30T12-22-00_2024WN030086.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Zpravodajské hodnoty (multiple),Negativita negativity,True,True,True,True,True,False
 2024-02-06T20-53-00_2024WN037171.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,True,True,True,True,False
@@ -3018,7 +2846,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Mezinárodní politické reakce,False,True,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Vojenské operace Izraele,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Teroristické operace,True,True,True,False,True,False
-2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dopad na izraelské civilisty,True,True,False,True,True,False
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Dopad na palestinské civilisty,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -3043,7 +2870,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Média a novináři,True,True,True,True,True,False
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,False,False,False,False,True
-2024-02-06T20-53-00_2024WN037171.txt,Mluvčí,Jiní,False,False,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Zpravodajské hodnoty (multiple),Negativita negativity,False,True,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Zpravodajské hodnoty (multiple),Blízkost proximity,True,False,True,True,True,False
 2024-02-08T12-53-00_2024WN039088.txt,Zpravodajské hodnoty (multiple),Elitní osoby prominence,False,False,True,True,False,True
@@ -3053,7 +2879,6 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Mezinárodní politické reakce,False,False,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Vojenské operace Izraele,False,True,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Teroristické operace,False,True,False,False,False,True
-2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dílčí konflikty a střety,False,False,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dopad na izraelské civilisty,False,True,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Dopad na palestinské civilisty,False,True,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Témata článku,Humanitární pomoc,False,False,False,False,False,True
@@ -3078,4 +2903,3 @@ file,question_id,rating,coding FSS - Jana.csv,coding FSS - Katka.csv,coding FSS 
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Média a novináři,False,False,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Očití svědci a civilisté z Izraele,False,False,False,False,False,True
 2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Očití svědci a civilisté z Palestiny,False,True,False,False,False,True
-2024-02-08T12-53-00_2024WN039088.txt,Mluvčí,Jiní,False,False,False,False,False,True

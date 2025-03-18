@@ -1,0 +1,870 @@
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "fleiss_kappa": {
+      "best_case": 0.63838,
+      "with_model": 0.46717,
+      "worst_case": -0.09647,
+      "without_model": 0.52962
+    },
+    "krippendorff_alpha": {
+      "best_case": 0.63915,
+      "with_model": 0.46827,
+      "worst_case": -0.09372,
+      "without_model": 0.53095
+    },
+    "gwet_ac1": {
+      "best_case": 0.78144,
+      "with_model": 0.67319,
+      "worst_case": 0.0526,
+      "without_model": 0.7091
+    },
+    "majority_agreement": 0.77081
+  },
+  "majority_agreement": 0.813,
+  "questions": {
+    "Zpravodajské hodnoty (multiple)": {
+      "multiple_choice": true,
+      "irr_result": {
+        "description": "mean IRR through options",
+        "fleiss_kappa": {
+          "best_case": 0.58125,
+          "with_model": 0.42292,
+          "worst_case": -0.17781,
+          "without_model": 0.45252
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.5823,
+          "with_model": 0.42436,
+          "worst_case": -0.17487,
+          "without_model": 0.45435
+        },
+        "gwet_ac1": {
+          "best_case": 0.72644,
+          "with_model": 0.65448,
+          "worst_case": -0.04865,
+          "without_model": 0.63127
+        },
+        "majority_agreement": 0.83
+      },
+      "majority_agreement": 0.83,
+      "options": {
+        "Negativita negativity": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.48588,
+            "with_model": 0.2381,
+            "worst_case": -0.19433,
+            "without_model": 0.33443
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.48717,
+            "with_model": 0.24,
+            "worst_case": -0.19134,
+            "without_model": 0.33665
+          },
+          "gwet_ac1": {
+            "best_case": 0.73469,
+            "with_model": 0.69069,
+            "worst_case": -0.04849,
+            "without_model": 0.64071
+          },
+          "majority_agreement": 0.83
+        },
+        "Blízkost proximity": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.8745,
+            "with_model": 0.77416,
+            "worst_case": -0.15269,
+            "without_model": 0.832
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.87482,
+            "with_model": 0.77473,
+            "worst_case": -0.14981,
+            "without_model": 0.83256
+          },
+          "gwet_ac1": {
+            "best_case": 0.95146,
+            "with_model": 0.90541,
+            "worst_case": 0.07992,
+            "without_model": 0.93538
+          },
+          "majority_agreement": 0.93
+        },
+        "Elitní osoby prominence": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.67842,
+            "with_model": 0.5648,
+            "worst_case": -0.10766,
+            "without_model": 0.57143
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.67923,
+            "with_model": 0.56589,
+            "worst_case": -0.10489,
+            "without_model": 0.57286
+          },
+          "gwet_ac1": {
+            "best_case": 0.68156,
+            "with_model": 0.58154,
+            "worst_case": -0.10567,
+            "without_model": 0.57522
+          },
+          "majority_agreement": 0.82
+        },
+        "Personalizace personalization": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.62798,
+            "with_model": 0.5241,
+            "worst_case": -0.18835,
+            "without_model": 0.52
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.62891,
+            "with_model": 0.52529,
+            "worst_case": -0.18538,
+            "without_model": 0.5216
+          },
+          "gwet_ac1": {
+            "best_case": 0.86324,
+            "with_model": 0.79146,
+            "worst_case": 0.03241,
+            "without_model": 0.81538
+          },
+          "majority_agreement": 0.87
+        },
+        "Dopad impact": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.23948,
+            "with_model": 0.01342,
+            "worst_case": -0.24604,
+            "without_model": 0.00475
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.24138,
+            "with_model": 0.01589,
+            "worst_case": -0.24293,
+            "without_model": 0.00807
+          },
+          "gwet_ac1": {
+            "best_case": 0.40126,
+            "with_model": 0.30332,
+            "worst_case": -0.20144,
+            "without_model": 0.18965
+          },
+          "majority_agreement": 0.7
+        }
+      }
+    },
+    "Témata článku": {
+      "multiple_choice": true,
+      "irr_result": {
+        "description": "mean IRR through options",
+        "fleiss_kappa": {
+          "best_case": 0.58647,
+          "with_model": 0.45466,
+          "worst_case": -0.17381,
+          "without_model": 0.45976
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.5875,
+          "with_model": 0.45602,
+          "worst_case": -0.17087,
+          "without_model": 0.46156
+        },
+        "gwet_ac1": {
+          "best_case": 0.73765,
+          "with_model": 0.65381,
+          "worst_case": -0.04034,
+          "without_model": 0.64946
+        },
+        "majority_agreement": 0.828
+      },
+      "majority_agreement": 0.828,
+      "options": {
+        "Vnitřní politické dění": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.65648,
+            "with_model": 0.30677,
+            "worst_case": -0.14377,
+            "without_model": 0.54358
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.65734,
+            "with_model": 0.30851,
+            "worst_case": -0.14091,
+            "without_model": 0.5451
+          },
+          "gwet_ac1": {
+            "best_case": 0.76369,
+            "with_model": 0.55326,
+            "worst_case": -0.04715,
+            "without_model": 0.68416
+          },
+          "majority_agreement": 0.65
+        },
+        "Mezinárodní politické reakce": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.68993,
+            "with_model": 0.56818,
+            "worst_case": -0.10402,
+            "without_model": 0.58637
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.69071,
+            "with_model": 0.56926,
+            "worst_case": -0.10126,
+            "without_model": 0.58775
+          },
+          "gwet_ac1": {
+            "best_case": 0.69007,
+            "with_model": 0.57181,
+            "worst_case": -0.10264,
+            "without_model": 0.58696
+          },
+          "majority_agreement": 0.82
+        },
+        "Vojenské operace Izraele": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.48937,
+            "with_model": 0.39899,
+            "worst_case": -0.17073,
+            "without_model": 0.31891
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.49065,
+            "with_model": 0.40049,
+            "worst_case": -0.1678,
+            "without_model": 0.32118
+          },
+          "gwet_ac1": {
+            "best_case": 0.49062,
+            "with_model": 0.40761,
+            "worst_case": -0.16927,
+            "without_model": 0.32109
+          },
+          "majority_agreement": 0.82
+        },
+        "Teroristické operace": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.47207,
+            "with_model": 0.28205,
+            "worst_case": -0.17418,
+            "without_model": 0.30359
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.47339,
+            "with_model": 0.28385,
+            "worst_case": -0.17125,
+            "without_model": 0.30591
+          },
+          "gwet_ac1": {
+            "best_case": 0.52512,
+            "with_model": 0.40061,
+            "worst_case": -0.15925,
+            "without_model": 0.36064
+          },
+          "majority_agreement": 0.7
+        },
+        "Dopad na izraelské civilisty": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.59673,
+            "with_model": 0.46701,
+            "worst_case": -0.13617,
+            "without_model": 0.46198
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.59774,
+            "with_model": 0.46834,
+            "worst_case": -0.13333,
+            "without_model": 0.46377
+          },
+          "gwet_ac1": {
+            "best_case": 0.60321,
+            "with_model": 0.49869,
+            "worst_case": -0.13051,
+            "without_model": 0.47127
+          },
+          "majority_agreement": 0.75
+        },
+        "Dopad na palestinské civilisty": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.61257,
+            "with_model": 0.52886,
+            "worst_case": -0.15869,
+            "without_model": 0.47947
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.61354,
+            "with_model": 0.53004,
+            "worst_case": -0.1558,
+            "without_model": 0.4812
+          },
+          "gwet_ac1": {
+            "best_case": 0.7126,
+            "with_model": 0.6673,
+            "worst_case": -0.06523,
+            "without_model": 0.61895
+          },
+          "majority_agreement": 0.86
+        },
+        "Humanitární pomoc": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.5419,
+            "with_model": 0.45743,
+            "worst_case": -0.22117,
+            "without_model": 0.3945
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.54304,
+            "with_model": 0.45879,
+            "worst_case": -0.21811,
+            "without_model": 0.39652
+          },
+          "gwet_ac1": {
+            "best_case": 0.83741,
+            "with_model": 0.77973,
+            "worst_case": 0.03191,
+            "without_model": 0.78254
+          },
+          "majority_agreement": 0.88
+        },
+        "Globální reakce veřejnosti": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.86094,
+            "with_model": 0.71115,
+            "worst_case": -0.11459,
+            "without_model": 0.81366
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.86128,
+            "with_model": 0.71187,
+            "worst_case": -0.1118,
+            "without_model": 0.81429
+          },
+          "gwet_ac1": {
+            "best_case": 0.92193,
+            "with_model": 0.85844,
+            "worst_case": 0.03688,
+            "without_model": 0.89619
+          },
+          "majority_agreement": 0.89
+        },
+        "Ekonomické důsledky": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.53917,
+            "with_model": 0.48367,
+            "worst_case": -0.26275,
+            "without_model": 0.41138
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.54032,
+            "with_model": 0.48496,
+            "worst_case": -0.25959,
+            "without_model": 0.41334
+          },
+          "gwet_ac1": {
+            "best_case": 0.93102,
+            "with_model": 0.92564,
+            "worst_case": 0.11595,
+            "without_model": 0.90742
+          },
+          "majority_agreement": 0.97
+        },
+        "Historie/kontextualizace": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.40554,
+            "with_model": 0.34247,
+            "worst_case": -0.25201,
+            "without_model": 0.28411
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.40703,
+            "with_model": 0.34411,
+            "worst_case": -0.24888,
+            "without_model": 0.2865
+          },
+          "gwet_ac1": {
+            "best_case": 0.90082,
+            "with_model": 0.87505,
+            "worst_case": 0.08595,
+            "without_model": 0.86535
+          },
+          "majority_agreement": 0.94
+        }
+      }
+    },
+    "Hlavní téma článku": {
+      "multiple_choice": false,
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "fleiss_kappa": {
+          "best_case": 0.74968,
+          "with_model": 0.57921,
+          "worst_case": 0.24918,
+          "without_model": 0.67663
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.74962,
+          "with_model": 0.57912,
+          "worst_case": 0.2511,
+          "without_model": 0.67652
+        },
+        "gwet_ac1": {
+          "best_case": 0.76878,
+          "with_model": 0.61229,
+          "worst_case": 0.3082,
+          "without_model": 0.70143
+        },
+        "majority_agreement": 0.57
+      },
+      "majority_agreement": 0.57,
+      "options": {}
+    },
+    "Mediální rámce (multiple)": {
+      "multiple_choice": true,
+      "irr_result": {
+        "description": "mean IRR through options",
+        "fleiss_kappa": {
+          "best_case": 0.52393,
+          "with_model": 0.35667,
+          "worst_case": -0.18914,
+          "without_model": 0.38935
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.52513,
+          "with_model": 0.35827,
+          "worst_case": -0.18617,
+          "without_model": 0.39139
+        },
+        "gwet_ac1": {
+          "best_case": 0.75893,
+          "with_model": 0.65817,
+          "worst_case": -0.02803,
+          "without_model": 0.67652
+        },
+        "majority_agreement": 0.81333
+      },
+      "majority_agreement": 0.813,
+      "options": {
+        "Rámec konfliktu": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.31492,
+            "with_model": 0.18076,
+            "worst_case": -0.23292,
+            "without_model": 0.1634
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.31663,
+            "with_model": 0.18281,
+            "worst_case": -0.22984,
+            "without_model": 0.16619
+          },
+          "gwet_ac1": {
+            "best_case": 0.79125,
+            "with_model": 0.75545,
+            "worst_case": -0.00387,
+            "without_model": 0.71365
+          },
+          "majority_agreement": 0.89
+        },
+        "Rámec budování míru": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.51515,
+            "with_model": 0.40571,
+            "worst_case": -0.21277,
+            "without_model": 0.38743
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.51636,
+            "with_model": 0.4072,
+            "worst_case": -0.20974,
+            "without_model": 0.38947
+          },
+          "gwet_ac1": {
+            "best_case": 0.84924,
+            "with_model": 0.8336,
+            "worst_case": 0.03197,
+            "without_model": 0.79547
+          },
+          "majority_agreement": 0.93
+        },
+        "Humanitární rámec": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.5137,
+            "with_model": 0.42301,
+            "worst_case": -0.19026,
+            "without_model": 0.3504
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.51492,
+            "with_model": 0.42445,
+            "worst_case": -0.18728,
+            "without_model": 0.35256
+          },
+          "gwet_ac1": {
+            "best_case": 0.67446,
+            "with_model": 0.58908,
+            "worst_case": -0.07555,
+            "without_model": 0.56649
+          },
+          "majority_agreement": 0.83
+        },
+        "Historicko-kulturní rámec": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.53033,
+            "with_model": 0.43414,
+            "worst_case": -0.24411,
+            "without_model": 0.40914
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.53151,
+            "with_model": 0.43556,
+            "worst_case": -0.241,
+            "without_model": 0.41111
+          },
+          "gwet_ac1": {
+            "best_case": 0.91075,
+            "with_model": 0.88583,
+            "worst_case": 0.09172,
+            "without_model": 0.87963
+          },
+          "majority_agreement": 0.92
+        },
+        "Geopolitický rámec": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.72244,
+            "with_model": 0.46106,
+            "worst_case": -0.09331,
+            "without_model": 0.63209
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.72314,
+            "with_model": 0.4624,
+            "worst_case": -0.09057,
+            "without_model": 0.63331
+          },
+          "gwet_ac1": {
+            "best_case": 0.73716,
+            "with_model": 0.46559,
+            "worst_case": -0.08671,
+            "without_model": 0.64758
+          },
+          "majority_agreement": 0.68
+        },
+        "Lokální rámec": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.54707,
+            "with_model": 0.23531,
+            "worst_case": -0.16148,
+            "without_model": 0.39365
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.5482,
+            "with_model": 0.23723,
+            "worst_case": -0.15858,
+            "without_model": 0.39568
+          },
+          "gwet_ac1": {
+            "best_case": 0.59072,
+            "with_model": 0.41947,
+            "worst_case": -0.12574,
+            "without_model": 0.45627
+          },
+          "majority_agreement": 0.63
+        }
+      }
+    },
+    "Mluvčí": {
+      "multiple_choice": true,
+      "irr_result": {
+        "description": "mean IRR through options",
+        "fleiss_kappa": {
+          "best_case": 0.75059,
+          "with_model": 0.52239,
+          "worst_case": -0.19079,
+          "without_model": 0.66982
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.75122,
+          "with_model": 0.52358,
+          "worst_case": -0.18781,
+          "without_model": 0.67092
+        },
+        "gwet_ac1": {
+          "best_case": 0.91542,
+          "with_model": 0.78721,
+          "worst_case": 0.07181,
+          "without_model": 0.8868
+        },
+        "majority_agreement": 0.81273
+      },
+      "majority_agreement": 0.813,
+      "options": {
+        "Političtí představitelé Izraele": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.83333,
+            "with_model": 0.7189,
+            "worst_case": -0.09028,
+            "without_model": 0.77778
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.83375,
+            "with_model": 0.7196,
+            "worst_case": -0.08755,
+            "without_model": 0.77852
+          },
+          "gwet_ac1": {
+            "best_case": 0.87931,
+            "with_model": 0.78025,
+            "worst_case": -0.00641,
+            "without_model": 0.83908
+          },
+          "majority_agreement": 0.88
+        },
+        "Političtí představitelé Palestiny": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.63066,
+            "with_model": 0.46794,
+            "worst_case": -0.24804,
+            "without_model": 0.50375
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.63158,
+            "with_model": 0.46927,
+            "worst_case": -0.24492,
+            "without_model": 0.50541
+          },
+          "gwet_ac1": {
+            "best_case": 0.92112,
+            "with_model": 0.87685,
+            "worst_case": 0.10368,
+            "without_model": 0.89499
+          },
+          "majority_agreement": 0.91
+        },
+        "Politici z blízkovýchodních zemí": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.75522,
+            "with_model": 0.52446,
+            "worst_case": -0.24892,
+            "without_model": 0.67038
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.75584,
+            "with_model": 0.52565,
+            "worst_case": -0.2458,
+            "without_model": 0.67148
+          },
+          "gwet_ac1": {
+            "best_case": 0.95916,
+            "with_model": 0.91792,
+            "worst_case": 0.13323,
+            "without_model": 0.94564
+          },
+          "majority_agreement": 0.91
+        },
+        "Politici ze ostatních světových zemí": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.85632,
+            "with_model": 0.73553,
+            "worst_case": -0.05341,
+            "without_model": 0.80843
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.85668,
+            "with_model": 0.73619,
+            "worst_case": -0.05077,
+            "without_model": 0.80907
+          },
+          "gwet_ac1": {
+            "best_case": 0.86349,
+            "with_model": 0.74432,
+            "worst_case": -0.04001,
+            "without_model": 0.81799
+          },
+          "majority_agreement": 0.86
+        },
+        "Představitelé mezinárodních a neziskových organizací": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.59077,
+            "with_model": 0.45799,
+            "worst_case": -0.19578,
+            "without_model": 0.472
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.5918,
+            "with_model": 0.45935,
+            "worst_case": -0.19279,
+            "without_model": 0.47376
+          },
+          "gwet_ac1": {
+            "best_case": 0.84956,
+            "with_model": 0.7379,
+            "worst_case": 0.02637,
+            "without_model": 0.79692
+          },
+          "majority_agreement": 0.78
+        },
+        "Vojenští představitelé Izraele": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.8961,
+            "with_model": 0.70587,
+            "worst_case": -0.13636,
+            "without_model": 0.8625
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.89636,
+            "with_model": 0.70661,
+            "worst_case": -0.13352,
+            "without_model": 0.86296
+          },
+          "gwet_ac1": {
+            "best_case": 0.95782,
+            "with_model": 0.85968,
+            "worst_case": 0.07475,
+            "without_model": 0.94359
+          },
+          "majority_agreement": 0.85
+        },
+        "Členové teroristických skupin": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.7443,
+            "with_model": 0.12108,
+            "worst_case": -0.23209,
+            "without_model": 0.65644
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.74494,
+            "with_model": 0.12328,
+            "worst_case": -0.22901,
+            "without_model": 0.65759
+          },
+          "gwet_ac1": {
+            "best_case": 0.94539,
+            "with_model": 0.5009,
+            "worst_case": 0.11514,
+            "without_model": 0.9273
+          },
+          "majority_agreement": 0.42
+        },
+        "Nezávislí experti a analytici": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.81714,
+            "with_model": 0.67788,
+            "worst_case": -0.18951,
+            "without_model": 0.75894
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.8176,
+            "with_model": 0.67869,
+            "worst_case": -0.18654,
+            "without_model": 0.75974
+          },
+          "gwet_ac1": {
+            "best_case": 0.9488,
+            "with_model": 0.90783,
+            "worst_case": 0.09696,
+            "without_model": 0.93151
+          },
+          "majority_agreement": 0.93
+        },
+        "Média a novináři": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.4921,
+            "with_model": 0.20086,
+            "worst_case": -0.21747,
+            "without_model": 0.33542
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.49337,
+            "with_model": 0.20285,
+            "worst_case": -0.21443,
+            "without_model": 0.33764
+          },
+          "gwet_ac1": {
+            "best_case": 0.79706,
+            "with_model": 0.5154,
+            "worst_case": 0.00233,
+            "without_model": 0.72735
+          },
+          "majority_agreement": 0.62
+        },
+        "Očití svědci a civilisté z Izraele": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.85109,
+            "with_model": 0.61905,
+            "worst_case": -0.21614,
+            "without_model": 0.80305
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.85146,
+            "with_model": 0.62,
+            "worst_case": -0.2131,
+            "without_model": 0.8037
+          },
+          "gwet_ac1": {
+            "best_case": 0.96996,
+            "with_model": 0.89333,
+            "worst_case": 0.12659,
+            "without_model": 0.95988
+          },
+          "majority_agreement": 0.87
+        },
+        "Očití svědci a civilisté z Palestiny": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 0.78947,
+            "with_model": 0.51668,
+            "worst_case": -0.27064,
+            "without_model": 0.7193
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.79,
+            "with_model": 0.51789,
+            "worst_case": -0.26746,
+            "without_model": 0.72023
+          },
+          "gwet_ac1": {
+            "best_case": 0.9779,
+            "with_model": 0.9249,
+            "worst_case": 0.15731,
+            "without_model": 0.97053
+          },
+          "majority_agreement": 0.91
+        }
+      }
+    }
+  }
+}

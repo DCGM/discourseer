@@ -1,0 +1,43 @@
+{
+  "Zpravodajské hodnoty (multiple)": {
+    "Negativita negativity": 0.38467,
+    "Blízkost proximity": 0.71359,
+    "Elitní osoby prominence": 0.33898,
+    "Personalizace personalization": 0.49247,
+    "Dopad impact": 0.03306
+  },
+  "Témata článku": {
+    "Vnitřní politické dění": 0.34196,
+    "Mezinárodní politické reakce": 0.56744,
+    "Vojenské operace Izraele": 0.69357,
+    "Teroristické operace": 0.45668,
+    "Dopad na izraelské civilisty": 0.44427,
+    "Dopad na palestinské civilisty": 0.42657,
+    "Humanitární pomoc": 0.58081,
+    "Globální reakce veřejnosti": 0.67046,
+    "Ekonomické důsledky": 0.56834,
+    "Historie/kontextualizace": 0.39764
+  },
+  "Hlavní téma článku": {},
+  "Mediální rámce (multiple)": {
+    "Rámec konfliktu": 0.21056,
+    "Rámec budování míru": 0.45089,
+    "Humanitární rámec": 0.4161,
+    "Historicko-kulturní rámec": 0.32325,
+    "Geopolitický rámec": 0.51955,
+    "Lokální rámec": 0.26786
+  },
+  "Mluvčí": {
+    "Političtí představitelé Izraele": 0.5566,
+    "Političtí představitelé Palestiny": 0.56874,
+    "Politici z blízkovýchodních zemí": 0.69419,
+    "Politici ze ostatních světových zemí": 0.66539,
+    "Představitelé mezinárodních a neziskových organizací": 0.47311,
+    "Vojenští představitelé Izraele": 0.62775,
+    "Členové teroristických skupin": 0.52209,
+    "Nezávislí experti a analytici": 0.46473,
+    "Média a novináři": 0.54468,
+    "Očití svědci a civilisté z Izraele": 0.75316,
+    "Očití svědci a civilisté z Palestiny": 0.06468
+  }
+}

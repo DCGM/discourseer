@@ -1,0 +1,4 @@
+0.688	prompt_schema_definition_default_gpt_3.5_with_examples
+0.71	prompt_schema_definition_default_gpt_3.5_without_examples
+0.718	prompt_schema_definition_extensive_gpt_3.5_with_examples
+0.716	prompt_schema_definition_extensive_gpt_3.5_without_examples

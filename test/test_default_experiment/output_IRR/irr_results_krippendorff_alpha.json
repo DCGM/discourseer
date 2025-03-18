@@ -1,10 +1,53 @@
 {
-  "overall": 0.83748,
-  "mean_through_questions": 0.50463,
+  "irr_result": 0.49653,
   "questions": {
-    "range": 1.0,
-    "genre": -0.0,
-    "message-trigger": 0.11111,
-    "place": 0.90743
+    "range": {
+      "irr_result": 1.0
+    },
+    "genre": {
+      "irr_result": -0.0
+    },
+    "message-trigger": {
+      "irr_result": 0.11111
+    },
+    "place": {
+      "irr_result": 0.875,
+      "options": {
+        "czech-republic": 1.0,
+        "slovakia": 1.0,
+        "poland": 1.0,
+        "germany": 1.0,
+        "russia": 1.0,
+        "ukraine": 1.0,
+        "other": 0.0,
+        "unknown": 1.0
+      }
+    }
+  },
+  "files": {
+    "Chci_spravedlnost_pro_dceru.txt": {
+      "questions": {
+        "range": {},
+        "genre": {},
+        "message-trigger": {},
+        "place": {}
+      }
+    },
+    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "questions": {
+        "range": {},
+        "genre": {},
+        "message-trigger": {},
+        "place": {}
+      }
+    },
+    "Tvrdík_skončil_jako_viceprezident.txt": {
+      "questions": {
+        "range": {},
+        "genre": {},
+        "message-trigger": {},
+        "place": {}
+      }
+    }
   }
 }

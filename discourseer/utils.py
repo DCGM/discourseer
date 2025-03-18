@@ -20,8 +20,9 @@ class RatingsCopyMode(Enum):
 def result_dataframe_index_columns():
     return ['file', 'question_id', 'option_id']
 
-def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None):
-    model_dump = model.model_dump(exclude=exclude)
+def pydantic_to_json_file(model: pydantic.BaseModel, file_path: str, exclude: list[str] = None,
+                          exclude_none: bool = False):
+    model_dump = model.model_dump(exclude=exclude, exclude_none=exclude_none)
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(model_dump, f, ensure_ascii=False, indent=2)
 
@@ -96,6 +97,19 @@ def load_codebook(codebook_file: str = None, question_subset: List[str] = None
                           f"{', '.join(orig_question_ids)}")
 
     return codebook
+
+def name_to_path(name: str) -> str:
+    name = name.replace(' ', '_')
+    name = name.replace('/', '_')
+    name = name.replace('\\', '_')
+    name = name.replace(':', '_')
+    name = name.replace('*', '_')
+    name = name.replace('?', '_')
+    name = name.replace('"', '_')
+    name = name.replace('<', '_')
+    name = name.replace('>', '_')
+    name = name.replace('|', '_')
+    return name
 
 
 class JSONParser:

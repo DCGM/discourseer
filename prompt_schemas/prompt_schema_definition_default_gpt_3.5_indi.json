@@ -1,0 +1,22 @@
+{
+  "model": "gpt-3.5-turbo-0125",
+  "max_tokens": 1024,
+  "temperature": 0.0,
+  "top_p": 0.0,
+  "response_format": "json",
+  "prompt_individual_questions": true,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a media content analyst. You are analyzing the following text to extract {question_names_and_descriptions_parentheses}. Decide between options from this list.\n{question_options}\n\nThe question is {first_question_single_or_multi_choice}.\nText will be in Czech language. JSON answers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "system",
+      "content": "{response_json_schema_with_options}"
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "codebook_name": "codebook_gaza",
+  "codebook_version": "v2_srpen",
+  "rater_name": "model",
+  "unmatched_question_names_count": 0,
+  "unmatched_option_names_count": 2,
+  "unmatched_option_names": {
+    "Mluvčí": "Izraelská armáda",
+    "Témata článku": "Hlavní téma článku"
+  },
+  "question_name_to_question_id": [
+    {
+      "Zpravodajské hodnoty": "Zpravodajské hodnoty (multiple)",
+      "Témata článku": "Témata článku",
+      "Hlavní téma článku": "Hlavní téma článku",
+      "Mediální rámce": "Mediální rámce (multiple)",
+      "Mluvčí": "Mluvčí"
+    }
+  ],
+  "option_name_to_option_id": {
+    "Zpravodajské hodnoty (multiple)": {
+      "Negativita": "Negativita negativity",
+      "Blízkost": "Blízkost proximity",
+      "Elitní osoby": "Elitní osoby prominence",
+      "Personalizace": "Personalizace personalization",
+      "Dopad": "Dopad impact"
+    },
+    "Témata článku": {
+      "Vnitřní politické a občanské dění": "Vnitřní politické dění",
+      "Mezinárodní politické reakce": "Mezinárodní politické reakce",
+      "Vojenské operace Izraele a jeho spojenců": "Vojenské operace Izraele",
+      "Teroristické operace Hamasu a jeho spojenců": "Teroristické operace",
+      "Dopad na izraelské civilisty": "Dopad na izraelské civilisty",
+      "Dopad na palestinské civilisty": "Dopad na palestinské civilisty",
+      "Humanitární pomoc": "Humanitární pomoc",
+      "Globální reakce veřejnosti": "Globální reakce veřejnosti",
+      "Ekonomické důsledky": "Ekonomické důsledky",
+      "Historie": "Historie/kontextualizace"
+    },
+    "Hlavní téma článku": {
+      "Vnitřní politické a občanské dění": "Vnitřní politické dění",
+      "Mezinárodní politické reakce": "Mezinárodní politické reakce",
+      "Vojenské operace Izraele a jeho spojenců": "Vojenské operace Izraele",
+      "Teroristické operace Hamasu a jeho spojenců": "Teroristické operace",
+      "Dopad na izraelské civilisty": "Dopad na izraelské civilisty",
+      "Dopad na palestinské civilisty": "Dopad na palestinské civilisty",
+      "Humanitární pomoc": "Humanitární pomoc",
+      "Globální reakce veřejnosti": "Globální reakce veřejnosti",
+      "Ekonomické důsledky": "Ekonomické důsledky",
+      "Historie": "Historie/kontextualizace"
+    },
+    "Mediální rámce (multiple)": {
+      "Rámec konfliktu": "Rámec konfliktu",
+      "Rámec budování míru": "Rámec budování míru",
+      "Humanitární rámec": "Humanitární rámec",
+      "Historicko-kulturní rámec": "Historicko-kulturní rámec",
+      "Geopolitický rámec": "Geopolitický rámec",
+      "Lokální rámec": "Lokální rámec"
+    },
+    "Mluvčí": {
+      "Političtí představitelé Izraele": "Političtí představitelé Izraele",
+      "Političtí představitelé Palestiny": "Političtí představitelé Palestiny",
+      "Politici z blízkovýchodních zemí": "Politici z blízkovýchodních zemí",
+      "Politici ze ostatních světových zemí": "Politici ze ostatních světových zemí",
+      "Představitelé mezinárodních a neziskových organizací": "Představitelé mezinárodních a neziskových organizací",
+      "Vojenští představitelé Izraele": "Vojenští představitelé Izraele",
+      "Členové teroristických skupin": "Členové teroristických skupin",
+      "Nezávislí experti a analytici": "Nezávislí experti a analytici",
+      "Média a novináři": "Média a novináři",
+      "Očití svědci a civilisté z Izraele": "Očití svědci a civilisté z Izraele",
+      "Očití svědci a civilisté z Palestiny": "Očití svědci a civilisté z Palestiny"
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "codebook_name": "codebook_gaza",
+  "codebook_version": "v0_kveten_eng",
+  "questions": [
+    {
+      "id": "Zpravodajské hodnoty (multiple)",
+      "name": "News values",
+      "description": "Zpravodajské hodnoty (multiple)",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Negativita negativity",
+          "name": "Negativity",
+          "description": "Emphasis is placed on negative phenomena (conflicts, attacks, tragedies), negative emotions (panic, fear, despair), negative actions (cruelty)."
+        },
+        {
+          "id": "Blízkost proximity",
+          "name": "Proximity",
+          "description": "The reported events are depicted as geographically or culturally close (explicit references to common values, to the relevance of the report for the Czech Republic and Czechs; Czech politicians commenting on the situation)."
+        },
+        {
+          "id": "Elitní osoby prominence",
+          "name": "Prominence",
+          "description": "The news article contains opinions from top politicians, international organizations, celebrities - people and organizations perceived as authorities."
+        },
+        {
+          "id": "Personalizace personalization",
+          "name": "Personalization",
+          "description": "The news article draws attention to personal stories of 'ordinary' people"
+        },
+        {
+          "id": "Dopad impact",
+          "name": "Impact",
+          "description": "The news article reflects the consequences of events, which are depicted as global rather than local, significant, far-reaching, extraordinary, involving or affecting a large number of people.."
+        }
+      ]
+    },
+    {
+      "id": "Témata článku",
+      "name": "Topics in the news article",
+      "description": "If the topic is present to any extent, please code accordingly",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Vnitřní politické dění",
+          "name": "Domestic politic affairs",
+          "description": "The news article provides information on political developments in Israel or Gaza, statements by local politicians, their proposals for resolving the conflict, or reactions to foreign diplomatic efforts. This also includes reports on hostage exchanges."
+        },
+        {
+          "id": "Mezinárodní politické reakce",
+          "name": "Global political responses",
+          "description": "The news article provides information on international responses to the conflict from top politicians, international organizations such as the UN, diplomatic initiatives, negotiations, and efforts to broker a ceasefire.."
+        },
+        {
+          "id": "Vojenské operace Izraele",
+          "name": "Military operations of Israel",
+          "description": "The news article describes Israeli military operations, their execution, as well as planning and tactics."
+        },
+        {
+          "id": "Teroristické operace",
+          "name": "Terorist groups operations",
+          "description": "The news article focuses on attacks by Palestinian factions such as Hamas, Hezbollah and other armed groups, which are designated as close to Hamas (ie. Houtis)."
+        },
+        {
+          "id": "Dopad na izraelské civilisty",
+          "name": "Impact on Israeli civilians",
+          "description": "The news article describes the impact of the conflict on Israeli civilians, focusing on the casualties, the temporary relocation of survivors, and the despair and uncertainty of relatives of hostages taken by Hamas."
+        },
+        {
+          "id": "Dopad na palestinské civilisty",
+          "name": "Impact on Palestinian civilians",
+          "description": "The news article describes the impact of the conflict on Palestinian civilians, focusing on casualties, displacement, and events in refugee camps."
+        },
+        {
+          "id": "Humanitární pomoc",
+          "name": "Humanitarian aid",
+          "description": "The news article describes efforts to provide or block humanitarian aid, and addresses options for supporting civilians affected by the conflict, which have arisen from initiatives by governments, NGOs and international organizations."
+        },
+        {
+          "id": "Globální reakce veřejnosti",
+          "name": "Global public responses",
+          "description": "The news article informs about demonstrations in support of Israel or Palestine around the world."
+        },
+        {
+          "id": "Ekonomické důsledky",
+          "name": "Ekonomic consequences",
+          "description": "The news article informs about the global economic consequences of the conflict (impact on oil prices, delays and increases in the cost of transporting goods due to the situation in the Suez Canal, complications for tourism, etc.)"
+        },
+        {
+          "id": "Historie/kontextualizace",
+          "name": "History",
+          "description": "The news article provides information on the history of the Palestinian-Israeli conflict, on the geopolitical aspects of the conflict (the relationship between the West and the Middle East as post-colonies, information on ethnic and religious clashes in the region)."
+        }
+      ]
+    },
+    {
+      "id": "Hlavní téma článku",
+      "name": "Main topic of the news article",
+      "description": "Choose the main topic of the article. According to the inverted pyramid model, the main topic should be included in the headline and lead, and most of the statements in the text should refer to it. Only one main topic can be specified for each report.",
+      "multiple_choice": false,
+      "options": [
+        {
+          "id": "Vnitřní politické dění",
+          "name": "Domestic politic affairs",
+          "description": "The news article provides information on political developments in Israel or Gaza, statements by local politicians, their proposals for resolving the conflict, or reactions to foreign diplomatic efforts. This also includes reports on hostage exchanges."
+        },
+        {
+          "id": "Mezinárodní politické reakce",
+          "name": "Global political responses",
+          "description": "The news article provides information on international responses to the conflict from top politicians, international organizations such as the UN, diplomatic initiatives, negotiations, and efforts to broker a ceasefire.."
+        },
+        {
+          "id": "Vojenské operace Izraele",
+          "name": "Military operations of Israel",
+          "description": "The news article describes Israeli military operations, their execution, as well as planning and tactics."
+        },
+        {
+          "id": "Teroristické operace",
+          "name": "Terorist groups operations",
+          "description": "The news article focuses on attacks by Palestinian factions such as Hamas, Hezbollah and other armed groups, which are designated as close to Hamas (ie. Houtis)."
+        },
+        {
+          "id": "Dopad na izraelské civilisty",
+          "name": "Impact on Israeli civilians",
+          "description": "The news article describes the impact of the conflict on Israeli civilians, focusing on the casualties, the temporary relocation of survivors, and the despair and uncertainty of relatives of hostages taken by Hamas."
+        },
+        {
+          "id": "Dopad na palestinské civilisty",
+          "name": "Impact on Palestinian civilians",
+          "description": "The news article describes the impact of the conflict on Palestinian civilians, focusing on casualties, displacement, and events in refugee camps."
+        },
+        {
+          "id": "Humanitární pomoc",
+          "name": "Humanitarian aid",
+          "description": "The news article describes efforts to provide or block humanitarian aid, and addresses options for supporting civilians affected by the conflict, which have arisen from initiatives by governments, NGOs and international organizations."
+        },
+        {
+          "id": "Globální reakce veřejnosti",
+          "name": "Global public responses",
+          "description": "The news article informs about demonstrations in support of Israel or Palestine around the world."
+        },
+        {
+          "id": "Ekonomické důsledky",
+          "name": "Ekonomic consequences",
+          "description": "The news article informs about the global economic consequences of the conflict (impact on oil prices, delays and increases in the cost of transporting goods due to the situation in the Suez Canal, complications for tourism, etc.)"
+        },
+        {
+          "id": "Historie/kontextualizace",
+          "name": "History",
+          "description": "The news article provides information on the history of the Palestinian-Israeli conflict, on the geopolitical aspects of the conflict (the relationship between the West and the Middle East as post-colonies, information on ethnic and religious clashes in the region)."
+        }
+      ]
+    },
+    {
+      "id": "Mediální rámce (multiple)",
+      "name": "Media frames",
+      "description": "While the categories of topics focus on the content areas being covered (such as political negotiations, military operations, humanitarian crises, etc.), the media frames shape how that content is presented and interpreted by the audience.",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Rámec konfliktu",
+          "name": "Conflict frame",
+          "description": "The news article portrays the situation as tense, conflictual, unfair, and polarized. The given contradictions are implicitly or explicitly portrayed as difficult to resolve, or rather, as solvable primarily by force. The report implicitly or explicitly divides the actors into ingroup and outgroup, where the gain of one party means the loss of the other and vice versa."
+        },
+        {
+          "id": "Rámec budování míru",
+          "name": "Peace-building frame",
+          "description": "The news article highlights efforts to resolve the conflict through diplomacy, negotiations, and peacebuilding initiatives. This framework emphasizes constructive steps toward peace and encourages optimism about possible solutions. It does not pit Palestinians and Israelis against each other as inherently hostile parties, but appeals to the humanity of both."
+        },
+        {
+          "id": "Humanitární rámec",
+          "name": "Humanitarian frame",
+          "description": "The news article focuses on the impact of the conflict on ordinary civilian life, highlighting civilian casualties, displacement and human suffering on both sides. This framework helps to evoke empathy and highlights the urgent need for humanitarian assistance."
+        },
+        {
+          "id": "Historicko-kulturní rámec",
+          "name": "Historical and cultural frame",
+          "description": "The news article portrays the situation as part of a complex, long-running conflict, emphasizing the need to understand the historical context, geopolitical factors, and perspectives of the actors involved in order to understand the current situation. This framework helps viewers develop a deeper understanding of the underlying causes and dynamics of the conflict."
+        },
+        {
+          "id": "Geopolitický rámec",
+          "name": "Geopolitical frame",
+          "description": "The news article highlights the global geopolitical dimension of the conflict, whose importance goes beyond the actors immediately affected (the Middle East). It takes into account international responses to the conflict, both political (diplomatic statements, protests and calls for action by the global community) and civic (demonstrations in support of Israel or Palestine, discussions on academic campuses). This framework illustrates the interconnectedness of the conflict with broader geopolitical dynamics and public opinion around the world."
+        },
+        {
+          "id": "Lokální rámec",
+          "name": "Local frame",
+          "description": "The news article depicts events as involving those directly involved (the Middle East); responses from individuals, communities, and organizations within Israel and Palestine"
+        }
+      ]
+    },
+    {
+      "id": "Mluvčí",
+      "name": "Actors",
+      "description": "typ mluvčích (multiple)",
+      "multiple_choice": true,
+      "options": [
+        {
+          "id": "Političtí představitelé Izraele",
+          "name": "Political representatives of Israel",
+          "description": "Government and opposition politicians, diplomats from and in Israel who are directly involved in or comment on decision-making and actions related to the conflict."
+        },
+        {
+          "id": "Političtí představitelé Palestiny",
+          "name": "Political representatives of Palestine",
+          "description": "Political representatives of the Palestinian Authority or other Palestinian governmental bodies, including elected officials and leaders."
+        },
+        {
+          "id": "Politici z blízkovýchodních zemí",
+          "name": "Politicians from other Middle-East countries",
+          "description": "Politicians from other Arab or Middle Eastern countries who have an interest or involvement in the conflict, such as those from surrounding Arab states or regional powers."
+        },
+        {
+          "id": "Politici ze ostatních světových zemí",
+          "name": "Politicians from other world countries",
+          "description": "For example, the USA, politicians of EU member states or representing EU institutions, Russia, China..."
+        },
+        {
+          "id": "Představitelé mezinárodních a neziskových organizací",
+          "name": "Representatives of international and non-profit organizations",
+          "description": "For example, UN, UNRWA, Doctors Without Borders, etc."
+        },
+        {
+          "id": "Vojenští představitelé Izraele",
+          "name": "Israeli military officials",
+          "description": "Military leaders, commanders, or spokespeople from the Israel Defense Forces (IDF) or other Israeli security agencies involved in military operations."
+        },
+        {
+          "id": "Členové teroristických skupin",
+          "name": "Members of terrorist groups",
+          "description": "Leaders and rank-and-file members of militant or terrorist groups operating in the region, such as Hamas, Islamic Jihad, or Hezbollah. If a Hamas member is cited in connection with violent actions, rocket attacks, or other terrorist activities, include them in this category."
+        },
+        {
+          "id": "Nezávislí experti a analytici",
+          "name": "Independent experts and researchers",
+          "description": "Experts, academics, researchers or commentators specializing in Middle East affairs, conflict resolution, international relations or related fields, providing understanding and analysis of the conflict. If the actor is an ambassador/diplomat, classify them as a political representative of the country concerned."
+        },
+        {
+          "id": "Média a novináři",
+          "name": "Media and journalists",
+          "description": "The text cites information taken from other media (e.g. \"\"according to the New York Times...), to which no other spokesperson is assigned (it may be an investigative media outlet, information provided anonymously, etc.)"
+        },
+        {
+          "id": "Očití svědci a civilisté z Izraele",
+          "name": "Eyewitnesses and civilians from Israel",
+          "description": "Israeli civilians affected by the conflict, providing testimony, or commentary. Ordinary Israelis - survivors, relatives of the victims of 10/7, but also Israelis demonstrating against Netanyahu."
+        },
+        {
+          "id": "Očití svědci a civilisté z Palestiny",
+          "name": "Eyewitnesses and Civilians from Palestine",
+          "description": "Palestinian civilians affected by the conflict, providing testimony, or commentary - ordinary Palestinians"
+        }
+      ]
+    }
+  ]
+}

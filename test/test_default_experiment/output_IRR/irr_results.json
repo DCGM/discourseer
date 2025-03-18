@@ -1,130 +1,404 @@
 {
-  "overall": {
+  "irr_result": {
+    "description": "mean IRR through questions",
     "fleiss_kappa": {
-      "best_case": 0.87627,
+      "best_case": 0.49318,
       "with_model": null,
-      "worst_case": 0.21868,
-      "without_model": 0.83582
+      "worst_case": -0.06089,
+      "without_model": 0.4336
     },
     "krippendorff_alpha": {
-      "best_case": 0.8772,
+      "best_case": 0.53542,
       "with_model": null,
-      "worst_case": 0.2246,
-      "without_model": 0.83748
+      "worst_case": 0.02752,
+      "without_model": 0.49653
     },
     "gwet_ac1": {
-      "best_case": 0.91871,
+      "best_case": 0.78678,
       "with_model": null,
-      "worst_case": 0.41361,
-      "without_model": 0.89158
+      "worst_case": 0.15262,
+      "without_model": 0.70783
     },
     "majority_agreement": null
   },
-  "mean_through_questions": {
-    "fleiss_kappa": {
-      "best_case": 0.5094,
-      "with_model": 0.0,
-      "worst_case": -0.03963,
-      "without_model": 0.44528
-    },
-    "krippendorff_alpha": {
-      "best_case": 0.54898,
-      "with_model": 0.0,
-      "worst_case": 0.02652,
-      "without_model": 0.50463
-    },
-    "gwet_ac1": {
-      "best_case": 0.78558,
-      "with_model": 0.0,
-      "worst_case": 0.14416,
-      "without_model": 0.70662
-    },
-    "majority_agreement": 0.0
-  },
+  "majority_agreement": null,
   "questions": {
     "range": {
-      "fleiss_kappa": {
-        "best_case": 1.0,
-        "with_model": null,
-        "worst_case": 0.33333,
-        "without_model": 1.0
+      "multiple_choice": false,
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "fleiss_kappa": {
+          "best_case": 1.0,
+          "with_model": null,
+          "worst_case": 0.33333,
+          "without_model": 1.0
+        },
+        "krippendorff_alpha": {
+          "best_case": 1.0,
+          "with_model": null,
+          "worst_case": 0.38889,
+          "without_model": 1.0
+        },
+        "gwet_ac1": {
+          "best_case": 1.0,
+          "with_model": null,
+          "worst_case": 0.33333,
+          "without_model": 1.0
+        },
+        "majority_agreement": null
       },
-      "krippendorff_alpha": {
-        "best_case": 1.0,
-        "with_model": null,
-        "worst_case": 0.38889,
-        "without_model": 1.0
-      },
-      "gwet_ac1": {
-        "best_case": 1.0,
-        "with_model": null,
-        "worst_case": 0.33333,
-        "without_model": 1.0
-      },
-      "majority_agreement": null
+      "majority_agreement": null,
+      "options": {}
     },
     "genre": {
-      "fleiss_kappa": {
-        "best_case": -0.09091,
-        "with_model": null,
-        "worst_case": -0.25714,
-        "without_model": -0.125
+      "multiple_choice": false,
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "fleiss_kappa": {
+          "best_case": -0.09091,
+          "with_model": null,
+          "worst_case": -0.25714,
+          "without_model": -0.125
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.0,
+          "with_model": null,
+          "worst_case": -0.15238,
+          "without_model": -0.0
+        },
+        "gwet_ac1": {
+          "best_case": 0.80328,
+          "with_model": null,
+          "worst_case": 0.19266,
+          "without_model": 0.72308
+        },
+        "majority_agreement": null
       },
-      "krippendorff_alpha": {
-        "best_case": 0.0,
-        "with_model": null,
-        "worst_case": -0.15238,
-        "without_model": -0.0
-      },
-      "gwet_ac1": {
-        "best_case": 0.80328,
-        "with_model": null,
-        "worst_case": 0.19266,
-        "without_model": 0.72308
-      },
-      "majority_agreement": null
+      "majority_agreement": null,
+      "options": {}
     },
     "message-trigger": {
-      "fleiss_kappa": {
-        "best_case": 0.2,
-        "with_model": null,
-        "worst_case": -0.11111,
-        "without_model": 0.0
+      "multiple_choice": false,
+      "irr_result": {
+        "description": "IRR for single choice question",
+        "fleiss_kappa": {
+          "best_case": 0.2,
+          "with_model": null,
+          "worst_case": -0.11111,
+          "without_model": 0.0
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.26667,
+          "with_model": null,
+          "worst_case": -0.01852,
+          "without_model": 0.11111
+        },
+        "gwet_ac1": {
+          "best_case": 0.36842,
+          "with_model": null,
+          "worst_case": -0.02564,
+          "without_model": 0.14286
+        },
+        "majority_agreement": null
       },
-      "krippendorff_alpha": {
-        "best_case": 0.26667,
-        "with_model": null,
-        "worst_case": -0.01852,
-        "without_model": 0.11111
-      },
-      "gwet_ac1": {
-        "best_case": 0.36842,
-        "with_model": null,
-        "worst_case": -0.02564,
-        "without_model": 0.14286
-      },
-      "majority_agreement": null
+      "majority_agreement": null,
+      "options": {}
     },
     "place": {
-      "fleiss_kappa": {
-        "best_case": 0.92852,
-        "with_model": null,
-        "worst_case": -0.12362,
-        "without_model": 0.90613
+      "multiple_choice": true,
+      "irr_result": {
+        "description": "mean IRR through options",
+        "fleiss_kappa": {
+          "best_case": 0.86364,
+          "with_model": null,
+          "worst_case": -0.20863,
+          "without_model": 0.85938
+        },
+        "krippendorff_alpha": {
+          "best_case": 0.875,
+          "with_model": null,
+          "worst_case": -0.10791,
+          "without_model": 0.875
+        },
+        "gwet_ac1": {
+          "best_case": 0.97541,
+          "with_model": null,
+          "worst_case": 0.11014,
+          "without_model": 0.96538
+        },
+        "majority_agreement": null
       },
-      "krippendorff_alpha": {
-        "best_case": 0.92926,
-        "with_model": null,
-        "worst_case": -0.11191,
-        "without_model": 0.90743
-      },
-      "gwet_ac1": {
-        "best_case": 0.9706,
-        "with_model": null,
-        "worst_case": 0.07631,
-        "without_model": 0.96055
-      },
-      "majority_agreement": null
+      "majority_agreement": null,
+      "options": {
+        "czech-republic": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.02857,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.05714,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.02703,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "slovakia": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.33333,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.22222,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.2,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "poland": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.33333,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.22222,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.2,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "germany": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.33333,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.22222,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.2,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "russia": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.02857,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.05714,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.02703,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "ukraine": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.02857,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.05714,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.02703,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        },
+        "other": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": -0.09091,
+            "with_model": null,
+            "worst_case": -0.25,
+            "without_model": -0.125
+          },
+          "krippendorff_alpha": {
+            "best_case": 0.0,
+            "with_model": null,
+            "worst_case": -0.14583,
+            "without_model": 0.0
+          },
+          "gwet_ac1": {
+            "best_case": 0.80328,
+            "with_model": null,
+            "worst_case": -0.0,
+            "without_model": 0.72308
+          },
+          "majority_agreement": null
+        },
+        "unknown": {
+          "description": "IRR for this option",
+          "fleiss_kappa": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.33333,
+            "without_model": 1.0
+          },
+          "krippendorff_alpha": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": -0.22222,
+            "without_model": 1.0
+          },
+          "gwet_ac1": {
+            "best_case": 1.0,
+            "with_model": null,
+            "worst_case": 0.2,
+            "without_model": 1.0
+          },
+          "majority_agreement": null
+        }
+      }
+    }
+  },
+  "files": {
+    "Chci_spravedlnost_pro_dceru.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
+    },
+    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
+    },
+    "Tvrdík_skončil_jako_viceprezident.txt": {
+      "irr_result": null,
+      "majority_agreement": null,
+      "questions": {
+        "range": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "genre": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "message-trigger": {
+          "multiple_choice": false,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        },
+        "place": {
+          "multiple_choice": true,
+          "irr_result": null,
+          "majority_agreement": null,
+          "options": null
+        }
+      }
     }
   }
 }

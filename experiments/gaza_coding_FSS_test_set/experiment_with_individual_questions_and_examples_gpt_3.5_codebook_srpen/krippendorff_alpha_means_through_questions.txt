@@ -1,0 +1,2 @@
+0.41517	prompt_schema_definition_default_with_examples_indi_gpt_3.5
+0.41956	prompt_schema_definition_extensive_with_examples_indi_gpt_3.5

@@ -1,17 +1,18 @@
 DEBUG:root:run_discourseer.py:main: Python file location: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/run_discourseer.py
 DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment', texts_dir=None, ratings_dir=None, output_dir=None, prompt_schema_definition=None, codebook=None, question_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
-DEBUG:root:utils.py:prepare_output_dir: Directory /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output already existed. Saving backup to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_backup_20250225-145043. New output will be saved in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output
+DEBUG:root:utils.py:prepare_output_dir: Directory /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output already existed. Saving backup to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_backup_20250312-201256. New output will be saved in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output
 DEBUG:root:utils.py:load_codebook: Loading codebook from file: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/codebook.json
 DEBUG:root:utils.py:load_codebook: Loaded codebook: testbook_range_trigger_place (verze: v0)
 INFO:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt schema definition from file:/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/prompt_schema_definition.json
 INFO:root:run_discourseer.py:__init__: First prompt: You are a media content analyst. You are analyzing the following text to extract {question_names}. {...
-DEBUG:root:run_discourseer.py:extract_answers: New document:
+INFO:root:run_discourseer.py:__call__: Processing 3 texts with 1 codebook(s).
+DEBUG:root:run_discourseer.py:__call__: New document 1/3: Tvrdík_skončil_jako_viceprezident.txt
 
 
-INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Tvrdík_skončil_jako_viceprezident.txt (Tvrdík skončil jako viceprezident čínské Citic, ch...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Tvrdík_skončil_jako_viceprezident.txt (Tvrdík skončil jako viceprezident čínské...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4996
-DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 35000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B4pcaugDZc6OvsDgLaoNTDQkcwnco', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "czech-republic"\n  ]\n}', role='assistant', function_call=None, tool_calls=None, refusal=None))], created=1740491444, model='gpt-3.5-turbo-0125', object='chat.completion', system_fingerprint=None, usage=CompletionUsage(completion_tokens=40, prompt_tokens=1592, total_tokens=1632, prompt_tokens_details={'cached_tokens': 0, 'audio_tokens': 0}, completion_tokens_details={'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}), service_tier='default')
+DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALndnC9vMck4bFmlQIQ7cFdR6T9D', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806777, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=40, prompt_tokens=1592, total_tokens=1632, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='range' rated_option_ids=['3']
@@ -21,13 +22,17 @@ DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, politici
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='message-trigger' rated_option_ids=['politician']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['czech-republic']
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='place' rated_option_ids=['czech-republic']
-DEBUG:root:run_discourseer.py:extract_answers: New document:
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+DEBUG:root:run_discourseer.py:__call__: New document 2/3: Chci_spravedlnost_pro_dceru.txt
 
 
-INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Chci_spravedlnost_pro_dceru.txt (Chci spravedlnost pro dceru Elišku, říká matka zav...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Chci_spravedlnost_pro_dceru.txt (Chci spravedlnost pro dceru Elišku, říká...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4290
-DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 35000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B4pcbyciioxo7Yp6KOV6te7EKMrIg', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', role='assistant', function_call=None, tool_calls=None, refusal=None))], created=1740491445, model='gpt-3.5-turbo-0125', object='chat.completion', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, prompt_tokens_details={'cached_tokens': 0, 'audio_tokens': 0}, completion_tokens_details={'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}), service_tier='default')
+DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALneQTU82FziSFwxzEneMTRVlQJl', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806778, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'public', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Chci_spravedlnost_pro_dceru.txt' question_id='range' rated_option_ids=['3']
@@ -37,13 +42,17 @@ DEBUG:root:rater.py:add_model_response: Adding rating: message-trigger, public
 DEBUG:root:rater.py:add_model_response: saved rating: file='Chci_spravedlnost_pro_dceru.txt' question_id='message-trigger' rated_option_ids=['public']
 DEBUG:root:rater.py:add_model_response: Adding rating: place, ['czech-republic']
 DEBUG:root:rater.py:add_model_response: saved rating: file='Chci_spravedlnost_pro_dceru.txt' question_id='place' rated_option_ids=['czech-republic']
-DEBUG:root:run_discourseer.py:extract_answers: New document:
+INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/model_ratings.csv
+INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/unmatched_model_responses.json
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
+INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+DEBUG:root:run_discourseer.py:__call__: New document 3/3: Rusko_použilo_hypersonickou_střelu_Zirkon.txt
 
 
-INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Rusko_použilo_hypersonickou_střelu_Zirkon.txt (Rusko použilo hypersonickou střelu Zirkon na Ukraj...)
+INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Rusko_použilo_hypersonickou_střelu_Zirkon.txt (Rusko použilo hypersonickou střelu Zirko...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 3989
-DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 35000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-B4pccKOSbHMlj28vTdhPaIx41KFzL', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "ukraine",\n    "russia"\n  ]\n}', role='assistant', function_call=None, tool_calls=None, refusal=None))], created=1740491446, model='gpt-3.5-turbo-0125', object='chat.completion', system_fingerprint=None, usage=CompletionUsage(completion_tokens=44, prompt_tokens=1159, total_tokens=1203, prompt_tokens_details={'cached_tokens': 0, 'audio_tokens': 0}, completion_tokens_details={'reasoning_tokens': 0, 'audio_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}), service_tier='default')
+DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALnfgrWNMw8oGOn0s5UtwNETnyBL', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "ukraine",\n    "russia"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806779, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=44, prompt_tokens=1159, total_tokens=1203, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['ukraine', 'russia']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' question_id='range' rated_option_ids=['3']
@@ -60,7 +69,7 @@ INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
 DEBUG:root:inter_rater_reliability.py:clean_data: Removed 0/33 rows with NaN values.
 DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/dataframe.csv):
                                                                                   rater_1.csv rater_2.csv      rater_3.csv       model         majority  maj_agreement_with_model    worst_case
-file                                          question_id     rating                                                                                                                           
+file                                          question_id     option_id                                                                                                                        
 Chci_spravedlnost_pro_dceru.txt               range           single_choice                 5           5                5           3                5                     False  --WORST-CASE
                                               genre           single_choice            report       other           report      report           report                      True  --WORST-CASE
                                               message-trigger single_choice            public      public  security-forces      public           public                      True  --WORST-CASE
@@ -68,7 +77,7 @@ Chci_spravedlnost_pro_dceru.txt               range           single_choice     
                                                               slovakia                  False       False            False       False            False                      True          True
                                                               poland                    False       False            False       False            False                      True          True
                                                               germany                   False       False            False       False            False                      True          True
-                                                              russia                    False       False            False       False            False                      True          True
+                                                              russia                     True       False            False       False            False                      True          True
                                                               ukraine                   False       False            False       False            False                      True          True
                                                               other                     False       False            False       False            False                      True          True
                                                               unknown                   False       False            False       False            False                      True          True
@@ -77,9 +86,9 @@ Rusko_použilo_hypersonickou_střelu_Zirkon.txt range           single_choice   
                                               message-trigger single_choice   security-forces       other  security-forces  politician  security-forces                     False  --WORST-CASE
                                               place           czech-republic            False       False            False       False            False                      True          True
                                                               slovakia                  False       False            False       False            False                      True          True
-                                                              poland                    False       False            False       False            False                      True          True
+                                                              poland                     True       False             True       False             True                     False         False
                                                               germany                   False       False            False       False            False                      True          True
-                                                              russia                     True        True             True        True             True                      True         False
+                                                              russia                    False       False             True        True            False                     False          True
                                                               ukraine                    True        True             True        True             True                      True         False
                                                               other                     False       False            False       False            False                      True          True
                                                               unknown                   False       False            False       False            False                      True          True
@@ -88,58 +97,70 @@ Tvrdík_skončil_jako_viceprezident.txt         range           single_choice   
                                               message-trigger single_choice            public      public       politician  politician           public                     False  --WORST-CASE
                                               place           czech-republic             True        True             True        True             True                      True         False
                                                               slovakia                  False       False            False       False            False                      True          True
-                                                              poland                    False       False            False       False            False                      True          True
+                                                              poland                    False        True            False       False            False                      True          True
                                                               germany                   False       False            False       False            False                      True          True
                                                               russia                    False       False            False       False            False                      True          True
                                                               ukraine                   False       False            False       False            False                      True          True
                                                               other                     False       False             True       False            False                      True          True
                                                               unknown                   False       False            False       False            False                      True          True
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question range
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question genre
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question message-trigger
-INFO:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question range
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question genre
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question message-trigger
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "czech-republic" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "slovakia" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "poland" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "germany" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "russia" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "ukraine" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "other" in multi choice question place
+DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "unknown" in multi choice question place
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:run_discourseer.py:save_output: 3 worst files according to majority agreement:
+                                               file_majority_agreement  range  genre  message-trigger  place
+file_id                                                                                                     
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt                    0.727    1.0    1.0              0.0   0.75
+Tvrdík_skončil_jako_viceprezident.txt                            0.818    0.0    1.0              0.0   1.00
+Chci_spravedlnost_pro_dceru.txt                                  0.909    0.0    1.0              1.0   1.00
+(see whole in majority_agreements_of_files_and_questions.csv)
+
 INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summary:
 {
-  "overall": {
+  "irr_result": {
+    "description": "mean IRR through questions",
     "fleiss_kappa": {
-      "best_case": 0.87627,
-      "with_model": 0.8021,
-      "worst_case": 0.21868,
-      "without_model": 0.83582
+      "best_case": 0.43224,
+      "with_model": 0.25504,
+      "worst_case": -0.06565,
+      "without_model": 0.36216
     },
     "krippendorff_alpha": {
-      "best_case": 0.8772,
-      "with_model": 0.8036,
-      "worst_case": 0.2246,
-      "without_model": 0.83748
+      "best_case": 0.47956,
+      "with_model": 0.31711,
+      "worst_case": 0.02316,
+      "without_model": 0.43304
     },
     "gwet_ac1": {
-      "best_case": 0.91871,
-      "with_model": 0.86994,
-      "worst_case": 0.41361,
-      "without_model": 0.89158
+      "best_case": 0.7536,
+      "with_model": 0.56771,
+      "worst_case": 0.1337,
+      "without_model": 0.6616
     },
-    "majority_agreement": 0.879
+    "majority_agreement": 0.64569
   },
-  "mean_through_questions": {
-    "fleiss_kappa": {
-      "best_case": 0.5094,
-      "with_model": 0.33607,
-      "worst_case": -0.03963,
-      "without_model": 0.44528
-    },
-    "krippendorff_alpha": {
-      "best_case": 0.54898,
-      "with_model": 0.39009,
-      "worst_case": 0.02652,
-      "without_model": 0.50463
-    },
-    "gwet_ac1": {
-      "best_case": 0.78558,
-      "with_model": 0.60539,
-      "worst_case": 0.14416,
-      "without_model": 0.70662
-    },
-    "majority_agreement": 0.6665
-  }
+  "majority_agreement": 0.818
 }

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import pydantic
-from typing import Literal, List, Dict
+from typing import Literal, List, Dict, Optional
 from enum import Enum
 import json
 import logging
@@ -17,25 +17,28 @@ logger = logging.getLogger()
 
 
 models_max_chars = {
-    'gpt-3.5-turbo-0125': 35000
+    'gpt-3.5-turbo-0125': 38000
 }
-
 
 class ResponseFormat(Enum):
     json = "json"
     normal = "normal"
 
-
 class Conversation(pydantic.BaseModel):
-    model: str = "gpt-3.5-turbo-0125"
-    max_tokens: int = 1024
-    temperature: float = 0.0
-    top_p: float = 0
-    response_format: ResponseFormat = ResponseFormat.json
+    model: str # = "gpt-3.5-turbo-0125"
+    max_tokens: Optional[int] = None # 1024
+    max_completion_tokens: Optional[int] = None # 4096 for reasoning models from the o series (o3, o1, ...)
+    temperature: Optional[float] = None # 0.0
+    reasoning_effort: Optional[Literal["low", "medium", "high"]] = None # "medium"
+    top_p: Optional[float] = None # 0
+    response_format: Optional[ResponseFormat] = None #ResponseFormat.json
     messages: list[ChatMessage]
+    prompt_individual_questions: Optional[bool] = None
 
     @pydantic.field_serializer('response_format')
     def serialize_response_format(self, response_format: ResponseFormat, _info):
+        if response_format is None:
+            return None
         return response_format.value
 
     def add_messages(self, messages: List[ChatMessage], try_parse_json: bool = False):
@@ -45,19 +48,25 @@ class Conversation(pydantic.BaseModel):
                 if content_json and isinstance(content_json, dict):
                     message.content = content_json
             self.messages.append(message)
-    
+
     def get_messages_length_in_chars(self):
         return sum(len(message.content) for message in self.messages)
+
+
+class ConversationLog(Conversation):
+    schema_definition: List[ChatMessage]
+    chat_log: List[LogChatMessage]
+
+
+class LogChatMessage(pydantic.BaseModel):
+    text_id: str
+    question_id: str
+    messages: List[ChatMessage]
 
 
 class ChatMessage(pydantic.BaseModel):
     role: Literal["system", "user", "assistant"]
     content: str | dict
-
-
-class ConversationLog(Conversation):
-    schema_definition: List[ChatMessage]
-    texts: Dict[str, List[ChatMessage]] = {}
 
 
 class ChatClient:
@@ -73,11 +82,20 @@ class ChatClient:
         self.test_client()
 
     def invoke(self, response_format: ResponseFormat = ResponseFormat.normal, **kwargs):
+        kwargs = self.exclude_none_values(kwargs)
+
+        non_completion_kwargs = ['prompt_individual_questions']
+        for kwarg in non_completion_kwargs:
+            if kwarg in kwargs:
+                del kwargs[kwarg]
+
         if response_format == ResponseFormat.json:
             try:
                 return self.completions_with_backoff(response_format={"type": "json_object"}, **kwargs)
             except openai.BadRequestError as e:
                 if "'json_object' is not supported with this model" in str(e.message):
+                    logger.warning(f"Model {kwargs['model']} does not support 'json_object' response format. "
+                                   "Falling back to normal response format.")
                     return self.completions_with_backoff(**kwargs)
                 raise e
         else:
@@ -103,7 +121,7 @@ class ChatClient:
     def ensure_maximal_length(self, conversation: Conversation) -> Conversation:
         conversation_len = conversation.get_messages_length_in_chars()
         logger.debug(f"Messages length in chars: {conversation_len}")
-        current_max_chars = models_max_chars.get(conversation.model, 35000)
+        current_max_chars = models_max_chars.get(conversation.model, 50_000)
         logger.debug(f"Current maximal chars: {current_max_chars}")
 
         if conversation_len > current_max_chars:
@@ -112,8 +130,11 @@ class ChatClient:
             # shorten last message to fit the model's max tokens
             conversation.messages[-1].content = conversation.messages[-1].content[:-excess]
             logger.debug(f"Shortened last message to fit the model's max tokens, new length: {conversation.get_messages_length_in_chars()}")
-        
+
         return conversation
+
+    def exclude_none_values(self, kwargs: dict) -> dict:
+        return {k: v for k, v in kwargs.items() if v is not None}
 
 
 def print_conversation_schema():
