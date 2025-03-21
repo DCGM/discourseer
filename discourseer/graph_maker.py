@@ -17,7 +17,8 @@ import pandas as pd
 # - twinx for ax.bar: [stackoverflow.com/.../bar-plot-with-two-bars-and-two-y-axis](https://stackoverflow.com/questions/24183101/bar-plot-with-two-bars-and-two-y-axis)
 
 def plot_kripp_alpha_and_majority_agreement(
-    data: str | StringIO | pd.DataFrame, to_file: str = None, title: str = None) -> plt.Figure:
+    data: str | StringIO | pd.DataFrame, to_file: str = None, title: str = None, sort_by_alpha: bool = False
+) -> plt.Figure:
     if isinstance(data, str):
         df = pd.read_csv(data)
     elif isinstance(data, StringIO):
@@ -40,16 +41,21 @@ def plot_kripp_alpha_and_majority_agreement(
     col_1, col_2 = 'tab:green', 'tab:blue'
     width = 0.4
 
+    if sort_by_alpha:
+        df = df.sort_values('kripp_alpha', ascending=False).reset_index(drop=True)
+
     df.kripp_alpha.plot(kind='bar', color=col_1, ax=ax, width=width, position=1)
     df.majority_agreement.plot(kind='bar', color=col_2, ax=ax2, width=width, position=0)
 
     # add all names to title like "0: orig, 1: new, 2: new2"
-    title = r'$\bf{' + title + '}$:\n' if title else ''
+    title = r'$\bf{' + title.replace(' ', '\\ ') + '}$:\n' if title else ''
     title += '\n'.join([f'{i}: {name}' for i, name in enumerate(df.experiment_name)])
     ax.set_title(title, loc='left', fontsize='small')
 
     ax.set_xlim(-.5, len(df.index)-.5)
     ax.set_xlabel('Experiment')
+    ax.set_ylim(.3 if df.kripp_alpha.min() > .3 else None, None)  # .3 is 90 % of the lowest meassured kripp alpha so far
+    ax2.set_ylim(.62 if df.majority_agreement.min() > .62 else None, None)  # .62 is 90 % of the lowest meassured majority agreement so far
 
     ax.set_ylabel('Kripp Alpha <-1,1>', color=col_1)
     ax.yaxis.label.set_color(col_1)
