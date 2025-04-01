@@ -148,6 +148,7 @@ class Discourseer:
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
             self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
             self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
+            self.model_rater.save_to_spreadsheet(self.get_output_file('model_ratings_spreadsheet.csv'))
 
         if not self.raters:
             logging.info("No rater files found. Inter-rater reliability will not be calculated.")
@@ -231,6 +232,10 @@ class Discourseer:
         logging.info(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
         pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'), exclude_none=True)
         visualize_results(irr_results, os.path.join(output_dir, 'irr_results.png'))
+
+        # model_rater.save_to_csv(os.path.join(output_dir, 'model_ratings.csv'))
+        # model_rater.save_unmatched_responses(os.path.join(output_dir, 'unmatched_model_responses.json'))
+        # model_rater.save_to_spreadsheet(os.path.join(output_dir, 'model_ratings_spreadsheet.csv'))
 
     @staticmethod
     def load_prompt_schema_definition(experiment_dir: str, prompt_schema: str = None) -> Conversation:

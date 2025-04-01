@@ -3,6 +3,7 @@ import os
 import logging
 import pydantic
 from typing import List
+from collections import defaultdict
 
 import pandas as pd
 
@@ -120,7 +121,7 @@ class Rater:
             else:
                 ratings_dict[(rating.file, rating.question_id, single_choice_tag)] = rating.rated_option_ids[0]
 
-        # sort ratings_dict by only file and leave question_id and rating as they are
+        # sort ratings_dict by only file and leave question_id and option_id as they are
         ratings_dict = dict(sorted(ratings_dict.items(), key=lambda x: x[0][0]))
 
         series = pd.Series(ratings_dict,
@@ -129,6 +130,68 @@ class Rater:
                                names=utils.result_dataframe_index_columns()))
         series.name = self.name
         return series
+
+    def to_spreadsheet(self) -> pd.DataFrame:
+        """Convert ratings to a dataframe with question_id and option_id as columns and file as index."""
+        # spreadsheet_columns: dict[str, list[str | bool]] = 
+        spreadsheet_rows: dict[str, dict[str, str | bool]] = defaultdict(dict)
+        #                      file    option_id, value
+
+        for rating in self.ratings:
+            if self.codebook.is_multiple_choice(rating.question_id):
+                for option_id in rating.rated_option_ids:
+                    spreadsheet_rows[rating.file][option_id] = True
+            else:
+                # single choice question
+                spreadsheet_rows[rating.file][rating.question_id] = rating.rated_option_ids[0]
+
+        # dict[file, dict] -> list of dicts with file key
+        ratings_list: list[dict[str, str | bool]] = []
+        for file, file_dict in spreadsheet_rows.items():
+            file_dict['file'] = file
+            ratings_list.append(file_dict)
+        
+        ratings_list = sorted(ratings_list, key=lambda x: x['file'])
+
+        # add question_id and option_id as first two rows
+        question_row = {'file': 'otázky'}
+        option_row = {'file': 'možnosti'}
+        for question in self.codebook.questions:
+            if question.multiple_choice:
+                for option in question.options:
+                    question_row[option.id] = question.id
+                    option_row[option.id] = option.id
+            else:
+                options = ', '.join([f'{i}) {option.id}' for i, option in enumerate(question.options)])
+                question_row[question.id] = question.id
+                option_row[question.id] = options
+
+        ratings_list.insert(0, question_row)
+        ratings_list.insert(1, option_row)
+
+        rater_df = pd.DataFrame(ratings_list)
+        rater_df = rater_df.set_index('file')
+        rater_df = rater_df.fillna(0)
+
+        # replace all True with 1 and False with 0
+        rater_df = rater_df.replace({True: 1, False: 0})
+
+        return rater_df
+    
+    def save_to_spreadsheet(self, out_file: str):
+        out_path = os.path.dirname(out_file)
+        if not os.path.exists(out_path):
+            os.makedirs(out_path)
+
+        if not out_file.endswith('.csv'):
+            logger.warning(f"Output path {out_file} does not end with .csv. Adding .csv to the end")
+            out_file = out_file + '.csv'
+        
+        # out_path = os.path.join(out_path, out_file)
+
+        rater_df = self.to_spreadsheet()
+        rater_df.to_csv(out_file, index=True, encoding='utf-8')
+        logger.debug(f"Rater {self.name} saved to {out_file}")
 
     def save_unmatched_responses(self, out_file: str):
         out_path = os.path.dirname(out_file)

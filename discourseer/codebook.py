@@ -41,7 +41,7 @@ class Codebook(pydantic.BaseModel):
             if question.id == question_id:
                 return question.multiple_choice
 
-        raise None
+        return None
 
     def select_subset(self, subset: List[str] = None) -> Codebook:
         # select subset of question via question ids

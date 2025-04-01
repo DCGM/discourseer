@@ -11,6 +11,7 @@ import pandas as pd
 from irrCAC.raw import CAC
 
 from discourseer.inter_rater_reliability import IRR
+from discourseer.rater import Rater
 from run_discourseer import Discourseer
 from discourseer import utils
 
@@ -94,6 +95,12 @@ class Calculator:
         print(f"Inter-rater reliability results summary:\n{json.dumps(irr_results.get_summary(), indent=2, ensure_ascii=False)}")
 
         Discourseer.save_output(self.output_dir, irr_calculator)
+
+        # save model ratings to spreadsheet
+        model_ratings_file = os.path.join(self.input_dir, 'model_ratings.csv')
+        if os.path.isfile(model_ratings_file):
+            model_rater = Rater.from_csv(model_ratings_file, self.codebook)
+            model_rater.save_to_spreadsheet(os.path.join(self.output_dir, 'model_ratings_spreadsheet.csv'))
 
     def check_present_in_df(self, df: pd.DataFrame, cols: List[str]) -> List[str]:
         missing_cols = [col for col in cols if col not in df.columns]
