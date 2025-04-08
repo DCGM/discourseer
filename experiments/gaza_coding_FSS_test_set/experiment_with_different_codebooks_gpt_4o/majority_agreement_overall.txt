@@ -1,0 +1,6 @@
+0.801	codebook_gaza_v0_kveten_eng
+0.806	codebook_gaza_v0_kveten
+0.836	codebook_gaza_v1_červen_eng
+0.836	codebook_gaza_v1_červen
+0.824	codebook_gaza_v2_srpen_eng
+0.843	codebook_gaza_v2_srpen
