@@ -79,29 +79,34 @@ class Codebook(pydantic.BaseModel):
         return codebooks
 
     def question_names(self) -> str:
+        """Names of questions separated by comma"""
         return ", ".join([question.name for question in self.questions])
-
     def question_descriptions(self) -> str:
+        """Descriptions of questions separated by space"""
         return " ".join([question.description for question in self.questions])
 
     def question_names_and_descriptions_colon(self) -> str:
+        """Names and descriptions of questions separated by colon"""
         return ". ".join([f'{question.name}: {question.description}' for question in self.questions])
 
     def question_names_and_descriptions_parentheses(self) -> str:
+        """Names and descriptions of questions separated by parentheses"""
         return ". ".join([f'{question.name} ({question.description})' for question in self.questions])
 
     def single_choice_questions(self) -> str:
+        """Names of questions where the model should select only one option (single-choice)"""
         return ", ".join([question.name for question in self.questions if not question.multiple_choice])
 
     def multiple_choice_questions(self) -> str:
+        """Names of questions where the model can select multiple options (multiple-choice)"""
         return ", ".join([question.name for question in self.questions if question.multiple_choice])
 
     def first_question_single_or_multi_choice(self) -> str:
+        """Returns the type of the first question in the codebook. If there are no questions, raises an error."""
         try:
             first_question = self.questions[0]
         except IndexError:
             raise ValueError(f"No questions defined in the codebook (codebook_name: {self.codebook_name}, codebook_version: {self.codebook_version}).")
-
 
         if first_question.multiple_choice:
             return "multiple choice, meaning you can select multiple options."
@@ -109,30 +114,34 @@ class Codebook(pydantic.BaseModel):
             return "single choice, meaning you can select only one option."
 
     def question_options(self) -> str:
+        """Multi line string with options for each question. Each question is separated by newline."""
         return "\n".join([f'{question.name}: {question.list_options()}' for question in self.questions
                           if len(question.options) > 0])
 
     def question_options_with_examples(self) -> str:
+        """Multi line string with options for each question, same as question_options, but with examples for each option. Each question is separated by newline."""
         return "\n".join([f'{question.name}: {question.list_options_with_examples()}' for question in self.questions
                           if len(question.options) > 0])
 
     def question_options_with_examples_bulletpoints(self) -> str:
+        """Multi line string with options for each question, same as question_options, but with examples for each option. Each question is separated by newline. Info is structured using bulletpoints on two levels."""
         return "\n".join([f'{question.name}:\n - {question.list_options_with_examples_bulletpoints()}' for question in self.questions
                           if len(question.options) > 0])
 
     def whole_question_info(self) -> str:
-        """Whole question info in one string. Individual questions are separated by newline."""
+        """Whole question info in one string. (name, single-choice/multiple-choice, description, list of options) separated by comma. Each question is separated by newline."""
         return "\n".join([f"{question.name}: {multiple_choice_tag if question.multiple_choice else single_choice_tag} "
                           f"(description: {question.description}) options: {question.list_options_with_examples()}"
                           for question in self.questions])
 
     def whole_question_info_bulletpoints(self) -> str:
-        """Whole question info in one string. Individual questions are separated by newline. Info is structured using bulletpoints on two levels."""
+        """Whole question info in one string. (name, single-choice/multiple-choice, description, list of options) separated by comma. Info is structured using bulletpoints on two levels."""
         return "\n".join([f"{question.name}: {multiple_choice_tag if question.multiple_choice else single_choice_tag} "
                           f"(description: {question.description})options:\n - {question.list_options_with_examples_bulletpoints()}"
                           for question in self.questions])
 
     def questions_json(self) -> str:
+        """JSON with all information about questions"""
         keys_not_meant_for_chat = []  # choose what keys don't go to chat client
 
         questions_json = {}
@@ -147,6 +156,7 @@ class Codebook(pydantic.BaseModel):
         return output_str
 
     def response_json_schema(self) -> str:
+        """JSON schema that corresponds to the response format of the model"""
         response_format = {}
         for question in self.questions:
             if question.multiple_choice:
@@ -158,6 +168,7 @@ class Codebook(pydantic.BaseModel):
         return json.dumps(response_format.model_json_schema(), indent=2, ensure_ascii=False)
 
     def response_json_schema_with_options(self) -> str:
+        """JSON schema that corresponds to the response format of the model with defined options"""
         response_format = {}
         for question in self.questions:
             option_names = [option.name for option in question.options]
