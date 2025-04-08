@@ -18,11 +18,11 @@
       "title": "Hlavní Téma Článku",
       "type": "string"
     },
-    "Mediální rámce (multiple)": {
+    "Mediální rámce": {
       "items": {
         "type": "string"
       },
-      "title": "Mediální Rámce (Multiple)",
+      "title": "Mediální Rámce",
       "type": "array"
     },
     "Mluvčí": {
@@ -37,7 +37,7 @@
     "Zpravodajské hodnoty",
     "Témata článku",
     "Hlavní téma článku",
-    "Mediální rámce (multiple)",
+    "Mediální rámce",
     "Mluvčí"
   ],
   "title": "ResponseFormat",

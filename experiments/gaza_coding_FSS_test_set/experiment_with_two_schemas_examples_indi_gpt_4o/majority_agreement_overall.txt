@@ -1,0 +1,2 @@
+0.845	prompt_schema_definition_default_gpt_4o_with_examples_indi
+0.842	prompt_schema_definition_extensive_gpt_4.0_with_examples_indi

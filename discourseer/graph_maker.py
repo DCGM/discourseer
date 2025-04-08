@@ -24,6 +24,9 @@ def plot_kripp_alpha_and_majority_agreement(
     elif isinstance(data, StringIO):
         df = pd.read_csv(data, delimiter='\t', skipinitialspace=True, header=None)
         df = df.rename(columns={0: 'experiment_name', 1: 'kripp_alpha', 2: 'majority_agreement'})        
+        # for every kripp alpha and majority agreement, replace ',' with '.'
+        df['kripp_alpha'] = df['kripp_alpha'].str.replace(',', '.').astype(float)
+        df['majority_agreement'] = df['majority_agreement'].str.replace(',', '.').astype(float)
     elif isinstance(data, pd.DataFrame):
         df = data
     else:

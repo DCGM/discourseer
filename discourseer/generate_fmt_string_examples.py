@@ -15,23 +15,7 @@ intro = f"""
 Tyto příklady jsou vytvořeny podle zadání v souboru {codebook_name}.
 """
 
-format_string_descriptions = {
-    "text": "vložení textu článku",
-    "question_names": "jména otázek oddělené čárkou",
-    "question_descriptions": "popisy otázek oddělené mezerou (popis by měla být celá věta)",
-    "question_names_and_descriptions_colon": "jména a popisy otázek oddělené dvojtečkou",
-    "question_names_and_descriptions_parentheses": "jména a popisy otázek oddělené závorkami",
-    "single_choice_questions": "jména otázek, kde má model vybrat právě jednu možnost (single-choice), oddělené čárkou",
-    "multiple_choice_questions": "jména otázek, kde může model vybrat více možností (multiple-choice), oddělené čárkou",
-    "question_options": "několikařádkový seznam možností odpovědi na otázky oddělené čárkou, kde každý řádek odpovídá jedné otázce",
-    "question_options_with_examples": "seznam možností jako `question_options` s přidanými příklady na každém řádku",
-    "question_options_with_examples_bulletpoints": "seznam možností jako `question_options_with_examples` strukturované pomocí odrážek",
-    "whole_question_info": "několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) oddělené čárkou, kde každý řádek odpovídá jedné otázce",
-    "whole_question_info_bulletpoints": "několikařádkový seznam informací o otázkách (jméno, single-choice/multiple-choice, popis, seznam možností) strukturované pomocí odrážek",
-    "questions_json": "JSON se všemi informacemi o otázkách",
-    "response_json_schema": "JSON schéma, které odpovídá formátu odpovědí modelu",
-    "response_json_schema_with_options": "JSON schéma, které odpovídá formátu odpovědí modelu s definovanými možnostmi"
-}
+text_fmt_string_description = "vložení textu článku"
 
 def print_prompt_exmples():
 
@@ -60,7 +44,12 @@ def print_prompt_exmples():
         if key == "custom_format_string":
             continue
         print('')
-        print(f"**{key}** ({format_string_descriptions[key]})")
+        if key == "text":
+            print(f"**{key}** ({text_fmt_string_description})")
+        elif hasattr(codebook, key):
+            print(f"**{key}** ({getattr(codebook, key).__doc__})")
+        else:
+            print(f"**{key}** (Description not available)")
         print(f'<a name="{key}"></a>')
         print('')
 
