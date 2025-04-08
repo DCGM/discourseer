@@ -3,11 +3,11 @@
     "Zpravodajské hodnoty": {
       "items": {
         "enum": [
-          "Negativita negativity",
-          "Blízkost proximity",
-          "Elitní osoby prominence",
-          "Personalizace personalization",
-          "Dopad impact"
+          "Negativita",
+          "Blízkost",
+          "Elitní osoby",
+          "Personalizace",
+          "Dopad"
         ],
         "type": "string"
       },
@@ -17,16 +17,16 @@
     "Témata článku": {
       "items": {
         "enum": [
-          "Vnitřní politické dění",
+          "Vnitřní politické a občanské dění",
           "Mezinárodní politické reakce",
-          "Vojenské operace Izraele",
-          "Teroristické operace",
+          "Vojenské operace Izraele a jeho spojenců",
+          "Teroristické operace Hamasu a jeho spojenců",
           "Dopad na izraelské civilisty",
           "Dopad na palestinské civilisty",
           "Humanitární pomoc",
           "Globální reakce veřejnosti",
           "Ekonomické důsledky",
-          "Historie/kontextualizace"
+          "Historie"
         ],
         "type": "string"
       },
@@ -35,21 +35,21 @@
     },
     "Hlavní téma článku": {
       "enum": [
-        "Vnitřní politické dění",
+        "Vnitřní politické a občanské dění",
         "Mezinárodní politické reakce",
-        "Vojenské operace Izraele",
-        "Teroristické operace",
+        "Vojenské operace Izraele a jeho spojenců",
+        "Teroristické operace Hamasu a jeho spojenců",
         "Dopad na izraelské civilisty",
         "Dopad na palestinské civilisty",
         "Humanitární pomoc",
         "Globální reakce veřejnosti",
         "Ekonomické důsledky",
-        "Historie/kontextualizace"
+        "Historie"
       ],
       "title": "Hlavní Téma Článku",
       "type": "string"
     },
-    "Mediální rámce (multiple)": {
+    "Mediální rámce": {
       "items": {
         "enum": [
           "Rámec konfliktu",
@@ -61,7 +61,7 @@
         ],
         "type": "string"
       },
-      "title": "Mediální Rámce (Multiple)",
+      "title": "Mediální Rámce",
       "type": "array"
     },
     "Mluvčí": {
@@ -89,7 +89,7 @@
     "Zpravodajské hodnoty",
     "Témata článku",
     "Hlavní téma článku",
-    "Mediální rámce (multiple)",
+    "Mediální rámce",
     "Mluvčí"
   ],
   "title": "ResponseFormat",
