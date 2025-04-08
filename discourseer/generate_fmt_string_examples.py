@@ -49,7 +49,7 @@ def print_prompt_exmples():
         elif hasattr(codebook, key):
             print(f"**{key}** ({getattr(codebook, key).__doc__})")
         else:
-            raise KeyError(f"Key {key} not found in codebook.")
+            print(f"**{key}** (Description not available)")
         print(f'<a name="{key}"></a>')
         print('')
 
