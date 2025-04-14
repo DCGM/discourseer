@@ -1,10 +1,12 @@
 import os
 import unittest
 import sys
+# import pandas as pd
 
 from discourseer.inter_rater_reliability import IRR
-from discourseer.rater import Rater
+from discourseer.rater import Rater #, Rating
 from run_discourseer import Discourseer
+from discourseer.utils import pydantic_to_json_file
 
 
 class TestIRRWithoutModel(unittest.TestCase):
@@ -151,6 +153,47 @@ class TestMajAgreement(unittest.TestCase):
         self.assertAlmostEqual(option_maj_agreements['ukraine'], 1.0, 2)
         self.assertAlmostEqual(option_maj_agreements['other'], 1.0, 2)
         self.assertAlmostEqual(option_maj_agreements['unknown'], 1.0, 2)
+
+class TestDisagreement(unittest.TestCase):
+    dir = os.path.join(os.path.dirname(__file__), 'disagreement')
+    codebook = Discourseer.load_codebook('', os.path.join(os.path.dirname(__file__),
+                                                        'codebook.json'))
+
+    def test_question_level(self):
+        rater_1 = Rater.from_csv(os.path.join(self.dir, 'rater_1.csv'), self.codebook)
+        rater_2 = Rater.from_csv(os.path.join(self.dir, 'rater_2.csv'), self.codebook)
+        rater_3 = Rater.from_csv(os.path.join(self.dir, 'rater_3.csv'), self.codebook)
+        model_rater = Rater.from_csv(os.path.join(self.dir, 'model_rater.csv'), self.codebook)
+
+        # set output dir with the name of the function
+        func_name = sys._getframe().f_code.co_name
+        output_dir = os.path.join(self.dir, f'{func_name}_output')
+        irr = IRR([rater_1, rater_2, rater_3], model_rater, out_dir=output_dir)
+        irr_results = irr()
+
+        result_df = irr.df.copy()
+        # del result_df['worst_case']
+        # del result_df['majority']
+        # del result_df['maj_agreement_with_model']
+        # print(f'result dataframe:\n{result_df}')
+
+        pydantic_to_json_file(irr_results, os.path.join(output_dir, 'irr_results.json'), exclude_none=True)
+
+        self.assertAlmostEqual(irr_results.disagreement, 0.222, 2)
+        self.assertAlmostEqual(irr_results.questions['range'].disagreement, 1/3, 2)
+        self.assertAlmostEqual(irr_results.questions['genre'].disagreement, 0.222, 2)
+        self.assertAlmostEqual(irr_results.questions['message-trigger'].disagreement, 1/3, 2)
+        self.assertAlmostEqual(irr_results.questions['place'].disagreement, 0.194, 2)
+
+# def rater_col_to_rater(rater_col):
+#     question_id = 'question_id'
+#     rated_option_ids
+
+#     ratings: list[Rating] = []
+#     for val in rater_col:
+        
+    
+#     return rater
 
 # class TestReorganizingRaters(unittest.TestCase):
 #     dir = os.path.join(os.path.dirname(__file__), 'reorganizing_raters')

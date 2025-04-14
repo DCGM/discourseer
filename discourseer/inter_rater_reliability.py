@@ -23,6 +23,7 @@ logger = logging.getLogger()
 class IRRResults(pydantic.BaseModel):
     irr_result: IRRResult = None  # mean of all question IRR results
     majority_agreement: Optional[float] = None
+    disagreement: Optional[float] = None
     questions: Optional[Dict[str, IRRQuestionResult]] = {}
     files: Optional[Dict[str, IRRFileResult]] = {}
 
@@ -59,6 +60,8 @@ class IRRResults(pydantic.BaseModel):
             results['irr_result'] = self.irr_result.model_dump()
         if self.majority_agreement is not None:
             results['majority_agreement'] = self.majority_agreement
+        if self.disagreement is not None:
+            results['disagreement'] = self.disagreement
         return results
 
     def get_metric(self, metric: str) -> Dict[str, dict]:
@@ -99,6 +102,9 @@ class IRRResults(pydantic.BaseModel):
 
         if 'majority_agreement' in metrics and self.majority_agreement is not None:
             results['majority_agreement'] = self.majority_agreement
+        
+        if 'disagreement' in metrics and self.disagreement is not None:
+            results['disagreement'] = self.disagreement
 
         selected_questions = IRRQuestionResult.select_questions(self.questions, files, questions, options, metrics, variants, include_multiple_choice_questions, include_single_choice_questions, include_files)
 
@@ -121,6 +127,7 @@ class IRRResults(pydantic.BaseModel):
     def is_empty(self) -> bool:
         return ((self.irr_result is None or self.irr_result.is_empty()) and
                 self.majority_agreement is None and
+                self.disagreement is None and
                 not self.questions)
 
     def file_results_to_pandas(self) -> Optional[pd.DataFrame]:
@@ -135,6 +142,9 @@ class IRRResults(pydantic.BaseModel):
             file_result = {'file_id': file_id}
             if irr_file_result.majority_agreement is not None:
                 file_result['file_majority_agreement'] = irr_file_result.majority_agreement
+
+            # if irr_file_result.irr_result is not None:
+            #     file_result['file_disagreement'] = irr_file_result.irr_result.disagreement
 
             file_result.update({question_id: irr_question_result.majority_agreement
                                 for question_id, irr_question_result in irr_file_result.questions.items() if irr_question_result is not None})
@@ -154,6 +164,7 @@ class IRRResults(pydantic.BaseModel):
 class IRRFileResult(pydantic.BaseModel):
     irr_result: Optional[IRRResult] = None
     majority_agreement: Optional[float]
+    disagreement: Optional[float] = None
     questions: Optional[Dict[str, IRRQuestionResult]] = {}
 
     def calc_mean_through_questions(self) -> IRRResult:
@@ -208,6 +219,7 @@ class IRRQuestionResult(pydantic.BaseModel):
     multiple_choice: bool
     irr_result: IRRResult = None
     majority_agreement: Optional[float] = None
+    disagreement: Optional[float] = None
     options: Optional[Dict[str, IRRResult]] = {}
 
     def calc_mean_through_options(self) -> IRRResult:
@@ -301,6 +313,7 @@ class IRRResult(pydantic.BaseModel):
     krippendorff_alpha: IRRVariants
     gwet_ac1: IRRVariants
     majority_agreement: Optional[float] = None
+    disagreement: Optional[float] = None
 
     def get_metric(self, metric: str) -> Optional[IRRVariants]:
         if hasattr(self, metric):
@@ -334,7 +347,8 @@ class IRRResult(pydantic.BaseModel):
         return (self.fleiss_kappa.is_empty() and
                 self.krippendorff_alpha.is_empty() and
                 self.gwet_ac1.is_empty() and
-                self.majority_agreement is None)
+                self.majority_agreement is None and
+                self.disagreement is None)
 
     @classmethod
     def get_empty(cls) -> IRRResult:
@@ -352,7 +366,8 @@ class IRRResult(pydantic.BaseModel):
             fleiss_kappa=IRRResult.calc_mean_of_IRRVariants([result.fleiss_kappa for result in results]),
             krippendorff_alpha=IRRResult.calc_mean_of_IRRVariants([result.krippendorff_alpha for result in results]),
             gwet_ac1=IRRResult.calc_mean_of_IRRVariants([result.gwet_ac1 for result in results]),
-            majority_agreement=IRRResult.calc_mean_of_values([result.majority_agreement for result in results])
+            majority_agreement=IRRResult.calc_mean_of_values([result.majority_agreement for result in results]),
+            disagreement=IRRResult.calc_mean_of_values([result.disagreement for result in results])
         )
 
     @staticmethod
@@ -431,12 +446,13 @@ class IRR:
 
     col_majority = 'majority'
     col_maj_agree_with_model = 'maj_agreement_with_model'
+    col_disagreement = 'disagreement'
     col_model = 'model'
     col_worst_case = 'worst_case'
     col_best_case = col_majority
     index_cols = utils.result_dataframe_index_columns()
-    col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
-    col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case]
+    col_non_rater_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case, col_disagreement]
+    col_non_input_columns = [col_model, col_majority, col_maj_agree_with_model, col_worst_case, col_best_case, col_disagreement]
 
     df_maj_agg_files_and_questions = None
     maj_agg_files_and_questions_file = 'majority_agreements_of_files_and_questions.csv'
@@ -508,6 +524,7 @@ class IRR:
         self.model_columns = [self.col_model] if self.col_model in df.columns else []
 
         df = self.prepare_majority_agreement(df)
+        df = self.prepare_disagreement(df)
         df = self.add_worst_case(df)
 
         logger.debug(f'Calculating inter-rater reliability for (see whole in {self.out_dataframe}):\n{df}')
@@ -515,6 +532,7 @@ class IRR:
 
         irr_results = IRRResults(
             majority_agreement=self.calc_majority_agreement(df),
+            disagreement=self.calc_disagreement(df),
             questions = self.calculate_irr_for_each_question(df),
             files=self.calculate_irr_for_each_file(df)
         )
@@ -547,7 +565,8 @@ class IRR:
             if only_maj_agreement:
                 irr_question_results[question_id] = IRRQuestionResult(
                     multiple_choice=len(unique_options) > 1,
-                    majority_agreement=self.calc_majority_agreement(df_question)
+                    majority_agreement=self.calc_majority_agreement(df_question),
+                    disagreement=self.calc_disagreement(df_question),
                 )
                 continue
 
@@ -562,7 +581,8 @@ class IRR:
                 irr_question_results[question_id] = IRRQuestionResult(
                     multiple_choice=False,
                     irr_result=irr_result,
-                    majority_agreement=irr_result.majority_agreement)
+                    majority_agreement=irr_result.majority_agreement,
+                    disagreement=irr_result.disagreement)
             else:  # multiple choice question
                 irr_question_results[question_id] = self.calculate_irr_for_each_option(
                     df_question, unique_options, question_id)
@@ -579,6 +599,7 @@ class IRR:
 
             file_result = IRRFileResult(
                     majority_agreement=self.calc_majority_agreement(df_file),
+                    disagreement=self.calc_disagreement(df_file),
                     questions=self.calculate_irr_for_each_question(df_file, only_maj_agreement=only_maj_agreement)
                 )
             if only_maj_agreement:
@@ -622,6 +643,7 @@ class IRR:
         irr_question_result = IRRQuestionResult(
             multiple_choice=True,
             majority_agreement=self.calc_majority_agreement(df_question),
+            disagreement=self.calc_disagreement(df_question),
             options=option_results,
         )
         irr_question_result.calc_mean_through_options()
@@ -635,6 +657,7 @@ class IRR:
             cac_with_model = None
 
         maj_agreement = self.calc_majority_agreement(df)
+        disagreement = self.calc_disagreement(df)
         cac_without_model = CAC(df.loc[:, self.input_columns])
         cac_worst_case = CAC(df.loc[:, self.input_columns + [self.col_worst_case]])
         cac_best_case = CAC(df.loc[:, self.input_columns + [self.col_best_case]])
@@ -647,7 +670,8 @@ class IRR:
             fleiss_kappa=fleiss_kappa,
             krippendorff_alpha=kripp_alpha,
             gwet_ac1=gwet_ac1,
-            majority_agreement=maj_agreement
+            majority_agreement=maj_agreement,
+            disagreement=disagreement,
         )
 
     def prepare_majority_agreement(self, df: pd.DataFrame):
@@ -679,6 +703,42 @@ class IRR:
 
         majority_agreement = df[self.col_maj_agree_with_model].sum() / df.shape[0]
         return round(majority_agreement, 3)
+
+    def prepare_disagreement(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Disagreement = (# raters who disagree with model) / (total # raters)"""
+        if len(self.rater_columns) == 0:
+            logger.warning(f"Cannot calculate disagreement. "
+                           f"No rater columns found in DataFrame.")
+            return df
+        if self.col_disagreement in df.columns:
+            return df
+
+        if self.col_model in df.columns:
+            df[self.col_disagreement] = df[self.rater_columns].ne(df['model'], axis=0).sum(axis=1) / len(self.rater_columns)
+            df[self.col_disagreement] = df[self.col_disagreement].astype('float')
+    
+        return df
+
+    def calc_disagreement(self, df: pd.DataFrame) -> float | None:
+        """
+        Aggregate disagreement throughout the dataset.
+        Disagreement = (# raters who disagree with model) / (total # raters)
+        """
+        if self.col_disagreement not in df.columns:
+            df = self.prepare_disagreement(df)
+        if self.col_disagreement not in df.columns:
+            logger.info(f"Cannot calculate disagreement. "
+                        f"Column '{self.col_disagreement}' not found in DataFrame even after trying to prepare it.")
+            return None
+
+        logger.info(df)
+        logger.info(f"Disagreement column:\n{df[self.col_disagreement]}")
+
+        logger.info(df[self.col_disagreement].sum())
+        logger.info(df.shape[0])
+
+        disagreement = df[self.col_disagreement].sum() / df.shape[0]
+        return round(disagreement, 3)
 
     def reorganize_raters(self, df: pd.DataFrame) -> pd.DataFrame:
         """Get dataFrame with sparse values (possibly lots of NaNs), shift all human rater nonNaN values to the left

@@ -78,8 +78,12 @@ class Calculator:
         for col in self.df.columns:
             if col in [IRR.col_maj_agree_with_model]:
                 continue
+            if col in [IRR.col_disagreement]:
+                self.df[col] = self.df[col].astype(float)
+                continue
+
             self.df[col] = self.df[col].astype(str)
-            self.df[col] = self.df[col].apply(self.convert_to_str)  # TODO check if this is needed
+            self.df[col] = self.df[col].apply(self.convert_to_str)
 
         # print(f'df:\n{self.df}')
         # print(f'df.types: {self.df.dtypes}')
