@@ -6,12 +6,24 @@
   "majority_agreement": 0.818,
   "files": {
     "Chci_spravedlnost_pro_dceru.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 1.0
+      },
       "majority_agreement": 0.909
     },
     "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.75
+      },
       "majority_agreement": 0.727
     },
     "Tvrdík_skončil_jako_viceprezident.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 1.0
+      },
       "majority_agreement": 0.818
     }
   }

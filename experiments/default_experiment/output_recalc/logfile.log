@@ -1,6 +1,6 @@
 DEBUG:root:run_discourseer.py:main: Python file location: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/run_discourseer.py
 DEBUG:root:run_discourseer.py:main: Arguments: Namespace(experiment_dir='/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment', texts_dir=None, ratings_dir=None, output_dir=None, prompt_schema_definition=None, codebook=None, question_subset=[], text_count=None, copy_input_ratings=<RatingsCopyMode.none: 'none'>, openai_api_key=None, log='DEBUG')
-DEBUG:root:utils.py:prepare_output_dir: Directory /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output already existed. Saving backup to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_backup_20250312-201256. New output will be saved in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output
+DEBUG:root:utils.py:prepare_output_dir: Directory /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output already existed. Saving backup to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output_backup_20250415-192931. New output will be saved in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output
 DEBUG:root:utils.py:load_codebook: Loading codebook from file: /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/codebook.json
 DEBUG:root:utils.py:load_codebook: Loaded codebook: testbook_range_trigger_place (verze: v0)
 INFO:root:run_discourseer.py:load_prompt_schema_definition: Loading prompt schema definition from file:/home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/prompt_schema_definition.json
@@ -12,7 +12,7 @@ DEBUG:root:run_discourseer.py:__call__: New document 1/3: Tvrdík_skončil_jako_
 INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Tvrdík_skončil_jako_viceprezident.txt (Tvrdík skončil jako viceprezident čínské...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4996
 DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALndnC9vMck4bFmlQIQ7cFdR6T9D', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806777, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=40, prompt_tokens=1592, total_tokens=1632, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BMeODyj7pW07XM7IQhHDKMfC2t7WD', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n    "range": "3",\n    "genre": "report",\n    "message-trigger": "politician",\n    "place": [\n        "czech-republic"\n    ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1744738173, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=40, prompt_tokens=1592, total_tokens=1632, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Tvrdík_skončil_jako_viceprezident.txt' question_id='range' rated_option_ids=['3']
@@ -26,13 +26,14 @@ INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem
 INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/unmatched_model_responses.json
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+DEBUG:root:rater.py:save_to_spreadsheet: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/model_ratings_spreadsheet.csv
 DEBUG:root:run_discourseer.py:__call__: New document 2/3: Chci_spravedlnost_pro_dceru.txt
 
 
 INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Chci_spravedlnost_pro_dceru.txt (Chci spravedlnost pro dceru Elišku, říká...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 4290
 DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALneQTU82FziSFwxzEneMTRVlQJl', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806778, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BMeOEYd1k1m5cVnxZxNK0uTsNCfXQ', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "public",\n  "place": [\n    "czech-republic"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1744738174, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=39, prompt_tokens=1324, total_tokens=1363, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'public', 'place': ['czech-republic']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Chci_spravedlnost_pro_dceru.txt' question_id='range' rated_option_ids=['3']
@@ -46,13 +47,14 @@ INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem
 INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/unmatched_model_responses.json
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+DEBUG:root:rater.py:save_to_spreadsheet: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/model_ratings_spreadsheet.csv
 DEBUG:root:run_discourseer.py:__call__: New document 3/3: Rusko_použilo_hypersonickou_střelu_Zirkon.txt
 
 
 INFO:root:run_discourseer.py:extract_answers: Extracting answers from text: Rusko_použilo_hypersonickou_střelu_Zirkon.txt (Rusko použilo hypersonickou střelu Zirko...) 
 DEBUG:root:chat_client.py:ensure_maximal_length: Messages length in chars: 3989
 DEBUG:root:chat_client.py:ensure_maximal_length: Current maximal chars: 38000
-DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BALnfgrWNMw8oGOn0s5UtwNETnyBL', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "ukraine",\n    "russia"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1741806779, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=44, prompt_tokens=1159, total_tokens=1203, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
+DEBUG:root:run_discourseer.py:extract_answers: Response raw: ChatCompletion(id='chatcmpl-BMeOFVqJFBX6n6ftwXA3cCuQvmDBi', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='{\n  "range": "3",\n  "genre": "report",\n  "message-trigger": "politician",\n  "place": [\n    "ukraine",\n    "russia"\n  ]\n}', refusal=None, role='assistant', audio=None, function_call=None, tool_calls=None, annotations=[]))], created=1744738175, model='gpt-3.5-turbo-0125', object='chat.completion', service_tier='default', system_fingerprint=None, usage=CompletionUsage(completion_tokens=44, prompt_tokens=1159, total_tokens=1203, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0)))
 DEBUG:root:run_discourseer.py:extract_answers: Response: {'range': '3', 'genre': 'report', 'message-trigger': 'politician', 'place': ['ukraine', 'russia']}
 DEBUG:root:rater.py:add_model_response: Adding rating: range, 3
 DEBUG:root:rater.py:add_model_response: saved rating: file='Rusko_použilo_hypersonickou_střelu_Zirkon.txt' question_id='range' rated_option_ids=['3']
@@ -66,70 +68,593 @@ INFO:root:rater.py:save_to_csv: Rater model saved to /home/xvlach22/skola/10-sem
 INFO:root:rater.py:save_unmatched_responses: Unmatched response names saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/unmatched_model_responses.json
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched question names
 INFO:root:rater.py:save_unmatched_responses: 	- 0 unmatched option names
+DEBUG:root:rater.py:save_to_spreadsheet: Rater model saved to /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/model_ratings_spreadsheet.csv
 DEBUG:root:inter_rater_reliability.py:clean_data: Removed 0/33 rows with NaN values.
 DEBUG:root:inter_rater_reliability.py:get_inter_rater_reliability: Calculating inter-rater reliability for (see whole in /home/xvlach22/skola/10-sem-23-24-letni/PP1/discourseer/experiments/default_experiment/output/dataframe.csv):
-                                                                                  rater_1.csv rater_2.csv      rater_3.csv       model         majority  maj_agreement_with_model    worst_case
-file                                          question_id     option_id                                                                                                                        
-Chci_spravedlnost_pro_dceru.txt               range           single_choice                 5           5                5           3                5                     False  --WORST-CASE
-                                              genre           single_choice            report       other           report      report           report                      True  --WORST-CASE
-                                              message-trigger single_choice            public      public  security-forces      public           public                      True  --WORST-CASE
-                                              place           czech-republic             True        True             True        True             True                      True         False
-                                                              slovakia                  False       False            False       False            False                      True          True
-                                                              poland                    False       False            False       False            False                      True          True
-                                                              germany                   False       False            False       False            False                      True          True
-                                                              russia                     True       False            False       False            False                      True          True
-                                                              ukraine                   False       False            False       False            False                      True          True
-                                                              other                     False       False            False       False            False                      True          True
-                                                              unknown                   False       False            False       False            False                      True          True
-Rusko_použilo_hypersonickou_střelu_Zirkon.txt range           single_choice                 3           3                3           3                3                      True  --WORST-CASE
-                                              genre           single_choice            report      report           report      report           report                      True  --WORST-CASE
-                                              message-trigger single_choice   security-forces       other  security-forces  politician  security-forces                     False  --WORST-CASE
-                                              place           czech-republic            False       False            False       False            False                      True          True
-                                                              slovakia                  False       False            False       False            False                      True          True
-                                                              poland                     True       False             True       False             True                     False         False
-                                                              germany                   False       False            False       False            False                      True          True
-                                                              russia                    False       False             True        True            False                     False          True
-                                                              ukraine                    True        True             True        True             True                      True         False
-                                                              other                     False       False            False       False            False                      True          True
-                                                              unknown                   False       False            False       False            False                      True          True
-Tvrdík_skončil_jako_viceprezident.txt         range           single_choice                 4           4                4           3                4                     False  --WORST-CASE
-                                              genre           single_choice            report      report           report      report           report                      True  --WORST-CASE
-                                              message-trigger single_choice            public      public       politician  politician           public                     False  --WORST-CASE
-                                              place           czech-republic             True        True             True        True             True                      True         False
-                                                              slovakia                  False       False            False       False            False                      True          True
-                                                              poland                    False        True            False       False            False                      True          True
-                                                              germany                   False       False            False       False            False                      True          True
-                                                              russia                    False       False            False       False            False                      True          True
-                                                              ukraine                   False       False            False       False            False                      True          True
-                                                              other                     False       False             True       False            False                      True          True
-                                                              unknown                   False       False            False       False            False                      True          True
+                                                                                  rater_1.csv rater_2.csv  ... disagreement    worst_case
+file                                          question_id     option_id                                    ...                           
+Chci_spravedlnost_pro_dceru.txt               range           single_choice                 5           5  ...     1.000000  --WORST-CASE
+                                              genre           single_choice            report       other  ...     0.333333  --WORST-CASE
+                                              message-trigger single_choice            public      public  ...     0.333333  --WORST-CASE
+                                              place           czech-republic             True        True  ...     0.000000         False
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                    False       False  ...     0.000000          True
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                     True       False  ...     0.333333          True
+                                                              ukraine                   False       False  ...     0.000000          True
+                                                              other                     False       False  ...     0.000000          True
+                                                              unknown                   False       False  ...     0.000000          True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt range           single_choice                 3           3  ...     0.000000  --WORST-CASE
+                                              genre           single_choice            report      report  ...     0.000000  --WORST-CASE
+                                              message-trigger single_choice   security-forces       other  ...     1.000000  --WORST-CASE
+                                              place           czech-republic            False       False  ...     0.000000          True
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                     True       False  ...     0.666667         False
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                    False       False  ...     0.666667          True
+                                                              ukraine                    True        True  ...     0.000000         False
+                                                              other                     False       False  ...     0.000000          True
+                                                              unknown                   False       False  ...     0.000000          True
+Tvrdík_skončil_jako_viceprezident.txt         range           single_choice                 4           4  ...     1.000000  --WORST-CASE
+                                              genre           single_choice            report      report  ...     0.000000  --WORST-CASE
+                                              message-trigger single_choice            public      public  ...     0.666667  --WORST-CASE
+                                              place           czech-republic             True        True  ...     0.000000         False
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                    False        True  ...     0.333333          True
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                    False       False  ...     0.000000          True
+                                                              ukraine                   False       False  ...     0.000000          True
+                                                              other                     False       False  ...     0.333333          True
+                                                              unknown                   False       False  ...     0.000000          True
+
+[33 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                                                                   rater_1.csv rater_2.csv  ... disagreement    worst_case
+file                                          question_id     option_id                                    ...                           
+Chci_spravedlnost_pro_dceru.txt               range           single_choice                 5           5  ...     1.000000  --WORST-CASE
+                                              genre           single_choice            report       other  ...     0.333333  --WORST-CASE
+                                              message-trigger single_choice            public      public  ...     0.333333  --WORST-CASE
+                                              place           czech-republic             True        True  ...     0.000000         False
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                    False       False  ...     0.000000          True
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                     True       False  ...     0.333333          True
+                                                              ukraine                   False       False  ...     0.000000          True
+                                                              other                     False       False  ...     0.000000          True
+                                                              unknown                   False       False  ...     0.000000          True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt range           single_choice                 3           3  ...     0.000000  --WORST-CASE
+                                              genre           single_choice            report      report  ...     0.000000  --WORST-CASE
+                                              message-trigger single_choice   security-forces       other  ...     1.000000  --WORST-CASE
+                                              place           czech-republic            False       False  ...     0.000000          True
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                     True       False  ...     0.666667         False
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                    False       False  ...     0.666667          True
+                                                              ukraine                    True        True  ...     0.000000         False
+                                                              other                     False       False  ...     0.000000          True
+                                                              unknown                   False       False  ...     0.000000          True
+Tvrdík_skončil_jako_viceprezident.txt         range           single_choice                 4           4  ...     1.000000  --WORST-CASE
+                                              genre           single_choice            report      report  ...     0.000000  --WORST-CASE
+                                              message-trigger single_choice            public      public  ...     0.666667  --WORST-CASE
+                                              place           czech-republic             True        True  ...     0.000000         False
+                                                              slovakia                  False       False  ...     0.000000          True
+                                                              poland                    False        True  ...     0.333333          True
+                                                              germany                   False       False  ...     0.000000          True
+                                                              russia                    False       False  ...     0.000000          True
+                                                              ukraine                   False       False  ...     0.000000          True
+                                                              other                     False       False  ...     0.333333          True
+                                                              unknown                   False       False  ...     0.000000          True
+
+[33 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file                                           question_id      option_id     
+Chci_spravedlnost_pro_dceru.txt                range            single_choice     1.000000
+                                               genre            single_choice     0.333333
+                                               message-trigger  single_choice     0.333333
+                                               place            czech-republic    0.000000
+                                                                slovakia          0.000000
+                                                                poland            0.000000
+                                                                germany           0.000000
+                                                                russia            0.333333
+                                                                ukraine           0.000000
+                                                                other             0.000000
+                                                                unknown           0.000000
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt  range            single_choice     0.000000
+                                               genre            single_choice     0.000000
+                                               message-trigger  single_choice     1.000000
+                                               place            czech-republic    0.000000
+                                                                slovakia          0.000000
+                                                                poland            0.666667
+                                                                germany           0.000000
+                                                                russia            0.666667
+                                                                ukraine           0.000000
+                                                                other             0.000000
+                                                                unknown           0.000000
+Tvrdík_skončil_jako_viceprezident.txt          range            single_choice     1.000000
+                                               genre            single_choice     0.000000
+                                               message-trigger  single_choice     0.666667
+                                               place            czech-republic    0.000000
+                                                                slovakia          0.000000
+                                                                poland            0.333333
+                                                                germany           0.000000
+                                                                russia            0.000000
+                                                                ukraine           0.000000
+                                                                other             0.333333
+                                                                unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 6.666666666666666
+INFO:root:inter_rater_reliability.py:calc_disagreement: 33
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question range
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                                             rater_1.csv rater_2.csv rater_3.csv  ... maj_agreement_with_model disagreement    worst_case
+file                                          option_id                                          ...                                                    
+Chci_spravedlnost_pro_dceru.txt               single_choice           5           5           5  ...                    False          1.0  --WORST-CASE
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt single_choice           3           3           3  ...                     True          0.0  --WORST-CASE
+Tvrdík_skončil_jako_viceprezident.txt         single_choice           4           4           4  ...                    False          1.0  --WORST-CASE
+
+[3 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file                                           option_id    
+Chci_spravedlnost_pro_dceru.txt                single_choice    1.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt  single_choice    0.0
+Tvrdík_skončil_jako_viceprezident.txt          single_choice    1.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 2.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question genre
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                                             rater_1.csv rater_2.csv rater_3.csv  ... maj_agreement_with_model disagreement    worst_case
+file                                          option_id                                          ...                                                    
+Chci_spravedlnost_pro_dceru.txt               single_choice      report       other      report  ...                     True     0.333333  --WORST-CASE
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt single_choice      report      report      report  ...                     True     0.000000  --WORST-CASE
+Tvrdík_skončil_jako_viceprezident.txt         single_choice      report      report      report  ...                     True     0.000000  --WORST-CASE
+
+[3 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file                                           option_id    
+Chci_spravedlnost_pro_dceru.txt                single_choice    0.333333
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt  single_choice    0.000000
+Tvrdík_skončil_jako_viceprezident.txt          single_choice    0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_question: calculating IRR for single choice question message-trigger
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                                                  rater_1.csv rater_2.csv  ... disagreement    worst_case
+file                                          option_id                                   ...                           
+Chci_spravedlnost_pro_dceru.txt               single_choice           public      public  ...     0.333333  --WORST-CASE
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt single_choice  security-forces       other  ...     1.000000  --WORST-CASE
+Tvrdík_skončil_jako_viceprezident.txt         single_choice           public      public  ...     0.666667  --WORST-CASE
+
+[3 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file                                           option_id    
+Chci_spravedlnost_pro_dceru.txt                single_choice    0.333333
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt  single_choice    1.000000
+Tvrdík_skončil_jako_viceprezident.txt          single_choice    0.666667
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 2.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "czech-republic" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                      True        True        True   True     True                      True           0.0      False
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False       False  False    False                      True           0.0       True
+Tvrdík_skončil_jako_viceprezident.txt                True        True        True   True     True                      True           0.0      False
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.0
+Tvrdík_skončil_jako_viceprezident.txt            0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "slovakia" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True           0.0       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False       False  False    False                      True           0.0       True
+Tvrdík_skončil_jako_viceprezident.txt               False       False       False  False    False                      True           0.0       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.0
+Tvrdík_skončil_jako_viceprezident.txt            0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "poland" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True      0.000000       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt        True       False        True  False     True                     False      0.666667      False
+Tvrdík_skončil_jako_viceprezident.txt               False        True       False  False    False                      True      0.333333       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.000000
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.666667
+Tvrdík_skončil_jako_viceprezident.txt            0.333333
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "germany" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True           0.0       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False       False  False    False                      True           0.0       True
+Tvrdík_skončil_jako_viceprezident.txt               False       False       False  False    False                      True           0.0       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.0
+Tvrdík_skončil_jako_viceprezident.txt            0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "russia" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                      True       False       False  False    False                      True      0.333333       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False        True   True    False                     False      0.666667       True
+Tvrdík_skončil_jako_viceprezident.txt               False       False       False  False    False                      True      0.000000       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.333333
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.666667
+Tvrdík_skončil_jako_viceprezident.txt            0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "ukraine" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True           0.0       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt        True        True        True   True     True                      True           0.0      False
+Tvrdík_skončil_jako_viceprezident.txt               False       False       False  False    False                      True           0.0       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.0
+Tvrdík_skončil_jako_viceprezident.txt            0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "other" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True      0.000000       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False       False  False    False                      True      0.000000       True
+Tvrdík_skončil_jako_viceprezident.txt               False       False        True  False    False                      True      0.333333       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.000000
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.000000
+Tvrdík_skončil_jako_viceprezident.txt            0.333333
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
 DEBUG:root:inter_rater_reliability.py:calculate_irr_for_each_option: calculating IRR for option "unknown" in multi choice question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                               rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+file                                                                                                                                                
+Chci_spravedlnost_pro_dceru.txt                     False       False       False  False    False                      True           0.0       True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt       False       False       False  False    False                      True           0.0       True
+Tvrdík_skončil_jako_viceprezident.txt               False       False       False  False    False                      True           0.0       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file
+Chci_spravedlnost_pro_dceru.txt                  0.0
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt    0.0
+Tvrdík_skončil_jako_viceprezident.txt            0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 3
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                                              rater_1.csv rater_2.csv rater_3.csv  ... maj_agreement_with_model disagreement  worst_case
+file                                          option_id                                           ...                                                  
+Chci_spravedlnost_pro_dceru.txt               czech-republic        True        True        True  ...                     True     0.000000       False
+                                              slovakia             False       False       False  ...                     True     0.000000        True
+                                              poland               False       False       False  ...                     True     0.000000        True
+                                              germany              False       False       False  ...                     True     0.000000        True
+                                              russia                True       False       False  ...                     True     0.333333        True
+                                              ukraine              False       False       False  ...                     True     0.000000        True
+                                              other                False       False       False  ...                     True     0.000000        True
+                                              unknown              False       False       False  ...                     True     0.000000        True
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt czech-republic       False       False       False  ...                     True     0.000000        True
+                                              slovakia             False       False       False  ...                     True     0.000000        True
+                                              poland                True       False        True  ...                    False     0.666667       False
+                                              germany              False       False       False  ...                     True     0.000000        True
+                                              russia               False       False        True  ...                    False     0.666667        True
+                                              ukraine               True        True        True  ...                     True     0.000000       False
+                                              other                False       False       False  ...                     True     0.000000        True
+                                              unknown              False       False       False  ...                     True     0.000000        True
+Tvrdík_skončil_jako_viceprezident.txt         czech-republic        True        True        True  ...                     True     0.000000       False
+                                              slovakia             False       False       False  ...                     True     0.000000        True
+                                              poland               False        True       False  ...                     True     0.333333        True
+                                              germany              False       False       False  ...                     True     0.000000        True
+                                              russia               False       False       False  ...                     True     0.000000        True
+                                              ukraine              False       False       False  ...                     True     0.000000        True
+                                              other                False       False        True  ...                     True     0.333333        True
+                                              unknown              False       False       False  ...                     True     0.000000        True
+
+[24 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+file                                           option_id     
+Chci_spravedlnost_pro_dceru.txt                czech-republic    0.000000
+                                               slovakia          0.000000
+                                               poland            0.000000
+                                               germany           0.000000
+                                               russia            0.333333
+                                               ukraine           0.000000
+                                               other             0.000000
+                                               unknown           0.000000
+Rusko_použilo_hypersonickou_střelu_Zirkon.txt  czech-republic    0.000000
+                                               slovakia          0.000000
+                                               poland            0.666667
+                                               germany           0.000000
+                                               russia            0.666667
+                                               ukraine           0.000000
+                                               other             0.000000
+                                               unknown           0.000000
+Tvrdík_skončil_jako_viceprezident.txt          czech-republic    0.000000
+                                               slovakia          0.000000
+                                               poland            0.333333
+                                               germany           0.000000
+                                               russia            0.000000
+                                               ukraine           0.000000
+                                               other             0.333333
+                                               unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 2.333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 24
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                rater_1.csv rater_2.csv      rater_3.csv   model majority  maj_agreement_with_model  disagreement    worst_case
+question_id     option_id                                                                                                                     
+range           single_choice            5           5                5       3        5                     False      1.000000  --WORST-CASE
+genre           single_choice       report       other           report  report   report                      True      0.333333  --WORST-CASE
+message-trigger single_choice       public      public  security-forces  public   public                      True      0.333333  --WORST-CASE
+place           czech-republic        True        True             True    True     True                      True      0.000000         False
+                slovakia             False       False            False   False    False                      True      0.000000          True
+                poland               False       False            False   False    False                      True      0.000000          True
+                germany              False       False            False   False    False                      True      0.000000          True
+                russia                True       False            False   False    False                      True      0.333333          True
+                ukraine              False       False            False   False    False                      True      0.000000          True
+                other                False       False            False   False    False                      True      0.000000          True
+                unknown              False       False            False   False    False                      True      0.000000          True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+question_id      option_id     
+range            single_choice     1.000000
+genre            single_choice     0.333333
+message-trigger  single_choice     0.333333
+place            czech-republic    0.000000
+                 slovakia          0.000000
+                 poland            0.000000
+                 germany           0.000000
+                 russia            0.333333
+                 ukraine           0.000000
+                 other             0.000000
+                 unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.9999999999999998
+INFO:root:inter_rater_reliability.py:calc_disagreement: 11
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                             
+single_choice           5           5           5     3        5                     False           1.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    1.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv   model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                               
+single_choice      report       other      report  report   report                      True      0.333333  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.333333
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv      rater_3.csv   model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                                    
+single_choice      public      public  security-forces  public   public                      True      0.333333  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.333333
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+option_id                                                                                                            
+czech-republic        True        True        True   True     True                      True      0.000000      False
+slovakia             False       False       False  False    False                      True      0.000000       True
+poland               False       False       False  False    False                      True      0.000000       True
+germany              False       False       False  False    False                      True      0.000000       True
+russia                True       False       False  False    False                      True      0.333333       True
+ukraine              False       False       False  False    False                      True      0.000000       True
+other                False       False       False  False    False                      True      0.000000       True
+unknown              False       False       False  False    False                      True      0.000000       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+czech-republic    0.000000
+slovakia          0.000000
+poland            0.000000
+germany           0.000000
+russia            0.333333
+ukraine           0.000000
+other             0.000000
+unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 8
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                     rater_1.csv rater_2.csv      rater_3.csv  ... maj_agreement_with_model disagreement    worst_case
+question_id     option_id                                                     ...                                                    
+range           single_choice                 3           3                3  ...                     True     0.000000  --WORST-CASE
+genre           single_choice            report      report           report  ...                     True     0.000000  --WORST-CASE
+message-trigger single_choice   security-forces       other  security-forces  ...                    False     1.000000  --WORST-CASE
+place           czech-republic            False       False            False  ...                     True     0.000000          True
+                slovakia                  False       False            False  ...                     True     0.000000          True
+                poland                     True       False             True  ...                    False     0.666667         False
+                germany                   False       False            False  ...                     True     0.000000          True
+                russia                    False       False             True  ...                    False     0.666667          True
+                ukraine                    True        True             True  ...                     True     0.000000         False
+                other                     False       False            False  ...                     True     0.000000          True
+                unknown                   False       False            False  ...                     True     0.000000          True
+
+[11 rows x 8 columns]
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+question_id      option_id     
+range            single_choice     0.000000
+genre            single_choice     0.000000
+message-trigger  single_choice     1.000000
+place            czech-republic    0.000000
+                 slovakia          0.000000
+                 poland            0.666667
+                 germany           0.000000
+                 russia            0.666667
+                 ukraine           0.000000
+                 other             0.000000
+                 unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 2.333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 11
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                             
+single_choice           3           3           3     3        3                      True           0.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv   model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                               
+single_choice      report      report      report  report   report                      True           0.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calc_disagreement:                    rater_1.csv rater_2.csv      rater_3.csv       model         majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                                                     
+single_choice  security-forces       other  security-forces  politician  security-forces                     False           1.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    1.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+option_id                                                                                                            
+czech-republic       False       False       False  False    False                      True      0.000000       True
+slovakia             False       False       False  False    False                      True      0.000000       True
+poland                True       False        True  False     True                     False      0.666667      False
+germany              False       False       False  False    False                      True      0.000000       True
+russia               False       False        True   True    False                     False      0.666667       True
+ukraine               True        True        True   True     True                      True      0.000000      False
+other                False       False       False  False    False                      True      0.000000       True
+unknown              False       False       False  False    False                      True      0.000000       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+czech-republic    0.000000
+slovakia          0.000000
+poland            0.666667
+germany           0.000000
+russia            0.666667
+ukraine           0.000000
+other             0.000000
+unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.3333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 8
+INFO:root:inter_rater_reliability.py:calc_disagreement:                                rater_1.csv rater_2.csv rater_3.csv       model majority  maj_agreement_with_model  disagreement    worst_case
+question_id     option_id                                                                                                                    
+range           single_choice            4           4           4           3        4                     False      1.000000  --WORST-CASE
+genre           single_choice       report      report      report      report   report                      True      0.000000  --WORST-CASE
+message-trigger single_choice       public      public  politician  politician   public                     False      0.666667  --WORST-CASE
+place           czech-republic        True        True        True        True     True                      True      0.000000         False
+                slovakia             False       False       False       False    False                      True      0.000000          True
+                poland               False        True       False       False    False                      True      0.333333          True
+                germany              False       False       False       False    False                      True      0.000000          True
+                russia               False       False       False       False    False                      True      0.000000          True
+                ukraine              False       False       False       False    False                      True      0.000000          True
+                other                False       False        True       False    False                      True      0.333333          True
+                unknown              False       False       False       False    False                      True      0.000000          True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+question_id      option_id     
+range            single_choice     1.000000
+genre            single_choice     0.000000
+message-trigger  single_choice     0.666667
+place            czech-republic    0.000000
+                 slovakia          0.000000
+                 poland            0.333333
+                 germany           0.000000
+                 russia            0.000000
+                 ukraine           0.000000
+                 other             0.333333
+                 unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 2.333333333333333
+INFO:root:inter_rater_reliability.py:calc_disagreement: 11
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question range
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                             
+single_choice           4           4           4     3        4                     False           1.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    1.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question genre
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv   model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                               
+single_choice      report      report      report  report   report                      True           0.0  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.0
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.0
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question message-trigger
+INFO:root:inter_rater_reliability.py:calc_disagreement:               rater_1.csv rater_2.csv rater_3.csv       model majority  maj_agreement_with_model  disagreement    worst_case
+option_id                                                                                                                   
+single_choice      public      public  politician  politician   public                     False      0.666667  --WORST-CASE
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+single_choice    0.666667
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.6666666666666666
+INFO:root:inter_rater_reliability.py:calc_disagreement: 1
 INFO:root:inter_rater_reliability.py:calculate_irr_for_each_question: Calculating IRR for question place
+INFO:root:inter_rater_reliability.py:calc_disagreement:                rater_1.csv rater_2.csv rater_3.csv  model majority  maj_agreement_with_model  disagreement worst_case
+option_id                                                                                                            
+czech-republic        True        True        True   True     True                      True      0.000000      False
+slovakia             False       False       False  False    False                      True      0.000000       True
+poland               False        True       False  False    False                      True      0.333333       True
+germany              False       False       False  False    False                      True      0.000000       True
+russia               False       False       False  False    False                      True      0.000000       True
+ukraine              False       False       False  False    False                      True      0.000000       True
+other                False       False        True  False    False                      True      0.333333       True
+unknown              False       False       False  False    False                      True      0.000000       True
+INFO:root:inter_rater_reliability.py:calc_disagreement: Disagreement column:
+option_id
+czech-republic    0.000000
+slovakia          0.000000
+poland            0.333333
+germany           0.000000
+russia            0.000000
+ukraine           0.000000
+other             0.333333
+unknown           0.000000
+Name: disagreement, dtype: float64
+INFO:root:inter_rater_reliability.py:calc_disagreement: 0.6666666666666666
+INFO:root:inter_rater_reliability.py:calc_disagreement: 8
 INFO:root:run_discourseer.py:save_output: 3 worst files according to majority agreement:
                                                file_majority_agreement  range  genre  message-trigger  place
 file_id                                                                                                     
@@ -160,7 +685,9 @@ INFO:root:run_discourseer.py:save_output: Inter-rater reliability results summar
       "worst_case": 0.1337,
       "without_model": 0.6616
     },
-    "majority_agreement": 0.64569
+    "majority_agreement": 0.64569,
+    "disagreement": 0.38553
   },
-  "majority_agreement": 0.818
+  "majority_agreement": 0.818,
+  "disagreement": 0.202
 }

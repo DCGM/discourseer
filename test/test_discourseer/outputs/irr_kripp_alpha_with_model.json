@@ -2,7 +2,7 @@
   "irr_result": {
     "description": "mean IRR through questions",
     "krippendorff_alpha": {
-      "with_model": 0.38199
+      "with_model": 0.37653
     }
   },
   "questions": {
@@ -26,7 +26,7 @@
       "irr_result": {
         "description": "IRR for single choice question",
         "krippendorff_alpha": {
-          "with_model": 0.14184
+          "with_model": 0.12
         }
       }
     },

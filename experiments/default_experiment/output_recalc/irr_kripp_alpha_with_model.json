@@ -88,5 +88,211 @@
         }
       }
     }
+  },
+  "files": {
+    "Chci_spravedlnost_pro_dceru.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "questions": {
+        "place": {
+          "irr_result": {
+            "description": "mean IRR through options",
+            "krippendorff_alpha": {
+              "with_model": null
+            }
+          },
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "other": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "questions": {
+        "place": {
+          "irr_result": {
+            "description": "mean IRR through options",
+            "krippendorff_alpha": {
+              "with_model": null
+            }
+          },
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "other": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Tvrdík_skončil_jako_viceprezident.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "krippendorff_alpha": {
+          "with_model": null
+        }
+      },
+      "questions": {
+        "place": {
+          "irr_result": {
+            "description": "mean IRR through options",
+            "krippendorff_alpha": {
+              "with_model": null
+            }
+          },
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "other": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "krippendorff_alpha": {
+                "with_model": null
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

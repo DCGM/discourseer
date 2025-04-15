@@ -19,9 +19,11 @@
       "worst_case": 0.03603,
       "without_model": 0.68103
     },
-    "majority_agreement": null
+    "majority_agreement": null,
+    "disagreement": null
   },
   "majority_agreement": null,
+  "disagreement": null,
   "questions": {
     "Zpravodajské hodnoty (multiple)": {
       "multiple_choice": true,
@@ -45,9 +47,11 @@
           "worst_case": -0.07345,
           "without_model": 0.60537
         },
-        "majority_agreement": null
+        "majority_agreement": null,
+        "disagreement": null
       },
       "majority_agreement": null,
+      "disagreement": null,
       "options": {
         "Negativita negativity": {
           "description": "IRR for this option",
@@ -69,7 +73,8 @@
             "worst_case": -0.05969,
             "without_model": 0.67143
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Blízkost proximity": {
           "description": "IRR for this option",
@@ -91,7 +96,8 @@
             "worst_case": 0.00858,
             "without_model": 0.84473
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Elitní osoby prominence": {
           "description": "IRR for this option",
@@ -113,7 +119,8 @@
             "worst_case": -0.13091,
             "without_model": 0.47622
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Personalizace personalization": {
           "description": "IRR for this option",
@@ -135,7 +142,8 @@
             "worst_case": -0.01081,
             "without_model": 0.75215
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Dopad impact": {
           "description": "IRR for this option",
@@ -157,7 +165,8 @@
             "worst_case": -0.17444,
             "without_model": 0.28234
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         }
       }
     },
@@ -183,9 +192,11 @@
           "worst_case": -0.04205,
           "without_model": 0.66912
         },
-        "majority_agreement": null
+        "majority_agreement": null,
+        "disagreement": null
       },
       "majority_agreement": null,
+      "disagreement": null,
       "options": {
         "Vnitřní politické dění": {
           "description": "IRR for this option",
@@ -207,7 +218,8 @@
             "worst_case": -0.11197,
             "without_model": 0.49321
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Mezinárodní politické reakce": {
           "description": "IRR for this option",
@@ -229,7 +241,8 @@
             "worst_case": -0.09051,
             "without_model": 0.61491
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Vojenské operace Izraele": {
           "description": "IRR for this option",
@@ -251,7 +264,8 @@
             "worst_case": -0.11032,
             "without_model": 0.54889
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Teroristické operace": {
           "description": "IRR for this option",
@@ -273,7 +287,8 @@
             "worst_case": -0.12899,
             "without_model": 0.47829
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Dopad na izraelské civilisty": {
           "description": "IRR for this option",
@@ -295,7 +310,8 @@
             "worst_case": -0.14484,
             "without_model": 0.42202
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Dopad na palestinské civilisty": {
           "description": "IRR for this option",
@@ -317,7 +333,8 @@
             "worst_case": -0.06962,
             "without_model": 0.66045
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Humanitární pomoc": {
           "description": "IRR for this option",
@@ -339,7 +356,8 @@
             "worst_case": 0.0436,
             "without_model": 0.85188
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Globální reakce veřejnosti": {
           "description": "IRR for this option",
@@ -361,7 +379,8 @@
             "worst_case": 0.05738,
             "without_model": 0.88001
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Ekonomické důsledky": {
           "description": "IRR for this option",
@@ -383,7 +402,8 @@
             "worst_case": 0.08494,
             "without_model": 0.89803
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Historie/kontextualizace": {
           "description": "IRR for this option",
@@ -405,7 +425,8 @@
             "worst_case": 0.04985,
             "without_model": 0.84352
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         }
       }
     },
@@ -431,9 +452,11 @@
           "worst_case": 0.27206,
           "without_model": 0.62605
         },
-        "majority_agreement": null
+        "majority_agreement": null,
+        "disagreement": null
       },
       "majority_agreement": null,
+      "disagreement": null,
       "options": {}
     },
     "Mediální rámce (multiple)": {
@@ -458,9 +481,11 @@
           "worst_case": -0.04768,
           "without_model": 0.63521
         },
-        "majority_agreement": null
+        "majority_agreement": null,
+        "disagreement": null
       },
       "majority_agreement": null,
+      "disagreement": null,
       "options": {
         "Rámec konfliktu": {
           "description": "IRR for this option",
@@ -482,7 +507,8 @@
             "worst_case": -0.043,
             "without_model": 0.66863
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Rámec budování míru": {
           "description": "IRR for this option",
@@ -504,7 +530,8 @@
             "worst_case": 0.05048,
             "without_model": 0.86813
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Humanitární rámec": {
           "description": "IRR for this option",
@@ -526,7 +553,8 @@
             "worst_case": -0.11795,
             "without_model": 0.47143
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Historicko-kulturní rámec": {
           "description": "IRR for this option",
@@ -548,7 +576,8 @@
             "worst_case": 0.06414,
             "without_model": 0.83057
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Geopolitický rámec": {
           "description": "IRR for this option",
@@ -570,7 +599,8 @@
             "worst_case": -0.08669,
             "without_model": 0.65088
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Lokální rámec": {
           "description": "IRR for this option",
@@ -592,7 +622,8 @@
             "worst_case": -0.15304,
             "without_model": 0.32165
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         }
       }
     },
@@ -618,9 +649,11 @@
           "worst_case": 0.07127,
           "without_model": 0.86941
         },
-        "majority_agreement": null
+        "majority_agreement": null,
+        "disagreement": null
       },
       "majority_agreement": null,
+      "disagreement": null,
       "options": {
         "Političtí představitelé Izraele": {
           "description": "IRR for this option",
@@ -642,7 +675,8 @@
             "worst_case": 0.0289,
             "without_model": 0.79929
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Političtí představitelé Palestiny": {
           "description": "IRR for this option",
@@ -664,7 +698,8 @@
             "worst_case": 0.10699,
             "without_model": 0.89534
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Politici z blízkovýchodních zemí": {
           "description": "IRR for this option",
@@ -686,7 +721,8 @@
             "worst_case": 0.11326,
             "without_model": 0.93183
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Politici ze ostatních světových zemí": {
           "description": "IRR for this option",
@@ -708,7 +744,8 @@
             "worst_case": -0.03832,
             "without_model": 0.74286
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Představitelé mezinárodních a neziskových organizací": {
           "description": "IRR for this option",
@@ -730,7 +767,8 @@
             "worst_case": 0.0568,
             "without_model": 0.83997
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Vojenští představitelé Izraele": {
           "description": "IRR for this option",
@@ -752,7 +790,8 @@
             "worst_case": 0.06395,
             "without_model": 0.8691
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Členové teroristických skupin": {
           "description": "IRR for this option",
@@ -774,7 +813,8 @@
             "worst_case": 0.11308,
             "without_model": 0.94202
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Nezávislí experti a analytici": {
           "description": "IRR for this option",
@@ -796,7 +836,8 @@
             "worst_case": 0.09893,
             "without_model": 0.9297
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Média a novináři": {
           "description": "IRR for this option",
@@ -818,7 +859,8 @@
             "worst_case": -0.04452,
             "without_model": 0.70329
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Očití svědci a civilisté z Izraele": {
           "description": "IRR for this option",
@@ -840,7 +882,8 @@
             "worst_case": 0.12011,
             "without_model": 0.95168
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         },
         "Očití svědci a civilisté z Palestiny": {
           "description": "IRR for this option",
@@ -862,7 +905,8 @@
             "worst_case": 0.16483,
             "without_model": 0.95838
           },
-          "majority_agreement": null
+          "majority_agreement": null,
+          "disagreement": null
         }
       }
     }
@@ -871,35 +915,41 @@
     "2023-10-07T00-00-00_2023WN280011.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -907,35 +957,41 @@
     "2023-10-07T00-00-00_2023WN280056.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -943,35 +999,41 @@
     "2023-10-09T09-11-00_2023WN282037.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -979,35 +1041,41 @@
     "2023-10-09T12-53-00_2023WN282086.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1015,35 +1083,41 @@
     "2023-10-09T14-50-00_2023WN282113.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1051,35 +1125,41 @@
     "2023-10-09T16-46-00_2023WN282130.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1087,35 +1167,41 @@
     "2023-10-10T18-48-00_2023WN283308.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1123,35 +1209,41 @@
     "2023-10-10T18-51-00_2023WN283162.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1159,35 +1251,41 @@
     "2023-10-10T21-42-00_2023WN283183.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1195,35 +1293,41 @@
     "2023-10-11T09-07-00_2023WN284024.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1231,35 +1335,41 @@
     "2023-10-12T12-23-00_2023WN285197.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1267,35 +1377,41 @@
     "2023-10-12T13-54-00_2023WN285106.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1303,35 +1419,41 @@
     "2023-10-12T16-14-00_2023WN285137.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1339,35 +1461,41 @@
     "2023-10-13T06-36-00_2023WN286013.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1375,35 +1503,41 @@
     "2023-10-15T14-52-00_2023WN288050.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1411,35 +1545,41 @@
     "2023-10-15T20-07-00_2023WN288080.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1447,35 +1587,41 @@
     "2023-10-16T10-36-00_2023WN289052.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1483,35 +1629,41 @@
     "2023-10-18T13-55-00_2023WN291081.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1519,35 +1671,41 @@
     "2023-10-18T18-43-00_2023WN291136.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1555,35 +1713,41 @@
     "2023-10-19T10-57-00_2023WN292057.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1591,35 +1755,41 @@
     "2023-10-19T15-13-00_2023WN292147.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1627,35 +1797,41 @@
     "2023-10-22T07-25-00_2023WN295017.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1663,35 +1839,41 @@
     "2023-10-22T07-25-00_2023WN295038.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1699,35 +1881,41 @@
     "2023-10-23T09-18-00_2023WN296031.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1735,35 +1923,41 @@
     "2023-10-23T12-37-00_2023WN296192.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1771,35 +1965,41 @@
     "2023-10-24T08-41-00_2023WN297021.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1807,35 +2007,41 @@
     "2023-10-24T12-12-00_2023WN297062.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1843,35 +2049,41 @@
     "2023-10-26T00-00-00_2023WN299091.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1879,35 +2091,41 @@
     "2023-10-26T00-00-00_2023WN299176.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1915,35 +2133,41 @@
     "2023-10-26T00-00-00_2023WN299198.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1951,35 +2175,41 @@
     "2023-10-27T00-00-00_2023WN300050.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -1987,35 +2217,41 @@
     "2023-10-30T00-00-00_2023WN303025.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2023,35 +2259,41 @@
     "2023-10-30T00-00-00_2023WN303134.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2059,35 +2301,41 @@
     "2023-10-30T11-19-00_2023WN303199.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2095,35 +2343,41 @@
     "2023-11-01T16-09-00_2023WN305157.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2131,35 +2385,41 @@
     "2023-11-02T08-14-00_2023WN306018.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2167,35 +2427,41 @@
     "2023-11-02T11-09-00_2023WN306067.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2203,35 +2469,41 @@
     "2023-11-04T16-30-00_2023WN308069.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2239,35 +2511,41 @@
     "2023-11-05T08-41-00_2023WN309011.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2275,35 +2553,41 @@
     "2023-11-05T08-41-00_2023WN309016.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2311,35 +2595,41 @@
     "2023-11-05T10-57-00_2023WN309100.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2347,35 +2637,41 @@
     "2023-11-08T08-45-00_2023WN312032.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2383,35 +2679,41 @@
     "2023-11-08T11-17-00_2023WN312083.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2419,35 +2721,41 @@
     "2023-11-08T17-35-00_2023WN312200.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2455,35 +2763,41 @@
     "2023-11-12T10-35-00_2023WN316132.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2491,35 +2805,41 @@
     "2023-11-13T08-16-00_2023WN317030.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2527,35 +2847,41 @@
     "2023-11-13T11-01-00_2023WN317254.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2563,35 +2889,41 @@
     "2023-11-15T13-35-00_2023WN319151.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2599,35 +2931,41 @@
     "2023-11-15T16-48-00_2023WN319208.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2635,35 +2973,41 @@
     "2023-11-16T08-16-00_2023WN320030.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2671,35 +3015,41 @@
     "2023-11-16T15-21-00_2023WN320146.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2707,35 +3057,41 @@
     "2023-11-19T19-42-00_2023WN323084.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2743,35 +3099,41 @@
     "2023-11-20T20-25-00_2023WN324202.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2779,35 +3141,41 @@
     "2023-11-23T11-44-00_2023WN327073.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2815,35 +3183,41 @@
     "2023-11-23T16-26-00_2023WN327164.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2851,35 +3225,41 @@
     "2023-11-24T21-16-00_2023WN328215.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2887,35 +3267,41 @@
     "2023-11-29T08-32-00_2023WN333030.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2923,35 +3309,41 @@
     "2023-11-29T15-51-00_2023WN333171.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2959,35 +3351,41 @@
     "2023-11-30T06-54-00_2023WN334015.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -2995,35 +3393,41 @@
     "2023-11-30T11-33-00_2023WN334072.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3031,35 +3435,41 @@
     "2023-12-04T12-14-00_2023WN338101.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3067,35 +3477,41 @@
     "2023-12-05T06-39-00_2023WN339011.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3103,35 +3519,41 @@
     "2023-12-05T14-45-00_2023WN339132.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3139,35 +3561,41 @@
     "2023-12-06T09-06-00_2023WN340025.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3175,35 +3603,41 @@
     "2023-12-09T11-05-00_2023WN343035.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3211,35 +3645,41 @@
     "2023-12-09T19-24-00_2023WN343081.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3247,35 +3687,41 @@
     "2023-12-14T08-16-00_2023WN348008.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3283,35 +3729,41 @@
     "2023-12-14T16-08-00_2023WN348142.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3319,35 +3771,41 @@
     "2023-12-15T12-15-00_2023WN349091.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3355,35 +3813,41 @@
     "2023-12-20T16-52-00_2023WN354149.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3391,35 +3855,41 @@
     "2023-12-30T12-42-00_2023WN364030.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3427,35 +3897,41 @@
     "2024-01-01T20-24-00_2024WN001075.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3463,35 +3939,41 @@
     "2024-01-02T16-55-00_2024WN002143.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3499,35 +3981,41 @@
     "2024-01-11T16-10-00_2024WN011155.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3535,35 +4023,41 @@
     "2024-01-12T10-01-00_2024WN012058.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3571,35 +4065,41 @@
     "2024-01-12T15-46-00_2024WN012144.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3607,35 +4107,41 @@
     "2024-01-18T10-32-00_2024WN018055.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3643,35 +4149,41 @@
     "2024-01-19T12-20-00_2024WN019033.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3679,35 +4191,41 @@
     "2024-01-20T10-17-00_2024WN020031.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3715,35 +4233,41 @@
     "2024-01-28T19-21-00_2024WN028084.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3751,35 +4275,41 @@
     "2024-01-30T12-22-00_2024WN030086.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3787,35 +4317,41 @@
     "2024-02-06T20-53-00_2024WN037171.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3823,35 +4359,41 @@
     "2024-02-08T12-53-00_2024WN039088.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
@@ -3859,35 +4401,41 @@
     "2024-02-15T21-49-00_2024WN046201.txt": {
       "irr_result": null,
       "majority_agreement": null,
+      "disagreement": null,
       "questions": {
         "Zpravodajské hodnoty (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Témata článku": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Hlavní téma článku": {
           "multiple_choice": false,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mediální rámce (multiple)": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         },
         "Mluvčí": {
           "multiple_choice": true,
           "irr_result": null,
           "majority_agreement": null,
+          "disagreement": null,
           "options": null
         }
       }
