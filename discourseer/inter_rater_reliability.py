@@ -189,7 +189,7 @@ class IRRResults(pydantic.BaseModel):
 
             file_result.update({question_id: irr_question_result.disagreement
                                 for question_id, irr_question_result in irr_file_result.questions.items() if irr_question_result is not None})
-            
+
             # add also option results with question_prefix as key
             for question_id, irr_question_result in irr_file_result.questions.items():
                 if not irr_question_result or not irr_question_result.multiple_choice or not irr_question_result.options:
@@ -197,7 +197,7 @@ class IRRResults(pydantic.BaseModel):
                 for option_id, irr_option_result in irr_question_result.options.items():
                     if not irr_option_result:
                         continue
-                    file_result[f'{question_id}_{option_id}'] = irr_option_result.disagreement
+                    file_result[f'{option_id} ({question_id})'] = irr_option_result.disagreement
 
             file_result['file_id'] = file_id
             file_results.append(file_result)
