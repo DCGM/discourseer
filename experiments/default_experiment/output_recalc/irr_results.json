@@ -329,80 +329,335 @@
   },
   "files": {
     "Chci_spravedlnost_pro_dceru.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "fleiss_kappa": {},
+        "krippendorff_alpha": {},
+        "gwet_ac1": {},
+        "majority_agreement": 1.0,
+        "disagreement": 0.04163
+      },
       "majority_agreement": 0.909,
       "disagreement": 0.182,
       "questions": {
         "range": {
           "multiple_choice": false,
           "majority_agreement": 0.0,
-          "disagreement": 1.0
+          "disagreement": 1.0,
+          "options": {}
         },
         "genre": {
           "multiple_choice": false,
           "majority_agreement": 1.0,
-          "disagreement": 0.333
+          "disagreement": 0.333,
+          "options": {}
         },
         "message-trigger": {
           "multiple_choice": false,
           "majority_agreement": 1.0,
-          "disagreement": 0.333
+          "disagreement": 0.333,
+          "options": {}
         },
         "place": {
           "multiple_choice": true,
+          "irr_result": {
+            "description": "mean IRR through options",
+            "fleiss_kappa": {},
+            "krippendorff_alpha": {},
+            "gwet_ac1": {},
+            "majority_agreement": 1.0,
+            "disagreement": 0.04163
+          },
           "majority_agreement": 1.0,
-          "disagreement": 0.042
+          "disagreement": 0.042,
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.333
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "other": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            }
+          }
         }
       }
     },
     "Rusko_použilo_hypersonickou_střelu_Zirkon.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "fleiss_kappa": {},
+        "krippendorff_alpha": {},
+        "gwet_ac1": {},
+        "majority_agreement": 0.75,
+        "disagreement": 0.16675
+      },
       "majority_agreement": 0.727,
       "disagreement": 0.212,
       "questions": {
         "range": {
           "multiple_choice": false,
           "majority_agreement": 1.0,
-          "disagreement": 0.0
+          "disagreement": 0.0,
+          "options": {}
         },
         "genre": {
           "multiple_choice": false,
           "majority_agreement": 1.0,
-          "disagreement": 0.0
+          "disagreement": 0.0,
+          "options": {}
         },
         "message-trigger": {
           "multiple_choice": false,
           "majority_agreement": 0.0,
-          "disagreement": 1.0
+          "disagreement": 1.0,
+          "options": {}
         },
         "place": {
           "multiple_choice": true,
+          "irr_result": {
+            "description": "mean IRR through options",
+            "fleiss_kappa": {},
+            "krippendorff_alpha": {},
+            "gwet_ac1": {},
+            "majority_agreement": 0.75,
+            "disagreement": 0.16675
+          },
           "majority_agreement": 0.75,
-          "disagreement": 0.167
+          "disagreement": 0.167,
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 0.0,
+              "disagreement": 0.667
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 0.0,
+              "disagreement": 0.667
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "other": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            }
+          }
         }
       }
     },
     "Tvrdík_skončil_jako_viceprezident.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "fleiss_kappa": {},
+        "krippendorff_alpha": {},
+        "gwet_ac1": {},
+        "majority_agreement": 1.0,
+        "disagreement": 0.08325
+      },
       "majority_agreement": 0.818,
       "disagreement": 0.212,
       "questions": {
         "range": {
           "multiple_choice": false,
           "majority_agreement": 0.0,
-          "disagreement": 1.0
+          "disagreement": 1.0,
+          "options": {}
         },
         "genre": {
           "multiple_choice": false,
           "majority_agreement": 1.0,
-          "disagreement": 0.0
+          "disagreement": 0.0,
+          "options": {}
         },
         "message-trigger": {
           "multiple_choice": false,
           "majority_agreement": 0.0,
-          "disagreement": 0.667
+          "disagreement": 0.667,
+          "options": {}
         },
         "place": {
           "multiple_choice": true,
+          "irr_result": {
+            "description": "mean IRR through options",
+            "fleiss_kappa": {},
+            "krippendorff_alpha": {},
+            "gwet_ac1": {},
+            "majority_agreement": 1.0,
+            "disagreement": 0.08325
+          },
           "majority_agreement": 1.0,
-          "disagreement": 0.083
+          "disagreement": 0.083,
+          "options": {
+            "czech-republic": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "slovakia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "poland": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.333
+            },
+            "germany": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "russia": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "ukraine": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            },
+            "other": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.333
+            },
+            "unknown": {
+              "description": "IRR for this option",
+              "fleiss_kappa": {},
+              "krippendorff_alpha": {},
+              "gwet_ac1": {},
+              "majority_agreement": 1.0,
+              "disagreement": 0.0
+            }
+          }
         }
       }
     }
