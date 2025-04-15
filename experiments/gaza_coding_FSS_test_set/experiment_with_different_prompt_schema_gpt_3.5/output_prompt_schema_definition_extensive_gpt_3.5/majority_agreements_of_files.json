@@ -1,0 +1,709 @@
+{
+  "irr_result": {
+    "description": "mean IRR through questions",
+    "majority_agreement": 0.66648
+  },
+  "majority_agreement": 0.724,
+  "files": {
+    "2023-10-07T00-00-00_2023WN280031.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.76288
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-10-09T09-30-00_2023WN282044.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.78788
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-10-09T13-14-00_2023WN282092.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.62197
+      },
+      "majority_agreement": 0.636
+    },
+    "2023-10-09T15-15-00_2023WN282115.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.83788
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-10-10T18-48-00_2023WN283309.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73788
+      },
+      "majority_agreement": 0.788
+    },
+    "2023-10-10T19-06-00_2023WN283165.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.58409
+      },
+      "majority_agreement": 0.606
+    },
+    "2023-10-10T21-42-00_2023WN283184.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.58182
+      },
+      "majority_agreement": 0.606
+    },
+    "2023-10-12T12-23-00_2023WN285198.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.8856
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-10-12T16-14-00_2023WN285133.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.65531
+      },
+      "majority_agreement": 0.667
+    },
+    "2023-10-15T15-10-00_2023WN288053.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.8856
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-10-15T22-57-00_2023WN288085.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.82727
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-10-16T10-36-00_2023WN289053.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.55303
+      },
+      "majority_agreement": 0.545
+    },
+    "2023-10-18T15-48-00_2023WN291099.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.87727
+      },
+      "majority_agreement": 0.879
+    },
+    "2023-10-18T18-55-00_2023WN291138.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.8856
+      },
+      "majority_agreement": 0.909
+    },
+    "2023-10-19T12-46-00_2023WN292103.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.57803
+      },
+      "majority_agreement": 0.545
+    },
+    "2023-10-22T07-25-00_2023WN295020.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77348
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-10-22T07-25-00_2023WN295041.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77121
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-10-23T10-25-00_2023WN296049.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.65682
+      },
+      "majority_agreement": 0.606
+    },
+    "2023-10-23T13-07-00_2023WN296102.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.86288
+      },
+      "majority_agreement": 0.879
+    },
+    "2023-10-24T09-40-00_2023WN297177.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.60909
+      },
+      "majority_agreement": 0.636
+    },
+    "2023-10-24T14-23-00_2023WN297100.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.86061
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-10-26T00-00-00_2023WN299130.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.86894
+      },
+      "majority_agreement": 0.879
+    },
+    "2023-10-26T00-00-00_2023WN299182.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.7606
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-10-27T00-00-00_2023WN300102.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74849
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-10-30T00-00-00_2023WN303044.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.55531
+      },
+      "majority_agreement": 0.515
+    },
+    "2023-10-30T00-00-00_2023WN303135.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77121
+      },
+      "majority_agreement": 0.727
+    },
+    "2023-10-30T12-21-00_2023WN303202.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.81061
+      },
+      "majority_agreement": 0.788
+    },
+    "2023-10-31T10-28-00_2023WN304046.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.50909
+      },
+      "majority_agreement": 0.515
+    },
+    "2023-11-01T20-08-00_2023WN305205.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.76667
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-11-02T08-14-00_2023WN306020.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.63182
+      },
+      "majority_agreement": 0.667
+    },
+    "2023-11-02T16-02-00_2023WN306156.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.95833
+      },
+      "majority_agreement": 0.97
+    },
+    "2023-11-04T18-33-00_2023WN308071.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.67576
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-11-05T14-59-00_2023WN309050.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.60076
+      },
+      "majority_agreement": 0.606
+    },
+    "2023-11-08T09-27-00_2023WN312233.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.56288
+      },
+      "majority_agreement": 0.636
+    },
+    "2023-11-08T12-04-00_2023WN312097.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.61111
+      },
+      "majority_agreement": 0.636
+    },
+    "2023-11-08T18-38-00_2023WN312210.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.55076
+      },
+      "majority_agreement": 0.545
+    },
+    "2023-11-12T10-11-00_2023WN316039.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.88788
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-11-12T15-38-00_2023WN316094.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.57803
+      },
+      "majority_agreement": 0.545
+    },
+    "2023-11-13T08-23-00_2023WN317033.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.83788
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-11-15T15-46-00_2023WN319189.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.58889
+      },
+      "majority_agreement": 0.591
+    },
+    "2023-11-15T18-58-00_2023WN319238.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.58636
+      },
+      "majority_agreement": 0.576
+    },
+    "2023-11-16T08-27-00_2023WN320033.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.71515
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-11-16T19-47-00_2023WN320191.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.52803
+      },
+      "majority_agreement": 0.515
+    },
+    "2023-11-19T21-20-00_2023WN323090.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.84394
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-11-20T10-29-00_2023WN324050.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73636
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-11-21T08-43-00_2023WN325032.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.7606
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-11-23T13-26-00_2023WN327118.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.6053
+      },
+      "majority_agreement": 0.576
+    },
+    "2023-11-23T16-26-00_2023WN327165.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.69849
+      },
+      "majority_agreement": 0.667
+    },
+    "2023-11-24T14-23-00_2023WN328136.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73788
+      },
+      "majority_agreement": 0.727
+    },
+    "2023-11-25T11-25-00_2023WN329031.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.79621
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-11-29T09-38-00_2023WN333049.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.84394
+      },
+      "majority_agreement": 0.848
+    },
+    "2023-11-29T16-48-00_2023WN333186.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74469
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-11-30T07-26-00_2023WN334018.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.86288
+      },
+      "majority_agreement": 0.879
+    },
+    "2023-12-05T07-38-00_2023WN339020.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.64848
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-12-05T16-50-00_2023WN339165.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.72348
+      },
+      "majority_agreement": 0.697
+    },
+    "2023-12-09T12-15-00_2023WN343042.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.81515
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-12-09T20-08-00_2023WN343089.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.69924
+      },
+      "majority_agreement": 0.667
+    },
+    "2023-12-10T11-34-00_2023WN344037.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.79394
+      },
+      "majority_agreement": 0.788
+    },
+    "2023-12-14T18-05-00_2023WN348154.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.7356
+      },
+      "majority_agreement": 0.758
+    },
+    "2023-12-15T17-14-00_2023WN349144.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.67803
+      },
+      "majority_agreement": 0.606
+    },
+    "2023-12-21T09-39-00_2023WN355039.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.79394
+      },
+      "majority_agreement": 0.818
+    },
+    "2023-12-22T08-25-00_2023WN356016.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.81288
+      },
+      "majority_agreement": 0.788
+    },
+    "2023-12-23T14-29-00_2023WN357061.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.85909
+      },
+      "majority_agreement": 0.788
+    },
+    "2023-12-31T12-11-00_2023WN365037.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.80682
+      },
+      "majority_agreement": 0.727
+    },
+    "2024-01-02T18-18-00_2024WN002160.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.64848
+      },
+      "majority_agreement": 0.667
+    },
+    "2024-01-04T05-35-00_2024WN004003.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.76288
+      },
+      "majority_agreement": 0.758
+    },
+    "2024-01-11T16-57-00_2024WN011163.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.69242
+      },
+      "majority_agreement": 0.727
+    },
+    "2024-01-12T11-45-00_2024WN012085.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77348
+      },
+      "majority_agreement": 0.758
+    },
+    "2024-01-12T16-04-00_2024WN012115.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.8356
+      },
+      "majority_agreement": 0.818
+    },
+    "2024-01-14T11-21-00_2024WN014028.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.71515
+      },
+      "majority_agreement": 0.697
+    },
+    "2024-01-18T14-08-00_2024WN018124.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.57576
+      },
+      "majority_agreement": 0.576
+    },
+    "2024-01-19T14-38-00_2024WN019126.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.82121
+      },
+      "majority_agreement": 0.818
+    },
+    "2024-01-28T20-24-00_2024WN028088.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.70454
+      },
+      "majority_agreement": 0.727
+    },
+    "2024-01-29T14-22-00_2024WN029073.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.72121
+      },
+      "majority_agreement": 0.667
+    },
+    "2024-01-30T12-35-00_2024WN030052.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.70076
+      },
+      "majority_agreement": 0.667
+    },
+    "2024-01-31T09-52-00_2024WN031056.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.72576
+      },
+      "majority_agreement": 0.697
+    },
+    "2024-02-07T08-50-00_2024WN038191.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.43864
+      },
+      "majority_agreement": 0.455
+    },
+    "2024-02-07T20-57-00_2024WN038200.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77348
+      },
+      "majority_agreement": 0.758
+    },
+    "2024-02-14T20-31-00_2024WN045169.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74621
+      },
+      "majority_agreement": 0.727
+    },
+    "2024-02-15T14-13-00_2024WN046130.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.77576
+      },
+      "majority_agreement": 0.758
+    },
+    "2024-02-16T06-10-00_2024WN047006.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.60909
+      },
+      "majority_agreement": 0.636
+    },
+    "2024-02-17T21-11-00_2024WN048103.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74621
+      },
+      "majority_agreement": 0.727
+    },
+    "2024WN053024.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.95833
+      },
+      "majority_agreement": 0.97
+    },
+    "2024WN058034.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.6356
+      },
+      "majority_agreement": 0.667
+    },
+    "2024WN064149.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73182
+      },
+      "majority_agreement": 0.697
+    },
+    "2024WN079145.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.62576
+      },
+      "majority_agreement": 0.606
+    },
+    "2024WN096007.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.69621
+      },
+      "majority_agreement": 0.727
+    },
+    "2024WN104121.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.76288
+      },
+      "majority_agreement": 0.788
+    },
+    "2024WN109163.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.52803
+      },
+      "majority_agreement": 0.545
+    },
+    "2024WN119043.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.93333
+      },
+      "majority_agreement": 0.909
+    },
+    "2024WN128128.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73182
+      },
+      "majority_agreement": 0.727
+    },
+    "2024WN140018.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.87955
+      },
+      "majority_agreement": 0.848
+    },
+    "2024WN149082.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.6697
+      },
+      "majority_agreement": 0.667
+    },
+    "2024WN161064.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.83788
+      },
+      "majority_agreement": 0.818
+    },
+    "2024WN172020.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.69242
+      },
+      "majority_agreement": 0.636
+    },
+    "2024WN185176.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.73636
+      },
+      "majority_agreement": 0.697
+    },
+    "2024WN201004.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.88788
+      },
+      "majority_agreement": 0.848
+    },
+    "2024WN213189.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74849
+      },
+      "majority_agreement": 0.758
+    },
+    "2024WN223008.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.74697
+      },
+      "majority_agreement": 0.697
+    },
+    "2024WN240099.txt": {
+      "irr_result": {
+        "description": "mean IRR through questions in file",
+        "majority_agreement": 0.71111
+      },
+      "majority_agreement": 0.773
+    }
+  }
+}
