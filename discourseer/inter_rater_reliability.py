@@ -414,11 +414,11 @@ class IRRResult(pydantic.BaseModel):
         if not results:
             return IRRResult.get_empty()
         return IRRResult(
-            fleiss_kappa=IRRResult.calc_mean_of_IRRVariants([result.fleiss_kappa for result in results]),
-            krippendorff_alpha=IRRResult.calc_mean_of_IRRVariants([result.krippendorff_alpha for result in results]),
-            gwet_ac1=IRRResult.calc_mean_of_IRRVariants([result.gwet_ac1 for result in results]),
-            majority_agreement=IRRResult.calc_mean_of_values([result.majority_agreement for result in results]),
-            disagreement=IRRResult.calc_mean_of_values([result.disagreement for result in results])
+            fleiss_kappa=IRRResult.calc_mean_of_IRRVariants([result.fleiss_kappa for result in results if result]),
+            krippendorff_alpha=IRRResult.calc_mean_of_IRRVariants([result.krippendorff_alpha for result in results if result]),
+            gwet_ac1=IRRResult.calc_mean_of_IRRVariants([result.gwet_ac1 for result in results if result]),
+            majority_agreement=IRRResult.calc_mean_of_values([result.majority_agreement for result in results if result]),
+            disagreement=IRRResult.calc_mean_of_values([result.disagreement for result in results if result])
         )
 
     @staticmethod
@@ -585,7 +585,7 @@ class IRR:
         irr_results = IRRResults(
             majority_agreement=self.calc_majority_agreement(df),
             disagreement=self.calc_disagreement(df),
-            questions = self.calculate_irr_for_each_question(df),
+            questions=self.calculate_irr_for_each_question(df),
             files=self.calculate_irr_for_each_file(df)
         )
         irr_results.calc_mean_through_questions()
@@ -615,20 +615,19 @@ class IRR:
             df_question = df.xs(question_id, level=self.index_cols[1])
             unique_options = list(df_question.index.get_level_values('option_id').unique())
 
-            if only_maj_agreement:
-                irr_question_results[question_id] = IRRQuestionResult(
-                    multiple_choice=len(unique_options) > 1,
-                    majority_agreement=self.calc_majority_agreement(df_question),
-                    disagreement=self.calc_disagreement(df_question),
-                )
-                continue
-
             if len(unique_options) == 0:
                 logger.warning(f"No ratings for question_id {question_id}. Skipping IRR calculation.")
                 continue
             elif len(unique_options) == 1 and unique_options[0] == single_choice_tag:
                 logger.debug(f'calculating IRR for single choice question {question_id}')
                 # question is single choice, calculate IRR for the question as a whole
+                if only_maj_agreement:
+                    irr_question_results[question_id] = IRRQuestionResult(
+                        multiple_choice=False,
+                        majority_agreement=self.calc_majority_agreement(df_question),
+                        disagreement=self.calc_disagreement(df_question),
+                    )
+                    continue
                 irr_result=self.get_irr_result(df_question)
                 irr_result.description = IRRResultDescription.irr_for_single_choice_question
                 irr_question_results[question_id] = IRRQuestionResult(
@@ -638,7 +637,7 @@ class IRR:
                     disagreement=irr_result.disagreement)
             else:  # multiple choice question
                 irr_question_results[question_id] = self.calculate_irr_for_each_option(
-                    df_question, unique_options, question_id)
+                    df_question, unique_options, question_id, only_maj_agreement=only_maj_agreement)
             
         return irr_question_results
 
@@ -655,18 +654,14 @@ class IRR:
                     disagreement=self.calc_disagreement(df_file),
                     questions=self.calculate_irr_for_each_question(df_file, only_maj_agreement=only_maj_agreement)
                 )
-            if only_maj_agreement:
-                for question_id, irr_question_result in file_result.questions.items():
-                    irr_question_result.irr_result = None
-                    irr_question_result.options = None
-            else:
-                file_result.irr_result = file_result.calc_mean_through_questions(file_results[file_id].questions)
+            file_result.irr_result = file_result.calc_mean_through_questions() #file_results[file_id].questions)
 
             file_results[file_id] = file_result
 
         return file_results
 
-    def calculate_irr_for_each_option(self, df_question: pd.DataFrame, unique_options: list[str], question_id: str) -> IRRQuestionResult:
+    def calculate_irr_for_each_option(self, df_question: pd.DataFrame, unique_options: list[str], question_id: str,
+                                      only_maj_agreement: bool = False) -> IRRQuestionResult:
         option_results: Dict[str, IRRResult] = {}
 
         for option in unique_options:
@@ -683,7 +678,7 @@ class IRR:
 
             logger.debug(f'calculating IRR for option "{option}" in multi choice question {question_id}')
 
-            option_irr_result = self.get_irr_result(df_option)
+            option_irr_result = self.get_irr_result(df_option, only_maj_agreement=only_maj_agreement)
             option_irr_result.description = IRRResultDescription.irr_for_this_option
             option_results[option] = option_irr_result
 
@@ -703,14 +698,23 @@ class IRR:
 
         return irr_question_result
 
-    def get_irr_result(self, df: pd.DataFrame) -> IRRResult:
+    def get_irr_result(self, df: pd.DataFrame, only_maj_agreement: bool = False) -> IRRResult:
+        maj_agreement = self.calc_majority_agreement(df)
+        disagreement = self.calc_disagreement(df)
+        if only_maj_agreement:
+            return IRRResult(
+                fleiss_kappa=IRRVariants(),
+                krippendorff_alpha=IRRVariants(),
+                gwet_ac1=IRRVariants(),
+                majority_agreement=maj_agreement,
+                disagreement=disagreement,
+            )
+
         if self.model_rater or self.col_model in df.columns:
             cac_with_model = CAC(df.loc[:, self.input_columns + self.model_columns])
         else:
             cac_with_model = None
 
-        maj_agreement = self.calc_majority_agreement(df)
-        disagreement = self.calc_disagreement(df)
         cac_without_model = CAC(df.loc[:, self.input_columns])
         cac_worst_case = CAC(df.loc[:, self.input_columns + [self.col_worst_case]])
         cac_best_case = CAC(df.loc[:, self.input_columns + [self.col_best_case]])
