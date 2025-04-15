@@ -130,7 +130,7 @@ class IRRResults(pydantic.BaseModel):
                 self.disagreement is None and
                 not self.questions)
 
-    def file_results_to_pandas(self) -> Optional[pd.DataFrame]:
+    def maj_agg_file_results_to_pandas(self) -> Optional[pd.DataFrame]:
         if not self.files:
             return None
 
@@ -156,6 +156,57 @@ class IRRResults(pydantic.BaseModel):
         df = df.sort_values(by='file_majority_agreement')
 
         return df
+
+    def disagg_file_results_to_pandas(self) -> Optional[pd.DataFrame]:
+        if not self.files:
+            return None
+
+        file_results = []
+
+        # add overall result to the dataframe (gets sorted according to the file_disagreement later between all files)
+        # overall_result = {
+        #     'file_id': 'overall',
+        #     'file_disagreement': self.disagreement}
+        # for question_id, irr_question_result in self.questions.items():
+        #     if irr_question_result.disagreement is not None:
+        #         overall_result[question_id] = irr_question_result.disagreement
+        # for question_id, irr_question_result in self.questions.items():
+        #     if not irr_question_result:
+        #         continue
+        #     for option_id, irr_option_result in irr_question_result.options.items():
+        #         if not irr_option_result:
+        #             continue
+        #         overall_result[f'{question_id}_{option_id}'] = irr_option_result.disagreement
+        # file_results.append(overall_result)
+
+        for file_id, irr_file_result in self.files.items():
+            if not irr_file_result:
+                continue
+
+            file_result = {'file_id': file_id}
+            if irr_file_result.disagreement is not None:
+                file_result['file_disagreement'] = irr_file_result.disagreement
+
+            file_result.update({question_id: irr_question_result.disagreement
+                                for question_id, irr_question_result in irr_file_result.questions.items() if irr_question_result is not None})
+            
+            # add also option results with question_prefix as key
+            for question_id, irr_question_result in irr_file_result.questions.items():
+                if not irr_question_result or not irr_question_result.multiple_choice or not irr_question_result.options:
+                    continue
+                for option_id, irr_option_result in irr_question_result.options.items():
+                    if not irr_option_result:
+                        continue
+                    file_result[f'{question_id}_{option_id}'] = irr_option_result.disagreement
+
+            file_result['file_id'] = file_id
+            file_results.append(file_result)
+
+        df = pd.DataFrame(file_results).set_index('file_id')
+        df = df.sort_values(by='file_disagreement')
+
+        return df
+
 
     @classmethod
     def from_json_file(cls, file: str) -> IRRResults:
@@ -456,6 +507,7 @@ class IRR:
 
     df_maj_agg_files_and_questions = None
     maj_agg_files_and_questions_file = 'majority_agreements_of_files_and_questions.csv'
+    disagg_files_and_questions_file = 'disagreement_of_files_and_questions.csv'
 
     def __init__(self, raters: list[Rater] = None, model_rater: Rater = None, df: pd.DataFrame = None,
                  out_dir: str = 'IRR_output',
@@ -549,6 +601,7 @@ class IRR:
             utils.dict_to_json_file(maj_agg_files, maj_agg_files_path)
 
             self.export_maj_agg_files_and_questions(irr_results)
+            self.export_disagg_files_and_questions(irr_results)
 
         return irr_results
 
@@ -809,7 +862,7 @@ class IRR:
         return df
 
     def export_maj_agg_files_and_questions(self, irr_results: IRRResults):
-        df_files = irr_results.file_results_to_pandas()
+        df_files = irr_results.maj_agg_file_results_to_pandas()
         if df_files is None:
             return
 
@@ -839,6 +892,15 @@ class IRR:
         out_file = os.path.join(self.out_dir, 'majority_agreement_heatmap.png')
         plt.savefig(out_file)
         plt.close()
+
+    def export_disagg_files_and_questions(self, irr_results: IRRResults):
+        df_files = irr_results.disagg_file_results_to_pandas()
+        if df_files is None:
+            return
+
+        df_files_output_file = os.path.join(self.out_dir, self.disagg_files_and_questions_file)
+        self.df_disagg_files_and_questions = df_files.copy()
+        df_files.to_csv(df_files_output_file)
 
     def get_maj_agg_files_and_questions_summary(self) -> str:
         if self.df_maj_agg_files_and_questions is None or self.df_maj_agg_files_and_questions.empty:
