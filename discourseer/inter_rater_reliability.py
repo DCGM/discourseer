@@ -203,7 +203,7 @@ class IRRResults(pydantic.BaseModel):
             file_results.append(file_result)
 
         df = pd.DataFrame(file_results).set_index('file_id')
-        df = df.sort_values(by='file_disagreement')
+        df = df.sort_values(by='file_disagreement', ascending=False)
 
         return df
 
