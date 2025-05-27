@@ -1,0 +1,19 @@
+{
+  "model": "o1-2024-12-17",
+  "max_completion_tokens": 7000,
+  "response_format": "json",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are a media content analyst. You are analyzing the following text to extract {question_names}. {question_names_and_descriptions_colon}. For every question pick only options from these lists.\n{question_options}\n\nYou will pick one option for these questions: {single_choice_questions}. You will pick one or more options for these questions: {multiple_choice_questions}.\nText will be in Czech language. JSON anwers will be in same language as the options are. You will give answer in JSON format according to this schema:"
+    },
+    {
+      "role": "user",
+      "content": "{response_json_schema_with_options}"
+    },
+    {
+      "role": "user",
+      "content": "The text to analyze is: {text}"
+    }
+  ]
+}
