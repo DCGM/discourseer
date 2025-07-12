@@ -47,8 +47,8 @@ def plot_kripp_alpha_and_majority_agreement(
     if sort_by_alpha:
         df = df.sort_values('kripp_alpha', ascending=False).reset_index(drop=True)
 
-    df.kripp_alpha.plot(kind='bar', color=col_1, ax=ax, width=width, position=1)
-    df.majority_agreement.plot(kind='bar', color=col_2, ax=ax2, width=width, position=0)
+    df.kripp_alpha.plot(kind='bar', color=col_1, ax=ax, width=width, position=1, rot=0)
+    df.majority_agreement.plot(kind='bar', color=col_2, ax=ax2, width=width, position=0, rot=0)
 
     # add all names to title like "0: orig, 1: new, 2: new2"
     title = r'$\bf{' + title.replace(' ', '\\ ') + '}$:\n' if title else ''
@@ -57,10 +57,10 @@ def plot_kripp_alpha_and_majority_agreement(
 
     ax.set_xlim(-.5, len(df.index)-.5)
     ax.set_xlabel('Experiment')
-    ax.set_ylim(.3 if df.kripp_alpha.min() > .3 else None, None)  # .3 is 90 % of the lowest meassured kripp alpha so far
-    ax2.set_ylim(.62 if df.majority_agreement.min() > .62 else None, None)  # .62 is 90 % of the lowest meassured majority agreement so far
+    ax.set_ylim(.3 if df.kripp_alpha.min() > .3 else None, .53)  # .3 is 90 % of the lowest meassured kripp alpha so far
+    ax2.set_ylim(.62 if df.majority_agreement.min() > .62 else None, .87)  # .62 is 90 % of the lowest meassured majority agreement so far
 
-    ax.set_ylabel('Kripp Alpha <-1,1>', color=col_1)
+    ax.set_ylabel('Krippendorff\'s alpha <-1,1>', color=col_1)
     ax.yaxis.label.set_color(col_1)
     ax.tick_params(axis='y', colors=col_1)
     ax2.set_ylabel('Majority Agreement <0,1>', color=col_2)
@@ -70,5 +70,8 @@ def plot_kripp_alpha_and_majority_agreement(
     plt.tight_layout()
     if to_file:
         plt.savefig(to_file)
+        file_path, file_ext = to_file.rsplit('.', 1)
+        pdf = file_path + '.pdf'
+        plt.savefig(pdf)
 
     return fig
