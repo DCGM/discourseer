@@ -6,6 +6,7 @@ import json
 import time
 from typing import List, Union
 from tqdm import tqdm
+from dotenv import load_dotenv
 
 from discourseer.codebook import Codebook, all_questions_at_once_tag
 from discourseer.rater import Rater
@@ -48,6 +49,7 @@ def parse_args():
     parser.add_argument('--openai-api-key', type=str)
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
+    parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of OpenAI API.")
 
     return parser.parse_args()
 
@@ -73,6 +75,7 @@ def setup_logging(log_level: str, log_file: str):
 
 
 def main():
+    load_dotenv()
     args = parse_args()
 
     tmp_dir = 'tmp'
@@ -95,7 +98,8 @@ def main():
         question_subset=args.question_subset,
         text_count=args.text_count,
         copy_input_ratings=args.copy_input_ratings,
-        openai_api_key=args.openai_api_key
+        openai_api_key=args.openai_api_key,
+        openrouter=args.openrouter,
     )
     discourseer()
 
@@ -110,13 +114,14 @@ class Discourseer:
     def __init__(self, experiment_dir: str = 'experiments/default_experiment', texts_dir: str = None,
                  ratings_dirs: List[str] = None, output_dir: str = None, question_subset: List[str] = None,
                  codebook: str = None, openai_api_key: str = None, prompt_schema_definition: str = None,
-                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None):
+                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None, openrouter: bool = False):
         self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.codebook = self.load_codebook(experiment_dir, codebook, question_subset)
         self.raters = self.load_raters(experiment_dir, ratings_dirs, self.codebook)
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
+        self.openrouter = openrouter
 
         if getattr(self.prompt_schema_definition, 'prompt_individual_questions', False):
             self.individual_codebooks = self.codebook.split_by_individual_questions()
@@ -130,7 +135,7 @@ class Discourseer:
         conversation_setting.pop('messages', None)
         self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], chat_log=[], **conversation_setting)
 
-        self.client = ChatClient(openai_api_key=openai_api_key)
+        self.client = ChatClient(openai_api_key=openai_api_key, openrouter=openrouter)
         self.model_rater = Rater(name="model", codebook=self.codebook)
 
         first_prompt = self.prompt_schema_definition.messages[0].content
@@ -177,8 +182,12 @@ class Discourseer:
         conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
-        logging.debug(f"Response raw: {response}")
-        response = response.choices[0].message.content
+        logging.debug(f"Response raw: {json.dumps(response, indent=2)}")
+        logging.debug(f"Response keys: {response.keys()}")
+        if self.openrouter:
+            response = response["choices"][0]["message"]["content"]
+        else:
+            response = response.choices[0].message.content
         if response == '':
             logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is "
                             f"not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter"
