@@ -53,18 +53,24 @@ class Rater:
             assert len(self.option_name_to_option_id[question.id]) == len(question.options), \
                 f"Option names are not unique for question {question.id}: " + ', '.join([o.name for o in question.options])
 
-    def add_model_response(self, file, response: dict):
+    def add_model_response(self, file, response: dict, must_be_correct: bool = False) -> bool:
         """Add model response to rater. Response_id should be question names."""
+        matched_response_ids = []
+        question_ids = []
         for response_question_name, response_option_name in response.items():
             logger.debug(f"Adding rating: {response_question_name}, {response_option_name}")
 
             question_id = self.question_name_to_question_id.get(response_question_name, None)
             if not question_id:
+                if must_be_correct:
+                    return False
                 logger.info(f"Response name {response_question_name} not found in question names. Skipping.")
                 self.unmatched_response_question_names[response_question_name] = response_option_name
                 continue
 
             if not response_option_name:
+                if must_be_correct:
+                    return False
                 logger.info(f"None or empty response_option_name for response ID {response_question_name}. Skipping.")
                 self.unmatched_response_option_names[question_id] = response_option_name
                 continue
@@ -73,19 +79,26 @@ class Rater:
                 response_option_name = [response_option_name]
 
             # match response names to response ids
-            matched_response_ids = []
+            matched_response_ids_ = []
             for response_option_name in response_option_name:
                 option_id = self.option_name_to_option_id[question_id].get(response_option_name, None)
                 if not option_id:
+                    if must_be_correct:
+                        return False
                     logger.info(f"Response option name {response_option_name} not found in question options. Skipping.")
                     self.unmatched_response_option_names[question_id] = response_option_name
                     continue
-                matched_response_ids.append(option_id)
+                matched_response_ids_.append(option_id)
+            matched_response_ids.append(matched_response_ids_)
+            question_ids.append(question_id)
 
-            if matched_response_ids:
-                new_rating = Rating(file=file, question_id=question_id, rated_option_ids=matched_response_ids)
+        for question_id, matched_response_ids_ in zip(question_ids, matched_response_ids, strict=True):
+            if matched_response_ids_:
+                new_rating = Rating(file=file, question_id=question_id, rated_option_ids=matched_response_ids_)
                 self.ratings.append(new_rating)
                 logger.debug(f"saved rating: {new_rating}")
+
+        return True
 
     def save_to_csv(self, out_file: str):
         out_path = os.path.dirname(out_file)

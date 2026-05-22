@@ -75,19 +75,42 @@ class ChatMessage(pydantic.BaseModel):
 
 
 class ChatClient:
-    def __init__(self, openai_api_key: str = None, openrouter: bool = False):
+    def __init__(
+        self,
+        openai_api_key: str = None,
+        openrouter: bool = False,
+        base_url: str = None,
+    ):
         self.openrouter = openrouter
+        self.base_url = base_url
 
-        if openai_api_key is None:
-            openai_api_key = os.environ.get("OPENAI_API_KEY", None)
+        self.is_ollama = (
+            base_url is not None
+            and "localhost:11434" in base_url
+        )
+        if not self.is_ollama:
+            if openai_api_key is None:
+                openai_api_key = os.environ.get("OPENAI_API_KEY", None)
 
-        if openai_api_key is None:
-            raise ValueError("OpenAI API key not provided. Please provide it as an argument `--openai-api-key` "
-                             "or set the OPENAI_API_KEY environment variable.")
+            if openai_api_key is None:
+                raise ValueError(
+                    "OpenAI API key not provided."
+                )
+        else:
+            openai_api_key = "ollama"
 
-        self.client = OpenAI(api_key=openai_api_key) if not openrouter else None
+        self.client = (
+            OpenAI(
+                api_key=openai_api_key,
+                base_url=base_url,
+            )
+            if not openrouter
+            else None
+        )
+
         self.openai_api_key = openai_api_key
-        self.test_client()
+
+        # self.test_client()
 
     def invoke(self, response_format: ResponseFormat = ResponseFormat.normal, **kwargs):
         kwargs = self.exclude_none_values(kwargs)

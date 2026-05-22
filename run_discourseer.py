@@ -50,6 +50,8 @@ def parse_args():
     parser.add_argument('--log', default="INFO", choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
                         help='The logging level to use.')
     parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of OpenAI API.")
+    parser.add_argument("--base-url", type=str, default=None, help="Base URL for OpenAI API or OpenRouter.")
+    parser.add_argument("--max-retries", type=int, default=3, help="Maximum number of retries for API calls with invalid JSON response.")
 
     return parser.parse_args()
 
@@ -100,6 +102,8 @@ def main():
         copy_input_ratings=args.copy_input_ratings,
         openai_api_key=args.openai_api_key,
         openrouter=args.openrouter,
+        base_url=args.base_url,
+        max_retries=args.max_retries,
     )
     discourseer()
 
@@ -114,7 +118,7 @@ class Discourseer:
     def __init__(self, experiment_dir: str = 'experiments/default_experiment', texts_dir: str = None,
                  ratings_dirs: List[str] = None, output_dir: str = None, question_subset: List[str] = None,
                  codebook: str = None, openai_api_key: str = None, prompt_schema_definition: str = None,
-                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None, openrouter: bool = False):
+                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None, openrouter: bool = False, base_url: str = None, max_retries: int = 3):
         self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.codebook = self.load_codebook(experiment_dir, codebook, question_subset)
@@ -122,6 +126,8 @@ class Discourseer:
         self.prompt_schema_definition = self.load_prompt_schema_definition(experiment_dir, prompt_schema_definition)
         self.copy_input_ratings = copy_input_ratings
         self.openrouter = openrouter
+        self.base_url = base_url
+        self.max_retries = max_retries
 
         if getattr(self.prompt_schema_definition, 'prompt_individual_questions', False):
             self.individual_codebooks = self.codebook.split_by_individual_questions()
@@ -135,7 +141,7 @@ class Discourseer:
         conversation_setting.pop('messages', None)
         self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], chat_log=[], **conversation_setting)
 
-        self.client = ChatClient(openai_api_key=openai_api_key, openrouter=openrouter)
+        self.client = ChatClient(openai_api_key=openai_api_key, openrouter=openrouter, base_url=base_url)
         self.model_rater = Rater(name="model", codebook=self.codebook)
 
         first_prompt = self.prompt_schema_definition.messages[0].content
@@ -147,9 +153,23 @@ class Discourseer:
             for codebook in self.individual_codebooks:
                 with open(file, 'r', encoding='utf-8') as f:
                     text = f.read()
-                    logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
+                logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
+                call_count = 1
+                adding_result = False
+                while call_count <= self.max_retries:
                     response = self.extract_answers(text, os.path.basename(file), codebook)
-                    self.model_rater.add_model_response(os.path.basename(file), response)
+                    if response == {}:
+                        call_count += 1
+                        continue
+                    adding_result = self.model_rater.add_model_response(os.path.basename(file), response, must_be_correct=True)
+                    if adding_result:
+                        break
+                    logging.warning(f"Response for file {file} is empty or not a valid json. Retrying ({call_count}/{self.max_retries})...")
+                    call_count += 1
+
+                if not adding_result:
+                    self.model_rater.add_model_response(os.path.basename(file), response, must_be_correct=False)
+
             pydantic_to_json_file(self.conversation_log, self.get_output_file('conversation_log.json'), exclude=['messages'], exclude_none=True)
             self.model_rater.save_to_csv(self.get_output_file('model_ratings.csv'))
             self.model_rater.save_unmatched_responses(self.get_output_file('unmatched_model_responses.json'))
@@ -182,9 +202,9 @@ class Discourseer:
         conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
-        logging.debug(f"Response raw: {json.dumps(response, indent=2)}")
-        logging.debug(f"Response keys: {response.keys()}")
         if self.openrouter:
+            logging.debug(f"Response raw: {json.dumps(response, indent=2)}")
+            logging.debug(f"Response keys: {response.keys()}")
             response = response["choices"][0]["message"]["content"]
         else:
             response = response.choices[0].message.content
@@ -192,8 +212,9 @@ class Discourseer:
             logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is "
                             f"not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter"
                             f" especially if using an o series reasoning model like o1 or o3")
+            
         response = JSONParser.response_to_dict(response)
-
+    
         logging.debug(f"Response: {response}")
         if len(codebook.questions) > 1:
             question_id = all_questions_at_once_tag
