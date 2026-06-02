@@ -135,7 +135,7 @@ class ChatClient:
             else:
                 return self.completions_with_backoff(**kwargs)
 
-    @backoff.on_exception(backoff.expo, openai.RateLimitError)
+    @backoff.on_exception(backoff.expo, (openai.RateLimitError, OpenRouterError), max_time=300)
     def completions_with_backoff(self, **kwargs):
         if self.openrouter:
             result = requests.post(
