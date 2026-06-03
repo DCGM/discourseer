@@ -72,7 +72,7 @@ TEXTS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/texts
 RATINGS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/ratings
 OUTPUT_DIR=$ROOT_DIR/outputs
 
-PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/data/prompt_schema_definition_strict.json
+PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/prompt_schema_definition_tmp.json
 
 cat > $PROMPT_SCHEMA_DEFINITION <<EOF
 {
