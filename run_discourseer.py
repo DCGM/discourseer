@@ -80,6 +80,9 @@ def main():
     load_dotenv()
     args = parse_args()
 
+    # Print out the arguments for debugging purposes
+    logging.info(f"Arguments: {args}")
+
     tmp_dir = 'tmp'
     log_file = os.path.join(tmp_dir, 'logfile.log')
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
@@ -202,12 +205,10 @@ class Discourseer:
         conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
 
-        if self.openrouter:
-            logging.debug(f"Response raw: {json.dumps(response, indent=2)}")
-            logging.debug(f"Response keys: {response.keys()}")
-            response = response["choices"][0]["message"]["content"]
-        else:
-            response = response.choices[0].message.content
+        # if self.openrouter:
+        response = response["choices"][0]["message"]["content"]
+        # else:
+        #     response = response.choices[0].message.content
         if response == '':
             logging.warning(f"Empty response from GPT model for text: {text_id}. Possible cause is "
                             f"not enough output tokens. Consider raising max_tokens/max_completion_tokens parameter"

@@ -35,27 +35,23 @@ source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "true" \
-    --base-url $BASE_URL
+    --individual-questions "true"
 
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "false" \
-    --base-url $BASE_URL
+    --individual-questions "false" 
 
 CODEBOOK=$REPO_ROOT/codebooks/codebook_gaza_v0_kveten.json
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "true" \
-    --base-url $BASE_URL
+    --individual-questions "true" 
 
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "false" \
-    --base-url $BASE_URL
+    --individual-questions "false"

@@ -72,7 +72,7 @@ TEXTS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/texts
 RATINGS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/ratings
 OUTPUT_DIR=$ROOT_DIR/outputs
 
-PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/prompt_schema_definition_tmp.json
+PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/data/prompt_schema_definition_strict.json
 
 cat > $PROMPT_SCHEMA_DEFINITION <<EOF
 {
@@ -106,9 +106,8 @@ python $ROOT_DIR/run_discourseer.py \
     --output-dir $OUTPUT_DIR \
     --prompt-schema-definition $PROMPT_SCHEMA_DEFINITION \
     --codebook $CODEBOOK \
-    --base-url $BASE_URL \
-    --max-retries $MAX_RETRIES \
-    --text-count 2
+    --openrouter \
+    --max-retries $MAX_RETRIES
 
 cp $PROMPT_SCHEMA_DEFINITION $OUTPUT_DIR/prompt_schema_definition.json
 rm $PROMPT_SCHEMA_DEFINITION
