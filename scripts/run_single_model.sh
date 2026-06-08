@@ -30,28 +30,35 @@ RUN_SCRIPT="$SCRIPT_DIR/run_discourseer.sh"
 
 source $REPO_ROOT/../venv/bin/activate
 
+# Replace / in model name with - for output directory naming
+MODEL_DIR_NAME=$(echo "$MODEL" | tr '/' '-')
+
 CODEBOOK=$REPO_ROOT/codebooks/codebook_gaza_v2_srpen.json
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "true"
+    --individual-questions "true" \
+    --output-dir $REPO_ROOT/$MODEL_DIR_NAME-srpen-indi
 
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "false" 
+    --individual-questions "false" \
+    --output-dir $REPO_ROOT/$MODEL_DIR_NAME-srpen
 
 CODEBOOK=$REPO_ROOT/codebooks/codebook_gaza_v0_kveten.json
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "true" 
+    --individual-questions "true" \
+    --output-dir $REPO_ROOT/$MODEL_DIR_NAME-kveten-indi
 
 source "$RUN_SCRIPT" \
     --root-dir "$REPO_ROOT" \
     --model "$MODEL" \
     --codebook "$CODEBOOK" \
-    --individual-questions "false"
+    --individual-questions "false" \
+    --output-dir $REPO_ROOT/$MODEL_DIR_NAME-kveten

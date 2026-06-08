@@ -6,6 +6,8 @@ import json
 import time
 from typing import List, Union
 from tqdm import tqdm
+import pydantic_core
+import backoff
 from dotenv import load_dotenv
 
 from discourseer.codebook import Codebook, all_questions_at_once_tag
@@ -52,6 +54,7 @@ def parse_args():
     parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of OpenAI API.")
     parser.add_argument("--base-url", type=str, default=None, help="Base URL for OpenAI API or OpenRouter.")
     parser.add_argument("--max-retries", type=int, default=3, help="Maximum number of retries for API calls with invalid JSON response.")
+    parser.add_argument("--reasoning-effort", type=str, default=None, help="Add reasoning effort to the prompt.")
 
     return parser.parse_args()
 
@@ -107,6 +110,7 @@ def main():
         openrouter=args.openrouter,
         base_url=args.base_url,
         max_retries=args.max_retries,
+        reasoning_effort=args.reasoning_effort
     )
     discourseer()
 
@@ -121,7 +125,8 @@ class Discourseer:
     def __init__(self, experiment_dir: str = 'experiments/default_experiment', texts_dir: str = None,
                  ratings_dirs: List[str] = None, output_dir: str = None, question_subset: List[str] = None,
                  codebook: str = None, openai_api_key: str = None, prompt_schema_definition: str = None,
-                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None, openrouter: bool = False, base_url: str = None, max_retries: int = 3):
+                 copy_input_ratings: RatingsCopyMode = RatingsCopyMode.none, text_count: int = None, openrouter: bool = False, base_url: str = None, max_retries: int = 3,
+                 reasoning_effort: str = None):
         self.input_files = self.get_input_files(experiment_dir, texts_dir, text_count)
         self.output_dir = self.prepare_output_dir(experiment_dir, output_dir)
         self.codebook = self.load_codebook(experiment_dir, codebook, question_subset)
@@ -131,7 +136,7 @@ class Discourseer:
         self.openrouter = openrouter
         self.base_url = base_url
         self.max_retries = max_retries
-
+        self.reasoning_effort = reasoning_effort
         if getattr(self.prompt_schema_definition, 'prompt_individual_questions', False):
             self.individual_codebooks = self.codebook.split_by_individual_questions()
         else:
@@ -144,7 +149,7 @@ class Discourseer:
         conversation_setting.pop('messages', None)
         self.conversation_log = ConversationLog(schema_definition=self.prompt_schema_definition.messages, messages=[], chat_log=[], **conversation_setting)
 
-        self.client = ChatClient(openai_api_key=openai_api_key, openrouter=openrouter, base_url=base_url)
+        self.client = ChatClient(openai_api_key=openai_api_key, openrouter=openrouter, base_url=base_url, reasoning_effort=reasoning_effort)
         self.model_rater = Rater(name="model", codebook=self.codebook)
 
         first_prompt = self.prompt_schema_definition.messages[0].content
@@ -159,8 +164,9 @@ class Discourseer:
                 logging.debug(f'New document {file_counter + 1}/{len(self.input_files)}: {os.path.basename(file)}\n\n')
                 call_count = 1
                 adding_result = False
+                op =f"{self.output_dir}/{os.path.basename(file)}_{codebook.codebook_name}_{codebook.codebook_version}.json"
                 while call_count <= self.max_retries:
-                    response = self.extract_answers(text, os.path.basename(file), codebook)
+                    response = self.extract_answers(text, os.path.basename(file), codebook, op)
                     if response == {}:
                         call_count += 1
                         continue
@@ -188,7 +194,8 @@ class Discourseer:
         self.save_output(self.output_dir, irr_calculator)
         self.copy_input_ratings_to_output(irr_calculator)
 
-    def extract_answers(self, text: str, text_id: str, codebook: Codebook):
+    @backoff.on_exception(backoff.expo, (KeyError, TypeError, pydantic_core.ValidationError), max_tries=5)
+    def extract_answers(self, text: str, text_id: str, codebook: Codebook, output_path: str) -> dict:
         text_short = text[:min(40, len(text))].replace('\n', '')
         question_message = "" if len(codebook.questions) > 1 else f"for question: {codebook.questions[0].id}"
         logging.info(f"Extracting answers from text: {text_id} ({text_short}...) {question_message}")
@@ -204,9 +211,10 @@ class Discourseer:
 
         conversation = self.client.ensure_maximal_length(conversation)
         response = self.client.invoke(**conversation.model_dump())
-
-        # if self.openrouter:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(response, f, indent=2, ensure_ascii=False)
         response = response["choices"][0]["message"]["content"]
+
         # else:
         #     response = response.choices[0].message.content
         if response == '':

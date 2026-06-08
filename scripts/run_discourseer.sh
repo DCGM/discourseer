@@ -19,6 +19,10 @@ while [[ $# -gt 0 ]]; do
             MODEL="$2"
             shift 2
             ;;
+        --output-dir)
+            OUTPUT_DIR="$2"
+            shift 2
+            ;;
         --codebook)
             CODEBOOK="$2"
             shift 2
@@ -70,7 +74,6 @@ fi
 
 TEXTS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/texts
 RATINGS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/ratings
-OUTPUT_DIR=$ROOT_DIR/outputs
 
 PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/prompt_schema_definition_tmp.json
 
@@ -107,7 +110,8 @@ python $ROOT_DIR/run_discourseer.py \
     --prompt-schema-definition $PROMPT_SCHEMA_DEFINITION \
     --codebook $CODEBOOK \
     --openrouter \
-    --max-retries $MAX_RETRIES
+    --max-retries $MAX_RETRIES \
+    --reasoning-effort "high"
 
 cp $PROMPT_SCHEMA_DEFINITION $OUTPUT_DIR/prompt_schema_definition.json
 rm $PROMPT_SCHEMA_DEFINITION

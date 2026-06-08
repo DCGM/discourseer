@@ -74,6 +74,7 @@ class Codebook(pydantic.BaseModel):
         for i, question in enumerate(self.questions):
             new_codebook = deepcopy(self)
             new_codebook.questions = [question]
+            new_codebook.codebook_name = f"{self.codebook_name}_question_{i+1}_{question.id}"
             codebooks.append(new_codebook)
 
         return codebooks

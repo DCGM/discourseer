@@ -80,9 +80,11 @@ class ChatClient:
         openai_api_key: str = None,
         openrouter: bool = False,
         base_url: str = None,
+        reasoning_effort: str | None = None
     ):
         self.openrouter = openrouter
         self.base_url = base_url
+        self.reasoning_effort = reasoning_effort
 
         self.is_ollama = (
             base_url is not None
@@ -146,7 +148,8 @@ class ChatClient:
                 data=json.dumps(
                     {
                         "model": kwargs["model"],
-                        "messages": kwargs["messages"]
+                        "messages": kwargs["messages"],
+                        "reasoning_effort": self.reasoning_effort,
                     }
                 )
             )
