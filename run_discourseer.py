@@ -170,7 +170,11 @@ class Discourseer:
                     if response == {}:
                         call_count += 1
                         continue
-                    adding_result = self.model_rater.add_model_response(os.path.basename(file), response, must_be_correct=True)
+                    try:
+                        adding_result = self.model_rater.add_model_response(os.path.basename(file), response, must_be_correct=True)
+                    except TypeError:
+                        call_count += 1
+                        continue
                     if adding_result:
                         break
                     logging.warning(f"Response for file {file} is empty or not a valid json. Retrying ({call_count}/{self.max_retries})...")
