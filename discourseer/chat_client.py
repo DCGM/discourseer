@@ -137,7 +137,7 @@ class ChatClient:
             else:
                 return self.completions_with_backoff(**kwargs)
 
-    @backoff.on_exception(backoff.expo, (openai.RateLimitError, OpenRouterError), max_time=300)
+    @backoff.on_exception(backoff.expo, (openai.RateLimitError, OpenRouterError, requests.exceptions.JSONDecodeError), max_time=300)
     def completions_with_backoff(self, **kwargs):
         if self.openrouter:
             result = requests.post(
@@ -155,6 +155,7 @@ class ChatClient:
             )
             if not result.ok:
                 raise OpenRouterError(f"OpenRouter API request failed with status code {result.status_code}: {result.text}")
+            
             return result.json()
         else:
             return self.client.chat.completions.create(**kwargs)
