@@ -86,7 +86,7 @@ def main():
     # Print out the arguments for debugging purposes
     logging.info(f"Arguments: {args}")
 
-    tmp_dir = 'tmp'
+    tmp_dir = f'tmp-{int(time.time())}'
     log_file = os.path.join(tmp_dir, 'logfile.log')
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     if os.path.exists(log_file):
