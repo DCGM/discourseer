@@ -75,7 +75,11 @@ fi
 TEXTS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/texts
 RATINGS_DIR=$ROOT_DIR/experiments/gaza_coding_FSS_test_set/inputs/ratings
 
-PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/prompt_schema_definition_tmp.json
+# Take just filename from codebook
+CODEBOOK_FILENAME=$(basename "$CODEBOOK")
+MODEL_BASE_NAME=$(echo "$MODEL" | tr '/' '-')
+
+PROMPT_SCHEMA_DEFINITION=$ROOT_DIR/prompt_schema_definition_"$MODEL_BASE_NAME"_"$CODEBOOK_FILENAME".json
 
 cat > $PROMPT_SCHEMA_DEFINITION <<EOF
 {

@@ -137,7 +137,7 @@ class ChatClient:
             else:
                 return self.completions_with_backoff(**kwargs)
 
-    @backoff.on_exception(backoff.expo, (openai.RateLimitError, OpenRouterError, requests.exceptions.JSONDecodeError, requests.exceptions.ChunkedEncodingError), max_time=300)
+    @backoff.on_exception(backoff.expo, (openai.RateLimitError, OpenRouterError, requests.exceptions.JSONDecodeError, requests.exceptions.ChunkedEncodingError), max_tries=2)
     def completions_with_backoff(self, **kwargs):
         if self.openrouter:
             result = requests.post(
@@ -150,6 +150,7 @@ class ChatClient:
                         "model": kwargs["model"],
                         "messages": kwargs["messages"],
                         "reasoning_effort": self.reasoning_effort,
+                        "max_tokens": 10000,
                     }
                 )
             )

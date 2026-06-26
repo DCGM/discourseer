@@ -53,7 +53,7 @@ def parse_args():
                         help='The logging level to use.')
     parser.add_argument("--openrouter", action="store_true", help="Use OpenRouter instead of OpenAI API.")
     parser.add_argument("--base-url", type=str, default=None, help="Base URL for OpenAI API or OpenRouter.")
-    parser.add_argument("--max-retries", type=int, default=3, help="Maximum number of retries for API calls with invalid JSON response.")
+    parser.add_argument("--max-retries", type=int, default=2, help="Maximum number of retries for API calls with invalid JSON response.")
     parser.add_argument("--reasoning-effort", type=str, default=None, help="Add reasoning effort to the prompt.")
 
     return parser.parse_args()
@@ -165,8 +165,13 @@ class Discourseer:
                 call_count = 1
                 adding_result = False
                 op =f"{self.output_dir}/{os.path.basename(file)}_{codebook.codebook_name}_{codebook.codebook_version}.json"
+                exception_flag = False
                 while call_count <= self.max_retries:
-                    response = self.extract_answers(text, os.path.basename(file), codebook, op)
+                    try:
+                        response = self.extract_answers(text, os.path.basename(file), codebook, op)
+                    except Exception as e:
+                        exception_flag = True
+                        break
                     if response == {}:
                         call_count += 1
                         continue
@@ -179,6 +184,9 @@ class Discourseer:
                         break
                     logging.warning(f"Response for file {file} is empty or not a valid json. Retrying ({call_count}/{self.max_retries})...")
                     call_count += 1
+
+                if exception_flag:
+                    continue
 
                 if not adding_result:
                     self.model_rater.add_model_response(os.path.basename(file), response, must_be_correct=False)
@@ -198,7 +206,7 @@ class Discourseer:
         self.save_output(self.output_dir, irr_calculator)
         self.copy_input_ratings_to_output(irr_calculator)
 
-    @backoff.on_exception(backoff.expo, (KeyError, TypeError, pydantic_core.ValidationError), max_tries=5)
+    @backoff.on_exception(backoff.expo, (KeyError, TypeError, pydantic_core.ValidationError), max_tries=2)
     def extract_answers(self, text: str, text_id: str, codebook: Codebook, output_path: str) -> dict:
         text_short = text[:min(40, len(text))].replace('\n', '')
         question_message = "" if len(codebook.questions) > 1 else f"for question: {codebook.questions[0].id}"
