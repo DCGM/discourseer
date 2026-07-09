@@ -1,7 +1,8 @@
 """
 compute_irr.py
 --------------
-Compare each model rater against the three human raters (robin, veronica, jana).
+Compare each model rater against the three human raters (robin, veronica, jana). Also
+computes and prints the human-only baseline agreement as a Python constant dictionary.
 
 Supported metrics (choose one or more via --metrics):
   krippendorff   Krippendorff's alpha (nominal)  [default]
@@ -31,6 +32,7 @@ Usage:
 """
 
 import argparse
+import pprint
 import sys
 
 import krippendorff
@@ -298,6 +300,51 @@ def main() -> None:
     print(f"Metrics      : {args.metrics}")
     print(f"Bootstrap    : {args.n_boot} iterations, {args.ci*100:.0f}% CI")
     print()
+
+    # ------------------------------------------------------------------
+    # Compute Human-Only Baseline Agreement
+    # ------------------------------------------------------------------
+    print("Computing human-only agreement baseline...")
+    human_sample_counts: dict[str, int] = {}
+    for rdf in human_dfs.values():
+        for s in rdf.index:
+            human_sample_counts[s] = human_sample_counts.get(s, 0) + 1
+    valid_human_samples = [s for s, cnt in human_sample_counts.items() if cnt >= 2]
+
+    if valid_human_samples:
+        human_results: dict = {}
+        # Use an independent generator with the same seed so model bootstrapping is unaffected
+        rng_human = np.random.default_rng(args.seed)
+
+        for metric in args.metrics:
+            if metric == "majority":
+                continue  # Majority metric requires a reference model, skip for human-only calculation
+
+            human_results[metric] = {}
+
+            # Per data column
+            for col in ann_cols:
+                res = bootstrap_metric(valid_human_samples, human_dfs, [col], metric, args.n_boot, args.ci, rng_human)
+                human_results[metric][col] = {"mean": res[0], "ci_low": res[1], "ci_high": res[2]}
+
+            # Per macro-category
+            for macro, cols in macros.items():
+                if len(cols) < 2:
+                    continue
+                res = bootstrap_metric(valid_human_samples, human_dfs, cols, metric, args.n_boot, args.ci, rng_human)
+                human_results[metric][macro] = {"mean": res[0], "ci_low": res[1], "ci_high": res[2]}
+
+            # Overall
+            res = bootstrap_metric(valid_human_samples, human_dfs, ann_cols, metric, args.n_boot, args.ci, rng_human)
+            human_results[metric]["overall"] = {"mean": res[0], "ci_low": res[1], "ci_high": res[2]}
+
+        print("\n" + "=" * 70)
+        print("HUMAN-ONLY AGREEMENT CONSTANT")
+        print("=" * 70)
+        print("HUMAN_AGREEMENT = " + pprint.pformat(human_results, compact=False, sort_dicts=False))
+        print("=" * 70 + "\n")
+    else:
+        print("WARNING: No overlapping samples among humans to compute standalone baseline.\n")
 
     # ------------------------------------------------------------------
     # Compute
